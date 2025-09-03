@@ -10,8 +10,8 @@ Este livro apresenta, de forma prática e objetiva, como **entender, planejar e 
 
 ```{note}
 Este site é construído com **Jupyter Book** (MyST Markdown). O sumário e a navegação são definidos em `_toc.yml` e a configuração em `_config.yml`.
-
-O que você vai encontrar
+```
+## O que você vai encontrar
 
 Fundamentos de IA e IA generativa para contexto e tomada de decisão.
 
@@ -26,7 +26,7 @@ Recursos extras: vídeos, links e comunidades para aprofundar.
 {tip}
 Se é sua primeira visita, comece pelo **Capítulo 0** para entender como navegar e quais pré-requisitos aproveitar.
 
-Como navegar
+## Como navegar
 
 Siga a ordem sugerida no menu lateral para construir o entendimento progressivo.
 
@@ -34,7 +34,7 @@ Use a busca (ícone de lupa) para localizar termos e seções rapidamente.
 
 Retorne aos capítulos como guia de referência durante seus projetos.
 
-Pré-requisitos (mínimos)
+## Pré-requisitos (mínimos)
 
 Curiosidade e familiaridade básica com tecnologia/negócios.
 
@@ -42,7 +42,7 @@ Não é obrigatório programar: exemplos são explicados passo a passo.
 
 Termos técnicos essenciais são retomados ao longo do texto e no glossário.
 
-Próximos passos
+## Próximos passos
 
 Leia o Capítulo 0
  — Como usar este eBook.
@@ -52,14 +52,14 @@ Avance para Fundamentos de IA
 
 Consulte o capítulo de recursos para materiais complementares.
 
-{seealso}
+```{seealso}
 Documentação do Jupyter Book: https://jupyterbook.org  
 (para temas, extensões e opções avançadas)
-
-{code}
+```
+```{code}
 # Exemplo simples para validar o ambiente de notebooks (opcional)
 print("Bem-vindo ao livro: IA em Movimento 🚀")
-
+```
 
 ```{tableofcontents}
 ```
