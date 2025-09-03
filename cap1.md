@@ -1,19 +1,54 @@
 # Capítulo 1 – Fundamentos de Inteligência Artificial
-* Objetivo: contextualizar o leitor sobre o que é IA e suas implicações nos negócios. *
-## O que é IA
-- A Inteligência Artificial (IA) é um campo de estudos dedicado à construção de sistemas capazes de raciocinar, aprender e agir de maneira que tradicionalmente exigiria inteligência humana. Em termos mais práticos, a IA representa um conjunto de tecnologias baseadas principalmente em machine learning e deep learning, utilizadas para análise de dados, previsões, processamento de linguagem natural, categorização de objetos, recomendações inteligentes etc.
-- A IA engloba diversas disciplinas, incluindo ciência da computação, análise de dados, estatística, engenharia de hardware e software, linguística, neurociência e até filosofia e psicologia.
-- Fundamentalmente, a IA gira em torno de dados; os modelos de IA aprendem e melhoram através da exposição a grandes quantidades de dados, identificando seus padrões e relações.
 
-## Modelo de IA
-- Modelos de IA são as estruturas computacionais e os algoritmos que formam o "cérebro" de um sistema de inteligência artificial, permitindo que ele aprenda com dados, identifique padrões e tome decisões ou faça previsões. A forma como esses modelos são construídos e treinados define suas capacidades e aplicações.
+A Inteligência Artificial (IA) é um campo da ciência da computação dedicado a criar sistemas capazes de executar tarefas que, tradicionalmente, exigiriam inteligência humana. Esses sistemas podem **reconhecer padrões, aprender com dados, tomar decisões e interagir com pessoas** {cite}`russell2021`.
 
-## LLMs e IA generativa
-- LLM Leaderboard: https://lmarena.ai/leaderboard ou https://huggingface.co/spaces/lmarena-ai/chatbot-arena-leaderboard
-- Protocolos como MCP @paulo oliveira
-- Vibe Coding
-- “Vibe coding” é um estilo de programação que procura tornar o processo mais leve, acessível e criativo. Em lugar de seguir o caminho tradicional baseado em planejamento extenso e etapas técnicas rígidas, o programador simplesmente descreve o que deseja e deixa que a inteligência artificial traduza essa ideia em código em questão de segundos. Isso significa que o vibe coder não precisa dominar linguagens ou bibliotecas complexas: basta conversar com o modelo de IA e ir moldando o projeto conforme as necessidades surgem. A grande vantagem é a prototipagem rápida. Em poucas horas (às vezes minutos) é possível ter um app, uma automação ou uma ferramenta simples funcionando, avaliar sua utilidade e, se necessário, aprimorá-la com o próprio auxílio da IA. Caso não dê certo, o custo do erro é mínimo, pois todo o código foi gerado em tempo quase real. 
-Essa abordagem chama atenção porque elimina barreiras históricas de entrada: qualquer pessoa pode sair de uma ideia abstrata para um protótipo funcional sem meses de estudo prévio. Além disso, ela incentiva a liberdade criativa; não há “modo correto” de começar, apenas o objetivo de colocar algo para rodar. No entanto, nem tudo são flores. Quando se salta etapas de arquitetura, o código pode crescer frágil e se tornar difícil de manter ou escalar. É comum acumular dependências sugeridas pela IA sem e`m`ntender versões ou licenças, o que cria um débito técnico invisível. Também há riscos de qualidade e segurança, já que os trechos gerados podem conter falhas de desempenho ou vulnerabilidades que passam despercebidas sem auditoria humana. Outro ponto crítico é a dependência da ferramenta: deixar todo o raciocínio a cargo do modelo pode impedir que o desenvolvedor aprenda fundamentos essenciais. Por fim, a velocidade inicial pode ser ilusória: transformar um protótipo relâmpago em produto robusto exige testes, documentação, versionamento e boas práticas de engenharia. 
-Em síntese, vibe coding abre portas e democratiza a criação de soluções com IA ao reduzir o medo de começar errado e permitir entregas relâmpago. Por outro lado, cada atalho cobra seu preço mais adiante. Resta, portanto, a reflexão: até que ponto vale trocar profundidade por velocidade e em quais projetos esse compromisso faz sentido? Encontrar esse equilíbrio será, provavelmente, o próximo grande desafio de quem deseja construir com IA de forma realmente sustentável.
+---
 
-## Ética e viés
+## O que é IA?
+
+O conceito de IA surgiu na década de 1950, quando pesquisadores como **Alan Turing** e **John McCarthy** começaram a explorar a possibilidade de máquinas "pensarem" e aprenderem {cite}`turing1950`.  
+Hoje, a IA está presente em assistentes virtuais, sistemas de recomendação, carros autônomos, diagnósticos médicos, análise de dados empresariais e muito mais.
+
+Podemos classificar a IA em duas grandes categorias:
+
+- **IA fraca (ou estreita)**: projetada para executar tarefas específicas, como reconhecimento de voz ou tradução automática.  
+- **IA forte (ou geral)**: ainda hipotética, busca replicar a inteligência humana em sua plenitude.  
+
+---
+
+## Modelos de IA
+
+O motor por trás da IA são os **modelos computacionais**. Esses modelos aprendem padrões a partir de grandes volumes de dados e utilizam técnicas como:
+
+- **Machine Learning (ML)**: algoritmos que aprendem a partir de exemplos e melhoram com a experiência {cite}`goodfellow2016`.  
+- **Deep Learning (DL)**: redes neurais profundas que conseguem extrair representações complexas dos dados.  
+
+Essas abordagens tornaram possível avanços como **reconhecimento de imagem, processamento de linguagem natural e previsões preditivas**.
+
+---
+
+## LLMs e IA Generativa
+
+Nos últimos anos, ganharam destaque os **Modelos de Linguagem de Grande Escala (LLMs, do inglês *Large Language Models*)**.  
+Eles são treinados em enormes quantidades de texto e conseguem **gerar conteúdo, responder perguntas e até auxiliar na criação de código** {cite}`brown2020`.  
+
+A **IA generativa** vai além da linguagem: cria imagens, sons, vídeos e outros tipos de conteúdo. Exemplos populares incluem o **ChatGPT**, o **DALL·E** e o **Stable Diffusion**.
+
+---
+
+## Ética e Viés
+
+Apesar de seu potencial, a IA traz desafios importantes:  
+
+- **Viés algorítmico**: sistemas podem reproduzir preconceitos existentes nos dados de treinamento.  
+- **Privacidade e uso de dados**: a coleta massiva de informações levanta preocupações sobre proteção e transparência.  
+- **Impacto no trabalho**: automação pode substituir funções, exigindo requalificação da força de trabalho.  
+- **Responsabilidade**: quem é responsável por decisões tomadas por uma IA?  
+
+Diversas iniciativas de pesquisa e regulação buscam garantir o uso **responsável, ético e transparente** da IA {cite}`jobin2019`.
+
+---
+
+:::{tip}
+Ao longo deste livro, sempre que você encontrar termos técnicos ou conceitos avançados, use as referências no arquivo `reference.bib` para se aprofundar.
+:::
