@@ -23,8 +23,9 @@ Ferramentas e frameworks (LangChain/Graph, Streamlit, Gradio, n8n, etc.).
 
 Recursos extras: vídeos, links e comunidades para aprofundar.
 
-{tip}
-Se é sua primeira visita, comece pelo **Capítulo 0** para entender como navegar e quais pré-requisitos aproveitar.
+```{tip}
+Se é sua primeira visita, comece pelo {doc}`Capítulo 0 <cap0>` para entender como navegar e quais pré-requisitos aproveitar.
+```
 
 ## Como navegar
 
@@ -44,7 +45,7 @@ Termos técnicos essenciais são retomados ao longo do texto e no glossário.
 
 ## Próximos passos
 
-Leia o Capítulo 0
+Leia o {doc}`Capítulo 0 <cap0>`
  — Como usar este eBook.
 
 Avance para Fundamentos de IA
