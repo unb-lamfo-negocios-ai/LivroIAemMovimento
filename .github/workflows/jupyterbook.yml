@@ -1,0 +1,62 @@
+name: Build & Deploy Jupyter Book
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '_config.yml'
+      - '_toc.yml'
+      - '**/*.md'
+      - '**/*.ipynb'
+      - '.github/workflows/jupyterbook.yml'
+  workflow_dispatch:
+
+env:
+  BOOK_PATH: .
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install jupyter-book; fi
+
+      - name: Build Jupyter Book
+        working-directory: ${{ env.BOOK_PATH }}
+        run: jupyter-book build .
+
+      - name: Upload artifact (Pages)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.BOOK_PATH }}/_build/html
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
