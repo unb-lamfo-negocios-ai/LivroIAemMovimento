@@ -4,63 +4,60 @@ subtitle: "Fundamentos, estratégias e ferramentas para criar soluções com Int
 authors: ["LAMFO", "OtimizAI"]
 ---
 
-# Bem-vindo ao seu Jupyter Book
+# Introdução
 
-Este livro apresenta, de forma prática e objetiva, como **entender, planejar e aplicar IA** em projetos e negócios. Você encontrará **fundamentos**, **arquiteturas e tecnologias**, **estratégias de criação e operação** e um **ecossistema de ferramentas** para sair do conceito à implementação.
+A Inteligência Artificial (IA) deixou de ser apenas um conceito técnico restrito à academia e às grandes empresas de tecnologia.  
+Hoje, ela está presente no dia a dia de profissionais de diferentes áreas — da saúde à educação, do marketing às finanças, da indústria criativa à gestão pública.  
 
-```{note}
-Este site é construído com **Jupyter Book** (MyST Markdown). O sumário e a navegação são definidos em `_toc.yml` e a configuração em `_config.yml`.
-```
-## O que você vai encontrar
+Este eBook foi desenvolvido para ser um **guia estratégico e prático**, ajudando você a compreender os fundamentos da IA e a visualizar como aplicar essas soluções em seu trabalho ou negócio.
 
-Fundamentos de IA e IA generativa para contexto e tomada de decisão.
+---
 
-Arquiteturas e componentes (APIs, RAG, cloud vs local, UX de IA, MCP).
+## Objetivos do eBook
 
-Estratégias: build vs buy, monetização, precificação, operação.
+- **Traduzir conceitos técnicos** em linguagem acessível, sem perder a profundidade necessária.  
+- **Apresentar frameworks e ferramentas** que podem ser aplicados sem exigir conhecimentos avançados de programação.  
+- **Fornecer estratégias práticas** de construção, operação e monetização de soluções baseadas em IA.  
+- **Indicar recursos de apoio** para que você continue aprendendo e acompanhando as tendências desse ecossistema dinâmico.  
 
-Ferramentas e frameworks (LangChain/Graph, Streamlit, Gradio, n8n, etc.).
+---
 
-Recursos extras: vídeos, links e comunidades para aprofundar.
+## Para quem este eBook foi escrito?
 
-```{tip}
-Se é sua primeira visita, comece pelo {doc}`Capítulo 0 <cap0>` para entender como navegar e quais pré-requisitos aproveitar.
-```
+Este material é destinado a:  
+
+- **Empreendedores** que desejam lançar produtos ou serviços inteligentes.  
+- **Gestores e analistas** que querem incorporar IA em seus processos.  
+- **Profissionais criativos** que buscam novas formas de produção com auxílio de IA generativa.  
+- **Estudantes e curiosos** que querem ter uma visão prática e aplicada sobre o tema.  
+
+Não é necessário ter experiência prévia em programação — o conteúdo foi desenhado para ser **inclusivo e prático**, com explicações claras e referências para aprofundamento.  
+
+---
+
+## Estrutura do eBook
+
+O livro está dividido em cinco capítulos principais:  
+
+1. [**Capítulo 0 — Como usar este eBook**](cap0)  
+2. [**Capítulo 1 — Fundamentos de Inteligência Artificial**](cap1)  
+3. [**Capítulo 2 — Arquiteturas, Tecnologias e Componentes Técnicos**](cap2)  
+4. [**Capítulo 3 — Estratégias de Construção e Operação**](cap3)  
+5. [**Capítulo 4 — Ecossistema de Ferramentas e Frameworks**](cap4)  
+6. [**Capítulo 5 — Recursos de Apoio e Exploração**](cap5)  
+
+Ao final, você encontrará também a seção de [**Referências Bibliográficas**](referencia), com todas as obras utilizadas, e o espaço **Conheça os Autores**.  
+
+---
 
 ## Como navegar
 
-Siga a ordem sugerida no menu lateral para construir o entendimento progressivo.
+Você pode ler este eBook de forma linear, do início ao fim, ou consultar capítulos específicos de acordo com sua necessidade.  
+As citações ao longo do texto estão conectadas ao arquivo `reference.bib`, que contém a bibliografia completa para aprofundamento.  
 
-Use a busca (ícone de lupa) para localizar termos e seções rapidamente.
+---
 
-Retorne aos capítulos como guia de referência durante seus projetos.
-
-## Pré-requisitos (mínimos)
-
-Curiosidade e familiaridade básica com tecnologia/negócios.
-
-Não é obrigatório programar: exemplos são explicados passo a passo.
-
-Termos técnicos essenciais são retomados ao longo do texto e no glossário.
-
-## Próximos passos
-
-Leia o {doc}`Capítulo 0 <cap0>`
- — Como usar este eBook.
-
-Avance para Fundamentos de IA
-.
-
-Consulte o capítulo de recursos para materiais complementares.
-
-```{seealso}
-Documentação do Jupyter Book: https://jupyterbook.org  
-(para temas, extensões e opções avançadas)
-```
-```{code}
-# Exemplo simples para validar o ambiente de notebooks (opcional)
-print("Bem-vindo ao livro: IA em Movimento 🚀")
-```
-
-```{tableofcontents}
-```
+:::{tip}
+Aproveite a leitura de forma ativa: faça anotações, teste as ferramentas sugeridas e conecte os conceitos apresentados à sua realidade.  
+Este eBook é um **ponto de partida** — a prática e a exploração contínua são os melhores caminhos para aprender e inovar com Inteligência Artificial.
+:::
