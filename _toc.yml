@@ -4,7 +4,7 @@
 format: jb-book
 root: intro
 chapters:
-- file: cap0
+- file: capitulos/cap0
 - file: cap1
 - file: cap2
 - file: cap3
