@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: capitulos/intro
 chapters:
 - file: capitulos/cap0
 - file: capitulos/cap1
@@ -10,4 +10,4 @@ chapters:
 - file: capitulos/cap3
 - file: capitulos/cap4
 - file: capitulos/cap5
-- file: referencia
+- file: capitulos/referencia
