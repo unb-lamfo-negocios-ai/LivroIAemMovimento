@@ -1,33 +1,28 @@
 # Referências Bibliográficas
-
-As referências utilizadas ao longo deste eBook estão organizadas no arquivo `reference.bib`.  
-Sempre que encontrar uma citação no texto, você poderá consultar o arquivo para acessar as obras originais e materiais recomendados.
-
-```{bibliography}
-:style: unsrt
-```
+:bibliography:`references.bib`
 
 ---
 
 # Conheça os Autores
 
-Este eBook foi elaborado por uma equipe multidisciplinar, unindo experiência prática em **análise de dados**, **estratégia de negócios** e **Inteligência Artificial**.
+## LAMFO
 
-## Lamfo & OtimizAI
+O **LAMFO (Laboratório de Métodos Quantitativos em Ciências Sociais da UnB)** é um espaço de pesquisa e inovação dedicado à análise de dados, ciência computacional e desenvolvimento de soluções inteligentes aplicadas a fenômenos sociais e organizacionais.  
+Sua missão é **integrar ciência, tecnologia e impacto social**, formando profissionais capazes de utilizar dados e IA de forma crítica e transformadora.  
 
-O projeto contou também com o apoio do **Lamfo (Laboratório de Aprendizado de Máquina em Finanças e Organizações)** e da **OtimizAI**, iniciativas que promovem a aplicação prática da Inteligência Artificial em negócios e sociedade.  
-A colaboração entre academia, setor privado e tecnologia foi essencial para trazer ao leitor uma visão equilibrada entre **fundamentos teóricos e aplicações reais**.
-
----
-## Eric Costa
-
-Analista de Dados, com formação em **Relações Internacionais**, **MBA em Administração de Empresas** e **MBA em Data Science**.  
-Sua trajetória combina experiências em setores como **construção civil**, **gestão pública** (Câmara dos Deputados) e atualmente no **SESC Distrito Federal**, onde aplica técnicas de análise de dados para melhorar eficiência e apoiar decisões estratégicas.  
-Apaixonado por inovação e ensino, Eric atua na fronteira entre **dados, estratégia e tecnologia**.
+Ao longo dos últimos anos, o LAMFO tem se destacado em projetos que combinam **estatística avançada, aprendizado de máquina e análise de políticas públicas**, contribuindo para a disseminação de práticas de inovação baseada em evidências.
 
 ---
 
-:::{tip}
-Se você quiser entrar em contato com os autores ou parceiros do projeto, acompanhe os canais oficiais do **Lamfo** e da **OtimizAI** no LinkedIn e demais redes sociais.  
-Compartilhar experiências e resultados é a melhor forma de fortalecer a comunidade em torno da Inteligência Artificial.
+## OtimizAI
+
+A **OtimizAI** é uma iniciativa voltada à aplicação prática de **Inteligência Artificial em negócios e gestão**.  
+Seu foco está em traduzir conceitos complexos de IA em **estratégias aplicáveis**, ajudando profissionais, empreendedores e organizações a incorporarem soluções inteligentes em seu cotidiano.  
+
+Com uma abordagem que une **educação, prototipagem e implementação**, a OtimizAI busca tornar a IA **acessível, ética e eficiente**, promovendo resultados concretos em diferentes setores — da indústria criativa ao setor público, do varejo à saúde.
+
+---
+
+:::{note}
+Este eBook é resultado da colaboração entre **academia e prática de mercado**, refletindo a convicção de que a Inteligência Artificial é um campo que só evolui plenamente quando teoria e aplicação caminham juntas.
 :::

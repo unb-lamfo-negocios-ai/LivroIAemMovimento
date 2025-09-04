@@ -9,7 +9,10 @@ authors: ["LAMFO", "OtimizAI"]
 A Inteligência Artificial (IA) deixou de ser apenas um conceito técnico restrito à academia e às grandes empresas de tecnologia.  
 Hoje, ela está presente no dia a dia de profissionais de diferentes áreas — da saúde à educação, do marketing às finanças, da indústria criativa à gestão pública.  
 
-Este eBook foi desenvolvido para ser um **guia estratégico e prático**, ajudando você a compreender os fundamentos da IA e a visualizar como aplicar essas soluções em seu trabalho ou negócio.
+De **assistentes virtuais** que otimizam rotinas a **modelos preditivos** que ajudam empresas a antecipar tendências, a IA está moldando novos paradigmas de trabalho e inovação.  
+Mais do que uma tecnologia, ela representa uma **transformação cultural e estratégica** que exige preparo, visão crítica e experimentação prática.  
+
+Este eBook foi desenvolvido para ser um **guia estratégico e prático**, ajudando você a compreender os fundamentos da IA, explorar suas aplicações e visualizar como integrá-la ao seu trabalho, negócio ou área de estudo.
 
 ---
 
@@ -19,6 +22,7 @@ Este eBook foi desenvolvido para ser um **guia estratégico e prático**, ajudan
 - **Apresentar frameworks e ferramentas** que podem ser aplicados sem exigir conhecimentos avançados de programação.  
 - **Fornecer estratégias práticas** de construção, operação e monetização de soluções baseadas em IA.  
 - **Indicar recursos de apoio** para que você continue aprendendo e acompanhando as tendências desse ecossistema dinâmico.  
+- **Refletir sobre desafios éticos e sociais** da adoção de IA, incentivando um uso responsável e sustentável.  
 
 ---
 
@@ -27,17 +31,17 @@ Este eBook foi desenvolvido para ser um **guia estratégico e prático**, ajudan
 Este material é destinado a:  
 
 - **Empreendedores** que desejam lançar produtos ou serviços inteligentes.  
-- **Gestores e analistas** que querem incorporar IA em seus processos.  
+- **Gestores e analistas** que querem incorporar IA em processos decisórios ou operacionais.  
 - **Profissionais criativos** que buscam novas formas de produção com auxílio de IA generativa.  
-- **Estudantes e curiosos** que querem ter uma visão prática e aplicada sobre o tema.  
+- **Estudantes e curiosos** que desejam uma visão prática e aplicada sobre o tema.  
 
-Não é necessário ter experiência prévia em programação — o conteúdo foi desenhado para ser **inclusivo e prático**, com explicações claras e referências para aprofundamento.  
+Não é necessário ter experiência prévia em programação — o conteúdo foi desenhado para ser **inclusivo, acessível e prático**, com explicações claras, exemplos do cotidiano e referências para aprofundamento.  
 
 ---
 
 ## Estrutura do eBook
 
-O livro está dividido em cinco capítulos principais:  
+O livro está dividido em capítulos que seguem uma progressão lógica, mas podem ser lidos de forma independente:  
 
 1. [**Capítulo 0 — Como usar este eBook**](cap0)  
 2. [**Capítulo 1 — Fundamentos de Inteligência Artificial**](cap1)  
@@ -55,9 +59,7 @@ Ao final, você encontrará também a seção de [**Referências Bibliográficas
 Você pode ler este eBook de forma linear, do início ao fim, ou consultar capítulos específicos de acordo com sua necessidade.  
 As citações ao longo do texto estão conectadas ao arquivo `reference.bib`, que contém a bibliografia completa para aprofundamento.  
 
----
-
 :::{tip}
-Aproveite a leitura de forma ativa: faça anotações, teste as ferramentas sugeridas e conecte os conceitos apresentados à sua realidade.  
-Este eBook é um **ponto de partida** — a prática e a exploração contínua são os melhores caminhos para aprender e inovar com Inteligência Artificial.
+Aproveite a leitura de forma ativa: faça anotações, teste as ferramentas sugeridas e conecte os conceitos à sua realidade.  
+Este eBook é um **ponto de partida** — a prática, a experimentação e a exploração contínua são os melhores caminhos para aprender e inovar com Inteligência Artificial.
 :::
