@@ -52,6 +52,7 @@ Por exemplo: quando falarmos em “redes neurais”, você pode imaginá-las com
 4. **Conecte com sua realidade**: reflita sobre os conceitos apresentados à luz dos desafios ou oportunidades da sua área — seja otimizar um processo de atendimento, melhorar a tomada de decisão ou criar produtos inovadores.  
 5. **Compartilhe e discuta**: debater ideias com colegas e comunidades amplia a compreensão e gera novas perspectivas. Muitas inovações surgem da combinação de diferentes pontos de vista.  
 6. Teste da Maisa
+7. Teste da Maísa e do Erick
 ---
 
 :::{tip}
