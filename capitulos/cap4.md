@@ -603,7 +603,7 @@ Esses nodes permitem que o n8n **envie, receba ou modifique dados fora dele**, o
 
 ---
 
-### 📌 Exemplo prático de sequência:
+Exemplo prático de sequência:
 
 1. **Formulário** preenche dados do lead →
 2. **Node de Aplicativo (Google Sheets)** grava os dados →
@@ -618,6 +618,166 @@ O **Canva** é uma plataforma de design que incorporou recursos de **IA generati
 
 Embora não seja uma ferramenta técnica de desenvolvimento, **democratiza a IA** para profissionais de comunicação, marketing e design, ampliando a adoção em escala {cite}`canva2023`.  
 
+### Linguagem JSON
+
+O que é JSON?
+
+**JSON (JavaScript Object Notation)** é um formato leve de troca de dados, baseado em texto. Ele é utilizado para **armazenar e transmitir informações estruturadas** entre sistemas, especialmente em APIs e integrações como as feitas no **n8n**.
+
+```{code-block} json
+{
+  "nome": "Lucas",
+  "idade": 30,
+  "ativo": true}
+```
+
+- As **chaves** são sempre entre aspas
+- Os **valores** podem ser string, número, booleano, objeto, array, ou `null`
+
+Os blocos básicos do JSON
+
+Tipos de Dados no JSON
+
+1. **Strings**
+    
+    Texto entre **aspas duplas** (`" "`).
+    
+    Exemplo: <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`"nome": "Fala, galera!"`</span>
+    
+    ✅ Usado para nomes, emails, mensagens etc.
+    
+2. **Números**
+    
+    Valores **numéricos sem aspas**, inteiros ou decimais.
+    
+    Exemplo: <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`"idade": 42`, `"nota": 3.14`</span>
+    
+    ✅ Usado para cálculos, filtros, pontuação, ID.
+    
+3. **Booleanos**
+    
+    Verdadeiro ou falso (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`true`</span> / <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`false`</span>).
+    
+    Exemplo: <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`"ativo": true`</span>
+
+    
+    ✅ Útil para checagens em <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`IF`</span>, como status de pagamento.
+    
+4. **Arrays**
+    
+    Lista de valores entre colchetes `[ ]`.
+    
+    Exemplo: <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`"itens": ["pizza", "hambúrguer", "pastel"]`</span>
+    
+    ✅ Ideal para listas, múltiplos contatos, respostas múltiplas.
+    
+5. **Objetos**
+    
+    Conjunto de pares chave-valor entre chaves <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`{ }`</span>.
+    
+    Exemplo:
+
+   ```{code-block} json
+   {
+  "nome": "João",
+  "idade": 25
+}
+```
+É a estrutura mais usada no n8n para entradas e saídas.
+
+6. **null**
+    
+    Representa valor vazio ou ausente.
+    
+    Exemplo: <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`"dataNascimento": null`</span>
+    
+    ✅ Muito usado para indicar "não preenchido" ou "a definir".
+
+JSON Aninhado: Um objeto dentro do outro
+
+```{code-block} json
+{
+  "usuario": {
+    "nome": "Ana",
+    "contato": {
+      "email": "ana@exemplo.com",
+      "telefone": "123456"
+    }
+  }
+
+
+Aqui temos objetos dentro de outros objetos. Acessar isso no n8n exige navegação com <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">usuario.contato.email</span>.
+```
+
+JSON vs. XML vs. CSV
+
+|Formato|	Legibilidade|	Peso	|Uso moderno|
+|-------|---------------|-----------|-----------|
+|JSON|	Alta	|Leve|	🔥 Amplamente usado|
+|XML	|Verboso	|Pesado	|Usado em sistemas antigos|
+|CSV|	Simples	|Muito leve	|Ideal para planilhas|
+
+
+```{admonition}
+:class: note
+JSON é preferido em APIs e automações como as do n8n.
+```
+
+Como o JSON é usado no n8n?
+
+No **n8n**, praticamente **todos os dados trafegam em JSON**:
+
+- Respostas de APIs
+- Resultados de formulários
+- Mensagens manipuladas
+- Saídas de nodes
+
+Você pode visualizar e editar JSON diretamente nos nodes como <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Set`</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`HTTP Request`</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Code`</span>, etc.
+
+Como acessar dados em JSON?
+
+Exemplo:
+
+Se seu JSON for:
+
+```{code-block} json
+{
+  "lead": {
+    "nome": "João",
+    "contato": {
+      "whatsapp": "5599999999"
+    }
+  }
+}
+```
+Você acessa no n8n assim:
+
+```{code-block} json
+{{$json["lead"]["contato"]["whatsapp"]}}
+```
+
+Ou:
+```{code-block} json
+{{$json.lead.contato.whatsapp}}
+```
+
+```{admonition} Erros comuns
+:class: warning
+
+### Erros comuns com JSON
+
+- Esquecer aspas em **chaves**
+- Vírgula sobrando no final
+- Usar **aspas simples** em vez de **duplas**
+- Acessar caminho que não existe → erro `undefined`
+- Enviar JSON mal formatado em um `POST` via HTTP
+```
+
+---
+
+### 📝 Como é a estrutura de um JSON?
+
+A estrutura é feita por **pares de chave e valor**, e pode conter:
 ---
 
 ## WhatsApp API
