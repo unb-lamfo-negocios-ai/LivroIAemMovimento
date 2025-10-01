@@ -66,12 +66,13 @@ A jornada mais comum é começar com Prompt Engineering, evoluir para RAG para c
 :::
 
 ```{figure} imagens/jornada_prompt_felipe.png
-:label: jornada_prompt_felipe
 :alt: Fluxo para implementar IA: Prompt Engineering → RAG para robustez → Fine-tuning seletivo para vantagem competitiva.
 :align: center
+:name: fig-jornada-ia
 
-Fluxograma ilustrando a jornada recomendada para o desenvolvimento de soluções com Inteligência Artificial. 
+Fluxograma ilustrando a jornada recomendada para o desenvolvimento de soluções com Inteligência Artificial.
 ```
+
 ---
 
 ## API e Integração
