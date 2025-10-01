@@ -348,9 +348,6 @@ Suponha que você tem vários leads:
 
 
 ```{code-block} json
----
-caption: Exemplo de lista JSON com nome e pontuação
----
 [
   { "nome": "Lucas", "pontuacao": 85 },
   { "nome": "Ana", "pontuacao": 60 }
@@ -378,13 +375,13 @@ No node **Filter**, você pode definir:
     
 O que faz o node **Aggregate**?
     
-    O **Aggregate** pega **vários itens de entrada** e realiza algum tipo de **agregação**, como:
+O **Aggregate** pega **vários itens de entrada** e realiza algum tipo de **agregação**, como:
     
-    - **Juntar textos** de vários registros em uma única string
-    - **Somar** ou **calcular médias** de campos numéricos
-    - **Criar listas** com valores únicos ou agrupados
-    - **Gerar estatísticas** simples (máximo, mínimo, contagem)
-    - **Transformar múltiplos itens em um único item** (útil para enviar resumo, gerar arquivo, etc.)
+- **Juntar textos** de vários registros em uma única string
+- **Somar** ou **calcular médias** de campos numéricos
+- **Criar listas** com valores únicos ou agrupados
+- **Gerar estatísticas** simples (máximo, mínimo, contagem)
+- **Transformar múltiplos itens em um único item** (útil para enviar resumo, gerar arquivo, etc.)
 
 Como funciona na prática?
 
@@ -397,7 +394,7 @@ Como funciona na prática?
 
 ---
 
-### 🛠️ Exemplos práticos
+Exemplos práticos
 
 - **Juntar nomes em uma lista:**
     
@@ -407,13 +404,12 @@ Como funciona na prática?
   [{"nome": "Lucas"}, {"nome": "Ana"}, {"nome": "João"}]
 ```
 
-Saída após “concatenar nomes”:
+Saída após concatenar nomes:
 
  ```{code-block} json
-
 { "nomes": "Lucas, Ana, João" }
-
 ```
+
 - **Somar valores de vendas:**
     
     Entrada:
