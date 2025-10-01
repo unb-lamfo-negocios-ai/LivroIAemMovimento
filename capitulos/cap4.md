@@ -1023,19 +1023,19 @@ Códigos de erro mais comuns em APIs
 
 |Código|	Significado|	Quando acontece?|
 |------|---------------|--------------------|
-|200 OK	|Requisição bem-sucedida	|Tudo funcionou|
-|201 Created	|Recurso criado com sucesso	|Ao fazer um POST com sucesso|
-|204 No Content|	Requisição bem-sucedida, sem retorno	|Ex: deletar algo|
-|400 Bad Request|	Erro na sua requisição	|Campos inválidos ou formato errado|
-|401 Unauthorized	|Falta de autenticação	|Token errado ou ausente|
-|403 Forbidden	|Autenticado, mas sem permissão	|Acesso negado mesmo com login|
-|404 Not Found	|Endpoint ou recurso não existe	|URL errada ou item inexistente|
-|409 Conflict	|Conflito com o estado atual	|Criar um item que já existe, por exemplo|
-|422 Unprocessable Entity|	Dados válidos, mas com erro lógico	|Formato certo, mas info errada (ex: CPF inválido)|
-|429 Too Many Requests|	Limite de chamadas atingido	|Você bateu no rate limit da API|
-|500 Internal Server Error	|Erro no servidor da API	|Falha interna da aplicação externa|
-|502 Bad Gateway	|Gateway da API falhou	|Normal em sistemas com proxies|
-|503 Service Unavailable|	API está fora do ar ou sobrecarregada	|Muita demanda ou manutenção|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">200 OK</span>	|Requisição bem-sucedida	|Tudo funcionou|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">201 Created</span>|Recurso criado com sucesso	|Ao fazer um POST com sucesso|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">204 No Content</span>|	Requisição bem-sucedida, sem retorno	|Ex: deletar algo|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">400 Bad Request</span>|	Erro na sua requisição	|Campos inválidos ou formato errado|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">401 Unauthorized</span>	|Falta de autenticação	|Token errado ou ausente|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">403 Forbidden</span>	|Autenticado, mas sem permissão	|Acesso negado mesmo com login|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">404 Not Found</span>	|Endpoint ou recurso não existe	|URL errada ou item inexistente|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">409 Conflict</span>	|Conflito com o estado atual	|Criar um item que já existe, por exemplo|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">422 Unprocessable Entity</span>|	Dados válidos, mas com erro lógico	|Formato certo, mas info errada (ex: CPF inválido)|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">429 Too Many Requests</span>|	Limite de chamadas atingido	|Você bateu no rate limit da API|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">500 Internal Server Error</span>	|Erro no servidor da API	|Falha interna da aplicação externa|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">502 Bad Gateway</span>	|Gateway da API falhou	|Normal em sistemas com proxies|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">503 Service Unavailable</span>|	API está fora do ar ou sobrecarregada	|Muita demanda ou manutenção|
 
 ## WhatsApp API
 
