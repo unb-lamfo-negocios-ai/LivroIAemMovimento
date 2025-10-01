@@ -612,14 +612,7 @@ Exemplo prático de sequência:
 2. **Node de Aplicativo (Google Sheets)** grava os dados →
 3. **Node de Aplicativo (WhatsApp)** envia uma mensagem personalizada →
 4. **Node de Aplicativo (Gmail)** envia notificação para o time comercial.
-## Canva
 
-O **Canva** é uma plataforma de design que incorporou recursos de **IA generativa**, como:  
-- Criação automática de imagens.  
-- Sugestão de layouts e textos.  
-- Geração de apresentações com base em descrições simples.  
-
-Embora não seja uma ferramenta técnica de desenvolvimento, **democratiza a IA** para profissionais de comunicação, marketing e design, ampliando a adoção em escala {cite}`canva2023`.  
 
 ### Linguagem JSON
 
@@ -681,11 +674,12 @@ Tipos de Dados no JSON
     Exemplo:
 
    ```{code-block} json
-   {
-  "nome": "João",
-  "idade": 25
-}
-```
+       {
+      "nome": "João",
+      "idade": 25
+    }
+   ```
+   
 É a estrutura mais usada no n8n para entradas e saídas.
 
 6. **null**
@@ -696,16 +690,16 @@ Tipos de Dados no JSON
     
     ✅ Muito usado para indicar "não preenchido" ou "a definir".
 
-JSON Aninhado: Um objeto dentro do outro
+**JSON Aninhado: Um objeto dentro do outro**
 
 ```{code-block} json
-{
-  "usuario": {
-    "nome": "Ana",
-    "contato": {
-      "email": "ana@exemplo.com",
-      "telefone": "123456"
-    }
+    {
+      "usuario": {
+        "nome": "Ana",
+        "contato": {
+          "email": "ana@exemplo.com",
+          "telefone": "123456"
+        }
   }
 
 
@@ -744,14 +738,14 @@ Exemplo:
 Se seu JSON for:
 
 ```{code-block} json
-{
-  "lead": {
-    "nome": "João",
-    "contato": {
-      "whatsapp": "5599999999"
+    {
+      "lead": {
+        "nome": "João",
+        "contato": {
+          "whatsapp": "5599999999"
+        }
+      }
     }
-  }
-}
 ```
 Você acessa no n8n assim:
 
@@ -801,3 +795,12 @@ O ecossistema de ferramentas de IA está em constante expansão.
 Mais importante do que conhecer todas as opções é saber **qual ferramenta se alinha melhor ao objetivo do projeto, à maturidade da equipe e ao orçamento disponível**.  
 A escolha certa pode acelerar resultados; a errada pode gerar custos e complexidade desnecessários.
 :::
+
+## Canva
+
+O **Canva** é uma plataforma de design que incorporou recursos de **IA generativa**, como:  
+- Criação automática de imagens.  
+- Sugestão de layouts e textos.  
+- Geração de apresentações com base em descrições simples.  
+
+Embora não seja uma ferramenta técnica de desenvolvimento, **democratiza a IA** para profissionais de comunicação, marketing e design, ampliando a adoção em escala {cite}`canva2023`.  
