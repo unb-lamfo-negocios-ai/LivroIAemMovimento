@@ -1037,6 +1037,70 @@ Códigos de erro mais comuns em APIs
 |<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">502 Bad Gateway</span>	|Gateway da API falhou	|Normal em sistemas com proxies|
 |<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">503 Service Unavailable</span>|	API está fora do ar ou sobrecarregada	|Muita demanda ou manutenção|
 
+#### # GPT n8n
+
+💻GPT Assistente do n8n
+
+[n8n Assistant]([https://www.exemplo.com](https://chatgpt.com/g/g-SVatmGSdQ-n8n-assistant-by-nskha?model=gpt-4o))
+
+O Papel da Inteligência Artificial no Aprendizado do n8n
+
+Durante o processo de aprendizado e uso da plataforma **n8n**, contar com o apoio de ferramentas baseadas em inteligência artificial pode representar um ganho significativo em produtividade, compreensão e autonomia. Um exemplo disso é o uso de assistentes especializados, como o **N8N A.I Assistant (by Nskha)**, uma versão do GPT treinada especificamente para auxiliar usuários da plataforma n8n.
+
+Esse tipo de assistente desempenha um papel importante no processo de construção de conhecimento por diversos motivos:
+
+1. Conhecimento especializado sobre o n8n
+
+Ao contrário de assistentes genéricos, o N8N A.I Assistant é treinado com foco total na estrutura e funcionamento do n8n. Ele possui conhecimento atualizado sobre:
+
+- Os principais nós (nodes) disponíveis na plataforma;
+- Criação e uso de expressões;
+- Integração com APIs e serviços externos;
+- Tratamento de dados e manipulação de campos;
+- Identificação e correção de erros comuns.
+
+Esse domínio técnico permite ao assistente fornecer orientações precisas e contextualizadas.
+
+2. Aprendizado guiado e personalizado
+
+Ao interagir com o assistente, é possível obter explicações adaptadas ao nível de conhecimento do usuário (iniciante ou avançado), facilitando a compreensão de conceitos como:
+
+- Criação de workflows do zero;
+- Aplicação prática de lógica condicional e expressões;
+- Estratégias para otimização e organização de automações.
+
+Isso transforma o aprendizado em uma experiência mais interativa e eficiente.
+
+3. Suporte técnico em tempo real
+
+Além do aspecto didático, o assistente também pode ser utilizado como ferramenta de apoio técnico. Ele é capaz de:
+
+- Sugerir melhorias em fluxos existentes;
+- Gerar workflows em formato JSON, prontos para importação;
+- Criar expressões complexas com base em requisitos específicos;
+- Explicar a origem de erros e orientar sobre possíveis soluções.
+
+Essa funcionalidade reduz a curva de aprendizado e evita que o usuário fique travado em problemas técnicos.
+
+O uso de uma inteligência artificial especializada no n8n representa uma importante estratégia de apoio no processo de aprendizagem. Ela atua como um **tutor digital**, capaz de acelerar o entendimento da plataforma, orientar boas práticas e ajudar a resolver desafios técnicos de forma prática e acessível.
+
+Ao incorporar essa ferramenta no estudo e uso diário do n8n, o usuário potencializa sua capacidade de aprender, experimentar e evoluir na criação de automações mais robustas e eficientes.
+
+#### Templates
+
+Os templates no n8n são, essencialmente, fluxos de automação (workflows) pré-construídos e prontos para uso. Eles funcionam como modelos que resolvem problemas comuns e integram diferentes aplicações de maneira lógica. Em vez de começar um workflow do zero, um usuário pode simplesmente selecionar um template, conectar suas próprias credenciais (como contas de email, APIs, planilhas) e ativar a automação em questão de minutos.
+
+Esses templates cobrem uma vasta gama de casos de uso, como:
+
+- **Sincronização de Dados:** Manter informações consistentes entre um CRM (como o HubSpot) e uma planilha do Google Sheets.
+- **Notificações Inteligentes:** Enviar uma mensagem customizada no Slack ou Discord sempre que um novo cliente se cadastra na sua plataforma.
+- **Marketing e Vendas:** Adicionar automaticamente leads de um formulário do Typeform a uma lista de email no Mailchimp.
+- **Gestão de Projetos:** Criar um card no Trello a partir de um email recebido que contenha palavras-chave específicas.
+
+A grande vantagem é que eles são totalmente customizáveis. Um template serve como um ponto de partida robusto, que pode ser expandido, modificado e adaptado para atender às necessidades exatas de um projeto, economizando um tempo de desenvolvimento significativo e expondo o usuário a boas práticas de construção de workflows.
+
+[Baixe aqui a planilha Templates_n8n.xlsx]([https://exemplo.com/caminho/para/planilha/Templates_n8n.xlsx](https://github.com/unb-lamfo-negocios-ai/LivroIAemMovimento/blob/main/Templates_n8n.xlsx))
+
 ## WhatsApp API
 
 A integração com o **WhatsApp API** permite conectar chatbots de IA diretamente ao aplicativo de mensagens mais usado no Brasil e em vários países.  
