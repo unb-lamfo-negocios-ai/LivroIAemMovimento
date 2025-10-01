@@ -935,7 +935,7 @@ Passar um número onde se espera um texto ou enviar um array quando se espera um
 
 :::{tip}
 Use o **Set Node** ou **Function Node** para ajustar dados antes de enviá-los a outros nodes.
-:::{tip}
+:::
 
 ### 4. ❌ Dados ausentes ou campos inexistentes
 
