@@ -193,6 +193,7 @@ def receber_mensagem():
 
 if __name__ == "__main__":
     app.run(port=5000)
+```
 
 Você conecta a API de algum serviço de IA ao seu sistema de atendimento, e ela entra automaticamente no fluxo.
 
