@@ -318,15 +318,18 @@ Tabela de referência — Tokens, preços e limites
 APIs são como "braços da IA" que você pode embutir no seu negócio para entregar valor automaticamente.
 :::
 
-:::{caution} Cuidados ao usar APIs de IA
+```{admonition} **Cuidados ao usar APIs de IA**
+:class: caution
+
 - **Custo:** APIs de IA são cobradas por uso. Planeje seu orçamento.
 - **Privacidade:** cuidado com o tipo de dado que você envia.
 - **Latência:** algumas chamadas podem demorar segundos. Otimize quando necessário.
 - **Limites de uso:** planos gratuitos têm restrições.
 - **Dependência externa:** se o serviço cair, sua operação pode ser afetada.
-:::
+```
 
-:::{note} A API é a cola que transforma IA em produto
+```{admonition} **A API é a cola que transforma IA em produto**
+:class: note
 
 Usar IA na criação de negócios não precisa significar apenas usar ferramentas prontas. Quando você começa a integrar APIs de IA ao seu próprio fluxo, app ou processo, você:
 
@@ -334,7 +337,7 @@ Usar IA na criação de negócios não precisa significar apenas usar ferramenta
 - Melhora a experiência do usuário
 - Escala sem aumentar a equipe
 - Inova com velocidade
-:::
+```
 
 @Mateus Macedo, como fica o uso das APIs com o advento dos agentes de IA? Poderia escrever um parágrafo sobre isso?
 ---
@@ -513,8 +516,8 @@ Boas práticas incluem {cite}`amershi2019`:
 - **Confiança**: comunicar limitações, graus de confiança ou margens de erro do modelo.  
 
 :::{note}
-A qualidade técnica da IA é inútil se a experiência do usuário for confusa.  
-Um modelo de recomendação de filmes pode ser altamente preciso, mas se não explicar *por que* sugeriu um título, pode gerar desconfiança.  
+- A qualidade técnica da IA é inútil se a experiência do usuário for confusa.  
+- Um modelo de recomendação de filmes pode ser altamente preciso, mas se não explicar *por que* sugeriu um título, pode gerar desconfiança.  
 :::
 
 ----MATEUS----MACEDO----
@@ -633,6 +636,6 @@ Essa padronização será cada vez mais importante em um cenário onde múltiplo
 ---
 
 :::{tip}
-Compreender a **arquitetura e os componentes técnicos** não significa que você precise dominar a programação de cada parte.  
-O essencial é ter **clareza sobre as opções disponíveis** e saber avaliar quais escolhas são mais adequadas para os seus objetivos estratégicos.
+- Compreender a **arquitetura e os componentes técnicos** não significa que você precise dominar a programação de cada parte.  
+- O essencial é ter **clareza sobre as opções disponíveis** e saber avaliar quais escolhas são mais adequadas para os seus objetivos estratégicos.
 :::
