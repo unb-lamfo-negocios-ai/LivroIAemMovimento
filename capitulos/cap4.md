@@ -1041,7 +1041,7 @@ Códigos de erro mais comuns em APIs
 
 💻GPT Assistente do n8n
 
-[n8n Assistant]([https://www.exemplo.com](https://chatgpt.com/g/g-SVatmGSdQ-n8n-assistant-by-nskha?model=gpt-4o))
+[n8n Assistant](https://chatgpt.com/g/g-SVatmGSdQ-n8n-assistant-by-nskha?model=gpt-4o)
 
 O Papel da Inteligência Artificial no Aprendizado do n8n
 
@@ -1099,7 +1099,8 @@ Esses templates cobrem uma vasta gama de casos de uso, como:
 
 A grande vantagem é que eles são totalmente customizáveis. Um template serve como um ponto de partida robusto, que pode ser expandido, modificado e adaptado para atender às necessidades exatas de um projeto, economizando um tempo de desenvolvimento significativo e expondo o usuário a boas práticas de construção de workflows.
 
-[Baixe aqui a planilha Templates_n8n.xlsx]([https://exemplo.com/caminho/para/planilha/Templates_n8n.xlsx](https://github.com/unb-lamfo-negocios-ai/LivroIAemMovimento/blob/main/Templates_n8n.xlsx))
+[Baixe aqui a planilha Templates_n8n.xlsx](https://github.com/unb-lamfo-negocios-ai/LivroIAemMovimento/blob/main/Templates_n8n.xlsx)
+
 
 #### Como usar n8n de graça
 
