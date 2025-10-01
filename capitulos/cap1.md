@@ -6,7 +6,7 @@ Mais do que um conjunto de algoritmos, a IA é hoje um **instrumento estratégic
 
 ---
 
-## O que é IA? Teste Teste
+## O que é IA?
 
 O conceito de IA surgiu na década de 1950, quando pesquisadores como **Alan Turing** e **John McCarthy** começaram a explorar a possibilidade de máquinas "pensarem" e aprenderem {cite}`turing1950`.  
 
@@ -41,8 +41,10 @@ Uma forma simples de diferenciar é pensar que a **IA fraca** é como um **espec
 
 ## Modelos de IA
 
-O motor por trás da Inteligência Artificial são os **modelos computacionais** — estruturas matemáticas que aprendem padrões a partir de dados e generalizam esse conhecimento para novos cenários.  
+O motor por trás da Inteligência Artificial são os **modelos computacionais** — estruturas matemáticas que aprendem padrões a partir de dados e generalizam esse conhecimento para novos cenários. A grande diferença em relação ao software tradicional é o "como" eles operam. Em vez de seguir regras explícitas e fixas programadas por um humano (se X, então Y), um modelo de IA aprende suas próprias regras e padrões ao analisar os dados.  
 Eles funcionam como “tradutores” da realidade: observam exemplos, identificam regularidades e passam a **prever ou decidir** com base nessas regularidades.  
+
+Existem inúmeros tipos de modelos, desde os preditivos (que estimam a probabilidade de um cliente cancelar um serviço) até os revolucionários modelos generativos (como os LLMs que escrevem textos ou criam imagens), que são o foco principal deste material. Em qualquer um dos casos, o modelo é, em última análise, o ativo central e o motor de valor de um negócio construído sobre Inteligência Artificial.
 
 Entre as principais técnicas, destacam-se:  
 
