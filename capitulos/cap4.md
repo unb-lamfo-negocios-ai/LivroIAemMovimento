@@ -890,6 +890,153 @@ Comportamentos em Caso de Erro de um Node Específico
 
 ---
 
+#### Resolvendo erros
+
+Principais Erros em Workflows do n8n: O Que Observar nos Nodes
+
+Ao começar a utilizar o n8n para criar automações, é comum encontrar dificuldades relacionadas ao funcionamento dos **nodes** (os blocos que compõem o fluxo). Muitos dos erros enfrentados por iniciantes são causados por configurações incorretas, dados mal estruturados ou falta de compreensão sobre o fluxo de informações entre os nodes.
+
+A seguir, estão listados os **principais erros que ocorrem nos nodes** e dicas práticas para evitá-los.
+
+---
+
+1. ❌ Campos obrigatórios não preenchidos
+
+**Descrição:**
+
+Alguns nodes exigem campos obrigatórios como URLs, credenciais, IDs de planilhas, ou chaves de API. Caso não preenchidos corretamente, o node falha.
+
+:::{tip}
+Sempre revise campos marcados com "*", leia as dicas no rodapé e use as opções de ajuda ao lado de cada campo no editor.
+:::
+---
+
+2. ❌ Falta de credenciais configuradas
+
+**Descrição:**
+
+Muitos nodes de integração (ex: Gmail, Google Sheets, Notion, Trello) dependem de credenciais autenticadas. Esquecer de configurá-las ou vinculá-las ao node gera erro de autenticação.
+
+:::{tip}
+
+Configure as credenciais antes de executar e certifique-se de que estão ativas e conectadas corretamente.
+:::
+---
+
+3. ❌ Formato de dados incompatível
+
+**Descrição:**
+
+Um node pode esperar um tipo de dado (ex: número, string ou objeto JSON), mas receber outro formato. Isso gera falhas silenciosas ou erros visíveis.
+
+**Exemplo:**
+
+Passar um número onde se espera um texto ou enviar um array quando se espera um único item.
+
+:::{tip}
+Use o **Set Node** ou **Function Node** para ajustar dados antes de enviá-los a outros nodes.
+:::{tip}
+
+### 4. ❌ Dados ausentes ou campos inexistentes
+
+**Descrição:**
+
+Ao tentar acessar um campo com <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`{{$json.campoInexistente}}`</span>, o n8n retorna <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`undefined`</span> e pode gerar erro ou resultado inesperado.
+
+:::{tip}
+Use o botão de **"Executar o Node"** anterior e visualize a aba **"Output"** para confirmar se os dados esperados realmente existem.
+:::
+
+5. ❌ Expressões mal escritas
+
+**Descrição:**
+
+Expressões em JavaScript mal formatadas ou com erro de sintaxe podem impedir o node de funcionar.
+
+**Exemplo de erro:**
+```{code-block} json
+{{ $json.valor + 10 // falta fechar o parêntese ou chave }}
+```
+:::{tip}
+Use <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">{{(() => { ... })()}}</span> para expressões mais complexas e valide com pequenas execuções antes de usar em produção.
+:::
+
+6. ❌ Acesso incorreto a dados de outros nodes
+
+**Descrição:**
+
+Tentar acessar outro node da forma errada, como <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`$('Node-Errado')`</span>, ou usando o nome incorreto, gera erro ou dados vazios.
+
+:::{tip}
+Use o autocompletador (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Cmd/Ctrl + Espaço`</span>) ao escrever expressões ou clique com botão direito no campo e selecione "Add Expression" → "Nodes".
+:::
+
+7. ❌ Não verificar se o item atual existe em arrays
+
+**Descrição:**
+
+Ao processar arrays, é comum esquecer que o node está tratando cada item individualmente, o que pode gerar tentativas de acessar dados que não existem naquele item.
+
+:::{tip}
+Use expressões com <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`if`</span> ou <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`try-catch`</span> para evitar que itens incompletos quebrem o fluxo.
+:::
+
+Exemplo:
+
+```{code-block} json
+{{ $json?.meuCampo || 'valor padrão' }}
+```
+
+8. ❌ Looping excessivo ou mal controlado
+
+**Descrição:**
+
+Usar loops mal configurados (como <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`SplitInBatches`</span> com muitos itens ou <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Merge`</span> mal estruturado) pode criar lentidão, travamentos ou comportamento inesperado.
+
+:::{tip}
+Sempre teste com poucos itens e verifique a saída de cada nó antes de escalar.
+:::
+
+---
+
+9. ❌ Esquecer de ativar o workflow
+
+**Descrição:**
+
+Após testar, o workflow funciona, mas o usuário esquece de clicar em “Ativar”, então ele nunca executa automaticamente.
+
+:::{tip}
+Sempre verifique o estado do workflow após testes locais.
+:::
+
+10. ❌ Não salvar alterações antes de executar
+
+**Descrição:**
+
+Executar um node sem salvar alterações recentes pode causar execução com configurações antigas.
+
+:::{tip}
+Salve sempre antes de testar (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Ctrl + S`</span> ou botão "Save").
+:::
+
+Códigos de erro mais comuns em APIs
+
+|Código|	Significado|	Quando acontece?|
+|------|---------------|--------------------|
+|200 OK	|Requisição bem-sucedida	|Tudo funcionou|
+|201 Created	|Recurso criado com sucesso	|Ao fazer um POST com sucesso|
+|204 No Content|	Requisição bem-sucedida, sem retorno	|Ex: deletar algo|
+|400 Bad Request|	Erro na sua requisição	|Campos inválidos ou formato errado|
+|401 Unauthorized	|Falta de autenticação	|Token errado ou ausente|
+|403 Forbidden	|Autenticado, mas sem permissão	|Acesso negado mesmo com login|
+|404 Not Found	|Endpoint ou recurso não existe	|URL errada ou item inexistente|
+|409 Conflict	|Conflito com o estado atual	|Criar um item que já existe, por exemplo|
+|422 Unprocessable Entity|	Dados válidos, mas com erro lógico	|Formato certo, mas info errada (ex: CPF inválido)|
+|429 Too Many Requests|	Limite de chamadas atingido	|Você bateu no rate limit da API|
+|500 Internal Server Error	|Erro no servidor da API	|Falha interna da aplicação externa|
+|502 Bad Gateway	|Gateway da API falhou	|Normal em sistemas com proxies|
+|503 Service Unavailable|	API está fora do ar ou sobrecarregada	|Muita demanda ou manutenção|
+
 ## WhatsApp API
 
 A integração com o **WhatsApp API** permite conectar chatbots de IA diretamente ao aplicativo de mensagens mais usado no Brasil e em vários países.  
