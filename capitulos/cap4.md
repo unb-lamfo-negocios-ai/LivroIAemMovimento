@@ -288,17 +288,7 @@ Eles são universais — usados em quase todos os tipos de automações — e fa
 | Respond to Webhook | Responde uma requisição HTTP | Retornar JSON ou HTML para quem chamou o fluxo |
 
 
-|Tipo de Node|	Finalidade|	Exemplo|
-|Set (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">set</span>)	|Define ou altera dados manualmente	|Criar variáveis como <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">nome</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">email</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">status</span>|
-|IF (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">if</span>)	|Cria ramificações lógicas (condições)	|Se <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">status == aprovado</span>, siga o fluxo A|
-|Switch (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">switch</span>)|	Ramifica com múltiplas condições	|Redireciona com base em “tipo de cliente”|
-|Merge (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">merge</span>)	|Junta dados de dois fluxos	|Unir resposta de API com dados locais|
-|Wait (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">wait</span>)	|Pausa o fluxo por tempo definido|	Esperar 5 min antes de seguir|
-|Code (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">code</span>)	|Executa código JavaScript	|Validar CPF ou gerar ID aleatório|
-|HTTP Request (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">httpRequest</span>)	|Faz chamadas HTTP/REST externas	|Buscar dados de uma API externa|
-|Function (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">function</span>)	|Executa lógica personalizada	|Calcular valores, gerar token|
-|Split In Batches (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">splitInBatches</span>)|	Divide itens em partes	|Processar 10 leads por vez|
-|Respond to Webhook	|Responde uma requisição HTTP	|Retornar JSON ou HTML para quem chamou o fluxo|
+
 
 **Node set**
     
