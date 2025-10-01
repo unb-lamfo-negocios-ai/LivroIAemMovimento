@@ -220,8 +220,7 @@ Autenticação é o processo de **validar quem está fazendo a requisição** à
 |Bearer Token (OAuth2)	|Token de acesso temporário	|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Authorization: Bearer abc.def.ghi</span>|
 |Basic Auth	|Usuário + senha codificados em Base64	|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Authorization: Basic dXNlcjpwYXNz</span>|
 |OAuth2 (3-legged)	|Redireciona o usuário para login	|Usado no Google, Facebook, Microsoft|
-|Header Customizado|	API exige chave em cabeçalho com nome específico	|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">X-API-KEY: sua-chave-aqui</span>
-|
+|Header Customizado|	API exige chave em cabeçalho com nome específico	|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">X-API-KEY: sua-chave-aqui</span>|
 |Session Cookie / JWT|	Cookies de sessão ou tokens JWT	|Sessões autenticadas de forma segura|
 
 ### Como isso se aplica no n8n?
@@ -251,22 +250,369 @@ Triggers são usados quando você quer que o n8n **espere por um evento externo*
 
 |Tipo de Node Trigger	|Finalidade	|Exemplo|
 |-----------------------|-----------|-------|
-|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Webhook</span>
-	|Ativado por uma requisição HTTP|	Um sistema externo envia um POST e inicia o fluxo|
-|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Form Trigger</span>
- 	|Ativado quando alguém preenche um formulário	|Lead preenche dados de contato|
-|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Cron</span>
-	|Executa em horários definidos	|Enviar relatório toda segunda às 8h|
-|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Google Drive Trigger</span>
-	|Ativado quando um arquivo é criado/atualizado em uma pasta do Drive	|Novo contrato adicionado no Drive|
-|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Telegram Trigger</span>
-	|Reage a mensagens recebidas no bot do Telegram	|Cliente envia “Oi” e inicia atendimento|
-|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Email Trigger (IMAP)</span>
-	|Dispara ao receber um e-mail	|Processar anexos de e-mails automaticamente|
-|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Shopify Trigger, Notion Trigger, etc.</span>
-	|Ativam fluxos com base em eventos de plataformas específicas|	Novo pedido na loja, nova nota criada|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Webhook</span>|Ativado por uma requisição HTTP|	Um sistema externo envia um POST e inicia o fluxo|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Form Trigger</span>	|Ativado quando alguém preenche um formulário	|Lead preenche dados de contato|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Cron</span>	|Executa em horários definidos	|Enviar relatório toda segunda às 8h|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Google Drive Trigger</span>	|Ativado quando um arquivo é criado/atualizado em uma pasta do Drive	|Novo contrato adicionado no Drive|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Telegram Trigger</span>	|Reage a mensagens recebidas no bot do Telegram	|Cliente envia “Oi” e inicia atendimento|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Email Trigger (IMAP)</span>	|Dispara ao receber um e-mail	|Processar anexos de e-mails automaticamente|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Shopify Trigger, Notion Trigger, etc.</span>	|Ativam fluxos com base em eventos de plataformas específicas|	Novo pedido na loja, nova nota criada|
+
+### Nodes Essenciais
+
+O que são *Nodes Essenciais* no n8n?
+
+**Nodes essenciais** são os blocos fundamentais que **não dependem de integrações externas** (como Gmail, WhatsApp, Notion...) e que **manipulam dados, controlam o fluxo e estruturam a lógica** do seu workflow.
+
+Eles são universais — usados em quase todos os tipos de automações — e fazem parte do "cérebro" da automação, funcionando como:
+
+- **Variáveis** (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Set`</span>)
+- **Condições** (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`IF`</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Switch`</span>)
+- **Regras e lógica** (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Function`</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Code`</span>)
+- **Controle de tempo** (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Wait`</span>)
+- **Divisão e união de dados** (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Split`</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Merge`</span>)
+
+|Tipo de Node|	Finalidade|	Exemplo|
+|Set (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">set</span>)	|Define ou altera dados manualmente	|Criar variáveis como <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">nome</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">email</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">status</span>|
+|IF (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">if</span>)	|Cria ramificações lógicas (condições)	|Se <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">status == aprovado</span>, siga o fluxo A|
+|Switch (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">switch</span>)|	Ramifica com múltiplas condições	|Redireciona com base em “tipo de cliente”|
+|Merge (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">merge</span>)	|Junta dados de dois fluxos	|Unir resposta de API com dados locais|
+|Wait (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">wait</span>)	|Pausa o fluxo por tempo definido|	Esperar 5 min antes de seguir|
+|Code (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">code</span>)	|Executa código JavaScript	|Validar CPF ou gerar ID aleatório|
+|HTTP Request (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">httpRequest</span>)	|Faz chamadas HTTP/REST externas	|Buscar dados de uma API externa|
+|Function (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">function</span>)	|Executa lógica personalizada	|Calcular valores, gerar token|
+|Split In Batches (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">splitInBatches</span>)|	Divide itens em partes	|Processar 10 leads por vez|
+|Respond to Webhook	Responde uma requisição HTTP	|Retornar JSON ou HTML para quem chamou o fluxo|
+
+**Node set**
+    
+O que é o Node **Set** no n8n?
+    
+    O **node <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Set`</span>** serve para **criar, modificar ou excluir dados no seu fluxo**, sem depender de fontes externas. Ele é um dos **nodes essenciais** do n8n.
+    
+    Pense nele como um "bloco de notas" onde você define ou ajusta valores antes de enviar para um e-mail, API, IA ou planilha.
+
+	Principais usos do Set
+
+|Objetivo|	Exemplo|
+|--------|----------|
+|Criar variáveis	|Criar <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">status: "novo"</span> ou <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">tipo: "lead quente"</span>|
+|Editar campos	|Alterar o nome de uma variável, como <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">telefone → WhatsApp</span>|
+|Renomear dados recebidos	|Padronizar nomes de campos antes de enviar a outro sistema|
+|Deixar o dado pronto para IA/API	|Juntar nome + empresa num só campo|
+
+Como funciona na prática
+
+No node <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Set`</span> você define:
+
+- O nome do campo: ex. <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`mensagem`</span>
+- O valor: ex. <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`"Olá, {{ $json['nome'] }}. Tudo bem?"`</span>
+
+Você pode usar **expressões dinâmicas**, como:
+
+```{code-block} text
+Olá {{ $json['nome'] }}, sua empresa {{ $json['empresa'] }} foi registrada com sucesso!
+```
+
+```{admonition} **Dica de ouro**
+:class: tip
+
+Você pode marcar **“Keep Only Set”** se quiser **remover todos os outros campos** e manter **somente os definidos no <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Set`</span>**. Isso é útil para simplificar o payload antes de enviar para um e-mail, API ou IA.
+```
+
+O que é o Node **Filter**?
+
+O **Filter** serve para **filtrar dados** que passam pelo seu workflow, ou seja, **permitir apenas itens que atendam a certas condições** continuarem para os próximos nodes.
+
+Itens que **não passam pelo filtro** são descartados (não seguem adiante no fluxo).
+
+---
+
+Quando usar o Filter?
+
+- Quando você só quer continuar o fluxo com itens que correspondem a critérios específicos.
+- Para separar leads qualificados de não qualificados, por exemplo.
+- Para processar apenas registros com status específico, valores mínimos/máximos, campos preenchidos, etc.
+
+---
+
+Como funciona?
+
+1. **Entrada:** Recebe uma lista de itens (ex: vários leads, pedidos, respostas de API...).
+2. **Condições:** Você define as regras (ex: “status” igual a “aprovado” ou “valor” maior que 1000).
+3. **Saída:** Só os itens que **passam nas condições** seguem para os próximos nodes.
+
+Exemplo prático:
+
+Suponha que você tem vários leads:
 
 
+```{code-block} json
+---
+caption: Exemplo de lista JSON com nome e pontuação
+---
+[
+  { "nome": "Lucas", "pontuacao": 85 },
+  { "nome": "Ana", "pontuacao": 60 }
+]
+```
+
+No node **Filter**, você pode definir:
+
+**Campo:** <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`pontuacao`</span>
+
+**Operador:** <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`maior que`</span>
+
+**Valor:** <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`70`</span>
+
+**Resultado:** Só o lead "Lucas" segue adiante.
+
+```{admonition} Dica Extra
+:class: tip
+
+- Se quiser manipular o que acontece com os que NÃO passam no filtro, use o node **IF** (que permite bifurcar o fluxo).
+- O node **Filter** é ótimo para automações “em lote”, onde muitos dados passam pelo mesmo fluxo.
+```
+
+- **Node Agreggate**
+    
+O que faz o node **Aggregate**?
+    
+    O **Aggregate** pega **vários itens de entrada** e realiza algum tipo de **agregação**, como:
+    
+    - **Juntar textos** de vários registros em uma única string
+    - **Somar** ou **calcular médias** de campos numéricos
+    - **Criar listas** com valores únicos ou agrupados
+    - **Gerar estatísticas** simples (máximo, mínimo, contagem)
+    - **Transformar múltiplos itens em um único item** (útil para enviar resumo, gerar arquivo, etc.)
+
+Como funciona na prática?
+
+1. **Entrada:** Recebe vários itens (ex: linhas do Google Sheets, respostas de API, vários leads).
+2. **Configuração:**
+    - Você escolhe qual campo quer agregar (ex: <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`nome`</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`valor`</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`mensagem`</span>).
+    - Define a operação: **somar**, **contar**, **juntar**, **média**, **min/max** ou **customizada**.
+3. **Saída:**
+    - Entrega **um ou poucos itens** já agregados/resumidos.
+
+---
+
+### 🛠️ Exemplos práticos
+
+- **Juntar nomes em uma lista:**
+    
+    Entrada:
+  
+  ```{code-block} json
+[ { "nome": "Lucas" }, { "nome": "Ana" }, { "nome": "João" } ]
+```
+
+Saída após “concatenar nomes”:
+
+ ```{code-block} json
+
+{ "nomes": "Lucas, Ana, João" }
+
+```
+- **Somar valores de vendas:**
+    
+    Entrada:
+  
+ ```{code-block} json
+
+[ { "valor": 200 }, { "valor": 300 } ]
+
+```
+
+Saída após “somar valor”:
+
+ ```{code-block} json
+
+{ "total": 500 }
+
+```
+
+- **Contar quantos itens vieram:**
+    
+    Entrada: 10 leads
+    
+    Saída:
+```{code-block} json
+
+{ "totalLeads": 10 }
+
+```
+
+```{admonition} Use o node **Aggregate** sempre que quiser
+:class: tip
+
+Para:
+- Fazer relatórios resumidos
+- Mandar um único e-mail com dados agrupados
+- Preparar dados para dashboards ou integrações externas
+```
+
+- **Node HTTP Request**
+    
+O que é o Node HTTP Request?
+    
+    O **HTTP Request** é como um “mensageiro digital” que faz o n8n **conversar com outros sites, sistemas ou aplicativos na internet**.
+    
+    Ele serve para **buscar informações** em outros lugares (ex: previsão do tempo, dados de clientes, valores de moedas), **enviar dados** (ex: criar um lead, registrar uma compra), ou **fazer qualquer ação** que esses sistemas permitam via internet.
+    
+    ---
+    
+Como funciona na prática?
+    
+    Imagine que você quer saber a previsão do tempo. Você:
+    
+    1. Abre um navegador,
+    2. Digita um endereço (URL) e,
+    3. Vê a resposta (previsão) na tela.
+    
+    No n8n, o **node HTTP Request** faz isso automaticamente e pode:
+    
+    - Buscar informações para você,
+    - Enviar formulários,
+    - Integrar com APIs de bancos, e-commerces, WhatsApp, Google, e qualquer outro sistema.
+
+Passos básicos de uso:
+
+1. **Escolher o endereço (URL)**
+    
+    Onde o n8n vai buscar ou enviar informação. Exemplo: `https://api.exemplo.com/usuarios`
+    
+2. **Escolher a ação (verbo HTTP)**
+    - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`GET`</span> = Buscar dados
+    - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`POST`</span> = Enviar/criar dados
+    - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`PUT/PATCH`</span> = Atualizar dados
+    - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`DELETE`</span> = Apagar dados
+3. **(Opcional) Enviar dados junto**
+    
+    Por exemplo, se for um formulário ou cadastro.
+    
+4. **Receber a resposta**
+    
+    O node traz os dados do site/aplicativo, que podem ser usados nos próximos passos do fluxo.
+
+Para que serve no dia a dia?
+
+- Integrar com sistemas que **não têm node próprio** no n8n
+- Buscar ou enviar dados em **APIs públicas ou privadas**
+- Criar automações sob medida com qualquer serviço online
+
+---
+
+### 📋 Exemplo bem simples
+
+Você quer buscar o preço do dólar hoje:
+
+- Node HTTP Request com URL de uma API de câmbio e método <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">'GET'</span>
+- O n8n traz a cotação para o seu fluxo, pronta para ser usada.
+
+  - **Node Respond to Webhook**
+    
+O que é o Node **Respond to Webhook**?
+    
+    O **Respond to Webhook** é como um **"balcão de respostas"** do seu fluxo de automação.
+    
+    Ele serve para **enviar uma resposta automática para quem chamou o seu workflow**.
+    
+    ---
+    
+Como funciona na prática?
+    
+    Imagine que seu fluxo do n8n recebe um pedido de fora (de um site, sistema ou aplicativo) usando um **Webhook** (um “sininho” que escuta quando algo acontece).
+    
+    - O **Webhook** recebe a mensagem (ex: dados de um formulário enviado).
+    - O seu fluxo faz tudo o que precisa (salva, calcula, consulta, etc.).
+    - **No final**, você usa o node **Respond to Webhook** para **responder de volta** (confirmando que deu certo, enviando dados, etc).
+    
+    ---
+    
+ Exemplo do dia a dia
+    
+    **Situação:**
+    
+    Um site pede orçamento e espera uma resposta automática.
+    
+    **No n8n:**
+    
+    1. Node **Webhook** recebe o pedido.
+    2. O fluxo consulta preços, calcula tudo.
+    3. Node **Respond to Webhook** responde na hora:
+        
+        “Orçamento recebido! Em breve, entraremos em contato.”
+        
+    
+    ---
+    
+Para que serve?
+    
+    - Enviar confirmações automáticas para integrações externas.
+    - Responder sistemas, sites, chatbots, apps ou pessoas que aguardam uma resposta rápida.
+    - Retornar dados processados pelo n8n (por exemplo, status, valores, cálculos).
+    
+    ---
+    
+    ```{admonition}
+	:class: tip
+    
+    Se não usar o **Respond to Webhook**, quem chamou o seu fluxo pode **ficar esperando** e não receber resposta nenhuma, ou receber uma mensagem padrão de erro.
+	```
+
+Nodes de Aplicativo
+
+O que são *Nodes de Aplicativo*?
+
+**Nodes de aplicativo** são os blocos que **conectam o n8n com serviços externos** — como Gmail, WhatsApp, Google Sheets, Notion, Telegram, APIs, CRMs e muito mais.
+
+Esses nodes permitem que o n8n **envie, receba ou modifique dados fora dele**, ou seja, **são a ponte entre o n8n e o mundo real digital**.
+
+|Aplicativo	|Node	|Exemplo de Uso|
+|-----------|-------|--------------|
+|WhatsApp Business API	|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">n8n-nodes-base.whatsApp</span>|	Enviar mensagem para um lead|
+|Gmail|	<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">n8n-nodes-base.gmail</span>	|Disparar um e-mail com proposta|
+|Google Sheets|	<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">n8n-nodes-base.googleSheets</span>|Gravar ou buscar leads salvos|
+|Telegram	|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">n8n-nodes-base.telegram</span>|Responder comandos recebidos|
+|Google Drive	|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">n8n-nodes-base.googleDrive</span>	|Baixar um contrato ou subir um arquivo|
+|Notion	|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">n8n-nodes-base.notion</span>	|Registrar uma nova oportunidade|
+|ScrapingBee|	<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">httpRequest + headers</span>	|Scraping de sites com autenticação|
+|DeepSeek AI / OpenAI / Gemini|	<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">@n8n/n8n-nodes-langchain.lmChat...</span>	|Responder com IA personalizada|
+|Supabase	|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">@n8n/n8n-nodes-langchain.vectorStoreSupabase</span>	|Gravar vetores de RAG|
+
+### Como funcionam os Nodes de Aplicativo?
+
+1. **Autenticação**: geralmente exigem que você configure uma **credencial** (OAuth, API Key...).
+2. **Parâmetros**: você define o que será enviado ou buscado.
+3. **Entrada/Saída**:
+    
+    O node consome os dados do fluxo (normalmente em formato JSON), executa uma ação no aplicativo externo (ex: enviar um WhatsApp, criar uma linha no Google Sheets, enviar um e-mail, buscar informações de uma API) e retorna a resposta dessa ação.
+    
+    - Essa resposta pode ser usada por outros nodes seguintes no workflow.
+    - Assim, os dados podem ser transformados, salvos, encaminhados ou analisados conforme o fluxo avança.
+4. **Múltiplas Operações**:
+    
+    Muitos nodes de aplicativo possuem **diferentes operações** além do padrão "criar" ou "buscar".
+    
+    - Exemplo: O node do Google Sheets permite criar, ler, atualizar e deletar linhas; o node do WhatsApp pode enviar mensagens de texto, imagem, áudio, etc.
+5. **Tratamento de Erros**:
+    
+    Caso o app externo retorne um erro (ex: falha de autenticação, dados inválidos, limite atingido), o node pode exibir esse erro no painel ou permitir o uso de nodes de controle (como o IF) para tratar falhas e tomar decisões alternativas no fluxo.
+    
+6. **Personalização**:
+    
+    Os nodes de aplicativo geralmente permitem **personalizar mensagens, campos e payloads** usando expressões dinâmicas do n8n, tornando cada automação adaptada ao contexto do lead ou usuário.
+    
+
+---
+
+### 📌 Exemplo prático de sequência:
+
+1. **Formulário** preenche dados do lead →
+2. **Node de Aplicativo (Google Sheets)** grava os dados →
+3. **Node de Aplicativo (WhatsApp)** envia uma mensagem personalizada →
+4. **Node de Aplicativo (Gmail)** envia notificação para o time comercial.
 ## Canva
 
 O **Canva** é uma plataforma de design que incorporou recursos de **IA generativa**, como:  
