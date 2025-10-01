@@ -101,6 +101,8 @@ A **IA generativa** amplia esse conceito para múltiplas modalidades:
 
 Essas ferramentas estão transformando setores criativos, educacionais e corporativos, mas também levantam novas questões sobre **direitos autorais, autenticidade e confiabilidade da informação**.  
 
+FALAR SOBRE LLM Leaderboard: https://lmarena.ai/leaderboard ou https://huggingface.co/spaces/lmarena-ai/chatbot-arena-leaderboard
+
 ### **1.1. Definindo os Conceitos Centrais: Um Tour Guiado pela IA Moderna** MATEUS MACEDO
 
 Para navegar no cenário da inteligência artificial moderna, é crucial compreender a terminologia e as relações entre seus componentes. Muitas vezes usados de forma intercambiável, os termos-chave na verdade representam camadas de uma hierarquia tecnológica. No topo está a **Inteligência Artificial (IA)**, o campo abrangente dedicado a criar máquinas que podem imitar o comportamento humano inteligente.
