@@ -1480,3 +1480,143 @@ O MCP suporta diferentes mecanismos de comunicação:
 }
 
 }
+
+### Limitações e Considerações de Segurança
+
+#### 1. Limitações do MCP
+
+**Limitações de Performance:**
+
+- Latência de Rede: Servidores remotos podem ter latência alta
+- Throughput: Limitado pela capacidade do transporte (HTTP vs STDIO)
+- Concorrência: Nem todos os servidores suportam requisições paralelas
+- Timeout: Operações longas podem exceder limites de timeout
+
+**Limitações Funcionais:**
+
+- Stateless: Servidores MCP são geralmente stateless entre requisições
+- Transações: Não há suporte nativo para transações distribuídas
+- Streaming de Dados: Limitado para grandes volumes de dados
+- Compatibilidade: Nem todas as ferramentas/APIs têm servidor MCP
+
+**Quando NÃO Usar MCP:**
+
+- Aplicações que precisam de latência ultra-baixa
+- Sistemas que requerem transações ACID complexas
+- Integrações simples que não justificam a complexidade
+- Ambientes com restrições severas de recursos
+
+#### 2. Considerações de Segurança
+
+**Autenticação e Autorização:**
+
+// Exemplo de configuração segura
+
+{
+
+"mcpServers": {
+
+"database-server": {
+
+"command": "mcp-database-server",
+
+"env": {
+
+"DB_CONNECTION": "postgresql://user:pass@localhost/db",
+
+"ALLOWED_OPERATIONS": "SELECT, INSERT", // Restringir operações
+
+"MAX_ROWS": "1000" // Limitar resultado
+
+}
+
+}
+
+}
+
+}
+
+**Validação de Entrada:**
+
+- Sempre validar parâmetros de ferramentas
+- Sanitizar dados antes de usar em queries/comandos
+- Implementar rate limiting para prevenir abuso
+- Usar schemas JSON rigorosos
+
+**Controle de Acesso:**
+
+# Exemplo de verificação de permissões
+
+def verify_permissions(operation, resource):
+
+if operation == "DELETE" and not user.has_permission("admin"):
+
+raise PermissionError("Operação DELETE requer permissão de admin")
+
+if resource.startswith("/system/") and not user.has_permission("system"):
+
+raise PermissionError("Acesso a recursos do sistema negado")
+
+**Isolamento e Sandboxing:**
+
+- Execute servidores MCP em containers ou ambientes isolados
+- Use usuários com privilégios limitados
+- Implemente timeouts para prevenir operações infinitas
+- Monitore recursos (CPU, memória, disco)
+
+**Auditoria e Logging:**
+
+**O que é:** 
+
+Sistema de registro que monitora e documenta todas as operações realizadas através do MCP. É como ter um "diário detalhado" de tudo que acontece entre cliente e servidor. 
+
+**Por que é importante:** 
+
+- **Rastreabilidade**: Saber exatamente quem fez o quê e quando
+- **Debugging**: Identificar problemas e entender falhas
+- **Segurança**: Detectar uso inadequado ou tentativas de acesso não autorizado
+- **Compliance**: Atender requisitos legais de auditoria
+
+**Informações Registradas:**
+
+- ⏰ Timestamp (momento exato da operação) 
+
+- 🔧 Ferramenta/recurso acessado 
+
+- 👤 Usuário que realizou a ação 
+
+- 📋 Parâmetros enviados 
+
+- ✅/❌ Status do resultado (sucesso ou erro) 
+
+**Exemplo Prático:**
+
+import logging
+
+from datetime import datetime
+
+def log_mcp_operation(tool_name, params, user_id, result_status):
+
+logging.info({
+
+"timestamp": datetime.utcnow().isoformat(),
+
+"tool": tool_name,
+
+"user": user_id,
+
+"params": params,
+
+"status": result_status,
+
+"type": "mcp_operation"
+
+})
+
+**Boas Práticas de Segurança:**
+
+1. **Princípio do Menor Privilégio:** Conceda apenas as permissões mínimas necessárias
+2. **Defesa em Profundidade:** Múltiplas camadas de segurança
+3. **Monitoramento Contínuo:** Logs e alertas para atividades suspeitas
+4. **Atualizações Regulares:** Mantenha servidores MCP atualizados
+5. **Testes de Segurança:** Auditorias regulares e testes de penetração
