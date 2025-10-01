@@ -766,6 +766,7 @@ Para entender melhor o valor do MCP, vamos compará-lo com outras abordagens exi
 | Aplicação sem suporte a MCP | ❌ | ✅ | ✅ | ✅ |
 
 Legenda dos ícones: 
+
 ✅ Recomendado para esse caso
 
 ⚠️ Possível, mas com limitações
@@ -773,3 +774,400 @@ Legenda dos ícones:
 ❌ Não recomendado ou não aplicável
 
 
+### Arquitetura Central do MCP
+
+O MCP segue uma arquitetura cliente-servidor.
+
+### Componentes Detalhados
+
+- [**MCP Host (Anfitrião)](https://modelcontextprotocol.io/docs/getting-started/intro):**
+- É a aplicação ou ferramenta que o usuário interage diretamente
+- Exemplos: Claude Desktop, IDEs (como Cursor ou Windsurf), outras ferramentas de IA
+    - **Responsabilidades:**
+        - Gerenciar a configuração do usuário
+        - Iniciar conexões com servidores MCP
+        - Orquestrar a interação com o LLM
+        - Apresentar resultados ao usuário
+     - **MCP Client (Cliente):**
+- Componente interno do MCP Host
+- Mantém conexões um-para-um com os servidores MCP
+    - **Responsabilidades:**
+        - Descobrir capacidades dos servidores
+        - Gerenciar autenticação
+        - Traduzir requisições entre Host e Server
+        - Manter estado das conexões
+- **MCP Server (Servidor):**
+- Programa leve que atua como "wrapper" para sistemas externos
+- Pode ser executado localmente ou remotamente
+    - **Responsabilidades:**
+        - Expor ferramentas, recursos e prompts
+        - Implementar lógica de negócio específica
+        - Gerenciar acesso a sistemas externos
+        - Manter segurança e permissões
+
+### Fluxo de Comunicação
+
+1. **Inicialização:** Host inicia e configura conexões com servidores
+2. **Descoberta:** Cliente solicita capacidades de cada servidor
+3. **Disponibilização:** Servidor informa suas ferramentas, recursos e prompts
+4. **Uso:** Usuário interage com Host, que decide quando usar cada capacidade
+5. **Execução:** Cliente invoca ferramentas do servidor conforme necessário
+6. **Resultado:** Servidor processa e retorna resultados ao cliente/host
+
+```{figure} imagens/client_server_arq.png
+:alt: Client server Architecture
+:align: center
+:name: client_server_arq
+
+Exemplo visual da arquitetura
+
+<span style="font-size: 0.8em; color: gray;">Fonte: https://learn.deeplearning.ai/courses/mcp-build-rich-context-ai-apps-with-anthropic/lesson/xtt6w/mcp-architecture</span>
+```
+
+Na prática:
+
+```{figure} imagens/mcp_na_pratica.png
+:alt: Client server Architecture
+:align: center
+:name: mcp_na_pratica
+
+MCP na prática
+
+<span style="font-size: 0.8em; color: gray;">Fonte: [https://learn.deeplearning.ai/courses/mcp-build-rich-context-ai-apps-with-anthropic/lesson/xtt6w/mcp-architecture](https://norahsakal.com/blog/mcp-vs-api-model-context-protocol-explained/)</span>
+```
+
+#### Componentes Primários do protocolo
+
+O MCP padroniza as interações em três interfaces principais, além de outras funcionalidades:
+
+##### 1.Ferramentas(Tools)
+
+Controle: Controladas pelo modelo (LLM)
+
+Função: Permitem que o LLM execute ações no mundo real ou recupere dados
+
+As ferramentas são capacidades que o servidor MCP expõe para que o LLM possa invocar quando apropriado. O modelo decide autonomamente quando e como usar cada ferramenta baseado no contexto da conversa.
+
+**Características das Ferramentas:**
+
+- Invocação Automática: O LLM decide quando usar
+- Parâmetros Estruturados: Definidos via JSON Schema
+- Resposta Estruturada: Retorno padronizado
+- Assincronia: Podem executar operações longas
+
+**Exemplos de Ferramentas:**
+
+{
+
+"name": "send_email",
+
+"description": "Enviar email para um destinatário",
+
+"inputSchema": {
+
+"type": "object",
+
+"properties": {
+
+"to": {"type": "string", "description": "Email do destinatário"},
+
+"subject": {"type": "string", "description": "Assunto do email"},
+
+"body": {"type": "string", "description": "Corpo do email"}
+
+},
+
+"required": ["to", "subject", "body"]
+
+}
+
+}
+
+**Casos de Uso Comuns:**
+
+- Integrações com GitHub (listar issues, criar PRs)
+- Asana (adicionar tarefas, atualizar status)
+- Brave (pesquisar na web)
+- Sistemas de arquivos (ler/escrever arquivos)
+- APIs diversas (Stripe, Cloudflare, etc.)
+
+##### 2.Recursos (Resources)
+Controle: Controlados pela aplicação (o MCP Host)
+
+Função: São dados expostos à aplicação que podem ser anexados ao contexto
+
+Os recursos são diferentes das ferramentas porque não são invocados pelo LLM, mas sim disponibilizados pela aplicação para enriquecer o contexto da conversa.
+
+**Tipos de Recursos:**
+
+- Estáticos: Arquivos JSON, documentos, configurações
+- Dinâmicos: Dados interpolados com informações do usuário/sistema
+- Streaming: Recursos que atualizam em tempo real
+
+**Exemplos de Recursos:**
+
+{
+
+"uri": "file:///home/user/project/README.md",
+
+"name": "Project Documentation",
+
+"description": "Documentação principal do projeto",
+
+"mimeType": "text/markdown"
+
+}
+
+**Casos de Uso:**
+
+- Anexos em um chat (imagens, documentos)
+- Logs de sistema em tempo real
+- Configurações de projeto
+- Dados de contexto do usuário
+- Arquivos de referência
+
+##### # 3.Prompts
+
+Controle: Controlados pelo usuário
+
+Função: Modelos predefinidos para interações comuns
+
+Os prompts são como "templates" ou "comandos de barra" que os usuários podem invocar para executar operações complexas predefinidas.
+
+**Características dos Prompts:**
+
+- Invocação Manual: Usuário escolhe quando usar (ex: /summarize)
+- Parametrizáveis: Podem receber argumentos do usuário
+- Contextuais: Podem usar informações do ambiente atual
+- Reutilizáveis: Mesmo prompt funciona em diferentes contextos
+
+**Estrutura de um Prompt:**
+
+{
+
+"name": "summarize_code",
+
+"description": "Resumir arquivos de código do projeto",
+
+"arguments": [
+
+{
+
+"name": "file_pattern",
+
+"description": "Padrão de arquivos a resumir (ex: *.py)",
+
+"required": false
+
+}
+
+]
+
+}
+
+**Exemplos Práticos:**
+
+- /summarize - Resumir documentos ou conversas
+- /translate - Traduzir texto para outro idioma
+- /code-review - Revisar código com padrões da empresa
+- /meeting-notes - Extrair ações de notas de reunião
+
+# Exemplos de Mensagens Comuns
+
+### Inicialização de Conexão:
+
+// Cliente -> Servidor
+
+{
+
+"jsonrpc": "2.0",
+
+"id": "1",
+
+"method": "initialize",
+
+"params": {
+
+"protocolVersion": "2024-11-05",
+
+"capabilities": {
+
+"tools": {},
+
+"resources": {},
+
+"prompts": {}
+
+},
+
+"clientInfo": {
+
+"name": "ExampleClient",
+
+"version": "1.0.0"
+
+}
+
+}
+
+}
+
+// Servidor -> Cliente
+
+{
+
+"jsonrpc": "2.0",
+
+"id": "1",
+
+"result": {
+
+"protocolVersion": "2024-11-05",
+
+"capabilities": {
+
+"tools": {
+
+"listChanged": true
+
+},
+
+"resources": {
+
+"subscribe": true,
+
+"listChanged": true
+
+},
+
+"prompts": {
+
+"listChanged": true
+
+}
+
+},
+
+"serverInfo": {
+
+"name": "ExampleServer",
+
+"version": "1.0.0"
+
+}
+
+}
+
+}
+
+### Listagem de Ferramentas:
+
+// Cliente -> Servidor
+
+{
+
+"jsonrpc": "2.0",
+
+"id": "2",
+
+"method": "tools/list"
+
+}
+
+// Servidor -> Cliente
+
+{
+
+"jsonrpc": "2.0",
+
+"id": "2",
+
+"result": {
+
+"tools": [
+
+{
+
+"name": "get_weather",
+
+"description": "Obter informações meteorológicas",
+
+"inputSchema": {
+
+"type": "object",
+
+"properties": {
+
+"location": {
+
+"type": "string",
+
+"description": "Cidade para consultar o clima"
+
+}
+
+},
+
+"required": ["location"]
+
+}
+
+}
+
+]
+
+}
+
+}
+
+### Execução de Ferramenta:
+
+// Cliente -> Servidor
+
+{
+
+"jsonrpc": "2.0",
+
+"id": "3",
+
+"method": "tools/call",
+
+"params": {
+
+"name": "get_weather",
+
+"arguments": {
+
+"location": "São Paulo"
+
+}
+
+}
+
+}
+
+// Servidor -> Cliente
+
+{
+
+"jsonrpc": "2.0",
+
+"id": "3",
+
+"result": {
+
+"content": [
+
+{
+
+"type": "text",
+
+"text": "Clima em São Paulo: 25°C, ensolarado, umidade 60%"
+
+}
+
+]
+
+}
+
+}
