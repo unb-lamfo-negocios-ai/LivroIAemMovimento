@@ -757,10 +757,8 @@ Ou:
 {{$json.lead.contato.whatsapp}}
 ```
 
-```{admonition} Erros comuns
+```{admonition} Erros comuns com JSON
 :class: warning
-
-### Erros comuns com JSON
 
 - Esquecer aspas em **chaves**
 - Vírgula sobrando no final
@@ -771,9 +769,125 @@ Ou:
 
 ---
 
-### 📝 Como é a estrutura de um JSON?
+### Configurações no Node
 
-A estrutura é feita por **pares de chave e valor**, e pode conter:
+Na configuração de um Node, sempre haverá configurações extras, que podem ser importantes em situações específicas. Vamos explicar algumas dessas opções: 👇
+```{figure} imagens/conf_parameter.png
+:align: center
+:name: conf_parameter
+```
+#### Always Output Data**
+
+**Funcionamento da Opção Always Output Data**
+
+Quando habilitada, o nó sempre enviará uma saída, mesmo nas seguintes situações:
+
+- 📉 **Sem dados de entrada**: Se o nó não receber dados de um nó anterior no fluxo.
+- ❌ **Falha na execução**: Se ocorrer um erro durante a execução do nó.
+- 🚫 **Saída vazia**: Se o nó não tiver dados para enviar após sua execução.
+
+**Por que usar Always Output Data?**
+
+- **Garantia de fluxo**: Mantém a consistência do fluxo, permitindo que ele continue mesmo em condições adversas.
+- **Tratamento de erros**: Ajuda a lidar com erros de forma mais controlada, podendo incluir ações de contingência ou tratamento posterior.
+- **Transparência e depuração**: Facilita a depuração do fluxo, permitindo visualizar onde ocorrem falhas ou lacunas nos dados.
+
+Configuração no n8n ⚙️
+
+Para ativar Always Output Data em um nó:
+
+1. Abra as configurações do nó desejado no editor de fluxo do n8n.
+2. Procure pela opção **"Always Output Data"** ou similar nas configurações do nó.
+3. Habilite esta opção conforme necessário.
+
+Exemplo Prático 🔍
+
+- **Cenário**: Um nó que faz uma solicitação a uma API externa para buscar dados.
+- **Uso**: Com Always Output Data ativado, o fluxo continuará mesmo se a solicitação à API falhar, garantindo que etapas subsequentes possam processar os dados disponíveis ou lidar com a falha de forma adequada.
+
+#### Execute Once
+
+Funcionamento do **Execute Once** 🔄
+
+- **Quando habilitado**, o nó só será executado **uma única vez** após o acionamento inicial do fluxo, mesmo que a condição normalmente desencadeasse múltiplas execuções.
+- **Cenário comum**: Imagine um fluxo que é acionado por um webhook de um sistema externo. Com **Execute Once** ativado, o nó será acionado apenas na primeira vez que o webhook for recebido, mesmo que o sistema externo envie múltiplas solicitações ao webhook.
+
+Por que usar **Execute Once**? 🎯
+
+- **Prevenção de execuções duplicadas**: Evita processamentos redundantes e mantém a integridade dos dados.
+- **Economia de recursos**: Reduz o consumo de recursos do sistema ao limitar execuções desnecessárias do fluxo.
+
+Configuração no n8n ⚙️
+
+Para ativar **Execute Once** em um nó:
+
+1. Abra as configurações do nó desejado no editor de fluxo do n8n.
+2. Procure pela opção **"Execute Once"** ou similar nas configurações do nó.
+3. Habilite esta opção para garantir que o nó seja executado apenas uma vez após o acionamento inicial do fluxo.
+
+Exemplo Prático 🔍
+
+- **Cenário**: Um webhook aciona um fluxo no n8n sempre que um novo pedido é recebido em um sistema de e-commerce.
+- **Uso de Execute Once**: Com Execute Once ativado, o fluxo será acionado apenas na primeira vez que o webhook for recebido para processar o novo pedido, independentemente de quantas vezes o webhook seja acionado pelo sistema de e-commerce.
+
+#### Retry on Fail
+
+Funcionamento do **Retry on Fail** 🔄
+
+- **Quando habilitado**, o nó tentará **executar a operação novamente** após uma falha inicial. Isso é útil para lidar com erros temporários, como problemas de conexão ou timeout de rede.
+- **Cenário comum**: Imagine um fluxo onde um nó faz uma solicitação a uma API externa. Se houver uma falha na primeira tentativa devido a um problema de rede, o **Retry on Fail** permitirá que o nó tente novamente após um curto intervalo de tempo.
+
+Por que usar **Retry on Fail**? 🎯
+
+- **Redução de erros transitórios**: Ajuda a superar problemas temporários que não são persistentes.
+- **Garantia de entrega**: Aumenta a confiabilidade do fluxo, garantindo que as operações sejam concluídas mesmo em condições adversas.
+- **Melhoria na experiência do usuário**: Evita interrupções no serviço ao tentar resolver automaticamente problemas temporários.
+
+Configuração no n8n ⚙️
+
+Para ativar **Retry on Fail** em um nó:
+
+1. Abra as configurações do nó desejado no editor de fluxo do n8n.
+2. Procure pela opção **"Retry on Fail"** ou similar nas configurações do nó.
+3. Habilite esta opção e configure o **número máximo de tentativas** e o **intervalo de tempo entre as tentativas** conforme necessário.
+
+Exemplo Prático 🔍
+
+- **Cenário**: Um nó faz uma solicitação a uma API externa para buscar dados, mas a API está temporariamente fora do ar.
+- **Uso de Retry on Fail**: Com Retry on Fail ativado, o nó tentará novamente automaticamente após uma falha inicial de conexão, permitindo que o fluxo continue mesmo em condições adversas.
+
+```{figure} imagens/retry_on_fail.png
+:align: center
+:name: retry_on_fail
+```
+
+Comportamento do Workflow com erros
+
+```{figure} imagens/fig_workflow.png
+:align: center
+:name: fig_workflow
+
+```
+Comportamentos em Caso de Erro de um Node Específico
+
+**Stop Workflow** ⛔
+
+- **Descrição**: O fluxo inteiro é interrompido imediatamente quando o node específico falha.
+- **Benefícios**: Evita que a falha se propague para outras partes do sistema, garantindo que apenas operações seguras sejam concluídas.
+- **Cenário**: Em um fluxo de pagamento online, se houver uma falha na confirmação de pagamento, o fluxo pode ser interrompido para evitar que o pedido seja processado incorretamente.
+
+**Continue** 🔄
+
+- **Descrição**: O fluxo continua normalmente, mesmo que o node específico falhe.
+- **Benefícios**: Evita interrupções no fluxo, permitindo que operações críticas continuem sendo executadas.
+- **Cenário**: Em um fluxo de automação de e-commerce, se um node de envio de e-mail falhar, o fluxo continua para o próximo node, como atualização de status do pedido.
+
+**Continue (using Error Output)** 🚀
+
+- **Descrição**: O fluxo continua, usando a saída de erro do node específico para tomar ações adicionais.
+- **Benefícios**: Permite que você trate erros de forma mais controlada, usando as informações do erro para tomar decisões específicas.
+- **Cenário**: Se um node de validação de dados falhar, você pode usar as informações do erro para enviar um e-mail de notificação ou registrar o problema em um sistema de logs.
+
 ---
 
 ## WhatsApp API
