@@ -702,7 +702,6 @@ Tipos de Dados no JSON
         }
   }
 
-
 Aqui temos objetos dentro de outros objetos. Acessar isso no n8n exige navegação com <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">usuario.contato.email</span>.
 ```
 
