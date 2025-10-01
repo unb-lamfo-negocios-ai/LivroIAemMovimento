@@ -352,7 +352,6 @@ Exemplo prático:
 
 Suponha que você tem vários leads:
 
-
 ```{code-block} json
 [
   { "nome": "Lucas", "pontuacao": 85 },
@@ -404,23 +403,23 @@ Exemplos práticos
 
 - **Juntar nomes em uma lista:**
     
-    Entrada:
+Entrada:
   
-  ```{code-block} json
+```{code-block} json
   [{"nome": "Lucas"}, {"nome": "Ana"}, {"nome": "João"}]
 ```
 
 Saída após concatenar nomes:
 
- ```{code-block} json
+```{code-block} json
 { "nomes": "Lucas, Ana, João" }
 ```
 
 - **Somar valores de vendas:**
     
-    Entrada:
+Entrada:
   
- ```{code-block} json
+```{code-block} json
 
 [ { "valor": 200 }, { "valor": 300 } ]
 
@@ -428,7 +427,7 @@ Saída após concatenar nomes:
 
 Saída após “somar valor”:
 
- ```{code-block} json
+```{code-block} json
 
 { "total": 500 }
 
@@ -436,9 +435,9 @@ Saída após “somar valor”:
 
 - **Contar quantos itens vieram:**
     
-    Entrada: 10 leads
+Entrada: 10 leads
     
-    Saída:
+Saída:
 ```{code-block} json
 
 { "totalLeads": 10 }
