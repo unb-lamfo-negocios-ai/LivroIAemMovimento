@@ -1171,3 +1171,312 @@ Os prompts são como "templates" ou "comandos de barra" que os usuários podem i
 }
 
 }
+
+### Outras Capacidades Essenciais
+
+#### 1. Composability (Componibilidade)
+
+Uma característica poderosa do MCP é que qualquer aplicação, API ou agente pode ser tanto um cliente MCP quanto um servidor MCP simultaneamente. Isso permite criar arquiteturas complexas e em camadas.
+
+Exemplo de Arquitetura Composta:
+
+Agent de Pesquisa (Cliente + Servidor)
+
+- **Como Cliente, usa:**
+- Web Search MCP Server
+- Database MCP Server
+- File System MCP Server
+- **Como Servidor, expõe:**
+- research_topic()
+- summarize_findings()
+- generate_report()
+
+**Benefícios da Componibilidade:**
+
+- **Especialização:** Cada camada foca em uma responsabilidade específica
+- **Reutilização:** Componentes podem ser usados em diferentes contextos
+- **Escalabilidade:** Fácil adicionar novas capacidades
+- **Manutenibilidade:** Mudanças isoladas por componente
+
+#### 2. Sampling (Amostragem)
+
+Permite que um servidor MCP solicite inferências (chamadas de LLM) do cliente, sem precisar hospedar seu próprio modelo.
+
+**Como Funciona:**
+
+1. Servidor precisa de inteligência para uma decisão
+2. Solicita ao cliente para fazer uma inferência
+3. Cliente usa seu LLM e retorna resultado
+4. Servidor usa o resultado para continuar processamento
+
+**Exemplo Prático:**
+
+// Servidor -> Cliente (solicitando inferência)
+
+- ***Resumo do Fluxo:****
+
+1. Você pede: "Organize minha caixa de entrada"
+
+2. Servidor lê email e precisa classificar urgência
+
+3. Servidor ****pede ao llm****: "Esse email é urgente?"
+
+4. llm analisa e responde: "URGENTE - Requer ação imediata"
+
+5. Servidor executa ação: move para pasta "Urgentes" e notifica você
+
+- ***Por que isso é poderoso?****
+
+1.Servidor permanece simples (sem IA própria)
+
+2.Você controla custos e privacidade (tudo via seu (llm))
+
+veja: 
+
+{
+
+"jsonrpc": "2.0",
+
+"method": "sampling/createMessage",
+
+"params": {
+
+"messages": [
+
+{
+
+"role": "user",
+
+"content": {
+
+"type": "text",
+
+"text": "Classifique este email como urgente, normal ou baixa prioridade: [email content...]"
+
+}
+
+}
+
+],
+
+"modelPreferences": {
+
+"hints": [
+
+{
+
+"name": "claude-3-sonnet"
+
+}
+
+]
+
+}
+
+}
+
+}
+
+**Vantagens:**
+
+- Servidor não precisa gerenciar LLM próprio
+- Cliente mantém controle sobre custos e privacidade
+- Consistência no modelo usado em toda a aplicação
+
+#### 3. Elicitation (Elicitação)
+
+Capacidade que permite ao servidor solicitar informações adicionais dos usuários durante a execução de uma ferramenta.
+
+**Casos de Uso:**
+
+- Confirmar ações críticas (deletar arquivos, fazer pagamentos)
+- Coletar informações adicionais necessárias
+- Obter permissões específicas
+
+**Exemplo de Fluxo:**
+
+// Durante execução de uma ferramenta de reserva
+
+{
+
+"jsonrpc": "2.0",
+
+"method": "elicitation/request",
+
+"params": {
+
+"prompt": "Confirmar reserva do restaurante X para 4 pessoas às 19h?",
+
+"options": ["Confirmar", "Cancelar", "Alterar horário"]
+
+}
+
+}
+
+#### 4. Completions (Conclusões/Sugestões)
+
+O MCP suporta autocompletar para argumentos de prompt e parâmetros de recursos.
+
+**Implementação:**
+
+// Cliente solicita sugestões
+
+{
+
+"jsonrpc": "2.0",
+
+"id": "4",
+
+"method": "completion/complete",
+
+"params": {
+
+"ref": {
+
+"type": "prompt",
+
+"name": "analyze_data"
+
+},
+
+"argument": {
+
+"name": "data_source",
+
+"value": "sales_" // usuário digitou até aqui
+
+}
+
+}
+
+}
+
+// Servidor retorna sugestões
+
+{
+
+"jsonrpc": "2.0",
+
+"id": "4",
+
+"result": {
+
+"completion": {
+
+"values": ["sales_2024", "sales_monthly", "sales_quarterly"],
+
+"total": 3,
+
+"hasMore": false
+
+}
+
+}
+
+}
+
+#### 5. Authentication (Autenticação)
+
+Os servidores MCP podem implementar OAuth 2.0/2.1 para acessar recursos protegidos.
+
+**Fluxo de Autenticação:**
+
+1. Servidor inicia processo OAuth
+2. Cliente redireciona usuário para provedor
+3. Usuário autentica e autoriza
+4. Servidor recebe token OAuth
+5. Cliente recebe token de sessão para uso futuro
+
+**Configuração Exemplo:**
+
+{
+
+"mcpServers": {
+
+"google-drive": {
+
+"command": "mcp-server-google-drive",
+
+"env": {
+
+"GOOGLE_CLIENT_ID": "your-client-id",
+
+"GOOGLE_CLIENT_SECRET": "your-client-secret"
+
+}
+
+}
+
+}
+
+}
+
+#### 6. Notifications (Notificações)
+
+Servidores podem enviar notificações para clientes sobre mudanças de estado.
+
+**Tipos de Notificações:**
+
+- resources/updated: Recurso foi modificado
+- tools/list_changed: Lista de ferramentas mudou
+- prompts/list_changed: Lista de prompts mudou
+
+**Exemplo:**
+
+{
+
+"jsonrpc": "2.0",
+
+"method": "notifications/resources/updated",
+
+"params": {
+
+"uri": "file:///project/config.json"
+
+}
+
+}
+
+#### 7. Transports (Transportes)
+
+O MCP suporta diferentes mecanismos de comunicação:
+
+**Transporte Local (STDIO):**
+
+- Comunicação via entrada/saída padrão
+- Ideal para servidores locais
+- Baixa latência, alta segurança
+
+**Transporte Remoto (HTTP/SSE):**
+
+- Comunicação via HTTP com Server-Sent Events
+- Permite servidores remotos
+- Suporte a múltiplos clientes
+
+**Configuração de Transporte:**
+
+{
+
+"mcpServers": {
+
+"local-server": {
+
+"command": "python",
+
+"args": ["server.py"],
+
+"transport": "stdio"
+
+},
+
+"remote-server": {
+
+"url": "https://api.example.com/mcp",
+
+"transport": "http"
+
+}
+
+}
+
+}
