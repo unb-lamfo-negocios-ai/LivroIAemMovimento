@@ -404,7 +404,7 @@ Como funciona na prática?
     Entrada:
   
   ```{code-block} json
-[ { "nome": "Lucas" }, { "nome": "Ana" }, { "nome": "João" } ]
+  [{"nome": "Lucas"}, {"nome": "Ana"}, {"nome": "João"}]
 ```
 
 Saída após “concatenar nomes”:
