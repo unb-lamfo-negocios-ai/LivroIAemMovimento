@@ -248,45 +248,6 @@ No **n8n**, você configura autenticação em dois lugares:
 
 Triggers são usados quando você quer que o n8n **espere por um evento externo** antes de executar as próximas etapas. Sem um gatilho, o workflow só é executado manualmente.
 
-```{list-table} Tipos de Node no n8n
-:header-rows: 1
-:widths: 20 40 40
-
-* - Tipo de Node
-  - Finalidade
-  - Exemplo
-* - Set (`set`)
-  - Define ou altera dados manualmente
-  - Criar variáveis como `nome`, `email`, `status`
-* - IF (`if`)
-  - Cria ramificações lógicas (condições)
-  - Se `status == aprovado`, siga o fluxo A
-* - Switch (`switch`)
-  - Ramifica com múltiplas condições
-  - Redireciona com base em “tipo de cliente”
-* - Merge (`merge`)
-  - Junta dados de dois fluxos
-  - Unir resposta de API com dados locais
-* - Wait (`wait`)
-  - Pausa o fluxo por tempo definido
-  - Esperar 5 min antes de seguir
-* - Code (`code`)
-  - Executa código JavaScript
-  - Validar CPF ou gerar ID aleatório
-* - HTTP Request (`httpRequest`)
-  - Faz chamadas HTTP/REST externas
-  - Buscar dados de uma API externa
-* - Function (`function`)
-  - Executa lógica personalizada
-  - Calcular valores, gerar token
-* - Split In Batches (`splitInBatches`)
-  - Divide itens em partes
-  - Processar 10 leads por vez
-* - Respond to Webhook
-  - Responde uma requisição HTTP
-  - Retornar JSON ou HTML para quem chamou o fluxo
-```
-
 
 |Tipo de Node Trigger	|Finalidade	|Exemplo|
 |-----------------------|-----------|-------|
@@ -322,7 +283,7 @@ Eles são universais — usados em quase todos os tipos de automações — e fa
 |HTTP Request (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">httpRequest</span>)	|Faz chamadas HTTP/REST externas	|Buscar dados de uma API externa|
 |Function (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">function</span>)	|Executa lógica personalizada	|Calcular valores, gerar token|
 |Split In Batches (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">splitInBatches</span>)|	Divide itens em partes	|Processar 10 leads por vez|
-|Respond to Webhook	Responde uma requisição HTTP	|Retornar JSON ou HTML para quem chamou o fluxo|
+|Respond to Webhook	|Responde uma requisição HTTP	|Retornar JSON ou HTML para quem chamou o fluxo|
 
 **Node set**
     
