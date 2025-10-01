@@ -26,6 +26,37 @@ Na prática, muitas organizações adotam um **modelo híbrido**, combinando API
 Um banco pode comprar um serviço de reconhecimento facial via API (buy), mas desenvolver internamente um motor de decisão de crédito com base em seu histórico exclusivo de clientes (build).  
 :::
 
+-----FELIPE ------
+## Build vs. Buy - modelo pronto ou desenvolvimento interno?
+
+- No caminho para criar um negócio com Inteligência Artificial, uma das primeiras e mais importantes decisões estratégicas é definir se a empresa irá desenvolver uma tecnologia própria (build) ou se irá utilizar uma solução já existente no mercado (buy). Essa escolha impacta diretamente o orçamento, o tempo de lançamento do produto e, principalmente, onde residirá o diferencial competitivo. Não se trata de uma decisão puramente técnica, mas fundamentalmente de uma decisão de negócio.
+- A abordagem "Buy": usando um modelo pronto
+     
+    Optar por “comprar” significa utilizar a tecnologia de ponta desenvolvida por grandes provedores (como os modelos GPT da OpenAI, Claude da Anthropic e Gemini do Google via API) ou empregar modelos de código aberto (open-source) já treinados, como os da família Llama (Meta) ou Mixtral (Mistral AI). 
+    
+    A grande vantagem dessa abordagem é a velocidade de implementação e o acesso a um poder computacional de ponta sem o investimento inicial em Pesquisa & Desenvolvimento. O problema central reside no risco de lock-in (dependência de um fornecedor) e na dificuldade de criar um diferencial tecnológico profundo, visto que concorrentes podem acessar a mesma tecnologia.
+- A abordagem "Build": desenvolvendo um modelo proprietário
+    
+    
+    “Construir” não se limita a criar um modelo do zero, um processo extremamente raro e custoso. Na prática atual, a abordagem "Build" manifesta-se principalmente através do ajuste fino (fine-tuning) de modelos open-source de alta performance com dados proprietários da empresa. Os motivadores para essa decisão são variados e estratégicos.
+    
+    - Motivadores Estratégicos para a Abordagem "Build":
+        - Hiper-especialização e Vantagem Competitiva: Um modelo genérico, por mais poderoso que seja, não supera um modelo menor e mais ágil treinado exaustivamente para uma única tarefa. É o caso do Harvey AI, que ajustou modelos da família GPT para se tornar um especialista em análise de documentos jurídicos, criando uma vantagem competitiva sustentável em seu nicho.
+        - Soberania de Dados, Segurança e Conformidade: Para setores como o financeiro, saúde ou governamental, enviar dados de clientes para uma API de terceiros pode ser inviável por razões regulatórias (LGPD/GDPR) e de segurança. A solução é uma abordagem "Build". Um exemplo recente é a iniciativa do governo francês, que [em 2024 anunciou a  criação da agência AMIAD, de infraestrutura classificada para IA de defesa para desenvolver modelos de IA soberanos,](https://www.defense.gouv.fr/actualites/sebastien-lecornu-lance-strategie-ministerielle-lintelligence-artificielle) assim como criação de [ferramentas destinadas ao serviço público no gera](https://www.info.gouv.fr/actualite/ia-simplification-et-debureaucratisation-pour-transformer-letat?utm_source=chatgpt.com)l, garantindo que dados sensíveis permaneçam em infraestrutura controlada.
+        - Otimização de Custo e Latência em Escala: Utilizar uma API de ponta tem um custo variável que pode aumentar expressivamente com o volume de uso. Empresas como a DoorDash publicaram estudos em 2024 mostrando como desenvolveram seus próprios modelos para tarefas específicas, como [a estimativa de tempo de entrega](https://careersatdoordash.com/blog/deep-learning-for-smarter-eta-predictions/?utm_source=chatgpt.com). O modelo customizado, embora menos versátil que um GPT-4o, é drasticamente mais rápido e mais econômico para sua única e repetitiva função.
+- A Questão da Propriedade Intelectual e das Licenças
+    - É crucial entender que ao fazer o fine-tuning de um modelo open-source como o Llama 3, a empresa não se torna dona do modelo base. A propriedade intelectual, e o verdadeiro ativo, reside nos "pesos" – a camada matemática de conhecimento resultante do ajuste fino – e, principalmente, no conjunto de dados proprietário utilizado para o treinamento. A licença do modelo original ainda se aplica, mas a especialização que torna o modelo único pertence à empresa.
+    - Adicionalmente, é vital para a estratégia de negócio analisar o tipo de licença do modelo open-source. Nem todo "código aberto" é igual. As licenças podem ser divididas em duas categorias principais, com implicações diretas no uso comercial:
+        - Licenças Permissivas (ex: Apache 2.0, MIT): Estas licenças oferecem máxima flexibilidade. Elas permitem que uma empresa modifique, distribua e comercialize o modelo e seus derivados com pouquíssimas restrições. A Mistral AI, por exemplo, estrategicamente lança seus modelos sob a licença Apache 2.0, incentivando a adoção comercial irrestrita para competir com modelos de código fechado.
+        - Licenças Customizadas com Restrições (ex: Llama 3 License): Grandes empresas como a Meta criam suas próprias licenças. A licença do Llama 3, por exemplo, embora permita uso comercial, impõe uma "Política de Uso Aceitável" que proíbe a utilização do modelo para fins ilegais ou antiéticos. Mais importante, a licença estipula que empresas com mais de 700 milhões de usuários ativos mensais no momento do lançamento do modelo precisam solicitar uma licença especial da Meta. Isso efetivamente permite que startups e empresas de médio porte o utilizem livremente, mas impede que concorrentes diretos de escala global o usem sem um acordo específico.
+    - Portanto, a análise jurídica da licença de um modelo não é um mero detalhe técnico, mas um passo mandatório que pode definir a viabilidade e a escalabilidade de um produto construído sobre essa tecnologia.
+- A Decisão Estratégica Final
+A escolha entre "Build" e "Buy" não deve ser vista como uma questão binária, mas como um espectro de opções. A pergunta estratégica central a ser feita é: A funcionalidade de IA precisa ser uma fonte de diferenciação defensável para o negócio?
+    
+    Mesmo que a IA não seja o produto principal, ela pode ser um componente crítico para o sucesso. O sistema de recomendação da Netflix ou do Spotify não é o produto em si (que é o acesso ao conteúdo), mas é uma funcionalidade tão determinante para a experiência e retenção dos usuários que exigiu uma abordagem "Build" para sua criação. Isso permitiu que ambas as empresas estabelecessem uma vantagem de mercado significativa.
+    
+    Portanto, a decisão se alinha a um espectro: começa com o uso de uma API pronta (Buy), avança para o ajuste fino de um modelo open-source (um híbrido de Buy+Build) e pode chegar à construção de um modelo customizado (Build puro). A escolha correta depende de onde a empresa precisa, estrategicamente, ser não apenas boa, mas excepcionalmente única.
+  
 ---
 
 ## Estruturas de Precificação para IA
