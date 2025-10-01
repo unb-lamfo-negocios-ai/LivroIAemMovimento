@@ -19,6 +19,23 @@ Ele funciona como um **“laboratório de fluxos”**, no qual prompts, APIs, ba
 
 Por reduzir barreiras técnicas, é especialmente útil para **equipes multidisciplinares** (como marketing e inovação) que querem experimentar IA de forma ágil {cite}`langflow2023`.  
 
+----TEXTO---NOTION---
+O LangFlow é uma ferramenta de código aberto que permite criar fluxos de trabalho de IA visualmente, similar ao LangChain. Suas principais características incluem:
+
+- Interface visual drag-and-drop para construção de fluxos de IA
+- Compatibilidade com diversos modelos de linguagem e embeddings
+- Suporte a múltiplos provedores de IA (OpenAI, Anthropic, etc)
+- Exportação de fluxos como código Python
+
+Para trabalhar com MCP (Model Context Protocol):
+
+- Configure diferentes modelos de linguagem como nós
+- Estabeleça regras de roteamento entre modelos
+- Defina estratégias de fallback automático
+- Monitore uso e custos por provedor
+
+O LangFlow é ideal para prototipagem rápida de aplicações de IA e experimentação com diferentes modelos e arquiteturas de fluxo.
+
 ---
 
 ## LangChain
