@@ -1101,6 +1101,31 @@ A grande vantagem é que eles são totalmente customizáveis. Um template serve 
 
 [Baixe aqui a planilha Templates_n8n.xlsx]([https://exemplo.com/caminho/para/planilha/Templates_n8n.xlsx](https://github.com/unb-lamfo-negocios-ai/LivroIAemMovimento/blob/main/Templates_n8n.xlsx))
 
+#### Como usar n8n de graça
+
+[Guia Self-Host n8n]([https://exemplo.com/caminho/para/planilha/Templates_n8n.xlsx](https://docs.n8n.io/hosting/?_gl=1*9qdgvv*_gcl_aw*R0NMLjE3NDkxNTA2MzAuQ2owS0NRandnSVhDQmhEQkFSSXNBRUxDOVppTXFma29NREM0em1TaU1lN05YVnc0dVZqWU1DTGYzZXNmcE91YklXR1phOERIb0ZCLUlJMGFBbHdjRUFMd193Y0I.*_gcl_au*MTAwMjExMjc2MS4xNzUwMDk4ODcz*_ga*NDMwODU3NTU0LjE3NTAwOTg2MzY.*_ga_0SC4FF2FH9*czE3NTAxMTQ4OTIkbzMkZzEkdDE3NTAxMTU1MzQkajYwJGwwJGgw))
+
+Instalar o Docker 🐳  [The #1 containerization software for developers and teams](https://www.docker.com/products/docker-desktop/)
+
+```{figure} imagens/docker_n8n.png
+:alt: Docker n8n.
+:align: center
+:name: docker_n8n
+
+```
+
+```{admonition} Lembrando
+:class: note
+
+Isso é um atalho para utilizar a ferramenta gratuitamente, o que inclui certas limitações. Por isso, após se especializar, é interessante assinar a plataforma para uma melhor performance das suas automações. A plataforma também sempre oferece 14 dias de teste gratuito.
+
+Qualquer dúvida ao rodar os códigos no terminal e na instalação, pergunte ao ChatGPT! Alguns detalhes são imprevisíveis.
+```
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8hQ1u0TAyAc&t=5s" 
+title="Instalação n8n via Docker" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+
 ## WhatsApp API
 
 A integração com o **WhatsApp API** permite conectar chatbots de IA diretamente ao aplicativo de mensagens mais usado no Brasil e em vários países.  
