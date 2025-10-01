@@ -518,9 +518,7 @@ O que é o Node **Respond to Webhook**?
 O **Respond to Webhook** é como um **"balcão de respostas"** do seu fluxo de automação.
     
 Ele serve para **enviar uma resposta automática para quem chamou o seu workflow**.
-    
-    ---
-    
+        
 Como funciona na prática?
     
 Imagine que seu fluxo do n8n recebe um pedido de fora (de um site, sistema ou aplicativo) usando um **Webhook** (um “sininho” que escuta quando algo acontece).
