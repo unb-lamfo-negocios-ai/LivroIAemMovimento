@@ -662,9 +662,30 @@ E isso só acontece quando você pensa na **experiência final de uso** e na jor
 ```
 -----FIM----MATEUS---MACEDO------------------------
 
----
+## Protocolos de Integração entre Modelos Computacionais
 
-## Protocolos como MCP (Model Context Protocol)
+Protocolos para conectar modelos computacionais distintos são conjuntos de regras, formatos e padrões que permitem a integração, comunicação e interoperabilidade entre diferentes sistemas, algoritmos ou arquiteturas de modelagem. Eles atuam como pontes semânticas e estruturais, garantindo que os modelos compartilhem informações contextuais, metadados, entradas e saídas, mesmo quando desenvolvidos com linguagens, objetivos ou arquiteturas diferentes. Esses protocolos são fundamentais em cenários como sistemas multiagentes, gêmeos digitais, orquestração de modelos de IA, fluxos RAG e infraestruturas de MLOps, onde é necessário manter consistência, rastreabilidade e colaboração inteligente entre os diversos componentes do sistema.
+
+```{admonition}
+:class: note
+Antes de falar sobre estes protocolos, ressaltamos que é recomendado ter alguns conhecimentos básicos: 
+
+Conhecimentos recomendáveis: 
+
+- Programação Básica: Familiaridade com pelo menos uma linguagem de programação (Python será a linguagem utilizada nos exemplos)
+- Conceitos de APIs: Entendimento básico de como APIs funcionam, requisições e respostas. Veja nossa seção sobre APIs.
+- JSON: Conhecimento do formato JSON para troca de dados
+- Arquitetura Cliente-Servidor: Compreensão básica de como clientes e servidores se comunicam
+- Outros: Vai ser útil conhecimentos sobre APIs REST, protocolo HTTP/HTTPS, noções básicas de segurança web, Inteligência Artificial e LLMs.
+
+Ferramentas Necessárias: 
+
+- Python 3.8 ou superior
+- Editor de texto ou IDE de sua preferência
+- Acesso à internet para instalação de pacotes
+```
+
+### Model Context Protocol
 
 O **Model Context Protocol (MCP)** é uma iniciativa recente que propõe **padronizar a comunicação entre aplicações e modelos de IA**.  
 Seu objetivo é garantir que diferentes ferramentas possam se conectar de forma **segura, eficiente e consistente**, reduzindo problemas de compatibilidade e evitando integrações fragmentadas.  
@@ -677,3 +698,101 @@ Essa padronização será cada vez mais importante em um cenário onde múltiplo
 - Compreender a **arquitetura e os componentes técnicos** não significa que você precise dominar a programação de cada parte.  
 - O essencial é ter **clareza sobre as opções disponíveis** e saber avaliar quais escolhas são mais adequadas para os seus objetivos estratégicos.
 :::
+
+#### Conceituação do Model Context Protocol(MCP)
+
+#### O que é o MCP?
+
+Imagine que você tem um assistente pessoal muito inteligente (como ChatGPT ou Claude), mas ele está "preso" em uma caixa e não consegue acessar seus arquivos, seus e-mails, seu calendário, ou qualquer sistema que você usa no dia a dia. O [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) é como uma "ponte universal" que permite que esse assistente se conecte de forma segura e padronizada a todos esses sistemas.
+
+O MCP é um protocolo aberto e padronizado que permite que aplicações de Inteligência Artificial (IA) e agentes interajam de forma transparente com sistemas externos, fontes de dados e ferramentas. Pense no MCP como um "adaptador universal" que conecta os Modelos de Linguagem Grande (LLMs) ao mundo real e aos seus dados.
+
+#### Por que o MCP Existe?
+
+**O Problema Antes do MCP:**
+
+- Cada empresa criava sua própria forma de conectar IA aos seus sistemas
+- Muito trabalho duplicado e incompatibilidade entre soluções
+- Desenvolvedores precisavam criar integrações específicas para cada ferramenta
+- Usuários ficavam limitados aos sistemas que cada aplicação de IA conseguia acessar
+
+**A Solução do MCP:**
+
+- Um padrão único que funciona para todas as aplicações de IA
+- Qualquer ferramenta que implemente MCP pode ser usada por qualquer aplicação de IA compatível
+- Redução drástica do tempo de desenvolvimento
+- Maior segurança e controle sobre as integrações
+
+#### A Filosofia e Motivação por Trás do MCP
+
+A motivação central por trás do MCP, especialmente para a [Anthropic](https://www.youtube.com/watch?v=kQmXtrmQ5Zg), é a premissa de que "modelos são tão bons quanto o contexto que lhes fornecemos". Há alguns anos, a integração de contexto em chatbots ou aplicações de IA era muitas vezes feita por meio de copiar e colar ou digitação manual. No entanto, a evolução levou a sistemas onde os modelos precisam de "ganchos" diretos em seus dados e contexto, tornando-os mais poderosos e personalizados.
+
+O que a Anthropic observou antes do MCP era uma grande fragmentação na forma como as empresas e equipes construíam sistemas de IA. Cada equipe criava suas próprias implementações personalizadas para conectar LLMs a dados e ferramentas, com lógicas de prompt e formas de federação de acesso diferentes. Isso resultava em um problema "N vezes M", onde havia inúmeras permutações para a interação entre aplicações cliente e servidores.
+
+O MCP nasceu para padronizar esse desenvolvimento de IA, atuando como uma camada intermediária que "achata" essa complexidade. Ele busca ser para as aplicações de IA o que as APIs foram para a interação entre frontend e backend da web, ou o que o Language Server Protocol (LSP) é para a padronização da interação de IDEs com ferramentas específicas de linguagem.
+
+```{figure} imagens/mcp_protocol.png
+:align: center
+:name: mcp_protocol
+```
+
+MCP vs. Outras Soluções
+
+Para entender melhor o valor do MCP, vamos compará-lo com outras abordagens existentes:
+
+<table border="1" cellspacing="0" cellpadding="6">
+  <thead>
+    <tr>
+      <th>Aspecto</th>
+      <th>MCP</th>
+      <th>APIs REST Tradicionais</th>
+      <th><a href="#">Webhooks</a></th>
+      <th>Plugins Específicos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Padronização</strong></td>
+      <td>✅ Protocolo único</td>
+      <td>✅ Cada API é diferente</td>
+      <td>✅ Implementação varia</td>
+      <td>✅ Específico por aplicação</td>
+    </tr>
+    <tr>
+      <td><a href="#">Bidirecionalidade</a></td>
+      <td>✅ Cliente ↔ Servidor</td>
+      <td>✅ Principalmente Cliente → Servidor</td>
+      <td>✅ Servidor → Cliente</td>
+      <td>✅ Varia</td>
+    </tr>
+    <tr>
+      <td><strong>Tempo Real</strong></td>
+      <td>✅ Suporte nativo</td>
+      <td><span style="color:#d6336c; font-weight:bold;">❗Polling necessário</span></td>
+      <td><span style="color:#d6336c; font-weight:bold;">❗Push notifications</span></td>
+      <td>✅ Varia</td>
+    </tr>
+    <tr>
+      <td><strong>Descoberta Automática</strong></td>
+      <td>✅ Capacidades expostas</td>
+      <td>✅ Documentação manual</td>
+      <td>✅ Configuração manual</td>
+      <td>✅ Manual</td>
+    </tr>
+    <tr>
+      <td><strong>Controle de Acesso</strong></td>
+      <td>✅ Granular e padronizado</td>
+      <td>✅ Varia por API</td>
+      <td>✅ Limitado</td>
+      <td>✅ Varia</td>
+    </tr>
+    <tr>
+      <td><strong>Facilidade de Integração</strong></td>
+      <td>✅ Uma vez implementado, funciona com todos</td>
+      <td>✅ Integração por API</td>
+      <td>✅ Configuração por <a href="#">webhook</a></td>
+      <td>✅ Por aplicação</td>
+    </tr>
+  </tbody>
+</table>
+
