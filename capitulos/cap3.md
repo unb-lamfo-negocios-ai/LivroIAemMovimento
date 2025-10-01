@@ -156,3 +156,33 @@ Com a democratização da Inteligência Artificial, ambos os caminhos estão mai
 
 ---
 
+## Vibecoding FELIPE
+
+“Vibe coding” é um estilo de programação que procura tornar o processo mais leve, acessível e criativo. Em lugar de seguir o caminho tradicional baseado em planejamento extenso e etapas técnicas rígidas, o programador simplesmente descreve o que deseja e deixa que a inteligência artificial traduza essa ideia em código em questão de segundos. Isso significa que o vibe coder não precisa dominar linguagens ou bibliotecas complexas: basta conversar com o modelo de IA e ir moldando o projeto conforme as necessidades surgem. A grande vantagem é a prototipagem rápida. Em poucas horas (às vezes minutos) é possível ter um app, uma automação ou uma ferramenta simples funcionando, avaliar sua utilidade e, se necessário, aprimorá-la com o próprio auxílio da IA. Caso não dê certo, o custo do erro é mínimo, pois todo o código foi gerado em tempo quase real. 
+Essa abordagem chama atenção porque elimina barreiras históricas de entrada: qualquer pessoa pode sair de uma ideia abstrata para um protótipo funcional sem meses de estudo prévio. Além disso, ela incentiva a liberdade criativa; não há “modo correto” de começar, apenas o objetivo de colocar algo para rodar. No entanto, nem tudo são flores. Quando se salta etapas de arquitetura, o código pode crescer frágil e se tornar difícil de manter ou escalar. É comum acumular dependências sugeridas pela IA sem entender versões ou licenças, o que cria um débito técnico invisível. Também há riscos de qualidade e segurança, já que os trechos gerados podem conter falhas de desempenho ou vulnerabilidades que passam despercebidas sem auditoria humana. Outro ponto crítico é a dependência da ferramenta: deixar todo o raciocínio a cargo do modelo pode impedir que o desenvolvedor aprenda fundamentos essenciais. Por fim, a velocidade inicial pode ser ilusória: transformar um protótipo relâmpago em produto robusto exige testes, documentação, versionamento e boas práticas de engenharia. 
+Em síntese, vibe coding abre portas e democratiza a criação de soluções com IA ao reduzir o medo de começar errado e permitir entregas relâmpago. Por outro lado, cada atalho cobra seu preço mais adiante. Resta, portanto, a reflexão: até que ponto vale trocar profundidade por velocidade e em quais projetos esse compromisso faz sentido? Encontrar esse equilíbrio será, provavelmente, o próximo grande desafio de quem deseja construir com IA de forma realmente sustentável.
+
+```{admonition} **LLMs são alavancas, não substitutos**
+:class: note
+
+- LLMs e IA generativa representam uma mudança radical na forma como criamos produtos, conteúdos e soluções.
+
+- Para empreendedores, isso significa **mais velocidade, menos custo e mais possibilidade de experimentar.**
+```
+
+---VIBECODING---ERIC
+ Vibe Coding
+
+O conceito de **Vibe Coding** descreve uma forma emergente de criar produtos digitais em que a **IA atua como copiloto criativo**.  
+Nesse modelo, a programação tradicional é complementada por **colaboração interativa com LLMs**, que sugerem código, explicações e até protótipos funcionais {cite}`wu2022`.  
+
+Isso acelera a prototipagem e reduz barreiras técnicas, permitindo que profissionais de áreas não técnicas participem da construção de soluções digitais.  
+
+Exemplo prático: um designer de produto pode, com o auxílio de um LLM, criar rapidamente um protótipo de aplicativo que gera imagens personalizadas para campanhas de marketing, sem escrever linhas extensas de código.  
+
+:::{tip}
+Estratégias bem definidas de **construção, precificação e operação** podem ser o diferencial entre um produto de IA promissor e um projeto que nunca ganha escala.  
+O segredo está em alinhar **capacidade técnica**, **modelo de monetização** e **necessidade real do mercado**.
+:::
+
+---
