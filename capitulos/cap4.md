@@ -248,20 +248,54 @@ No **n8n**, você configura autenticação em dois lugares:
 
 Triggers são usados quando você quer que o n8n **espere por um evento externo** antes de executar as próximas etapas. Sem um gatilho, o workflow só é executado manualmente.
 
+```{list-table} Tipos de Node no n8n
+:header-rows: 1
+:widths: 20 40 40
+
+* - Tipo de Node
+  - Finalidade
+  - Exemplo
+* - Set (`set`)
+  - Define ou altera dados manualmente
+  - Criar variáveis como `nome`, `email`, `status`
+* - IF (`if`)
+  - Cria ramificações lógicas (condições)
+  - Se `status == aprovado`, siga o fluxo A
+* - Switch (`switch`)
+  - Ramifica com múltiplas condições
+  - Redireciona com base em “tipo de cliente”
+* - Merge (`merge`)
+  - Junta dados de dois fluxos
+  - Unir resposta de API com dados locais
+* - Wait (`wait`)
+  - Pausa o fluxo por tempo definido
+  - Esperar 5 min antes de seguir
+* - Code (`code`)
+  - Executa código JavaScript
+  - Validar CPF ou gerar ID aleatório
+* - HTTP Request (`httpRequest`)
+  - Faz chamadas HTTP/REST externas
+  - Buscar dados de uma API externa
+* - Function (`function`)
+  - Executa lógica personalizada
+  - Calcular valores, gerar token
+* - Split In Batches (`splitInBatches`)
+  - Divide itens em partes
+  - Processar 10 leads por vez
+* - Respond to Webhook
+  - Responde uma requisição HTTP
+  - Retornar JSON ou HTML para quem chamou o fluxo
+```
+
+
 |Tipo de Node Trigger	|Finalidade	|Exemplo|
 |-----------------------|-----------|-------|
 |<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Webhook</span>|Ativado por uma requisição HTTP|	Um sistema externo envia um POST e inicia o fluxo|
-
 |<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Form Trigger</span>	|Ativado quando alguém preenche um formulário	|Lead preenche dados de contato|
-
 |<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Cron</span>	|Executa em horários definidos	|Enviar relatório toda segunda às 8h|
-
 |<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Google Drive Trigger</span>	|Ativado quando um arquivo é criado/atualizado em uma pasta do Drive	|Novo contrato adicionado no Drive|
-
 |<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Telegram Trigger</span>	|Reage a mensagens recebidas no bot do Telegram	|Cliente envia “Oi” e inicia atendimento|
-
 |<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Email Trigger (IMAP)</span>	|Dispara ao receber um e-mail	|Processar anexos de e-mails automaticamente|
-
 |<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Shopify Trigger, Notion Trigger, etc.</span>	|Ativam fluxos com base em eventos de plataformas específicas|	Novo pedido na loja, nova nota criada|
 
 ### Nodes Essenciais
