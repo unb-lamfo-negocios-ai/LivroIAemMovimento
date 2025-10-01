@@ -51,6 +51,51 @@ Ele oferece **componentes reutilizáveis e modulares** para:
 
 Seu diferencial está na **flexibilidade para integrar IA em aplicações robustas**, tornando-o uma escolha comum para startups e grandes empresas {cite}`langchain2022`.  
 
+----TEXTO----NOTION----
+LangChain é um framework de código aberto que facilita o desenvolvimento de aplicações com Inteligência Artificial, especialmente para criar agentes de IA. Suas principais características incluem:
+
+- **Componentes Modulares:** Oferece blocos de construção reutilizáveis para criar aplicações de IA personalizadas
+- **Integração com LLMs:** Suporta diversos modelos de linguagem como GPT-4, Claude, PaLM e outros
+- **Gerenciamento de Contexto:** Permite manipular e estruturar o contexto das conversas de forma eficiente
+- **Chains:** Possibilita a criação de fluxos sequenciais de processamento de dados e lógica
+- **Agents:** Facilita a construção de agentes autônomos que podem tomar decisões e executar tarefas
+
+**Principais funcionalidades para Backend:**
+
+- **Memory Systems:** Gerenciamento de histórico de conversas e estados
+- **Prompt Templates:** Sistema robusto para gerenciar e padronizar prompts
+- **Tools e Callbacks:** Integração com APIs externas e sistemas de monitoramento
+- **Document Loaders:** Processamento de diferentes tipos de documentos e dados
+
+**Vantagens para Desenvolvimento:**
+
+- Arquitetura modular e extensível
+- Grande comunidade e documentação abrangente
+- Suporte a diversos backends de banco de dados
+- Integração facilitada com serviços de nuvem
+
+```{code-block} python
+from langchain.agents import Tool, AgentExecutor, LLMSingleActionAgent
+from langchain.memory import ConversationBufferMemory
+
+# Exemplo básico de configuração de um agente
+tools = [
+    Tool(
+        name="Search",
+        func=search_function,
+        description="Útil para buscar informações"
+    )
+]
+
+memory = ConversationBufferMemory()
+agent = LLMSingleActionAgent(tools=tools, memory=memory)
+agent_executor = AgentExecutor.from_agent_and_tools(
+    agent=agent,
+    tools=tools,
+    memory=memory
+)
+```
+
 ---
 
 ## LangGraph
