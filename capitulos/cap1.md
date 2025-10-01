@@ -169,13 +169,15 @@ Aqui estão formas reais de usar LLMs e IA generativa **na criação de um negó
 |**Atendimento e suporte** | Criar FAQs, chatbots, respostas automáticas, assistente virtual inteligente |
 | **Automação de tarefas** | Usar IA combinada com ferramentas no-code para fluxos inteligentes |
 
-:::{caution} **Limitações e Cuidados**
+```{admonition} Limitações e Cuidados
+:class: caution
 
-- **Alucinações**: LLMs podem inventar fatos. Sempre revise conteúdo crítico.
-- **Privacidade**: Evite inserir dados sensíveis.
-- **Qualidade**: Nem todo conteúdo gerado é bom — o olho humano ainda manda.
-- **Dependência**: A IA é ferramenta, não muleta. Desenvolva também sua intuição de negócio.
-:::
+- **Alucinações:** LLMs podem inventar fatos. Sempre revise conteúdo crítico.  
+- **Privacidade:** Evite inserir dados sensíveis.  
+- **Qualidade:** Nem todo conteúdo gerado é bom — o olho humano ainda manda.  
+- **Dependência:** A IA é ferramenta, não muleta. Desenvolva também sua intuição de negócio.
+```
+
 
 ## Vibecoding FELIPE
 
@@ -183,12 +185,13 @@ Aqui estão formas reais de usar LLMs e IA generativa **na criação de um negó
 Essa abordagem chama atenção porque elimina barreiras históricas de entrada: qualquer pessoa pode sair de uma ideia abstrata para um protótipo funcional sem meses de estudo prévio. Além disso, ela incentiva a liberdade criativa; não há “modo correto” de começar, apenas o objetivo de colocar algo para rodar. No entanto, nem tudo são flores. Quando se salta etapas de arquitetura, o código pode crescer frágil e se tornar difícil de manter ou escalar. É comum acumular dependências sugeridas pela IA sem entender versões ou licenças, o que cria um débito técnico invisível. Também há riscos de qualidade e segurança, já que os trechos gerados podem conter falhas de desempenho ou vulnerabilidades que passam despercebidas sem auditoria humana. Outro ponto crítico é a dependência da ferramenta: deixar todo o raciocínio a cargo do modelo pode impedir que o desenvolvedor aprenda fundamentos essenciais. Por fim, a velocidade inicial pode ser ilusória: transformar um protótipo relâmpago em produto robusto exige testes, documentação, versionamento e boas práticas de engenharia. 
 Em síntese, vibe coding abre portas e democratiza a criação de soluções com IA ao reduzir o medo de começar errado e permitir entregas relâmpago. Por outro lado, cada atalho cobra seu preço mais adiante. Resta, portanto, a reflexão: até que ponto vale trocar profundidade por velocidade e em quais projetos esse compromisso faz sentido? Encontrar esse equilíbrio será, provavelmente, o próximo grande desafio de quem deseja construir com IA de forma realmente sustentável.
 
-:::{note} **LLMs são alavancas, não substitutos**
+```{admonition} **LLMs são alavancas, não substitutos**
+:class: note
 
 - LLMs e IA generativa representam uma mudança radical na forma como criamos produtos, conteúdos e soluções.
 
 - Para empreendedores, isso significa **mais velocidade, menos custo e mais possibilidade de experimentar.**
-:::
+```
 ---
 
 ## Ética e Viés MAISA FAZER
