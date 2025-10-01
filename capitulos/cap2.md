@@ -740,59 +740,36 @@ MCP vs. Outras Soluções
 
 Para entender melhor o valor do MCP, vamos compará-lo com outras abordagens existentes:
 
-<table border="1" cellspacing="0" cellpadding="6">
-  <thead>
-    <tr>
-      <th>Aspecto</th>
-      <th>MCP</th>
-      <th>APIs REST Tradicionais</th>
-      <th><a href="#">Webhooks</a></th>
-      <th>Plugins Específicos</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Padronização</strong></td>
-      <td>✅ Protocolo único</td>
-      <td>✅ Cada API é diferente</td>
-      <td>✅ Implementação varia</td>
-      <td>✅ Específico por aplicação</td>
-    </tr>
-    <tr>
-      <td><a href="#">Bidirecionalidade</a></td>
-      <td>✅ Cliente ↔ Servidor</td>
-      <td>✅ Principalmente Cliente → Servidor</td>
-      <td>✅ Servidor → Cliente</td>
-      <td>✅ Varia</td>
-    </tr>
-    <tr>
-      <td><strong>Tempo Real</strong></td>
-      <td>✅ Suporte nativo</td>
-      <td><span style="color:#d6336c; font-weight:bold;">❗Polling necessário</span></td>
-      <td><span style="color:#d6336c; font-weight:bold;">❗Push notifications</span></td>
-      <td>✅ Varia</td>
-    </tr>
-    <tr>
-      <td><strong>Descoberta Automática</strong></td>
-      <td>✅ Capacidades expostas</td>
-      <td>✅ Documentação manual</td>
-      <td>✅ Configuração manual</td>
-      <td>✅ Manual</td>
-    </tr>
-    <tr>
-      <td><strong>Controle de Acesso</strong></td>
-      <td>✅ Granular e padronizado</td>
-      <td>✅ Varia por API</td>
-      <td>✅ Limitado</td>
-      <td>✅ Varia</td>
-    </tr>
-    <tr>
-      <td><strong>Facilidade de Integração</strong></td>
-      <td>✅ Uma vez implementado, funciona com todos</td>
-      <td>✅ Integração por API</td>
-      <td>✅ Configuração por <a href="#">webhook</a></td>
-      <td>✅ Por aplicação</td>
-    </tr>
-  </tbody>
-</table>
+| Aspecto | MCP | APIs REST Tradicionais | Webhooks | Plugins Específicos |
+|---------|-----|------------------------|-----------|---------------------|
+| **Padronização** | ✅ Protocolo único | ✅ Cada API é diferente | ✅ Implementação varia | ✅ Específico por aplicação |
+| **Bidirecionalidade** | ✅ Cliente ↔ Servidor | ✅ Principalmente Cliente → Servidor | ✅ Servidor → Cliente | ✅ Varia |
+| **Tempo Real** | ✅ Suporte nativo | ✅ Polling necessário | ✅ Push notifications | ✅ Varia |
+| **Descoberta Automática** | ✅ Capacidades expostas | ✅ Documentação manual | ✅ Configuração manual | ✅ Manual |
+| **Controle de Acesso** | ✅ Granular e padronizado | ✅ Varia por API | ✅ Limitado | ✅ Varia |
+| **Facilidade de Integração** | ✅ Uma vez implementado, funciona com todos | ✅ Integração por API | ✅ Configuração por webhook | ✅ Por aplicação |
+
+| Situação de Uso | MCP | APIs REST | Webhooks | Plugins Específicos |
+|------------------|-----|------------|----------|----------------------|
+| Conectar IA a múltiplos sistemas | ✅ | ❌ | ❌ | ❌ |
+| Solução padronizada e reutilizável | ✅ | ❌ | ❌ | ❌ |
+| Aproveitar ecossistema existente | ✅ | ❌ | ❌ | ❌ |
+| Comunicação bidirecional em tempo real | ✅ | ❌ | ⚠️ (limitada) | ❌ |
+| Integração simples e específica | ❌ | ✅ | ⚠️ | ✅ |
+| Sem necessidade de IA avançada | ❌ | ✅ | ✅ | ✅ |
+| Já existe API REST disponível | ❌ | ✅ | ❌ | ❌ |
+| Notificações simples | ❌ | ❌ | ✅ | ❌ |
+| Comunicação unidirecional | ❌ | ✅ | ✅ | ✅ |
+| Requisitos específicos de tempo real | ❌ | ❌ | ✅ | ❌ |
+| Aplicação única | ❌ | ✅ | ✅ | ✅ |
+| Funcionalidades muito específicas | ❌ | ⚠️ | ✅ | ✅ |
+| Aplicação sem suporte a MCP | ❌ | ✅ | ✅ | ✅ |
+
+Legenda dos ícones: 
+✅ Recomendado para esse caso
+
+⚠️ Possível, mas com limitações
+
+❌ Não recomendado ou não aplicável
+
 
