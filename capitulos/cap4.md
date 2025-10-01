@@ -390,12 +390,12 @@ O **Aggregate** pega **vários itens de entrada** e realiza algum tipo de **agre
 
 Como funciona na prática?
 
-1. **Entrada:** Recebe vários itens (ex: linhas do Google Sheets, respostas de API, vários leads).
-2. **Configuração:**
-    - Você escolhe qual campo quer agregar (ex: <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`nome`</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`valor`</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`mensagem`</span>).
-    - Define a operação: **somar**, **contar**, **juntar**, **média**, **min/max** ou **customizada**.
-3. **Saída:**
-    - Entrega **um ou poucos itens** já agregados/resumidos.
+**Entrada:** Recebe vários itens (ex: linhas do Google Sheets, respostas de API, vários leads).
+**Configuração:**
+- Você escolhe qual campo quer agregar (ex: <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`nome`</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`valor`</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`mensagem`</span>).
+- Define a operação: **somar**, **contar**, **juntar**, **média**, **min/max** ou **customizada**.
+**Saída:**
+Entrega **um ou poucos itens** já agregados/resumidos.
 
 ---
 
@@ -457,25 +457,25 @@ Para:
     
 O que é o Node HTTP Request?
     
-    O **HTTP Request** é como um “mensageiro digital” que faz o n8n **conversar com outros sites, sistemas ou aplicativos na internet**.
+O **HTTP Request** é como um “mensageiro digital” que faz o n8n **conversar com outros sites, sistemas ou aplicativos na internet**.
     
-    Ele serve para **buscar informações** em outros lugares (ex: previsão do tempo, dados de clientes, valores de moedas), **enviar dados** (ex: criar um lead, registrar uma compra), ou **fazer qualquer ação** que esses sistemas permitam via internet.
+Ele serve para **buscar informações** em outros lugares (ex: previsão do tempo, dados de clientes, valores de moedas), **enviar dados** (ex: criar um lead, registrar uma compra), ou **fazer qualquer ação** que esses sistemas permitam via internet.
     
-    ---
+---
     
 Como funciona na prática?
     
-    Imagine que você quer saber a previsão do tempo. Você:
+Imagine que você quer saber a previsão do tempo. Você:
     
-    1. Abre um navegador,
-    2. Digita um endereço (URL) e,
-    3. Vê a resposta (previsão) na tela.
+1. Abre um navegador,
+2. Digita um endereço (URL) e,
+3. Vê a resposta (previsão) na tela.
     
-    No n8n, o **node HTTP Request** faz isso automaticamente e pode:
+No n8n, o **node HTTP Request** faz isso automaticamente e pode:
     
-    - Buscar informações para você,
-    - Enviar formulários,
-    - Integrar com APIs de bancos, e-commerces, WhatsApp, Google, e qualquer outro sistema.
+- Buscar informações para você,
+- Enviar formulários,
+- Integrar com APIs de bancos, e-commerces, WhatsApp, Google, e qualquer outro sistema.
 
 Passos básicos de uso:
 
