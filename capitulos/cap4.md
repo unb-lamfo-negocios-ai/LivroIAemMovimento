@@ -152,7 +152,120 @@ No contexto de IA, ele pode ser usado para:
 
 **Exemplo prático:** uma empresa pode criar um fluxo onde menções no Twitter são analisadas por IA e classificadas em “elogio”, “crítica” ou “pedido de suporte”, com resposta automática ou encaminhamento interno {cite}`n8n2020`.  
 
+
+----INICIO---GABRIEL---------------
+### O que é o **n8n**?
+
+O **n8n** (diz-se "n-eight-n", de “*node to node*”) é uma **plataforma de automação de processos**, **integração entre sistemas** e **orquestração de dados**.
+
 ---
+
+### 🛠️ Para que serve?
+
+- **Automatizar tarefas repetitivas**
+- **Conectar diferentes aplicativos e bancos de dados**
+- **Criar fluxos inteligentes** usando lógica, código, APIs, inteligência artificial, etc.
+- **Integrar com qualquer serviço** (mesmo aqueles sem integração pronta, via HTTP/API)
+
+---
+
+Principais Características
+
+- **Open source:** você pode usar, adaptar e hospedar gratuitamente
+- **Interface visual drag-and-drop:** fácil de montar e visualizar fluxos (“workflows”)
+- **Nodes prontos para centenas de apps:** WhatsApp, Google, Telegram, Slack, Notion, bancos SQL, etc.
+- **Permite lógica condicional, loops, código customizado**
+- **Extensível:** aceita plugins, scripts, integrações customizadas
+- **Funciona local, em cloud, em servidor VPS, Docker...**
+- **Muito usado para automação com IA** (OpenAI, Gemini, DeepSeek...)
+
+  A API permite que o n8n:
+
+- **Envie dados para um sistema externo**
+- **Receba dados de outro sistema**
+- **Execute ações nesses sistemas** (como criar um lead, buscar informações, deletar arquivos...)
+
+Por que APIs são importantes no n8n?
+
+O n8n é um **orquestrador**. Ele conecta várias ferramentas entre si — e isso só é possível porque essas ferramentas possuem **APIs abertas**.
+
+Com APIs, o n8n consegue:
+
+- Automatizar processos com ferramentas que **não têm nodes prontos**
+- Acessar **funcionalidades mais avançadas** do que os nodes nativos oferecem
+- **Criar integrações personalizadas** com qualquer sistema que suporte API REST
+
+Verbos HTTP (métodos de requisição)
+
+As APIs usam verbos HTTP para definir a ação a ser tomada:
+
+|**Verbo**|	**Significado**|**Exemplo prático no n8n**|
+|-----|------------|--------------------------|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">GET</span>	|Buscar dados	|Pegar lista de clientes do CRM|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">POST</span>	|Enviar dados (criar)	|Criar novo lead, enviar formulário|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">PUT</span>	|Atualizar dados por completo	|Atualizar todos os campos de um lead|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">PATCH</span>	|Atualizar parcialmente|	Atualizar só o status do cliente|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">DELETE</span> 	|Excluir dados|	Deletar lead inativo do banco|
+---
+
+### O que é Autenticação em APIs?
+
+Autenticação é o processo de **validar quem está fazendo a requisição** à API. Sem autenticação, qualquer um poderia acessar, alterar ou deletar dados sensíveis.
+
+🧩 Tipos de Autenticação mais comuns em APIs
+
+|**Tipo**	|**Como funciona**|	**Exemplo de uso**|
+|-------|-------------|---------------|
+|API Key|	Chave única que identifica o usuário|	<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">api_key=XYZ123</span>? no link ou cabeçalho|
+|Bearer Token (OAuth2)	|Token de acesso temporário	|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Authorization: Bearer abc.def.ghi</span>|
+|Basic Auth	|Usuário + senha codificados em Base64	|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Authorization: Basic dXNlcjpwYXNz</span>|
+|OAuth2 (3-legged)	|Redireciona o usuário para login	|Usado no Google, Facebook, Microsoft|
+|Header Customizado|	API exige chave em cabeçalho com nome específico	|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">X-API-KEY: sua-chave-aqui</span>
+|
+|Session Cookie / JWT|	Cookies de sessão ou tokens JWT	|Sessões autenticadas de forma segura|
+
+### Como isso se aplica no n8n?
+
+No **n8n**, você configura autenticação em dois lugares:
+
+1. **Credenciais do Node**:
+    - Exemplo: Google Sheets, Gmail, WhatsApp, Supabase, Notion
+    - Você usa **OAuth2** ou **API Key** cadastradas no menu de credenciais
+2. **Node HTTP Request (genérico)**:
+    - Ideal para APIs sem nodes prontos
+    - Você pode usar:
+      - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Header Auth</span>
+ (com Bearer, Token, etc)
+      - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Query Auth</span>
+ (API Key na URL)
+      - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Basic Auth</span>
+ (usuário/senha codificados)
+      - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Custom Headers</span>
+ (nome + valor da chave)
+
+### Nodes de Gatilhos
+
+ O que são Trigger Nodes?
+
+Triggers são usados quando você quer que o n8n **espere por um evento externo** antes de executar as próximas etapas. Sem um gatilho, o workflow só é executado manualmente.
+
+|Tipo de Node Trigger	|Finalidade	|Exemplo|
+|-----------------------|-----------|-------|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Webhook</span>
+	|Ativado por uma requisição HTTP|	Um sistema externo envia um POST e inicia o fluxo|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Form Trigger</span>
+ 	|Ativado quando alguém preenche um formulário	|Lead preenche dados de contato|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Cron</span>
+	|Executa em horários definidos	|Enviar relatório toda segunda às 8h|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Google Drive Trigger</span>
+	|Ativado quando um arquivo é criado/atualizado em uma pasta do Drive	|Novo contrato adicionado no Drive|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Telegram Trigger</span>
+	|Reage a mensagens recebidas no bot do Telegram	|Cliente envia “Oi” e inicia atendimento|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Email Trigger (IMAP)</span>
+	|Dispara ao receber um e-mail	|Processar anexos de e-mails automaticamente|
+|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Shopify Trigger, Notion Trigger, etc.</span>
+	|Ativam fluxos com base em eventos de plataformas específicas|	Novo pedido na loja, nova nota criada|
+
 
 ## Canva
 
