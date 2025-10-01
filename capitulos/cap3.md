@@ -72,7 +72,34 @@ A precificação deve equilibrar **custo operacional (treinamento de modelos, ar
 Exemplo: uma API de transcrição de áudio pode cobrar por minuto processado, enquanto uma plataforma de análise de documentos pode usar planos por número de usuários ativos.  
 
 ---
+---FELIPE---INICIO-----------------
+- No modelo “pay-as-you-go” via API, empresas como OpenAI, Anthropic e Google disponibilizam diversos endpoints de inferência, cada um oferecendo um conjunto de modelos (por exemplo, GPT-4o, o3, Claude 3.5, Claude 4, Gemini 2.5, etc.) com razões custo-benefício diferentes. Você é cobrado por unidade de consumo (geralmente por milhão de tokens de entrada e saída), o que possibilita:
+    - Escalabilidade imediata: basta chamar a API, sem se preocupar em gerenciar servidores ou clusters de GPU.
+    - Flexibilidade de escolha: selecione o modelo mais barato para tarefas simples (como Gemini 2.0 Flash) ou um mais caro e preciso (como Gemini 2.5 Pro) conforme a necessidade de qualidade e latência.
+- Existem dois problemas centrais desse modelo:
+    - Oscilação de custos: Se seu tráfego varia muito, a fatura pode subir de forma imprevisível no mês em que há picos de uso. Modelos maiores (mais parâmetros) custam várias vezes mais por token. Por exemplo, imagine que você oferece uma ferramenta SaaS que resume documentos, e sua assinatura custa $20/mês. Um "cliente casual" resume 10 artigos curtos, consumindo um total de 50.000 tokens no mês, o que gera um custo de API para você de apenas $0.15. Já um "cliente intensivo" resume 30 relatórios longos, consumindo 3.000.000 de tokens, o que gera um custo de $9.00. Se no mês seguinte esse cliente intensivo dobrar o uso, seu custo direto com ele sobe para $18, eliminando quase toda a sua margem de lucro.
+    - Lock-in ao provedor:
+        - Endpoints e bibliotecas proprietárias: seu código faz chamadas específicas (URLs, formatos de requisição e autenticação) que não são idênticas entre OpenAI, Anthropic ou Vertex AI. Migrar exige refatorar toda a camada de integração.
+        - Tokenização e embeddings: cada provedor usa seu próprio esquema de tokenização e vetorização; embeddings gerados em um serviço podem não ser 100 % compatíveis com outro.
+        - Políticas de dados e egressos: para mudar de nuvem (por exemplo, de Vertex AI para um deployment self-hosted), você pagará taxas de “data egress” e precisará garantir conformidade (LGPD/GDPR) no novo ambiente.
+        - Descontos por uso comprometido: ao fechar um contrato de consumo mínimo para obter desconto (committed-use), você reduz custos, mas fica vinculado a aquele provedor até o fim do período acordado. Romper antes pode acarretar multas ou perda do benefício.
+        
+        Como mitigar o lock-in:
+        
+        - Padrões abertos: estruture suas chamadas de inferência usando a especificação OpenAI ou OpenAPI, facilitando a troca de backend.
+        - Abstração de modelos: desenvolva uma camada de serviço interna que encapsule detalhes de API, de modo que trocar o provedor seja uma simples configuração, não uma reescrita de código.
+        - Cache e fallback: armazene respostas em cache para reduzir chamadas diretas à API e implemente lógica de fallback para usar um modelo alternativo (por exemplo, um checkpoint open-source hospedado internamente) quando o custo ou a latência do endpoint principal estiverem altos. Dessa forma, você aproveita toda a flexibilidade e poder dos serviços pay-as-you-go, sem ficar refém de um único provedor.
+        
+- Exemplos do uso metrado via API (pay-as-you-go):
+    - **Anthropic:**  [https://www.anthropic.com/api](https://www.anthropic.com/pricing#api)
+    - **Google:**  [https://cloud.google.com/vertex-ai/pricing](https://ai.google.dev/gemini-api/docs/pricing)
+    - **Groq Cloud:** https://groq.com/pricing
+    - **SambaNova Suite** –  https://sambanova.ai/
+    - **OpenRouter** – Plataforma agregadora que oferece modelos diversos com preços variados por token, claramente exibidos no site. [https://openrouter.ai/pricing](https://openrouter.ai/)
+ 
+---FELIPE--FIM------------------------------------------
 
+----ERIC --- INICIO
 ## Modelos de Monetização
 
 As soluções de IA podem gerar receita de diferentes formas, dependendo do público-alvo e da proposta de valor:  
@@ -97,20 +124,8 @@ Exemplo prático:
 - Um SaaS de análise preditiva para o varejo.  
 - Um micro-SaaS que gera **descrições automáticas para produtos de e-commerce** usando IA generativa.  
 
-Esse último pode ser criado por um pequeno time ou até por um único desenvolvedor, alcançando rentabilidade em mercados de nicho.  
+Esse último pode ser criado por um pequeno time ou até por um único desenvolvedor, alcançando rentabilidade em mercados de nicho. 
 
+----ERIC--FIM----
 ---
 
-## Vibe Coding
-
-O conceito de **Vibe Coding** descreve uma forma emergente de criar produtos digitais em que a **IA atua como copiloto criativo**.  
-Nesse modelo, a programação tradicional é complementada por **colaboração interativa com LLMs**, que sugerem código, explicações e até protótipos funcionais {cite}`wu2022`.  
-
-Isso acelera a prototipagem e reduz barreiras técnicas, permitindo que profissionais de áreas não técnicas participem da construção de soluções digitais.  
-
-Exemplo prático: um designer de produto pode, com o auxílio de um LLM, criar rapidamente um protótipo de aplicativo que gera imagens personalizadas para campanhas de marketing, sem escrever linhas extensas de código.  
-
-:::{tip}
-Estratégias bem definidas de **construção, precificação e operação** podem ser o diferencial entre um produto de IA promissor e um projeto que nunca ganha escala.  
-O segredo está em alinhar **capacidade técnica**, **modelo de monetização** e **necessidade real do mercado**.
-:::
