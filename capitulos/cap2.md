@@ -504,6 +504,44 @@ Entender a separação entre frontend e backend é essencial para quem está pla
 - Permite visualizar a jornada completa: da interação do usuário até o processamento inteligente dos dados.
 
 Em resumo: **o frontend encanta, o backend entrega.** Em soluções de IA, isso é mais verdadeiro do que nunca.
+
+## Outras alternativas para construção do Frontend
+
+Roadmap: https://roadmap.sh/frontend
+
+### **Ferramentas para ajudar a criar seu design**
+
+- [Coolors](https://coolors.co/) - Para escolher sua paleta de cores
+- [Instant eye droppper](http://instant-eyedropper.com/) - detector de cores
+- [Dribble](https://dribbble.com/) - Para obter referências
+- [Behance](https://www.behance.net/) - Para obter referências
+- [Flaticon](https://www.flaticon.com/br/) - Ícones para criação do seu design
+- [Freepik](https://br.freepik.com/) - Imagens em alta qualidade para seu design
+- [Excalidraw](https://excalidraw.com/) - Para criar rascunhos de sistemas
+
+### **IA's para criação de Frontend**
+
+- [Claude](https://claude.ai/)
+- [Bolt](https://bolt.new/)
+- [Lovable](https://lovable.dev/)
+- [v0.dev](https://v0.dev/)
+- [Replit](https://replit.com/~)
+- [Base44](https://app.base44.com/)
+- [Manus](https://manus.im/)
+
+### **Exemplos de landing page**
+
+- [My Group Metrics](https://mygroupmetrics.com/)
+- [Jasper](https://www.jasper.ai/)
+- [Deckspeed](https://www.deckspeed.com/)
+- [First Quadrant](https://firstquadrant.ai/)
+
+### Figma
+
+- Figma: https://www.figma.com/pt-br/
+- Codia - Plugin do Figma
+- Teleport - Plugin do Figma
+- Anima - Plugin do Figma
 ---
 
 ## UX de IA — Interação Humano-Sistema
