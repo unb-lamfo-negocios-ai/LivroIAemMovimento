@@ -511,56 +511,56 @@ Você quer buscar o preço do dólar hoje:
 - Node HTTP Request com URL de uma API de câmbio e método <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">'GET'</span>
 - O n8n traz a cotação para o seu fluxo, pronta para ser usada.
 
-  - **Node Respond to Webhook**
+- **Node Respond to Webhook**
     
 O que é o Node **Respond to Webhook**?
     
-    O **Respond to Webhook** é como um **"balcão de respostas"** do seu fluxo de automação.
+O **Respond to Webhook** é como um **"balcão de respostas"** do seu fluxo de automação.
     
-    Ele serve para **enviar uma resposta automática para quem chamou o seu workflow**.
+Ele serve para **enviar uma resposta automática para quem chamou o seu workflow**.
     
     ---
     
 Como funciona na prática?
     
-    Imagine que seu fluxo do n8n recebe um pedido de fora (de um site, sistema ou aplicativo) usando um **Webhook** (um “sininho” que escuta quando algo acontece).
+Imagine que seu fluxo do n8n recebe um pedido de fora (de um site, sistema ou aplicativo) usando um **Webhook** (um “sininho” que escuta quando algo acontece).
     
-    - O **Webhook** recebe a mensagem (ex: dados de um formulário enviado).
-    - O seu fluxo faz tudo o que precisa (salva, calcula, consulta, etc.).
-    - **No final**, você usa o node **Respond to Webhook** para **responder de volta** (confirmando que deu certo, enviando dados, etc).
+- O **Webhook** recebe a mensagem (ex: dados de um formulário enviado).
+- O seu fluxo faz tudo o que precisa (salva, calcula, consulta, etc.).
+- **No final**, você usa o node **Respond to Webhook** para **responder de volta** (confirmando que deu certo, enviando dados, etc).
     
-    ---
+---
     
- Exemplo do dia a dia
+Exemplo do dia a dia
     
-    **Situação:**
+ **Situação:**
     
-    Um site pede orçamento e espera uma resposta automática.
+ Um site pede orçamento e espera uma resposta automática.
     
-    **No n8n:**
+ **No n8n:**
     
-    1. Node **Webhook** recebe o pedido.
-    2. O fluxo consulta preços, calcula tudo.
-    3. Node **Respond to Webhook** responde na hora:
+ 1. Node **Webhook** recebe o pedido.
+ 2. O fluxo consulta preços, calcula tudo.
+ 3. Node **Respond to Webhook** responde na hora:
         
-        “Orçamento recebido! Em breve, entraremos em contato.”
+ “Orçamento recebido! Em breve, entraremos em contato.”
         
     
-    ---
+ ---
     
 Para que serve?
     
-    - Enviar confirmações automáticas para integrações externas.
-    - Responder sistemas, sites, chatbots, apps ou pessoas que aguardam uma resposta rápida.
-    - Retornar dados processados pelo n8n (por exemplo, status, valores, cálculos).
+ - Enviar confirmações automáticas para integrações externas.
+ - Responder sistemas, sites, chatbots, apps ou pessoas que aguardam uma resposta rápida.
+ - Retornar dados processados pelo n8n (por exemplo, status, valores, cálculos).
     
-    ---
+ ---
     
-    ```{admonition}
-	:class: tip
+ ```{admonition}
+:class: tip
     
-    Se não usar o **Respond to Webhook**, quem chamou o seu fluxo pode **ficar esperando** e não receber resposta nenhuma, ou receber uma mensagem padrão de erro.
-	```
+ Se não usar o **Respond to Webhook**, quem chamou o seu fluxo pode **ficar esperando** e não receber resposta nenhuma, ou receber uma mensagem padrão de erro.
+```
 
 Nodes de Aplicativo
 
@@ -588,22 +588,22 @@ Esses nodes permitem que o n8n **envie, receba ou modifique dados fora dele**, o
 2. **Parâmetros**: você define o que será enviado ou buscado.
 3. **Entrada/Saída**:
     
-    O node consome os dados do fluxo (normalmente em formato JSON), executa uma ação no aplicativo externo (ex: enviar um WhatsApp, criar uma linha no Google Sheets, enviar um e-mail, buscar informações de uma API) e retorna a resposta dessa ação.
+O node consome os dados do fluxo (normalmente em formato JSON), executa uma ação no aplicativo externo (ex: enviar um WhatsApp, criar uma linha no Google Sheets, enviar um e-mail, buscar informações de uma API) e retorna a resposta dessa ação.
     
-    - Essa resposta pode ser usada por outros nodes seguintes no workflow.
-    - Assim, os dados podem ser transformados, salvos, encaminhados ou analisados conforme o fluxo avança.
+- Essa resposta pode ser usada por outros nodes seguintes no workflow.
+- Assim, os dados podem ser transformados, salvos, encaminhados ou analisados conforme o fluxo avança.
 4. **Múltiplas Operações**:
     
-    Muitos nodes de aplicativo possuem **diferentes operações** além do padrão "criar" ou "buscar".
+Muitos nodes de aplicativo possuem **diferentes operações** além do padrão "criar" ou "buscar".
     
-    - Exemplo: O node do Google Sheets permite criar, ler, atualizar e deletar linhas; o node do WhatsApp pode enviar mensagens de texto, imagem, áudio, etc.
+- Exemplo: O node do Google Sheets permite criar, ler, atualizar e deletar linhas; o node do WhatsApp pode enviar mensagens de texto, imagem, áudio, etc.
 5. **Tratamento de Erros**:
     
-    Caso o app externo retorne um erro (ex: falha de autenticação, dados inválidos, limite atingido), o node pode exibir esse erro no painel ou permitir o uso de nodes de controle (como o IF) para tratar falhas e tomar decisões alternativas no fluxo.
+Caso o app externo retorne um erro (ex: falha de autenticação, dados inválidos, limite atingido), o node pode exibir esse erro no painel ou permitir o uso de nodes de controle (como o IF) para tratar falhas e tomar decisões alternativas no fluxo.
     
 6. **Personalização**:
     
-    Os nodes de aplicativo geralmente permitem **personalizar mensagens, campos e payloads** usando expressões dinâmicas do n8n, tornando cada automação adaptada ao contexto do lead ou usuário.
+Os nodes de aplicativo geralmente permitem **personalizar mensagens, campos e payloads** usando expressões dinâmicas do n8n, tornando cada automação adaptada ao contexto do lead ou usuário.
     
 
 ---
