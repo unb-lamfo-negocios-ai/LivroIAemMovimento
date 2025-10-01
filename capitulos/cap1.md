@@ -192,6 +192,22 @@ Em síntese, vibe coding abre portas e democratiza a criação de soluções com
 
 - Para empreendedores, isso significa **mais velocidade, menos custo e mais possibilidade de experimentar.**
 ```
+
+---VIBECODING---ERIC
+ Vibe Coding
+
+O conceito de **Vibe Coding** descreve uma forma emergente de criar produtos digitais em que a **IA atua como copiloto criativo**.  
+Nesse modelo, a programação tradicional é complementada por **colaboração interativa com LLMs**, que sugerem código, explicações e até protótipos funcionais {cite}`wu2022`.  
+
+Isso acelera a prototipagem e reduz barreiras técnicas, permitindo que profissionais de áreas não técnicas participem da construção de soluções digitais.  
+
+Exemplo prático: um designer de produto pode, com o auxílio de um LLM, criar rapidamente um protótipo de aplicativo que gera imagens personalizadas para campanhas de marketing, sem escrever linhas extensas de código.  
+
+:::{tip}
+Estratégias bem definidas de **construção, precificação e operação** podem ser o diferencial entre um produto de IA promissor e um projeto que nunca ganha escala.  
+O segredo está em alinhar **capacidade técnica**, **modelo de monetização** e **necessidade real do mercado**.
+:::
+
 ---
 
 ## Ética e Viés MAISA FAZER
