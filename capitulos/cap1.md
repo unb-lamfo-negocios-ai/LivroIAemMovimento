@@ -169,8 +169,7 @@ Aqui estão formas reais de usar LLMs e IA generativa **na criação de um negó
 |**Atendimento e suporte** | Criar FAQs, chatbots, respostas automáticas, assistente virtual inteligente |
 | **Automação de tarefas** | Usar IA combinada com ferramentas no-code para fluxos inteligentes |
 
-:::{caution}
-**Limitações e Cuidados**
+:::{caution} **Limitações e Cuidados**
 
 - **Alucinações**: LLMs podem inventar fatos. Sempre revise conteúdo crítico.
 - **Privacidade**: Evite inserir dados sensíveis.
@@ -178,8 +177,7 @@ Aqui estão formas reais de usar LLMs e IA generativa **na criação de um negó
 - **Dependência**: A IA é ferramenta, não muleta. Desenvolva também sua intuição de negócio.
 :::
 
-:::{note}
-## LLMs são alavancas, não substitutos
+:::{note} **LLMs são alavancas, não substitutos**
 
 - LLMs e IA generativa representam uma mudança radical na forma como criamos produtos, conteúdos e soluções.
 
