@@ -1127,6 +1127,83 @@ Qualquer dúvida ao rodar os códigos no terminal e na instalação, pergunte ao
 title="Instalação n8n via Docker" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 
+#### Credenciais
+
+O que são credenciais no n8n e como elas funcionam?
+
+Ao trabalhar com automações no **n8n**, é comum se conectar a serviços externos, como Gmail, Google Sheets, WhatsApp, Slack, bancos de dados, APIs, entre muitos outros. Para que o n8n consiga interagir com esses serviços de forma segura e autorizada, ele precisa de algo chamado **credenciais**.
+
+🧠 Mas o que são credenciais?
+
+Credenciais são **informações de acesso seguras** que permitem que o n8n “fale” com outras ferramentas ou plataformas, em nome do usuário. Essas informações podem variar dependendo do serviço, mas geralmente incluem:
+
+- **Tokens de acesso** (como chaves secretas)
+- **Usuário e senha**
+- **Client ID e Client Secret**
+- **Chaves de API (API Keys)**
+- **URLs de autenticação**
+
+Ou seja, as credenciais **funcionam como uma ponte segura** entre o n8n e o serviço externo com o qual se deseja interagir.
+
+---
+
+📦 Como as credenciais atuam no n8n?
+
+No n8n, as credenciais são criadas e armazenadas separadamente dos workflows. Isso permite que você as reutilize em múltiplos fluxos de automação de forma prática, sem precisar configurar novamente o acesso sempre que for utilizar o mesmo serviço.
+
+O processo é simples:
+
+1. O usuário cria uma nova credencial no painel do n8n.
+2. Ele informa os dados necessários para autenticação com o serviço desejado.
+3. Ao montar um fluxo (workflow), ele seleciona essa credencial nos nós (nodes) que precisam dela.
+4. O n8n utiliza essas informações nos bastidores para autenticar e fazer as requisições necessárias.
+
+Isso evita que o usuário precise se preocupar com a lógica de segurança a cada passo da automação.
+
+---
+
+🔐 Por que as credenciais são importantes?
+
+O uso de credenciais traz diversos benefícios:
+
+- ✅ **Segurança**: os dados de autenticação ficam armazenados em local protegido.
+- ✅ **Padronização**: vários workflows podem utilizar a mesma credencial.
+- ✅ **Facilidade de manutenção**: se a senha ou chave de API mudar, é possível atualizar a credencial em um único lugar.
+- ✅ **Controle de acesso**: em ambientes com múltiplos usuários, é possível restringir quem pode usar ou editar certas credenciais.
+
+---
+
+🧩 Tipos de autenticação comuns no n8n
+
+O n8n suporta diversos métodos de autenticação, tais como:
+
+|Tipo|	Quando é usado|
+|----|----------------|
+|API Key|	Serviços que usam uma chave secreta única|
+|OAuth2	|Google, Microsoft, Facebook, etc.|
+|Basic Auth|	Serviços que exigem usuário e senha|
+|Header personalizado|	APIs que requerem tokens no cabeçalho das requisições|
+|Credenciais genéricas|	Para serviços customizados via HTTP Request|
+
+```{admonition}
+:class: note
+Cada tipo tem campos específicos, mas o processo no n8n é sempre semelhante: informar os dados, testar a conexão e salvar.
+```
+
+Exemplo simples
+
+Imagine que você deseja criar um fluxo no n8n que envia uma mensagem no Slack sempre que receber um e-mail. Para isso, você precisa que o n8n consiga acessar:
+
+- Sua conta do Gmail (para ler e-mails)
+- Sua conta do Slack (para enviar mensagens)
+
+Isso exige duas credenciais:
+
+- Uma para o **Gmail** (via OAuth2)
+- Uma para o **Slack** (geralmente via Webhook ou token)
+
+Com essas credenciais criadas e salvas, basta vinculá-las aos respectivos nós no seu fluxo — e pronto! O n8n saberá como se comunicar com cada serviço.
+
 ## WhatsApp API
 
 A integração com o **WhatsApp API** permite conectar chatbots de IA diretamente ao aplicativo de mensagens mais usado no Brasil e em vários países.  
