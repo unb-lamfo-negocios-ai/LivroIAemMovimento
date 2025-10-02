@@ -857,31 +857,30 @@ As ferramentas são capacidades que o servidor MCP expõe para que o LLM possa i
 
 **Exemplos de Ferramentas:**
 
+```json
 {
-
-"name": "send_email",
-
-"description": "Enviar email para um destinatário",
-
-"inputSchema": {
-
-"type": "object",
-
-"properties": {
-
-"to": {"type": "string", "description": "Email do destinatário"},
-
-"subject": {"type": "string", "description": "Assunto do email"},
-
-"body": {"type": "string", "description": "Corpo do email"}
-
-},
-
-"required": ["to", "subject", "body"]
-
+  "name": "send_email",
+  "description": "Enviar email para um destinatário",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "to": {
+        "type": "string",
+        "description": "Email do destinatário"
+      },
+      "subject": {
+        "type": "string",
+        "description": "Assunto do email"
+      },
+      "body": {
+        "type": "string",
+        "description": "Corpo do email"
+      }
+    },
+    "required": ["to", "subject", "body"]
+  }
 }
-
-}
+```
 
 **Casos de Uso Comuns:**
 
@@ -905,7 +904,7 @@ Os recursos são diferentes das ferramentas porque não são invocados pelo LLM,
 - Streaming: Recursos que atualizam em tempo real
 
 **Exemplos de Recursos:**
-
+```json
 {
 
 "uri": "file:///home/user/project/README.md",
@@ -917,7 +916,7 @@ Os recursos são diferentes das ferramentas porque não são invocados pelo LLM,
 "mimeType": "text/markdown"
 
 }
-
+```
 **Casos de Uso:**
 
 - Anexos em um chat (imagens, documentos)
@@ -943,27 +942,19 @@ Os prompts são como "templates" ou "comandos de barra" que os usuários podem i
 
 **Estrutura de um Prompt:**
 
+```json
 {
-
-"name": "summarize_code",
-
-"description": "Resumir arquivos de código do projeto",
-
-"arguments": [
-
-{
-
-"name": "file_pattern",
-
-"description": "Padrão de arquivos a resumir (ex: *.py)",
-
-"required": false
-
+  "name": "summarize_code",
+  "description": "Resumir arquivos de código do projeto",
+  "arguments": [
+    {
+      "name": "file_pattern",
+      "description": "Padrão de arquivos a resumir (ex: *.py)",
+      "required": false
+    }
+  ]
 }
-
-]
-
-}
+```
 
 **Exemplos Práticos:**
 
@@ -1508,49 +1499,30 @@ Permite que um servidor MCP solicite inferências (chamadas de LLM) do cliente, 
 
 veja: 
 
+```json
 {
-
-"jsonrpc": "2.0",
-
-"method": "sampling/createMessage",
-
-"params": {
-
-"messages": [
-
-{
-
-"role": "user",
-
-"content": {
-
-"type": "text",
-
-"text": "Classifique este email como urgente, normal ou baixa prioridade: [email content...]"
-
+  "jsonrpc": "2.0",
+  "method": "sampling/createMessage",
+  "params": {
+    "messages": [
+      {
+        "role": "user",
+        "content": {
+          "type": "text",
+          "text": "Classifique este email como urgente, normal ou baixa prioridade: [email content...]"
+        }
+      }
+    ],
+    "modelPreferences": {
+      "hints": [
+        {
+          "name": "claude-3-sonnet"
+        }
+      ]
+    }
+  }
 }
-
-}
-
-],
-
-"modelPreferences": {
-
-"hints": [
-
-{
-
-"name": "claude-3-sonnet"
-
-}
-
-]
-
-}
-
-}
-
-}
+```
 
 **Vantagens:**
 
@@ -1571,23 +1543,16 @@ Capacidade que permite ao servidor solicitar informações adicionais dos usuár
 **Exemplo de Fluxo:**
 
 // Durante execução de uma ferramenta de reserva
-
+```json
 {
-
-"jsonrpc": "2.0",
-
-"method": "elicitation/request",
-
-"params": {
-
-"prompt": "Confirmar reserva do restaurante X para 4 pessoas às 19h?",
-
-"options": ["Confirmar", "Cancelar", "Alterar horário"]
-
-}
-
-}
-
+  "jsonrpc": "2.0",
+  "method": "elicitation/request",
+  "params": {
+    "prompt": "Confirmar reserva do restaurante X para 4 pessoas às 19h?",
+    "options": ["Confirmar", "Cancelar", "Alterar horário"]
+    }
+ }
+```
 #### 4. Completions (Conclusões/Sugestões)
 
 O MCP suporta autocompletar para argumentos de prompt e parâmetros de recursos.
@@ -1596,59 +1561,43 @@ O MCP suporta autocompletar para argumentos de prompt e parâmetros de recursos.
 
 // Cliente solicita sugestões
 
+```json
 {
-
-"jsonrpc": "2.0",
-
-"id": "4",
-
-"method": "completion/complete",
-
-"params": {
-
-"ref": {
-
-"type": "prompt",
-
-"name": "analyze_data"
-
-},
-
-"argument": {
-
-"name": "data_source",
-
-"value": "sales_" // usuário digitou até aqui
-
+  "jsonrpc": "2.0",
+  "id": "4",
+  "method": "completion/complete",
+  "params": {
+    "ref": {
+      "type": "prompt",
+      "name": "analyze_data"
+    },
+    "argument": {
+      "name": "data_source",
+      "value": "sales_"
+    }
+  }
 }
-
-}
-
-}
+```
 
 // Servidor retorna sugestões
 
+```json
 {
-
-"jsonrpc": "2.0",
-
-"id": "4",
-
-"result": {
-
-"completion": {
-
-"values": ["sales_2024", "sales_monthly", "sales_quarterly"],
-
-"total": 3,
-
-"hasMore": false
-
+  "jsonrpc": "2.0",
+  "id": "4",
+  "result": {
+    "completion": {
+      "values": [
+        "sales_2024",
+        "sales_monthly",
+        "sales_quarterly"
+      ],
+      "total": 3,
+      "hasMore": false
+    }
+  }
 }
-
-}
-
-}
+```
 
 #### 5. Authentication (Autenticação)
 
@@ -1664,27 +1613,19 @@ Os servidores MCP podem implementar OAuth 2.0/2.1 para acessar recursos protegid
 
 **Configuração Exemplo:**
 
+```json
 {
-
-"mcpServers": {
-
-"google-drive": {
-
-"command": "mcp-server-google-drive",
-
-"env": {
-
-"GOOGLE_CLIENT_ID": "your-client-id",
-
-"GOOGLE_CLIENT_SECRET": "your-client-secret"
-
+  "mcpServers": {
+    "google-drive": {
+      "command": "mcp-server-google-drive",
+      "env": {
+        "GOOGLE_CLIENT_ID": "your-client-id",
+        "GOOGLE_CLIENT_SECRET": "your-client-secret"
+      }
+    }
+  }
 }
-
-}
-
-}
-
-}
+```
 
 #### 6. Notifications (Notificações)
 
@@ -1697,21 +1638,15 @@ Servidores podem enviar notificações para clientes sobre mudanças de estado.
 - prompts/list_changed: Lista de prompts mudou
 
 **Exemplo:**
-
+```json
 {
-
-"jsonrpc": "2.0",
-
-"method": "notifications/resources/updated",
-
-"params": {
-
-"uri": "file:///project/config.json"
-
+   "jsonrpc": "2.0",
+   "method": "notifications/resources/updated",
+   "params": {
+      "uri": "file:///project/config.json"
+    }
 }
-
-}
-
+```
 #### 7. Transports (Transportes)
 
 O MCP suporta diferentes mecanismos de comunicação:
@@ -1730,32 +1665,23 @@ O MCP suporta diferentes mecanismos de comunicação:
 
 **Configuração de Transporte:**
 
+```json
 {
-
-"mcpServers": {
-
-"local-server": {
-
-"command": "python",
-
-"args": ["server.py"],
-
-"transport": "stdio"
-
-},
-
-"remote-server": {
-
-"url": "https://api.example.com/mcp",
-
-"transport": "http"
-
+  "mcpServers": {
+    "local-server": {
+      "command": "python",
+      "args": [
+        "server.py"
+      ],
+      "transport": "stdio"
+    },
+    "remote-server": {
+      "url": "https://api.example.com/mcp",
+      "transport": "http"
+    }
+  }
 }
-
-}
-
-}
-
+```
 ### Limitações e Considerações de Segurança
 
 #### 1. Limitações do MCP
@@ -1787,30 +1713,20 @@ O MCP suporta diferentes mecanismos de comunicação:
 
 // Exemplo de configuração segura
 
+```json
 {
-
-"mcpServers": {
-
-"database-server": {
-
-"command": "mcp-database-server",
-
-"env": {
-
-"DB_CONNECTION": "postgresql://user:pass@localhost/db",
-
-"ALLOWED_OPERATIONS": "SELECT, INSERT", // Restringir operações
-
-"MAX_ROWS": "1000" // Limitar resultado
-
+  "mcpServers": {
+    "database-server": {
+      "command": "mcp-database-server",
+      "env": {
+        "DB_CONNECTION": "postgresql://user:pass@localhost/db",
+        "ALLOWED_OPERATIONS": "SELECT, INSERT",
+        "MAX_ROWS": "1000"
+      }
+    }
+  }
 }
-
-}
-
-}
-
-}
-
+```
 **Validação de Entrada:**
 
 - Sempre validar parâmetros de ferramentas
@@ -1822,15 +1738,13 @@ O MCP suporta diferentes mecanismos de comunicação:
 
 # Exemplo de verificação de permissões
 
+```python
 def verify_permissions(operation, resource):
-
-if operation == "DELETE" and not user.has_permission("admin"):
-
-raise PermissionError("Operação DELETE requer permissão de admin")
-
-if resource.startswith("/system/") and not user.has_permission("system"):
-
-raise PermissionError("Acesso a recursos do sistema negado")
+    if operation == "DELETE" and not user.has_permission("admin"):
+        raise PermissionError("Operação DELETE requer permissão de admin")
+    if resource.startswith("/system/") and not user.has_permission("system"):
+        raise PermissionError("Acesso a recursos do sistema negado")
+```
 
 **Isolamento e Sandboxing:**
 
@@ -1865,28 +1779,20 @@ Sistema de registro que monitora e documenta todas as operações realizadas atr
 - ✅/❌ Status do resultado (sucesso ou erro) 
 
 **Exemplo Prático:**
-
+```python
 import logging
-
 from datetime import datetime
 
 def log_mcp_operation(tool_name, params, user_id, result_status):
-
-logging.info({
-
-"timestamp": datetime.utcnow().isoformat(),
-
-"tool": tool_name,
-
-"user": user_id,
-
-"params": params,
-
-"status": result_status,
-
-"type": "mcp_operation"
-
-})
+    logging.info({
+        "timestamp": datetime.utcnow().isoformat(),
+        "tool": tool_name,
+        "user": user_id,
+        "params": params,
+        "status": result_status,
+        "type": "mcp_operation"
+    })
+```
 
 **Boas Práticas de Segurança:**
 
