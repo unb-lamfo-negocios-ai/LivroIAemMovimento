@@ -1840,3 +1840,509 @@ O MCP oferece vantagens significativas para todo o ecossistema de IA:
 - **Inovação Acelerada:** Foco em capacidades específicas em vez de integrações
 - **Redução de Fragmentação:** Menos duplicação de esforços
 - **Crescimento Sustentável:** Base sólida para evolução futura
+
+# Sistema MCP para Busca e Análise de Papers Acadêmicos(Aplicação Prática)
+
+> Um sistema completo para buscar, analisar e conversar sobre artigos científicos usando o protocolo MCP (Model Context Protocol) com inteligência artificial.
+
+## O que é este projeto?
+
+Este é um sistema que permite:
+
+- 🔍 **Buscar** artigos científicos no ArXiv (maior repositório de artigos acadêmicos)
+- 📖 **Ler detalhes** completos de qualquer artigo encontrado
+- 🤖 **Analisar** automaticamente com IA (resumos, tendências, comparações)
+- 💬 **Conversar** sobre os artigos com um assistente inteligente
+- 💾 **Cache inteligente** para respostas mais rápidas
+
+### Como funciona?
+
+O sistema possui duas partes:
+
+1. **Servidor MCP** (`mcp_papers_server.py`): O "cérebro" que busca artigos e usa IA
+2. **Cliente MCP** (`mcp_papers_client.py`): A interface que você usa para interagir
+
+```
+Você → Cliente → Servidor → ArXiv/Gemini IA
+                    ↓
+              Resultados
+                    ↓
+              Você recebe
+```
+
+---
+
+## Requisitos
+
+### O que você precisa ter instalado:
+
+- **Python 3.8+** ([Baixar aqui](https://www.python.org/downloads/))
+- **pip** (gerenciador de pacotes Python - vem com Python)
+- **Chave API do Google Gemini** ([Obter gratuitamente aqui](https://makersuite.google.com/app/apikey))
+
+## Instalação Completa (Passo a Passo)
+
+### Passo 1: Preparar o Ambiente
+
+#### 1.1 Criar a estrutura de pastas
+
+Crie uma pasta para o projeto:
+
+```bash
+# Windows (no prompt de comando)
+mkdir CHATBOT-PAPERS
+cd CHATBOT-PAPERS
+mkdir Servidores
+mkdir Servidores\logs
+
+# Linux/Mac (no terminal)
+mkdir -p CHATBOT-PAPERS/Servidores/logs
+cd CHATBOT-PAPERS
+```
+
+Estrutura final:
+
+```
+CHATBOT-PAPERS/
+├── .venv/                      # Ambiente virtual (será criado)
+├── Servidores/
+│   ├── logs/                   # Logs do sistema
+│   ├── .env                    # Configurações (criar)
+│   ├── mcp_papers_server.py    # Servidor (criar)
+│   ├── mcp_papers_client.py    # Cliente (criar)
+│   └── requirements.txt        # Dependências (criar)
+```
+
+#### 1.2 Criar ambiente virtual
+
+**Por que fazer isso?** Para isolar as dependências do projeto e não bagunçar seu Python.
+
+```bash
+# Windows
+python -m venv .venv
+.venv\Scripts\activate
+
+# Linux/Mac
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+✅ Você verá `(.venv)` no início da linha do terminal quando ativado.
+
+### Passo 2: Instalar Dependências
+
+#### 2.1 Criar arquivo `requirements.txt`
+
+Na pasta `Servidores`, crie o arquivo `requirements.txt`:
+
+```txt
+# Dependências principais
+fastmcp>=0.1.0
+arxiv>=2.0.0
+google-generativeai>=0.3.0
+python-dotenv>=1.0.0
+
+# Dependências do cliente
+mcp>=0.1.0
+colorama>=0.4.6
+
+# Ferramentas de desenvolvimento (opcional)
+mcp-inspector>=0.1.0
+```
+
+#### 2.2 Instalar tudo de uma vez
+
+```bash
+cd Servidores
+pip install -r requirements.txt
+```
+
+⏳ Isso pode levar alguns minutos. Aguarde até finalizar.
+
+### Passo 3: Configurar API Key
+
+#### 3.1 Obter sua chave API do Google Gemini
+
+1. Acesse: https://makersuite.google.com/app/apikey
+2. Faça login com sua conta Google
+3. Clique em "Create API Key"
+4. Copie a chave gerada
+
+#### 3.2 Criar arquivo `.env`
+
+Na pasta `Servidores`, crie o arquivo `.env`:
+
+```env
+# Chave da API do Google Gemini (OBRIGATÓRIO)
+GOOGLE_API_KEY=sua_chave_api_aqui
+
+# Configurações opcionais
+MCP_SERVER_NAME=papers-academic-server
+MCP_LOG_LEVEL=INFO
+```
+
+⚠️ **IMPORTANTE**:
+
+- Substitua `sua_chave_api_aqui` pela chave real
+- **NUNCA compartilhe** este arquivo publicamente
+- Adicione `.env` ao `.gitignore` se usar Git
+
+### Passo 4: Adicionar os Códigos
+
+#### 4.1 Criar o servidor (`mcp_papers_server.py`)
+
+Cole o código do servidor fornecido anteriormente.
+
+#### 4.2 Criar o cliente (`mcp_papers_client.py`)
+
+Cole o código do cliente fornecido anteriormente.
+
+---
+
+## Como Usar
+
+### Método 1: Modo Simples (Recomendado para Iniciantes)
+
+Basta executar o cliente, que iniciará tudo automaticamente:
+
+```bash
+# Na pasta Servidores, com ambiente ativado
+python mcp_papers_client.py
+```
+
+### Método 2: Modo Avançado (Debug)
+
+Execute servidor e cliente separadamente para ver logs detalhados:
+
+**Terminal 1 - Servidor:**
+
+```bash
+cd CHATBOT-PAPERS/Servidores
+.venv\Scripts\activate     # Windows
+source .venv/bin/activate  # Linux/Mac
+python mcp_papers_server.py
+```
+
+**Terminal 2 - Cliente:**
+
+```bash
+cd CHATBOT-PAPERS/Servidores
+.venv\Scripts\activate     # Windows
+source .venv/bin/activate  # Linux/Mac
+python mcp_papers_client.py
+```
+
+---
+
+## Guia de Uso Interativo
+
+### Menu Principal
+
+Quando você executar o cliente, verá:
+
+```
+📚 Cliente MCP de Papers Acadêmicos
+=================================
+
+🔌 Conectando ao servidor MCP...
+✅ Conectado com sucesso!
+📦 6 ferramentas disponíveis
+
+📋 Menu de Opções
+========================================
+  1 - Buscar papers
+  2 - Ver detalhes de um paper
+  3 - Analisar papers (resumo)
+  4 - Analisar papers (tendências)
+  5 - Analisar papers (comparação)
+  6 - Chat sobre papers
+  7 - Informações do cache
+  8 - Limpar cache
+  9 - Ajuda
+  0 - Sair
+========================================
+
+Escolha uma opção:
+```
+
+### Exemplo de Uso Completo
+
+#### Buscar Papers sobre Inteligência Artificial
+
+```
+Escolha uma opção: 1
+Digite os termos de busca: artificial intelligence ethics
+Número de resultados (1-10, padrão 5): 5
+
+🔍 Buscando papers...
+✅ Encontrados 5 papers!
+
+📄 Paper 1:
+   Título: Ethics in AI: A Comprehensive Review
+   Autores: John Smith, Jane Doe
+   Data: 2024-09-15
+   ArXiv ID: 2409.12345
+```
+
+#### Ver Detalhes de um Paper
+
+```
+Escolha uma opção: 2
+Digite o número do paper (1-5): 1
+
+📄 Detalhes do Paper
+========================================
+Título: Ethics in AI: A Comprehensive Review
+Autores: John Smith, Jane Doe
+Data de Publicação: 2024-09-15
+ArXiv ID: 2409.12345
+Link: https://arxiv.org/abs/2409.12345
+
+📝 Resumo:
+This paper reviews ethical considerations in artificial
+intelligence systems, focusing on bias, transparency,
+and accountability...
+```
+
+#### Gerar Análise Inteligente
+
+```
+Escolha uma opção: 3
+🤖 Gerando análise com IA...
+
+📊 RESUMO EXECUTIVO
+========================================
+Com base nos 5 papers analisados sobre ética em IA:
+
+🔑 Principais Descobertas:
+- Viés algorítmico é o tema mais recorrente
+- Necessidade de frameworks regulatórios
+- Importância da transparência em sistemas críticos
+
+📈 Tendências:
+- Crescente preocupação com privacidade
+- Desenvolvimento de IA explicável (XAI)
+- Foco em IA centrada no ser humano
+```
+
+#### Chat Interativo
+
+```
+Escolha uma opção: 6
+Digite sua pergunta (ou 'voltar' para menu):
+> Quais metodologias são mais usadas para detectar viés?
+
+🤖 Resposta:
+Baseado nos papers analisados, as principais metodologias
+incluem:
+
+1. Análise estatística de disparidade de impacto
+2. Testes de fairness (equidade) em diferentes grupos
+3. Auditoria algorítmica com datasets de teste
+4. Métodos de interpretabilidade como SHAP e LIME
+
+Os papers recomendam usar uma combinação de técnicas...
+
+Digite sua pergunta (ou 'voltar' para menu):
+> voltar
+```
+
+---
+
+## Funcionalidades Detalhadas
+
+### 1. Busca de Papers (`search_papers`)
+
+**O que faz:** Busca artigos no ArXiv
+
+**Parâmetros:**
+- `query`: Termos de busca (ex: "machine learning", "quantum computing")
+- `max_results`: Quantidade de resultados (1-10)
+
+**Dica:** Use termos em inglês para melhores resultados.
+
+### 2. Detalhes do Paper (`get_paper_details`)
+
+**O que faz:** Mostra informações completas de um artigo
+
+**Informações exibidas:**
+- Título completo
+- Lista de autores
+- Data de publicação
+- Resumo (abstract)
+- Link direto para o ArXiv
+
+### 3. Análise com IA (`analyze_papers`)
+
+**O que faz:** Usa Gemini para analisar os papers encontrados
+
+**Tipos de análise:**
+- **Summary**: Resumo executivo geral
+- **Trends**: Identifica tendências e padrões
+- **Comparison**: Compara metodologias e resultados
+
+### 4. Chat Inteligente (`chat_about_papers`)
+
+**O que faz:** Conversa sobre os papers em linguagem natural
+
+**Exemplos de perguntas:**
+- "Quais são as limitações apontadas?"
+- "Que datasets foram usados?"
+- "Como os métodos se comparam?"
+- "Quais as aplicações práticas?"
+
+### 5. Gerenciamento de Cache
+
+**O que é cache?** Memória temporária que acelera respostas repetidas.
+
+**Comandos:**
+- `get_cache_info`: Ver quantos papers estão em cache
+- `clear_cache`: Limpar cache (útil para buscas novas)
+
+---
+
+## 📊 Monitoramento e Logs
+
+### Visualizar Logs em Tempo Real
+
+**Windows:**
+
+```bash
+# Em um novo terminal
+cd CHATBOT-PAPERS\Servidores
+type logs\mcp_server.log
+```
+
+**Linux/Mac:**
+
+```bash
+# Visualização contínua
+tail -f Servidores/logs/mcp_server.log
+```
+
+### Entender os Logs
+
+Formato dos logs:
+
+```
+2025-09-30 14:32:15 - INFO - Searching for: machine learning
+2025-09-30 14:32:17 - INFO - Found 5 papers
+2025-09-30 14:32:20 - ERROR - API key invalid
+```
+
+**Níveis:**
+- `INFO`: Informações normais
+- `WARNING`: Avisos (não crítico)
+- `ERROR`: Erros que precisam atenção
+
+---
+
+## Casos de Uso Práticos
+
+### 1. Revisão Bibliográfica Rápida
+
+```
+Objetivo: Revisar literatura sobre um tema
+Fluxo:
+1. Buscar papers (opção 1)
+2. Ver detalhes dos mais relevantes (opção 2)
+3. Gerar resumo executivo (opção 3)
+4. Fazer perguntas específicas (opção 6)
+```
+
+### 2. Identificar Tendências de Pesquisa
+
+```
+Objetivo: Entender direções da área
+Fluxo:
+1. Buscar papers recentes (opção 1)
+2. Análise de tendências (opção 4)
+3. Chat sobre metodologias emergentes (opção 6)
+```
+
+### 3. Comparar Abordagens
+
+```
+Objetivo: Comparar diferentes métodos
+Fluxo:
+1. Buscar papers sobre métodos específicos
+2. Análise comparativa (opção 5)
+3. Perguntar sobre vantagens/desvantagens
+```
+
+---
+
+## Segurança e Boas Práticas
+
+### ✅ Faça:
+
+- Mantenha seu `.env` privado
+- Use `.gitignore` se versionar o código
+- Atualize dependências regularmente: `pip install -U -r requirements.txt`
+- Faça backup dos logs importantes
+- Monitore uso da API Gemini
+
+### ❌ Não Faça:
+
+- Compartilhar sua API key
+- Commitar `.env` no Git
+- Fazer milhares de requisições seguidas (rate limit)
+- Usar em produção sem autenticação adicional
+- Ignorar mensagens de erro nos logs
+
+### Arquivo `.gitignore` Recomendado
+
+```gitignore
+# Ambiente virtual
+.venv/
+venv_mcp/
+
+# Configurações sensíveis
+.env
+*.env
+
+# Logs
+logs/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE
+.vscode/
+.idea/
+*.swp
+```
+
+---
+
+## Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+
+---
+
+## Suporte
+
+### Recursos Úteis
+
+- **Documentação FastMCP**: https://github.com/jlowin/fastmcp
+- **ArXiv API**: https://arxiv.org/help/api
+- **Google Gemini**: https://ai.google.dev/
+- **Python.org**: https://docs.python.org/3/
+
+---
+
+## Créditos
+
+Desenvolvido com:
+
+- **FastMCP**: Framework MCP
+- **ArXiv API**: Busca de papers
+- **Google Gemini**: Análise com IA
+- **Python**: Linguagem de programação
+
+---
