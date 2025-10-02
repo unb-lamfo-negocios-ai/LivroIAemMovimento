@@ -974,203 +974,478 @@ Os prompts são como "templates" ou "comandos de barra" que os usuários podem i
 
 # Exemplos de Mensagens Comuns
 
-### Inicialização de Conexão:
+##  O que são essas mensagens?
 
-// Cliente -> Servidor
+Imagine que o **Cliente** (seu programa) e o **Servidor** (que busca papers) precisam conversar. Eles usam um formato especial chamado **JSON-RPC** para se entenderem, como se fosse um idioma comum.
 
+**Analogia:** É como pedir um lanche no drive-thru:
+- **Você (Cliente):** "Quero um hambúrguer com queijo"
+- **Atendente (Servidor):** "Ok, são R$ 15,00. Seu pedido está sendo preparado"
+
+Todas as mensagens seguem esse padrão de "pergunta → resposta".
+
+---
+
+## 📋 Estrutura Básica das Mensagens
+
+Toda mensagem JSON-RPC tem estes elementos:
+
+```json
 {
-
-"jsonrpc": "2.0",
-
-"id": "1",
-
-"method": "initialize",
-
-"params": {
-
-"protocolVersion": "2024-11-05",
-
-"capabilities": {
-
-"tools": {},
-
-"resources": {},
-
-"prompts": {}
-
-},
-
-"clientInfo": {
-
-"name": "ExampleClient",
-
-"version": "1.0.0"
-
+  "jsonrpc": "2.0",
+  "id": "1",
+  "method": "fazer_algo",
+  "params": {
+    "dado1": "valor1"
+  }
 }
+```
 
-}
+**Campos principais:**
+- `jsonrpc`: Versão do protocolo (sempre 2.0)
+- `id`: Identificador único da mensagem
+- `method`: O que você quer fazer
+- `params`: Parâmetros/dados necessários
 
-}
+---
 
-// Servidor -> Cliente
+## 1️⃣ Inicialização da Conexão
 
+### 🎯 O que acontece aqui?
+
+Esta é a **primeira mensagem** trocada quando o cliente se conecta ao servidor. É como um "aperto de mãos" digital onde ambos dizem:
+- "Oi, eu sou o Cliente, versão 1.0.0"
+- "Olá, eu sou o Servidor, versão 1.0.0, e posso fazer X, Y e Z"
+
+### 📤 Cliente pergunta: "Quem é você e o que pode fazer?"
+
+```json
 {
-
-"jsonrpc": "2.0",
-
-"id": "1",
-
-"result": {
-
-"protocolVersion": "2024-11-05",
-
-"capabilities": {
-
-"tools": {
-
-"listChanged": true
-
-},
-
-"resources": {
-
-"subscribe": true,
-
-"listChanged": true
-
-},
-
-"prompts": {
-
-"listChanged": true
-
+  "jsonrpc": "2.0",
+  "id": "1",
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "2024-11-05",
+    "capabilities": {
+      "tools": {},
+      "resources": {},
+      "prompts": {}
+    },
+    "clientInfo": {
+      "name": "ExampleClient",
+      "version": "1.0.0"
+    }
+  }
 }
+```
 
-},
+**Tradução em português:**
 
-"serverInfo": {
+```
+Cliente: "Olá servidor! Sou o ExampleClient versão 1.0.0.
+         Uso o protocolo MCP versão 2024-11-05.
+         Posso trabalhar com ferramentas, recursos e prompts.
+         Você pode me responder?"
+```
 
-"name": "ExampleServer",
+**Explicação dos campos:**
+- `method: "initialize"` → Estou iniciando a conexão
+- `protocolVersion` → Versão do MCP que estou usando
+- `capabilities` → O que eu (cliente) consigo fazer
+- `clientInfo` → Meu nome e versão
 
-"version": "1.0.0"
+### 📥 Servidor responde: "Oi! Eu posso fazer isso..."
 
-}
-
-}
-
-}
-
-### Listagem de Ferramentas:
-
-// Cliente -> Servidor
-
+```json
 {
-
-"jsonrpc": "2.0",
-
-"id": "2",
-
-"method": "tools/list"
-
+  "jsonrpc": "2.0",
+  "id": "1",
+  "result": {
+    "protocolVersion": "2024-11-05",
+    "capabilities": {
+      "tools": {
+        "listChanged": true
+      },
+      "resources": {
+        "subscribe": true,
+        "listChanged": true
+      },
+      "prompts": {
+        "listChanged": true
+      }
+    },
+    "serverInfo": {
+      "name": "ExampleServer",
+      "version": "1.0.0"
+    }
+  }
 }
+```
 
-// Servidor -> Cliente
+**Tradução em português:**
 
+```
+Servidor: "Olá ExampleClient! Sou o ExampleServer versão 1.0.0.
+           Também uso o protocolo MCP versão 2024-11-05.
+           
+           Minhas capacidades:
+           ✅ Ferramentas: Posso notificar quando a lista mudar
+           ✅ Recursos: Você pode se inscrever e serei notificado sobre mudanças
+           ✅ Prompts: Posso notificar quando a lista mudar
+           
+           Estamos conectados!"
+```
+
+**Explicação dos campos:**
+- `result` → Resposta bem-sucedida (não é erro)
+- `capabilities` → O que EU (servidor) consigo fazer
+- `listChanged: true` → Posso avisar quando algo mudar
+- `subscribe: true` → Você pode se inscrever para receber atualizações
+- `serverInfo` → Meu nome e versão
+
+---
+
+## 2️⃣ Listagem de Ferramentas Disponíveis
+
+### 🎯 O que acontece aqui?
+
+Depois de conectado, o cliente pergunta: **"Quais ferramentas você tem disponíveis?"**
+
+É como entrar numa oficina e perguntar: "Quais ferramentas vocês têm aí? Martelo? Chave de fenda?"
+
+### 📤 Cliente pergunta: "Que ferramentas você oferece?"
+
+```json
 {
+  "jsonrpc": "2.0",
+  "id": "2",
+  "method": "tools/list"
+}
+```
 
-"jsonrpc": "2.0",
+**Tradução em português:**
 
-"id": "2",
+```
+Cliente: "Me mostre a lista de todas as ferramentas disponíveis."
+```
 
-"result": {
+**Explicação:**
+- `method: "tools/list"` → Quero ver a lista de ferramentas
+- `id: "2"` → Esta é minha segunda mensagem (a primeira foi o initialize)
+- Sem `params` porque não preciso enviar dados extras
 
-"tools": [
+### 📥 Servidor responde: "Tenho estas ferramentas..."
 
+```json
 {
-
-"name": "get_weather",
-
-"description": "Obter informações meteorológicas",
-
-"inputSchema": {
-
-"type": "object",
-
-"properties": {
-
-"location": {
-
-"type": "string",
-
-"description": "Cidade para consultar o clima"
-
+  "jsonrpc": "2.0",
+  "id": "2",
+  "result": {
+    "tools": [
+      {
+        "name": "get_weather",
+        "description": "Obter informações meteorológicas",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "location": {
+              "type": "string",
+              "description": "Cidade para consultar o clima"
+            }
+          },
+          "required": ["location"]
+        }
+      }
+    ]
+  }
 }
+```
 
-},
+**Tradução em português:**
 
-"required": ["location"]
+```
+Servidor: "Tenho 1 ferramenta disponível:
 
-}
+           📍 Nome: get_weather
+           📝 O que faz: Busca informações sobre o clima
+           
+           Como usar:
+           - Você DEVE me dar: 'location' (nome da cidade)
+           - location deve ser texto (string)
+           - Exemplo: 'São Paulo', 'Rio de Janeiro'
+           
+           Pronto! É só chamar essa ferramenta quando precisar."
+```
 
-}
+**Explicação dos campos:**
+- `tools` → Array (lista) com todas as ferramentas
+- `name` → Nome único da ferramenta (usado para chamá-la)
+- `description` → Explicação do que a ferramenta faz
+- `inputSchema` → "Contrato" de como usar a ferramenta
+  - `properties` → Parâmetros que você pode enviar
+  - `required` → Parâmetros obrigatórios
+  - `type: "string"` → Tipo de dado (texto, número, etc.)
 
-]
 
-}
+## 3️⃣ Execução de uma Ferramenta
 
-}
+### 🎯 O que acontece aqui?
 
-### Execução de Ferramenta:
+Agora que o cliente sabe quais ferramentas existem, ele **usa uma delas**. É como dizer: "Ok, vi que você tem essa ferramenta 'get_weather'. Quero usar agora para São Paulo!"
 
-// Cliente -> Servidor
+### 📤 Cliente chama: "Use a ferramenta X com estes dados"
 
+```json
 {
-
-"jsonrpc": "2.0",
-
-"id": "3",
-
-"method": "tools/call",
-
-"params": {
-
-"name": "get_weather",
-
-"arguments": {
-
-"location": "São Paulo"
-
+  "jsonrpc": "2.0",
+  "id": "3",
+  "method": "tools/call",
+  "params": {
+    "name": "get_weather",
+    "arguments": {
+      "location": "São Paulo"
+    }
+  }
 }
+```
 
-}
+**Tradução em português:**
 
-}
+```
+Cliente: "Quero EXECUTAR a ferramenta 'get_weather'.
+         
+         Os dados que estou enviando são:
+         📍 location: 'São Paulo'
+         
+         Me retorne o resultado, por favor!"
+```
 
-// Servidor -> Cliente
+**Explicação dos campos:**
+- `method: "tools/call"` → Quero executar uma ferramenta
+- `params.name` → Nome da ferramenta que quero usar
+- `params.arguments` → Os dados necessários (conforme o inputSchema)
+- `arguments.location` → Parâmetro obrigatório definido no schema
 
+### 📥 Servidor responde: "Aqui está o resultado!"
+
+```json
 {
+  "jsonrpc": "2.0",
+  "id": "3",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Clima em São Paulo: 25°C, ensolarado, umidade 60%"
+      }
+    ]
+  }
+}
+```
 
-"jsonrpc": "2.0",
+**Tradução em português:**
 
-"id": "3",
+```
+Servidor: "Executei a ferramenta 'get_weather' para São Paulo.
+           
+           Resultado:
+           🌡️ Temperatura: 25°C
+           ☀️ Condição: Ensolarado
+           💧 Umidade: 60%
+           
+           Tudo certo!"
+```
 
-"result": {
+**Explicação dos campos:**
+- `result.content` → O conteúdo da resposta (pode ser texto, imagem, etc.)
+- `type: "text"` → O resultado é texto puro
+- `text` → O resultado em si
 
-"content": [
+### 🔍 Exemplo Real do Nosso Projeto
 
+Chamando a ferramenta de busca de papers:
+
+**Cliente pede:**
+
+```json
 {
-
-"type": "text",
-
-"text": "Clima em São Paulo: 25°C, ensolarado, umidade 60%"
-
+  "jsonrpc": "2.0",
+  "id": "3",
+  "method": "tools/call",
+  "params": {
+    "name": "search_papers",
+    "arguments": {
+      "query": "artificial intelligence",
+      "max_results": 3
+    }
+  }
 }
+```
 
-]
+**Servidor responde:**
 
+```json
+{
+  "jsonrpc": "2.0",
+  "id": "3",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Encontrados 3 papers sobre 'artificial intelligence':\n\n1. Deep Learning Advances (2024)\n   Autores: John Smith, Jane Doe\n   ArXiv: 2409.12345\n\n2. Neural Networks Review (2024)\n   Autores: Bob Johnson\n   ArXiv: 2409.54321\n\n3. AI Ethics Study (2024)\n   Autores: Alice Brown\n   ArXiv: 2409.98765"
+      }
+    ]
+  }
 }
+```
 
+---
+
+## 🚨 Tratamento de Erros
+
+### O que acontece se der erro?
+
+Se algo der errado, o servidor responde com um **erro** ao invés de `result`.
+
+**Exemplo: Ferramenta não encontrada**
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": "3",
+  "error": {
+    "code": -32601,
+    "message": "Method not found",
+    "data": {
+      "detail": "A ferramenta 'get_clima' não existe. Ferramentas disponíveis: get_weather"
+    }
+  }
 }
+```
+
+**Tradução:**
+
+```
+Servidor: "ERRO! A ferramenta que você pediu não existe.
+           
+           🔴 Código do erro: -32601 (Método não encontrado)
+           📝 Mensagem: Method not found
+           ℹ️ Detalhes: A ferramenta 'get_clima' não existe.
+                       Ferramentas disponíveis: get_weather"
+```
+
+**Códigos de erro comuns:**
+- `-32700` → JSON inválido (erro de sintaxe)
+- `-32600` → Requisição inválida
+- `-32601` → Método/ferramenta não encontrado
+- `-32602` → Parâmetros inválidos
+- `-32603` → Erro interno do servidor
+
+---
+
+## 📊 Fluxo Completo de Comunicação
+
+### Sequência típica de uso:
+
+```
+1. INICIALIZAÇÃO
+   Cliente: "initialize" → Servidor: "Ok, conectado!"
+
+2. DESCOBERTA
+   Cliente: "tools/list" → Servidor: "Tenho estas ferramentas..."
+
+3. EXECUÇÃO (pode repetir várias vezes)
+   Cliente: "tools/call get_weather" → Servidor: "25°C, sol"
+   Cliente: "tools/call search_papers" → Servidor: "Encontrei 5 papers"
+   Cliente: "tools/call analyze_papers" → Servidor: "Análise completa..."
+
+4. FINALIZAÇÃO
+   Cliente fecha a conexão
+```
+
+### Diagrama Visual
+
+```
+┌─────────┐                           ┌─────────┐
+│ CLIENTE │                           │SERVIDOR │
+└────┬────┘                           └────┬────┘
+     │                                     │
+     │  1. initialize                      │
+     │────────────────────────────────────>│
+     │                                     │
+     │  2. Conectado + Capacidades         │
+     │<────────────────────────────────────│
+     │                                     │
+     │  3. tools/list                      │
+     │────────────────────────────────────>│
+     │                                     │
+     │  4. Lista de ferramentas            │
+     │<────────────────────────────────────│
+     │                                     │
+     │  5. tools/call "get_weather"        │
+     │────────────────────────────────────>│
+     │                                     │
+     │  6. Resultado: "25°C, sol"          │
+     │<────────────────────────────────────│
+     │                                     │
+```
+
+---
+
+## 🎓 Resumo para Leigos
+
+### O que você precisa entender:
+
+1. **JSON-RPC** é só um formato padronizado de mensagens
+2. Sempre há um **id** para identificar cada conversa
+3. **Cliente pergunta** (`method`) → **Servidor responde** (`result` ou `error`)
+4. Tudo começa com `initialize` (apresentação)
+5. Depois vem `tools/list` (ver o que tem disponível)
+6. Por fim `tools/call` (usar uma ferramenta específica)
+
+### Analogia Final: Restaurante
+
+```
+1. INITIALIZE = Entrar no restaurante e ser recebido
+   "Boa noite! Bem-vindo ao restaurante!"
+
+2. TOOLS/LIST = Pedir o cardápio
+   "Aqui está nosso menu: pizza, hambúrguer, salada..."
+
+3. TOOLS/CALL = Fazer o pedido
+   "Quero uma pizza margherita"
+   → "Sua pizza está pronta!"
+```
+
+---
+
+## 💡 Dicas Práticas
+
+### Para Desenvolvedores:
+
+- ✅ Sempre valide o `inputSchema` antes de chamar ferramentas
+- ✅ Use `id` único para cada mensagem
+- ✅ Implemente timeout (não espere eternamente por resposta)
+- ✅ Trate todos os códigos de erro possíveis
+- ✅ Teste com ferramentas simples primeiro
+
+### Para Usuários:
+
+- ✅ Se ver erro `-32601`: A ferramenta não existe
+- ✅ Se ver erro `-32602`: Faltou algum parâmetro obrigatório
+- ✅ Se ver erro `-32603`: Problema no servidor (tente novamente)
+- ✅ Verifique os logs para detalhes dos erros
+
+---
+
+## 🔗 Recursos Adicionais
+
+- **Especificação JSON-RPC 2.0**: https://www.jsonrpc.org/specification
+- **Documentação MCP**: https://modelcontextprotocol.io
+- **Validador JSON**: https://jsonlint.com
+
+---
+
 
 ### Outras Capacidades Essenciais
 
