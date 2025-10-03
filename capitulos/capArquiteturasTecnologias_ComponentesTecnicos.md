@@ -62,50 +62,39 @@ Agora, visualize esse caminho passo a passo no fluxograma abaixo, que ilustra a 
 
 Fluxograma ilustrando a jornada recomendada para o desenvolvimento de soluções com Inteligência Artificial.
 ```
-
 ---
 
 ## API e Integração
 
-Uma **API (Application Programming Interface)** é o “idioma” que permite que sistemas diferentes **se comuniquem** {cite}`fielding2000`.  
-No contexto de IA, as APIs conectam modelos a aplicativos, websites ou sistemas corporativos.  
-
-Exemplos de aplicação:  
-- **E-commerce**: uma API de visão computacional pode classificar automaticamente fotos de produtos.  
-- **Atendimento ao cliente**: chatbots integrados a APIs de NLP conseguem responder dúvidas em tempo real.  
-- **Indústria 4.0**: sensores conectados via API alimentam modelos de manutenção preditiva.  
-
-As APIs tornam a IA **modular e escalável**, permitindo que empresas adicionem inteligência a sistemas já existentes sem reconstruí-los do zero.  
-
-## **API e Integração: Colocando a IA para Trabalhar no Seu Negócio** MATEUS MACEDO
-
 Até agora, vimos como usar a IA para gerar ideias, conteúdo, protótipos e até automatizar partes do processo de criação. Mas existe um ponto em que muitos criadores se perguntam:
 
-> _"Como eu faço essa IA funcionar dentro do meu produto ou negócio?"_
+```{admonition}
+:class: note
+Como eu faço essa IA funcionar dentro do meu produto ou negócio?
+```
 
-A resposta quase sempre envolve uma sigla: API.
+A resposta quase sempre envolve uma sigla: **API**.
 
-### O que é uma API?
+**API** significa **Application Programming Interface** ou, em português, **Interface de Programação de Aplicações**. É o “idioma” que permite que sistemas diferentes **se comuniquem** {cite}`fielding2000`.  
 
-**API** significa **Application Programming Interface** ou, em português, **Interface de Programação de Aplicações**.
+No contexto de IA, as APIs conectam modelos a aplicativos, websites ou sistemas corporativos.  
 
-Mas o mais importante não é o que a sigla quer dizer. O importante é entender **o que ela faz**:
+```{admonition} Exemplos de aplicação:
+:class: exemplo
+- **E-commerce**: uma API de visão computacional pode classificar automaticamente fotos de produtos.  
+- **Atendimento ao cliente**: chatbots integrados a APIs de NLP conseguem responder dúvidas em tempo real.  
+- **Indústria 4.0**: sensores conectados via API alimentam modelos de manutenção preditiva.
+```
 
-> _"Uma API é uma ponte que permite que dois sistemas conversem."_
+As APIs tornam a IA **modular e escalável**, permitindo que empresas adicionem inteligência a sistemas já existentes sem reconstruí-los do zero.  É como se você pudesse “conversar com a IA por código” e integrá-la diretamente ao seu site, app, sistema ou processo de negócio.
 
-Ela permite que você:
-
-- Envie um texto para um modelo de linguagem (como o GPT-4) e receba uma resposta.
-- Envie uma imagem para uma IA e receba uma legenda automática.
-- Crie um formulário no seu site e, quando preenchido, ele acione uma IA que processa os dados e envia uma resposta personalizada.
-
-É como se você pudesse “conversar com a IA por código” e integrá-la diretamente ao seu site, app, sistema ou processo de negócio.
-
-### Automatizando ainda mais com Webhooks
+## Automatizando ainda mais com Webhooks
 
 Se a API é a ponte que permite que você **faça pedidos para a IA**, os **webhooks** são como **sinais automáticos que avisam quando algo acontece** — e isso pode acionar a IA sem que você precise fazer nada manualmente.
 
-> _"Em vez de você perguntar toda hora "já aconteceu?", o webhook avisa na hora certa."_
+:::{note}
+Em vez de você perguntar toda hora "já aconteceu?", o webhook avisa na hora certa.
+:::
 
 Imagine esses cenários:
 
@@ -115,29 +104,43 @@ Imagine esses cenários:
 
 Ao combinar **APIs** e **webhooks**, você cria sistemas onde a IA **não só responde quando solicitada**, mas também **entra em ação automaticamente** assim que um evento ocorre. Isso torna a automação muito mais fluida, eficiente e inteligente — exatamente o tipo de experiência que diferencia um negócio moderno no mercado.
 
-### **Integração de API e Agentes de IA**
+## Integração de API e Agentes de IA
 
 Com o avanço dos agentes de inteligência artificial, sistemas autônomos capazes de interpretar comandos, planejar ações e interagir com ferramentas externas. O uso de APIs está se tornando mais dinâmico e inteligente. Diferente dos modelos de IA tradicionais, que apenas respondem a entradas, os agentes podem executar tarefas completas, como buscar informações, tomar decisões e manipular sistemas por meio de chamadas a APIs. Isso transforma APIs em verdadeiras “ferramentas” de ação no ecossistema digital dos agentes, permitindo que eles realizem tarefas como consultar dados, automatizar fluxos ou até fazer scraping de imagens de um site. Em vez de depender de desenvolvedores para orquestrar múltiplas chamadas, os agentes podem decidir, em tempo real, como e quando usar APIs para alcançar objetivos mais complexos. Esse novo paradigma cria uma ponte entre linguagem natural, automação e infraestrutura digital.
 
-### IA na Prática: Exemplo com API
+```{admonition} Exemplo de uso de IA com API
+class: exemplo
+Imagine que você desenvolveu um serviço inteligente de atendimento para pequenas clínicas. O fluxo desejado funciona assim:
 
-Imagine que você criou um serviço de atendimento inteligente para pequenas clínicas.
+1. Recebimento da mensagem:
+   O paciente envia uma dúvida por meio de um formulário online ou pelo WhatsApp.
 
-Você quer que:
+2. Processamento da pergunta:
+   Um modelo de linguagem (IA) analisa automaticamente a mensagem recebida, compreende o conteúdo e gera uma resposta clara e humanizada.
 
-1. Quando o paciente envia uma dúvida via formulário ou WhatsApp,
-2. Um modelo de linguagem analise a pergunta e gere uma resposta clara e humanizada,
-3. A resposta volte automaticamente para o paciente, sem sua intervenção manual.
+3. Envio automático da resposta:
+   A resposta gerada pela IA é enviada de volta ao paciente de forma automática, sem necessidade da sua intervenção manual.
 
+<div style="text-align: center;">
 Isso tudo pode ser feito com **integrações via API**.
+</div>
+```
 
-Exemplo em python usando Twilio (para receber e enviar mensagens do WhatsApp) e Flask (Webhook):
+O código a seguir, desenvolvido em Python, demonstra como integrar um modelo de IA generativa (OpenAI GPT-4) a um sistema de atendimento automatizado via WhatsApp, utilizando a API do Z-API. O fluxo é simples:
+
+- **Entrada:** o paciente envia uma mensagem ou dúvida via formulário ou WhatsApp.
+
+- **Processamento:** o modelo de IA interpreta a pergunta, gera uma resposta clara e humanizada, e a função enviar_resposta_whatsapp envia essa resposta de volta pelo canal.
+
+- **Saída:** o paciente recebe a resposta automaticamente, sem intervenção manual.
+
+Com esse exemplo, o leitor entende como configurar um webhook para receber mensagens, processá-las com IA e devolvê-las de forma automática, criando assim um atendimento inteligente e escalável.
 
 ```{code-block} python
 ---
 linenos: true
 emphasize-lines: 3
-caption: Código de exemplo com integração OpenAI e Z-API
+caption: Exemplo prático, em Python, de webhook com Flask conectado ao WhatsApp usando Twilio
 ---
 from flask import Flask, request, jsonify
 import requests
@@ -184,8 +187,9 @@ def receber_mensagem():
 if __name__ == "__main__":
     app.run(port=5000)
 ```
-
+:::{note}
 Você conecta a API de algum serviço de IA ao seu sistema de atendimento, e ela entra automaticamente no fluxo.
+:::
 
 ### API na criação de negócios: o poder da automação
 
