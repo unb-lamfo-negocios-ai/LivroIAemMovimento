@@ -115,7 +115,7 @@ Com a evolução dos **agentes de inteligência artificial**, o uso de APIs est�
 
 <p align="center">mais dinâmica, inteligente e autônoma.</p>
 
-Enquanto modelos tradicionais apenas respondem a comandos, **agentes conseguem interpretar, planejar e agir**:
+Enquanto modelos tradicionais apenas respondem a comandos, **agentes interpretam, planejam e agem**.
 
 - Buscar informações em tempo real
 
@@ -261,9 +261,38 @@ Tudo isso feito com conectores visuais e regras simples, **sem programar**.
 
 ## Como funciona uma chamada de API de modelo de linguagem?
 
-Uma chamada de API para um modelo de linguagem (como o GPT da OpenAI) funciona como um diálogo estruturado entre o usuário e o modelo, mediado por uma requisição HTTP contendo um "prompt" — ou seja, um conjunto de mensagens que simulam uma conversa. Esse prompt é composto por uma lista de mensagens, cada uma com três componentes principais: `role` (função de quem fala), `content` (conteúdo textual da fala), e `name` (opcional, para identificar participantes). A comunicação normalmente começa com uma mensagem de `role: system`, que define o comportamento ou personalidade do modelo ("Você é um assistente médico educado e direto"). Em seguida, vêm mensagens de `role: user` (entrada do usuário) e `role: assistant` (respostas anteriores, caso haja contexto). Essa estrutura permite que o modelo entenda tanto o que se espera dele quanto o histórico da conversa. A resposta é gerada com base nesse contexto textual, e pode ser ajustada por parâmetros como `temperature` (criatividade) ou `max_tokens` (limite de comprimento da resposta).
+Uma chamada de API para um modelo de linguagem (como o GPT da OpenAI) funciona como um **diálogo estruturado** entre o usuário e o modelo, mediado por uma requisição HTTP contendo um *prompt* — ou seja, um conjunto de mensagens que simulam uma conversa.
 
-## **Explicação por partes — campos importantes da chamada**
+Esse *prompt* é composto por uma **lista de mensagens**, cada uma com três componentes principais:
+
+- `role` — função de quem fala  
+- `content` — conteúdo textual da fala  
+- `name` *(opcional)* — para identificar participantes  
+
+A comunicação geralmente segue esta ordem:
+
+- Começa com uma mensagem de `role: system`, que define o comportamento ou a personalidade do modelo  
+  *Exemplo: "Você é um assistente médico educado e direto".*
+- Em seguida:
+  - Mensagens de `role: user` — entrada do usuário  
+  - Mensagens de `role: assistant` — respostas anteriores (caso existam)  
+
+Essa estrutura permite que o modelo:
+
+- Compreenda o que se espera dele  
+- Tenha acesso ao histórico da conversa (caso fornecido)  
+
+A resposta é então **gerada com base nesse contexto textual**, e pode ser **ajustada por parâmetros** como:
+
+- `temperature` — controla a criatividade  
+- `max_tokens` — define o comprimento máximo da resposta  
+
+
+### Explicação por partes — campos importantes da chamada
+
+Como é feita uma chamada para o modelo da OpenAI?
+
+Para interagir com um modelo como o GPT-4, você precisa enviar uma requisição HTTP contendo informações específicas. A estrutura dessa requisição é feita em formato JSON, e deve conter os parâmetros adequados para simular um diálogo com o modelo. Veja um exemplo:
 
 ```{code-block} python
 ---
@@ -282,6 +311,10 @@ emphasize-lines: 3
 }
 ```
 
+**Entendendo os Campos da Requisição**
+
+Para dominar o uso dessa API, é essencial compreender o que cada campo significa. A tabela abaixo resume os principais elementos:
+
 |**Campo** |	**O que é**|
 |----------|---------------|
 |'model' |Define qual modelo será usado (ex: 'gpt-4', 'gpt-3.5-turbo')|
@@ -291,14 +324,18 @@ emphasize-lines: 3
 |'temperature'|	Controla a criatividade da resposta (0 = exata, 1 = criativa)|
 |'max_tokens'|	Número máximo de tokens gerados (limita o tamanho da resposta)|
 
-## **Limitações das chamadas diretas à API**
 
-Apesar de funcionarem bem para muitos casos, chamadas diretas à API apresentam limitações importantes:
+
+Embora sejam eficazes em muitos cenários, as **chamadas diretas à API** podem se tornar limitadas quando o objetivo é criar fluxos mais complexos, com múltiplas etapas, tomada de decisões dinâmicas ou integrações com diferentes sistemas.
+
+```{admonition} Limitações das chamadas diretas à API
+:class: warning
 
 - **Gerenciamento de contexto**: O modelo "esquece" o que não estiver incluído no `messages`. Não há memória real entre chamadas, a menos que você a implemente por fora.
 - **Reutilização de lógica**: É difícil modularizar prompts ou reaproveitar estruturas.
 - **Falta de ferramentas**: A API básica não executa ações externas (ex: chamadas HTTP, busca na web, interações com banco de dados).
 - **Escalabilidade**: À medida que o número de interações cresce, organizar e manter prompts pode se tornar confuso e difícil de escalar.
+```
 
 ## **Introdução ao LangChain e frameworks similares**
 
