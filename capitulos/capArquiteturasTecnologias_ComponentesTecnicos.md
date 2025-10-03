@@ -343,14 +343,12 @@ Embora sejam eficazes em muitos cenários, as **chamadas diretas à API** podem 
 
 ## Token counting, custo e desempenho
 
- Isso significa que textos longos, históricos de conversa extensos ou respostas detalhadas podem gerar custos mais altos e até ultrapassar os limites do modelo. Além do custo, o desempenho também é afetado: prompts muito grandes levam mais tempo para serem processados e podem consumir recursos desnecessários. Por isso, entender como funciona a contagem de tokens é essencial para otimizar aplicações com LLMs, garantindo um bom equilíbrio entre qualidade da resposta, velocidade e custo.
-
 Entendendo o que é *token counting*: Ao usar modelos de linguagem via API (como o GPT-4), **cada chamada é tarifada com base na quantidade de _tokens_ processados** – ou seja:
 
 - Tanto a **entrada** (`prompt`)  
 - Quanto a **saída** (`completion`)
 
-O que é um token? Um token é uma pequena unidade de texto, geralmente entre 3 e 4 caracteres.  
+**O que é um token?** Um token é uma pequena unidade de texto, geralmente entre 3 e 4 caracteres.  
 
 ```{admonition} Exemplo
 :class: exemplo
@@ -403,16 +401,17 @@ Aplicar boas práticas na construção dos *prompts* e na configuração dos par
 |Conte os tokens antes|	Use `tiktoken` (OpenAI) ou `anthropic_tokenizer` para calcular previamente|
 |Use modelos mais baratos|	Para tarefas simples, `gpt-3.5` pode ser suficiente|
 
-### Por que isso importa na criação de negócios?
+### Por que o uso de IA importa na criação de negócios?
 
-Para que a adoção de Inteligência Artificial realmente gere impacto nos negócios, é fundamental entender **por que ela importa** na prática. Não se trata apenas de uma tecnologia “da moda”, mas de um verdadeiro diferencial competitivo que pode transformar o modo como sua empresa opera. A IA permite escalar processos sem aumentar custos com equipe, automatizar rotinas de forma inteligente, entregar soluções sob medida em grande escala e se conectar com as ferramentas que sua empresa já usa no dia a dia. Confira alguns dos principais benefícios:
+Para que a adoção de Inteligência Artificial realmente gere impacto nos negócios, é fundamental entender **por que ela importa** na prática. Não se trata apenas de uma tecnologia “da moda”, mas de um verdadeiro diferencial competitivo que pode transformar o modo como sua empresa opera. A IA permite escalar processos sem aumentar custos com equipe, automatizar rotinas de forma inteligente, entregar soluções sob medida em grande escala e se conectar com as ferramentas que sua empresa já usa no dia a dia. 
 
-:::{hint}
+```{admonition} Confira alguns dos principais benefícios:
+:class: hint
 - **Escalabilidade:** a IA trabalha por você, 24/7.
 - **Automação inteligente:** respostas, análises, recomendações — tudo dinâmico.
 - **Customização em massa:** conteúdo ou soluções sob medida, com pouco esforço manual.
 - **Integração com o que você já usa:** ERPs, CRMs, WhatsApp, e-commerce, etc.
-:::
+```
 
 :::{div style="text-align: center;"}
 APIs são como "braços da IA" que você pode embutir no seu negócio para entregar valor automaticamente.
@@ -501,35 +500,29 @@ Quando usar?
 
 On-premise é por vezes obrigatório para setores regulados. Edge AI é essencial para aplicações que exigem tempo de resposta em tempo real e/ou operação offline, como reconhecimento facial em celulares ou controle de qualidade em uma linha de montagem.
 
-Um Modelo Híbrido Pode Ser a Resposta?
+### Um Modelo Híbrido Pode Ser a Resposta?
 
 Para boa parte das empresas, a escolha não é "um ou outro", mas sim "ambos, para finalidades diferentes". A abordagem híbrida combina o melhor dos dois mundos.
 
-Exemplo de Estratégia Híbrida: Um banco pode usar a nuvem para treinar seus modelos de detecção de fraude, aproveitando a escala massiva para processar terabytes de dados históricos anonimizados. No entanto, o modelo final é implantado (deploy) nos servidores on-premise do banco para analisar transações reais e sensíveis de clientes em tempo real, garantindo segurança e baixa latência.
+```{admonition} Exemplo de Estratégia Híbrida
+:class: exemplo
+
+Um banco pode usar a nuvem para treinar seus modelos de detecção de fraude, aproveitando a escala massiva para processar terabytes de dados históricos anonimizados. No entanto, o modelo final é implantado (deploy) nos servidores on-premise do banco para analisar transações reais e sensíveis de clientes em tempo real, garantindo segurança e baixa latência.
+```
 
 A decisão final deve ser guiada por uma análise de negócio, respondendo a três perguntas-chave:
 
-1. Soberania dos Dados: Meus dados podem ou devem sair da minha infraestrutura?
-2. Experiência do Usuário: A minha aplicação é tolerante à latência da internet ou o tempo de resposta é um diferencial competitivo?
-3. Modelo de Custos: Minha carga de trabalho é constante e previsível (favorecendo CapEx) ou volátil e experimental (favorecendo OpEx)?
+1. **Soberania dos Dados:** Meus dados podem ou devem sair da minha infraestrutura?
+2. **Experiência do Usuário:** A minha aplicação é tolerante à latência da internet ou o tempo de resposta é um diferencial competitivo?
+3. **Modelo de Custos:** Minha carga de trabalho é constante e previsível (favorecendo CapEx) ou volátil e experimental (favorecendo OpEx)?
 
 A resposta a essas perguntas definirá a combinação ideal de flexibilidade alugada e controle próprio para sua estratégia de IA.
 
----FIM-FELIPE--
 
 ---
 
 ## Frontend vs. Backend
 
-Toda aplicação de IA precisa de duas camadas principais:  
-
-- **Frontend**: a interface que o usuário final vê e interage (ex.: site, aplicativo, painel de controle).  
-- **Backend**: o "motor invisível" que processa dados, executa os modelos de IA e retorna os resultados.  
-
-Separar essas camadas garante que a arquitetura seja **mais flexível e escalável**.  
-Por exemplo: o usuário de um app de tradução só vê a frase traduzida no **frontend**, mas todo o processamento de linguagem natural ocorre no **backend**.  
-
-----MATEUS---MACEDO-----
 Qualquer aplicação de software, seja um site de e-commerce a uma ferramenta de IA, é composta por duas partes distintas, mas interdependentes: o frontend e o backend.
 
 - **O Frontend (O "Palco"):** Esta é a parte da aplicação com a qual o usuário interage diretamente. É tudo o que se vê e se toca na tela: botões, menus, imagens, campos de formulário, layout e design visual. Também chamado de lado do cliente (client-side), o frontend é executado no navegador ou dispositivo do usuário.
@@ -542,7 +535,7 @@ As tecnologias essenciais para o desenvolvimento frontend incluem:
 - **CSS (Cascading Style Sheets):** define o visual, o estilo e a disposição dos elementos.
 - **JavaScript:** adiciona interatividade, animações e comportamentos dinâmicos.
 
-### **Backend (A "Cozinha")**
+- **Backend (A "Cozinha")**
 
 O backend é o que acontece por trás das cortinas. É o *lado do servidor* (*server-side*), o núcleo que executa toda a lógica da aplicação. Ele lida com o processamento de dados, autenticação de usuários, integrações com sistemas externos, e o armazenamento em bancos de dados.
 
@@ -554,12 +547,12 @@ As tecnologias de backend variam conforme o projeto, mas algumas das mais comuns
 - Bancos de dados como **MySQL**, **PostgreSQL**, **MongoDB**.
 - Serviços em nuvem, APIs e servidores web (como NGINX, Apache).
 
-### **Uma Analogia Real: O Restaurante**
-
-Para entender melhor essa divisão:
+```{admonition} Uma Analogia Real: O Restaurante
+:class: exemplo
 
 - O **frontend** é o salão do restaurante: o cardápio, a decoração, os garçons e a apresentação dos pratos, tudo voltado para o cliente.
 - O **backend** é a cozinha: os chefs, os ingredientes, os fornos e todo o trabalho invisível que transforma o pedido em um prato pronto.
+```
 
 ---
 
