@@ -96,6 +96,17 @@ agent_executor = AgentExecutor.from_agent_and_tools(
 )
 ```
 
+-----parte mateus
+**Introdução ao LangChain e frameworks similares**
+
+Para superar essas limitações, surgiram frameworks como o **LangChain**, **LlamaIndex**, **CrewAI**, **Autogen**, entre outros. O LangChain, por exemplo, permite estruturar aplicações que usam LLMs com recursos como:
+
+- **Prompt templates**: Criação de prompts modulares e reutilizáveis.
+- **Memória de conversa**: Persistência de contexto entre chamadas.
+- **Integração com ferramentas**: Permite ao LLM chamar APIs externas, bancos de dados ou executar funções.
+- **Agentes**: Um nível acima, em que o modelo decide o que fazer, quais ferramentas usar e em que ordem.
+
+Essas soluções transformam um simples modelo de linguagem em uma **aplicação inteligente completa**, com raciocínio autônomo, tomada de decisão e execução de tarefas práticas.
 ---
 
 ## LangGraph
