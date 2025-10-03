@@ -474,17 +474,6 @@ Após definir qual modelo de IA usar, a próxima pergunta estratégica é onde e
   - **Dependência do Fornecedor (Lock-in):** Construir sua operação sobre os serviços específicos de um provedor torna a migração para um concorrente cara e complexa.
 ```
 
-VANTAGENS:
-
-- Agilidade e Baixo Custo Inicial: A barreira de entrada é praticamente zero. É possível começar a experimentar e escalar uma aplicação de IA em questão de horas, sem comprar um único servidor.
-- Escalabilidade Elástica: Se sua demanda explodir, a capacidade da nuvem se ajusta automaticamente. Você paga apenas pelo que usa, evitando o desperdício de capacidade ociosa.
-- Acesso à Inovação: Você tem acesso imediato às GPUs e processadores mais recentes do mercado sem precisar renovar máquinas próprias.
-
-DESVANTAGENS:
-- Custo em Escala: Para uma operação grande e constante, o aluguel pode se tornar mais caro do que a posse a longo prazo. O custo operacional pode ser volátil e difícil de prever.
-- Soberania e Privacidade de Dados: Seus dados residem na infraestrutura de outra empresa, o que é um ponto crítico para setores regulados como saúde, finanças e governo.
-- Dependência do Fornecedor (Lock-in): Construir sua operação sobre os serviços específicos de um provedor torna a migração para um concorrente cara e complexa.
-
 **Quando usar?**
 
 É a escolha padrão para a maioria das startups e empresas, especialmente para prototipagem, aplicações com demanda variável ou negócios que querem focar no produto, não na gestão de infraestrutura.
@@ -495,17 +484,22 @@ O que é: Operar os modelos de IA em hardware que você possui e controla. Isso 
 - On-Premise: Servidores e GPUs instalados em seu próprio data center. É a "frota de caminhões" da nossa analogia.
 - Edge AI: Uma forma específica de computação local onde modelos otimizados rodam diretamente em dispositivos — como um smartphone, um terminal de ponto de venda, um sensor em uma fábrica ou uma câmera inteligente. É o "veículo de entrega final", operando de forma autônoma na ponta.
 
-VANTAGENS:
 
-- Controle e Segurança Máximos: Os dados nunca deixam sua rede (on-premise) ou seu dispositivo (edge), garantindo máxima privacidade e conformidade com leis como a LGPD/GDPR.
-- Baixíssima Latência e Operação Offline: No Edge AI, a resposta é instantânea, pois não há viagem de ida e volta para a nuvem. A aplicação funciona mesmo sem conexão com a internet.
-- Redução de Custos de Dados: Processar dados localmente (como um feed de vídeo) evita os altos custos de transmissão e armazenamento na nuvem.
-- Custo-Benefício em Escala Previsível: Para cargas de trabalho massivas e constantes, o Custo Total de Propriedade (TCO) de uma infraestrutura on-premise pode ser menor do que o aluguel na nuvem a longo prazo.
+```{list-table} 
+:header-rows: 1
+:widths: 20 80
 
-DESVANTAGENS:
-
-- Alto Custo Inicial e Complexidade: Exige um grande investimento em hardware e uma equipe especializada (MLOps) para gerenciá-lo.
-- Escalabilidade Rígida: Aumentar a capacidade significa comprar mais hardware, um processo lento e caro.
+* - **Categoria**
+  - **Descrição**
+* - VANTAGENS
+  - **Controle e Segurança Máximos:** Os dados nunca deixam sua rede (on-premise) ou seu dispositivo (edge), garantindo máxima privacidade e conformidade com leis como a LGPD/GDPR.
+* - **Baixíssima Latência e Operação Offline:** No Edge AI, a resposta é instantânea, pois não há viagem de ida e volta para a nuvem. A aplicação funciona mesmo sem conexão com a internet.
+* - **Redução de Custos de Dados:** Processar dados localmente (como um feed de vídeo) evita os altos custos de transmissão e armazenamento na nuvem.
+  -  **Custo-Benefício em Escala Previsível:** Para cargas de trabalho massivas e constantes, o Custo Total de Propriedade (TCO) de uma infraestrutura on-premise pode ser menor do que o aluguel na nuvem a longo prazo.
+* - DESVANTAGENS
+  - **Alto Custo Inicial e Complexidade:** Exige um grande investimento em hardware e uma equipe especializada (MLOps) para gerenciá-lo.
+* - **Escalabilidade Rígida:** Aumentar a capacidade significa comprar mais hardware, um processo lento e caro.
+```
 
 Quando usar?
 
@@ -569,39 +563,65 @@ As tecnologias de backend variam conforme o projeto, mas algumas das mais comuns
 
 ### **Frontend vs. Backend em Soluções de IA**
 
-Nas aplicações que envolvem **Inteligência Artificial**, essa separação entre frontend e backend continua existindo mas com alguns detalhes a mais.
+Em aplicações com Inteligência Artificial, a separação entre frontend e backend continua existindo, mas ganha novas camadas. No backend, além da lógica de negócio tradicional, passam a existir processos de IA, como chamadas a APIs de modelos, tratamento de dados, armazenamentos vetoriais e orquestração de fluxos inteligentes. Já o frontend não é apenas uma interface, mas também um ponto para gerar e ajustar prompts, exibir respostas contextualizadas e permitir interação dinâmica com os modelos. Essa estrutura traz desafios e oportunidades adicionais, como controle de custos, monitoramento de tokens, integração de múltiplos modelos e implementação de guardrails de segurança — temas que podem ser detalhados nas próximas seções.
 
-### **Frontend em Ferramentas de IA**
+**Frontend em Ferramentas de IA**
 
-O frontend de uma aplicação de IA é responsável por apresentar a funcionalidade de forma compreensível e utilizável para o usuário. Isso pode incluir:
+O *frontend* em aplicações de IA é o ponto de contato direto com o usuário. Ele deve tornar a **complexidade do backend compreensível e utilizável**. Principais elementos:
 
-- Interfaces de **chat** (como em assistentes virtuais ou chatbots).
-- Dashboards com **gráficos preditivos**.
-- Campos para inserção de imagens, textos ou dados.
-- Feedback visual sobre o que o modelo de IA está fazendo ou recomendando.
+- **Interfaces de chat** – assistentes virtuais ou chatbots.  
+- **Dashboards com gráficos preditivos** – análises claras e visuais.  
+- **Campos para envio de dados** – textos, imagens, áudios ou outros formatos.  
+- **Feedback visual** – mostra o que o modelo está fazendo ou recomendando.
 
-Um bom frontend em IA deve **traduzir a complexidade** dos modelos em interações simples e intuitivas, ajudando o usuário a **confiar** e **compreender** o sistema.
+Um bom *frontend* vai além de exibir resultados: ele **traduz processos complexos em interações simples**, reforçando a **confiança**, o **entendimento** e a **usabilidade** do sistema.
+
+
+**Backend em Ferramentas de IA**
 
 ### **Backend em Ferramentas de IA**
 
-Já no backend, é onde mora o "cérebro" da operação. É nele que:
+O *backend* é o **cérebro por trás da aplicação de IA**, onde toda a lógica e inteligência acontecem. Ele é responsável por:
 
-- Os **modelos de machine learning** são treinados, carregados e executados.
-- Os dados são processados, normalizados e analisados.
-- A lógica de inferência (tomada de decisão com base em dados) acontece.
-- São feitas conexões com bancos de dados, APIs externas e serviços em nuvem para escalar o processamento.
+- **Executar modelos de machine learning** – carregamento, inferência e (em alguns casos) re-treinamento.  
+- **Processar e preparar dados** – limpeza, normalização e análise dos dados recebidos.  
+- **Tomar decisões com IA** – lógica de inferência baseada em entrada do usuário ou sistemas externos.  
+- **Conectar com infraestrutura** – bancos de dados, APIs externas, serviços em nuvem e recursos de escalabilidade.
 
-A diferença fundamental aqui é que o backend de uma aplicação de IA é mais **cognitivo**, por assim dizer. Ele não apenas processa regras fixas, mas também **aprende** e **se adapta** com o tempo (dependendo da arquitetura do sistema).
+Diferente de backends tradicionais, o backend em IA não apenas executa regras fixas: ele **aprende, adapta e raciocina** conforme interage com os dados e com o ambiente.
 
-### **Exemplo Prático: Um Assistente Virtual com IA**
 
-Vamos aplicar isso a um exemplo concreto: um assistente virtual com IA, como um chatbot inteligente.
+```{admonition} Exemplo Prático: Um Assistente Virtual com IA
+:class: exemplo
 
-- **Frontend:** a janela de chat, os balões de conversa, o botão de enviar mensagem, o avatar do assistente. Tudo isso ajuda o usuário a se comunicar com o sistema.
-- **Backend:** um modelo de linguagem natural (como o GPT), mecanismos de interpretação de intenção, sistemas de resposta, consultas a bancos de dados e monitoramento do histórico da conversa.
+### Exemplo Prático — Assistente Virtual com IA
+:class: exemplo
 
-Esse backend pode ainda ser integrado a APIs para obter informações externas (clima, agenda, localização, etc.) ou personalizar respostas com base no perfil do usuário.
+Para entender como **frontend** e **backend** funcionam juntos em uma aplicação de IA, vamos considerar um exemplo concreto: **um assistente virtual inteligente**.
 
+- **Frontend:** é tudo o que o usuário vê e com o que interage. Isso inclui:
+  - A **janela de chat**
+  - Os **balões de conversa**
+  - O **botão de enviar mensagem**
+  - Um possível **avatar animado do assistente**  
+  Esses elementos tornam a interação intuitiva e acessível.
+
+- **Backend:** é onde a inteligência acontece, por trás da interface. Ele é composto por:
+  - O **modelo de linguagem natural** (como o GPT)
+  - Mecanismos de **interpretação de intenção**
+  - Sistemas de **formulação de resposta**
+  - Acesso a **bancos de dados** para fornecer respostas personalizadas
+  - **Monitoramento da conversa** para manter o contexto
+
+Além disso, o backend pode ser conectado a **APIs externas**, permitindo que o assistente:
+- Consulte **previsões do tempo**
+- Acesse **eventos da agenda**
+- Utilize **localização**
+- Personalize respostas com base em **dados do usuário**
+
+Esse exemplo mostra como o casamento entre frontend e backend é essencial para criar experiências realmente inteligentes e úteis para o usuário.
+
+```
 ---
 
 ### **Resumo: Por Que Isso Importa nos Negócios com IA**
