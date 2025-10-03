@@ -219,7 +219,9 @@ Você conecta a API de algum serviço de IA ao seu sistema de atendimento, e ela
 
 ## API na criação de negócios: o poder da automação
 
-Integrar APIs de Inteligência Artificial ao seu negócio é uma das formas mais rápidas de automatizar processos e aumentar a produtividade, sem precisar construir modelos do zero. A tabela abaixo mostra exemplos práticos de tarefas que você pode automatizar e quais APIs utilizar para cada uma. Essa é a ponte entre o que sua empresa precisa e o que a IA pode entregar.
+Integrar APIs de Inteligência Artificial ao seu negócio é uma das formas mais rápidas de automatizar processos e aumentar a produtividade, sem precisar construir modelos do zero. 
+
+A tabela abaixo mostra exemplos práticos de tarefas que você pode automatizar e quais APIs utilizar para cada uma. Essa é a ponte entre o que sua empresa precisa e o que a IA pode entregar.
 
 |**Tarefa**| **API que pode ser usada**|
 |----------|---------------------------|
@@ -232,23 +234,32 @@ Integrar APIs de Inteligência Artificial ao seu negócio é uma das formas mais
 
 ### Não sei programar. Posso usar API mesmo assim?
 
-Sim. Hoje existem ferramentas **no-code** e **low-code** que facilitam integrações entre APIs mesmo para quem **não escreve uma linha de código**.
+Sim. Mesmo sem saber programar, **você pode integrar APIs usando ferramentas no-code e low-code** — plataformas que permitem montar fluxos automáticos com lógica visual, arrastando blocos, definindo ações e conectando serviços, tudo **sem escrever uma linha de código**.
 
-### Ferramentas úteis:
+Essas ferramentas são ideais para profissionais de qualquer área que desejam automatizar tarefas, criar produtos ou integrar sistemas de forma rápida e acessível.
 
-- **Zapier** — conecta aplicativos com lógica simples
-- **Make.com** — mais avançado, visual e poderoso
-- **Pipedream** — integração com código leve
-- **Retool / Bubble / Softr** — criação de apps com integração de APIs
-- **Voiceflow / Glide** — para chatbots e apps com IA embutida
+```{admonition} Ferramentas úteis para começar:
+:class: tip
 
-Você pode, por exemplo:
+- **Zapier** – conecta aplicativos populares com lógica simples e visual  
+- **[Make.com](https://www.make.com)** – alternativa mais avançada, poderosa e com foco em automações visuais complexas  
+- **Pipedream** – permite integrações com um pouco de código, ideal para quem quer flexibilidade sem complexidade  
+- **Retool / Bubble / Softr** – plataformas para criar aplicativos e sistemas com integração via APIs  
+- **Voiceflow / Glide** – voltadas para criação de chatbots e apps com funcionalidades de IA
+```
 
-- Criar um formulário com Tally → Enviar para GPT via Make.com → Armazenar resultado no Notion → Enviar resposta por e-mail via Gmail.
+```{admonition} Exemplo prático de uso sem código:
+:class: exemplo
 
-Sem escrever uma linha de código.
+- Criar um formulário com **Tally** para coletar perguntas de clientes  
+- Enviar essas perguntas para o **GPT** por meio do **Make.com**  
+- Armazenar as respostas automaticamente no **Notion**  
+- Disparar um e-mail para o cliente com a resposta usando **Gmail**
+```
 
-### **Como funciona uma chamada de API de modelo de linguagem?**
+Tudo isso feito com conectores visuais e regras simples, **sem programar**.
+
+## Como funciona uma chamada de API de modelo de linguagem?
 
 Uma chamada de API para um modelo de linguagem (como o GPT da OpenAI) funciona como um diálogo estruturado entre o usuário e o modelo, mediado por uma requisição HTTP contendo um "prompt" — ou seja, um conjunto de mensagens que simulam uma conversa. Esse prompt é composto por uma lista de mensagens, cada uma com três componentes principais: `role` (função de quem fala), `content` (conteúdo textual da fala), e `name` (opcional, para identificar participantes). A comunicação normalmente começa com uma mensagem de `role: system`, que define o comportamento ou personalidade do modelo ("Você é um assistente médico educado e direto"). Em seguida, vêm mensagens de `role: user` (entrada do usuário) e `role: assistant` (respostas anteriores, caso haja contexto). Essa estrutura permite que o modelo entenda tanto o que se espera dele quanto o histórico da conversa. A resposta é gerada com base nesse contexto textual, e pode ser ajustada por parâmetros como `temperature` (criatividade) ou `max_tokens` (limite de comprimento da resposta).
 
