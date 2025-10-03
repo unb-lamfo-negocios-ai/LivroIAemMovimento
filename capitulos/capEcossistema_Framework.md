@@ -1,4 +1,4 @@
-# Capítulo 4 – Ecossistema de Ferramentas e Frameworks
+# Ecossistema de Ferramentas e Frameworks
 
 O crescimento da Inteligência Artificial trouxe consigo um **ecossistema diverso de ferramentas e frameworks**, que aceleram a criação, teste e implantação de soluções.  
 Esses recursos permitem que equipes foquem no **valor de negócio** em vez de reinventar a roda do zero.  
