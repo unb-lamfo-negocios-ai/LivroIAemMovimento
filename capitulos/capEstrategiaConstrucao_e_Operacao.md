@@ -1,4 +1,4 @@
-# Capítulo 3 – Estratégias de Construção e Operação
+# Estratégias de Construção e Operação
 
 Criar uma solução de Inteligência Artificial vai muito além de treinar modelos.  
 É preciso pensar em **estratégia, operação, custos, governança e sustentabilidade do produto**.  
