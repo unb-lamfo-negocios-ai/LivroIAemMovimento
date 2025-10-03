@@ -1,4 +1,4 @@
-# Capítulo 1 – Fundamentos de Inteligência Artificial
+# Fundamentos de Inteligência Artificial
 
 A Inteligência Artificial (IA) é um campo da ciência da computação dedicado a criar sistemas capazes de executar tarefas que, tradicionalmente, exigiriam inteligência humana. Esses sistemas podem **reconhecer padrões, aprender com dados, tomar decisões e interagir com pessoas** {cite}`russell2021`.  
 
