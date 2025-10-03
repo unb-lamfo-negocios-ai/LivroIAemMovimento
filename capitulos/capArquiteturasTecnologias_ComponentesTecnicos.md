@@ -503,6 +503,26 @@ Enquanto os hiperescaladores oferecem escala global, as nuvens especializadas co
 * - **Escalabilidade Rígida:** Aumentar a capacidade significa comprar mais hardware, um processo lento e caro.
 ```
 
+```{list-table}
+:header-rows: 1
+:widths: 20 80
+
+* - **Categoria**
+  - **Descrição**
+* - **VANTAGENS**
+  - **Controle e Segurança Máximos:** Os dados nunca deixam sua rede (on-premise) ou seu dispositivo (edge), garantindo máxima privacidade e conformidade com leis como a LGPD/GDPR.
+* - 
+  - **Baixíssima Latência e Operação Offline:** No Edge AI, a resposta é instantânea, pois não há viagem de ida e volta para a nuvem. A aplicação funciona mesmo sem conexão com a internet.
+* - 
+  - **Redução de Custos de Dados:** Processar dados localmente (como um feed de vídeo) evita os altos custos de transmissão e armazenamento na nuvem.
+* - 
+  - **Custo-Benefício em Escala Previsível:** Para cargas de trabalho massivas e constantes, o Custo Total de Propriedade (TCO) de uma infraestrutura on-premise pode ser menor do que o aluguel na nuvem a longo prazo.
+* - **DESVANTAGENS**
+  - **Alto Custo Inicial e Complexidade:** Exige um grande investimento em hardware e uma equipe especializada (MLOps) para gerenciá-lo.
+* - 
+  - **Escalabilidade Rígida:** Aumentar a capacidade significa comprar mais hardware, um processo lento e caro.
+
+
 **Quando usar?**
 
 On-premise é por vezes obrigatório para setores regulados. Edge AI é essencial para aplicações que exigem tempo de resposta em tempo real e/ou operação offline, como reconhecimento facial em celulares ou controle de qualidade em uma linha de montagem.
