@@ -4,11 +4,13 @@
 format: jb-book
 root: intro
 chapters:
-- file: capitulos/cap0
-- file: capitulos/cap1
-- file: capitulos/cap2
-- file: capitulos/cap3
-- file: capitulos/cap4
-- file: capitulos/cap5
+- file: capitulos/capComoUsarEsteEbook
+- file: capitulos/capFundamentos_de_IA
+- file: capitulos/capArquiteturasTecnologias_ComponentesTecnicos
+- file: capitulos/cap2MCP
+- file: capitulos/capEstrategiaConstrucao_e_Operacao
+- file: capitulos/capEcossistema_Framework
+- file: capitulos/capn8n
+- file: capitulos/capRecursosDeApoio
 - file: capitulos/referencia
 - file: capitulos/Sobre_os_Autores
