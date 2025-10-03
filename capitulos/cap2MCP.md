@@ -2,6 +2,11 @@
 
 Protocolos para conectar modelos computacionais distintos são conjuntos de regras, formatos e padrões que permitem a integração, comunicação e interoperabilidade entre diferentes sistemas, algoritmos ou arquiteturas de modelagem. Eles atuam como pontes semânticas e estruturais, garantindo que os modelos compartilhem informações contextuais, metadados, entradas e saídas, mesmo quando desenvolvidos com linguagens, objetivos ou arquiteturas diferentes. Esses protocolos são fundamentais em cenários como sistemas multiagentes, gêmeos digitais, orquestração de modelos de IA, fluxos RAG e infraestruturas de MLOps, onde é necessário manter consistência, rastreabilidade e colaboração inteligente entre os diversos componentes do sistema.
 
+```{admonition} Exemplo
+:class: example
+Este é um exemplo de fluxo simples usando o n8n para automatizar o envio de e-mails com base em respostas de um formulário.
+
+
 ```{admonition}
 :class: note
 Antes de falar sobre estes protocolos, ressaltamos que é recomendado ter alguns conhecimentos básicos: 
