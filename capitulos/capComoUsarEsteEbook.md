@@ -1,4 +1,4 @@
-# Capítulo 0 – Como usar este eBook 
+# Como usar este eBook 
 
 Este eBook foi desenvolvido para servir como um **guia prático, estratégico e reflexivo** para quem deseja compreender e aplicar **Inteligência Artificial (IA)** em diferentes contextos — seja no ambiente corporativo, em projetos de inovação ou em iniciativas pessoais de aprendizado.  
 
