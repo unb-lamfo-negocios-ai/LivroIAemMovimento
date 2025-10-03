@@ -115,13 +115,13 @@ Com a evolução dos **agentes de inteligência artificial**, o uso de APIs est�
 
 <p align="center">mais dinâmica, inteligente e autônoma.</p>
 
-Enquanto modelos tradicionais apenas respondem a comandos, **agentes interpretam, planejam e agem**.
+Enquanto modelos tradicionais apenas respondem a comandos, **agentes interpretam, planejam e agem**:
 
-- Buscar informações em tempo real
+- Buscam informações em tempo real
 
-- Tomar decisões com base em múltiplas variáveis
+- Tomam decisões com base em múltiplas variáveis
 
-- Acionar APIs para manipular sistemas e executar tarefas
+- Acionam APIs para manipular sistemas e executar tarefas
 
 Hoje, **APIs não são apenas conectores**. Elas se tornaram **ferramentas de ação** no ecossistema dos agentes, permitindo automações como:
 
@@ -148,7 +148,7 @@ Imagine que você desenvolveu um serviço inteligente de atendimento para pequen
    A resposta gerada pela IA é enviada de volta ao paciente de forma automática, sem necessidade da sua intervenção manual.
 
 <div style="text-align: center;">
-Isso tudo pode ser feito com **integrações via API**.
+Isso tudo pode ser feito com integrações via API.
 </div>
 ```
 
@@ -290,7 +290,7 @@ A resposta é então **gerada com base nesse contexto textual**, e pode ser **aj
 
 ### Explicação por partes — campos importantes da chamada
 
-Como é feita uma chamada para o modelo da OpenAI?
+**Como é feita uma chamada para o modelo da OpenAI?**
 
 Para interagir com um modelo como o GPT-4, você precisa enviar uma requisição HTTP contendo informações específicas. A estrutura dessa requisição é feita em formato JSON, e deve conter os parâmetros adequados para simular um diálogo com o modelo. Veja um exemplo:
 
@@ -313,16 +313,18 @@ emphasize-lines: 3
 
 **Entendendo os Campos da Requisição**
 
-Para dominar o uso dessa API, é essencial compreender o que cada campo significa. A tabela abaixo resume os principais elementos:
+Para dominar o uso dessa API, é essencial compreender o que cada campo significa. 
+
+A tabela abaixo resume os principais elementos:
 
 |**Campo** |	**O que é**|
 |----------|---------------|
-|'model' |Define qual modelo será usado (ex: 'gpt-4', 'gpt-3.5-turbo')|
-|'messages'|	Lista ordenada de mensagens simulando um diálogo|
-|'role'	|Pode ser 'system', 'user' ou 'assistant'|
-|'content'|	Conteúdo textual da mensagem (o "prompt" real)|
-|'temperature'|	Controla a criatividade da resposta (0 = exata, 1 = criativa)|
-|'max_tokens'|	Número máximo de tokens gerados (limita o tamanho da resposta)|
+|`model` |Define qual modelo será usado (ex: `gpt-4`, `gpt-3.5-turbo`)|
+|`messages`|	Lista ordenada de mensagens simulando um diálogo|
+|`role`	|Pode ser 'system', 'user' ou 'assistant'|
+|`content`|	Conteúdo textual da mensagem (o *prompt* real)|
+|`temperature`|	Controla a criatividade da resposta (0 = exata, 1 = criativa)|
+|`max_tokens`|	Número máximo de tokens gerados (limita o tamanho da resposta)|
 
 
 
@@ -336,17 +338,6 @@ Embora sejam eficazes em muitos cenários, as **chamadas diretas à API** podem 
 - **Falta de ferramentas**: A API básica não executa ações externas (ex: chamadas HTTP, busca na web, interações com banco de dados).
 - **Escalabilidade**: À medida que o número de interações cresce, organizar e manter prompts pode se tornar confuso e difícil de escalar.
 ```
-
-## **Introdução ao LangChain e frameworks similares**
-
-Para superar essas limitações, surgiram frameworks como o **LangChain**, **LlamaIndex**, **CrewAI**, **Autogen**, entre outros. O LangChain, por exemplo, permite estruturar aplicações que usam LLMs com recursos como:
-
-- **Prompt templates**: Criação de prompts modulares e reutilizáveis.
-- **Memória de conversa**: Persistência de contexto entre chamadas.
-- **Integração com ferramentas**: Permite ao LLM chamar APIs externas, bancos de dados ou executar funções.
-- **Agentes**: Um nível acima, em que o modelo decide o que fazer, quais ferramentas usar e em que ordem.
-
-Essas soluções transformam um simples modelo de linguagem em uma **aplicação inteligente completa**, com raciocínio autônomo, tomada de decisão e execução de tarefas práticas.
 
 ---
 
