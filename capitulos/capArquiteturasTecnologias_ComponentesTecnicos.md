@@ -341,19 +341,54 @@ Embora sejam eficazes em muitos cenários, as **chamadas diretas à API** podem 
 
 ---
 
-### Token counting, custo e desempenho
+## Token counting, custo e desempenho
 
-Ao usar modelos de linguagem por API, como o GPT-4, cada chamada é tarifada com base na quantidade de *tokens* processados — tanto na entrada (`prompt`) quanto na saída (`completion`). Um token é, aproximadamente, uma unidade de 3 a 4 caracteres (por exemplo, "consulta" é 1 token, "Olá, tudo bem?" são 4). Isso significa que textos longos, históricos de conversa extensos ou respostas detalhadas podem gerar custos mais altos e até ultrapassar os limites do modelo. Além do custo, o desempenho também é afetado: prompts muito grandes levam mais tempo para serem processados e podem consumir recursos desnecessários. Por isso, entender como funciona a contagem de tokens é essencial para otimizar aplicações com LLMs, garantindo um bom equilíbrio entre qualidade da resposta, velocidade e custo.
+ Isso significa que textos longos, históricos de conversa extensos ou respostas detalhadas podem gerar custos mais altos e até ultrapassar os limites do modelo. Além do custo, o desempenho também é afetado: prompts muito grandes levam mais tempo para serem processados e podem consumir recursos desnecessários. Por isso, entender como funciona a contagem de tokens é essencial para otimizar aplicações com LLMs, garantindo um bom equilíbrio entre qualidade da resposta, velocidade e custo.
 
-Tabela de referência — Tokens, preços e limites
+Entendendo o que é *token counting*: Ao usar modelos de linguagem via API (como o GPT-4), **cada chamada é tarifada com base na quantidade de _tokens_ processados** – ou seja:
+
+- Tanto a **entrada** (`prompt`)  
+- Quanto a **saída** (`completion`)
+
+O que é um token? Um token é uma pequena unidade de texto, geralmente entre 3 e 4 caracteres.  
+
+```{admonition} Exemplo
+:class: exemplo
+
+- "Consulta" é 1 token
+- “Olá, tudo bem?” → são 4 tokens
+```
+Por que *Token counting* importa?
+
+Tokens **impactam diretamente** no custo, velocidade e qualidade das respostas, pois:
+
+- **Textos longos** → mais tokens → **custos mais altos**
+- **Conversas extensas** → podem ultrapassar o limite do modelo
+- **Prompts grandes** → demoram mais para serem processados
+
+Benefícios de entender a contagem de tokens:
+
+- Evita cobranças excessivas  
+- Melhora a performance da aplicação  
+- Garante equilíbrio entre custo, velocidade e qualidade da resposta
+
+---
+
+**Tabela de referência — Tokens, preços e limites**
 
 |Modelo|	Limite de tokens (entrada + saída)	|Preço (1K tokens) prompt|	Preço (1K tokens) resposta|	Notas|
 |------|----------------------------------------|------------------------|----------------------------|------|
-|'gpt-3.5-turbo'|	16.384 tokens|	$0.0005|	$0.0015	|Rápido, barato, ideal para MVP|
-|'gpt-4-turbo'|	128.000 tokens	|$0.01|	$0.03|	Poderoso, ótimo para agentes|
-|'gpt-4 (legacy)'|	8.192 tokens	|$0.03	|$0.06|	Mais caro, menos usado hoje|
-|'Claude 3 Haiku'|	200.000+ tokens	|Variável (baixo)	|Variável	|Ideal para PDFs/documentos longos|
-|'Mistral 7B'|	32.000 tokens	|Gratuito (self-hosted)	|Gratuito	|Open source, precisa infra própria|
+|`gpt-3.5-turbo`|	16.384 tokens|	$0.0005|	$0.0015	|Rápido, barato, ideal para MVP|
+|`gpt-4-turbo`|	128.000 tokens	|$0.01|	$0.03|	Poderoso, ótimo para agentes|
+|`gpt-4 (legacy)`|	8.192 tokens	|$0.03	|$0.06|	Mais caro, menos usado hoje|
+|`Claude 3 Haiku`|	200.000+ tokens	|Variável (baixo)	|Variável	|Ideal para PDFs/documentos longos|
+|`Mistral 7B`|	32.000 tokens	|Gratuito (self-hosted)	|Gratuito	|Open source, precisa infra própria|
+
+
+```{admonition} Saiba mais!
+:class: tip
+Caso queira se aprofundar neste assunto, você pode acessar [este link](https://research.aimultiple.com/llm-pricing/#understanding-llm-pricing), que apresenta uma calculadora interativa chamada *LLM API Price Calculator*, uma tabela comparativa dos preços dos principais modelos, um *ranking* de desempenho baseado no Overall Arena Score (do *Chatbot Arena LLM leaderboard*) e explicações sobre conceitos fundamentais como a janela de contexto (*context window*), que impactam diretamente no preço, velocidade e qualidade das respostas. 
+```
 
 ### Boas práticas para otimizar o uso de tokens
 
