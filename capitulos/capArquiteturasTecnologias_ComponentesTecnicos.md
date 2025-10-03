@@ -448,17 +448,21 @@ As soluções de IA podem ser executadas de duas formas principais:
 - **Localmente** (*on-premise*): oferece maior controle sobre os dados e reduz riscos de exposição, mas exige servidores robustos, equipe técnica especializada e custos elevados de manutenção.  
 - **Na nuvem** (*cloud computing*): oferece escalabilidade, menor custo inicial e acesso rápido a modelos pré-treinados {cite}`armbrust2010`.  
 
-Na prática:  
-- Bancos podem preferir **on-premise** para proteger dados sensíveis de clientes.  
-- Startups geralmente escolhem **cloud**, aproveitando a flexibilidade para crescer rapidamente.  
-
-A decisão envolve equilibrar **segurança, custo e velocidade de implantação**.
-
-----FELIPE------
 Após definir qual modelo de IA usar, a próxima pergunta estratégica é onde ele vai operar. Esta não é uma decisão de TI, mas uma decisão de negócio que impacta custos, segurança, agilidade e controle. A escolha se resume a um dilema clássico, análogo a uma decisão de logística: você deve usar um serviço de transporte flexível como o Uber (nuvem) ou comprar sua própria frota de veículos (localmente)?
 
-1. Cloud Computing: Alugando a Superpotência
-O que é: Utilizar a infraestrutura de computação de terceiros. Isso inclui os "hiperescaladores" como Amazon (AWS), Google (GCP) e Microsoft (Azure), mas também um crescente ecossistema de nuvens especializadas em IA (como CoreWeave ou Lambda). Estas últimas oferecem hardware otimizado, competindo não em escala, mas em custo-benefício e performance por dólar para cargas de trabalho específicas de IA. Em qualquer um dos casos, você paga pelo uso, transformando um grande investimento de capital (CapEx) em um custo operacional mensal (OpEx).
+### Cloud Computing: Alugando a Superpotência
+
+**O que é:** Utilizar a infraestrutura de computação de terceiros. Isso inclui os "hiperescaladores" como Amazon (AWS), Google (GCP) e Microsoft (Azure), mas também um crescente ecossistema de nuvens especializadas em IA (como CoreWeave ou Lambda). Estas últimas oferecem hardware otimizado, competindo não em escala, mas em custo-benefício e performance por dólar para cargas de trabalho específicas de IA. Em qualquer um dos casos, você paga pelo uso, transformando um grande investimento de capital (CapEx) em um custo operacional mensal (OpEx).
+
+
+| **Categoria**   | **Descrição** |
+|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **VANTAGENS**   | **Agilidade e Baixo Custo Inicial:** A barreira de entrada é praticamente zero. É possível começar a experimentar e escalar uma aplicação de IA em questão de horas, sem comprar um único servidor. |
+|                | **Escalabilidade Elástica:** Se sua demanda explodir, a capacidade da nuvem se ajusta automaticamente. Você paga apenas pelo que usa, evitando o desperdício de capacidade ociosa.                   |
+|                | **Acesso à Inovação:** Você tem acesso imediato às GPUs e processadores mais recentes do mercado sem precisar renovar máquinas próprias.                                                            |
+| **DESVANTAGENS**| **Custo em Escala:** Para uma operação grande e constante, o aluguel pode se tornar mais caro do que a posse a longo prazo. O custo operacional pode ser volátil e difícil de prever.              |
+|                | **Soberania e Privacidade de Dados:** Seus dados residem na infraestrutura de outra empresa, o que é um ponto crítico para setores regulados como saúde, finanças e governo.                       |
+|                | **Dependência do Fornecedor (Lock-in):** Construir sua operação sobre os serviços específicos de um provedor torna a migração para um concorrente cara e complexa.                                  |
 
 VANTAGENS:
 
@@ -471,10 +475,12 @@ DESVANTAGENS:
 - Soberania e Privacidade de Dados: Seus dados residem na infraestrutura de outra empresa, o que é um ponto crítico para setores regulados como saúde, finanças e governo.
 - Dependência do Fornecedor (Lock-in): Construir sua operação sobre os serviços específicos de um provedor torna a migração para um concorrente cara e complexa.
 
-- Quando usar?
+**Quando usar?**
 
 É a escolha padrão para a maioria das startups e empresas, especialmente para prototipagem, aplicações com demanda variável ou negócios que querem focar no produto, não na gestão de infraestrutura.
-1. Computação Local: Assumindo o Controle Total
+
+### Computação Local: Assumindo o Controle Total
+
 O que é: Operar os modelos de IA em hardware que você possui e controla. Isso se manifesta de duas formas principais:
 - On-Premise: Servidores e GPUs instalados em seu próprio data center. É a "frota de caminhões" da nossa analogia.
 - Edge AI: Uma forma específica de computação local onde modelos otimizados rodam diretamente em dispositivos — como um smartphone, um terminal de ponto de venda, um sensor em uma fábrica ou uma câmera inteligente. É o "veículo de entrega final", operando de forma autônoma na ponta.
