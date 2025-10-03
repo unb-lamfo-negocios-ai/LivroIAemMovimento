@@ -1,4 +1,4 @@
-# Capítulo 5 – Recursos de Apoio e Exploração
+# Recursos de Apoio e Exploração
 
 Aprender sobre Inteligência Artificial não termina na leitura deste eBook.  
 O campo está em constante evolução, e acompanhar novos conteúdos, ferramentas e referências é essencial para manter-se atualizado.  
