@@ -561,9 +561,7 @@ As tecnologias essenciais para o desenvolvimento frontend incluem:
 - **CSS (Cascading Style Sheets):** define o visual, o estilo e a disposição dos elementos.
 - **JavaScript:** adiciona interatividade, animações e comportamentos dinâmicos.
 
-- **Backend (A "Cozinha")**
-
-O backend é o que acontece por trás das cortinas. É o *lado do servidor* (*server-side*), o núcleo que executa toda a lógica da aplicação. Ele lida com o processamento de dados, autenticação de usuários, integrações com sistemas externos, e o armazenamento em bancos de dados.
+- **Backend (A "Cozinha"):** O backend é o que acontece por trás das cortinas. É o *lado do servidor* (*server-side*), o núcleo que executa toda a lógica da aplicação. Ele lida com o processamento de dados, autenticação de usuários, integrações com sistemas externos, e o armazenamento em bancos de dados.
 
 Enquanto o frontend se preocupa com a aparência e a interação, o backend garante que tudo funcione corretamente, de forma segura, estável e escalável.
 
@@ -594,7 +592,7 @@ O *frontend* em aplicações de IA é o ponto de contato direto com o usuário. 
 Um bom *frontend* vai além de exibir resultados: ele **traduz processos complexos em interações simples**, reforçando a **confiança**, o **entendimento** e a **usabilidade** do sistema.
 
 
-#### Backend em Ferramentas de IA**
+#### Backend em Ferramentas de IA
 
 O *backend* é o **cérebro por trás da aplicação de IA**, onde toda a lógica e inteligência acontecem. Ele é responsável por:
 
