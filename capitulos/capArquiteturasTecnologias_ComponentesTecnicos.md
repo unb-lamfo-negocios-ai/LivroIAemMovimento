@@ -619,7 +619,7 @@ Esse exemplo mostra como o casamento entre frontend e backend é essencial para 
 ```
 ---
 
-### **Resumo: Por Que Isso Importa nos Negócios com IA**
+### Por que frontend e backend importam nos Negócios com IA?
 
 Entender a separação entre frontend e backend é essencial para quem está planejando, investindo ou liderando projetos com Inteligência Artificial. Essa visão:
 
@@ -627,7 +627,9 @@ Entender a separação entre frontend e backend é essencial para quem está pla
 - Facilita decisões sobre onde investir mais (melhorar a experiência do usuário ou otimizar os modelos no backend?).
 - Permite visualizar a jornada completa: da interação do usuário até o processamento inteligente dos dados.
 
-Em resumo: **o frontend encanta, o backend entrega.** Em soluções de IA, isso é mais verdadeiro do que nunca.
+:::{tip}
+**O frontend encanta, o backend entrega.** Em soluções de IA, isso é mais verdadeiro do que nunca.
+:::
 
 ## Outras alternativas para construção do Frontend
 
