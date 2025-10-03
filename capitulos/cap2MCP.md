@@ -5,6 +5,7 @@ Protocolos para conectar modelos computacionais distintos são conjuntos de regr
 ```{admonition} Exemplo
 :class: example
 Este é um exemplo de fluxo simples usando o n8n para automatizar o envio de e-mails com base em respostas de um formulário.
+```
 
 
 ```{admonition}
