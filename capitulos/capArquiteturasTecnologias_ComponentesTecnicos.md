@@ -23,17 +23,17 @@ Um modelo de IA genérico, como o GPT ou o Llama, é como um recém-formado bril
 - **Prompt híbrido**: combinar instruções, contexto e restrições para maior precisão.
 ```
 
-## Retrieval-Augmented Generation (RAG): Dando ao Modelo uma Base de Consulta
+### Retrieval-Augmented Generation (RAG): Dando ao Modelo uma Base de Consulta
 
 - **O que é:** Retrieval-Augmented Generation (RAG) é uma técnica que combina LLMs com bases de conhecimento externas. Em vez de depender apenas do que o modelo aprendeu no treinamento, ele consulta documentos, bancos de dados ou APIs em tempo real {cite}`lewis2020`. Quando um usuário faz uma pergunta, o sistema primeiro recupera as informações relevantes dessa base — que pode ser externa ou privada (como documentos internos ou catálogos de produtos) — e as injeta no prompt como contexto. A IA, então, utiliza esse material factual para formular respostas mais precisas e atualizadas.
-    - **Como Funciona:** Para que a busca seja inteligente, seus documentos são processados e convertidos em representações numéricas (vetores) que capturam seu significado semântico. Estes vetores são armazenados em um Banco de Dados Vetorial (Vector DB). Esse banco de dados permite uma busca por significado, e não apenas por palavras-chave, encontrando o trecho mais relevante para a pergunta do usuário.
-    - **A Analogia:** É como dar ao seu funcionário acesso a uma intranet corporativa moderna e com uma busca inteligente. Ele não precisa memorizar tudo; ele busca a informação relevante no momento exato em que precisa dela. A resposta é sempre baseada em uma fonte oficial.
-    - **Vantagens:** Combate "alucinações" ao ancorar as respostas em fatos, permite que o conhecimento da IA esteja sempre atualizado (basta atualizar os documentos) e oferece transparência sobre a fonte da informação.
-    - **Desvantagens:** A qualidade da resposta depende 100% da qualidade e organização da sua base de dados ("Garbage In, Garbage Out"). A implementação inicial é mais complexa, pois exige a configuração de um pipeline de dados (ingestão, fragmentação e vetorização dos documentos).
-    - **Quando usar:** É a arquitetura padrão para a maioria dos assistentes virtuais de atendimento, assistentes de conhecimento interno e qualquer aplicação que precise responder perguntas com base em um corpo de informações específico e mutável.  
+- **Como Funciona:** Para que a busca seja inteligente, seus documentos são processados e convertidos em representações numéricas (vetores) que capturam seu significado semântico. Estes vetores são armazenados em um Banco de Dados Vetorial (Vector DB). Esse banco de dados permite uma busca por significado, e não apenas por palavras-chave, encontrando o trecho mais relevante para a pergunta do usuário.
+- **A Analogia:** É como dar ao seu funcionário acesso a uma intranet corporativa moderna e com uma busca inteligente. Ele não precisa memorizar tudo; ele busca a informação relevante no momento exato em que precisa dela. A resposta é sempre baseada em uma fonte oficial.
+- **Vantagens:** Combate "alucinações" ao ancorar as respostas em fatos, permite que o conhecimento da IA esteja sempre atualizado (basta atualizar os documentos) e oferece transparência sobre a fonte da informação.
+- **Desvantagens:** A qualidade da resposta depende 100% da qualidade e organização da sua base de dados ("Garbage In, Garbage Out"). A implementação inicial é mais complexa, pois exige a configuração de um pipeline de dados (ingestão, fragmentação e vetorização dos documentos).
+- **Quando usar:** É a arquitetura padrão para a maioria dos assistentes virtuais de atendimento, assistentes de conhecimento interno e qualquer aplicação que precise responder perguntas com base em um corpo de informações específico e mutável.  
    
       
-## Fine-tuning (Ajuste Fino): A “Pós-Graduação” da IA
+### Fine-tuning (Ajuste Fino): A “Pós-Graduação” da IA
 - **O que é:** Fine-tuning é o processo de continuar o treinamento de um modelo pré-existente usando um conjunto de dados proprietário e de alta qualidade (ex: centenas de exemplos de interações de suporte ao cliente). Você está, de fato, reescrevendo parte das conexões neurais do modelo para que ele aprenda um novo comportamento, estilo ou habilidade.
 - **A Inovação do LoRA:** Tradicionalmente, esse processo era extremamente caro. Hoje, técnicas como o LoRA (Low-Rank Adaptation) permitem ajustar o modelo de forma muito mais eficiente. Em vez de retreinar bilhões de parâmetros, o LoRA "congela" o modelo original e treina apenas uma pequena camada adicional de parâmetros. Isso reduz o custo computacional em mais de 90%, tornando o fine-tuning uma opção estratégica viável.
 - **A Analogia:** Fine-tuning não é dar um manual ao funcionário, é mandá-lo para uma pós-graduação. Ele não está mais apenas consultando informações; ele está internalizando um conhecimento tão profundo que sua própria maneira de "pensar" sobre um assunto é permanentemente alterada. LoRA seria o equivalente a um curso de especialização intensivo e focado, em vez de um doutorado de 5 anos.
@@ -41,7 +41,7 @@ Um modelo de IA genérico, como o GPT ou o Llama, é como um recém-formado bril
 - **Desvantagens:** Ainda é a abordagem mais complexa, exige um bom conjunto de dados de treinamento e, se mal executado, carrega o risco de "esquecimento catastrófico" (o modelo se especializa tanto que perde habilidades gerais).
 - **Quando usar:** A distinção estratégica é clara: use RAG para ensinar à IA o que saber; use Fine-tuning para ensinar à IA como se comportar. É ideal para quando a própria habilidade da IA é o seu produto, como uma IA que aprende o estilo de um advogado para redigir rascunhos de documentos.
 
-Para escolher a melhor abordagem ao implementar soluções com IA generativa, é fundamental considerar o custo, o esforço necessário e o nível de personalização desejado. A tabela a seguir compara três estratégias — Prompt Engineering, RAG e Fine-tuning — destacando seus principais atributos e o tipo de problema que cada uma resolve:
+Para escolher a **melhor abordagem ao implementar soluções com IA generativa**, é fundamental considerar o custo, o esforço necessário e o nível de personalização desejado. A tabela a seguir compara três estratégias — Prompt Engineering, RAG e Fine-tuning — destacando seus principais atributos e o tipo de problema que cada uma resolve:
 
   |**Estratégia** | **Custo/Esforço** | **Nível de Personalização** | **Resolve o problema de ...**|
   |---------------|-------------------|-----------------------------|------------------------------|
@@ -68,18 +68,23 @@ Fluxograma ilustrando a jornada recomendada para o desenvolvimento de soluções
 
 Até agora, vimos como usar a IA para gerar ideias, conteúdo, protótipos e até automatizar partes do processo de criação. Mas existe um ponto em que muitos criadores se perguntam:
 
-```{admonition}
-:class: note
+<div style="text-align: center;">
+
 Como eu faço essa IA funcionar dentro do meu produto ou negócio?
-```
+
+</div>
+
+<div style="text-align: center;">
 
 A resposta quase sempre envolve uma sigla: **API**.
+
+</div>
 
 **API** significa **Application Programming Interface** ou, em português, **Interface de Programação de Aplicações**. É o “idioma” que permite que sistemas diferentes **se comuniquem** {cite}`fielding2000`.  
 
 No contexto de IA, as APIs conectam modelos a aplicativos, websites ou sistemas corporativos.  
 
-```{admonition} Exemplos de aplicação:
+```{admonition} Exemplos de aplicações:
 :class: exemplo
 - **E-commerce**: uma API de visão computacional pode classificar automaticamente fotos de produtos.  
 - **Atendimento ao cliente**: chatbots integrados a APIs de NLP conseguem responder dúvidas em tempo real.  
@@ -88,7 +93,7 @@ No contexto de IA, as APIs conectam modelos a aplicativos, websites ou sistemas 
 
 As APIs tornam a IA **modular e escalável**, permitindo que empresas adicionem inteligência a sistemas já existentes sem reconstruí-los do zero.  É como se você pudesse “conversar com a IA por código” e integrá-la diretamente ao seu site, app, sistema ou processo de negócio.
 
-## Automatizando ainda mais com Webhooks
+### Automatizando ainda mais com Webhooks
 
 Se a API é a ponte que permite que você **faça pedidos para a IA**, os **webhooks** são como **sinais automáticos que avisam quando algo acontece** — e isso pode acionar a IA sem que você precise fazer nada manualmente.
 
@@ -104,12 +109,33 @@ Imagine esses cenários:
 
 Ao combinar **APIs** e **webhooks**, você cria sistemas onde a IA **não só responde quando solicitada**, mas também **entra em ação automaticamente** assim que um evento ocorre. Isso torna a automação muito mais fluida, eficiente e inteligente — exatamente o tipo de experiência que diferencia um negócio moderno no mercado.
 
-## Integração de API e Agentes de IA
+### Integração de API e Agentes de IA
 
-Com o avanço dos agentes de inteligência artificial, sistemas autônomos capazes de interpretar comandos, planejar ações e interagir com ferramentas externas. O uso de APIs está se tornando mais dinâmico e inteligente. Diferente dos modelos de IA tradicionais, que apenas respondem a entradas, os agentes podem executar tarefas completas, como buscar informações, tomar decisões e manipular sistemas por meio de chamadas a APIs. Isso transforma APIs em verdadeiras “ferramentas” de ação no ecossistema digital dos agentes, permitindo que eles realizem tarefas como consultar dados, automatizar fluxos ou até fazer scraping de imagens de um site. Em vez de depender de desenvolvedores para orquestrar múltiplas chamadas, os agentes podem decidir, em tempo real, como e quando usar APIs para alcançar objetivos mais complexos. Esse novo paradigma cria uma ponte entre linguagem natural, automação e infraestrutura digital.
+Com a evolução dos **agentes de inteligência artificial**, o uso de APIs está ganhando uma nova dimensão
+
+<p align="center">mais dinâmica, inteligente e autônoma.</p>
+
+Enquanto modelos tradicionais apenas respondem a comandos, **agentes conseguem interpretar, planejar e agir**:
+
+- Buscar informações em tempo real
+
+- Tomar decisões com base em múltiplas variáveis
+
+- Acionar APIs para manipular sistemas e executar tarefas
+
+Hoje, **APIs não são apenas conectores**. Elas se tornaram **ferramentas de ação** no ecossistema dos agentes, permitindo automações como:
+
+- Consultar bancos de dados
+
+- Fazer scraping de páginas
+
+- Integrar múltiplos serviços em fluxos inteligentes
+
+Isso inaugura um **novo paradigma**: agentes que usam linguagem natural para interagir com a infraestrutura digital — e fazem isso **sem depender de desenvolvedores a cada passo**.
 
 ```{admonition} Exemplo de uso de IA com API
-class: exemplo
+:class: exemplo
+
 Imagine que você desenvolveu um serviço inteligente de atendimento para pequenas clínicas. O fluxo desejado funciona assim:
 
 1. Recebimento da mensagem:
@@ -191,9 +217,9 @@ if __name__ == "__main__":
 Você conecta a API de algum serviço de IA ao seu sistema de atendimento, e ela entra automaticamente no fluxo.
 :::
 
-### API na criação de negócios: o poder da automação
+## API na criação de negócios: o poder da automação
 
-Integrar APIs de IA no seu negócio permite:
+Integrar APIs de Inteligência Artificial ao seu negócio é uma das formas mais rápidas de automatizar processos e aumentar a produtividade, sem precisar construir modelos do zero. A tabela abaixo mostra exemplos práticos de tarefas que você pode automatizar e quais APIs utilizar para cada uma. Essa é a ponte entre o que sua empresa precisa e o que a IA pode entregar.
 
 |**Tarefa**| **API que pode ser usada**|
 |----------|---------------------------|
