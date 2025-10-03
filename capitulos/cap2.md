@@ -699,7 +699,7 @@ Essa padronização será cada vez mais importante em um cenário onde múltiplo
 - O essencial é ter **clareza sobre as opções disponíveis** e saber avaliar quais escolhas são mais adequadas para os seus objetivos estratégicos.
 :::
 
-#### Conceituação do Model Context Protocol(MCP)
+#### Conceituação do Model Context Protocol(MCP){cite}`mcp_workshop_youtube,norahsakal_mcp_explained`
 
 #### O que é o MCP?
 
@@ -774,7 +774,7 @@ Legenda dos ícones:
 ❌ Não recomendado ou não aplicável
 
 
-### Arquitetura Central do MCP
+### Arquitetura Central do MCP{cite}`mcp_official_docs, deeplearning_mcp_course, microsoft_mcp_tutorial`
 
 O MCP segue uma arquitetura cliente-servidor.
 
@@ -1438,7 +1438,7 @@ Servidor: "ERRO! A ferramenta que você pediu não existe.
 ---
 
 
-### Outras Capacidades Essenciais
+### Outras Capacidades Essenciais{cite}`mcp_workshop_youtube, mcp_official_docs`
 
 #### 1. Composability (Componibilidade)
 
@@ -1682,7 +1682,7 @@ O MCP suporta diferentes mecanismos de comunicação:
   }
 }
 ```
-### Limitações e Considerações de Segurança
+### Limitações e Considerações de Segurança{cite}`dsacademy_mcp_blog, neo4j_mcp_blog`
 
 #### 1. Limitações do MCP
 
@@ -1841,7 +1841,7 @@ O MCP oferece vantagens significativas para todo o ecossistema de IA:
 - **Redução de Fragmentação:** Menos duplicação de esforços
 - **Crescimento Sustentável:** Base sólida para evolução futura
 
-# Sistema MCP para Busca e Análise de Papers Acadêmicos(Aplicação Prática)
+# Sistema MCP para Busca e Análise de Papers Acadêmicos(Aplicação Prática) {cite}`deeplearning_mcp_course`
 
 > Um sistema completo para buscar, analisar e conversar sobre artigos científicos usando o protocolo MCP (Model Context Protocol) com inteligência artificial.
 
