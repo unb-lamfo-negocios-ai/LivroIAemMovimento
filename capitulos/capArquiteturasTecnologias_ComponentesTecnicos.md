@@ -386,33 +386,41 @@ Benefícios de entender a contagem de tokens:
 
 
 ```{admonition} Saiba mais!
-:class: tip
+:class: seealso
 Caso queira se aprofundar neste assunto, você pode acessar [este link](https://research.aimultiple.com/llm-pricing/#understanding-llm-pricing), que apresenta uma calculadora interativa chamada *LLM API Price Calculator*, uma tabela comparativa dos preços dos principais modelos, um *ranking* de desempenho baseado no Overall Arena Score (do *Chatbot Arena LLM leaderboard*) e explicações sobre conceitos fundamentais como a janela de contexto (*context window*), que impactam diretamente no preço, velocidade e qualidade das respostas. 
 ```
 
 ### Boas práticas para otimizar o uso de tokens
 
+Aplicar boas práticas na construção dos *prompts* e na configuração dos parâmetros da API pode reduzir custos e melhorar o desempenho. A seguir, veja algumas recomendações úteis para otimizar o uso de *tokens*:
+
 |Prática	|Explicação |
 |-----------|-----------|
 |Resuma históricos longos|	Em vez de passar 10 mensagens antigas, envie um resumo em 1-2 frases|
 |Use prompts objetivos|	Evite descrições desnecessárias ("Você é uma IA muito inteligente que...")|
-|Limite o 'max_tokens' |	Não peça mais resposta do que realmente precisa (ex: 200–500 tokens)|
+|Limite o `max_tokens` |	Não peça mais resposta do que realmente precisa (ex: 200–500 tokens)|
 |Evite duplicações|	Muitos prompts repetem instruções ou contexto de forma redundante|
-|Conte os tokens antes|	Use 'tiktoken' (OpenAI) ou 'anthropic_tokenizer' para calcular previamente|
-|Use modelos mais baratos|	Para tarefas simples, 'gpt-3.5' pode ser suficiente|
+|Conte os tokens antes|	Use `tiktoken` (OpenAI) ou `anthropic_tokenizer` para calcular previamente|
+|Use modelos mais baratos|	Para tarefas simples, `gpt-3.5` pode ser suficiente|
 
 ### Por que isso importa na criação de negócios?
 
+Para que a adoção de Inteligência Artificial realmente gere impacto nos negócios, é fundamental entender **por que ela importa** na prática. Não se trata apenas de uma tecnologia “da moda”, mas de um verdadeiro diferencial competitivo que pode transformar o modo como sua empresa opera. A IA permite escalar processos sem aumentar custos com equipe, automatizar rotinas de forma inteligente, entregar soluções sob medida em grande escala e se conectar com as ferramentas que sua empresa já usa no dia a dia. Confira alguns dos principais benefícios:
+
+:::{hint}
 - **Escalabilidade:** a IA trabalha por você, 24/7.
-- **Automação inteligente:** respostas, análises, recomendações, tudo dinâmico.
+- **Automação inteligente:** respostas, análises, recomendações — tudo dinâmico.
 - **Customização em massa:** conteúdo ou soluções sob medida, com pouco esforço manual.
 - **Integração com o que você já usa:** ERPs, CRMs, WhatsApp, e-commerce, etc.
+:::
 
-:::{tip} 
+:::{div style="text-align: center;"}
 APIs são como "braços da IA" que você pode embutir no seu negócio para entregar valor automaticamente.
 :::
 
-```{admonition} **Cuidados ao usar APIs de IA**
+Antes de integrar APIs de inteligência artificial ao seu sistema ou projeto, é essencial estar atento a alguns pontos críticos que podem impactar diretamente a viabilidade, segurança e desempenho da sua aplicação:
+
+```{admonition} Cuidados ao usar APIs de IA
 :class: caution
 
 - **Custo:** APIs de IA são cobradas por uso. Planeje seu orçamento.
@@ -422,19 +430,16 @@ APIs são como "braços da IA" que você pode embutir no seu negócio para entre
 - **Dependência externa:** se o serviço cair, sua operação pode ser afetada.
 ```
 
-```{admonition} **A API é a cola que transforma IA em produto**
-:class: note
+Usar IA na criação de negócios vai além de ferramentas prontas: ao integrar APIs de IA aos seus próprios sistemas, é possível transformar ideias em soluções automatizadas, escaláveis e inteligentes.
 
-Usar IA na criação de negócios não precisa significar apenas usar ferramentas prontas. Quando você começa a integrar APIs de IA ao seu próprio fluxo, app ou processo, você:
+```{admonition} A API é a cola que transforma IA em produto
+:class: note
 
 - Automatiza entregas
 - Melhora a experiência do usuário
 - Escala sem aumentar a equipe
 - Inova com velocidade
 ```
-
-@Mateus Macedo, como fica o uso das APIs com o advento dos agentes de IA? Poderia escrever um parágrafo sobre isso?
----
 
 ## Rodar Localmente vs. Cloud Computing
 
