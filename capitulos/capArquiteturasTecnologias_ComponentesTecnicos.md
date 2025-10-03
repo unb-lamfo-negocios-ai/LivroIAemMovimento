@@ -451,8 +451,9 @@ Após definir qual modelo de IA usar, a próxima pergunta estratégica é onde e
 
 ### Cloud Computing: Alugando a Superpotência
 
-**O que é:** Utilizar a infraestrutura de computação de terceiros. Isso inclui os "hiperescaladores" como Amazon (AWS), Google (GCP) e Microsoft (Azure), mas também um crescente ecossistema de nuvens especializadas em IA (como CoreWeave ou Lambda). Estas últimas oferecem hardware otimizado, competindo não em escala, mas em custo-benefício e performance por dólar para cargas de trabalho específicas de IA. Em qualquer um dos casos, você paga pelo uso, transformando um grande investimento de capital (CapEx) em um custo operacional mensal (OpEx).
+**O que é:** Em vez de investir em uma infraestrutura própria, você pode **alugar o poder computacional** de empresas especializadas. Isso inclui gigantes como **Amazon (AWS)**, **Google (GCP)** e **Microsoft (Azure)** — os chamados hiperescaladores —, além de provedores focados em **IA de alta performance**, como **CoreWeave** e **Lambda**.
 
+Enquanto os hiperescaladores oferecem escala global, as nuvens especializadas competem com hardware otimizado, entregando mais performance por dólar em tarefas específicas de IA. Em todos os casos, você paga apenas pelo uso, convertendo grandes investimentos em infraestrutura (CapEx) em custos operacionais mensais previsíveis (OpEx).
 
 ```{list-table} 
 :header-rows: 1
@@ -480,9 +481,10 @@ Após definir qual modelo de IA usar, a próxima pergunta estratégica é onde e
 
 ### Computação Local: Assumindo o Controle Total
 
-O que é: Operar os modelos de IA em hardware que você possui e controla. Isso se manifesta de duas formas principais:
-- On-Premise: Servidores e GPUs instalados em seu próprio data center. É a "frota de caminhões" da nossa analogia.
-- Edge AI: Uma forma específica de computação local onde modelos otimizados rodam diretamente em dispositivos — como um smartphone, um terminal de ponto de venda, um sensor em uma fábrica ou uma câmera inteligente. É o "veículo de entrega final", operando de forma autônoma na ponta.
+**O que é:** Operar os modelos de IA em hardware que você possui e controla. Isso se manifesta de duas formas principais:
+
+- **On-Premise:** Servidores e GPUs instalados em seu próprio data center. É a "frota de caminhões" da nossa analogia.
+- **Edge AI:** Uma forma específica de computação local onde modelos otimizados rodam diretamente em dispositivos — como um smartphone, um terminal de ponto de venda, um sensor em uma fábrica ou uma câmera inteligente. É o "veículo de entrega final", operando de forma autônoma na ponta.
 
 
 ```{list-table} 
@@ -501,7 +503,7 @@ O que é: Operar os modelos de IA em hardware que você possui e controla. Isso 
 * - **Escalabilidade Rígida:** Aumentar a capacidade significa comprar mais hardware, um processo lento e caro.
 ```
 
-Quando usar?
+**Quando usar?**
 
 On-premise é por vezes obrigatório para setores regulados. Edge AI é essencial para aplicações que exigem tempo de resposta em tempo real e/ou operação offline, como reconhecimento facial em celulares ou controle de qualidade em uma linha de montagem.
 
@@ -522,7 +524,6 @@ A decisão final deve ser guiada por uma análise de negócio, respondendo a tr�
 3. **Modelo de Custos:** Minha carga de trabalho é constante e previsível (favorecendo CapEx) ou volátil e experimental (favorecendo OpEx)?
 
 A resposta a essas perguntas definirá a combinação ideal de flexibilidade alugada e controle próprio para sua estratégia de IA.
-
 
 ---
 
@@ -561,11 +562,7 @@ As tecnologias de backend variam conforme o projeto, mas algumas das mais comuns
 
 ---
 
-### **Frontend vs. Backend em Soluções de IA**
-
-Em aplicações com Inteligência Artificial, a separação entre frontend e backend continua existindo, mas ganha novas camadas. No backend, além da lógica de negócio tradicional, passam a existir processos de IA, como chamadas a APIs de modelos, tratamento de dados, armazenamentos vetoriais e orquestração de fluxos inteligentes. Já o frontend não é apenas uma interface, mas também um ponto para gerar e ajustar prompts, exibir respostas contextualizadas e permitir interação dinâmica com os modelos. Essa estrutura traz desafios e oportunidades adicionais, como controle de custos, monitoramento de tokens, integração de múltiplos modelos e implementação de guardrails de segurança — temas que podem ser detalhados nas próximas seções.
-
-**Frontend em Ferramentas de IA**
+#### Frontend vs. Backend em Soluções de IA
 
 O *frontend* em aplicações de IA é o ponto de contato direto com o usuário. Ele deve tornar a **complexidade do backend compreensível e utilizável**. Principais elementos:
 
@@ -577,9 +574,7 @@ O *frontend* em aplicações de IA é o ponto de contato direto com o usuário. 
 Um bom *frontend* vai além de exibir resultados: ele **traduz processos complexos em interações simples**, reforçando a **confiança**, o **entendimento** e a **usabilidade** do sistema.
 
 
-**Backend em Ferramentas de IA**
-
-### **Backend em Ferramentas de IA**
+#### Backend em Ferramentas de IA**
 
 O *backend* é o **cérebro por trás da aplicação de IA**, onde toda a lógica e inteligência acontecem. Ele é responsável por:
 
