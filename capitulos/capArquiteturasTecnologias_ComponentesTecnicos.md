@@ -454,14 +454,25 @@ Após definir qual modelo de IA usar, a próxima pergunta estratégica é onde e
 **O que é:** Utilizar a infraestrutura de computação de terceiros. Isso inclui os "hiperescaladores" como Amazon (AWS), Google (GCP) e Microsoft (Azure), mas também um crescente ecossistema de nuvens especializadas em IA (como CoreWeave ou Lambda). Estas últimas oferecem hardware otimizado, competindo não em escala, mas em custo-benefício e performance por dólar para cargas de trabalho específicas de IA. Em qualquer um dos casos, você paga pelo uso, transformando um grande investimento de capital (CapEx) em um custo operacional mensal (OpEx).
 
 
-| **Categoria**   | **Descrição** |
-|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **VANTAGENS**   | **Agilidade e Baixo Custo Inicial:** A barreira de entrada é praticamente zero. É possível começar a experimentar e escalar uma aplicação de IA em questão de horas, sem comprar um único servidor. |
-|                | **Escalabilidade Elástica:** Se sua demanda explodir, a capacidade da nuvem se ajusta automaticamente. Você paga apenas pelo que usa, evitando o desperdício de capacidade ociosa.                   |
-|                | **Acesso à Inovação:** Você tem acesso imediato às GPUs e processadores mais recentes do mercado sem precisar renovar máquinas próprias.                                                            |
-| **DESVANTAGENS**| **Custo em Escala:** Para uma operação grande e constante, o aluguel pode se tornar mais caro do que a posse a longo prazo. O custo operacional pode ser volátil e difícil de prever.              |
-|                | **Soberania e Privacidade de Dados:** Seus dados residem na infraestrutura de outra empresa, o que é um ponto crítico para setores regulados como saúde, finanças e governo.                       |
-|                | **Dependência do Fornecedor (Lock-in):** Construir sua operação sobre os serviços específicos de um provedor torna a migração para um concorrente cara e complexa.                                  |
+```{list-table} 
+:header-rows: 1
+:widths: 20 80
+
+* - **Categoria**
+  - **Descrição**
+* - VANTAGENS
+  - **Agilidade e Baixo Custo Inicial:** A barreira de entrada é praticamente zero. É possível começar a experimentar e escalar uma aplicação de IA em questão de horas, sem comprar um único servidor.
+* - 
+  - **Escalabilidade Elástica:** Se sua demanda explodir, a capacidade da nuvem se ajusta automaticamente. Você paga apenas pelo que usa, evitando o desperdício de capacidade ociosa.
+* - 
+  - **Acesso à Inovação:** Você tem acesso imediato às GPUs e processadores mais recentes do mercado sem precisar renovar máquinas próprias.
+* - DESVANTAGENS
+  - **Custo em Escala:** Para uma operação grande e constante, o aluguel pode se tornar mais caro do que a posse a longo prazo. O custo operacional pode ser volátil e difícil de prever.
+* - 
+  - **Soberania e Privacidade de Dados:** Seus dados residem na infraestrutura de outra empresa, o que é um ponto crítico para setores regulados como saúde, finanças e governo.
+* - 
+  - **Dependência do Fornecedor (Lock-in):** Construir sua operação sobre os serviços específicos de um provedor torna a migração para um concorrente cara e complexa.
+```
 
 VANTAGENS:
 
