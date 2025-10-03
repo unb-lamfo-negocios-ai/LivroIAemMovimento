@@ -1,4 +1,4 @@
-# Capítulo 2 – Arquiteturas, Tecnologias e Componentes Técnicos
+# Protocolos de Integração entre Modelos Computacionais
 
 Uma solução de Inteligência Artificial é formada por diferentes **camadas técnicas** que trabalham em conjunto para transformar dados em valor.  
 Compreender essas camadas é essencial para que líderes, desenvolvedores e gestores saibam **onde aplicar esforços**, **quais tecnologias priorizar** e **como reduzir riscos**.  
