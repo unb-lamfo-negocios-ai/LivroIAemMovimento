@@ -883,42 +883,64 @@ Antes de finalizar, vale destacar algumas **boas práticas** tanto para quem **d
 ```{admonition} Para Desenvolvedores:
 :class: tip
 
-- ✅ Sempre valide o `inputSchema` antes de chamar ferramentas
-- ✅ Use `id` único para cada mensagem
-- ✅ Implemente timeout (não espere eternamente por resposta)
-- ✅ Trate todos os códigos de erro possíveis
-- ✅ Teste com ferramentas simples primeiro
+ ✅ Sempre valide o `inputSchema` antes de chamar ferramentas
+ ✅ Use `id` único para cada mensagem
+ ✅ Implemente timeout (não espere eternamente por resposta)
+ ✅ Trate todos os códigos de erro possíveis
+ ✅ Teste com ferramentas simples primeiro
 ```
 
 ```{admonition} Para Usuários:
 :class: tip
 
-- ✅ Se ver erro `-32601`: A ferramenta não existe
-- ✅ Se ver erro `-32602`: Faltou algum parâmetro obrigatório
-- ✅ Se ver erro `-32603`: Problema no servidor (tente novamente)
-- ✅ Verifique os logs para detalhes dos erros
+ ✅ Se ver erro `-32601`: A ferramenta não existe
+ ✅ Se ver erro `-32602`: Faltou algum parâmetro obrigatório
+ ✅ Se ver erro `-32603`: Problema no servidor (tente novamente)
+ ✅ Verifique os logs para detalhes dos erros
 ```
 
 ---
 
-## 🔗 Recursos Adicionais
+## Recursos Adicionais
 
-- **Especificação JSON-RPC 2.0**: https://www.jsonrpc.org/specification
-- **Documentação MCP**: https://modelcontextprotocol.io
-- **Validador JSON**: https://jsonlint.com
+Abaixo estão listados alguns **recursos úteis** para aprofundar o entendimento e aplicar na prática o que foi apresentado até o momento.  
+Esses materiais complementares ajudam tanto no domínio da estrutura de mensagens quanto na validação e aplicação real do MCP:
 
----
+- **[Especificação JSON-RPC 2.0](https://www.jsonrpc.org/specification)**  
+  Documento oficial que define como funciona o protocolo de comunicação usado entre cliente e servidor.
+
+- **[Documentação Oficial do MCP](https://modelcontextprotocol.io)**  
+  Página com exemplos, especificações e guia completo sobre o Model Context Protocol.
+
+- **[Validador de JSON Online](https://jsonlint.com)**  
+  Ferramenta prática para testar se os scripts JSON estão corretos e bem formatados.
 
 
-### Outras Capacidades Essenciais{cite}`mcp_workshop_youtube, mcp_official_docs`
 
-#### 1. Composability (Componibilidade)
+## Outras Capacidades Essenciais{cite}`mcp_workshop_youtube, mcp_official_docs`
+
+### **1. Composability (Componibilidade)**
 
 Uma característica poderosa do MCP é que qualquer aplicação, API ou agente pode ser tanto um cliente MCP quanto um servidor MCP simultaneamente. Isso permite criar arquiteturas complexas e em camadas.
 
-Exemplo de Arquitetura Composta:
+```{admonition} Exemplo de Arquitetura Composta
+:class: exemplo
 
 Agent de Pesquisa (Cliente + Servidor)
+
+```{list-table}
+:header-rows: 1
+:widths: 50 50
+
+* - **Como Cliente, usa:**
+  - **Como Servidor, expõe:**
+* - Web Search MCP Server  
+  - research_topic()
+* - Database MCP Server  
+  - summarize_findings()
+* - File System MCP Server  
+  - generate_report()
+```
 
 - **Como Cliente, usa:**
 - Web Search MCP Server
@@ -928,29 +950,32 @@ Agent de Pesquisa (Cliente + Servidor)
 - research_topic()
 - summarize_findings()
 - generate_report()
+```
 
-**Benefícios da Componibilidade:**
+```{admonition} **Benefícios da Componibilidade:**
+:class: note
 
 - **Especialização:** Cada camada foca em uma responsabilidade específica
 - **Reutilização:** Componentes podem ser usados em diferentes contextos
 - **Escalabilidade:** Fácil adicionar novas capacidades
 - **Manutenibilidade:** Mudanças isoladas por componente
+```
 
-#### 2. Sampling (Amostragem)
+### **2. Sampling (Amostragem)**
 
 Permite que um servidor MCP solicite inferências (chamadas de LLM) do cliente, sem precisar hospedar seu próprio modelo.
 
-**Como Funciona:**
+```{admonition} **Como Funciona:**
+:class: note
 
 1. Servidor precisa de inteligência para uma decisão
 2. Solicita ao cliente para fazer uma inferência
 3. Cliente usa seu LLM e retorna resultado
 4. Servidor usa o resultado para continuar processamento
+```
 
-**Exemplo Prático:**
-
-// Servidor -> Cliente (solicitando inferência)
-
+```{admonition} Exemplo: Servidor -> Cliente (solicitando inferência)
+:class: note
 - ***Resumo do Fluxo:****
 
 1. Você pede: "Organize minha caixa de entrada"
@@ -962,6 +987,7 @@ Permite que um servidor MCP solicite inferências (chamadas de LLM) do cliente, 
 4. llm analisa e responde: "URGENTE - Requer ação imediata"
 
 5. Servidor executa ação: move para pasta "Urgentes" e notifica você
+```
 
 - ***Por que isso é poderoso?****
 
