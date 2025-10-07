@@ -231,10 +231,10 @@ Essas ferramentas são o que transformam um modelo estático em um **agente din�
 
 ```{admonition} **Características das Ferramentas:**
 :class: note
-- Invocação Automática: O LLM decide quando usar
-- Parâmetros Estruturados: Definidos via JSON Schema
-- Resposta Estruturada: Retorno padronizado
-- Assincronia: Podem executar operações longas
+- **Invocação Automática**: O LLM decide quando usar
+- **Parâmetros Estruturados**: Definidos via JSON Schema
+- **Resposta Estruturada**: Retorno padronizado
+- **Assincronia**: Podem executar operações longas
 ```
 
 **Exemplos de Ferramentas:**
@@ -877,6 +877,8 @@ Sequência típica de uso:
 ---
 
 ## Dicas Práticas
+
+Antes de finalizar, vale destacar algumas **boas práticas** tanto para quem **desenvolve** quanto para quem **utiliza** integrações com o MCP.  
 
 ```{admonition} Para Desenvolvedores:
 :class: tip
