@@ -219,7 +219,7 @@ MCP na prática
 
 O MCP padroniza as interações em três interfaces principais, além de outras funcionalidades:
 
-1. **Ferramentas(Tools)**
+##### 1. **Ferramentas (Tools)**
  
 As **ferramentas** no contexto do **Model Context Protocol (MCP)** são funcionalidades expostas pelo **servidor MCP** que podem ser utilizadas pelos modelos de linguagem (LLMs) durante a execução de tarefas. Elas funcionam como extensões das capacidades do modelo, permitindo que ele interaja com o mundo externo de maneira programada.
 
@@ -274,7 +274,7 @@ Essas ferramentas são o que transformam um modelo estático em um **agente din�
 - APIs diversas (Stripe, Cloudflare, etc.)
 ```
 
-2. **Recursos (_Resources_)**
+##### 2. **Recursos (_Resources_)**
    
 Os **recursos** no contexto do MCP são **dados disponibilizados pela aplicação** (ou **MCP Host**) para enriquecer o contexto da conversa. Diferentemente das ferramentas, os recursos **não são invocados diretamente pelo LLM**. Em vez disso, são **anexados ao contexto** de forma automática, fornecendo informações adicionais que auxiliam o modelo a gerar respostas mais completas e contextualizadas.
 
@@ -314,7 +314,7 @@ Os **recursos** no contexto do MCP são **dados disponibilizados pela aplicaçã
 - **Arquivos de referência:** textos, planilhas ou relatórios que o modelo pode consultar para fundamentar respostas.  
 ```
 
-3. **_Prompts_**
+##### 3. **_Prompts_**
 
 Os **prompts** funcionam como **templates configuráveis** ou **atalhos inteligentes** que os usuários podem utilizar para iniciar fluxos específicos de conversa com o modelo. Eles encapsulam instruções complexas em comandos simples, semelhantes a _"comandos de barra"_ (ex: `/resumir-documento` ou `/gerar-relatório`), permitindo ao usuário acionar comportamentos predefinidos de forma rápida e consistente.
 
@@ -699,7 +699,7 @@ Servidor: "Executei a ferramenta 'get_weather' para São Paulo.
 
 ### Exemplo Real do Nosso Projeto
 
-Chamando a ferramenta de busca de papers:
+A seguir, apresentamos um exemplo real extraído do nosso projeto, ilustrando como o cliente pode chamar uma ferramenta de busca de papers para recuperar informações acadêmicas diretamente a partir do MCP.
 
 **Cliente pede:**
 
