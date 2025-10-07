@@ -349,10 +349,10 @@ Os **prompts** funcionam como **templates configuráveis** ou **atalhos intelige
 ```{admonition} **Exemplos de comandos:**
 :class: note
 
-- /summarize - Resumir documentos ou conversas
-- /translate - Traduzir texto para outro idioma
-- /code-review - Revisar código com padrões da empresa
-- /meeting-notes - Extrair ações de notas de reunião
+- `/summarize` - Resumir documentos ou conversas
+- `/translate` - Traduzir texto para outro idioma
+- `/code-review` - Revisar código com padrões da empresa
+- `/meeting-notes` - Extrair ações de notas de reunião
 ```
 
 ## Exemplos de Mensagens Comuns
@@ -409,13 +409,19 @@ Toda mensagem JSON-RPC tem estes elementos:
 
 1. **Inicialização da Conexão**
 
-### 🎯 O que acontece aqui?
+Antes de qualquer troca de dados úteis, cliente e servidor precisam se reconhecer e alinhar capacidades. É nesse momento que ocorre a inicialização da conexão, uma etapa essencial para estabelecer uma comunicação clara e segura.
+
+```{admonition} **O que acontece aqui?**
+:class: note
 
 Esta é a **primeira mensagem** trocada quando o cliente se conecta ao servidor. É como um "aperto de mãos" digital onde ambos dizem:
 - "Oi, eu sou o Cliente, versão 1.0.0"
 - "Olá, eu sou o Servidor, versão 1.0.0, e posso fazer X, Y e Z"
 
-### 📤 Cliente pergunta: "Quem é você e o que pode fazer?"
+Cliente pergunta: "Quem é você e o que pode fazer?"
+```
+
+A seguir, apresentamos o **script em formato JSON** que representa essa etapa inicial de comunicação, onde cliente e servidor trocam suas primeiras informações para estabelecer a conexão.
 
 ```json
 {
@@ -446,13 +452,15 @@ Cliente: "Olá servidor! Sou o ExampleClient versão 1.0.0.
          Você pode me responder?"
 ```
 
-**Explicação dos campos:**
+```{admonition} **Explicação dos campos:**
+:class: note
+
 - `method: "initialize"` → Estou iniciando a conexão
 - `protocolVersion` → Versão do MCP que estou usando
 - `capabilities` → O que eu (cliente) consigo fazer
 - `clientInfo` → Meu nome e versão
-
-### 📥 Servidor responde: "Oi! Eu posso fazer isso..."
+```
+Servidor responde: "Oi! Eu posso fazer isso..."
 
 ```json
 {
@@ -494,24 +502,29 @@ Servidor: "Olá ExampleClient! Sou o ExampleServer versão 1.0.0.
            Estamos conectados!"
 ```
 
-**Explicação dos campos:**
+```{admonition} **Explicação dos campos:**
+:class: note
+
 - `result` → Resposta bem-sucedida (não é erro)
 - `capabilities` → O que EU (servidor) consigo fazer
 - `listChanged: true` → Posso avisar quando algo mudar
 - `subscribe: true` → Você pode se inscrever para receber atualizações
 - `serverInfo` → Meu nome e versão
+```
 
----
+2. **Listagem de Ferramentas Disponíveis**
 
-## 2️⃣ Listagem de Ferramentas Disponíveis
+Após o processo de inicialização, o próximo passo é a **descoberta de capacidades**.
 
-### 🎯 O que acontece aqui?
+Neste momento, o **cliente envia uma solicitação ao servidor perguntando quais ferramentas estão disponíveis** para uso. Essa listagem permite que o modelo saiba o que está ao seu alcance — funções, integrações e recursos que pode utilizar durante uma interação.
 
-Depois de conectado, o cliente pergunta: **"Quais ferramentas você tem disponíveis?"**
+:::tip Analogia
+É como entrar em uma oficina e perguntar:  
+**"Quais ferramentas vocês têm aí? Martelo? Chave de fenda? Furadeira?"**  
+O servidor responde com a lista do que tem disponível, e o modelo decide como usar essas ferramentas conforme necessário.
+:::
 
-É como entrar numa oficina e perguntar: "Quais ferramentas vocês têm aí? Martelo? Chave de fenda?"
-
-### 📤 Cliente pergunta: "Que ferramentas você oferece?"
+Cliente pergunta: "Que ferramentas você oferece?"
 
 ```json
 {
@@ -527,12 +540,15 @@ Depois de conectado, o cliente pergunta: **"Quais ferramentas você tem disponí
 Cliente: "Me mostre a lista de todas as ferramentas disponíveis."
 ```
 
-**Explicação:**
+```{admonition} **Explicação:**
+:class: note
+
 - `method: "tools/list"` → Quero ver a lista de ferramentas
 - `id: "2"` → Esta é minha segunda mensagem (a primeira foi o initialize)
 - Sem `params` porque não preciso enviar dados extras
+```
 
-### 📥 Servidor responde: "Tenho estas ferramentas..."
+Servidor responde: "Tenho estas ferramentas..."
 
 ```json
 {
@@ -575,7 +591,9 @@ Servidor: "Tenho 1 ferramenta disponível:
            Pronto! É só chamar essa ferramenta quando precisar."
 ```
 
-**Explicação dos campos:**
+```{admonition} **Explicação dos campos:**
+:class: note
+
 - `tools` → Array (lista) com todas as ferramentas
 - `name` → Nome único da ferramenta (usado para chamá-la)
 - `description` → Explicação do que a ferramenta faz
@@ -583,6 +601,7 @@ Servidor: "Tenho 1 ferramenta disponível:
   - `properties` → Parâmetros que você pode enviar
   - `required` → Parâmetros obrigatórios
   - `type: "string"` → Tipo de dado (texto, número, etc.)
+```
 
 
 ## 3️⃣ Execução de uma Ferramenta
