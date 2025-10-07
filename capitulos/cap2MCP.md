@@ -139,10 +139,13 @@ A arquitetura central do MCP se baseia em uma estrutura cliente-servidor robusta
 
 #### **Componentes principais:**
 
-**Recursos** – Dados estáticos ou dinâmicos para os modelos
-**Prompts** – Fluxos de trabalho predefinidos para geração guiada
-**Ferramentas** – Funções executáveis como busca, cálculos
-**Amostragem** – Comportamento agente por meio de interações recursivas
+- **Recursos**: Dados estáticos ou dinâmicos para os modelos
+
+- **Prompts**: Fluxos de trabalho predefinidos para geração guiada
+
+- **Ferramentas**: Funções executáveis como busca, cálculos
+
+- **Amostragem**: Comportamento agente por meio de interações recursivas
 
 #### Componentes Detalhados
 
