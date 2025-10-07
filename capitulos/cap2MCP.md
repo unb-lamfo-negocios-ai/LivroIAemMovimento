@@ -699,7 +699,8 @@ Servidor: "Executei a ferramenta 'get_weather' para São Paulo.
 
 ### Exemplo Real do Nosso Projeto
 
-A seguir, apresentamos um exemplo real extraído do nosso projeto, ilustrando como o cliente pode chamar uma ferramenta de busca de papers para recuperar informações acadêmicas diretamente a partir do MCP.
+A seguir, apresentamos um exemplo real extraído do nosso projeto, ilustrando como o cliente pode chamar uma ferramenta de busca de papers para recuperar informações acadêmicas. Este é um exemplo prático de comunicação entre cliente e servidor utilizando o MCP, a troca de mensagens segue o padrão **JSON-RPC**.
+
 
 **Cliente pede:**
 
@@ -718,6 +719,14 @@ A seguir, apresentamos um exemplo real extraído do nosso projeto, ilustrando co
 }
 ```
 
+O cliente está solicitando ao servidor que execute uma **ferramenta chamada `search_papers`**, com os seguintes argumentos:
+
+- `"query": "artificial intelligence"` → tema da busca.
+- `"max_results": 3` → quantidade de resultados desejados.
+
+Essa chamada equivale a dizer:  
+> “Servidor, por favor, busque 3 artigos sobre inteligência artificial.”
+
 **Servidor responde:**
 
 ```json
@@ -734,14 +743,21 @@ A seguir, apresentamos um exemplo real extraído do nosso projeto, ilustrando co
   }
 }
 ```
+O servidor compreendeu a solicitação e devolveu um resultado com 3 artigos, contendo:
 
+- Título do artigo
+- Nome dos autores
+- Identificador ArXiv
 ---
 
-## 🚨 Tratamento de Erros
+## Tratamento de Erros
 
-### O que acontece se der erro?
+O que acontece se algo sair do esperado?
 
-Se algo der errado, o servidor responde com um **erro** ao invés de `result`.
+Quando ocorre uma falha durante a comunicação, o **servidor não retorna um campo `result`**, como em uma resposta bem-sucedida.  
+Em vez disso, ele envia uma **mensagem de erro estruturada**, contendo informações sobre o que deu errado.
+
+Isso permite que o cliente trate adequadamente a situação — por exemplo, exibindo uma mensagem ao usuário ou tentando novamente com outros parâmetros.
 
 **Exemplo: Ferramenta não encontrada**
 
@@ -770,18 +786,21 @@ Servidor: "ERRO! A ferramenta que você pediu não existe.
                        Ferramentas disponíveis: get_weather"
 ```
 
-**Códigos de erro comuns:**
+```{admonition} **Códigos de erro comuns:**
+:class: note
+
 - `-32700` → JSON inválido (erro de sintaxe)
 - `-32600` → Requisição inválida
 - `-32601` → Método/ferramenta não encontrado
 - `-32602` → Parâmetros inválidos
 - `-32603` → Erro interno do servidor
+```
 
 ---
 
-## 📊 Fluxo Completo de Comunicação
+## Fluxo Completo de Comunicação
 
-### Sequência típica de uso:
+Sequência típica de uso:
 
 ```
 1. INICIALIZAÇÃO
@@ -828,9 +847,10 @@ Servidor: "ERRO! A ferramenta que você pediu não existe.
 
 ---
 
-## 🎓 Resumo para Leigos
+## Resumo para Leigos
 
-### O que você precisa entender:
+```{admonition} O que você precisa entender:
+:class: tip
 
 1. **JSON-RPC** é só um formato padronizado de mensagens
 2. Sempre há um **id** para identificar cada conversa
@@ -838,6 +858,7 @@ Servidor: "ERRO! A ferramenta que você pediu não existe.
 4. Tudo começa com `initialize` (apresentação)
 5. Depois vem `tools/list` (ver o que tem disponível)
 6. Por fim `tools/call` (usar uma ferramenta específica)
+```
 
 ### Analogia Final: Restaurante
 
@@ -855,22 +876,26 @@ Servidor: "ERRO! A ferramenta que você pediu não existe.
 
 ---
 
-## 💡 Dicas Práticas
+## Dicas Práticas
 
-### Para Desenvolvedores:
+```{admonition} Para Desenvolvedores:
+:class: tip
 
 - ✅ Sempre valide o `inputSchema` antes de chamar ferramentas
 - ✅ Use `id` único para cada mensagem
 - ✅ Implemente timeout (não espere eternamente por resposta)
 - ✅ Trate todos os códigos de erro possíveis
 - ✅ Teste com ferramentas simples primeiro
+```
 
-### Para Usuários:
+```{admonition} Para Usuários:
+:class: tip
 
 - ✅ Se ver erro `-32601`: A ferramenta não existe
 - ✅ Se ver erro `-32602`: Faltou algum parâmetro obrigatório
 - ✅ Se ver erro `-32603`: Problema no servidor (tente novamente)
 - ✅ Verifique os logs para detalhes dos erros
+```
 
 ---
 
