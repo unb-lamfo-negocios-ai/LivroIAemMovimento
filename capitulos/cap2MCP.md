@@ -42,6 +42,9 @@ Alguns **protocolos de integração entre agentes de IA e sistemas computacionai
 - `Open Agents Protocol (OAP)`
 - `Model Context Protocol (MCP)`
 
+- [`OpenAi Function Calling´](https://platform.openai.com/docs/guides/function-calling)
+- [`LangChain Agents Protocol`](https://github.com/langchain-ai/agent-protocol?ref=blog.langchain.com)               - [Agent2Agent protocol](https://a2aprotocol.ai/)
+
 Neste e-book, optamos por aprofundar o **Model Context Protocol (MCP)** por três motivos principais:
 
 - Ele propõe uma **estrutura simples e modular** para orquestração de agentes em fluxos complexos.
@@ -125,7 +128,7 @@ Para ajudar na escolha do protocolo mais adequado ao seu cenário, a tabela a se
 | Funcionalidades muito específicas | ❌ | ⚠️ | ✅ | ✅ |
 | Aplicação sem suporte a MCP | ❌ | ✅ | ✅ | ✅ |
 
-### Arquitetura Central do MCP{cite}`mcp_official_docs, deeplearning_mcp_course, microsoft_mcp_tutorial`
+### Arquitetura Central do MCP
 
 A arquitetura central do MCP se baseia em uma estrutura cliente-servidor robusta e modular, projetada para facilitar a integração entre modelos de IA e sistemas externos. Para quem deseja se aprofundar nos detalhes dessa arquitetura, recomendamos a leitura da documentação oficial e de recursos complementares disponíveis em {cite}`mcp_official_docs, deeplearning_mcp_course, microsoft_mcp_tutorial`.
 
