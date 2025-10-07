@@ -10,26 +10,33 @@ Protocolos para conectar modelos computacionais distintos são conjuntos de regr
 Fluxograma ilustrando os protocolos de integração entre agentes de IA.
 ```
 
-```{admonition}
+Antes de abordarmos os protocolos de integração entre modelos computacionais, é importante garantir a compreensão de alguns conceitos fundamentais relacionados a redes, APIs, agentes inteligentes e fluxo de dados.
+
+```{admonition} Conhecimentos recomendáveis:
 :class: note
-Antes de falar sobre estes protocolos, ressaltamos que é recomendado ter alguns conhecimentos básicos: 
-
-Conhecimentos recomendáveis: 
-
-- Programação Básica: Familiaridade com pelo menos uma linguagem de programação (Python será a linguagem utilizada nos exemplos)
-- Conceitos de APIs: Entendimento básico de como APIs funcionam, requisições e respostas. Veja nossa seção sobre APIs.
-- JSON: Conhecimento do formato JSON para troca de dados
-- Arquitetura Cliente-Servidor: Compreensão básica de como clientes e servidores se comunicam
-- Outros: Vai ser útil conhecimentos sobre APIs REST, protocolo HTTP/HTTPS, noções básicas de segurança web, Inteligência Artificial e LLMs.
-
-Ferramentas Necessárias: 
-
-- Python 3.8 ou superior
-- Editor de texto ou IDE de sua preferência
-- Acesso à internet para instalação de pacotes
+- **Programação Básica**: Ter familiaridade com pelo menos uma linguagem de programação. *Python* será a linguagem utilizada nos exemplos.  
+- **Conceitos de APIs**: Entender como funcionam APIs, requisições e respostas. Consulte também nossa seção sobre APIs para reforçar esse conhecimento.  
+- **JSON**: Conhecer o formato *JSON*, muito utilizado para troca de dados entre sistemas.  
+- **Arquitetura Cliente-Servidor**: Compreender como clientes e servidores se comunicam no modelo tradicional da web.  
+- **Outros**: Conhecimentos adicionais que podem ajudar incluem *APIs REST*, protocolo *HTTP/HTTPS*, noções básicas de segurança web, *Inteligência Artificial* e *LLMs*.  
 ```
 
-### Model Context Protocol
+Além dos conhecimentos teóricos, também é recomendável familiaridade com determinadas ferramentas e bibliotecas que viabilizam a implementação prática desses protocolos, como plataformas de orquestração, frameworks de agentes e ambientes de teste com suporte à integração por API.
+
+```{admonition} Ferramentas necessárias
+:class: note
+
+- **Python 3.8 ou superior** – linguagem utilizada nos exemplos.
+- **Editor de texto ou IDE** de sua preferência (ex: VS Code, PyCharm, JupyterLab).
+- **Acesso à internet** para instalação de pacotes e uso de APIs.
+- **Ambiente virtual** configurado (ex: `venv` ou `conda`) para gerenciar dependências.
+- **Bibliotecas essenciais de IA** como `requests`, `openai`, `langchain` e `transformers`.
+- **Conta gratuita** ou acesso a **APIs externas** utilizadas nos exemplos.
+- **Ferramentas de versionamento** (como `Git`) para organizar e acompanhar o código.
+- **Terminal ou shell** configurado para execução dos scripts.
+```
+
+## Model Context Protocol
 
 O **Model Context Protocol (MCP)** é uma iniciativa recente que propõe **padronizar a comunicação entre aplicações e modelos de IA**.  
 Seu objetivo é garantir que diferentes ferramentas possam se conectar de forma **segura, eficiente e consistente**, reduzindo problemas de compatibilidade e evitando integrações fragmentadas.  
