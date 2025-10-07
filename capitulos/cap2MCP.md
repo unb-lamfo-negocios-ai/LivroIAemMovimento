@@ -604,13 +604,26 @@ Servidor: "Tenho 1 ferramenta disponível:
 ```
 
 
-## 3️⃣ Execução de uma Ferramenta
+3. **Execução de uma Ferramenta**
 
-### 🎯 O que acontece aqui?
+Após conhecer as ferramentas disponíveis, o **cliente pode invocar uma delas** para executar uma ação específica.  
+Essa etapa representa o momento em que o modelo **passa da descoberta para a execução**, colocando em prática uma funcionalidade oferecida pelo servidor.
 
-Agora que o cliente sabe quais ferramentas existem, ele **usa uma delas**. É como dizer: "Ok, vi que você tem essa ferramenta 'get_weather'. Quero usar agora para São Paulo!"
+Por exemplo, se entre as ferramentas listadas há uma chamada `get_weather`, o cliente pode enviar uma solicitação como:  
 
-### 📤 Cliente chama: "Use a ferramenta X com estes dados"
+> “Quero usar a ferramenta `get_weather` para consultar a previsão do tempo em São Paulo.”
+
+Esse processo é essencial para que o **LLM realize operações externas**, como consultas a APIs, cálculos personalizados ou acesso a sistemas, expandindo suas capacidades além do texto gerado localmente.
+
+:::tip Analogia  
+É como estar em uma oficina: depois de saber que há um **termômetro**, você diz —  
+**"Ok, quero usar essa ferramenta para medir a temperatura agora!"**  
+O servidor então executa a função e retorna o resultado solicitado.  
+:::
+
+Veja os comandos utilizados para uma execução em JSON:
+
+Cliente chama: "Use a ferramenta X com estes dados"
 
 ```json
 {
@@ -637,13 +650,16 @@ Cliente: "Quero EXECUTAR a ferramenta 'get_weather'.
          Me retorne o resultado, por favor!"
 ```
 
-**Explicação dos campos:**
+```{admonition} **Explicação dos campos**
+:class: note
+
 - `method: "tools/call"` → Quero executar uma ferramenta
 - `params.name` → Nome da ferramenta que quero usar
 - `params.arguments` → Os dados necessários (conforme o inputSchema)
 - `arguments.location` → Parâmetro obrigatório definido no schema
+```
 
-### 📥 Servidor responde: "Aqui está o resultado!"
+Servidor responde: "Aqui está o resultado!"
 
 ```json
 {
@@ -673,12 +689,15 @@ Servidor: "Executei a ferramenta 'get_weather' para São Paulo.
            Tudo certo!"
 ```
 
-**Explicação dos campos:**
+```{admonition} **Explicação dos campos:**
+:class: note
+
 - `result.content` → O conteúdo da resposta (pode ser texto, imagem, etc.)
 - `type: "text"` → O resultado é texto puro
 - `text` → O resultado em si
+```
 
-### 🔍 Exemplo Real do Nosso Projeto
+### Exemplo Real do Nosso Projeto
 
 Chamando a ferramenta de busca de papers:
 
