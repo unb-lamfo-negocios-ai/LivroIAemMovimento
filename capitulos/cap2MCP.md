@@ -37,11 +37,6 @@ Além dos conhecimentos teóricos, também é recomendável familiaridade com de
 ```
 Alguns **protocolos de integração entre agentes de IA e sistemas computacionais** vêm sendo desenvolvidos com o objetivo de padronizar a comunicação entre modelos, agentes e ambientes. Entre os principais, destacam-se:
 
-- `OpenAI Function Calling`
-- `LangChain Agents Protocol`
-- `Open Agents Protocol (OAP)`
-- `Model Context Protocol (MCP)`
-
 - [`OpenAi Function Calling`](https://platform.openai.com/docs/guides/function-calling)
 - [`LangChain Agents Protocol`](https://github.com/langchain-ai/agent-protocol?ref=blog.langchain.com)
 - [`Agent2Agent protocol`](https://a2aprotocol.ai/)
@@ -151,37 +146,43 @@ A arquitetura central do MCP se baseia em uma estrutura cliente-servidor robusta
 
 - **Amostragem**: Comportamento agente por meio de interações recursivas
 
-#### Componentes Detalhados
+#### [Componentes Detalhados](https://modelcontextprotocol.io/docs/getting-started/intro)
 
-- [**MCP Host (Anfitrião)](https://modelcontextprotocol.io/docs/getting-started/intro):**
-- É a aplicação ou ferramenta que o usuário interage diretamente
+- **MCP Host (Anfitrião)**:
+  - É a aplicação ou ferramenta que o usuário interage diretamente.
 
-```{admonition} Exemplos de MCP host
+```{admonition} Exemplos de MCP Host
 :class: exemplo
 [Claude Code](https://claude.com/product/claude-code) ou [Claude Desktop](https://claude.ai/download), IDEs (como Cursor ou Windsurf).
 ```
-
-    - **Responsabilidades:**
-        - Gerenciar a configuração do usuário
-        - Iniciar conexões com servidores MCP
-        - Orquestrar a interação com o LLM
-        - Apresentar resultados ao usuário
-     - **MCP Client (Cliente):**
-- Componente interno do MCP Host
-- Mantém conexões um-para-um com os servidores MCP
-    - **Responsabilidades:**
-        - Descobrir capacidades dos servidores
-        - Gerenciar autenticação
-        - Traduzir requisições entre Host e Server
-        - Manter estado das conexões
+ 
+- **MCP Client (Cliente):**
+  - Componente interno do MCP Host
+  - Mantém conexões um-para-um com os servidores MCP
+      
 - **MCP Server (Servidor):**
-- Programa leve que atua como "wrapper" para sistemas externos
-- Pode ser executado localmente ou remotamente
-    - **Responsabilidades:**
-        - Expor ferramentas, recursos e prompts
-        - Implementar lógica de negócio específica
-        - Gerenciar acesso a sistemas externos
-        - Manter segurança e permissões
+  - Programa leve que atua como "wrapper" para sistemas externos
+  - Pode ser executado localmente ou remotamente
+       
+```{admonition}{Responsabilidades}
+class: note
+- **MCP Host**
+  - Gerenciar a configuração do usuário
+  - Iniciar conexões com servidores MCP
+  - Orquestrar a interação com o LLM
+  - Apresentar resultados ao usuário
+- **MCP Client**
+  - Descobrir capacidades dos servidores
+  - Gerenciar autenticação
+  - Traduzir requisições entre Host e Server
+  - Manter estado das conexões
+- **MCP Server**
+  - Expor ferramentas, recursos e prompts
+  - Implementar lógica de negócio específica
+  - Gerenciar acesso a sistemas externos
+  - Manter segurança e permissões
+```
+
 
 ### Fluxo de Comunicação
 
