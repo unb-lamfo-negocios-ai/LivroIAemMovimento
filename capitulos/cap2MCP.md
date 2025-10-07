@@ -140,9 +140,20 @@ Para ajudar na escolha do protocolo mais adequado ao seu cenário, a tabela a se
 
 ### Arquitetura Central do MCP{cite}`mcp_official_docs, deeplearning_mcp_course, microsoft_mcp_tutorial`
 
-O MCP segue uma arquitetura cliente-servidor.
+O MCP segue um modelo cliente-servidor, onde:
 
-### Componentes Detalhados
+- **Hosts MCP** executam os modelos de IA
+- **Clientes MCP** iniciam solicitações
+- **Servidores MCP** fornecem contexto, ferramentas e capacidades
+
+#### **Componentes principais:**
+
+**Recursos** – Dados estáticos ou dinâmicos para os modelos
+**Prompts** – Fluxos de trabalho predefinidos para geração guiada
+**Ferramentas** – Funções executáveis como busca, cálculos
+**Amostragem** – Comportamento agente por meio de interações recursivas
+
+#### Componentes Detalhados
 
 - [**MCP Host (Anfitrião)](https://modelcontextprotocol.io/docs/getting-started/intro):**
 - É a aplicação ou ferramenta que o usuário interage diretamente
