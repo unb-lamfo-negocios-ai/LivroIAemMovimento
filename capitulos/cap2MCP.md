@@ -35,30 +35,50 @@ Além dos conhecimentos teóricos, também é recomendável familiaridade com de
 - **Ferramentas de versionamento** (como `Git`) para organizar e acompanhar o código.
 - **Terminal ou shell** configurado para execução dos scripts.
 ```
+Alguns **protocolos de integração entre agentes de IA e sistemas computacionais** vêm sendo desenvolvidos com o objetivo de padronizar a comunicação entre modelos, agentes e ambientes. Entre os principais, destacam-se:
 
+- `OpenAI Function Calling`
+- `LangChain Agents Protocol`
+- `Open Agents Protocol (OAP)`
+- `Model Context Protocol (MCP)`
+
+Neste e-book, optamos por aprofundar o **Model Context Protocol (MCP)** por três motivos principais:
+
+- Ele propõe uma **estrutura simples e modular** para orquestração de agentes em fluxos complexos.
+- Permite organizar a troca de informações em **blocos reutilizáveis e interpretáveis**, facilitando o rastreamento do raciocínio do agente.
+- Está alinhado com práticas modernas de construção de **sistemas multiagentes baseados em linguagem natural**.
+  
 ## Model Context Protocol
 
-O **Model Context Protocol (MCP)** é uma iniciativa recente que propõe **padronizar a comunicação entre aplicações e modelos de IA**.  
-Seu objetivo é garantir que diferentes ferramentas possam se conectar de forma **segura, eficiente e consistente**, reduzindo problemas de compatibilidade e evitando integrações fragmentadas.  
+O [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) (MCP) é uma iniciativa aberta e recente que busca padronizar a comunicação entre modelos de linguagem e aplicações. Seu objetivo central é permitir que diferentes agentes de IA interajam com fontes de dados, APIs e sistemas legados de forma segura, consistente e escalável — sem a necessidade de integrações manuais e fragmentadas.
 
-Essa padronização será cada vez mais importante em um cenário onde múltiplos modelos, serviços e frameworks precisam colaborar — por exemplo, em ecossistemas empresariais que combinam **LLMs proprietários, sistemas legados e bancos de dados sensíveis**.  
+Imagine que você tem um assistente de IA superinteligente (como o ChatGPT ou o Claude), mas ele está isolado, sem acesso aos seus arquivos, e-mails, agendas ou sistemas corporativos. O MCP funciona como uma “ponte universal”, que permite conectar esse assistente a tudo isso, garantindo controle, segurança e estrutura na troca de informações.
 
----
+Essa padronização torna-se essencial em ecossistemas mais complexos, nos quais coexistem LLMs proprietários, aplicações empresariais, repositórios sensíveis e ferramentas de automação. Ao criar uma interface comum entre esses elementos, o MCP promove interoperabilidade real e reduz drasticamente os atritos técnicos.
 
-:::{tip}
-- Compreender a **arquitetura e os componentes técnicos** não significa que você precise dominar a programação de cada parte.  
-- O essencial é ter **clareza sobre as opções disponíveis** e saber avaliar quais escolhas são mais adequadas para os seus objetivos estratégicos.
-:::
+Além disso, o protocolo foi desenvolvido com foco em modularidade e clareza. Em vez de construir integrações do zero para cada agente, você pode utilizar os blocos definidos no MCP para orquestrar fluxos, registrar raciocínios e controlar interações com outros sistemas.
 
-#### Conceituação do Model Context Protocol(MCP){cite}`mcp_workshop_youtube,norahsakal_mcp_explained`
+Você pode se aprofundar acessando a [documentação oficial do Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) ou outras fontes como {cite}`mcp_workshop_youtube,norahsakal_mcp_explained`.
 
-#### O que é o MCP?
+### Por que o MCP Existe?
 
-Imagine que você tem um assistente pessoal muito inteligente (como ChatGPT ou Claude), mas ele está "preso" em uma caixa e não consegue acessar seus arquivos, seus e-mails, seu calendário, ou qualquer sistema que você usa no dia a dia. O [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) é como uma "ponte universal" que permite que esse assistente se conecte de forma segura e padronizada a todos esses sistemas.
+```{list-table}
+:header-rows: 1
+:widths: 50 50
 
-O MCP é um protocolo aberto e padronizado que permite que aplicações de Inteligência Artificial (IA) e agentes interajam de forma transparente com sistemas externos, fontes de dados e ferramentas. Pense no MCP como um "adaptador universal" que conecta os Modelos de Linguagem Grande (LLMs) ao mundo real e aos seus dados.
-
-#### Por que o MCP Existe?
+* - **O Problema Antes do MCP**
+  - **A Solução do MCP**
+* - 
+  - 
+* - Cada empresa criava sua própria forma de conectar IA aos seus sistemas  
+  - Um padrão único que funciona para todas as aplicações de IA
+* - Muito trabalho duplicado e incompatibilidade entre soluções  
+  - Qualquer ferramenta que implemente MCP pode ser usada por qualquer aplicação de IA compatível
+* - Desenvolvedores precisavam criar integrações específicas para cada ferramenta  
+  - Redução drástica do tempo de desenvolvimento
+* - Usuários ficavam limitados aos sistemas que cada aplicação de IA conseguia acessar  
+  - Maior segurança e controle sobre as integrações
+```
 
 **O Problema Antes do MCP:**
 
@@ -74,7 +94,7 @@ O MCP é um protocolo aberto e padronizado que permite que aplicações de Intel
 - Redução drástica do tempo de desenvolvimento
 - Maior segurança e controle sobre as integrações
 
-#### A Filosofia e Motivação por Trás do MCP
+### A Filosofia e Motivação por Trás do MCP
 
 A motivação central por trás do MCP, especialmente para a [Anthropic](https://www.youtube.com/watch?v=kQmXtrmQ5Zg), é a premissa de que "modelos são tão bons quanto o contexto que lhes fornecemos". Há alguns anos, a integração de contexto em chatbots ou aplicações de IA era muitas vezes feita por meio de copiar e colar ou digitação manual. No entanto, a evolução levou a sistemas onde os modelos precisam de "ganchos" diretos em seus dados e contexto, tornando-os mais poderosos e personalizados.
 
@@ -87,7 +107,7 @@ O MCP nasceu para padronizar esse desenvolvimento de IA, atuando como uma camada
 :name: mcp_protocol
 ```
 
-MCP vs. Outras Soluções
+### MCP versus Outras Soluções
 
 Para entender melhor o valor do MCP, vamos compará-lo com outras abordagens existentes:
 
