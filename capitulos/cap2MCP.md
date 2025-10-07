@@ -42,7 +42,7 @@ Alguns **protocolos de integração entre agentes de IA e sistemas computacionai
 - `Open Agents Protocol (OAP)`
 - `Model Context Protocol (MCP)`
 
-- [`OpenAi Function Calling´](https://platform.openai.com/docs/guides/function-calling)
+- [`OpenAi Function Calling`](https://platform.openai.com/docs/guides/function-calling)
 - [`LangChain Agents Protocol`](https://github.com/langchain-ai/agent-protocol?ref=blog.langchain.com)
 - [`Agent2Agent protocol`](https://a2aprotocol.ai/)
 
