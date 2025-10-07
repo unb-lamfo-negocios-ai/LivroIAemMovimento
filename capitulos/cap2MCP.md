@@ -353,21 +353,35 @@ Os **prompts** funcionam como **templates configuráveis** ou **atalhos intelige
 - /meeting-notes - Extrair ações de notas de reunião
 ```
 
-# Exemplos de Mensagens Comuns
+## Exemplos de Mensagens Comuns
 
-##  O que são essas mensagens?
+Antes de entender os exemplos, é importante saber **o que são essas mensagens**.
 
-Imagine que o **Cliente** (seu programa) e o **Servidor** (que busca papers) precisam conversar. Eles usam um formato especial chamado **JSON-RPC** para se entenderem, como se fosse um idioma comum.
+No MCP, a comunicação entre o **Cliente** (como um agente de IA ou aplicativo) e o **Servidor** (que fornece dados, como papers ou APIs) ocorre por meio de um protocolo padronizado chamado **JSON-RPC**.
 
-**Analogia:** É como pedir um lanche no drive-thru:
-- **Você (Cliente):** "Quero um hambúrguer com queijo"
-- **Atendente (Servidor):** "Ok, são R$ 15,00. Seu pedido está sendo preparado"
+Esse formato define com precisão **como as mensagens devem ser estruturadas, enviadas e interpretadas**, permitindo que diferentes sistemas se comuniquem de forma segura e padronizada.
+
+:::{tip}
+Pense no JSON-RPC como um "idioma comum" entre o cliente e o servidor.
+:::
+
+**Analogia para Entender**
+
+Imagine um atendimento em um **drive-thru**:
+
+- **Você (Cliente):** “Quero um hambúrguer com queijo.”
+- **Atendente (Servidor):** “Certo! São R$ 15,00. Seu pedido está sendo preparado.”
+
+Assim também funciona a comunicação no MCP:
+
+- O **Cliente** envia uma **requisição JSON** pedindo algo.
+- O **Servidor** retorna uma **resposta estruturada**, com o resultado, confirmação ou erro.
 
 Todas as mensagens seguem esse padrão de "pergunta → resposta".
 
 ---
 
-## 📋 Estrutura Básica das Mensagens
+### Estrutura Básica das Mensagens
 
 Toda mensagem JSON-RPC tem estes elementos:
 
@@ -382,15 +396,16 @@ Toda mensagem JSON-RPC tem estes elementos:
 }
 ```
 
-**Campos principais:**
+```{admonition} **Campos principais:**
+:class: note
+
 - `jsonrpc`: Versão do protocolo (sempre 2.0)
 - `id`: Identificador único da mensagem
 - `method`: O que você quer fazer
 - `params`: Parâmetros/dados necessários
+```
 
----
-
-## 1️⃣ Inicialização da Conexão
+1. **Inicialização da Conexão**
 
 ### 🎯 O que acontece aqui?
 
