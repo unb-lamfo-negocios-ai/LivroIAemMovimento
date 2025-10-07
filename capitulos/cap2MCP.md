@@ -120,6 +120,8 @@ Para entender melhor o valor do MCP, vamos compará-lo com outras abordagens exi
 | **Controle de Acesso** | Granular e padronizado | Varia por API | Limitado | Varia |
 | **Facilidade de Integração** | Uma vez implementado, funciona com todos | Integração por API | Configuração por webhook | Por aplicação |
 
+Para ajudar na escolha do protocolo mais adequado ao seu cenário, a tabela a seguir compara MCP, APIs REST, Webhooks e Plugins Específicos em diferentes situações de uso. Ela mostra, de forma visual, onde cada abordagem é recomendada ✅, possível mas com limitações ⚠️ ou não recomendada ❌.
+
 | Situação de Uso | MCP | APIs REST | Webhooks | Plugins Específicos |
 |------------------|-----|------------|----------|----------------------|
 | Conectar IA a múltiplos sistemas | ✅ | ❌ | ❌ | ❌ |
@@ -135,15 +137,6 @@ Para entender melhor o valor do MCP, vamos compará-lo com outras abordagens exi
 | Aplicação única | ❌ | ✅ | ✅ | ✅ |
 | Funcionalidades muito específicas | ❌ | ⚠️ | ✅ | ✅ |
 | Aplicação sem suporte a MCP | ❌ | ✅ | ✅ | ✅ |
-
-Legenda dos ícones: 
-
-✅ Recomendado para esse caso
-
-⚠️ Possível, mas com limitações
-
-❌ Não recomendado ou não aplicável
-
 
 ### Arquitetura Central do MCP{cite}`mcp_official_docs, deeplearning_mcp_course, microsoft_mcp_tutorial`
 
