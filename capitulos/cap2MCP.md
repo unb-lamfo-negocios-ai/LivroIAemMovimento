@@ -80,19 +80,6 @@ Você pode se aprofundar acessando a [documentação oficial do Model Context Pr
   - Maior segurança e controle sobre as integrações
 ```
 
-**O Problema Antes do MCP:**
-
-- Cada empresa criava sua própria forma de conectar IA aos seus sistemas
-- Muito trabalho duplicado e incompatibilidade entre soluções
-- Desenvolvedores precisavam criar integrações específicas para cada ferramenta
-- Usuários ficavam limitados aos sistemas que cada aplicação de IA conseguia acessar
-
-**A Solução do MCP:**
-
-- Um padrão único que funciona para todas as aplicações de IA
-- Qualquer ferramenta que implemente MCP pode ser usada por qualquer aplicação de IA compatível
-- Redução drástica do tempo de desenvolvimento
-- Maior segurança e controle sobre as integrações
 
 ### A Filosofia e Motivação por Trás do MCP
 
@@ -140,11 +127,15 @@ Para ajudar na escolha do protocolo mais adequado ao seu cenário, a tabela a se
 
 ### Arquitetura Central do MCP{cite}`mcp_official_docs, deeplearning_mcp_course, microsoft_mcp_tutorial`
 
-O MCP segue um modelo cliente-servidor, onde:
+A arquitetura central do MCP se baseia em uma estrutura cliente-servidor robusta e modular, projetada para facilitar a integração entre modelos de IA e sistemas externos. Para quem deseja se aprofundar nos detalhes dessa arquitetura, recomendamos a leitura da documentação oficial e de recursos complementares disponíveis em {cite}`mcp_official_docs, deeplearning_mcp_course, microsoft_mcp_tutorial`.
+
+```{admonition} No MCP com o modelo cliente-servidor:
+:class: note
 
 - **Hosts MCP** executam os modelos de IA
 - **Clientes MCP** iniciam solicitações
 - **Servidores MCP** fornecem contexto, ferramentas e capacidades
+```
 
 #### **Componentes principais:**
 
