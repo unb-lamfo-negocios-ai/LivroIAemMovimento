@@ -148,7 +148,12 @@ A arquitetura central do MCP se baseia em uma estrutura cliente-servidor robusta
 
 - [**MCP Host (Anfitrião)](https://modelcontextprotocol.io/docs/getting-started/intro):**
 - É a aplicação ou ferramenta que o usuário interage diretamente
-- Exemplos: Claude Desktop, IDEs (como Cursor ou Windsurf), outras ferramentas de IA
+
+```{admonition} Exemplos de MCP host
+:class: exemplo
+[Claude Code](https://claude.com/product/claude-code) ou [Claude Desktop](https://claude.ai/download), IDEs (como Cursor ou Windsurf).
+```
+
     - **Responsabilidades:**
         - Gerenciar a configuração do usuário
         - Iniciar conexões com servidores MCP
