@@ -136,7 +136,8 @@ A arquitetura central do MCP se baseia em uma estrutura cliente-servidor robusta
 - **Servidores MCP** fornecem contexto, ferramentas e capacidades
 ```
 
-#### **Componentes principais:**
+```{admonition} **Componentes principais:**
+:class: note
 
 - **Recursos**: Dados estáticos ou dinâmicos para os modelos
 
@@ -145,6 +146,7 @@ A arquitetura central do MCP se baseia em uma estrutura cliente-servidor robusta
 - **Ferramentas**: Funções executáveis como busca, cálculos
 
 - **Amostragem**: Comportamento agente por meio de interações recursivas
+```
 
 #### [Componentes Detalhados](https://modelcontextprotocol.io/docs/getting-started/intro)
 
