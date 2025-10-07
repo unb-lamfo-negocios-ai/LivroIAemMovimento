@@ -113,12 +113,12 @@ Para entender melhor o valor do MCP, vamos compará-lo com outras abordagens exi
 
 | Aspecto | MCP | APIs REST Tradicionais | Webhooks | Plugins Específicos |
 |---------|-----|------------------------|-----------|---------------------|
-| **Padronização** | ✅ Protocolo único | ✅ Cada API é diferente | ✅ Implementação varia | ✅ Específico por aplicação |
-| **Bidirecionalidade** | ✅ Cliente ↔ Servidor | ✅ Principalmente Cliente → Servidor | ✅ Servidor → Cliente | ✅ Varia |
-| **Tempo Real** | ✅ Suporte nativo | ✅ Polling necessário | ✅ Push notifications | ✅ Varia |
-| **Descoberta Automática** | ✅ Capacidades expostas | ✅ Documentação manual | ✅ Configuração manual | ✅ Manual |
-| **Controle de Acesso** | ✅ Granular e padronizado | ✅ Varia por API | ✅ Limitado | ✅ Varia |
-| **Facilidade de Integração** | ✅ Uma vez implementado, funciona com todos | ✅ Integração por API | ✅ Configuração por webhook | ✅ Por aplicação |
+| **Padronização** | Protocolo único | Cada API é diferente |  Implementação varia |  Específico por aplicação |
+| **Bidirecionalidade** |  Cliente ↔ Servidor |  Principalmente Cliente → Servidor |  Servidor → Cliente |  Varia |
+| **Tempo Real** |  Suporte nativo |  Polling necessário |  Push notifications |  Varia |
+| **Descoberta Automática** |  Capacidades expostas | Documentação manual | Configuração manual | Manual |
+| **Controle de Acesso** | Granular e padronizado | Varia por API | Limitado | Varia |
+| **Facilidade de Integração** | Uma vez implementado, funciona com todos | Integração por API | Configuração por webhook | Por aplicação |
 
 | Situação de Uso | MCP | APIs REST | Webhooks | Plugins Específicos |
 |------------------|-----|------------|----------|----------------------|
