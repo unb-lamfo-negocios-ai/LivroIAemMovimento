@@ -165,7 +165,7 @@ A arquitetura central do MCP se baseia em uma estrutura cliente-servidor robusta
   - Pode ser executado localmente ou remotamente
        
 ```{admonition}{Responsabilidades}
-class: note
+:class: note
 - **MCP Host**
   - Gerenciar a configuração do usuário
   - Iniciar conexões com servidores MCP
@@ -182,8 +182,6 @@ class: note
   - Gerenciar acesso a sistemas externos
   - Manter segurança e permissões
 ```
-
-
 ### Fluxo de Comunicação
 
 1. **Inicialização:** Host inicia e configura conexões com servidores
@@ -219,20 +217,23 @@ MCP na prática
 
 O MCP padroniza as interações em três interfaces principais, além de outras funcionalidades:
 
-##### 1.Ferramentas(Tools)
+1. **Ferramentas(Tools)**
+ 
+As **ferramentas** no contexto do **Model Context Protocol (MCP)** são funcionalidades expostas pelo **servidor MCP** que podem ser utilizadas pelos modelos de linguagem (LLMs) durante a execução de tarefas. Elas funcionam como extensões das capacidades do modelo, permitindo que ele interaja com o mundo externo de maneira programada.
 
-Controle: Controladas pelo modelo (LLM)
+- **O que são:** São _funções executáveis_ que podem ser chamadas pelo LLM para realizar ações (como buscar dados, consultar sistemas, fazer cálculos, enviar mensagens, etc.).
+- **Controle:** A decisão de usar ou não uma ferramenta é tomada **autonomamente pelo modelo**, com base no contexto da conversa ou tarefa em andamento.
+- **Função:** Ampliar o poder do modelo, permitindo que ele **recupere informações externas** ou **execute comandos** no ambiente do usuário, de forma segura e contextualizada.
 
-Função: Permitem que o LLM execute ações no mundo real ou recupere dados
+Essas ferramentas são o que transformam um modelo estático em um **agente dinâmico e funcional**, capaz de realizar operações complexas, acessar bancos de dados, interagir com APIs, ou controlar outros sistemas integrados.
 
-As ferramentas são capacidades que o servidor MCP expõe para que o LLM possa invocar quando apropriado. O modelo decide autonomamente quando e como usar cada ferramenta baseado no contexto da conversa.
-
-**Características das Ferramentas:**
-
+```{admonition} **Características das Ferramentas:**
+:class: note
 - Invocação Automática: O LLM decide quando usar
 - Parâmetros Estruturados: Definidos via JSON Schema
 - Resposta Estruturada: Retorno padronizado
 - Assincronia: Podem executar operações longas
+```
 
 **Exemplos de Ferramentas:**
 
@@ -261,26 +262,30 @@ As ferramentas são capacidades que o servidor MCP expõe para que o LLM possa i
 }
 ```
 
-**Casos de Uso Comuns:**
+```{admonition} **Casos de Uso Comuns:**
+:class: exemplo
 
 - Integrações com GitHub (listar issues, criar PRs)
 - Asana (adicionar tarefas, atualizar status)
 - Brave (pesquisar na web)
 - Sistemas de arquivos (ler/escrever arquivos)
 - APIs diversas (Stripe, Cloudflare, etc.)
+```
 
-##### 2.Recursos (Resources)
-Controle: Controlados pela aplicação (o MCP Host)
+2. **Recursos (_Resources_)**
+   
+Os **recursos** no contexto do MCP são **dados disponibilizados pela aplicação** (ou **MCP Host**) para enriquecer o contexto da conversa. Diferentemente das ferramentas, os recursos **não são invocados diretamente pelo LLM**. Em vez disso, são **anexados ao contexto** de forma automática, fornecendo informações adicionais que auxiliam o modelo a gerar respostas mais completas e contextualizadas.
 
-Função: São dados expostos à aplicação que podem ser anexados ao contexto
+- **Controle:** Controlados pela **aplicação** (o **MCP Host**).  
+- **Função:** São **dados expostos à aplicação**, incorporados ao contexto para **melhorar a compreensão e relevância** das respostas geradas pelo modelo.  
 
-Os recursos são diferentes das ferramentas porque não são invocados pelo LLM, mas sim disponibilizados pela aplicação para enriquecer o contexto da conversa.
+```{admonition} **Tipos de Recursos:**
+:class: note
 
-**Tipos de Recursos:**
-
-- Estáticos: Arquivos JSON, documentos, configurações
-- Dinâmicos: Dados interpolados com informações do usuário/sistema
-- Streaming: Recursos que atualizam em tempo real
+- **Estáticos**: Arquivos JSON, documentos, configurações
+- **Dinâmicos**: Dados interpolados com informações do usuário/sistema
+- **Streaming**: Recursos que atualizam em tempo real
+```
 
 **Exemplos de Recursos:**
 ```json
@@ -296,28 +301,32 @@ Os recursos são diferentes das ferramentas porque não são invocados pelo LLM,
 
 }
 ```
-**Casos de Uso:**
 
-- Anexos em um chat (imagens, documentos)
-- Logs de sistema em tempo real
-- Configurações de projeto
-- Dados de contexto do usuário
-- Arquivos de referência
+```{admonition} **Casos de Uso:**
+:class: exemplo
 
-##### # 3.Prompts
+- **Anexos em um chat:** como imagens enviadas pelo usuário ou documentos em PDF.  
+- **Logs de sistema em tempo real:** permitindo que o modelo acompanhe eventos e status do sistema enquanto responde.  
+- **Configurações de projeto:** parâmetros ou preferências definidos pelo usuário que orientam o comportamento do modelo.  
+- **Dados de contexto do usuário:** informações como idioma, localização ou permissões ativas.  
+- **Arquivos de referência:** textos, planilhas ou relatórios que o modelo pode consultar para fundamentar respostas.  
+```
 
-Controle: Controlados pelo usuário
+3. **_Prompts_**
 
-Função: Modelos predefinidos para interações comuns
+Os **prompts** funcionam como **templates configuráveis** ou **atalhos inteligentes** que os usuários podem utilizar para iniciar fluxos específicos de conversa com o modelo. Eles encapsulam instruções complexas em comandos simples, semelhantes a _"comandos de barra"_ (ex: `/resumir-documento` ou `/gerar-relatório`), permitindo ao usuário acionar comportamentos predefinidos de forma rápida e consistente.
 
-Os prompts são como "templates" ou "comandos de barra" que os usuários podem invocar para executar operações complexas predefinidas.
+- **Controle:** definidos e acionados pelo **usuário**
+- **Função:** atuam como **modelos predefinidos** de interação para tarefas recorrentes
 
-**Características dos Prompts:**
+```{admonition} **Características dos Prompts:**
+:class: note
 
-- Invocação Manual: Usuário escolhe quando usar (ex: /summarize)
-- Parametrizáveis: Podem receber argumentos do usuário
-- Contextuais: Podem usar informações do ambiente atual
-- Reutilizáveis: Mesmo prompt funciona em diferentes contextos
+- **Invocação Manual**: Usuário escolhe quando usar (ex: /summarize)
+- **Parametrizáveis**: Aceitam entradas personalizadas (ex: idioma, extensão do resumo)
+- **Contextuais**: Utilizam dados disponíveis no ambiente atual da conversa
+- **Reutilizáveis**: Mesmo prompt funciona em diferentes contextos
+```
 
 **Estrutura de um Prompt:**
 
@@ -335,12 +344,14 @@ Os prompts são como "templates" ou "comandos de barra" que os usuários podem i
 }
 ```
 
-**Exemplos Práticos:**
+```{admonition} **Exemplos de comandos:**
+:class: note
 
 - /summarize - Resumir documentos ou conversas
 - /translate - Traduzir texto para outro idioma
 - /code-review - Revisar código com padrões da empresa
 - /meeting-notes - Extrair ações de notas de reunião
+```
 
 # Exemplos de Mensagens Comuns
 
