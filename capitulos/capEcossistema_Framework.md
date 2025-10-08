@@ -26,18 +26,6 @@ O **LangFlow** é uma interface visual que facilita a construção de aplicaçõ
 - Exportação de fluxos como código Python
 ```
 
-Integração com MCP: é possível trabalhar com o LangFlow integrando-o ao MCP (Model Context Protocol), veja [Seção Model Context Protocol](secao_mcp), permitindo que o fluxo interaja com múltiplos modelos e ferramentas de forma padronizada, escalável e interoperável.
-
-```{admonition} Para trabalhar com o MCP:
-:class: tip
-
-- Configure diferentes modelos de linguagem como nós
-- Estabeleça regras de roteamento entre modelos
-- Defina estratégias de fallback automático
-- Monitore uso e custos por provedor
-```
-
-
 O LangFlow pode ser enquadrado não apenas como uma ferramenta, mas como um paradigma de desenvolvimento distinto. 
 
 ```{admonition} Proposta de valor central do LangFlow
@@ -55,7 +43,7 @@ Outro ponto forte do LangFlow é sua flexibilidade tecnológica. Ele é totalmen
 
 ---
 
-### O Problema Central Resolvido: Acelerando o Ciclo de Vida do Desenvolvimento de IA
+### Acelerando o Ciclo de Vida do Desenvolvimento de IA
 
 O LangFlow aborda diretamente a natureza lenta e intensiva em código da prototipagem de aplicações de LLM. A plataforma permite que os desenvolvedores "parem de lutar com as suas ferramentas" e se concentrem em criar "magia de IA". 
 
@@ -102,13 +90,13 @@ Essa colaboração **reduz retrabalho**, **acelera iterações** e **garante ali
 :gutter: 2
 
 :::{grid-item}
-### Orquestrador de IA
+Orquestrador de IA
 
 Responsável por planejar, conectar e estruturar os diferentes blocos de uma aplicação de IA. Atua como um estrategista técnico, integrando modelos, dados e fluxos para entregar valor ao negócio.
 :::
 
 :::{grid-item}
-### Designer de Fluxos
+Designer de Fluxos
 
 Foca na experiência visual e funcional dos fluxos de IA. Usa ferramentas no-code ou low-code (como LangFlow) para construir e testar soluções, mesmo sem conhecimento avançado em programação.
 :::
@@ -132,37 +120,112 @@ Esta secção desconstrói a arquitetura subjacente do LangFlow, explicando como
 
 Durante a construção do grafo, a função `def_build` de cada componente é chamada para validar e preparar o nó. O grafo é então processado na ordem de dependência, com a saída de um nó a ser passada como entrada para o nó seguinte. Este modelo sequencial e acíclico é altamente eficaz para workflows lineares ou com ramificações, como pipelines de RAG padrão, onde o processo é previsível: 
 
+:::{div} center
 `Carregar Dados -> Dividir -> Embutir -> Armazenar -> Recuperar -> Gerar`
+:::
 
 No entanto, a natureza "Acíclica" do modelo DAG significa que ele, por definição, não pode suportar ciclos ou laços na sua estrutura de grafo. Esta característica impõe uma limitação significativa para sistemas de agentes avançados que requerem raciocínio iterativo, laços de autocorreção ou comportamentos cíclicos e com estado. Esta escolha arquitetural contrasta com frameworks como o LangGraph, que são explicitamente projetadas para lidar com ciclos, oferecendo um paradigma de orquestração mais flexível para agentes complexos.
 
----
-
-### Construções Arquiteturais Centrais
+### Arquiteturais Centrais
 
 A arquitetura do LangFlow é construída em torno de três conceitos fundamentais que trabalham em conjunto para permitir a criação de aplicações de IA.
 
-### Fluxos (Flows)
+1. **Fluxos (Flows)**
 
 Os fluxos são o artefacto principal no LangFlow. Um fluxo é um workflow completo e executável que representa a lógica de uma aplicação. Pode ser criado do zero, a partir de modelos pré-construídos, ou importando um ficheiro JSON que define a sua estrutura. Os fluxos encapsulam toda a sequência de operações, desde a entrada do utilizador até à saída final, representando visualmente o percurso dos dados através dos vários componentes.
 
-### Componentes
+2. **Componentes**
 
 Os componentes são os nós individuais dentro de um fluxo. Cada componente é uma unidade modular e executável que realiza uma tarefa específica, como interagir com um LLM, carregar dados de uma fonte, ou conectar-se a uma base de dados vetorial. O LangFlow fornece uma vasta biblioteca de componentes, categorizados em grupos como LLMs, Prompts, Carregadores de Dados, Armazéns de Vetores e Ferramentas. Uma característica importante é a transparência: os utilizadores podem inspecionar o código Python subjacente a cada componente, permitindo uma compreensão mais profunda do seu funcionamento.
 
-### Agentes
+3. **Agentes**
 
 Um agente é um tipo especializado de componente que atua como o "cérebro" de um fluxo. Utiliza um LLM para raciocinar, tomar decisões e escolher quais "ferramentas" (outros componentes conectados) usar com base na entrada do utilizador. O componente do agente encapsula lógicas complexas, como o padrão ReAct (Reason+Act), abstraindo-as do utilizador e simplificando a construção de sistemas que podem interagir dinamicamente com o seu ambiente.
 
 ### Interoperabilidade e o Protocolo de Contexto de Modelo (MCP)
 
-O LangFlow evoluiu para ser tanto um servidor como um cliente do Protocolo de Contexto de Modelo (MCP), uma característica crítica para sistemas de IA modernos e distribuídos. O MCP é um padrão emergente para a comunicação entre agentes, permitindo que sistemas de IA descubram e utilizem as capacidades uns dos outros de forma padronizada.
+É possível trabalhar com o LangFlow integrando-o ao MCP, permitindo que o fluxo interaja com múltiplos modelos e ferramentas de forma padronizada, escalável e interoperável. Isto é, o LangFlow evoluiu para ser tanto um servidor como um cliente do MCP, uma característica crítica para sistemas de IA modernos e distribuídos. Veja [Seção Model Context Protocol](secao_mcp) para saber mais sobre MCP. 
 
-Como um **servidor MCP**, qualquer projeto LangFlow pode expor os seus fluxos constituintes como ferramentas através de um endpoint MCP padrão. Isto permite que outras aplicações compatíveis com MCP (por exemplo, um agente construído com código) descubram e orquestrem um workflow construído visualmente no LangFlow como uma única e poderosa ferramenta. Por outro lado, como um **cliente MCP**, o LangFlow inclui um componente de Ferramentas MCP que pode conectar-se a servidores MCP externos. Isto permite que um fluxo importe e utilize ferramentas expostas por outras aplicações, criando uma rede de agentes interoperáveis. As atualizações recentes (versão 1.6) adicionaram camadas de segurança como a autenticação OAuth para servidores MCP, sinalizando um movimento em direção a uma comunicação segura entre agentes, pronta para produção.
+```{admonition} Servidor MCP
+:class: note
+- Qualquer projeto LangFlow pode expor os seus fluxos constituintes como ferramentas através de um endpoint MCP padrão.
+- Isto permite que outras aplicações compatíveis com MCP (por exemplo, um agente construído com código) descubram e orquestrem um workflow construído visualmente no LangFlow como uma única e poderosa ferramenta.
+```
+
+```{admonition} Cliente MCP
+:class: note
+- O LangFlow inclui um componente de Ferramentas MCP que pode conectar-se a servidores MCP externos.
+- Isto permite que um fluxo importe e utilize ferramentas expostas por outras aplicações, criando uma rede de agentes interoperáveis. 
+```
+
+As atualizações recentes (versão 1.6) dicionaram camadas de segurança como a autenticação OAuth para servidores MCP. O que sinaliza um movimento em direção a uma comunicação segura entre agentes, pronta para produção.
+
+Por que o LangFlow opta pelos DAGs? Simplicidade e estabilidade são priorizadas em vez de flexibilidade total.
+
+```{admonition} Os DAGs:
+:class: note
+
+- Garantem que os fluxos terminem adequadamente.
+- Evitam laços infinitos.
+- Facilitam a depuração e previsibilidade da execução
+```
+
+Essa abordagem está alinhada com o propósito principal do LangFlow:
+
+> prototipagem rápida e confiável de workflows lineares.
+
+Mas... e quando precisamos de mais sofisticação? A equipe de desenvolvimento reconhece as limitações dos DAGs para a criação de agentes mais avançados. Por isso, introduziu o suporte ao MCP (Model Context Protocol).
+
+:::{tip} O MCP atua como uma **"saída de emergência estratégica"** para contornar as limitações do DAG sem abrir mão da simplicidade do LangFlow.:::
+
+```{admonition} 
+:class: attention
+
+A limitação ao uso de DAGs (Grafos Acíclicos Direcionados) no LangFlow **não é um erro**, mas sim uma **decisão intencional de design**.
+```
+
+Como funciona essa integração? 
+
+- Um agente cíclico e complexo pode ser desenvolvido usando ferramentas como o LangGraph.
+
+- Esse agente é exposto como um serviço via servidor MCP.
+
+- No LangFlow, o desenvolvedor:
+
+    - Usa a interface visual para criar os fluxos lineares e a interface do usuário.
+
+    - Conecta o agente externo como uma ferramenta via cliente MCP.
+ 
+Resultado: arquitetura híbrida e poderosa
+
+- O LangFlow continua simples e estável, mantendo seu modelo baseado em DAG.
+
+- Mas agora pode interagir com agentes externos complexos e cíclicos, atuando:
+
+   - Como orquestrador visual.
+
+   - Como componente modular dentro de ecossistemas de IA mais amplos.
+ 
+:class: important
+
+O suporte a MCP **transforma o LangFlow** de um criador visual isolado em **uma peça estratégica e interoperável** no desenvolvimento de sistemas de IA modernos.
+
+```{admonition} Para trabalhar com o MCP:
+:class: tip
+
+- Configure diferentes modelos de linguagem como nós
+- Estabeleça regras de roteamento entre modelos
+- Defina estratégias de fallback automático
+- Monitore uso e custos por provedor
+```
+
 
 A limitação do DAG no LangFlow não é um descuido, mas sim uma escolha de design deliberada que favorece a simplicidade e a estabilidade em detrimento da flexibilidade total. Os DAGs garantem que os fluxos terminem, evitam laços infinitos e tornam a execução mais previsível e fácil de depurar. Esta abordagem está perfeitamente alinhada com o principal caso de uso do LangFlow: a prototipagem rápida e fiável de workflows lineares. No entanto, a equipa de desenvolvimento reconheceu claramente a limitação que isto impõe para a construção de agentes mais sofisticados. A introdução do suporte a MCP não é apenas uma funcionalidade de interoperabilidade; é a "saída de emergência" estratégica das restrições do DAG. Um desenvolvedor pode construir um agente complexo e cíclico usando uma framework baseada em código como o LangGraph e expor as suas capacidades através de um servidor MCP. Simultaneamente, pode usar a interface visual do LangFlow para construir a parte da aplicação virada para o utilizador ou outros subprocessos lineares. A aplicação LangFlow pode então chamar o agente cíclico externo como uma "ferramenta" através do componente cliente MCP. Esta arquitetura permite que o LangFlow permaneça simples e estável internamente (ao impor o modelo DAG), enquanto ainda é capaz de orquestrar e participar em sistemas multi-agente muito mais complexos e cíclicos. O MCP transforma o LangFlow de um construtor autónomo num componente modular dentro de um ecossistema de IA maior e mais capaz.
 
----
+
+
+
+
 
 ### **Conclusão: A Ponte Visual para a Orquestração de IA**
 
