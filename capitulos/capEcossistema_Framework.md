@@ -85,23 +85,18 @@ Essa colaboração **reduz retrabalho**, **acelera iterações** e **garante ali
 
 **Novas Funções no Desenvolvimento com IA**: A adoção de ferramentas como o LangFlow aponta para uma nova configuração organizacional:
 
-- Surgem novas funções como:
-  :::{grid} 2
-:gutter: 2
+Surgem novas funções como:
+ 
+:header-rows: 1
+:widths: 40 60
 
-:::{grid-item}
-Orquestrador de IA
+* - **Função**
+  - **Descrição**
+* - **Orquestrador de IA**
+  - Responsável por **planejar, conectar e estruturar** os diferentes blocos de uma aplicação de IA. Atua como um **estrategista técnico**, integrando modelos, dados e fluxos para **entregar valor ao negócio**.
+* - **Designer de Fluxos**
+  - Foca na **experiência visual e funcional** dos fluxos de IA. Usa ferramentas **no-code** ou **low-code** (como LangFlow) para **construir e testar soluções**, mesmo sem conhecimento avançado em programação.
 
-Responsável por planejar, conectar e estruturar os diferentes blocos de uma aplicação de IA. Atua como um estrategista técnico, integrando modelos, dados e fluxos para entregar valor ao negócio.
-:::
-
-:::{grid-item}
-Designer de Fluxos
-
-Foca na experiência visual e funcional dos fluxos de IA. Usa ferramentas no-code ou low-code (como LangFlow) para construir e testar soluções, mesmo sem conhecimento avançado em programação.
-:::
-
-:::
 
 Esses papéis atuam como **pontes entre os requisitos de negócio e a implementação técnica**, consolidando uma prática de desenvolvimento mais ágil, colaborativa e sustentável.
 
