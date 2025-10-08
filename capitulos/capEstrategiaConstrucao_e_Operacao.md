@@ -51,7 +51,7 @@ Adicionalmente, é vital para a estratégia de negócio analisar o tipo de licen
   - **Licenças Customizadas com Restrições (ex: Llama 3 License)**: Grandes empresas como a Meta criam suas próprias licenças. A licença do Llama 3, por exemplo, embora permita uso comercial, impõe uma "Política de Uso Aceitável" que proíbe a utilização do modelo para fins ilegais ou antiéticos.
 
 ```{admonition} Mais importante
-:class: caution
+:class: important
 - A licença estipula que empresas com mais de 700 milhões de usuários ativos mensais no momento do lançamento do modelo precisam solicitar uma licença especial da Meta.
 - Isso efetivamente permite que startups e empresas de médio porte o utilizem livremente, mas impede que concorrentes diretos de escala global o usem sem um acordo específico.
 ```
@@ -67,7 +67,13 @@ A escolha entre "Build" e "Buy" não deve ser vista como uma questão binária, 
 A funcionalidade de IA precisa ser uma fonte de diferenciação defensável para o negócio?
 ```
     
-Mesmo que a IA não seja o produto principal, ela pode ser um componente crítico para o sucesso. O sistema de recomendação da Netflix ou do Spotify não é o produto em si (que é o acesso ao conteúdo), mas é uma funcionalidade tão determinante para a experiência e retenção dos usuários que exigiu uma abordagem "Build" para sua criação. Isso permitiu que ambas as empresas estabelecessem uma vantagem de mercado significativa.
+Mesmo que a IA não seja o produto principal, ela pode ser um componente crítico para o sucesso. 
+
+```{admonition}
+:class: exemplo
+- O sistema de recomendação da Netflix ou do Spotify não é o produto em si (que é o acesso ao conteúdo), mas é uma funcionalidade tão determinante para a experiência e retenção dos usuários que exigiu uma abordagem "Build" para sua criação.
+- Isso permitiu que ambas as empresas estabelecessem uma vantagem de mercado significativa.
+```
     
 Portanto, a decisão se alinha a um espectro: começa com o uso de uma API pronta (Buy), avança para o ajuste fino de um modelo open-source (um híbrido de Buy+Build) e pode chegar à construção de um modelo customizado (Build puro). A escolha correta depende de onde a empresa precisa, estrategicamente, ser não apenas boa, mas excepcionalmente única.
 
@@ -82,7 +88,7 @@ Para finalizar, apresentamos a seguir **características comparativas entre as a
 :widths: 50 50
 
 * - **Build (desenvolver internamente)**
-  - **Buy (usar soluções prontas, como APIs e serviços de nuvem)**
+  - **Buy (usar soluções prontas)**
 * - - Maior controle sobre o produto, incluindo dados, algoritmos e personalizações.  
     - Possibilidade de criar **vantagem competitiva sustentável**, difícil de replicar por concorrentes.  
     - Exige **investimento elevado em infraestrutura** e **formação de equipe técnica especializada**.
