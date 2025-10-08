@@ -139,15 +139,12 @@ Imagine que você oferece uma ferramenta SaaS que resume documentos, e sua assin
 - Um "cliente casual" resume 10 artigos curtos, consumindo um total de 50.000 tokens no mês, o que gera um custo de API para você de apenas $0.15.
 - Já um "cliente intensivo" resume 30 relatórios longos, consumindo 3.000.000 de tokens, o que gera um custo de $9.00. Se no mês seguinte esse cliente intensivo dobrar o uso, seu custo direto com ele sobe para $18, eliminando quase toda a sua margem de lucro.
 ```
-2. **Lock-in ao provedor**
-
-Lock-in ao provedor (ou vendor lock-in) é a situação em que uma empresa ou usuário se torna altamente dependente de um fornecedor específico (por exemplo, de nuvem, API, banco de dados, framework, etc.) a ponto de ser difícil, caro ou arriscado migrar para outro.
-
-```{admonition} Atenção ao Lock-in
-:class: attention
+2. **Lock-in ao provedor (ou vendor lock-in)**: é a situação em que uma empresa ou usuário se torna altamente dependente de um fornecedor específico (por exemplo, de nuvem, API, banco de dados, framework, etc.) a ponto de ser difícil, caro ou arriscado migrar para outro.
 
 A dependência excessiva de um único provedor pode gerar barreiras técnicas e contratuais difíceis de contornar.  A seguir, destacamos os principais **fatores que contribuem para o lock-in** e que devem ser avaliados antes de adotar uma solução proprietária:
 
+```{admonition} Atenção ao Lock-in
+:class: attention
 - **Endpoints e bibliotecas proprietárias**: seu código faz chamadas específicas (URLs, formatos de requisição e autenticação) que não são idênticas entre OpenAI, Anthropic ou Vertex AI. Migrar exige refatorar toda a camada de integração.
 - **Tokenização e embeddings**: cada provedor usa seu próprio esquema de tokenização e vetorização; embeddings gerados em um serviço podem não ser 100 % compatíveis com outro.
 - **Políticas de dados e egressos**: para mudar de nuvem (por exemplo, de Vertex AI para um deployment self-hosted), você pagará taxas de “data egress” e precisará garantir conformidade (LGPD/GDPR) no novo ambiente.
