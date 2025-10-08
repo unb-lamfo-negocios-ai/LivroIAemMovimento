@@ -860,7 +860,7 @@ Sequência típica de uso:
 6. Por fim `tools/call` (usar uma ferramenta específica)
 ```
 
-### Analogia Final: Restaurante
+## Analogia Final: Restaurante
 
 ```
 1. INITIALIZE = Entrar no restaurante e ser recebido
