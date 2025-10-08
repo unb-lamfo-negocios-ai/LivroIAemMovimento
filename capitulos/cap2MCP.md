@@ -136,7 +136,7 @@ A arquitetura central do MCP se baseia em uma estrutura cliente-servidor robusta
 - **Servidores MCP** fornecem contexto, ferramentas e capacidades
 ```
 
-```{admonition} **Componentes principais:**
+```{admonition} Componentes principais:
 :class: note
 
 - **Recursos**: Dados estáticos ou dinâmicos para os modelos
@@ -786,7 +786,7 @@ Servidor: "ERRO! A ferramenta que você pediu não existe.
                        Ferramentas disponíveis: get_weather"
 ```
 
-```{admonition} **Códigos de erro comuns:**
+```{admonition} Códigos de erros comuns:
 :class: note
 
 - `-32700` → JSON inválido (erro de sintaxe)
@@ -860,7 +860,7 @@ Sequência típica de uso:
 6. Por fim `tools/call` (usar uma ferramenta específica)
 ```
 
-## Analogia Final: Restaurante
+## Analogia: Restaurante
 
 ```
 1. INITIALIZE = Entrar no restaurante e ser recebido
@@ -956,7 +956,7 @@ Agent de Pesquisa (Cliente + Servidor):
 
 Permite que um servidor MCP solicite inferências (chamadas de LLM) do cliente, sem precisar hospedar seu próprio modelo.
 
-```{admonition} **Como Funciona:**
+```{admonition} Como Funciona:
 :class: note
 
 1. Servidor precisa de inteligência para uma decisão
@@ -1132,7 +1132,7 @@ Exemplo de configuração:
 
 Servidores podem enviar notificações para clientes sobre mudanças de estado.
 
-```{admonition} **Tipos de Notificações:**
+```{admonition} Tipos de Notificações:
 :class: note
 
 - `resources/updated`: Recurso foi modificado
@@ -1808,7 +1808,7 @@ Fluxo:
 
 ### 3. Comparar Abordagens
 
-```{admonition}Objetivo: Comparar diferentes métodos
+```{admonition} Objetivo: Comparar diferentes métodos
 :class: note
 Fluxo:
 1. Buscar papers sobre métodos específicos
