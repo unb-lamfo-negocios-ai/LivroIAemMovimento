@@ -1209,7 +1209,26 @@ O MCP suporta diferentes mecanismos de comunicação:
 ```
 ## Limitações e Considerações de Segurança{cite}`dsacademy_mcp_blog, neo4j_mcp_blog`
 
+As implementações do MCP trazem avanços significativos em interoperabilidade e integração entre modelos de IA, mas é essencial compreender suas **limitações técnicas** e **riscos de segurança**.  Antes de aplicar o MCP em ambientes produtivos, recomenda-se avaliar aspectos como **exposição de dados sensíveis**, **controle de acesso**, **auditoria de logs** e **tratamento de falhas**, garantindo que a adoção do protocolo seja feita de forma segura e escalável. 
+Para saber mais sobre limitações e considerações de segurança consulte, {cite}`dsacademy_mcp_blog, neo4j_mcp_blog`.
+
 ###  1. Limitações do MCP
+
+```{list-table} Limitações e Considerações Técnicas
+:header-rows: 1
+:widths: 50 50
+
+* - **Limitações de Performance**
+  - **Limitações Funcionais**
+* - Latência de Rede: Servidores remotos podem ter latência alta  
+  - Stateless: Servidores MCP são geralmente stateless entre requisições
+* - Throughput: Limitado pela capacidade do transporte (HTTP vs STDIO)  
+  - Transações: Não há suporte nativo para transações distribuídas
+* - Concorrência: Nem todos os servidores suportam requisições paralelas  
+  - Streaming de Dados: Limitado para grandes volumes de dados
+* - Timeout: Operações longas podem exceder limites de timeout  
+  - Compatibilidade: Nem todas as ferramentas/APIs têm servidor MCP
+```
 
 **Limitações de Performance:**
 
@@ -1225,18 +1244,21 @@ O MCP suporta diferentes mecanismos de comunicação:
 - Streaming de Dados: Limitado para grandes volumes de dados
 - Compatibilidade: Nem todas as ferramentas/APIs têm servidor MCP
 
-**Quando NÃO Usar MCP:**
+```{admonition} Quando NÃO Usar MCP:
+:class: warning
 
 - Aplicações que precisam de latência ultra-baixa
 - Sistemas que requerem transações ACID complexas
 - Integrações simples que não justificam a complexidade
 - Ambientes com restrições severas de recursos
+```
 
-#### 2. Considerações de Segurança
+### 2. Considerações de Segurança
 
 **Autenticação e Autorização:**
 
-// Exemplo de configuração segura
+```{admonition} Exemplo de configuração segura
+:class: exemplo
 
 ```json
 {
@@ -1252,12 +1274,16 @@ O MCP suporta diferentes mecanismos de comunicação:
   }
 }
 ```
-**Validação de Entrada:**
+```
+
+```{admonition} **Validação de Entrada:**
+:class: note
 
 - Sempre validar parâmetros de ferramentas
 - Sanitizar dados antes de usar em queries/comandos
 - Implementar rate limiting para prevenir abuso
 - Usar schemas JSON rigorosos
+```
 
 **Controle de Acesso:**
 
