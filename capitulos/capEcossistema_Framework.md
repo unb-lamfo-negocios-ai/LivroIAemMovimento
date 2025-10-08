@@ -201,7 +201,7 @@ A limitação ao uso de DAGs (Grafos Acíclicos Direcionados) no LangFlow **não
 
     - Conecta o agente externo como uma ferramenta via cliente MCP.
  
-Resultado: arquitetura híbrida e poderosa
+**Resultado**: arquitetura híbrida e poderosa
 
 - O LangFlow continua simples e estável, mantendo seu modelo baseado em DAG.
 
@@ -224,16 +224,12 @@ O suporte a MCP **transforma o LangFlow** de um criador visual isolado em **uma 
 - Monitore uso e custos por provedor
 ```
 
-### **Conclusão: A Ponte Visual para a Orquestração de IA**
+Em resumo, nesta secção, estabelecemos o LangFlow como uma poderosa ferramenta de prototipagem visual, cuja arquitetura baseada em Grafos Acíclicos Dirigidos (DAGs) se destaca na aceleração do desenvolvimento de workflows lineares, como os pipelines de RAG. A sua interface intuitiva democratiza o acesso à construção de aplicações de IA e serve como uma "linguagem comum" para equipas multidisciplinares.
 
-Nesta secção, estabelecemos o LangFlow como uma poderosa ferramenta de prototipagem visual, cuja arquitetura baseada em Grafos Acíclicos Dirigidos (DAGs) se destaca na aceleração do desenvolvimento de workflows lineares, como os pipelines de RAG. A sua interface intuitiva democratiza o acesso à construção de aplicações de IA e serve como uma "linguagem comum" para equipas multidisciplinares.
-
-No entanto, também identificámos a sua limitação arquitetural inerente: a barreira da aciclicidade, que impede a criação de agentes com comportamentos iterativos e de autocorreção. A resposta estratégica do LangFlow a esta limitação não foi alterar o seu núcleo, mas sim abraçar a interoperabilidade através do Protocolo de Contexto de Modelo (MCP). O MCP funciona como uma ponte, permitindo que os fluxos lineares e fáceis de construir no LangFlow se conectem e orquestrem sistemas externos mais complexos e potencialmente cíclicos.
+No entanto, também identificamos a sua limitação arquitetural inerente: a barreira da aciclicidade, que impede a criação de agentes com comportamentos iterativos e de autocorreção. A resposta estratégica do LangFlow a esta limitação não foi alterar o seu núcleo, mas sim abraçar a interoperabilidade através do Protocolo de Contexto de Modelo (MCP). O MCP funciona como uma ponte, permitindo que os fluxos lineares e fáceis de construir no LangFlow se conectem e orquestrem sistemas externos mais complexos e potencialmente cíclicos.
 
 Com esta ponte estabelecida, o próximo passo lógico é explorar a arquitetura dos sistemas que vivem do outro lado — aqueles projetados desde o início para gerir ciclos, estado e a lógica complexa que define os agentes verdadeiramente autónomos.
 
-
----
 
 ## LangChain
 
