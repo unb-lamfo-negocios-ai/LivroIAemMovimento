@@ -1040,7 +1040,7 @@ Capacidade que permite ao servidor solicitar informações adicionais dos usuár
 :class: exemplo
 
 
-Fluxo durante execução de uma ferramenta de reserva:
+O script abaixo representa um fluxo durante execução de uma ferramenta de reserva.
 ```
 ```json
 {
@@ -1113,8 +1113,8 @@ Os servidores MCP podem implementar OAuth 2.0/2.1 para acessar recursos protegid
 5. Cliente recebe token de sessão para uso futuro
 ```
 
-```{admonition} **Exemplo de configuração:**
-:class: exemplo
+Exemplo de configuração:
+
 ```json
 {
   "mcpServers": {
@@ -1127,7 +1127,6 @@ Os servidores MCP podem implementar OAuth 2.0/2.1 para acessar recursos protegid
     }
   }
 }
-```
 ```
 
 ### 6. Notifications (Notificações)
@@ -1175,17 +1174,6 @@ O MCP suporta diferentes mecanismos de comunicação:
     - Suporte a múltiplos clientes
 ```
 
-**Transporte Local (STDIO):**
-
-- Comunicação via entrada/saída padrão
-- Ideal para servidores locais
-- Baixa latência, alta segurança
-
-**Transporte Remoto (HTTP/SSE):**
-
-- Comunicação via HTTP com Server-Sent Events
-- Permite servidores remotos
-- Suporte a múltiplos clientes
 
 **Configuração de Transporte:**
 
@@ -1207,42 +1195,30 @@ O MCP suporta diferentes mecanismos de comunicação:
 }
 ```
 
-## Limitações e Considerações de Segurança{cite}`dsacademy_mcp_blog, neo4j_mcp_blog`
+## Limitações e Considerações de Segurança
 
 As implementações do MCP trazem avanços significativos em interoperabilidade e integração entre modelos de IA, mas é essencial compreender suas **limitações técnicas** e **riscos de segurança**.  Antes de aplicar o MCP em ambientes produtivos, recomenda-se avaliar aspectos como **exposição de dados sensíveis**, **controle de acesso**, **auditoria de logs** e **tratamento de falhas**, garantindo que a adoção do protocolo seja feita de forma segura e escalável. 
 Para saber mais sobre limitações e considerações de segurança consulte, {cite}`dsacademy_mcp_blog, neo4j_mcp_blog`.
 
 ###  1. Limitações do MCP
 
-```{list-table} Limitações e Considerações Técnicas
+```{list-table}
 :header-rows: 1
 :widths: 50 50
 
 * - **Limitações de Performance**
   - **Limitações Funcionais**
-* - Latência de Rede: Servidores remotos podem ter latência alta  
-  - Stateless: Servidores MCP são geralmente stateless entre requisições
-* - Throughput: Limitado pela capacidade do transporte (HTTP vs STDIO)  
-  - Transações: Não há suporte nativo para transações distribuídas
-* - Concorrência: Nem todos os servidores suportam requisições paralelas  
-  - Streaming de Dados: Limitado para grandes volumes de dados
-* - Timeout: Operações longas podem exceder limites de timeout  
-  - Compatibilidade: Nem todas as ferramentas/APIs têm servidor MCP
+* - **Latência de Rede**: Servidores remotos podem ter latência alta  
+  - **Stateless**: Servidores MCP são geralmente stateless entre requisições
+* - **Throughput**: Limitado pela capacidade do transporte (HTTP vs STDIO)  
+  - **Transações**: Não há suporte nativo para transações distribuídas
+* - **Concorrência**: Nem todos os servidores suportam requisições paralelas  
+  - **Streaming de Dados**: Limitado para grandes volumes de dados
+* - **Timeout**: Operações longas podem exceder limites de timeout  
+  - **Compatibilidade**: Nem todas as ferramentas/APIs têm servidor MCP
 ```
 
-**Limitações de Performance:**
 
-- Latência de Rede: Servidores remotos podem ter latência alta
-- Throughput: Limitado pela capacidade do transporte (HTTP vs STDIO)
-- Concorrência: Nem todos os servidores suportam requisições paralelas
-- Timeout: Operações longas podem exceder limites de timeout
-
-**Limitações Funcionais:**
-
-- Stateless: Servidores MCP são geralmente stateless entre requisições
-- Transações: Não há suporte nativo para transações distribuídas
-- Streaming de Dados: Limitado para grandes volumes de dados
-- Compatibilidade: Nem todas as ferramentas/APIs têm servidor MCP
 
 ```{admonition} Quando NÃO Usar MCP:
 :class: warning
@@ -1259,9 +1235,11 @@ Antes de implementar qualquer integração baseada em MCP, é fundamental compre
 
 #### Autenticação e Autorização
 
-```{admonition} Exemplo de configuração segura
+```{admonition} Exemplo 
 :class: exemplo
 
+Configuração segura:
+```
 ```json
 {
   "mcpServers": {
@@ -1276,7 +1254,6 @@ Antes de implementar qualquer integração baseada em MCP, é fundamental compre
   }
 }
 ```
-```
 
 ```{admonition} **Validação de Entrada:**
 :class: note
@@ -1289,7 +1266,7 @@ Antes de implementar qualquer integração baseada em MCP, é fundamental compre
 
 #### Controle de Acesso
 
-# Exemplo de verificação de permissões
+Exemplo de verificação de permissões
 
 ```python
 def verify_permissions(operation, resource):
@@ -1308,16 +1285,16 @@ def verify_permissions(operation, resource):
 
 #### Auditoria e Logging
 
-**O que é:** 
-
 Sistema de registro que monitora e documenta todas as operações realizadas através do MCP. É como ter um "diário detalhado" de tudo que acontece entre cliente e servidor. 
 
-**Por que é importante:** 
+```{admonition} Por que é importante
+:class: note
 
 - **Rastreabilidade**: Saber exatamente quem fez o quê e quando
 - **Debugging**: Identificar problemas e entender falhas
 - **Segurança**: Detectar uso inadequado ou tentativas de acesso não autorizado
 - **Compliance**: Atender requisitos legais de auditoria
+```
 
 #### Informações Registradas
 
@@ -1347,15 +1324,17 @@ def log_mcp_operation(tool_name, params, user_id, result_status):
     })
 ```
 
-**Boas Práticas de Segurança:**
+```{admonition} Boas Práticas de Segurança
+:class: tip
 
 1. **Princípio do Menor Privilégio:** Conceda apenas as permissões mínimas necessárias
 2. **Defesa em Profundidade:** Múltiplas camadas de segurança
 3. **Monitoramento Contínuo:** Logs e alertas para atividades suspeitas
 4. **Atualizações Regulares:** Mantenha servidores MCP atualizados
 5. **Testes de Segurança:** Auditorias regulares e testes de penetração
+```
 
-### Benefícios do MCP
+## Benefícios do MCP
 
 O MCP oferece vantagens significativas para todo o ecossistema de IA:
 
