@@ -919,6 +919,8 @@ Esses materiais complementares ajudam tanto no domínio da estrutura de mensagen
 
 ## Outras Capacidades Essenciais{cite}`mcp_workshop_youtube, mcp_official_docs`
 
+O MCP oferece ainda um conjunto de capacidades avançadas que ampliam sua flexibilidade e inteligência. Elas tornam possível controlar o comportamento do modelo, organizar fluxos de interação e extrair informações de forma mais precisa e estruturada. Para se aprofundar nesses conceitos, recomendamos a leitura dos materiais {cite}mcp_workshop_youtube, mcp_official_docs`.
+
 ### **1. Composability (Componibilidade)**
 
 Uma característica poderosa do MCP é que qualquer aplicação, API ou agente pode ser tanto um cliente MCP quanto um servidor MCP simultaneamente. Isso permite criar arquiteturas complexas e em camadas.
