@@ -1058,7 +1058,7 @@ O MCP suporta autocompletar para argumentos de prompt e parâmetros de recursos.
 
 **Implementação:**
 
-// Cliente solicita sugestões
+Cliente solicita sugestões
 
 ```json
 {
@@ -1078,7 +1078,7 @@ O MCP suporta autocompletar para argumentos de prompt e parâmetros de recursos.
 }
 ```
 
-// Servidor retorna sugestões
+Servidor retorna sugestões
 
 ```json
 {
@@ -1102,16 +1102,18 @@ O MCP suporta autocompletar para argumentos de prompt e parâmetros de recursos.
 
 Os servidores MCP podem implementar OAuth 2.0/2.1 para acessar recursos protegidos.
 
-**Fluxo de Autenticação:**
+```{admonition} **Fluxo de Autenticação:**
+:class: note
 
 1. Servidor inicia processo OAuth
 2. Cliente redireciona usuário para provedor
 3. Usuário autentica e autoriza
 4. Servidor recebe token OAuth
 5. Cliente recebe token de sessão para uso futuro
+```
 
-**Configuração Exemplo:**
-
+```{admonition} **Exemplo de configuração:**
+:class: exemplo
 ```json
 {
   "mcpServers": {
@@ -1125,18 +1127,24 @@ Os servidores MCP podem implementar OAuth 2.0/2.1 para acessar recursos protegid
   }
 }
 ```
-
-#### 6. Notifications (Notificações)
+```
+### 6. Notifications (Notificações)
 
 Servidores podem enviar notificações para clientes sobre mudanças de estado.
 
-**Tipos de Notificações:**
+```{admonition} **Tipos de Notificações:**
+:class: note
 
-- resources/updated: Recurso foi modificado
-- tools/list_changed: Lista de ferramentas mudou
-- prompts/list_changed: Lista de prompts mudou
+- `resources/updated`: Recurso foi modificado
+- `tools/list_changed`: Lista de ferramentas mudou
+- `prompts/list_changed`: Lista de prompts mudou
+```
 
-**Exemplo:**
+O script do exemplo abaixo envia uma **notificação ao servidor** informando que o **recurso localizado no URI `file:///project/config.json` foi atualizado**, permitindo que o servidor reaja a essa mudança se necessário (como recarregar o arquivo ou ajustar o contexto).
+
+```{admonition} **Exemplo de notificação ao servidor:**
+:class: exemplo
+
 ```json
 {
    "jsonrpc": "2.0",
@@ -1146,9 +1154,25 @@ Servidores podem enviar notificações para clientes sobre mudanças de estado.
     }
 }
 ```
-#### 7. Transports (Transportes)
+```
+
+### 7. Transports (Transportes)
 
 O MCP suporta diferentes mecanismos de comunicação:
+
+```{list-table}
+:header-rows: 1
+:widths: 50 50
+
+* - **Transporte Local (STDIO)**
+  - **Transporte Remoto (HTTP/SSE)**
+* - - Comunicação via entrada/saída padrão  
+    - Ideal para servidores locais  
+    - Baixa latência, alta segurança
+  - - Comunicação via HTTP com Server-Sent Events  
+    - Permite servidores remotos  
+    - Suporte a múltiplos clientes
+```
 
 **Transporte Local (STDIO):**
 
@@ -1162,7 +1186,8 @@ O MCP suporta diferentes mecanismos de comunicação:
 - Permite servidores remotos
 - Suporte a múltiplos clientes
 
-**Configuração de Transporte:**
+```{admonition} **Configuração de Transporte:**
+:class: exemplo
 
 ```json
 {
@@ -1181,9 +1206,10 @@ O MCP suporta diferentes mecanismos de comunicação:
   }
 }
 ```
-### Limitações e Considerações de Segurança{cite}`dsacademy_mcp_blog, neo4j_mcp_blog`
+```
+## Limitações e Considerações de Segurança{cite}`dsacademy_mcp_blog, neo4j_mcp_blog`
 
-#### 1. Limitações do MCP
+###  1. Limitações do MCP
 
 **Limitações de Performance:**
 
