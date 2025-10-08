@@ -1,7 +1,6 @@
 # Ecossistema de Ferramentas e Frameworks
 
-O crescimento da Inteligência Artificial trouxe consigo um **ecossistema diverso de ferramentas e frameworks**, que aceleram a criação, teste e implantação de soluções.  
-Esses recursos permitem que equipes foquem no **valor de negócio** em vez de reinventar a roda do zero.  
+O crescimento da Inteligência Artificial trouxe consigo um **ecossistema diverso de ferramentas e frameworks**, que aceleram a criação, teste e implantação de soluções. Esses recursos permitem que equipes foquem no **valor de negócio** em vez de reinventar a roda do zero.  
 
 Neste capítulo, vamos explorar algumas das ferramentas mais utilizadas atualmente, com foco em suas aplicações práticas, pontos fortes e limitações.  
 
@@ -9,24 +8,26 @@ Neste capítulo, vamos explorar algumas das ferramentas mais utilizadas atualmen
 
 ## LangFlow
 
-O **LangFlow** é uma interface visual que facilita a construção de aplicações com modelos de linguagem.  
-Ele funciona como um **“laboratório de fluxos”**, no qual prompts, APIs, bancos de dados e lógica de negócio podem ser conectados de forma intuitiva, sem necessidade de programação aprofundada.  
+O **LangFlow** é uma interface visual que facilita a construção de aplicações com modelos de linguagem. É uma ferramenta de código aberto que funciona como um **“laboratório de fluxos”**, no qual prompts, APIs, bancos de dados e lógica de negócio podem ser conectados de forma intuitiva, sem necessidade de programação aprofundada. Por reduzir barreiras técnicas, é especialmente útil para **equipes multidisciplinares** (como marketing e inovação) que querem experimentar IA de forma ágil {cite}`langflow2023`.
 
-**Principais usos:**  
+```{admonition} Principais usos
+:class: note  
 - Criação de protótipos de chatbots em minutos.  
 - Testes rápidos de **Prompt Engineering** com diferentes entradas.  
-- Construção de **Proofs of Concept (PoCs)** para validação junto a stakeholders.  
+- Construção de **Proofs of Concept (PoCs)** para validação junto a stakeholders.
+```
 
-Por reduzir barreiras técnicas, é especialmente útil para **equipes multidisciplinares** (como marketing e inovação) que querem experimentar IA de forma ágil {cite}`langflow2023`.  
-
-----TEXTO---NOTION---
-O LangFlow é uma ferramenta de código aberto que permite criar fluxos de trabalho de IA visualmente, similar ao LangChain. Suas principais características incluem:
+```{admonition} Principais características
+:class: note
 
 - Interface visual drag-and-drop para construção de fluxos de IA
 - Compatibilidade com diversos modelos de linguagem e embeddings
 - Suporte a múltiplos provedores de IA (OpenAI, Anthropic, etc)
 - Exportação de fluxos como código Python
+```
 
+Integração com MCP: é possível trabalhar com o LangFlow integrando-o ao MCP (Model Context Protocol), permitindo que o fluxo interaja com múltiplos modelos e ferramentas de forma padronizada, escalável e interoperável.
+```
 Para trabalhar com MCP (Model Context Protocol):
 
 - Configure diferentes modelos de linguagem como nós
