@@ -1408,7 +1408,7 @@ Antes de iniciar a aplicação, certifique-se de que os seguintes requisitos est
 - **Python 3.8 ou superior** — [Baixe aqui](https://www.python.org/downloads/)
 - **pip** — Gerenciador de pacotes do Python (já incluído na instalação padrão)
 - **Chave de API do Google Gemini** — [Obtenha gratuitamente aqui](https://makersuite.google.com/app/apikey)
-- 
+  
 ## Instalação Completa (Passo a Passo)
 
 ### Passo 1: Preparar o Ambiente
@@ -1695,7 +1695,10 @@ Digite sua pergunta (ou 'voltar' para menu):
 - `query`: Termos de busca (ex: "machine learning", "quantum computing")
 - `max_results`: Quantidade de resultados (1-10)
 
-**Dica:** Use termos em inglês para melhores resultados.
+```{admonition} Dica
+:class: tip
+Use termos em inglês para melhores resultados.
+```
 
 ### 2. Detalhes do Paper (`get_paper_details`)
 
@@ -1721,11 +1724,13 @@ Digite sua pergunta (ou 'voltar' para menu):
 
 **O que faz:** Conversa sobre os papers em linguagem natural
 
-**Exemplos de perguntas:**
+```{admonition} Exemplos de perguntas
+:class: exemplo
 - "Quais são as limitações apontadas?"
 - "Que datasets foram usados?"
 - "Como os métodos se comparam?"
 - "Quais as aplicações práticas?"
+```
 
 ### 5. Gerenciamento de Cache
 
@@ -1737,7 +1742,7 @@ Digite sua pergunta (ou 'voltar' para menu):
 
 ---
 
-## 📊 Monitoramento e Logs
+## Monitoramento e Logs
 
 ### Visualizar Logs em Tempo Real
 
@@ -1766,10 +1771,12 @@ Formato dos logs:
 2025-09-30 14:32:20 - ERROR - API key invalid
 ```
 
-**Níveis:**
+```{admonition} Níveis:
+:class: note
 - `INFO`: Informações normais
 - `WARNING`: Avisos (não crítico)
 - `ERROR`: Erros que precisam atenção
+```
 
 ---
 
@@ -1777,8 +1784,8 @@ Formato dos logs:
 
 ### 1. Revisão Bibliográfica Rápida
 
-```
-Objetivo: Revisar literatura sobre um tema
+```{admonition} Objetivo: Revisar literatura sobre um tema
+:class: note
 Fluxo:
 1. Buscar papers (opção 1)
 2. Ver detalhes dos mais relevantes (opção 2)
@@ -1788,8 +1795,8 @@ Fluxo:
 
 ### 2. Identificar Tendências de Pesquisa
 
-```
-Objetivo: Entender direções da área
+```{admonition} Objetivo: Entender direções da área
+:class: note
 Fluxo:
 1. Buscar papers recentes (opção 1)
 2. Análise de tendências (opção 4)
@@ -1798,8 +1805,8 @@ Fluxo:
 
 ### 3. Comparar Abordagens
 
-```
-Objetivo: Comparar diferentes métodos
+```{admonition}Objetivo: Comparar diferentes métodos
+:class: note
 Fluxo:
 1. Buscar papers sobre métodos específicos
 2. Análise comparativa (opção 5)
@@ -1830,7 +1837,9 @@ Fluxo:
 - Ignorar mensagens de erro nos logs
 ```
 
-### Arquivo `.gitignore` Recomendado
+### Arquivo `.gitignore` recomendado
+
+Para manter seu repositório limpo e evitar o versionamento de arquivos desnecessários, recomendamos utilizar um arquivo `.gitignore` adequado ao projeto.
 
 ```gitignore
 # Ambiente virtual
@@ -1865,9 +1874,9 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 
 ---
 
-## Suporte
+##  Recursos Úteis
 
-### Recursos Úteis
+Durante a implementação e aprofundamento no uso do MCP, é importante ter à mão algumas ferramentas e documentações de apoio. Abaixo estão links úteis que podem acelerar o desenvolvimento e facilitar a integração com APIs e modelos de IA:
 
 - **Documentação FastMCP**: https://github.com/jlowin/fastmcp
 - **ArXiv API**: https://arxiv.org/help/api
