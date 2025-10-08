@@ -479,21 +479,30 @@ A única restrição é que a função do nó deve aceitar o objeto de estado co
 As arestas conectam os nós e ditam a ordem de execução. LangGraph suporta dois tipos principais de arestas, e é na combinação delas que reside o poder do framework.
 
 - **Arestas Padrão:** Uma aresta padrão define uma transição incondicional. A instrução graph.add_edge("A", "B") significa que, sempre que o nó "A" terminar sua execução, o fluxo de controle passará imediatamente para o nó "B". Isso é usado para sequências lógicas fixas dentro do comportamento do agente.
-- **Arestas Condicionais (Conditional Edges):** Este é o mecanismo que habilita a verdadeira inteligência e autonomia. Uma aresta condicional permite que o fluxo de controle seja roteado para diferentes nós com base no conteúdo atual do objeto de estado. A implementação funciona da seguinte maneira:
+- **Arestas Condicionais (Conditional Edges):** Este é o mecanismo que habilita a verdadeira inteligência e autonomia. Uma aresta condicional permite que o fluxo de controle seja roteado para diferentes nós com base no conteúdo atual do objeto de estado.
+
+```{admonition} A implementação funciona da seguinte maneira:
+:class: note
+
 1. Um nó de origem (ex: "analisar_resultados") é conectado a um nó especial de roteamento.
 2. Este nó de roteamento é uma função que inspeciona o estado (ex: verifica se uma ferramenta foi chamada, se a resposta foi encontrada, etc.).
 3. Com base nessa inspeção, a função de roteamento retorna o nome do próximo nó a ser executado.
 4. O grafo é configurado com um mapeamento que conecta os possíveis retornos da função de roteamento aos nós de destino correspondentes.
+```
 
 É através das arestas condicionais que um agente pode decidir se deve chamar outra ferramenta, refinar sua abordagem, pedir ajuda a um humano ou finalizar o trabalho por ter alcançado uma solução satisfatória. Isso permite a implementação de ciclos, lógica de ramificação complexa e comportamento verdadeiramente dinâmico.
 
-### **2.3. Construindo seu Primeiro Agente Cíclico (Tutorial com Código)**
+### Construindo seu Primeiro Agente Cíclico (Tutorial com Código)
 
-Para solidificar esses conceitos, vamos construir um agente de pesquisa simples, mas poderoso. O objetivo do agente é receber uma pergunta, usar uma ferramenta de busca para encontrar informações e, crucialmente, decidir se a informação encontrada é suficiente para responder ou se precisa refinar a busca e tentar novamente. Este comportamento cíclico é o diferencial do LangGraph.
+Antes de avançarmos, é hora de colocar os conceitos em prática. Vamos construir um agente de pesquisa interativo, simples na estrutura, mas poderoso no comportamento. Seu funcionamento vai além do tradicional “pergunta e resposta”: ele será capaz de consultar uma ferramenta de busca, interpretar os resultados obtidos e tomar decisões sobre os próximos passos.
+
+Se a resposta for satisfatória, ótimo — o agente encerra o processo. Caso contrário, ele refina a pergunta, pesquisa novamente e recomeça o ciclo, até reunir informações suficientes para responder com segurança. Essa capacidade de avaliar, decidir e agir iterativamente é justamente o que caracteriza um agente cíclico, e o que torna o LangGraph uma tecnologia tão estratégica.
+
+Mais do que um simples tutorial de código, o que veremos a seguir é uma porta de entrada para modelos de raciocínio autônomo, com aplicações reais em assistentes inteligentes, bots de atendimento, ferramentas de busca e muito mais.
 
 **Cenário:** Um agente que responde a perguntas usando uma busca na web simulada.
 
-**Passo 1: Definição do Estado**
+#### **Passo 1: Definição do Estado**
 
 Primeiro, definimos a estrutura da "memória" do nosso agente usando TypedDict. O estado irá rastrear a pergunta, as mensagens trocadas (para manter o histórico), e o número de iterações.
 
@@ -510,9 +519,9 @@ class AgentState(TypedDict):
     # O Annotated e o operator.add permitem que a chave 'messages' funcione como um acumulador.
     # Novas mensagens serão adicionadas à lista existente em vez de substituí-la.
     iterations: int
-``
+```
 
-**Passo 2: Definição dos Nós**
+#### **Passo 2: Definição dos Nós**
 
 Agora, criamos as funções Python que servirão como os nós do nosso grafo. Cada função recebe o estado e retorna um dicionário com as atualizações.
 
@@ -550,7 +559,7 @@ def generate_answer(state: AgentState) -> dict:
         return {"messages": [final_answer]}
 ```
 
-**Passo 3: Definição da Lógica Cíclica (Nó de Roteamento)**
+#### **Passo 3: Definição da Lógica Cíclica (Nó de Roteamento)**
 
 Este é o cérebro do nosso agente. A função `should_continue` inspeciona o estado e decide para onde o fluxo deve ir em seguida: de volta para a busca ou para o final.
 
@@ -568,7 +577,7 @@ def should_continue(state: AgentState) -> str:
         return "end"
 ```
 
-**Passo 4: Construção e Compilação do Grafo**
+#### **Passo 4: Construção e Compilação do Grafo**
 
 Finalmente, montamos o grafo, adicionando os nós e as arestas (incluindo a aresta condicional).
 
@@ -601,7 +610,7 @@ workflow.add_conditional_edges(
 app = workflow.compile()
 ```
 
-**Passo 5: Execução do Grafo**
+#### **Passo 5: Execução do Grafo**
 
 Agora podemos executar nosso agente. Observe como ele executa o ciclo uma vez antes de encontrar a resposta.
 
@@ -635,7 +644,7 @@ for event in app.stream(initial_input, {"recursion_limit": 5}):
 
 Este exemplo simples demonstra o poder do paradigma do LangGraph. A capacidade de criar ciclos controlados por lógica condicional é o que permite a construção de agentes que podem raciocinar, planejar e se auto-corrigir.
 
-### 2.4. Padrões Avançados: Multi-Agentes e Intervenção Humana
+### Padrões Avançados: Multi-Agentes e Intervenção Humana
 
 A arquitetura do LangGraph se estende elegantemente a padrões muito mais sofisticados, essenciais para aplicações do mundo real.
 
