@@ -152,7 +152,7 @@ A arquitetura do LangFlow é construída em torno de três conceitos fundamentai
 - Um agente é um tipo especializado de componente que atua como o "cérebro" de um fluxo. Utiliza um LLM para raciocinar, tomar decisões e escolher quais "ferramentas" (outros componentes conectados) usar com base na entrada do utilizador.
 - O componente do agente encapsula lógicas complexas, como o padrão ReAct (Reason+Act), abstraindo-as do utilizador e simplificando a construção de sistemas que podem interagir dinamicamente com o seu ambiente.
 
-### Interoperabilidade e o Protocolo de Contexto de Modelo (MCP)
+### Interoperabilidade e o MCP
 
 É possível trabalhar com o LangFlow integrando-o ao MCP, permitindo que o fluxo interaja com múltiplos modelos e ferramentas de forma padronizada, escalável e interoperável. Isto é, o LangFlow evoluiu para ser tanto um servidor como um cliente do MCP, uma característica crítica para sistemas de IA modernos e distribuídos. Veja [Seção Model Context Protocol](secao_mcp) para saber mais sobre MCP. 
 
@@ -318,17 +318,19 @@ agent_executor = AgentExecutor.from_agent_and_tools(
 )
 ```
 
------parte mateus
-**Introdução ao LangChain e frameworks similares**
+É importante observar que, embora o LangChain seja um dos frameworks mais populares para orquestração de fluxos com LLMs, ele não está sozinho nesse ecossistema. Outras ferramentas também oferecem recursos avançados para construção de aplicações cognitivas:
 
-Para superar essas limitações, surgiram frameworks como o **LangChain**, **LlamaIndex**, **CrewAI**, **Autogen**, entre outros. O LangChain, por exemplo, permite estruturar aplicações que usam LLMs com recursos como:
+- LlamaIndex – Foco na indexação e consulta de dados não estruturados.
 
-- **Prompt templates**: Criação de prompts modulares e reutilizáveis.
-- **Memória de conversa**: Persistência de contexto entre chamadas.
-- **Integração com ferramentas**: Permite ao LLM chamar APIs externas, bancos de dados ou executar funções.
-- **Agentes**: Um nível acima, em que o modelo decide o que fazer, quais ferramentas usar e em que ordem.
+- Haystack – Robusto para busca semântica e construção de pipelines de NLP.
 
-Essas soluções transformam um simples modelo de linguagem em uma **aplicação inteligente completa**, com raciocínio autônomo, tomada de decisão e execução de tarefas práticas.
+- Semantic Kernel – Framework da Microsoft voltado à composição de agentes e funções de IA com lógica empresarial.
+
+- CrewAI – Especializado em coordenação de múltiplos agentes autônomos que colaboram entre si para atingir objetivos complexos.
+
+- Autogen (Microsoft) – Facilita a criação de sistemas colaborativos entre múltiplas instâncias de LLMs, com ênfase em automação e diálogo entre agentes.
+
+Esses frameworks possuem focos distintos, mas compartilham o mesmo propósito: reduzir a complexidade do desenvolvimento de soluções baseadas em LLMs e acelerar a criação de sistemas robustos, modulares e inteligentes.
 
 ### A Filosofia de Orquestração do LangChain: De Framework a Ecossistema
 
