@@ -48,6 +48,7 @@ Neste e-book, optamos por aprofundar o **Model Context Protocol (MCP)** por trê
 - Está alinhado com práticas modernas de construção de **sistemas multiagentes baseados em linguagem natural**.
   
 ## Model Context Protocol
+:name: secao_mcp
 
 O [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) (MCP) é uma iniciativa aberta e recente que busca padronizar a comunicação entre modelos de linguagem e aplicações. Seu objetivo central é permitir que diferentes agentes de IA interajam com fontes de dados, APIs e sistemas legados de forma segura, consistente e escalável — sem a necessidade de integrações manuais e fragmentadas.
 
