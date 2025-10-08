@@ -386,11 +386,13 @@ Isso permite mapear fluxos complexos de decisão como se fossem diagramas visuai
 - **Governança**: auditoria mais fácil em processos críticos (como jurídico e saúde).  
 - **Flexibilidade**: múltiplos caminhos de execução em um mesmo sistema.  
 
-**Exemplo:** um sistema de triagem médica que decide se um paciente deve ser atendido por IA, direcionado a um humano ou encaminhado a um especialista.  
+```{admonition} Exemplo de uso do LangGraph
+:class: exemplo
+
+Um sistema de triagem médica que decide se um paciente deve ser atendido por IA, direcionado a um humano ou encaminhado a um especialista.
+```
 
 Essa abordagem é indicada para **sistemas críticos** que exigem rastreabilidade e controle.  
-
-____ parte Notion
 
 ### **A Era das Cadeias Lineares**
 
@@ -403,9 +405,7 @@ No contexto do LangChain, um DAG representa um fluxo de trabalho onde os dados s
 
 Este fluxo é linear, determinístico e perfeitamente modelado por um DAG. Cada passo flui para o seguinte, e o processo termina com a resposta. Para uma vasta gama de aplicações, desde chatbots de perguntas e respostas até sumarizadores de documentos, essa abordagem é suficiente e robusta.
 
----
-
-### **A Barreira da Aciclicidade**
+### A Barreira da Aciclicidade
 
 Contudo, à medida que a ambição por trás das aplicações de IA cresceu, as limitações do paradigma DAG tornaram-se cada vez mais evidentes, especialmente no desenvolvimento de agentes autônomos. Agentes verdadeiramente inteligentes não operam em linhas retas; eles deliberam, corrigem seus próprios erros e adaptam suas estratégias com base em novas informações. A natureza estritamente unidirecional dos DAGs impõe barreiras fundamentais a esse tipo de comportamento dinâmico.
 
@@ -413,43 +413,45 @@ Contudo, à medida que a ambição por trás das aplicações de IA cresceu, as 
 - **Dificuldade em Implementar Lógica Condicional Complexa:** Embora os DAGs possam suportar ramificações (um passo pode levar a diferentes caminhos), gerenciar uma lógica condicional sofisticada torna-se complicado. Imagine um agente que, após executar uma ferramenta, precisa decidir entre três ou quatro ações possíveis, incluindo a repetição da mesma ferramenta com parâmetros diferentes ou a transição para uma ferramenta completamente nova. Modelar essa lógica complexa, onde os caminhos podem precisar convergir ou retornar a um ponto anterior, é antinatural e convoluto dentro das restrições de um grafo acíclico.
 - **Intervenção Humana como um "Hack":** A integração de supervisão humana (Human-in-the-Loop - HITL) em um DAG muitas vezes se assemelha a uma solução improvisada. Inserir um ponto de verificação para validação humana que pode, potencialmente, reenviar o fluxo para um estágio anterior, quebra a pureza do modelo DAG e requer implementações personalizadas complexas. Não é uma capacidade nativa, mas sim um "hack" adicionado ao sistema.
 
----
 
-### **A Mudança de Paradigma de "Fluxo de Trabalho" para "Modelo de Estado"**
+### A Mudança de Paradigma de "Fluxo de Trabalho" para "Modelo de Estado"
 
 A constatação de que os DAGs eram insuficientes para a próxima geração de agentes de IA levou a uma reavaliação fundamental da própria natureza da orquestração. A limitação não era apenas a ausência de ciclos, mas a falta de um conceito central e persistente de "estado" que evolui ao longo desses ciclos. Um DAG é, em essência, um pipeline de transformação de dados, análogo a um processo de ETL (*Extract, Transform, Load*). Os dados entram, são processados em etapas e saem.
 
 LangGraph surge como a resposta a essa limitação, mas não é meramente um "LangChain com loops". Ele representa uma mudança filosófica profunda. A principal abstração introduzida pelo LangGraph é o StatefulGraph, ou Grafo de Estado. Essa mudança de arquitetura reflete uma transição na forma como concebemos a orquestração de LLMs: passamos de vê-la como um *processo de ETL de dados* para vê-la como a *simulação de um agente cognitivo com memória e capacidade de raciocínio*.
 
-Neste novo paradigma:
+```{admonition} Neste novo paradigma
+:class: note
 
 - O **Estado** é a memória de trabalho do agente. É um objeto central que contém todas as informações relevantes sobre a tarefa em andamento: a pergunta original, os resultados de ferramentas, as tentativas anteriores, as mensagens trocadas, etc.
 - Os **Nós** do grafo são as ações ou operações que o agente pode realizar (chamar um LLM, usar uma ferramenta, agregar dados).
 - Os **Ciclos** e as **Arestas Condicionais** representam o processo de "pensamento" do agente, permitindo-lhe avaliar o estado atual e decidir qual ação tomar em seguida.
+```
 
 Portanto, LangGraph não deve ser visto como uma simples atualização incremental do LangChain. Ele é um framework projetado para um paradigma de programação de IA inteiramente novo, focado na criação de sistemas dinâmicos, com estado e cíclicos, que podem emular processos de deliberação e auto-correção, abrindo as portas para a construção de agentes verdadeiramente autônomos e robustos.
 
----
 
-## **Seção 2: Mergulho Profundo no LangGraph: Arquitetura para Agentes Autônomos**
+## Mergulho Profundo no LangGraph: Arquitetura para Agentes Autônomos
 
-Para construir agentes capazes de raciocínio complexo, iteração e adaptação, é necessária uma arquitetura que vá além dos fluxos lineares. LangGraph fornece exatamente isso, introduzindo um modelo computacional baseado em grafos de estado. Esta seção descontrói a arquitetura do LangGraph em seus componentes fundamentais, fornecendo um modelo mental claro de seu funcionamento e culminando em um exemplo prático e comentado.
+Para construir agentes capazes de raciocínio complexo, iteração e adaptação, é necessária uma arquitetura que vá além dos fluxos lineares. LangGraph fornece exatamente isso, introduzindo um modelo computacional baseado em grafos de estado. 
 
-### **2.1. O Paradigma do Grafo de Estado (StatefulGraph): O Coração do Agente**
+### O Paradigma do Grafo de Estado (StatefulGraph): O Coração do Agente
 
 No centro do LangGraph está a classe StatefulGraph. Diferente dos grafos tradicionais que simplesmente passam a saída de um nó como entrada para o próximo, um StatefulGraph opera sobre um objeto de estado centralizado e persistente. Este objeto de estado, frequentemente definido como uma TypedDict ou um BaseModel Pydantic em Python, serve como a "memória de trabalho" ou o "contexto" completo da execução do agente.
 
 Cada nó no grafo recebe o estado atual completo como sua entrada. Ao concluir sua computação, o nó não retorna apenas um resultado isolado, mas sim um objeto que especifica como o estado central deve ser atualizado. O LangGraph então se encarrega de fundir essa atualização no estado principal.
 
-A importância de um estado centralizado é multifacetada:
+```{admonition} A importância de um estado centralizado é multifacetada
+:class: note
 
 - **Consistência dos Dados:** Garante que todos os nós operem com a mesma visão do mundo, eliminando a necessidade de passar manualmente dezenas de parâmetros entre as funções.
 - **Depuração e Observabilidade:** Em qualquer ponto da execução, é possível inspecionar o objeto de estado para entender exatamente o que o agente "sabe" e "pensa". Isso é inestimável para depurar fluxos complexos.
 - **Persistência e Retomada:** O estado pode ser facilmente serializado e salvo (um processo conhecido como *checkpointing*). Isso permite que execuções muito longas sejam interrompidas e retomadas posteriormente, ou que o histórico completo de uma interação seja auditado.
+```
 
 Em suma, o StatefulGraph transforma a computação de um simples fluxo de dados para a simulação de um processo com memória, onde o estado evolui a cada passo, refletindo o progresso do agente em direção ao seu objetivo.
 
-### **2.2. Anatomia de um Grafo em LangGraph: Nós e Arestas**
+### Anatomia de um Grafo em LangGraph: Nós e Arestas
 
 Um grafo em LangGraph é composto por dois elementos primários: nós (*nodes*), que representam as unidades de computação, e arestas (*edges*), que definem o fluxo de controle entre esses nós.
 
