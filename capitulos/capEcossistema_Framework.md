@@ -28,14 +28,13 @@ O **LangFlow** é uma interface visual que facilita a construção de aplicaçõ
 
 Integração com MCP: é possível trabalhar com o LangFlow integrando-o ao MCP (Model Context Protocol), veja [Seção Model Context Protocol](secao_mcp), permitindo que o fluxo interaja com múltiplos modelos e ferramentas de forma padronizada, escalável e interoperável.
 
-```{admonition} Para trabalhar com o MCP:
-:class: note
+Para trabalhar com o MCP:
 
 - Configure diferentes modelos de linguagem como nós
 - Estabeleça regras de roteamento entre modelos
 - Defina estratégias de fallback automático
 - Monitore uso e custos por provedor
-```
+
 
 O LangFlow pode ser enquadrado não apenas como uma ferramenta, mas como um paradigma de desenvolvimento distinto. 
 
