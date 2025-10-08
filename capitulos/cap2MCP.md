@@ -1036,9 +1036,12 @@ Capacidade que permite ao servidor solicitar informações adicionais dos usuár
 - Obter permissões específicas
 ```
 
-```{admonition} **Exemplo de fluxo durante execução de uma ferramenta de reserva**
+```{admonition} **Exemplo**
 :class: exemplo
- 
+
+
+Fluxo durante execução de uma ferramenta de reserva:
+```
 ```json
 {
   "jsonrpc": "2.0",
@@ -1048,7 +1051,6 @@ Capacidade que permite ao servidor solicitar informações adicionais dos usuár
     "options": ["Confirmar", "Cancelar", "Alterar horário"]
     }
  }
-```
 ```
 
 ### 4. Completions (Conclusões/Sugestões)
