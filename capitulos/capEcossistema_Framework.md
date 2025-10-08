@@ -35,7 +35,7 @@ Acelerar o desenvolvimento de aplicações de Inteligência Artificial (IA) atra
 
 ### História por trás do LangFlow
 
-A plataforma foi desenvolvida pela empresa Logspace, fundada em 2022 pelos mineiros  Rodrigo Nader e Gabriel Almeida. Em entrevistas e publicações, o projeto é frequentemente descrito como uma "ferramenta brasileira".
+A plataforma foi desenvolvida pela empresa Logspace, fundada em 2022 pelos mineiros (🔺)  Rodrigo Nader e Gabriel Almeida. Em entrevistas e publicações, o projeto é frequentemente descrito como uma "ferramenta brasileira".
 
 Rodrigo Nader, um dos fundadores, expressou o objetivo de fortalecer o cenário de tecnologia no país, afirmando: 
 
@@ -96,10 +96,9 @@ A interface visual de **baixo código** do LangFlow funciona como uma **tela com
 
 Essa colaboração **reduz retrabalho**, **acelera iterações** e **garante alinhamento entre áreas**.
 
-**Novas Funções no Desenvolvimento com IA**: A adoção de ferramentas como o LangFlow aponta para uma nova configuração organizacional:
+**Novas Funções no Desenvolvimento com IA**: A adoção de ferramentas como o LangFlow aponta para uma nova configuração organizacional, com o surgimento de duas novas funções:
 
-Surgem novas funções como:
- 
+
 ```{list-table}
 :widths: 50 50
 
@@ -111,10 +110,6 @@ Surgem novas funções como:
 
 Esses papéis atuam como **pontes entre os requisitos de negócio e a implementação técnica**, consolidando uma prática de desenvolvimento mais ágil, colaborativa e sustentável.
 
-### Análise Arquitetural Aprofundada: De Grafos Visuais a Fluxos Executáveis
-
-Esta secção desconstrói a arquitetura subjacente do LangFlow, explicando como os designs visuais são traduzidos em lógica executável e como a plataforma se integra no ecossistema de IA mais amplo.
-
 ### O Modelo de Execução: Grafos Acíclicos Direcionados (DAGs)
 
 ```{admonition} Grafo Acíclico Direcionado (DAG): núcleo do modelo de execução do LangFlow
@@ -124,7 +119,9 @@ Esta secção desconstrói a arquitetura subjacente do LangFlow, explicando como
 - Os nós são então ordenados topologicamente para determinar uma ordem de execução estrita e sequencial, baseada nas dependências entre eles.
 ```
 
-Durante a construção do grafo, a função `def_build` de cada componente é chamada para validar e preparar o nó. O grafo é então processado na ordem de dependência, com a saída de um nó a ser passada como entrada para o nó seguinte. Este modelo sequencial e acíclico é altamente eficaz para workflows lineares ou com ramificações, como pipelines de RAG padrão, onde o processo é previsível: 
+- Durante a construção do grafo, a função `def_build` de cada componente é chamada para validar e preparar o nó.
+- O grafo é então processado na ordem de dependência, com a saída de um nó a ser passada como entrada para o nó seguinte.
+- Este modelo sequencial e acíclico é altamente eficaz para workflows lineares ou com ramificações, como pipelines de RAG padrão, onde o processo é previsível: 
 
 :::{div} center
 `Carregar Dados -> Dividir -> Embutir -> Armazenar -> Recuperar -> Gerar`
@@ -136,15 +133,15 @@ No entanto, a natureza "Acíclica" do modelo DAG significa que ele, por definiç
 
 A arquitetura do LangFlow é construída em torno de três conceitos fundamentais que trabalham em conjunto para permitir a criação de aplicações de IA.
 
-1. **Fluxos (Flows)**
+#### 1. **Fluxos (Flows)**
 
 Os fluxos são o artefacto principal no LangFlow. Um fluxo é um workflow completo e executável que representa a lógica de uma aplicação. Pode ser criado do zero, a partir de modelos pré-construídos, ou importando um ficheiro JSON que define a sua estrutura. Os fluxos encapsulam toda a sequência de operações, desde a entrada do utilizador até à saída final, representando visualmente o percurso dos dados através dos vários componentes.
 
-2. **Componentes**
+#### 2. **Componentes**
 
 Os componentes são os nós individuais dentro de um fluxo. Cada componente é uma unidade modular e executável que realiza uma tarefa específica, como interagir com um LLM, carregar dados de uma fonte, ou conectar-se a uma base de dados vetorial. O LangFlow fornece uma vasta biblioteca de componentes, categorizados em grupos como LLMs, Prompts, Carregadores de Dados, Armazéns de Vetores e Ferramentas. Uma característica importante é a transparência: os utilizadores podem inspecionar o código Python subjacente a cada componente, permitindo uma compreensão mais profunda do seu funcionamento.
 
-3. **Agentes**
+#### 3. **Agentes**
 
 Um agente é um tipo especializado de componente que atua como o "cérebro" de um fluxo. Utiliza um LLM para raciocinar, tomar decisões e escolher quais "ferramentas" (outros componentes conectados) usar com base na entrada do utilizador. O componente do agente encapsula lógicas complexas, como o padrão ReAct (Reason+Act), abstraindo-as do utilizador e simplificando a construção de sistemas que podem interagir dinamicamente com o seu ambiente.
 
