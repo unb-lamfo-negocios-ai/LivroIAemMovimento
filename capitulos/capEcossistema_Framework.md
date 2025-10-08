@@ -437,9 +437,6 @@ LangGraph surge como a resposta a essa limitação, mas não é meramente um "La
 
 Portanto, LangGraph não deve ser visto como uma simples atualização incremental do LangChain. Ele é um framework projetado para um paradigma de programação de IA inteiramente novo, focado na criação de sistemas dinâmicos, com estado e cíclicos, que podem emular processos de deliberação e auto-correção, abrindo as portas para a construção de agentes verdadeiramente autônomos e robustos.
 
-
-## Mergulho Profundo no LangGraph: Arquitetura para Agentes Autônomos
-
 Para construir agentes capazes de raciocínio complexo, iteração e adaptação, é necessária uma arquitetura que vá além dos fluxos lineares. LangGraph fornece exatamente isso, introduzindo um modelo computacional baseado em grafos de estado. 
 
 ### O Paradigma do Grafo de Estado (StatefulGraph): O Coração do Agente
@@ -462,7 +459,7 @@ Em suma, o StatefulGraph transforma a computação de um simples fluxo de dados 
 
 Um grafo em LangGraph é composto por dois elementos primários: nós (*nodes*), que representam as unidades de computação, e arestas (*edges*), que definem o fluxo de controle entre esses nós.
 
-### **Nós (Nodes): As Unidades de Computação**
+#### Nós (Nodes): As Unidades de Computação
 
 Um nó em LangGraph é definido de forma extremamente flexível: pode ser qualquer função ou objeto "chamável" (*callable*) em Python. Essa flexibilidade permite que um nó encapsule uma variedade de operações, desde as mais simples às mais complexas:
 
@@ -474,7 +471,7 @@ Um nó em LangGraph é definido de forma extremamente flexível: pode ser qualqu
 
 A única restrição é que a função do nó deve aceitar o objeto de estado como seu único argumento e retornar um dicionário (ou um objeto similar) contendo as atualizações a serem aplicadas ao estado.
 
-### **Arestas (Edges): As Vias de Lógica e Controle**
+#### Arestas (Edges): As Vias de Lógica e Controle
 
 As arestas conectam os nós e ditam a ordem de execução. LangGraph suporta dois tipos principais de arestas, e é na combinação delas que reside o poder do framework.
 
