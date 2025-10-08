@@ -33,6 +33,16 @@ O LangFlow pode ser enquadrado não apenas como uma ferramenta, mas como um para
 Acelerar o desenvolvimento de aplicações de Inteligência Artificial (IA) através de uma interface visual de baixo código (low-code), construída sobre as fundações do ecossistema LangChain.
 ```
 
+### História por trás do LangFlow
+
+A plataforma foi desenvolvida pela empresa Logspace, fundada em 2022 pelos mineiros  Rodrigo Nader e Gabriel Almeida. Em entrevistas e publicações, o projeto é frequentemente descrito como uma "ferramenta brasileira".
+
+Rodrigo Nader, um dos fundadores, expressou o objetivo de fortalecer o cenário de tecnologia no país, afirmando: 
+
+> "Nosso objetivo é transformar o Brasil em um polo de inovação em inteligência artificial".
+
+Posteriormente, a empresa foi adquirida pela DataStax, que agora faz parte da IBM.
+
 ### Definindo o LangFlow: Além de uma UI para o LangChain
 
 O LangFlow é uma plataforma visual de código aberto que simplifica a criação de aplicações com Geração Aumentada por Recuperação (RAG) e estruturas baseadas em múltiplos agentes. Seu grande diferencial está na interface intuitiva de arrastar e soltar, que substitui a escrita de código tradicional por uma experiência acessível e visual. Assim, mesmo quem não domina programação pode construir fluxos de trabalho inteligentes com facilidade.
@@ -215,14 +225,6 @@ O suporte a MCP **transforma o LangFlow** de um criador visual isolado em **uma 
 - Monitore uso e custos por provedor
 ```
 
-
-A limitação do DAG no LangFlow não é um descuido, mas sim uma escolha de design deliberada que favorece a simplicidade e a estabilidade em detrimento da flexibilidade total. Os DAGs garantem que os fluxos terminem, evitam laços infinitos e tornam a execução mais previsível e fácil de depurar. Esta abordagem está perfeitamente alinhada com o principal caso de uso do LangFlow: a prototipagem rápida e fiável de workflows lineares. No entanto, a equipa de desenvolvimento reconheceu claramente a limitação que isto impõe para a construção de agentes mais sofisticados. A introdução do suporte a MCP não é apenas uma funcionalidade de interoperabilidade; é a "saída de emergência" estratégica das restrições do DAG. Um desenvolvedor pode construir um agente complexo e cíclico usando uma framework baseada em código como o LangGraph e expor as suas capacidades através de um servidor MCP. Simultaneamente, pode usar a interface visual do LangFlow para construir a parte da aplicação virada para o utilizador ou outros subprocessos lineares. A aplicação LangFlow pode então chamar o agente cíclico externo como uma "ferramenta" através do componente cliente MCP. Esta arquitetura permite que o LangFlow permaneça simples e estável internamente (ao impor o modelo DAG), enquanto ainda é capaz de orquestrar e participar em sistemas multi-agente muito mais complexos e cíclicos. O MCP transforma o LangFlow de um construtor autónomo num componente modular dentro de um ecossistema de IA maior e mais capaz.
-
-
-
-
-
-
 ### **Conclusão: A Ponte Visual para a Orquestração de IA**
 
 Nesta secção, estabelecemos o LangFlow como uma poderosa ferramenta de prototipagem visual, cuja arquitetura baseada em Grafos Acíclicos Dirigidos (DAGs) se destaca na aceleração do desenvolvimento de workflows lineares, como os pipelines de RAG. A sua interface intuitiva democratiza o acesso à construção de aplicações de IA e serve como uma "linguagem comum" para equipas multidisciplinares.
@@ -231,15 +233,7 @@ No entanto, também identificámos a sua limitação arquitetural inerente: a ba
 
 Com esta ponte estabelecida, o próximo passo lógico é explorar a arquitetura dos sistemas que vivem do outro lado — aqueles projetados desde o início para gerir ciclos, estado e a lógica complexa que define os agentes verdadeiramente autónomos.
 
-### História por trás do LangFlow
 
-A plataforma foi desenvolvida pela empresa Logspace, fundada em 2022 pelos mineiros  Rodrigo Nader e Gabriel Almeida. Em entrevistas e publicações, o projeto é frequentemente descrito como uma "ferramenta brasileira".
-
-Rodrigo Nader, um dos fundadores, expressou o objetivo de fortalecer o cenário de tecnologia no país, afirmando: 
-
-> "Nosso objetivo é transformar o Brasil em um polo de inovação em inteligência artificial".
-
-Posteriormente, a empresa foi adquirida pela DataStax, que agora faz parte da IBM.
 ---
 
 ## LangChain
