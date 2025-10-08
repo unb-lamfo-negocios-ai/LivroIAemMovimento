@@ -1,4 +1,4 @@
-# Ecossistema de Ferramentas e Frameworks
+<img width="612" height="364" alt="image" src="https://github.com/user-attachments/assets/98858a63-9bc3-4057-ba7b-0c7857578cf6" /># Ecossistema de Ferramentas e Frameworks
 
 O crescimento da Inteligência Artificial trouxe consigo um **ecossistema diverso de ferramentas e frameworks**, que aceleram a criação, teste e implantação de soluções. Esses recursos permitem que equipes foquem no **valor de negócio** em vez de reinventar a roda do zero.  
 
@@ -402,6 +402,14 @@ No contexto do LangChain, um DAG representa um fluxo de trabalho onde os dados s
 2. **Recuperação:** Busca documentos relevantes em uma base de dados vetorial.
 3. **Aumento:** Adiciona o contexto recuperado à pergunta original.
 4. **Geração:** Envia o prompt aumentado para um LLM para gerar a resposta final.
+
+```{figure} imagens/langgraph_langchain.png
+:alt: Interface visual dos floxos do LangChain e LangGraph
+:align: center
+:name: fig-langflow-ui
+```
+
+[Exemplo de diagrama comparando langchain e langgraph](https://ritik-chopra28.medium.com/langchain-vs-langgraph-the-ai-framework-battle-thats-dividing-developers-81d0fe53503b)
 
 Este fluxo é linear, determinístico e perfeitamente modelado por um DAG. Cada passo flui para o seguinte, e o processo termina com a resposta. Para uma vasta gama de aplicações, desde chatbots de perguntas e respostas até sumarizadores de documentos, essa abordagem é suficiente e robusta.
 
