@@ -113,8 +113,6 @@ A evolução da arquitetura do LangChain é um testemunho da sua maturidade e re
 
 Esta modularidade aborda diretamente o "inferno de dependências" (*dependency hell*) e a percepção de que o framework era excessivamente "inchado". Ao incentivar novas integrações a serem publicadas como pacotes `langchain-*` separados, o ecossistema promove uma melhor gestão de dependências e versionamento. Esta evolução posiciona o `langchain-core` como um sistema nervoso central estável, sobre o qual um universo de ferramentas e integrações especializadas pode ser construído, permitindo que os programadores instalem apenas o que necessitam para criar aplicações mais leves e eficientes.
 
----
-
 ### O Kit de Ferramentas do Programador: Componentes Fundamentais do LangChain
 
 Para construir uma aplicação com o LangChain, um programador utiliza um conjunto de blocos de construção modulares. A compreensão de cada um destes componentes e da forma como interagem é crucial.
@@ -138,7 +136,7 @@ O LangChain oferece vários métodos para criar ferramentas personalizadas, desd
 
 
 
-### **Informações Adicionais do LangChain**
+### Informações Adicionais do LangChain
 
 A integração de código personalizado constitui apenas o primeiro passo na jornada para a criação de aplicações de IA de nível de produção. A orquestração de agentes, por exemplo, introduz desafios de controlo e fiabilidade que não podem ser adequadamente resolvidos com as sequências lineares das Chains tradicionais.
 
@@ -705,21 +703,6 @@ No entanto, a integração nativa de padrões de Intervenção Humana no Loop (H
 
 Com o núcleo lógico do agente agora definido, o foco deve deslocar-se da orquestração para a implementação e implementação. Como é que um agente com estado e potencialmente de longa duração é alojado? Que padrões arquitetónicos — Monolítico, Microsserviços, Serverless — são mais adequados para gerir estas novas cargas de trabalho? Como é que estes sistemas são monitorizados, escalados e mantidos num ambiente de produção? Estas questões de arquitetura de sistemas e MLOps representam a próxima fronteira na transformação de um agente poderoso num serviço robusto de nível empresarial.
 
-## Streamlit
-
-O **Streamlit** é um framework em Python que permite criar **aplicações interativas de dados e IA** com poucas linhas de código.  
-
-**Aplicações típicas:**  
-- Dashboards dinâmicos para visualização de métricas.  
-- Protótipos de interfaces para modelos de Machine Learning.  
-- Ferramentas internas para análise exploratória de dados.  
-
-**Exemplo prático:** um analista de dados pode compartilhar em minutos um app que mostra previsões de vendas com base em modelos de regressão.  
-
-Sua simplicidade o torna muito popular em equipes de **Data Science** {cite}`streamlit2021`.  
-
----
-
 ## Gradio
 
 O **Gradio** simplifica a criação de **interfaces web acessíveis** para modelos de IA.  
@@ -971,6 +954,23 @@ Para uma solução gratuita e permanente, a plataforma Hugging Face Spaces é a 
 - **Explore a Documentação**: A documentação oficial do Gradio é rica em exemplos para todos os tipos de componentes e casos de uso.
 - **Use Exemplos (`examples`)**: O `gr.Interface` possui um parâmetro `examples` que permite adicionar exemplos clicáveis à sua UI, facilitando o teste para os usuários.
 - **Integração com Modelos de IA**: Gradio integra-se perfeitamente com bibliotecas como `transformers`, `PyTorch` e `TensorFlow`, tornando trivial a criação de interfaces para modelos pré-treinados.
+
+
+## Streamlit
+
+O **Streamlit** é um framework em Python que permite criar **aplicações interativas de dados e IA** com poucas linhas de código.  
+
+**Aplicações típicas:**  
+- Dashboards dinâmicos para visualização de métricas.  
+- Protótipos de interfaces para modelos de Machine Learning.  
+- Ferramentas internas para análise exploratória de dados.  
+
+**Exemplo prático:** um analista de dados pode compartilhar em minutos um app que mostra previsões de vendas com base em modelos de regressão.  
+
+Sua simplicidade o torna muito popular em equipes de **Data Science** {cite}`streamlit2021`.  
+
+---
+
 
 ## WhatsApp API
 
