@@ -927,8 +927,8 @@ Uma característica poderosa do MCP é que qualquer aplicação, API ou agente p
 ```{admonition} Exemplo de Arquitetura Composta
 :class: exemplo
 
-Agent de Pesquisa (Cliente + Servidor)
-
+Agent de Pesquisa (Cliente + Servidor):
+```
 ```{list-table}
 :header-rows: 1
 :widths: 50 50
@@ -941,7 +941,6 @@ Agent de Pesquisa (Cliente + Servidor)
   - summarize_findings()
 * - File System MCP Server  
   - generate_report()
-```
 ```
 
 ```{admonition} Benefícios da Componibilidade
