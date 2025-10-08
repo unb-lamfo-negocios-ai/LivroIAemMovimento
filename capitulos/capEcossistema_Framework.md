@@ -55,7 +55,11 @@ Outro ponto forte do LangFlow é sua flexibilidade tecnológica. Ele é totalmen
 
 ### O Problema Central Resolvido: Acelerando o Ciclo de Vida do Desenvolvimento de IA
 
-O LangFlow aborda diretamente a natureza lenta e intensiva em código da prototipagem de aplicações de LLM. A plataforma permite que os desenvolvedores "parem de lutar com as suas ferramentas" e se concentrem em criar "magia de IA". Ao visualizar os workflows, facilita a colaboração e torna ideias de produtos complexas compreensíveis tanto para os stakeholders técnicos como para os não técnicos. Esta clareza visual é um diferenciador chave, permitindo que as equipas construam e demonstrem workflows de LLM rapidamente.
+O LangFlow aborda diretamente a natureza lenta e intensiva em código da prototipagem de aplicações de LLM. A plataforma permite que os desenvolvedores "parem de lutar com as suas ferramentas" e se concentrem em criar "magia de IA". 
+
+Ao visualizar os workflows, facilita a colaboração e torna ideias de produtos complexas compreensíveis tanto para os stakeholders técnicos como para os não técnicos. Esta clareza visual é um diferenciador chave, permitindo que as equipas construam e demonstrem workflows de LLM rapidamente.
+
+COLOCAR O GIFF DO LANGFLOW FUNCIONANDO AQUI
 
 A plataforma democratiza o acesso a conceitos poderosos de IA, como agentes, RAG e orquestração de múltiplas ferramentas, tornando-os tangíveis e manipuláveis sem a necessidade de um conhecimento profundo em programação. Essencialmente, o LangFlow acelera o ciclo de vida do desenvolvimento de IA ao permitir que as equipas transformem rapidamente ideias em protótipos funcionais, testem diferentes configurações e iterem sobre a lógica da aplicação com um esforço mínimo.
 
@@ -63,10 +67,10 @@ A natureza visual do LangFlow traz benefícios que vão além da aceleração do
 
 **Impacto na Colaboração em Equipes Híbridas**: O desenvolvimento de soluções com IA exige cada vez mais uma atuação integrada entre diversos perfis profissionais:
 
-- **Engenheiros de software**
-- **Cientistas de dados**
-- **Gestores de produto**
-- **Especialistas de domínio**
+- Engenheiros de software
+- Cientistas de dados
+- Gestores de produto
+- Especialistas de domínio
 
 :::{admonition}  Problema das Abordagens Tradicionais
 :class: warning
@@ -91,13 +95,27 @@ Essa colaboração **reduz retrabalho**, **acelera iterações** e **garante ali
 
 **Novas Funções no Desenvolvimento com IA**: A adoção de ferramentas como o LangFlow aponta para uma nova configuração organizacional:
 
-- **Surgem novas funções** como:
-  - “**Orquestrador de IA**”
-  - “**Designer de Fluxos**”
+- Surgem novas funções como:
+  :::{grid} 2
+:gutter: 2
+
+:::{grid-item}
+### 🧩 Orquestrador de IA
+
+Responsável por planejar, conectar e estruturar os diferentes blocos de uma aplicação de IA. Atua como um estrategista técnico, integrando modelos, dados e fluxos para entregar valor ao negócio.
+:::
+
+:::{grid-item}
+### 🎨 Designer de Fluxos
+
+Foca na experiência visual e funcional dos fluxos de IA. Usa ferramentas no-code ou low-code (como LangFlow) para construir e testar soluções, mesmo sem conhecimento avançado em programação.
+:::
+
+:::
 
 Esses papéis atuam como **pontes entre os requisitos de negócio e a implementação técnica**, consolidando uma prática de desenvolvimento mais ágil, colaborativa e sustentável.
 
-## Análise Arquitetural Aprofundada: De Grafos Visuais a Fluxos Executáveis
+### Análise Arquitetural Aprofundada: De Grafos Visuais a Fluxos Executáveis
 
 Esta secção desconstrói a arquitetura subjacente do LangFlow, explicando como os designs visuais são traduzidos em lógica executável e como a plataforma se integra no ecossistema de IA mais amplo.
 
