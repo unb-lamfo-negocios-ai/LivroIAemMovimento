@@ -41,8 +41,6 @@ Embora tenha surgido como uma simples interface gráfica para o LangChain, o Lan
 
 Outro ponto forte do LangFlow é sua flexibilidade tecnológica. Ele é totalmente agnóstico em relação a LLMs e bancos de vetores, o que significa que oferece suporte aos principais provedores do mercado. Além disso, conta com uma biblioteca crescente de componentes e integrações. Isso garante ao desenvolvedor a liberdade de escolher os melhores recursos para cada projeto, sem se prender a uma tecnologia ou fornecedor específico.
 
----
-
 ### Acelerando o Ciclo de Vida do Desenvolvimento de IA
 
 O LangFlow aborda diretamente a natureza lenta e intensiva em código da prototipagem de aplicações de LLM. A plataforma permite que os desenvolvedores "parem de lutar com as suas ferramentas" e se concentrem em criar "magia de IA". 
@@ -57,10 +55,15 @@ A natureza visual do LangFlow traz benefícios que vão além da aceleração do
 
 **Impacto na Colaboração em Equipes Híbridas**: O desenvolvimento de soluções com IA exige cada vez mais uma atuação integrada entre diversos perfis profissionais:
 
-- Engenheiros de software
-- Cientistas de dados
-- Gestores de produto
-- Especialistas de domínio
+```{list-table}
+:widths: 50 50
+
+* - Engenheiros de software
+  - Cientistas de dados
+* - Gestores de produto
+  - Especialistas de domínio
+```
+
 
 :::{admonition}  Problema das Abordagens Tradicionais
 :class: warning
