@@ -227,11 +227,10 @@ A definição do modelo de monetização ideal está diretamente ligada à propo
 ```{admonition} Reflita sobre sua proposta de valor
 :class: tip
 
-Você pretende oferecer **acesso direto a uma tecnologia inteligente**, como quem vende uma *matéria-prima*,  
-ou entregar uma **solução completa**, com experiência e resultados, como um *produto finalizado* para o cliente?
+Você pretende oferecer **acesso direto a uma tecnologia inteligente**, como quem vende uma *matéria-prima*, ou entregar uma **solução completa**, com experiência e resultados, como um *produto finalizado* para o cliente?
 ```
 
-Cada modelo traz implicações distintas de escalabilidade, custo, controle e relacionamento com o usuário. A tabela a seguir apresenta uma classificação dos principais modelos de monetização com IA, com recomendações para diferentes contextos de negócio.
+Cada modelo traz implicações distintas de escalabilidade, custo, controle e relacionamento com o usuário. A tabela a seguir apresenta uma classificação dos modelos de monetização com IA apresentados acima, com indicações do tipo de negócio cada modelo é recomendado.
 
 
 | Modelo | Previsibilidade (Cliente) | Previsibilidade (Empresa) | Alinhamento com Valor | Ideal Para… |
