@@ -122,13 +122,16 @@ Uma API de transcrição de áudio pode cobrar por minuto processado, enquanto u
 
 ### O modelo preço por uso
 
-O modelo *pay-per-use*, também conhecido como *pay-as-you-go*, utilizado via API, por empresas como OpenAI, Anthropic e Google disponibilizam diversos endpoints de inferência, cada um oferecendo um conjunto de modelos (por exemplo, `GPT-4o, o3`, `Claude 3.5`, `Claude 4`, `Gemini 2.5`, etc.) com razões custo-benefício diferentes. 
+O modelo *pay-per-use*, também conhecido como *pay-as-you-go*, utilizado via API, por empresas como OpenAI, Anthropic e Google, disponibilizam diversos endpoints de inferência, cada um oferecendo um conjunto de modelos (por exemplo, `GPT-4o, o3`, `Claude 3.5`, `Claude 4`, `Gemini 2.5`, etc.) com razões custo-benefício diferentes. 
 
 Neste modelo você é cobrado por unidade de consumo (geralmente por milhão de tokens de entrada e saída), o que possibilita:
-    - **Escalabilidade imediata**: basta chamar a API, sem se preocupar em gerenciar servidores ou clusters de GPU.
-    - **Flexibilidade de escolha**: selecione o modelo mais barato para tarefas simples (como Gemini 2.0 Flash) ou um mais caro e preciso (como Gemini 2.5 Pro) conforme a necessidade de qualidade e latência.
-- Existem dois problemas centrais desse modelo:
-    - **Oscilação de custos**: Se seu tráfego varia muito, a fatura pode subir de forma imprevisível no mês em que há picos de uso. Modelos maiores (mais parâmetros) custam várias vezes mais por token.
+
+- **Escalabilidade imediata**: basta chamar a API, sem se preocupar em gerenciar servidores ou clusters de GPU.
+- **Flexibilidade de escolha**: selecione o modelo mais barato para tarefas simples (como Gemini 2.0 Flash) ou um mais caro e preciso (como Gemini 2.5 Pro) conforme a necessidade de qualidade e latência.
+    
+Existem dois problemas centrais desse modelo:
+    
+1. **Oscilação de custos**: Se seu tráfego varia muito, a fatura pode subir de forma imprevisível no mês em que há picos de uso. Modelos maiores (mais parâmetros) custam várias vezes mais por token.
 
 ```{admonition}
 :class: exemplo
@@ -136,7 +139,7 @@ Imagine que você oferece uma ferramenta SaaS que resume documentos, e sua assin
 - Um "cliente casual" resume 10 artigos curtos, consumindo um total de 50.000 tokens no mês, o que gera um custo de API para você de apenas $0.15.
 - Já um "cliente intensivo" resume 30 relatórios longos, consumindo 3.000.000 de tokens, o que gera um custo de $9.00. Se no mês seguinte esse cliente intensivo dobrar o uso, seu custo direto com ele sobe para $18, eliminando quase toda a sua margem de lucro.
 ```
-### Lock-in ao provedor
+2. **Lock-in ao provedor**
 
 Lock-in ao provedor (ou vendor lock-in) é a situação em que uma empresa ou usuário se torna altamente dependente de um fornecedor específico (por exemplo, de nuvem, API, banco de dados, framework, etc.) a ponto de ser difícil, caro ou arriscado migrar para outro.
 
