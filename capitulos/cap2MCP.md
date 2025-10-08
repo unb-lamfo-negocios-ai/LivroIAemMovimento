@@ -1370,23 +1370,23 @@ O MCP oferece vantagens significativas para todo o ecossistema de IA:
 - **Redução de Fragmentação:** Menos duplicação de esforços
 - **Crescimento Sustentável:** Base sólida para evolução futura
 
-# Sistema MCP para Busca e Análise de Papers Acadêmicos(Aplicação Prática) {cite}`deeplearning_mcp_course`
+## Aplicação Prática: Sistema MCP para Busca e Análise de Papers Acadêmicos
 
-> Um sistema completo para buscar, analisar e conversar sobre artigos científicos usando o protocolo MCP (Model Context Protocol) com inteligência artificial.
+Agora que compreendemos os conceitos e estruturas fundamentais do MCP, é hora de visualizar esses conhecimentos em ação. A seguir, apresentaremos uma **aplicação prática desenvolvida pelos autores deste e-book**, que demonstra passo a passo como implementar as funcionalidades do MCP em um cenário real.
 
-## O que é este projeto?
+Trata-se de um **Sistema MCP para Busca e Análise de Papers Acadêmicos** — uma solução completa que permite **buscar, analisar e interagir com artigos científicos** utilizando o protocolo MCP aliado à inteligência artificial. Esse exemplo mostra como integrar agentes com ferramentas externas, manipulando dados em tempo real e simulando conversas orientadas por LLMs.
 
-Este é um sistema que permite:
+Você pode conciliar a leitura e implementação deste projeto com os conteúdos aprofundados disponíveis no curso {cite}`deeplearning_mcp_course`.
 
-- 🔍 **Buscar** artigos científicos no ArXiv (maior repositório de artigos acadêmicos)
-- 📖 **Ler detalhes** completos de qualquer artigo encontrado
-- 🤖 **Analisar** automaticamente com IA (resumos, tendências, comparações)
-- 💬 **Conversar** sobre os artigos com um assistente inteligente
-- 💾 **Cache inteligente** para respostas mais rápidas
+**O que é este projeto?** Este é um sistema que permite:
 
-### Como funciona?
+- **Buscar** artigos científicos no ArXiv (maior repositório de artigos acadêmicos).
+- **Ler detalhes** completos de qualquer artigo encontrado.
+- **Analisar** automaticamente com IA (resumos, tendências, comparações).
+- **Conversar** sobre os artigos com um assistente inteligente.
+- **Cache inteligente** para respostas mais rápidas.
 
-O sistema possui duas partes:
+**Como funciona?** O sistema possui duas partes:
 
 1. **Servidor MCP** (`mcp_papers_server.py`): O "cérebro" que busca artigos e usa IA
 2. **Cliente MCP** (`mcp_papers_client.py`): A interface que você usa para interagir
@@ -1401,14 +1401,14 @@ Você → Cliente → Servidor → ArXiv/Gemini IA
 
 ---
 
-## Requisitos
+### Requisitos
 
-### O que você precisa ter instalado:
+Antes de iniciar a aplicação, certifique-se de que os seguintes requisitos estão atendidos no seu ambiente:
 
-- **Python 3.8+** ([Baixar aqui](https://www.python.org/downloads/))
-- **pip** (gerenciador de pacotes Python - vem com Python)
-- **Chave API do Google Gemini** ([Obter gratuitamente aqui](https://makersuite.google.com/app/apikey))
-
+- **Python 3.8 ou superior** — [Baixe aqui](https://www.python.org/downloads/)
+- **pip** — Gerenciador de pacotes do Python (já incluído na instalação padrão)
+- **Chave de API do Google Gemini** — [Obtenha gratuitamente aqui](https://makersuite.google.com/app/apikey)
+- 
 ## Instalação Completa (Passo a Passo)
 
 ### Passo 1: Preparar o Ambiente
@@ -1456,7 +1456,10 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-✅ Você verá `(.venv)` no início da linha do terminal quando ativado.
+```{admonition}
+:class: tip
+Você verá `(.venv)` no início da linha do terminal quando ativado.
+```
 
 ### Passo 2: Instalar Dependências
 
@@ -1485,8 +1488,10 @@ mcp-inspector>=0.1.0
 cd Servidores
 pip install -r requirements.txt
 ```
-
+```{admonition}
+:class: tip
 ⏳ Isso pode levar alguns minutos. Aguarde até finalizar.
+```
 
 ### Passo 3: Configurar API Key
 
