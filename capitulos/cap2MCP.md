@@ -1187,8 +1187,7 @@ O MCP suporta diferentes mecanismos de comunicação:
 - Permite servidores remotos
 - Suporte a múltiplos clientes
 
-```{admonition} **Configuração de Transporte:**
-:class: exemplo
+**Configuração de Transporte:**
 
 ```json
 {
@@ -1207,7 +1206,7 @@ O MCP suporta diferentes mecanismos de comunicação:
   }
 }
 ```
-```
+
 ## Limitações e Considerações de Segurança{cite}`dsacademy_mcp_blog, neo4j_mcp_blog`
 
 As implementações do MCP trazem avanços significativos em interoperabilidade e integração entre modelos de IA, mas é essencial compreender suas **limitações técnicas** e **riscos de segurança**.  Antes de aplicar o MCP em ambientes produtivos, recomenda-se avaliar aspectos como **exposição de dados sensíveis**, **controle de acesso**, **auditoria de logs** e **tratamento de falhas**, garantindo que a adoção do protocolo seja feita de forma segura e escalável. 
