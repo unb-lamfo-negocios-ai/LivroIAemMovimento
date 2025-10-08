@@ -129,7 +129,7 @@ Esses papéis atuam como **pontes entre os requisitos de negócio e a implementa
 
 No entanto, a natureza "Acíclica" do modelo DAG significa que ele, por definição, não pode suportar ciclos ou laços na sua estrutura de grafo. Esta característica impõe uma limitação significativa para sistemas de agentes avançados que requerem raciocínio iterativo, laços de autocorreção ou comportamentos cíclicos e com estado. Esta escolha arquitetural contrasta com frameworks como o LangGraph, que são explicitamente projetadas para lidar com ciclos, oferecendo um paradigma de orquestração mais flexível para agentes complexos.
 
-### Arquiteturais Centrais
+### Arquiteturas Centrais
 
 A arquitetura do LangFlow é construída em torno de três conceitos fundamentais que trabalham em conjunto para permitir a criação de aplicações de IA.
 
@@ -163,7 +163,7 @@ Um agente é um tipo especializado de componente que atua como o "cérebro" de u
 
 As atualizações recentes (versão 1.6) dicionaram camadas de segurança como a autenticação OAuth para servidores MCP. O que sinaliza um movimento em direção a uma comunicação segura entre agentes, pronta para produção.
 
-Por que o LangFlow opta pelos DAGs? Simplicidade e estabilidade são priorizadas em vez de flexibilidade total.
+**Por que o LangFlow opta pelos DAGs?** Simplicidade e estabilidade são priorizadas em vez de flexibilidade total.
 
 ```{admonition} Os DAGs:
 :class: note
@@ -177,9 +177,11 @@ Essa abordagem está alinhada com o propósito principal do LangFlow:
 
 > prototipagem rápida e confiável de workflows lineares.
 
-Mas... e quando precisamos de mais sofisticação? A equipe de desenvolvimento reconhece as limitações dos DAGs para a criação de agentes mais avançados. Por isso, introduziu o suporte ao MCP (Model Context Protocol).
+**Mas... e quando precisamos de mais sofisticação?** A equipe de desenvolvimento reconhece as limitações dos DAGs para a criação de agentes mais avançados. Por isso, introduziu o suporte ao MCP (Model Context Protocol).
 
-:::{tip} O MCP atua como uma **"saída de emergência estratégica"** para contornar as limitações do DAG sem abrir mão da simplicidade do LangFlow.:::
+:::{tip} 
+O MCP atua como uma **"saída de emergência estratégica"** para contornar as limitações do DAG sem abrir mão da simplicidade do LangFlow.
+:::
 
 ```{admonition} 
 :class: attention
@@ -187,7 +189,7 @@ Mas... e quando precisamos de mais sofisticação? A equipe de desenvolvimento r
 A limitação ao uso de DAGs (Grafos Acíclicos Direcionados) no LangFlow **não é um erro**, mas sim uma **decisão intencional de design**.
 ```
 
-Como funciona essa integração? 
+**Como funciona essa integração?**
 
 - Um agente cíclico e complexo pode ser desenvolvido usando ferramentas como o LangGraph.
 
