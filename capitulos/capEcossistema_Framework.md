@@ -87,16 +87,14 @@ Essa colaboração **reduz retrabalho**, **acelera iterações** e **garante ali
 
 Surgem novas funções como:
  
-:header-rows: 1
-:widths: 40 60
+```{list-table}
+:widths: 50 50
 
-* - **Função**
-  - **Descrição**
 * - **Orquestrador de IA**
   - Responsável por **planejar, conectar e estruturar** os diferentes blocos de uma aplicação de IA. Atua como um **estrategista técnico**, integrando modelos, dados e fluxos para **entregar valor ao negócio**.
 * - **Designer de Fluxos**
   - Foca na **experiência visual e funcional** dos fluxos de IA. Usa ferramentas **no-code** ou **low-code** (como LangFlow) para **construir e testar soluções**, mesmo sem conhecimento avançado em programação.
-
+```
 
 Esses papéis atuam como **pontes entre os requisitos de negócio e a implementação técnica**, consolidando uma prática de desenvolvimento mais ágil, colaborativa e sustentável.
 
