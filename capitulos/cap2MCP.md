@@ -944,7 +944,7 @@ Agent de Pesquisa (Cliente + Servidor)
 ```
 ```
 
-```{admonition} **Benefícios da Componibilidade:**
+```{admonition} Benefícios da Componibilidade
 :class: note
 
 - **Especialização:** Cada camada foca em uma responsabilidade específica
@@ -1055,7 +1055,7 @@ Capacidade que permite ao servidor solicitar informações adicionais dos usuár
 
 O MCP suporta autocompletar para argumentos de prompt e parâmetros de recursos.
 
-**Implementação:**
+Implementação:
 
 Cliente solicita sugestões
 
@@ -1097,7 +1097,7 @@ Servidor retorna sugestões
 }
 ```
 
-#### 5. Authentication (Autenticação)
+### 5. Authentication (Autenticação)
 
 Os servidores MCP podem implementar OAuth 2.0/2.1 para acessar recursos protegidos.
 
@@ -1127,6 +1127,7 @@ Os servidores MCP podem implementar OAuth 2.0/2.1 para acessar recursos protegid
 }
 ```
 ```
+
 ### 6. Notifications (Notificações)
 
 Servidores podem enviar notificações para clientes sobre mudanças de estado.
@@ -1143,7 +1144,7 @@ O script do exemplo abaixo envia uma **notificação ao servidor** informando qu
 
 ```{admonition} **Exemplo de notificação ao servidor:**
 :class: exemplo
-
+```
 ```json
 {
    "jsonrpc": "2.0",
@@ -1152,7 +1153,6 @@ O script do exemplo abaixo envia uma **notificação ao servidor** informando qu
       "uri": "file:///project/config.json"
     }
 }
-```
 ```
 
 ### 7. Transports (Transportes)
