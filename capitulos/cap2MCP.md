@@ -981,7 +981,7 @@ Permite que um servidor MCP solicite inferências (chamadas de LLM) do cliente, 
 5. Servidor executa ação: move para pasta "Urgentes" e notifica você
 ```
 
-- ***Por que isso é poderoso?****
+**Por que isso é poderoso?**
 
 1. **Simplicidade no servidor**  
    O servidor permanece leve e direto, sem precisar incorporar capacidades próprias de IA.
@@ -1036,10 +1036,9 @@ Capacidade que permite ao servidor solicitar informações adicionais dos usuár
 - Obter permissões específicas
 ```
 
-```{admonition} **Exemplo de Fluxo:**
+```{admonition} **Exemplo de fluxo durante execução de uma ferramenta de reserva**
 :class: exemplo
-
- Durante execução de uma ferramenta de reserva
+ 
 ```json
 {
   "jsonrpc": "2.0",
@@ -1255,7 +1254,9 @@ Para saber mais sobre limitações e considerações de segurança consulte, {ci
 
 ### 2. Considerações de Segurança
 
-**Autenticação e Autorização:**
+Antes de implementar qualquer integração baseada em MCP, é fundamental compreender as **considerações de segurança** que garantem o uso confiável do protocolo. A proteção de dados sensíveis e o controle de acesso são pilares para manter a integridade e a confidencialidade do sistema.  
+
+#### Autenticação e Autorização
 
 ```{admonition} Exemplo de configuração segura
 :class: exemplo
@@ -1285,7 +1286,7 @@ Para saber mais sobre limitações e considerações de segurança consulte, {ci
 - Usar schemas JSON rigorosos
 ```
 
-**Controle de Acesso:**
+#### Controle de Acesso
 
 # Exemplo de verificação de permissões
 
@@ -1297,14 +1298,14 @@ def verify_permissions(operation, resource):
         raise PermissionError("Acesso a recursos do sistema negado")
 ```
 
-**Isolamento e Sandboxing:**
+#### Isolamento e Sandboxing
 
 - Execute servidores MCP em containers ou ambientes isolados
 - Use usuários com privilégios limitados
 - Implemente timeouts para prevenir operações infinitas
 - Monitore recursos (CPU, memória, disco)
 
-**Auditoria e Logging:**
+#### Auditoria e Logging
 
 **O que é:** 
 
@@ -1317,7 +1318,7 @@ Sistema de registro que monitora e documenta todas as operações realizadas atr
 - **Segurança**: Detectar uso inadequado ou tentativas de acesso não autorizado
 - **Compliance**: Atender requisitos legais de auditoria
 
-**Informações Registradas:**
+#### Informações Registradas
 
 - ⏰ Timestamp (momento exato da operação) 
 
