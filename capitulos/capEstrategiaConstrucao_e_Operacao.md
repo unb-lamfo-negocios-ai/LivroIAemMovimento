@@ -37,10 +37,16 @@ O Harvey AI ajustou modelos da família GPT para se tornar um especialista em an
 
 ```{admonition} Exemplos de iniciativas do governo francês a partir de 2024
 :class: exemplo
-- Criação da [agência AMIAD](https://www.defense.gouv.fr/actualites/sebastien-lecornu-lance-strategie-ministerielle-lintelligence-artificielle), de infraestrutura classificada para IA de defesa para desenvolver modelos de IA soberanos
+- Criação da [agência AMIAD](https://www.defense.gouv.fr/actualites/sebastien-lecornu-lance-strategie-ministerielle-lintelligence-artificielle), de infraestrutura classificada para IA de defesa para desenvolver modelos de IA soberanos.
 - Criação de [ferramentas destinadas ao serviço público no geral](https://www.info.gouv.fr/actualite/ia-simplification-et-debureaucratisation-pour-transformer-letat?utm_source=chatgpt.com), garantindo que dados sensíveis permaneçam em infraestrutura controlada.
 ```
-- **Otimização de Custo e Latência em Escala**: Utilizar uma API de ponta tem um custo variável que pode aumentar expressivamente com o volume de uso. Empresas como a DoorDash publicaram estudos em 2024 mostrando como desenvolveram seus próprios modelos para tarefas específicas, como [a estimativa de tempo de entrega](https://careersatdoordash.com/blog/deep-learning-for-smarter-eta-predictions/?utm_source=chatgpt.com). O modelo customizado, embora menos versátil que um GPT-4o, é drasticamente mais rápido e mais econômico para sua única e repetitiva função.
+- **Otimização de Custo e Latência em Escala**: Utilizar uma API de ponta tem um custo variável que pode aumentar expressivamente com o volume de uso.
+
+```{admonition} Exemplo de otimização de custos
+:class: exemplo
+- Empresas como a DoorDash publicaram estudos em 2024 mostrando como desenvolveram seus próprios modelos para tarefas específicas, como [a estimativa de tempo de entrega](https://careersatdoordash.com/blog/deep-learning-for-smarter-eta-predictions/?utm_source=chatgpt.com).
+- O modelo customizado, embora menos versátil que um GPT-4o, é drasticamente mais rápido e mais econômico para sua única e repetitiva função.
+```
 
 ### A Questão da Propriedade Intelectual e das Licenças
 
@@ -89,12 +95,12 @@ Para finalizar, apresentamos a seguir **características comparativas entre as a
 
 * - **Build (desenvolver internamente)**
   - **Buy (usar soluções prontas)**
-* - - Maior controle sobre o produto, incluindo dados, algoritmos e personalizações.  
-    - Possibilidade de criar **vantagem competitiva sustentável**, difícil de replicar por concorrentes.  
-    - Exige **investimento elevado em infraestrutura** e **formação de equipe técnica especializada**.
-  - - Reduz tempo de entrada no mercado (*time-to-market*).  
-    - Menor custo inicial, já que a infraestrutura é terceirizada.  
-    - Cria **dependência de fornecedores externos**, o que pode impactar custos e flexibilidade a longo prazo {cite}`choudhury2023`.
+* - Maior controle sobre o produto, incluindo dados, algoritmos e personalizações.
+  - Reduz tempo de entrada no mercado (*time-to-market*).
+* - Possibilidade de criar **vantagem competitiva sustentável**, difícil de replicar por concorrentes.
+  - Menor custo inicial, já que a infraestrutura é terceirizada.
+* - Exige **investimento elevado em infraestrutura** e **formação de equipe técnica especializada**.
+  - Cria **dependência de fornecedores externos**, o que pode impactar custos e flexibilidade a longo prazo {cite}`choudhury2023`.
 ```
 
 
