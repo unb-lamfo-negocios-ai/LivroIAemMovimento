@@ -4,8 +4,6 @@ O crescimento da Inteligência Artificial trouxe consigo um **ecossistema divers
 
 Neste capítulo, vamos explorar algumas das ferramentas mais utilizadas atualmente, com foco em suas aplicações práticas, pontos fortes e limitações.  
 
----
-
 ## LangFlow
 
 O **LangFlow** é uma interface visual que facilita a construção de aplicações com modelos de linguagem. É uma ferramenta de código aberto, desenvolvida em Python, que funciona como um **“laboratório de fluxos”**, no qual prompts, APIs, bancos de dados e lógica de negócio podem ser conectados de forma intuitiva, sem necessidade de programação aprofundada. Por reduzir barreiras técnicas, é especialmente útil para **equipes multidisciplinares** (como marketing e inovação) que querem experimentar IA de forma ágil {cite}`langflow2023`. É ideal para prototipagem rápida de aplicações de IA e experimentação com diferentes modelos e arquiteturas de fluxo.
@@ -35,7 +33,7 @@ Acelerar o desenvolvimento de aplicações de Inteligência Artificial (IA) atra
 
 ### História por trás do LangFlow
 
-A plataforma foi desenvolvida pela empresa Logspace, fundada em 2022 pelos mineiros (🔺)  Rodrigo Nader e Gabriel Almeida. Em entrevistas e publicações, o projeto é frequentemente descrito como uma "ferramenta brasileira".
+A plataforma foi desenvolvida pela empresa Logspace, fundada em 2022 pelos mineiros (🔺)  Rodrigo Nader e Gabriel Almeida. Em entrevistas e publicações, o projeto é frequentemente descrito como uma "ferramenta brasileira". 
 
 Rodrigo Nader, um dos fundadores, expressou o objetivo de fortalecer o cenário de tecnologia no país, afirmando: 
 
@@ -135,15 +133,22 @@ A arquitetura do LangFlow é construída em torno de três conceitos fundamentai
 
 #### 1. **Fluxos (Flows)**
 
-Os fluxos são o artefacto principal no LangFlow. Um fluxo é um workflow completo e executável que representa a lógica de uma aplicação. Pode ser criado do zero, a partir de modelos pré-construídos, ou importando um ficheiro JSON que define a sua estrutura. Os fluxos encapsulam toda a sequência de operações, desde a entrada do utilizador até à saída final, representando visualmente o percurso dos dados através dos vários componentes.
+- Os fluxos são o artefacto principal no LangFlow.
+- Um fluxo é um workflow completo e executável que representa a lógica de uma aplicação.
+- Pode ser criado do zero, a partir de modelos pré-construídos, ou importando um ficheiro JSON que define a sua estrutura.
+- Os fluxos encapsulam toda a sequência de operações, desde a entrada do utilizador até à saída final, representando visualmente o percurso dos dados através dos vários componentes.
 
 #### 2. **Componentes**
 
-Os componentes são os nós individuais dentro de um fluxo. Cada componente é uma unidade modular e executável que realiza uma tarefa específica, como interagir com um LLM, carregar dados de uma fonte, ou conectar-se a uma base de dados vetorial. O LangFlow fornece uma vasta biblioteca de componentes, categorizados em grupos como LLMs, Prompts, Carregadores de Dados, Armazéns de Vetores e Ferramentas. Uma característica importante é a transparência: os utilizadores podem inspecionar o código Python subjacente a cada componente, permitindo uma compreensão mais profunda do seu funcionamento.
+- Os componentes são os nós individuais dentro de um fluxo.
+- Cada componente é uma unidade modular e executável que realiza uma tarefa específica, como interagir com um LLM, carregar dados de uma fonte, ou conectar-se a uma base de dados vetorial.
+- O LangFlow fornece uma vasta biblioteca de componentes, categorizados em grupos como LLMs, Prompts, Carregadores de Dados, Armazéns de Vetores e Ferramentas.
+- Uma característica importante é a transparência: os utilizadores podem inspecionar o código Python subjacente a cada componente, permitindo uma compreensão mais profunda do seu funcionamento.
 
 #### 3. **Agentes**
 
-Um agente é um tipo especializado de componente que atua como o "cérebro" de um fluxo. Utiliza um LLM para raciocinar, tomar decisões e escolher quais "ferramentas" (outros componentes conectados) usar com base na entrada do utilizador. O componente do agente encapsula lógicas complexas, como o padrão ReAct (Reason+Act), abstraindo-as do utilizador e simplificando a construção de sistemas que podem interagir dinamicamente com o seu ambiente.
+- Um agente é um tipo especializado de componente que atua como o "cérebro" de um fluxo. Utiliza um LLM para raciocinar, tomar decisões e escolher quais "ferramentas" (outros componentes conectados) usar com base na entrada do utilizador.
+- O componente do agente encapsula lógicas complexas, como o padrão ReAct (Reason+Act), abstraindo-as do utilizador e simplificando a construção de sistemas que podem interagir dinamicamente com o seu ambiente.
 
 ### Interoperabilidade e o Protocolo de Contexto de Modelo (MCP)
 
@@ -233,39 +238,62 @@ Com esta ponte estabelecida, o próximo passo lógico é explorar a arquitetura 
 
 ## LangChain
 
-O **LangChain** é uma das bibliotecas mais populares para desenvolvimento de aplicações baseadas em LLMs.  
+O surgimento dos Modelos de Linguagem de Grande Escala (LLMs) marcou uma virada no desenvolvimento de software, levando as aplicações de simples respostas transacionais a sistemas cognitivos, capazes de compreender, raciocinar e agir com autonomia.
+
+Essa evolução trouxe uma nova camada de complexidade — **a orquestração**. Agora, não basta fazer uma única chamada a um modelo:
+
+- É preciso encadear múltiplas requisições,
+
+- Interagir com fontes externas de dados,
+
+- Utilizar ferramentas personalizadas, e
+
+- Manter o contexto ao longo de fluxos complexos.
+
+Antes dos frameworks especializados, os desenvolvedores precisavam gerenciar tudo manualmente, criando um código “cola” frágil, difícil de manter e propenso a erros.
+
+Nesse cenário, o **LangChain** surge como um **ecossistema de orquestração** que simplifica a criação de **workflows complexos e multiagentes**.
+
+Desta forma, o **LangChain** é uma das bibliotecas mais populares para desenvolvimento de aplicações baseadas em LLMs. É um framework de código aberto que facilita o desenvolvimento de aplicações com Inteligência Artificial, especialmente para criar agentes de IA. Seu diferencial está na **flexibilidade para integrar IA em aplicações robustas**, tornando-o uma escolha comum para startups e grandes empresas {cite}`langchain2022`.
+
 Ele oferece **componentes reutilizáveis e modulares** para:  
 
 - Conectar modelos de linguagem a diferentes fontes de dados.  
 - Gerenciar memória de conversas de longo prazo.  
 - Criar cadeias de raciocínio complexas e pipelines de decisão.  
 
-**Exemplo prático:** criar um assistente corporativo que acessa políticas internas em PDF, responde dúvidas e registra feedback dos colaboradores.  
+```{admonition} Exemplo de uso do Langchain
+:class: exemplo
+Criar um assistente corporativo que acessa políticas internas em PDF, responde dúvidas e registra feedback dos colaboradores.
+```  
 
-Seu diferencial está na **flexibilidade para integrar IA em aplicações robustas**, tornando-o uma escolha comum para startups e grandes empresas {cite}`langchain2022`.  
-
-----TEXTO----NOTION----
-LangChain é um framework de código aberto que facilita o desenvolvimento de aplicações com Inteligência Artificial, especialmente para criar agentes de IA. Suas principais características incluem:
+```{admonition} Principais características
+:class: note
 
 - **Componentes Modulares:** Oferece blocos de construção reutilizáveis para criar aplicações de IA personalizadas
 - **Integração com LLMs:** Suporta diversos modelos de linguagem como GPT-4, Claude, PaLM e outros
 - **Gerenciamento de Contexto:** Permite manipular e estruturar o contexto das conversas de forma eficiente
 - **Chains:** Possibilita a criação de fluxos sequenciais de processamento de dados e lógica
 - **Agents:** Facilita a construção de agentes autônomos que podem tomar decisões e executar tarefas
+```
 
-**Principais funcionalidades para Backend:**
+```{admonition} Principais funcionalidades para Backend
+:class: note
 
 - **Memory Systems:** Gerenciamento de histórico de conversas e estados
 - **Prompt Templates:** Sistema robusto para gerenciar e padronizar prompts
 - **Tools e Callbacks:** Integração com APIs externas e sistemas de monitoramento
 - **Document Loaders:** Processamento de diferentes tipos de documentos e dados
+```
 
-**Vantagens para Desenvolvimento:**
+```{admonition} Vantagens para Desenvolvimento
+:class: note
 
 - Arquitetura modular e extensível
 - Grande comunidade e documentação abrangente
 - Suporte a diversos backends de banco de dados
 - Integração facilitada com serviços de nuvem
+```
 
 ```{code-block} python
 from langchain.agents import Tool, AgentExecutor, LLMSingleActionAgent
