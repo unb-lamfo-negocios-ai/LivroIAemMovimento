@@ -903,8 +903,7 @@ Antes de finalizar, vale destacar algumas **boas práticas** tanto para quem **d
 
 ## Recursos Adicionais
 
-Abaixo estão listados alguns **recursos úteis** para aprofundar o entendimento e aplicar na prática o que foi apresentado até o momento.  
-Esses materiais complementares ajudam tanto no domínio da estrutura de mensagens quanto na validação e aplicação real do MCP:
+Abaixo estão listados alguns **recursos úteis** para aprofundar o entendimento e aplicar na prática o que foi apresentado até o momento. Esses materiais complementares ajudam tanto no domínio da estrutura de mensagens quanto na validação e aplicação real do MCP:
 
 - **[Especificação JSON-RPC 2.0](https://www.jsonrpc.org/specification)**  
   Documento oficial que define como funciona o protocolo de comunicação usado entre cliente e servidor.
@@ -917,9 +916,9 @@ Esses materiais complementares ajudam tanto no domínio da estrutura de mensagen
 
 
 
-## Outras Capacidades Essenciais{cite}`mcp_workshop_youtube, mcp_official_docs`
+## Outras Capacidades Essenciais
 
-O MCP oferece ainda um conjunto de capacidades avançadas que ampliam sua flexibilidade e inteligência. Elas tornam possível controlar o comportamento do modelo, organizar fluxos de interação e extrair informações de forma mais precisa e estruturada. Para se aprofundar nesses conceitos, recomendamos a leitura dos materiais {cite}mcp_workshop_youtube, mcp_official_docs`.
+O MCP oferece ainda um conjunto de capacidades avançadas que ampliam sua flexibilidade e inteligência. Elas tornam possível controlar o comportamento do modelo, organizar fluxos de interação e extrair informações de forma mais precisa e estruturada. Para se aprofundar nesses conceitos, recomendamos a leitura dos materiais {cite}`mcp_workshop_youtube, mcp_official_docs`.
 
 ### **1. Composability (Componibilidade)**
 
@@ -943,15 +942,6 @@ Agent de Pesquisa (Cliente + Servidor)
 * - File System MCP Server  
   - generate_report()
 ```
-
-- **Como Cliente, usa:**
-- Web Search MCP Server
-- Database MCP Server
-- File System MCP Server
-- **Como Servidor, expõe:**
-- research_topic()
-- summarize_findings()
-- generate_report()
 ```
 
 ```{admonition} **Benefícios da Componibilidade:**
@@ -978,7 +968,7 @@ Permite que um servidor MCP solicite inferências (chamadas de LLM) do cliente, 
 
 ```{admonition} Exemplo: Servidor -> Cliente (solicitando inferência)
 :class: note
-- ***Resumo do Fluxo:****
+**Resumo do Fluxo:**
 
 1. Você pede: "Organize minha caixa de entrada"
 
@@ -993,11 +983,13 @@ Permite que um servidor MCP solicite inferências (chamadas de LLM) do cliente, 
 
 - ***Por que isso é poderoso?****
 
-1.Servidor permanece simples (sem IA própria)
+1. **Simplicidade no servidor**  
+   O servidor permanece leve e direto, sem precisar incorporar capacidades próprias de IA.
 
-2.Você controla custos e privacidade (tudo via seu (llm))
+2. **Controle total**  
+   Você mantém o controle sobre os custos e a privacidade, já que toda a inteligência vem do seu próprio modelo de linguagem (LLM).
 
-veja: 
+O script abaixo cria uma **solicitação de amostragem (sampling)** para o modelo de linguagem, pedindo que ele **classifique um e-mail** em uma das três categorias — *urgente*, *normal* ou *baixa prioridade* —, utilizando o modelo preferencial **Claude 3 Sonnet**.
 
 ```json
 {
@@ -1024,25 +1016,30 @@ veja:
 }
 ```
 
-**Vantagens:**
+```{admonition} **Vantagens:**
+:class: tip
 
 - Servidor não precisa gerenciar LLM próprio
 - Cliente mantém controle sobre custos e privacidade
 - Consistência no modelo usado em toda a aplicação
+```
 
-#### 3. Elicitation (Elicitação)
+### 3. Elicitation (Elicitação)
 
 Capacidade que permite ao servidor solicitar informações adicionais dos usuários durante a execução de uma ferramenta.
 
-**Casos de Uso:**
+```{admonition} **Casos de Uso:**
+:class: exemplo
 
 - Confirmar ações críticas (deletar arquivos, fazer pagamentos)
 - Coletar informações adicionais necessárias
 - Obter permissões específicas
+```
 
-**Exemplo de Fluxo:**
+```{admonition} **Exemplo de Fluxo:**
+:class: exemplo
 
-// Durante execução de uma ferramenta de reserva
+ Durante execução de uma ferramenta de reserva
 ```json
 {
   "jsonrpc": "2.0",
@@ -1053,7 +1050,9 @@ Capacidade que permite ao servidor solicitar informações adicionais dos usuár
     }
  }
 ```
-#### 4. Completions (Conclusões/Sugestões)
+```
+
+### 4. Completions (Conclusões/Sugestões)
 
 O MCP suporta autocompletar para argumentos de prompt e parâmetros de recursos.
 
