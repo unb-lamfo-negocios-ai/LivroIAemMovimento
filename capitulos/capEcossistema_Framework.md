@@ -8,7 +8,7 @@ Neste capítulo, vamos explorar algumas das ferramentas mais utilizadas atualmen
 
 ## LangFlow
 
-O **LangFlow** é uma interface visual que facilita a construção de aplicações com modelos de linguagem. É uma ferramenta de código aberto que funciona como um **“laboratório de fluxos”**, no qual prompts, APIs, bancos de dados e lógica de negócio podem ser conectados de forma intuitiva, sem necessidade de programação aprofundada. Por reduzir barreiras técnicas, é especialmente útil para **equipes multidisciplinares** (como marketing e inovação) que querem experimentar IA de forma ágil {cite}`langflow2023`.
+O **LangFlow** é uma interface visual que facilita a construção de aplicações com modelos de linguagem. É uma ferramenta de código aberto, desenvolvida em Python, que funciona como um **“laboratório de fluxos”**, no qual prompts, APIs, bancos de dados e lógica de negócio podem ser conectados de forma intuitiva, sem necessidade de programação aprofundada. Por reduzir barreiras técnicas, é especialmente útil para **equipes multidisciplinares** (como marketing e inovação) que querem experimentar IA de forma ágil {cite}`langflow2023`. É ideal para prototipagem rápida de aplicações de IA e experimentação com diferentes modelos e arquiteturas de fluxo.
 
 ```{admonition} Principais usos
 :class: note  
@@ -26,35 +26,30 @@ O **LangFlow** é uma interface visual que facilita a construção de aplicaçõ
 - Exportação de fluxos como código Python
 ```
 
-Integração com MCP: é possível trabalhar com o LangFlow integrando-o ao MCP (Model Context Protocol), permitindo que o fluxo interaja com múltiplos modelos e ferramentas de forma padronizada, escalável e interoperável.
-```
-Para trabalhar com MCP (Model Context Protocol):
+Integração com MCP: é possível trabalhar com o LangFlow integrando-o ao MCP (Model Context Protocol), veja [Seção Model Context Protocol](secao_mcp), permitindo que o fluxo interaja com múltiplos modelos e ferramentas de forma padronizada, escalável e interoperável.
 
+```{admonition} Para trabalhar com o MCP:
+:class: note
 - Configure diferentes modelos de linguagem como nós
 - Estabeleça regras de roteamento entre modelos
 - Defina estratégias de fallback automático
 - Monitore uso e custos por provedor
+```
 
-O LangFlow é ideal para prototipagem rápida de aplicações de IA e experimentação com diferentes modelos e arquiteturas de fluxo.
+O LangFlow pode ser enquadrado não apenas como uma ferramenta, mas como um paradigma de desenvolvimento distinto. 
 
-____ Notion
-# História por trás do LangFlow
-
-A plataforma foi desenvolvida pela empresa Logspace, fundada em 2022 pelos mineiros Rodrigo Nader e Gabriel Almeida. Em entrevistas e publicações, o projeto é frequentemente descrito como uma "ferramenta brasileira".
-
-Rodrigo Nader, um dos fundadores, expressou o objetivo de fortalecer o cenário de tecnologia no país, afirmando: "Nosso objetivo é transformar o Brasil em um polo de inovação em inteligência artificial".
-
-Posteriormente, a empresa foi adquirida pela DataStax, que agora faz parte da IBM.
-
-## O Paradigma LangFlow: Orquestração Visual para Workflows de IA
-
-Esta secção introdutória enquadra o LangFlow não apenas como uma ferramenta, mas como um paradigma de desenvolvimento distinto. Estabelece a proposta de valor central do LangFlow: acelerar o desenvolvimento de aplicações de Inteligência Artificial (IA) através de uma interface visual de baixo código (low-code), construída sobre as fundações do ecossistema LangChain.
+```{admonition} Proposta de valor central do LangFlow
+:class: note
+Acelerar o desenvolvimento de aplicações de Inteligência Artificial (IA) através de uma interface visual de baixo código (low-code), construída sobre as fundações do ecossistema LangChain.
+```
 
 ### Definindo o LangFlow: Além de uma UI para o LangChain
 
-O LangFlow é uma framework visual de código aberto, baseada em Python, projetada para a construção de aplicações de Geração Aumentada por Recuperação (RAG) e de múltiplos agentes. Ele oferece uma interface intuitiva de arrastar e soltar que abstrai a complexidade da escrita de código para compor workflows de IA, tornando o processo mais acessível e eficiente. Embora tenha começado como uma interface de utilizador (UI) para o LangChain, a sua evolução posicionou-o como uma ferramenta poderosa para experimentação e prototipagem rápidas. Esta abordagem visual reduz significativamente a barreira de entrada, permitindo que um leque mais vasto de utilizadores, incluindo aqueles menos familiarizados com as complexidades do Python, construam e testem sistemas de IA complexos.
+O LangFlow é uma plataforma visual de código aberto que simplifica a criação de aplicações com Geração Aumentada por Recuperação (RAG) e estruturas baseadas em múltiplos agentes. Seu grande diferencial está na interface intuitiva de arrastar e soltar, que substitui a escrita de código tradicional por uma experiência acessível e visual. Assim, mesmo quem não domina programação pode construir fluxos de trabalho inteligentes com facilidade.
 
-A missão da plataforma é tornar o desenvolvimento de agentes de IA rápido, flexível e acessível, fomentando a criatividade e a iteração rápida desde a ideia até ao protótipo funcional. O LangFlow é agnóstico em relação a Modelos de Linguagem Grandes (LLMs) e a bases de dados vetoriais, suportando todos os principais fornecedores e oferecendo uma biblioteca crescente de ferramentas de IA. Esta flexibilidade garante que os desenvolvedores não fiquem presos a uma tecnologia específica, permitindo-lhes escolher os melhores componentes para as suas necessidades.
+Embora tenha surgido como uma simples interface gráfica para o LangChain, o LangFlow evoluiu rapidamente. Hoje, ele se consolidou como uma ferramenta poderosa para prototipagem e experimentação ágil de sistemas de IA. Graças à sua abordagem visual, a plataforma derruba barreiras técnicas e convida até mesmo usuários iniciantes — ou de áreas não técnicas — a explorarem o desenvolvimento de soluções complexas com IA.
+
+Outro ponto forte do LangFlow é sua flexibilidade tecnológica. Ele é totalmente agnóstico em relação a LLMs e bancos de vetores, o que significa que oferece suporte aos principais provedores do mercado. Além disso, conta com uma biblioteca crescente de componentes e integrações. Isso garante ao desenvolvedor a liberdade de escolher os melhores recursos para cada projeto, sem se prender a uma tecnologia ou fornecedor específico.
 
 ---
 
@@ -115,6 +110,16 @@ Nesta secção, estabelecemos o LangFlow como uma poderosa ferramenta de prototi
 No entanto, também identificámos a sua limitação arquitetural inerente: a barreira da aciclicidade, que impede a criação de agentes com comportamentos iterativos e de autocorreção. A resposta estratégica do LangFlow a esta limitação não foi alterar o seu núcleo, mas sim abraçar a interoperabilidade através do Protocolo de Contexto de Modelo (MCP). O MCP funciona como uma ponte, permitindo que os fluxos lineares e fáceis de construir no LangFlow se conectem e orquestrem sistemas externos mais complexos e potencialmente cíclicos.
 
 Com esta ponte estabelecida, o próximo passo lógico é explorar a arquitetura dos sistemas que vivem do outro lado — aqueles projetados desde o início para gerir ciclos, estado e a lógica complexa que define os agentes verdadeiramente autónomos.
+
+### História por trás do LangFlow
+
+A plataforma foi desenvolvida pela empresa Logspace, fundada em 2022 pelos mineiros  Rodrigo Nader e Gabriel Almeida. Em entrevistas e publicações, o projeto é frequentemente descrito como uma "ferramenta brasileira".
+
+Rodrigo Nader, um dos fundadores, expressou o objetivo de fortalecer o cenário de tecnologia no país, afirmando: 
+
+> "Nosso objetivo é transformar o Brasil em um polo de inovação em inteligência artificial".
+
+Posteriormente, a empresa foi adquirida pela DataStax, que agora faz parte da IBM.
 ---
 
 ## LangChain
