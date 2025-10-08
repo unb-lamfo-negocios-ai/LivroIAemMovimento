@@ -28,12 +28,14 @@ O **LangFlow** é uma interface visual que facilita a construção de aplicaçõ
 
 Integração com MCP: é possível trabalhar com o LangFlow integrando-o ao MCP (Model Context Protocol), veja [Seção Model Context Protocol](secao_mcp), permitindo que o fluxo interaja com múltiplos modelos e ferramentas de forma padronizada, escalável e interoperável.
 
-Para trabalhar com o MCP:
+```{admonition} Para trabalhar com o MCP:
+:class: tip
 
 - Configure diferentes modelos de linguagem como nós
 - Estabeleça regras de roteamento entre modelos
 - Defina estratégias de fallback automático
 - Monitore uso e custos por provedor
+```
 
 
 O LangFlow pode ser enquadrado não apenas como uma ferramenta, mas como um paradigma de desenvolvimento distinto. 
@@ -59,7 +61,7 @@ O LangFlow aborda diretamente a natureza lenta e intensiva em código da prototi
 
 Ao visualizar os workflows, facilita a colaboração e torna ideias de produtos complexas compreensíveis tanto para os stakeholders técnicos como para os não técnicos. Esta clareza visual é um diferenciador chave, permitindo que as equipas construam e demonstrem workflows de LLM rapidamente.
 
-COLOCAR O GIFF DO LANGFLOW FUNCIONANDO AQUI
+COLOCAR O GIFF DO LANGFLOW FUNCIONANDO AQUI - [exemplo de giff](https://www.linkedin.com/posts/rodrigo-nader-673163bb_langflows-new-advanced-parser-powered-by-ugcPost-7379371424571899905-aCrD?utm_source=share&utm_medium=member_desktop&rcm=ACoAACdqe7IB_zfpFo5iAbyxrFHxEN3NmopwdJc)
 
 A plataforma democratiza o acesso a conceitos poderosos de IA, como agentes, RAG e orquestração de múltiplas ferramentas, tornando-os tangíveis e manipuláveis sem a necessidade de um conhecimento profundo em programação. Essencialmente, o LangFlow acelera o ciclo de vida do desenvolvimento de IA ao permitir que as equipas transformem rapidamente ideias em protótipos funcionais, testem diferentes configurações e iterem sobre a lógica da aplicação com um esforço mínimo.
 
@@ -100,13 +102,13 @@ Essa colaboração **reduz retrabalho**, **acelera iterações** e **garante ali
 :gutter: 2
 
 :::{grid-item}
-### 🧩 Orquestrador de IA
+### Orquestrador de IA
 
 Responsável por planejar, conectar e estruturar os diferentes blocos de uma aplicação de IA. Atua como um estrategista técnico, integrando modelos, dados e fluxos para entregar valor ao negócio.
 :::
 
 :::{grid-item}
-### 🎨 Designer de Fluxos
+### Designer de Fluxos
 
 Foca na experiência visual e funcional dos fluxos de IA. Usa ferramentas no-code ou low-code (como LangFlow) para construir e testar soluções, mesmo sem conhecimento avançado em programação.
 :::
@@ -121,9 +123,16 @@ Esta secção desconstrói a arquitetura subjacente do LangFlow, explicando como
 
 ### O Modelo de Execução: Grafos Acíclicos Direcionados (DAGs)
 
-O núcleo do modelo de execução do LangFlow é o Grafo Acíclico Direcionado (DAG). Cada "fluxo" (flow) criado na tela é uma representação visual de um DAG. Quando um fluxo é executado, o LangFlow constrói um objeto de grafo a partir dos nós (componentes) e das arestas (conexões). Os nós são então ordenados topologicamente para determinar uma ordem de execução estrita e sequencial, baseada nas dependências entre eles.
+```{admonition} Grafo Acíclico Direcionado (DAG): núcleo do modelo de execução do LangFlow
+:class: note
+- Cada "fluxo" (flow) criado na tela é uma representação visual de um DAG.
+- Quando um fluxo é executado, o LangFlow constrói um objeto de grafo a partir dos nós (componentes) e das arestas (conexões).
+- Os nós são então ordenados topologicamente para determinar uma ordem de execução estrita e sequencial, baseada nas dependências entre eles.
+```
 
-Durante a construção do grafo, a função `def_build` de cada componente é chamada para validar e preparar o nó. O grafo é então processado na ordem de dependência, com a saída de um nó a ser passada como entrada para o nó seguinte. Este modelo sequencial e acíclico é altamente eficaz para workflows lineares ou com ramificações, como pipelines de RAG padrão, onde o processo é previsível: Carregar Dados -> Dividir -> Embutir -> Armazenar -> Recuperar -> Gerar.
+Durante a construção do grafo, a função `def_build` de cada componente é chamada para validar e preparar o nó. O grafo é então processado na ordem de dependência, com a saída de um nó a ser passada como entrada para o nó seguinte. Este modelo sequencial e acíclico é altamente eficaz para workflows lineares ou com ramificações, como pipelines de RAG padrão, onde o processo é previsível: 
+
+`Carregar Dados -> Dividir -> Embutir -> Armazenar -> Recuperar -> Gerar`
 
 No entanto, a natureza "Acíclica" do modelo DAG significa que ele, por definição, não pode suportar ciclos ou laços na sua estrutura de grafo. Esta característica impõe uma limitação significativa para sistemas de agentes avançados que requerem raciocínio iterativo, laços de autocorreção ou comportamentos cíclicos e com estado. Esta escolha arquitetural contrasta com frameworks como o LangGraph, que são explicitamente projetadas para lidar com ciclos, oferecendo um paradigma de orquestração mais flexível para agentes complexos.
 
