@@ -252,14 +252,12 @@ Essa evolução trouxe uma nova camada de complexidade — **a orquestração**.
 
 Antes dos frameworks especializados, os desenvolvedores precisavam gerenciar tudo manualmente, criando um código “cola” frágil, difícil de manter e propenso a erros.
 
-Nesse cenário, o **LangChain** surge como um **ecossistema de orquestração** que simplifica a criação de **workflows complexos e multiagentes**.
-
-Desta forma, o **LangChain** é uma das bibliotecas mais populares para desenvolvimento de aplicações baseadas em LLMs. 
+Nesse cenário, o **LangChain** surge como um **ecossistema de orquestração** que simplifica a criação de **workflows complexos e multiagentes**. Desta forma, o **LangChain** é uma das bibliotecas mais populares para desenvolvimento de aplicações baseadas em LLMs. 
 
 - É um framework de código aberto que facilita o desenvolvimento de aplicações com Inteligência Artificial, especialmente para criar agentes de IA.
 - Seu diferencial está na **flexibilidade para integrar IA em aplicações robustas**, tornando-o uma escolha comum para startups e grandes empresas {cite}`langchain2022`.
 
-Ele oferece **componentes reutilizáveis e modulares** para:  
+Ela oferece **componentes reutilizáveis e modulares** para:  
 
 - Conectar modelos de linguagem a diferentes fontes de dados.  
 - Gerenciar memória de conversas de longo prazo.  
@@ -332,29 +330,7 @@ Para superar essas limitações, surgiram frameworks como o **LangChain**, **Lla
 
 Essas soluções transformam um simples modelo de linguagem em uma **aplicação inteligente completa**, com raciocínio autônomo, tomada de decisão e execução de tarefas práticas.
 
-### **Introdução**
-
-O advento de Modelos de Linguagem de Grande Escala (LLMs) catalisou uma mudança de paradigma no desenvolvimento de software. As aplicações estão a evoluir de sistemas transacionais, que respondem a comandos diretos, para "aplicações cognitivas" que compreendem, raciocinam e agem com um grau de autonomia sem precedentes. Esta transição introduz uma nova camada de complexidade: a necessidade de orquestração sofisticada. Já não é suficiente fazer uma simples chamada de API a um LLM; as aplicações modernas devem encadear múltiplas chamadas, interagir com fontes de dados externas, utilizar ferramentas personalizadas e manter o contexto ao longo de interações complexas. Antes do surgimento de frameworks dedicados, os programadores enfrentavam o desafio de gerir manualmente este fluxo, escrevendo código "cola" frágil, difícil de manter e propenso a erros.
-
-Neste contexto, o LangChain emergiu não apenas como uma ferramenta, mas como um ecossistema de orquestração fundamental, projetado para simplificar a construção de fluxos de trabalho complexos e de múltiplos passos. Este relatório serve como um guia técnico definitivo para arquitetos e programadores que procuram navegar neste novo cenário. O seu objetivo é fornecer uma análise exaustiva que vai desde a integração de código personalizado no framework LangChain até à implementação de sistemas de produção escaláveis e robustos.
-
-Ao longo do texto será tratado:
-
-- Os mecanismos precisos para conectar a lógica de negócio de um programador ao ecossistema LangChain.
-- Uma análise comparativa aprofundada das filosofias de orquestração do LangChain e do seu sucessor mais avançado, o LangGraph.
-- Uma avaliação criticamente vários padrões de arquitetura de backend, Monolítico, Microsserviços, Serverless e Orientado a Eventos, especificamente adaptados aos desafios únicos das cargas de trabalho de IA.
-
-O objetivo é capacitar os profissionais técnicos com o conhecimento necessário para transformar uma peça isolada de código de IA num sistema cognitivo totalmente implementado, escalável e resiliente.
-
----
-
-### **Desmistificando o LangChain: A Ponte Entre o Código Personalizado e os LLMs**
-
-Esta seção aborda a questão fundamental de como um programador pode integrar a sua lógica de IA personalizada no ecossistema LangChain. Para isso, é essencial primeiro desconstruir o framework, compreendendo a sua filosofia de orquestração e os seus componentes fundamentais, antes de detalhar os pontos de integração precisos através do conceito de Ferramentas (Tools).
-
----
-
-### **A Filosofia de Orquestração do LangChain: De Framework a Ecossistema**
+### A Filosofia de Orquestração do LangChain: De Framework a Ecossistema
 
 O LangChain é mais do que uma simples biblioteca; é um ecossistema abrangente projetado para gerir todo o ciclo de vida de uma aplicação alimentada por LLM, desde o desenvolvimento e produção até à implementação. A sua principal proposta de valor reside na abstração da complexidade inerente à interação com LLMs, fontes de dados e serviços externos, fornecendo uma interface padronizada e modular. Esta abordagem permite que os programadores construam rapidamente protótipos e iterem em aplicações complexas, como chatbots inteligentes, sistemas de perguntas e respostas sofisticados e ferramentas de análise de dados automatizadas.
 
@@ -362,7 +338,7 @@ A evolução da arquitetura do LangChain é um testemunho da sua maturidade e re
 
 - **`langchain-core`**: O coração do ecossistema. Contém as abstrações de base para todos os componentes (como modelos de chat, vector stores, ferramentas) e a LangChain Expression Language (LCEL), que permite compor estes componentes de forma declarativa. As suas dependências são mantidas propositadamente leves para garantir a estabilidade.
 - **`langchain`**: Este pacote contém a "arquitetura cognitiva" da aplicação. Inclui implementações genéricas de Chains, Agents e estratégias de recuperação de dados.
-- **Pacotes de Integração (ex: `langchain-openai`)**: As integrações mais populares foram separadas em pacotes leves, permitindo uma gestão de versões mais rigorosa e garantindo qualidade através da co-manutenção pela equipa do LangChain e pelos parceiros.
+- **`langchain-openai`**: As integrações mais populares foram separadas em pacotes leves, permitindo uma gestão de versões mais rigorosa e garantindo qualidade através da co-manutenção pela equipa do LangChain e pelos parceiros.
 - **`langchain-community`**: Um repositório para uma vasta gama de integrações de terceiros mantidas pela comunidade, garantindo que o ecossistema permaneça aberto e em constante crescimento.
 
 Esta modularidade aborda diretamente o "inferno de dependências" (*dependency hell*) e a percepção de que o framework era excessivamente "inchado". Ao incentivar novas integrações a serem publicadas como pacotes `langchain-*` separados, o ecossistema promove uma melhor gestão de dependências e versionamento. Esta evolução posiciona o `langchain-core` como um sistema nervoso central estável, sobre o qual um universo de ferramentas e integrações especializadas pode ser construído, permitindo que os programadores instalem apenas o que necessitam para criar aplicações mais leves e eficientes.
@@ -381,7 +357,6 @@ Para construir uma aplicação com o LangChain, um programador utiliza um conjun
     - **Chains**: Representam uma sequência de chamadas. A forma moderna de as construir é através da **LangChain Expression Language (LCEL)**, que utiliza o operador pipe (`|`) para compor componentes de forma declarativa e transparente.
     - **Agents**: Utilizam um LLM para tomar decisões. Um agente tem acesso a um conjunto de ferramentas e decide, com base na entrada do utilizador, qual ferramenta usar, como usá-la e como proceder com a saída, permitindo um comportamento dinâmico e autónomo.
 
----
 
 ### **O Ponto de Conexão: Integrando Código Personalizado via Ferramentas (Tools)**
 
@@ -391,7 +366,7 @@ Uma ferramenta pode ser praticamente qualquer lógica de negócio encapsulada: u
 
 O LangChain oferece vários métodos para criar ferramentas personalizadas, desde simples decoradores de função até implementações mais complexas. A chave para o sucesso é fornecer ao LLM uma descrição em linguagem natural clara e precisa da ferramenta, incluindo o que ela faz e quais são os seus parâmetros de entrada. É essa descrição que o LLM utiliza para raciocinar sobre a utilidade da ferramenta no contexto de uma determinada tarefa. Esta capacidade de integrar código personalizado transforma o LLM de um mero gerador de texto num verdadeiro orquestrador de processos de negócio.
 
----
+
 
 ### **Informações Adicionais do LangChain**
 
@@ -400,7 +375,7 @@ A integração de código personalizado constitui apenas o primeiro passo na jor
 Esta limitação expõe a necessidade de um paradigma de orquestração mais avançado: o **LangGraph**. Conforme será explorado em detalhe posteriormente, o LangGraph foi projetado especificamente para construir agentes mais robustos e controláveis, permitindo a criação de fluxos de trabalho com ciclos, ramificações condicionais e a capacidade de auto-correção; capacidades essenciais para sistemas autónomos complexos.
 
 A transição do modelo de Chains para a arquitetura de grafos do LangGraph é, portanto, o que distingue a criação de um protótipo funcional da engenharia de um sistema de IA de real valor comercial. Com a base da integração de ferramentas solidamente estabelecida, o terreno está preparado para a exploração de arquiteturas avançadas que transformam o potencial da IA em realidade de negócio.
----
+
 
 ## LangGraph
 
