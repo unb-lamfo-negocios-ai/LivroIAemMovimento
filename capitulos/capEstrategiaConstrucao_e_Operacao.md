@@ -1,12 +1,13 @@
 # Estratégias de Construção e Operação
 
-Criar uma solução de Inteligência Artificial vai muito além de treinar modelos.  
-É preciso pensar em **estratégia, operação, custos, governança e sustentabilidade do produto**.  
+Criar uma solução de Inteligência Artificial vai muito além de treinar modelos. É preciso pensar em **estratégia, operação, custos, governança e sustentabilidade do produto**.  
 Neste capítulo, discutiremos como avaliar diferentes caminhos, modelos de negócio e abordagens operacionais ao desenvolver soluções de IA.  
 
 ## Buy versus Build  — modelo pronto ou desenvolvimento interno?
 
-No caminho para criar um negócio com Inteligência Artificial, uma das primeiras e mais importantes decisões estratégicas é definir se a empresa irá desenvolver uma tecnologia própria (build) ou se irá utilizar uma solução já existente no mercado (buy). Essa escolha impacta diretamente o orçamento, o tempo de lançamento do produto e, principalmente, onde residirá o diferencial competitivo. Não se trata de uma decisão puramente técnica, mas fundamentalmente de uma decisão de negócio.
+No caminho para criar um negócio com Inteligência Artificial, uma das primeiras e mais importantes decisões estratégicas é definir se a empresa irá desenvolver uma tecnologia própria (build) ou se irá utilizar uma solução já existente no mercado (buy). 
+
+Essa escolha impacta diretamente o orçamento, o tempo de lançamento do produto e, principalmente, onde residirá o diferencial competitivo. Não se trata de uma decisão puramente técnica, mas fundamentalmente de uma decisão de negócio.
 
 ### A abordagem "Buy": usando um modelo pronto
      
@@ -24,12 +25,22 @@ Optar por “comprar” significa utilizar a tecnologia de ponta desenvolvida po
      
  “Construir” não se limita a criar um modelo do zero, um processo extremamente raro e custoso. Na prática atual, a abordagem "Build" manifesta-se principalmente através do ajuste fino (fine-tuning) de modelos open-source de alta performance com dados proprietários da empresa. Os motivadores para essa decisão são variados e estratégicos.
 
- ```{admonition} Motivadores Estratégicos para a Abordagem "Build":
-:class: note
-    - Hiper-especialização e Vantagem Competitiva: Um modelo genérico, por mais poderoso que seja, não supera um modelo menor e mais ágil treinado exaustivamente para uma única tarefa. É o caso do Harvey AI, que ajustou modelos da família GPT para se tornar um especialista em análise de documentos jurídicos, criando uma vantagem competitiva sustentável em seu nicho.
-    - Soberania de Dados, Segurança e Conformidade: Para setores como o financeiro, saúde ou governamental, enviar dados de clientes para uma API de terceiros pode ser inviável por razões regulatórias (LGPD/GDPR) e de segurança. A solução é uma abordagem "Build". Um exemplo recente é a iniciativa do governo francês, que [em 2024 anunciou a  criação da agência AMIAD, de infraestrutura classificada para IA de defesa para desenvolver modelos de IA soberanos,](https://www.defense.gouv.fr/actualites/sebastien-lecornu-lance-strategie-ministerielle-lintelligence-artificielle) assim como criação de [ferramentas destinadas ao serviço público no gera](https://www.info.gouv.fr/actualite/ia-simplification-et-debureaucratisation-pour-transformer-letat?utm_source=chatgpt.com)l, garantindo que dados sensíveis permaneçam em infraestrutura controlada.
-    - Otimização de Custo e Latência em Escala: Utilizar uma API de ponta tem um custo variável que pode aumentar expressivamente com o volume de uso. Empresas como a DoorDash publicaram estudos em 2024 mostrando como desenvolveram seus próprios modelos para tarefas específicas, como [a estimativa de tempo de entrega](https://careersatdoordash.com/blog/deep-learning-for-smarter-eta-predictions/?utm_source=chatgpt.com). O modelo customizado, embora menos versátil que um GPT-4o, é drasticamente mais rápido e mais econômico para sua única e repetitiva função.
+Motivadores Estratégicos para a Abordagem "Build":
+
+ - **Hiper-especialização e Vantagem Competitiva**: Um modelo genérico, por mais poderoso que seja, não supera um modelo menor e mais ágil treinado exaustivamente para uma única tarefa.
+
+```{admonition} Exemplo: caso do Harvey AI
+:class: exemplo
+O Harvey AI ajustou modelos da família GPT para se tornar um especialista em análise de documentos jurídicos, criando uma vantagem competitiva sustentável em seu nicho.
 ```
+- **Soberania de Dados, Segurança e Conformidade**: Para setores como o financeiro, saúde ou governamental, enviar dados de clientes para uma API de terceiros pode ser inviável por razões regulatórias (LGPD/GDPR) e de segurança. A solução é uma abordagem "Build"!
+
+```{admonition} Exemplos de iniciativas do governo francês a partir de 2024
+:class: exemplo
+- Criação da [agência AMIAD](https://www.defense.gouv.fr/actualites/sebastien-lecornu-lance-strategie-ministerielle-lintelligence-artificielle), de infraestrutura classificada para IA de defesa para desenvolver modelos de IA soberanos
+- Criação de [ferramentas destinadas ao serviço público no geral](https://www.info.gouv.fr/actualite/ia-simplification-et-debureaucratisation-pour-transformer-letat?utm_source=chatgpt.com), garantindo que dados sensíveis permaneçam em infraestrutura controlada.
+```
+- **Otimização de Custo e Latência em Escala**: Utilizar uma API de ponta tem um custo variável que pode aumentar expressivamente com o volume de uso. Empresas como a DoorDash publicaram estudos em 2024 mostrando como desenvolveram seus próprios modelos para tarefas específicas, como [a estimativa de tempo de entrega](https://careersatdoordash.com/blog/deep-learning-for-smarter-eta-predictions/?utm_source=chatgpt.com). O modelo customizado, embora menos versátil que um GPT-4o, é drasticamente mais rápido e mais econômico para sua única e repetitiva função.
 
 ### A Questão da Propriedade Intelectual e das Licenças
 
