@@ -101,34 +101,46 @@ Para finalizar, apresentamos a seguir **características comparativas entre as a
 
 ## Estruturas de Precificação para IA
 
-Definir o preço de soluções baseadas em IA é um desafio porque envolve **custos variáveis e infraestrutura intensiva**. Alguns modelos comuns incluem:  
+Definir o preço de soluções baseadas em IA é um desafio porque envolve **custos variáveis e infraestrutura intensiva**. A precificação deve equilibrar **custo operacional (treinamento de modelos, armazenamento, servidores, equipe)** e **valor percebido pelo cliente**.  
 
-- **Preço por uso** (*pay-per-use*): clientes pagam proporcionalmente ao consumo, típico em APIs de IA generativa.  
+Alguns modelos comuns incluem:  
+
 - **Assinaturas mensais ou anuais**: acesso recorrente a funcionalidades, modelo muito usado em SaaS.  
-- **Licenciamento corporativo**: contratos personalizados para grandes organizações que exigem escala, integração e suporte dedicado.  
+- **Licenciamento corporativo**: contratos personalizados para grandes organizações que exigem escala, integração e suporte dedicado.
+- **Preço por uso** (*pay-per-use*): clientes pagam proporcionalmente ao consumo, típico em APIs de IA generativa.  
 
-A precificação deve equilibrar **custo operacional (treinamento de modelos, armazenamento, servidores, equipe)** e **valor percebido pelo cliente**.  
+```{admonition} Exemplo de precificação
+:class: exemplo
+Uma API de transcrição de áudio pode cobrar por minuto processado, enquanto uma plataforma de análise de documentos pode usar planos por número de usuários ativos.
+```
 
-Exemplo: uma API de transcrição de áudio pode cobrar por minuto processado, enquanto uma plataforma de análise de documentos pode usar planos por número de usuários ativos.  
+### O modelo preço por uso
 
----
----FELIPE---INICIO-----------------
-- No modelo “pay-as-you-go” via API, empresas como OpenAI, Anthropic e Google disponibilizam diversos endpoints de inferência, cada um oferecendo um conjunto de modelos (por exemplo, GPT-4o, o3, Claude 3.5, Claude 4, Gemini 2.5, etc.) com razões custo-benefício diferentes. Você é cobrado por unidade de consumo (geralmente por milhão de tokens de entrada e saída), o que possibilita:
-    - Escalabilidade imediata: basta chamar a API, sem se preocupar em gerenciar servidores ou clusters de GPU.
-    - Flexibilidade de escolha: selecione o modelo mais barato para tarefas simples (como Gemini 2.0 Flash) ou um mais caro e preciso (como Gemini 2.5 Pro) conforme a necessidade de qualidade e latência.
+O modelo *pay-per-use*, também conhecido como *pay-as-you-go*, utilizado via API, por empresas como OpenAI, Anthropic e Google disponibilizam diversos endpoints de inferência, cada um oferecendo um conjunto de modelos (por exemplo, `GPT-4o, o3`, `Claude 3.5`, `Claude 4`, `Gemini 2.5`, etc.) com razões custo-benefício diferentes. 
+
+Neste modelo você é cobrado por unidade de consumo (geralmente por milhão de tokens de entrada e saída), o que possibilita:
+    - **Escalabilidade imediata**: basta chamar a API, sem se preocupar em gerenciar servidores ou clusters de GPU.
+    - **Flexibilidade de escolha**: selecione o modelo mais barato para tarefas simples (como Gemini 2.0 Flash) ou um mais caro e preciso (como Gemini 2.5 Pro) conforme a necessidade de qualidade e latência.
 - Existem dois problemas centrais desse modelo:
-    - Oscilação de custos: Se seu tráfego varia muito, a fatura pode subir de forma imprevisível no mês em que há picos de uso. Modelos maiores (mais parâmetros) custam várias vezes mais por token. Por exemplo, imagine que você oferece uma ferramenta SaaS que resume documentos, e sua assinatura custa $20/mês. Um "cliente casual" resume 10 artigos curtos, consumindo um total de 50.000 tokens no mês, o que gera um custo de API para você de apenas $0.15. Já um "cliente intensivo" resume 30 relatórios longos, consumindo 3.000.000 de tokens, o que gera um custo de $9.00. Se no mês seguinte esse cliente intensivo dobrar o uso, seu custo direto com ele sobe para $18, eliminando quase toda a sua margem de lucro.
-    - Lock-in ao provedor:
-        - Endpoints e bibliotecas proprietárias: seu código faz chamadas específicas (URLs, formatos de requisição e autenticação) que não são idênticas entre OpenAI, Anthropic ou Vertex AI. Migrar exige refatorar toda a camada de integração.
-        - Tokenização e embeddings: cada provedor usa seu próprio esquema de tokenização e vetorização; embeddings gerados em um serviço podem não ser 100 % compatíveis com outro.
-        - Políticas de dados e egressos: para mudar de nuvem (por exemplo, de Vertex AI para um deployment self-hosted), você pagará taxas de “data egress” e precisará garantir conformidade (LGPD/GDPR) no novo ambiente.
-        - Descontos por uso comprometido: ao fechar um contrato de consumo mínimo para obter desconto (committed-use), você reduz custos, mas fica vinculado a aquele provedor até o fim do período acordado. Romper antes pode acarretar multas ou perda do benefício.
+    - **Oscilação de custos**: Se seu tráfego varia muito, a fatura pode subir de forma imprevisível no mês em que há picos de uso. Modelos maiores (mais parâmetros) custam várias vezes mais por token.
+
+```{admonition}
+:class: exemplo
+Imagine que você oferece uma ferramenta SaaS que resume documentos, e sua assinatura custa $20/mês.
+- Um "cliente casual" resume 10 artigos curtos, consumindo um total de 50.000 tokens no mês, o que gera um custo de API para você de apenas $0.15.
+- Já um "cliente intensivo" resume 30 relatórios longos, consumindo 3.000.000 de tokens, o que gera um custo de $9.00. Se no mês seguinte esse cliente intensivo dobrar o uso, seu custo direto com ele sobe para $18, eliminando quase toda a sua margem de lucro.
+```
+- Lock-in ao provedor:
+   - Endpoints e bibliotecas proprietárias: seu código faz chamadas específicas (URLs, formatos de requisição e autenticação) que não são idênticas entre OpenAI, Anthropic ou Vertex AI. Migrar exige refatorar toda a camada de integração.
+   - Tokenização e embeddings: cada provedor usa seu próprio esquema de tokenização e vetorização; embeddings gerados em um serviço podem não ser 100 % compatíveis com outro.
+   - Políticas de dados e egressos: para mudar de nuvem (por exemplo, de Vertex AI para um deployment self-hosted), você pagará taxas de “data egress” e precisará garantir conformidade (LGPD/GDPR) no novo ambiente.
+   - Descontos por uso comprometido: ao fechar um contrato de consumo mínimo para obter desconto (committed-use), você reduz custos, mas fica vinculado a aquele provedor até o fim do período acordado. Romper antes pode acarretar multas ou perda do benefício.
         
-        Como mitigar o lock-in:
-        
-        - Padrões abertos: estruture suas chamadas de inferência usando a especificação OpenAI ou OpenAPI, facilitando a troca de backend.
-        - Abstração de modelos: desenvolva uma camada de serviço interna que encapsule detalhes de API, de modo que trocar o provedor seja uma simples configuração, não uma reescrita de código.
-        - Cache e fallback: armazene respostas em cache para reduzir chamadas diretas à API e implemente lógica de fallback para usar um modelo alternativo (por exemplo, um checkpoint open-source hospedado internamente) quando o custo ou a latência do endpoint principal estiverem altos. Dessa forma, você aproveita toda a flexibilidade e poder dos serviços pay-as-you-go, sem ficar refém de um único provedor.
+Como mitigar o lock-in:
+
+- Padrões abertos: estruture suas chamadas de inferência usando a especificação OpenAI ou OpenAPI, facilitando a troca de backend.
+- Abstração de modelos: desenvolva uma camada de serviço interna que encapsule detalhes de API, de modo que trocar o provedor seja uma simples configuração, não uma reescrita de código.
+- Cache e fallback: armazene respostas em cache para reduzir chamadas diretas à API e implemente lógica de fallback para usar um modelo alternativo (por exemplo, um checkpoint open-source hospedado internamente) quando o custo ou a latência do endpoint principal estiverem altos. Dessa forma, você aproveita toda a flexibilidade e poder dos serviços pay-as-you-go, sem ficar refém de um único provedor.
         
 - Exemplos do uso metrado via API (pay-as-you-go):
     - **Anthropic:**  [https://www.anthropic.com/api](https://www.anthropic.com/pricing#api)
