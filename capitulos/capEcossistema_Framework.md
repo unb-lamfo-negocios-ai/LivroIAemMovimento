@@ -110,6 +110,8 @@ Esses papéis atuam como **pontes entre os requisitos de negócio e a implementa
 
 ### O Modelo de Execução: Grafos Acíclicos Direcionados (DAGs)
 
+Os Grafos Acíclicos Direcionados (DAGs) representam o núcleo do modelo de execução adotado por diversas ferramentas de orquestração, incluindo o LangFlow. Eles permitem estruturar fluxos de trabalho de forma clara, previsível e rastreável, garantindo que cada etapa dependa de resultados anteriores e evitando ciclos infinitos. Esse formato assegura estabilidade, depuração facilitada e maior controle sobre a sequência lógica de execução, tornando-se ideal para prototipagem e automações lineares em sistemas de IA.
+
 ```{admonition} Grafo Acíclico Direcionado (DAG): núcleo do modelo de execução do LangFlow
 :class: note
 - Cada "fluxo" (flow) criado na tela é uma representação visual de um DAG.
@@ -184,9 +186,9 @@ Essa abordagem está alinhada com o propósito principal do LangFlow:
 
 **Mas... e quando precisamos de mais sofisticação?** A equipe de desenvolvimento reconhece as limitações dos DAGs para a criação de agentes mais avançados. Por isso, introduziu o suporte ao MCP (Model Context Protocol).
 
-:::{tip} 
+
 O MCP atua como uma **"saída de emergência estratégica"** para contornar as limitações do DAG sem abrir mão da simplicidade do LangFlow.
-:::
+
 
 ```{admonition} 
 :class: attention
@@ -216,8 +218,6 @@ A limitação ao uso de DAGs (Grafos Acíclicos Direcionados) no LangFlow **não
 
    - Como componente modular dentro de ecossistemas de IA mais amplos.
  
-:class: important
-
 O suporte a MCP **transforma o LangFlow** de um criador visual isolado em **uma peça estratégica e interoperável** no desenvolvimento de sistemas de IA modernos.
 
 ```{admonition} Para trabalhar com o MCP:
