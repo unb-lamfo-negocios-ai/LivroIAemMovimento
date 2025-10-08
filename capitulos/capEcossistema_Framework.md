@@ -254,7 +254,10 @@ Antes dos frameworks especializados, os desenvolvedores precisavam gerenciar tud
 
 Nesse cenário, o **LangChain** surge como um **ecossistema de orquestração** que simplifica a criação de **workflows complexos e multiagentes**.
 
-Desta forma, o **LangChain** é uma das bibliotecas mais populares para desenvolvimento de aplicações baseadas em LLMs. É um framework de código aberto que facilita o desenvolvimento de aplicações com Inteligência Artificial, especialmente para criar agentes de IA. Seu diferencial está na **flexibilidade para integrar IA em aplicações robustas**, tornando-o uma escolha comum para startups e grandes empresas {cite}`langchain2022`.
+Desta forma, o **LangChain** é uma das bibliotecas mais populares para desenvolvimento de aplicações baseadas em LLMs. 
+
+- É um framework de código aberto que facilita o desenvolvimento de aplicações com Inteligência Artificial, especialmente para criar agentes de IA.
+- Seu diferencial está na **flexibilidade para integrar IA em aplicações robustas**, tornando-o uma escolha comum para startups e grandes empresas {cite}`langchain2022`.
 
 Ele oferece **componentes reutilizáveis e modulares** para:  
 
