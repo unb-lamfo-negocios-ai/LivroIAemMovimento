@@ -1299,11 +1299,11 @@ Sistema de registro que monitora e documenta todas as operações realizadas atr
 
 Durante as interações no contexto do MCP, é essencial registrar detalhes operacionais para garantir segurança, rastreabilidade e auditoria adequada. Abaixo estão os principais elementos recomendados para registro:
 
-- ⏰ **Timestamp**: momento exato em que a operação foi realizada  
-- 🔧 **Ferramenta/recurso acessado**: nome da funcionalidade ou recurso utilizado  
-- 👤 **Usuário que realizou a ação**: identificação do agente ou usuário solicitante  
-- 📋 **Parâmetros enviados**: dados ou argumentos fornecidos na chamada  
-- ✅/❌ **Status do resultado**: indicação de sucesso ou erro da operação 
+- **Timestamp**: momento exato em que a operação foi realizada  
+- **Ferramenta/recurso acessado**: nome da funcionalidade ou recurso utilizado  
+- **Usuário que realizou a ação**: identificação do agente ou usuário solicitante  
+- **Parâmetros enviados**: dados ou argumentos fornecidos na chamada  
+- **Status do resultado**: indicação de sucesso ou erro da operação 
 
 **Exemplo Prático:**
 ```python
@@ -1376,7 +1376,10 @@ Agora que compreendemos os conceitos e estruturas fundamentais do MCP, é hora d
 
 Trata-se de um **Sistema MCP para Busca e Análise de Papers Acadêmicos** — uma solução completa que permite **buscar, analisar e interagir com artigos científicos** utilizando o protocolo MCP aliado à inteligência artificial. Esse exemplo mostra como integrar agentes com ferramentas externas, manipulando dados em tempo real e simulando conversas orientadas por LLMs.
 
+```{admonition} Saiba mais!
+:class: hint
 Você pode conciliar a leitura e implementação deste projeto com os conteúdos aprofundados disponíveis no curso {cite}`deeplearning_mcp_course`.
+```
 
 **O que é este projeto?** Este é um sistema que permite:
 
