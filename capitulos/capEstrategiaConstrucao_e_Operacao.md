@@ -136,27 +136,43 @@ Imagine que você oferece uma ferramenta SaaS que resume documentos, e sua assin
 - Um "cliente casual" resume 10 artigos curtos, consumindo um total de 50.000 tokens no mês, o que gera um custo de API para você de apenas $0.15.
 - Já um "cliente intensivo" resume 30 relatórios longos, consumindo 3.000.000 de tokens, o que gera um custo de $9.00. Se no mês seguinte esse cliente intensivo dobrar o uso, seu custo direto com ele sobe para $18, eliminando quase toda a sua margem de lucro.
 ```
-- Lock-in ao provedor:
-   - Endpoints e bibliotecas proprietárias: seu código faz chamadas específicas (URLs, formatos de requisição e autenticação) que não são idênticas entre OpenAI, Anthropic ou Vertex AI. Migrar exige refatorar toda a camada de integração.
-   - Tokenização e embeddings: cada provedor usa seu próprio esquema de tokenização e vetorização; embeddings gerados em um serviço podem não ser 100 % compatíveis com outro.
-   - Políticas de dados e egressos: para mudar de nuvem (por exemplo, de Vertex AI para um deployment self-hosted), você pagará taxas de “data egress” e precisará garantir conformidade (LGPD/GDPR) no novo ambiente.
-   - Descontos por uso comprometido: ao fechar um contrato de consumo mínimo para obter desconto (committed-use), você reduz custos, mas fica vinculado a aquele provedor até o fim do período acordado. Romper antes pode acarretar multas ou perda do benefício.
-        
-Como mitigar o lock-in:
+### Lock-in ao provedor
 
-- Padrões abertos: estruture suas chamadas de inferência usando a especificação OpenAI ou OpenAPI, facilitando a troca de backend.
-- Abstração de modelos: desenvolva uma camada de serviço interna que encapsule detalhes de API, de modo que trocar o provedor seja uma simples configuração, não uma reescrita de código.
-- Cache e fallback: armazene respostas em cache para reduzir chamadas diretas à API e implemente lógica de fallback para usar um modelo alternativo (por exemplo, um checkpoint open-source hospedado internamente) quando o custo ou a latência do endpoint principal estiverem altos. Dessa forma, você aproveita toda a flexibilidade e poder dos serviços pay-as-you-go, sem ficar refém de um único provedor.
-        
-- Exemplos do uso metrado via API (pay-as-you-go):
-    - **Anthropic:**  [https://www.anthropic.com/api](https://www.anthropic.com/pricing#api)
-    - **Google:**  [https://cloud.google.com/vertex-ai/pricing](https://ai.google.dev/gemini-api/docs/pricing)
-    - **Groq Cloud:** https://groq.com/pricing
-    - **SambaNova Suite** –  https://sambanova.ai/
-    - **OpenRouter** – Plataforma agregadora que oferece modelos diversos com preços variados por token, claramente exibidos no site. [https://openrouter.ai/pricing](https://openrouter.ai/)
+Lock-in ao provedor (ou vendor lock-in) é a situação em que uma empresa ou usuário se torna altamente dependente de um fornecedor específico (por exemplo, de nuvem, API, banco de dados, framework, etc.) a ponto de ser difícil, caro ou arriscado migrar para outro.
+
+```{admonition} Atenção ao Lock-in
+:class: attention
+
+A dependência excessiva de um único provedor pode gerar barreiras técnicas e contratuais difíceis de contornar.  A seguir, destacamos os principais **fatores que contribuem para o lock-in** e que devem ser avaliados antes de adotar uma solução proprietária:
+
+- **Endpoints e bibliotecas proprietárias**: seu código faz chamadas específicas (URLs, formatos de requisição e autenticação) que não são idênticas entre OpenAI, Anthropic ou Vertex AI. Migrar exige refatorar toda a camada de integração.
+- **Tokenização e embeddings**: cada provedor usa seu próprio esquema de tokenização e vetorização; embeddings gerados em um serviço podem não ser 100 % compatíveis com outro.
+- **Políticas de dados e egressos**: para mudar de nuvem (por exemplo, de Vertex AI para um deployment self-hosted), você pagará taxas de “data egress” e precisará garantir conformidade (LGPD/GDPR) no novo ambiente.
+- **Descontos por uso comprometido**: ao fechar um contrato de consumo mínimo para obter desconto (committed-use), você reduz custos, mas fica vinculado a aquele provedor até o fim do período acordado. Romper antes pode acarretar multas ou perda do benefício.
+```
+
+Para evitar ficar preso a um único provedor e manter maior liberdade tecnológica e contratual, considere as seguintes **estratégias de mitigação do lock-in**:
+
+```{admonition} Como mitigar o lock-in
+:class: hint
+- **Padrões abertos**: estruture suas chamadas de inferência usando a especificação OpenAI ou OpenAPI, facilitando a troca de backend.
+- **Abstração de modelos**: desenvolva uma camada de serviço interna que encapsule detalhes de API, de modo que trocar o provedor seja uma simples configuração, não uma reescrita de código.
+- **Cache e fallback**: armazene respostas em cache para reduzir chamadas diretas à API e implemente lógica de fallback para usar um modelo alternativo.
+    - Por exemplo, um checkpoint open-source hospedado internamente quando o custo ou a latência do endpoint principal estiverem altos.
+    - Dessa forma, você aproveita toda a flexibilidade e poder dos serviços pay-as-you-go, sem ficar refém de um único provedor.
+```
+
+Para quem deseja experimentar e escalar soluções de IA com flexibilidade, o modelo pay-as-you-go permite pagar apenas pelo que for utilizado. Abaixo estão alguns exemplos de plataformas e provedores que oferecem esse tipo de cobrança, com links diretos para suas páginas de preços e documentação técnica:
+
+```{admonition} Exemplos do uso metrado via API (pay-as-you-go):
+:class: hint
+- **Anthropic**:  [https://www.anthropic.com/api](https://www.anthropic.com/pricing#api)
+- **Google**:  [https://cloud.google.com/vertex-ai/pricing](https://ai.google.dev/gemini-api/docs/pricing)
+- **Groq Cloud**: https://groq.com/pricing
+- **SambaNova Suite**:  https://sambanova.ai/
+- **OpenRouter**: [https://openrouter.ai/pricing](https://openrouter.ai/)
+```
  
----FELIPE--FIM------------------------------------------
-
 ----ERIC --- INICIO
 ## Modelos de Monetização
 
