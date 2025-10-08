@@ -30,6 +30,7 @@ Integração com MCP: é possível trabalhar com o LangFlow integrando-o ao MCP 
 
 ```{admonition} Para trabalhar com o MCP:
 :class: note
+
 - Configure diferentes modelos de linguagem como nós
 - Estabeleça regras de roteamento entre modelos
 - Defina estratégias de fallback automático
