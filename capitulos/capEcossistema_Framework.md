@@ -643,35 +643,67 @@ Este exemplo simples demonstra o poder do paradigma do LangGraph. A capacidade d
 
 ### Padrões Avançados: Multi-Agentes e Intervenção Humana
 
-A arquitetura do LangGraph se estende elegantemente a padrões muito mais sofisticados, essenciais para aplicações do mundo real.
+À medida que os desafios do mundo real se tornam mais complexos, também evoluem os requisitos das aplicações baseadas em IA. A arquitetura do LangGraph não se limita à construção de agentes simples: ela se expande com naturalidade para comportar padrões avançados, como sistemas com múltiplos agentes cooperando entre si e fluxos de trabalho que integram decisões humanas no processo automatizado. A seguir, exploraos padrões Colaboração Multi-Agente e Intervenção Humana no Loop (HITL).
 
-### Colaboração Multi-Agente
+#### Colaboração Multi-Agente
 
-Sistemas complexos raramente são resolvidos por um único agente monolítico. Uma abordagem mais robusta é criar um sistema de múltiplos agentes, cada um com sua especialidade. LangGraph é ideal para orquestrar essa colaboração. Uma arquitetura comum é a do "supervisor-trabalhador":
+Sistemas complexos raramente são resolvidos por um único agente monolítico. Uma abordagem mais robusta é criar um sistema de múltiplos agentes, cada um com sua especialidade. LangGraph é ideal para orquestrar essa colaboração. 
+
+```{admonition} Arquitetura do "supervisor-trabalhador"
+:class: note
 
 - Um **Grafo Supervisor** atua como o orquestrador principal. Seu estado rastreia a tarefa geral e delega subtarefas.
 - Cada **Agente Trabalhador** é, ele próprio, um grafo LangGraph compilado, especializado em uma função (ex: um "Pesquisador", um "Analista de Dados", um "Escritor").
 - O supervisor, através de suas arestas condicionais, invoca o grafo trabalhador apropriado para cada subtarefa, aguarda o resultado, atualiza seu estado global e decide o próximo passo.
+```
 
 Essa abordagem modular torna o sistema mais fácil de desenvolver, testar e manter.
 
 ### Intervenção Humana no Loop (HITL)
 
-Para aplicações de missão crítica, a autonomia total pode ser um risco. LangGraph fornece um mecanismo nativo e elegante para implementar a Intervenção Humana no Loop (HITL). Um nó especial pode ser configurado para gerar uma `Interrupt`, pausando a execução do grafo e esperando por uma entrada externa. Uma aresta condicional pode ser usada para direcionar o fluxo para este nó de interrupção sempre que o agente encontrar uma situação de baixa confiança, ambiguidade ou antes de executar uma ação de alto impacto (ex: enviar um e-mail para um cliente, executar uma transação financeira). Após a intervenção humana, o estado é atualizado com a orientação fornecida, e a execução do grafo pode ser retomada a partir do ponto em que parou.
+Para aplicações **de missão crítica**, a autonomia total de um agente pode representar **um risco significativo**. O **LangGraph** oferece uma solução nativa e elegante para incorporar **Intervenção Humana no Loop (HITL)**, permitindo equilibrar **automação e supervisão humana** de forma segura e auditável.
 
-Essa capacidade de integrar perfeitamente a supervisão humana transforma o LangGraph de uma ferramenta para construir agentes autônomos em uma plataforma para construir sistemas de IA colaborativos e seguros. Isso nos leva a uma percepção mais profunda sobre o papel do LangGraph no ecossistema de IA. Ele não é apenas uma ferramenta para criar agentes "inteligentes", mas uma ferramenta crucial para construir agentes *auditáveis, depuráveis e seguros*. A combinação de controle explícito sobre o fluxo, gestão de estado transparente e mecanismos nativos para interrupção e continuação são os pilares fundamentais dos sistemas de "IA Confiável" (*Trustworthy AI*). A capacidade de inspecionar o estado em cada passo, entender *por que* uma decisão foi tomada (através da lógica das arestas condicionais) e intervir quando necessário, aborda diretamente o desafio da "caixa-preta" em sistemas de agentes complexos, tornando o LangGraph uma escolha estratégica para aplicações de nível empresarial.
+:::{note}
+A HITL é essencial quando o sistema precisa de validação humana antes de tomar decisões **ambíguas**, **críticas** ou **irreversíveis**.
+:::
 
-### **Conclusão: Da Autonomia à Confiabilidade em Produção**
+**Como funciona na prática**
 
-A jornada através da arquitetura do LangGraph revela uma evolução fundamental na orquestração de LLMs. As limitações inerentes aos Grafos Acíclicos Dirigidos (DAGs) para a construção de agentes inteligentes — notavelmente a sua incapacidade de iterar e auto-corrigir — necessitaram de uma mudança de paradigma. O LangGraph aborda este desafio ao introduzir o `StatefulGraph`, transformando o modelo de desenvolvimento de um pipeline de dados linear para a simulação de um processo cognitivo com memória. Através da implementação de nós, arestas condicionais e um objeto de estado persistente, torna-se possível construir agentes capazes de raciocínio cíclico, deliberação e adaptação dinâmica.
+- Um **nó especial** pode ser configurado para gerar uma `Interrupt`, **pausando a execução do grafo**.  
+- O sistema **aguarda uma entrada externa** (ex: aprovação de um analista ou gerente).  
+- Uma **aresta condicional** direciona o fluxo para esse nó sempre que:
+  - o agente identificar **baixa confiança** em uma resposta;
+  - houver **ambiguidade** na decisão;
+  - ou antes de executar uma **ação de alto impacto**  
+    *(por exemplo, enviar um e-mail a um cliente ou executar uma transação financeira)*.
+
+Após a **intervenção humana**, o estado do grafo é **atualizado com a orientação fornecida**, e a execução é **retomada do ponto exato em que parou**.
+
+:::{important}
+Essa integração harmoniosa entre **agentes autônomos e revisão humana** cria um ciclo de **aprendizado supervisionado contínuo**, aprimorando tanto o desempenho quanto a confiabilidade do sistema.
+:::
+
+---
+
+**Por que isso importa?** A capacidade de integrar a supervisão humana transforma o **LangGraph** de uma ferramenta para agentes autônomos em uma plataforma para construir **sistemas de IA colaborativos, auditáveis e seguros**.
+
+- **Controle explícito do fluxo** garante previsibilidade.  
+- **Gestão de estado transparente** facilita depuração e análise.  
+- **Interrupção e continuação nativas** permitem intervenção pontual e rastreável.
+
+:::{important}
+Esses recursos são a base do conceito de **IA Confiável (*Trustworthy AI*)**, no qual cada decisão pode ser **inspecionada**, **explicada** e, se necessário, **corrigida em tempo real**.
+:::
+
+Em resumo, o LangGraph possibilita construir **agentes inteligentes e responsáveis**, que unem a **velocidade da automação** à **sabedoria da intervenção humana** — um passo decisivo rumo à **IA verdadeiramente confiável**.
+
+Sintetizando o que foi visto nesta seção sobre LangGraph, vimos que a jornada através da arquitetura do LangGraph revela uma evolução fundamental na orquestração de LLMs. As limitações inerentes aos Grafos Acíclicos Dirigidos (DAGs) para a construção de agentes inteligentes — notavelmente a sua incapacidade de iterar e auto-corrigir — necessitaram de uma mudança de paradigma. O LangGraph aborda este desafio ao introduzir o `StatefulGraph`, transformando o modelo de desenvolvimento de um pipeline de dados linear para a simulação de um processo cognitivo com memória. Através da implementação de nós, arestas condicionais e um objeto de estado persistente, torna-se possível construir agentes capazes de raciocínio cíclico, deliberação e adaptação dinâmica.
 
 As implicações desta arquitetura estendem-se muito para além da mera capacidade funcional. A capacidade de orquestrar sistemas multi-agente, onde agentes especializados colaboram sob a direção de um supervisor, permite a decomposição modular de problemas complexos.
 
 No entanto, a integração nativa de padrões de Intervenção Humana no Loop (HITL) é talvez a característica mais crítica para a adoção empresarial. Ela fornece um mecanismo crucial para o controlo e a segurança, permitindo a supervisão humana antes da execução de ações de alto impacto. Isto transforma o LangGraph de um framework para construir agentes autónomos numa plataforma para a engenharia de sistemas de inteligência **confiáveis, auditáveis e seguros**.
 
 Com o núcleo lógico do agente agora definido, o foco deve deslocar-se da orquestração para a implementação e implementação. Como é que um agente com estado e potencialmente de longa duração é alojado? Que padrões arquitetónicos — Monolítico, Microsserviços, Serverless — são mais adequados para gerir estas novas cargas de trabalho? Como é que estes sistemas são monitorizados, escalados e mantidos num ambiente de produção? Estas questões de arquitetura de sistemas e MLOps representam a próxima fronteira na transformação de um agente poderoso num serviço robusto de nível empresarial.
-
----
 
 ## Streamlit
 
