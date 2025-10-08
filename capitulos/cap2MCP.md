@@ -1297,15 +1297,13 @@ Sistema de registro que monitora e documenta todas as operações realizadas atr
 
 #### Informações Registradas
 
-- ⏰ Timestamp (momento exato da operação) 
+Durante as interações no contexto do MCP, é essencial registrar detalhes operacionais para garantir segurança, rastreabilidade e auditoria adequada. Abaixo estão os principais elementos recomendados para registro:
 
-- 🔧 Ferramenta/recurso acessado 
-
-- 👤 Usuário que realizou a ação 
-
-- 📋 Parâmetros enviados 
-
-- ✅/❌ Status do resultado (sucesso ou erro) 
+- ⏰ **Timestamp**: momento exato em que a operação foi realizada  
+- 🔧 **Ferramenta/recurso acessado**: nome da funcionalidade ou recurso utilizado  
+- 👤 **Usuário que realizou a ação**: identificação do agente ou usuário solicitante  
+- 📋 **Parâmetros enviados**: dados ou argumentos fornecidos na chamada  
+- ✅/❌ **Status do resultado**: indicação de sucesso ou erro da operação 
 
 **Exemplo Prático:**
 ```python
@@ -1512,11 +1510,13 @@ MCP_SERVER_NAME=papers-academic-server
 MCP_LOG_LEVEL=INFO
 ```
 
-⚠️ **IMPORTANTE**:
+```{admonition} IMPORTANTE
+:class: warning
 
 - Substitua `sua_chave_api_aqui` pela chave real
 - **NUNCA compartilhe** este arquivo publicamente
 - Adicione `.env` ao `.gitignore` se usar Git
+```
 
 ### Passo 4: Adicionar os Códigos
 
@@ -1805,21 +1805,25 @@ Fluxo:
 
 ## Segurança e Boas Práticas
 
-### ✅ Faça:
+```{admonition} Faça:
+:class: tip
 
 - Mantenha seu `.env` privado
 - Use `.gitignore` se versionar o código
 - Atualize dependências regularmente: `pip install -U -r requirements.txt`
 - Faça backup dos logs importantes
 - Monitore uso da API Gemini
+```
 
-### ❌ Não Faça:
+```{admonition} Não Faça:
+:class: warning
 
 - Compartilhar sua API key
 - Commitar `.env` no Git
 - Fazer milhares de requisições seguidas (rate limit)
 - Usar em produção sem autenticação adicional
 - Ignorar mensagens de erro nos logs
+```
 
 ### Arquivo `.gitignore` Recomendado
 
