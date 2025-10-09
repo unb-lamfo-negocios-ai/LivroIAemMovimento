@@ -212,7 +212,7 @@ APIs da OpenAI, Google (Vertex AI) e Anthropic; plataformas de nuvem de IA.
    - Muitas plataformas de IA como o Jasper e o [Copy.ai](http://copy.ai/) usam este modelo de créditos.
    - Ele também é comum em serviços de infraestrutura como o Twilio para comunicação via API.
    ```
-5. **Baseado em Valor **
+5. **Baseado em Valor**
     - **Como funciona**: O preço está diretamente atrelado a um resultado de negócio ou a um indicador de performance (KPI) do cliente. A IA é uma tecnologia invisível que potencializa esse resultado.
     - **Vantagens**: Desvincula o preço do custo e o ancora 100% no valor, permitindo as maiores margens de lucro. Cria uma verdadeira parceria onde o seu sucesso financeiro está diretamente ligado ao sucesso do cliente.
     - **Desvantagens**: É o mais difícil de estruturar, medir e vender, pois exige um entendimento profundo e quantificável do ROI que seu produto gera.
@@ -340,13 +340,13 @@ Um **designer de produto** pode, com o auxílio de um LLM, criar um **protótipo
 
 **Interação entre Designer e IA via Vibe Coding**
 
-1. Conversa Inicial com a IA
+#### 1. Conversa Inicial com a IA
 
 O designer abre uma ferramenta como o ChatGPT com Code Interpreter ou um ambiente como Replit + Copilot e digita:
 
 `Quero um app simples onde o usuário escreve uma frase e, com base nisso, uma imagem é gerada usando IA. Pode ser feito com Streamlit.`
 
-2. Primeira Resposta da IA
+#### 2. Primeira Resposta da IA
 
 A IA gera o esqueleto de código:
 
@@ -364,7 +364,7 @@ if st.button("Gerar"):
     st.image(imagem)
 ```
 
-3. Iterações com a IA
+#### 3. Iterações com a IA
 
 O designer digita:
 
@@ -372,13 +372,13 @@ O designer digita:
 
 A IA atualiza o layout com novos elementos visuais e interações.
 
-4. Testes de Funcionalidade
+#### 4. Testes de Funcionalidade
 
 O designer solicita:
 
 `Adicione uma função para salvar a imagem localmente com o nome do usuário.`
 
-5. Protótipo Pronto para Demonstração
+#### 5. Protótipo Pronto para Demonstração
 
 Em poucos minutos, o app está funcional e pode ser testado com colegas ou potenciais usuários para feedback.
 
