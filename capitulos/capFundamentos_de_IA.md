@@ -192,12 +192,17 @@ A imagem também destaca subtemas importantes em cada categoria, como:
 :figclass: align-center
 
 **Figura – Como a IA Generativa se Encaixa no Universo da IA.**  
-A imagem representa visualmente a hierarquia dos principais subcampos da Inteligência Artificial. Cada camada interna aprofunda um nível técnico mais especializado, com a IA Generativa aparecendo como uma aplicação avançada e recente das redes neurais profundas.
+A imagem representa visualmente a hierarquia dos principais subcampos da Inteligência Artificial. Cada camada interna aprofunda um nível técnico mais especializado, com a IA Generativa aparecendo como uma aplicação avançada e recente das redes neurais profundas. Fonte: Inspirado em [](https://www.linkedin.com/posts/ncchapman_interesting-chart-showing-the-different-types-activity-7221960033171836929-JtNy/)
 ```
 
 ### **Como os LLMs Funcionam: Dos Dados ao Diálogo**
 
-O termo "Grande" em Grandes Modelos de Linguagem refere-se a duas dimensões de escala. A primeira é o tamanho monumental do conjunto de dados de treinamento, que pode incluir bilhões ou até trilhões de palavras extraídas de livros, artigos, sites e outras fontes da internet. A segunda é o número de parâmetros do modelo, que são essencialmente os "botões" internos que o modelo ajusta durante o treinamento para capturar os padrões nos dados. O modelo GPT-3, por exemplo, possui 175 bilhões de parâmetros, uma escala que lhe permite aprender nuances linguísticas incrivelmente complexas.
+O termo "Grande" em Grandes Modelos de Linguagem refere-se a duas dimensões de escala. A primeira é o tamanho monumental do conjunto de dados de treinamento, que pode incluir bilhões ou até trilhões de palavras extraídas de livros, artigos, sites e outras fontes da internet. A segunda é o número de parâmetros do modelo, que são essencialmente os "botões" internos que o modelo ajusta durante o treinamento para capturar os padrões nos dados. 
+
+```{admonition}
+:class: exemplo
+O modelo GPT-3 possui 175 bilhões de parâmetros, uma escala que lhe permite aprender nuances linguísticas incrivelmente complexas.
+```
 
 Apesar de sua complexidade, o mecanismo central de um LLM é baseado em um princípio surpreendentemente simples: a previsão probabilística. Em vez de "pensar" ou "entender" no sentido humano, um LLM funciona como uma máquina de reconhecimento de padrões extremamente sofisticada. Quando recebe um texto de entrada (um "prompt"), ele calcula a probabilidade da próxima palavra (ou, mais precisamente, do próximo "token", que pode ser uma palavra ou parte de uma palavra) que deveria seguir na sequência, com base nos padrões que aprendeu durante o treinamento. Ele então seleciona a palavra mais provável, anexa-a ao texto e repete o processo, gerando sentenças e parágrafos inteiros, uma palavra de cada vez. Este mecanismo fundamental explica tanto a notável fluência e coerência dos LLMs quanto sua tendência a "alucinar", inventar fatos ou informações que parecem plausíveis, mas não são verdadeiros, pois o modelo está otimizando para a probabilidade linguística, não para a veracidade factual.
 
@@ -205,15 +210,20 @@ A inovação arquitetônica que tornou os LLMs modernos possíveis é conhecida 
 
 O ciclo de vida de um LLM normalmente envolve duas fases principais. A primeira é o **pré-treinamento**, um processo de aprendizado não supervisionado no qual o modelo é alimentado com o vasto conjunto de dados de texto sem rótulos ou instruções explícitas, aprendendo a gramática, os fatos, os estilos de raciocínio e os vieses contidos nos dados. A segunda fase é o **ajuste fino (fine-tuning)**, onde o modelo pré-treinado é treinado adicionalmente em um conjunto de dados menor e mais específico, muitas vezes com supervisão humana, para alinhá-lo a tarefas específicas (como responder a perguntas) e a comportamentos desejados (como ser útil e inofensivo).
 
-### ** O Ecossistema da IA Generativa: Um Universo de Criação**
+### **O Ecossistema da IA Generativa: Um Universo de Criação**
 
-A IA Generativa transcende os chatbots e representa um campo vasto de criação de conteúdo em múltiplas modalidades. Sua versatilidade está redefinindo indústrias e processos criativos.
+A IA Generativa transcende os *chatbots* e representa um campo vasto de criação de conteúdo em múltiplas modalidades. Sua versatilidade está redefinindo indústrias e processos criativos.
+
+
+```{admonition} Universo de criação da IA generativa
+:class: note
 
 - **Geração de Texto:** A aplicação mais conhecida, onde os LLMs são usados para criar uma ampla gama de conteúdos escritos. Isso inclui tarefas práticas como redigir e-mails, resumir relatórios longos e criar postagens para redes sociais, bem como tarefas criativas como escrever poemas, roteiros e artigos.
 - **Geração de Imagem:** Modelos como DALL-E, Midjourney e Stable Diffusion podem traduzir descrições textuais em imagens visuais ricas e detalhadas. Eles podem gerar desde imagens fotorrealistas até ilustrações em estilos artísticos específicos, oferecendo uma ferramenta poderosa para designers, profissionais de marketing e artistas.
 - **Geração de Código:** A IA Generativa pode escrever, depurar, otimizar e traduzir código em várias linguagens de programação. Ferramentas como o GitHub Copilot atuam como um "parceiro de programação", sugerindo trechos de código e funções inteiras, o que aumenta drasticamente a produtividade dos desenvolvedores.
 - **Geração de Áudio e Música:** Modelos generativos podem sintetizar fala com som natural para assistentes de voz e narrações, além de compor peças musicais originais em diversos gêneros, imitando a estrutura e o som de composições profissionais.
 - **Geração de Vídeo:** Uma fronteira emergente e em rápida evolução, onde a IA pode criar clipes de vídeo curtos a partir de prompts de texto ou imagens estáticas. Essa tecnologia tem o potencial de revolucionar a produção de conteúdo, animação e efeitos especiais.
+```
 
 O impacto dessa tecnologia é sentido em praticamente todos os setores. No mundo dos negócios, a IA Generativa é usada para melhorar a **experiência do cliente** por meio de chatbots mais inteligentes e personalização em escala; aumentar a **produtividade dos funcionários** ao automatizar a geração de relatórios e auxiliar na criação de conteúdo; e otimizar **processos de negócios** complexos, como análise de documentos, detecção de fraudes e otimização da cadeia de suprimentos.
 
