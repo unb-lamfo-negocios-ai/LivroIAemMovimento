@@ -961,7 +961,7 @@ Isso gera um link público e seguro (com túnel da Cloudflare) que funciona por 
 
 Para uma solução gratuita e permanente, a plataforma Hugging Face Spaces é a melhor opção. Ela é totalmente integrada ao Gradio.
 
-```{admonition} Configurando o Hugging Face ppara executar o Gradio
+```{admonition} Configurando o Hugging Face ppara executar o Gradio:
 :class: note
 - **Crie um Space**: No site da Hugging Face, crie um novo "Space" e escolha o SDK do Gradio.
 - **Adicione seus arquivos**: Envie seu arquivo Python (`app.py`) e um arquivo `requirements.txt` listando as bibliotecas (`gradio`, `pandas`, `transformers`, etc.).
