@@ -134,16 +134,9 @@ A evolução recente da inteligência artificial trouxe uma nova classe de tecno
 
 É essencial entender que um LLM é a tecnologia subjacente que executa tarefas de Processamento de Linguagem Natural (PLN), como classificação de texto e análise de sentimento, enquanto a IA Generativa é a aplicação mais ampla que usa essa análise para criar uma nova saída.
 
-```{adminotion} IA Generativa: o conceito mais amplo
+```{admonition} IA Generativa: o conceito mais amplo
 :class: attention
 A **IA Generativa** engloba qualquer sistema de inteligência artificial capaz de **criar conteúdo original**. Ela pode utilizar diferentes tipos de modelos, dependendo do formato da entrada e da saída.
-
-Exemplos de ferramentas de IA generativa:
-
-- **Texto (LLMs)**: [ChatGPT](https://chat.openai.com), [Claude](https://www.anthropic.com/index/claude), [Gemini](https://deepmind.google/technologies/gemini/)
-- **Imagem**: [DALL·E](https://openai.com/dall-e), [Midjourney](https://www.midjourney.com/), [Stable Diffusion](https://stability.ai/)
-- **Voz**: [ElevenLabs](https://www.elevenlabs.io/)
-- **Multimodal**: [GPT-4V (Vision)](https://openai.com/gpt-4), [Gemini 1.5](https://deepmind.google/technologies/gemini/)
 ```
 
 ```{admonition} LLM: uma especialização da IA Generativa
@@ -228,11 +221,20 @@ A IA Generativa transcende os *chatbots* e representa um campo vasto de criaçã
 
 O impacto dessa tecnologia é sentido em praticamente todos os setores. No mundo dos negócios, a IA Generativa é usada para melhorar a **experiência do cliente** por meio de chatbots mais inteligentes e personalização em escala; aumentar a **produtividade dos funcionários** ao automatizar a geração de relatórios e auxiliar na criação de conteúdo; e otimizar **processos de negócios** complexos, como análise de documentos, detecção de fraudes e otimização da cadeia de suprimentos.
 
-A interação do usuário com todas essas modalidades converge para um único conceito: o **prompt**
+> A interação do usuário com todas essas modalidades converge para um único conceito: o **prompt**.
 
 Seja para gerar um soneto, uma imagem de um astronauta em um cavalo ou uma função em Python, a entrada do usuário é quase sempre uma instrução em linguagem natural. Isso aponta para uma transformação mais profunda na interação humano-computador. A IA Generativa está se tornando um "tradutor universal da intenção humana". Ela pega o desejo humano, expresso na linguagem ambígua e rica em nuances que nos é natural, e o traduz em uma saída estruturada e específica, seja ela um poema, uma imagem ou um programa de computador. Nesse novo paradigma, a habilidade de formular prompts claros e eficazes, conhecida como "engenharia de prompt", torna-se uma competência fundamental para extrair o máximo valor desses sistemas poderosos.
 
-**Por que isso importa na criação de negócios?**
+```{admonition} Exemplos de ferramentas de IA generativa:
+:class: exemplo
+
+- **Texto (LLMs)**: [ChatGPT](https://chat.openai.com), [Claude](https://www.anthropic.com/index/claude), [Gemini](https://deepmind.google/technologies/gemini/)
+- **Imagem**: [DALL·E](https://openai.com/dall-e), [Midjourney](https://www.midjourney.com/), [Stable Diffusion](https://stability.ai/)
+- **Voz**: [ElevenLabs](https://www.elevenlabs.io/)
+- **Multimodal**: [GPT-4V (Vision)](https://openai.com/gpt-4), [Gemini 1.5](https://deepmind.google/technologies/gemini/)
+```
+
+**Por que a IA generativa importa na criação de negócios?**
 
 Durante décadas, criar um negócio dependia de habilidades como:
 
