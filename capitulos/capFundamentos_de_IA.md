@@ -8,20 +8,18 @@ Mais do que um conjunto de algoritmos, a IA é hoje um **instrumento estratégic
 
 ## O que é IA?
 
-A ideia de criar máquinas capazes de pensar como seres humanos surgiu na década de 1950, marcando o início de uma revolução tecnológica e científica. Dois nomes se destacam nesse contexto: **Alan Turing**, que levantou a questão central sobre a capacidade de pensamento das máquinas, e **John McCarthy**, que cunhou o termo que hoje conhecemos como *Inteligência Artificial*.
+A ideia de criar máquinas capazes de pensar como seres humanos surgiu na década de 1950, marcando o início de uma revolução tecnológica e científica {cite}`turing1950`. Dois nomes se destacam nesse contexto: **Alan Turing**, que levantou a questão central sobre a capacidade de pensamento das máquinas, e **John McCarthy**, que cunhou o termo que hoje conhecemos como *Inteligência Artificial*.
 
 ```{admonition} Teste de Turing
 :class: note
 
-- Em 1950, Alan Turing propôs o que ficou conhecido como **Teste de Turing**:
+- Alan Turing propôs o que ficou conhecido como **Teste de Turing**:
 
 > um experimento  para avaliar se uma máquina consegue se passar por um ser humano em uma conversa textual.
 
 - Se o interlocutor humano não conseguir distinguir se está conversando com uma pessoa ou com uma máquina, considera-se que o sistema passou no teste.
 - Essa proposta lançou as bases filosóficas e práticas da Inteligência Artificial.
 ```
-
-O conceito de IA surgiu na década de 1950, quando pesquisadores como **Alan Turing** e **John McCarthy** começaram a explorar a possibilidade de máquinas "pensarem" e aprenderem {cite}`turing1950`.  
 
 ```{admonition} O surgimento do termo *Artificial Intelligence*
 :class: note
@@ -48,7 +46,7 @@ Desde então, a inteligência artificial deixou de ser apenas uma tecnologia fut
 **Análises preditivas em negócios**, que ajudam empresas a antecipar tendências, melhorar estratégias e reduzir riscos.
 ```
 
-Podemos classificar a IA em duas grandes categorias principais:  
+Para compreender melhor os diferentes níveis de capacidade da inteligência artificial, é útil distinguir entre dois grandes grupos: IA fraca e IA forte. Essa classificação nos ajuda a entender até onde as máquinas conseguem simular comportamentos inteligentes e em que medida elas realmente compreendem o que estão fazendo.
 
 ```{admonition} **IA fraca (ou estreita)**
 :class: note
@@ -72,11 +70,20 @@ Uma forma simples de diferenciar é pensar que a **IA fraca** é como um **espec
 ## Modelos de IA
 
 O motor por trás da Inteligência Artificial são os **modelos computacionais** — estruturas matemáticas que aprendem padrões a partir de dados e generalizam esse conhecimento para novos cenários. A grande diferença em relação ao software tradicional é o "como" eles operam. Em vez de seguir regras explícitas e fixas programadas por um humano (se X, então Y), um modelo de IA aprende suas próprias regras e padrões ao analisar os dados.  
-Eles funcionam como “tradutores” da realidade: observam exemplos, identificam regularidades e passam a **prever ou decidir** com base nessas regularidades.  
+
+```{admonition} **“Tradutores” da realidade:
+:class: note
+
+Os modelos computacionais atuam como tradutores da realidade:
+- observam exemplos;
+- identificam regularidades;
+- passam a **prever ou decidir** com base nessas regularidades.
+```
 
 Existem inúmeros tipos de modelos, desde os preditivos (que estimam a probabilidade de um cliente cancelar um serviço) até os revolucionários modelos generativos (como os LLMs que escrevem textos ou criam imagens), que são o foco principal deste material. Em qualquer um dos casos, o modelo é, em última análise, o ativo central e o motor de valor de um negócio construído sobre Inteligência Artificial.
 
-Entre as principais técnicas, destacam-se:  
+```{admonition} Entre as principais técnicas, destacam-se:
+:class: note
 
 - **Machine Learning (ML)**: algoritmos que aprendem a partir de exemplos e melhoram com a experiência {cite}`goodfellow2016`.  
   - **Exemplo prático**: um sistema de detecção de fraudes em cartões de crédito pode ser treinado com transações históricas, aprendendo a identificar padrões incomuns e gerar alertas em tempo real.  
@@ -86,7 +93,9 @@ Entre as principais técnicas, destacam-se:
   - **Avanços notáveis**:  
     - **Visão computacional**: reconhecimento facial em smartphones, análise de imagens médicas, identificação automática de objetos em fotos.  
     - **Processamento de linguagem natural (PLN)**: tradução automática, assistentes virtuais, análise de sentimentos em redes sociais.  
-  - **Limitação**: exige grandes volumes de dados e poder computacional elevado, o que pode dificultar a adoção por pequenas organizações.  
+  - **Limitação**: exige grandes volumes de dados e poder computacional elevado, o que pode dificultar a adoção por pequenas organizações.
+
+```
 
 Essas abordagens sustentam aplicações cada vez mais presentes no cotidiano, como:  
 
@@ -95,9 +104,7 @@ Essas abordagens sustentam aplicações cada vez mais presentes no cotidiano, co
 - **Modelos de previsão de demanda** usados no varejo e na logística.  
 - **Modelos climáticos** capazes de projetar cenários de aquecimento global com base em dados ambientais.  
 
----
-
-### Comparação entre Machine Learning e Deep Learning
+**Comparação entre Machine Learning e Deep Learning**
 
 | Aspecto                | Machine Learning (ML)                                                                 | Deep Learning (DL)                                                                 |
 |-------------------------|---------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
