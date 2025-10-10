@@ -181,7 +181,7 @@ A imagem também destaca subtemas importantes em cada categoria, como:
 
 - **Em IA Generativa**: Transformers, LLM, LangChain, Foundation Models, Multimodal AI, RLHF, QLoRA, etc.
 
-```{image} ./imagens/hierarquia_de_IAs.png
+```{image} ./imagens/hierarquia_de_IAs.jpeg
 :name: hierarquia_de_IAs
 :alt: Diagrama em camadas que mostra a hierarquia da Inteligência Artificial, com destaque para IA, Machine Learning, Deep Learning, Redes Neurais e IA Generativa.
 :align: center
@@ -191,7 +191,7 @@ A imagem também destaca subtemas importantes em cada categoria, como:
 A imagem representa visualmente a hierarquia dos principais subcampos da Inteligência Artificial. Cada camada interna aprofunda um nível técnico mais especializado, com a IA Generativa aparecendo como uma aplicação avançada e recente das redes neurais profundas. Fonte: Inspirado em {cite}`chapman2023linkedin`.
 ```
 
-![Como a IA Generativa se Encaixa no Universo da IA](imagens/hierarquia_de_IAs.png)
+![Como a IA Generativa se Encaixa no Universo da IA](imagens/hierarquia_de_IAs.jpeg)
 
 TESTE TESTE
 
