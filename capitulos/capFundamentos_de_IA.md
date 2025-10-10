@@ -10,7 +10,19 @@ Mais do que um conjunto de algoritmos, a IA é hoje um **instrumento estratégic
 
 O conceito de IA surgiu na década de 1950, quando pesquisadores como **Alan Turing** e **John McCarthy** começaram a explorar a possibilidade de máquinas "pensarem" e aprenderem {cite}`turing1950`.  
 
-Turing, em seu famoso artigo *Computing Machinery and Intelligence*, propôs a questão: *“As máquinas podem pensar?”* e apresentou o **Teste de Turing** como um critério para avaliar a inteligência de sistemas artificiais. Já McCarthy cunhou o termo *Artificial Intelligence* e organizou a conferência de Dartmouth (1956), considerada o marco inicial da área.  
+```{admonition} Teste de Turing
+:class: note
+
+Turing, em seu famoso artigo *Computing Machinery and Intelligence*, propôs a questão: 
+> *“As máquinas podem pensar?”*
+
+e apresentou o **Teste de Turing** como um critério para avaliar a inteligência de sistemas artificiais.
+```
+
+```{admonition} O surgimento do termo *Artificial Intelligence*
+:class: note
+Já McCarthy cunhou o termo *Artificial Intelligence* e organizou a conferência de Dartmouth (1956), considerada o marco inicial da área.
+```
 
 Hoje, a IA está presente em diversos contextos do cotidiano:  
 
