@@ -598,9 +598,6 @@ Diferente de backends tradicionais, o backend em IA não apenas executa regras f
 ```{admonition} Exemplo Prático: Um Assistente Virtual com IA
 :class: exemplo
 
-### Exemplo Prático — Assistente Virtual com IA
-:class: exemplo
-
 Para entender como **frontend** e **backend** funcionam juntos em uma aplicação de IA, vamos considerar um exemplo concreto: **um assistente virtual inteligente**.
 
 - **Frontend:** é tudo o que o usuário vê e com o que interage. Isso inclui:
@@ -616,7 +613,7 @@ Para entender como **frontend** e **backend** funcionam juntos em uma aplicaçã
   - Sistemas de **formulação de resposta**
   - Acesso a **bancos de dados** para fornecer respostas personalizadas
   - **Monitoramento da conversa** para manter o contexto
-
+```
 Além disso, o backend pode ser conectado a **APIs externas**, permitindo que o assistente:
 - Consulte **previsões do tempo**
 - Acesse **eventos da agenda**
@@ -624,9 +621,6 @@ Além disso, o backend pode ser conectado a **APIs externas**, permitindo que o 
 - Personalize respostas com base em **dados do usuário**
 
 Esse exemplo mostra como o casamento entre frontend e backend é essencial para criar experiências realmente inteligentes e úteis para o usuário.
-
-```
----
 
 ### Por que frontend e backend importam nos Negócios com IA?
 
