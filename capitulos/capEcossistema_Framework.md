@@ -705,32 +705,37 @@ Com o núcleo lógico do agente agora definido, o foco deve deslocar-se da orque
 
 ## Gradio
 
-O **Gradio** simplifica a criação de **interfaces web acessíveis** para modelos de IA.  
-Com ele, é possível transformar um modelo em uma aplicação interativa em poucos minutos, sem precisar escrever HTML, CSS ou JavaScript.  
+O **Gradio** é uma biblioteca de código aberto em Python que simplifica a criação de interfaces de usuário (UI) para modelos de machine learning, APIs e funções Python arbitrárias. É bastante utilizado para **demonstrações públicas e testes de usabilidade**, além de ser integrado ao ecossistema **Hugging Face** {cite}`gradio2021`.
 
-**Exemplos de uso:**  
+- Sua principal vantagem é a velocidade e a facilidade com que se pode construir uma demonstração interativa e compartilhável, permitindo que qualquer pessoa, mesmo sem conhecimento técnico, possa testar um modelo diretamente do navegador.
+
+- Diferente de frameworks mais genéricos, o Gradio foi projetado com o fluxo de trabalho de IA em mente:
+
+`mapear funções de entrada (input) e saída (output) para componentes interativos.`
+
+```{admonition} Forma simplificada para criação de **interfaces web acessíveis**
+Com o Gradio é possível transformar um modelo em uma aplicação interativa em poucos minutos, sem precisar escrever HTML, CSS ou JavaScript.
+```
+
+```{admonition} Exemplos de uso do Gradio
+:class: note
+
 - Uma página onde usuários fazem upload de imagens para classificação automática.  
-- Um demo público de geração de voz a partir de texto.  
+- Um demo público de geração de voz a partir de texto.
+``` 
 
-É bastante utilizado para **demonstrações públicas e testes de usabilidade**, além de ser integrado ao ecossistema **Hugging Face** {cite}`gradio2021`.  
-________________
-
-O **Gradio** é uma biblioteca de código aberto em Python que simplifica a criação de interfaces de usuário (UI) para modelos de machine learning, APIs e funções Python arbitrárias. Sua principal vantagem é a velocidade e a facilidade com que se pode construir uma demonstração interativa e compartilhável, permitindo que qualquer pessoa, mesmo sem conhecimento técnico, possa testar um modelo diretamente do navegador.
-
-Diferente de frameworks mais genéricos, o Gradio foi projetado com o fluxo de trabalho de IA em mente: mapear funções de entrada (input) e saída (output) para componentes interativos.
-
----
-
-### **Parte 1: Primeiros Passos**
+### Parte 1: Primeiros Passos
 
 Nesta seção, vamos configurar o ambiente e criar nossa primeira interface com Gradio.
 
-### **1. Configuração do Ambiente**
+#### 1. Configuração do Ambiente
 
 Assim como em outros projetos Python, é essencial ter o Python instalado. O uso de um editor de código como o Visual Studio Code (VS Code) é altamente recomendado.
 
-**Boas Práticas: Ambiente Virtual**
-Para manter as dependências do projeto organizadas e evitar conflitos, o uso de um ambiente virtual é fundamental.
+```{admonition} Boas Práticas: Ambiente Virtual
+:class: hint
+Para manter as dependências do projeto organizadas e evitar conflitos, o uso de um ambiente virtual é fundamental!
+```
 
 1. **Crie uma pasta** para o seu projeto e, dentro dela, abra o terminal.
 2. **Crie o ambiente virtual**:
@@ -742,7 +747,7 @@ Para manter as dependências do projeto organizadas e evitar conflitos, o uso de
 - No Windows: `venv\Scripts\activate`
 - No macOS/Linux: `source venv/bin/activate`
 
-### **2. Instalação do Gradio**
+#### 2. Instalação do Gradio
 
 Com o ambiente virtual ativado, instale o Gradio usando o `pip`:
 
@@ -750,12 +755,15 @@ Com o ambiente virtual ativado, instale o Gradio usando o `pip`:
 
 A instalação inclui todas as dependências necessárias para começar a criar suas interfaces.
 
-### **3. Primeira Aplicação: Uma Função Simples**
+#### 3. Primeira Aplicação: Uma Função Simples
 
 1. Crie um arquivo Python, por exemplo, `app_gradio.py`.
 2. Defina uma função Python e use o Gradio para criar uma interface para ela.
 
-**Exemplo de Código:** `app_gradio.py`
+```{admonition} Exemplo de Código
+:class: exemplo
+`app_gradio.py`
+```
 
 ```{code-block} python
 import gradio as gr
@@ -774,7 +782,7 @@ iface = gr.Interface(fn=saudar, inputs="text", outputs="text")
 iface.launch()
 ```
 
-### **4. Executando a Aplicação**
+#### 4. Executando a Aplicação
 
 No terminal, com o ambiente virtual ativado, execute o comando:
 
@@ -782,11 +790,11 @@ No terminal, com o ambiente virtual ativado, execute o comando:
 
 O Gradio iniciará um servidor local e imprimirá um endereço no console (geralmente `http://127.0.0.1:7860`). Abra este link no seu navegador para ver e interagir com sua aplicação. Uma das funcionalidades mais poderosas é que, ao usar `iface.launch(share=True)`, o Gradio gera um link público temporário, permitindo que você compartilhe sua demo com qualquer pessoa no mundo por 72 horas.
 
-### **Parte 2: Adicionando Interatividade com Componentes**
+### Parte 2: Adicionando Interatividade com Componentes
 
 O Gradio brilha na variedade de componentes de entrada e saída que oferece, prontos para uso em tarefas de IA.
 
-### **1. Componentes de Entrada (Inputs)**
+#### 1. Componentes de Entrada (Inputs)
 
 Os inputs definem como o usuário fornecerá dados para a sua função.
 
@@ -796,7 +804,10 @@ Os inputs definem como o usuário fornecerá dados para a sua função.
 - `gr.Image()`: Para upload de imagens, com opções para definir a fonte (upload, webcam, etc.).
 - `gr.Audio()`: Para upload ou gravação de áudio.
 
-**Exemplo de Código com Múltiplos Inputs:**
+```{admonition} Exemplo de Código com Múltiplos Inputs:
+:class: exemplo
+
+```
 
 ```{code-block} python
 import gradio as gr
@@ -818,7 +829,7 @@ iface = gr.Interface(
 iface.launch()
 ```
 
-### **2. Componentes de Saída (Outputs)**
+#### 2. Componentes de Saída (Outputs)
 
 Os outputs definem como o resultado da sua função será exibido.
 
@@ -828,7 +839,10 @@ Os outputs definem como o resultado da sua função será exibido.
 - `gr.Dataframe()`: Exibe um DataFrame do Pandas.
 - `gr.Plot()`: Exibe gráficos de bibliotecas como Matplotlib ou Plotly.
 
-**Exemplo de Código com Output de Imagem (Conceitual):**
+```{admonition} Exemplo de Código com Output de Imagem (Conceitual)
+:class: exemplo
+
+```
 
 ```{code-block} python
 import gradio as gr
@@ -854,13 +868,14 @@ iface = gr.Interface(
 iface.launch()
 ```
 
-### **Parte 3: Aplicações Robustas**
+### Parte 3: Aplicações Robustas
 
 Para criar demos mais complexas e organizadas, você pode usar blocos e gerenciar o estado.
 
-### **1. Organizando o Layout com Blocos (`gr.Blocks`)**
+#### 1. Organizando o Layout com Blocos (`gr.Blocks`)
 
 Para ter controle total sobre onde os componentes aparecem, use `gr.Blocks`. Isso permite criar layouts com linhas, colunas e abas, oferecendo muito mais flexibilidade do que `gr.Interface`.
+
 
 **Exemplo de Código:**
 
