@@ -192,7 +192,7 @@ A imagem também destaca subtemas importantes em cada categoria, como:
 :figclass: align-center
 
 **Figura – Como a IA Generativa se Encaixa no Universo da IA.**  
-A imagem representa visualmente a hierarquia dos principais subcampos da Inteligência Artificial. Cada camada interna aprofunda um nível técnico mais especializado, com a IA Generativa aparecendo como uma aplicação avançada e recente das redes neurais profundas. Fonte: Inspirado em [](https://www.linkedin.com/posts/ncchapman_interesting-chart-showing-the-different-types-activity-7221960033171836929-JtNy/)
+A imagem representa visualmente a hierarquia dos principais subcampos da Inteligência Artificial. Cada camada interna aprofunda um nível técnico mais especializado, com a IA Generativa aparecendo como uma aplicação avançada e recente das redes neurais profundas. Fonte: Inspirado em {cite}`chapman2023linkedin`.
 ```
 
 ### **Como os LLMs Funcionam: Dos Dados ao Diálogo**
