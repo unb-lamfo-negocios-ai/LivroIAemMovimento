@@ -135,7 +135,7 @@ A evolução recente da inteligência artificial trouxe uma nova classe de tecno
 É essencial entender que um LLM é a tecnologia subjacente que executa tarefas de Processamento de Linguagem Natural (PLN), como classificação de texto e análise de sentimento, enquanto a IA Generativa é a aplicação mais ampla que usa essa análise para criar uma nova saída.
 
 ```{admonition} IA Generativa: o conceito mais amplo
-:class: attention
+:class: note
 A **IA Generativa** engloba qualquer sistema de inteligência artificial capaz de **criar conteúdo original**. Ela pode utilizar diferentes tipos de modelos, dependendo do formato da entrada e da saída.
 ```
 
@@ -155,7 +155,11 @@ A **IA Generativa** engloba qualquer sistema de inteligência artificial capaz d
 Esses modelos alimentam **chatbots**, **assistentes virtuais**, **sistemas de recomendação de código**, entre muitas outras aplicações textuais.
 ```
 
-Essa distinção revela um paradigma fundamental para a compreensão do ecossistema de IA: o do "motor versus veículo". Um LLM, como o GPT-4 da OpenAI, pode ser visto como um motor de alto desempenho, uma peça de tecnologia complexa e poderosa. A IA Generativa, por outro lado, é o veículo que utiliza esse motor para uma finalidade específica. Assim como um motor pode ser instalado em um carro (para transporte), um barco (para navegação) ou um avião (para voo), um único LLM pode alimentar uma variedade de aplicações: um chatbot para atendimento ao cliente, uma ferramenta para redação de e-mails de marketing ou um assistente para geração de código de programação. Essa separação entre a tecnologia central (o motor) e sua aplicação (o veículo) explica por que a inovação em um único LLM pode levar a uma explosão de novas e diversas ferramentas de IA Generativa.
+Essa distinção revela um paradigma fundamental para a compreensão do ecossistema de IA: 
+
+> o do "motor versus veículo".
+
+Um LLM, como o GPT-4 da OpenAI, pode ser visto como um motor de alto desempenho, uma peça de tecnologia complexa e poderosa. A IA Generativa, por outro lado, é o veículo que utiliza esse motor para uma finalidade específica. Assim como um motor pode ser instalado em um carro (para transporte), um barco (para navegação) ou um avião (para voo), um único LLM pode alimentar uma variedade de aplicações: um chatbot para atendimento ao cliente, uma ferramenta para redação de e-mails de marketing ou um assistente para geração de código de programação. Essa separação entre a tecnologia central (o motor) e sua aplicação (o veículo) explica por que a inovação em um único LLM pode levar a uma explosão de novas e diversas ferramentas de IA Generativa.
 
 Concluindo, podemos dizer que a hierarquia da Inteligência Artificial pode ser entendida como um sistema de camadas interligadas, onde cada nível representa uma especialização maior do anterior. No topo está a IA como campo geral, seguida pelas Redes Neurais e, dentro delas, o Deep Learning, que impulsiona a IA Generativa. Essa organização hierárquica pode ser vista na imagem abaixo. Ela apresenta camadas que vão do geral ao específico:
 
