@@ -3,7 +3,6 @@
 Uma solução de Inteligência Artificial é formada por diferentes **camadas técnicas** que trabalham em conjunto para transformar dados em valor.  
 Compreender essas camadas é essencial para que líderes, desenvolvedores e gestores saibam **onde aplicar esforços**, **quais tecnologias priorizar** e **como reduzir riscos**. Neste capítulo, você vai explorar os principais **componentes de arquitetura, tecnologias e protocolos** utilizados atualmente, com foco em aplicações práticas e decisões estratégicas.  
 
----
 ## Prompt Engineering, RAG e Fine-tuning
 
 Um modelo de IA genérico, como o GPT ou o Llama, é como um recém-formado brilhante: possui um conhecimento geral imenso, mas não sabe nada sobre as especificidades do seu negócio. Para transformá-lo em um especialista que entenda seus produtos, clientes e processos, é preciso "educá-lo". Prompt Engineering, RAG e Fine-tuning são as três principais estratégias para essa educação, cada uma com diferentes níveis de custo, esforço e profundidade.
@@ -68,17 +67,10 @@ Fluxograma ilustrando a jornada recomendada para o desenvolvimento de soluções
 
 Até agora, vimos como usar a IA para gerar ideias, conteúdo, protótipos e até automatizar partes do processo de criação. Mas existe um ponto em que muitos criadores se perguntam:
 
-<div style="text-align: center;">
+> Como eu faço essa IA funcionar dentro do meu produto ou negócio?
 
-Como eu faço essa IA funcionar dentro do meu produto ou negócio?
+> A resposta quase sempre envolve uma sigla: **API**.
 
-</div>
-
-<div style="text-align: center;">
-
-A resposta quase sempre envolve uma sigla: **API**.
-
-</div>
 
 **API** significa **Application Programming Interface** ou, em português, **Interface de Programação de Aplicações**. É o “idioma” que permite que sistemas diferentes **se comuniquem** {cite}`fielding2000`.  
 
@@ -113,7 +105,7 @@ Ao combinar **APIs** e **webhooks**, você cria sistemas onde a IA **não só re
 
 Com a evolução dos **agentes de inteligência artificial**, o uso de APIs está ganhando uma nova dimensão
 
-<p align="center">mais dinâmica, inteligente e autônoma.</p>
+>mais dinâmica, inteligente e autônoma.
 
 Enquanto modelos tradicionais apenas respondem a comandos, **agentes interpretam, planejam e agem**:
 
@@ -356,9 +348,9 @@ Entendendo o que é *token counting*: Ao usar modelos de linguagem via API (como
 - "Consulta" é 1 token
 - “Olá, tudo bem?” → são 4 tokens
 ```
-Por que *Token counting* importa?
+**Por que *Token counting* importa?**
 
-Tokens **impactam diretamente** no custo, velocidade e qualidade das respostas, pois:
+Tokens impactam diretamente no custo, velocidade e qualidade das respostas, pois:
 
 - **Textos longos** → mais tokens → **custos mais altos**
 - **Conversas extensas** → podem ultrapassar o limite do modelo
@@ -370,7 +362,6 @@ Benefícios de entender a contagem de tokens:
 - Melhora a performance da aplicação  
 - Garante equilíbrio entre custo, velocidade e qualidade da resposta
 
----
 
 **Tabela de referência — Tokens, preços e limites**
 
@@ -537,15 +528,15 @@ Para boa parte das empresas, a escolha não é "um ou outro", mas sim "ambos, pa
 Um banco pode usar a nuvem para treinar seus modelos de detecção de fraude, aproveitando a escala massiva para processar terabytes de dados históricos anonimizados. No entanto, o modelo final é implantado (deploy) nos servidores on-premise do banco para analisar transações reais e sensíveis de clientes em tempo real, garantindo segurança e baixa latência.
 ```
 
-A decisão final deve ser guiada por uma análise de negócio, respondendo a três perguntas-chave:
+```{admonition} Três perguntas-chave que podem te ajudar na decisão final
+:class: hint
 
 1. **Soberania dos Dados:** Meus dados podem ou devem sair da minha infraestrutura?
 2. **Experiência do Usuário:** A minha aplicação é tolerante à latência da internet ou o tempo de resposta é um diferencial competitivo?
 3. **Modelo de Custos:** Minha carga de trabalho é constante e previsível (favorecendo CapEx) ou volátil e experimental (favorecendo OpEx)?
 
 A resposta a essas perguntas definirá a combinação ideal de flexibilidade alugada e controle próprio para sua estratégia de IA.
-
----
+```
 
 ## Frontend vs. Backend
 
