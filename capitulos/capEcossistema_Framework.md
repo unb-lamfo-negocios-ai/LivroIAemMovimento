@@ -730,7 +730,8 @@ Nesta seção, vamos configurar o ambiente e criar nossa primeira interface com 
 
 #### 1. Configuração do Ambiente
 
-Assim como em outros projetos Python, é essencial ter o Python instalado. O uso de um editor de código como o Visual Studio Code (VS Code) é altamente recomendado.
+- Assim como em outros projetos Python, é essencial ter o Python instalado.
+- O uso de um editor de código como o Visual Studio Code (VS Code) é altamente recomendado.
 
 ```{admonition} Boas Práticas: Ambiente Virtual
 :class: hint
@@ -742,7 +743,7 @@ Para manter as dependências do projeto organizadas e evitar conflitos, o uso de
 
 `python -m venv venv`
 
-4. Ative o ambiente virtual:
+3. Ative o ambiente virtual:
 
 - No Windows: `venv\Scripts\activate`
 - No macOS/Linux: `source venv/bin/activate`
@@ -760,10 +761,11 @@ A instalação inclui todas as dependências necessárias para começar a criar 
 1. Crie um arquivo Python, por exemplo, `app_gradio.py`.
 2. Defina uma função Python e use o Gradio para criar uma interface para ela.
 
-```{admonition} Exemplo de Código
-:class: exemplo
+**Exemplo de Código**
+
+O código abaixo representa um aplicativo simples para entender a funcionalidade do Gradio.
+
 `app_gradio.py`
-```
 
 ```{code-block} python
 import gradio as gr
@@ -792,7 +794,7 @@ O Gradio iniciará um servidor local e imprimirá um endereço no console (geral
 
 ### Parte 2: Adicionando Interatividade com Componentes
 
-O Gradio brilha na variedade de componentes de entrada e saída que oferece, prontos para uso em tarefas de IA.
+O Gradio destaca-se pela variedade de componentes de entrada e saída que oferece, prontos para uso em tarefas de IA.
 
 #### 1. Componentes de Entrada (Inputs)
 
@@ -804,10 +806,7 @@ Os inputs definem como o usuário fornecerá dados para a sua função.
 - `gr.Image()`: Para upload de imagens, com opções para definir a fonte (upload, webcam, etc.).
 - `gr.Audio()`: Para upload ou gravação de áudio.
 
-```{admonition} Exemplo de Código com Múltiplos Inputs:
-:class: exemplo
-
-```
+**Exemplo de Código com Múltiplos Inputs**
 
 ```{code-block} python
 import gradio as gr
@@ -839,10 +838,7 @@ Os outputs definem como o resultado da sua função será exibido.
 - `gr.Dataframe()`: Exibe um DataFrame do Pandas.
 - `gr.Plot()`: Exibe gráficos de bibliotecas como Matplotlib ou Plotly.
 
-```{admonition} Exemplo de Código com Output de Imagem (Conceitual)
-:class: exemplo
-
-```
+**Exemplo de Código com Output de Imagem (Conceitual)**
 
 ```{code-block} python
 import gradio as gr
