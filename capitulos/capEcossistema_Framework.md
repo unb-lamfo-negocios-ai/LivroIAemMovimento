@@ -905,7 +905,7 @@ with gr.Blocks() as demo:
 demo.launch()
 ```
 
-### **2. Gerenciando o Estado (`gr.State`)**
+#### 2. Gerenciando o Estado (`gr.State`)
 
 Em aplicações interativas, como um chatbot, você precisa manter o histórico da conversa. O Gradio usa o componente `gr.State` para passar dados entre as execuções de uma função sem exibi-los na UI.
 
@@ -947,23 +947,32 @@ with gr.Blocks() as demo:
 demo.launch()
 ```
 
-### **Parte 4: Compartilhando sua Aplicação (Deploy)**
+### Parte 4: Compartilhando sua Aplicação (Deploy)
 
 A beleza do Gradio está na facilidade de compartilhamento.
 
-1. **Compartilhamento Rápido (`share=True`)**:
+#### 1. Compartilhamento Rápido (`share=True`):
 Como mencionado, a forma mais simples de compartilhar é adicionando o parâmetro `share=True` ao método `launch()`:Python
 
 `iface.launch(share=True)`
 
-1. Isso gera um link público e seguro (com túnel da Cloudflare) que funciona por 72 horas. Ideal para demos rápidas, testes com clientes ou colaboração em equipe.
-2. **Hospedagem Permanente com Hugging Face Spaces**:
+```{admonition}
+:class: note
+Isso gera um link público e seguro (com túnel da Cloudflare) que funciona por 72 horas. Ideal para demos rápidas, testes com clientes ou colaboração em equipe.
+```
+
+#### 2. Hospedagem Permanente com Hugging Face Spaces
+
 Para uma solução gratuita e permanente, a plataforma Hugging Face Spaces é a melhor opção. Ela é totalmente integrada ao Gradio.
-    - **Crie um Space**: No site da Hugging Face, crie um novo "Space" e escolha o SDK do Gradio.
-    - **Adicione seus arquivos**: Envie seu arquivo Python (`app.py`) e um arquivo `requirements.txt` listando as bibliotecas (`gradio`, `pandas`, `transformers`, etc.).
-    - **Pronto**: O Hugging Face Spaces automaticamente instala as dependências e executa sua aplicação, fornecendo um link permanente para sua demo.
+
+```{admonition} Configurando o Hugging Face ppara executar o Gradio
+:class: note
+- **Crie um Space**: No site da Hugging Face, crie um novo "Space" e escolha o SDK do Gradio.
+- **Adicione seus arquivos**: Envie seu arquivo Python (`app.py`) e um arquivo `requirements.txt` listando as bibliotecas (`gradio`, `pandas`, `transformers`, etc.).
+- **Pronto**: O Hugging Face Spaces automaticamente instala as dependências e executa sua aplicação, fornecendo um link permanente para sua demo.
+```
   
-### **Informações Adicionais e Boas Práticas**
+### Informações Adicionais e Boas Práticas
 
 - **Foco na Função**: O Gradio é construído em torno de uma função Python. Projete sua lógica principal nessa função e depois construa a UI ao redor dela.
 - **Explore a Documentação**: A documentação oficial do Gradio é rica em exemplos para todos os tipos de componentes e casos de uso.
