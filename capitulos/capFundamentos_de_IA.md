@@ -4,8 +4,6 @@ A Inteligência Artificial (IA) é um campo da ciência da computação dedicado
 
 Mais do que um conjunto de algoritmos, a IA é hoje um **instrumento estratégico** que redefine modelos de negócios, práticas sociais e até mesmo a forma como nos relacionamos com a informação e o conhecimento.  
 
----
-
 ## O que é IA?
 
 A ideia de criar máquinas capazes de pensar como seres humanos surgiu na década de 1950, marcando o início de uma revolução tecnológica e científica {cite}`turing1950`. Dois nomes se destacam nesse contexto: **Alan Turing**, que levantou a questão central sobre a capacidade de pensamento das máquinas, e **John McCarthy**, que cunhou o termo que hoje conhecemos como *Inteligência Artificial*.
