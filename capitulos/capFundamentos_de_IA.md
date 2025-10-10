@@ -32,32 +32,42 @@ O conceito de IA surgiu na década de 1950, quando pesquisadores como **Alan Tur
 
 ```
 
-Hoje, a IA está presente em diversos contextos do cotidiano:  
+Desde então, a inteligência artificial deixou de ser apenas uma tecnologia futurista para se tornar parte integrante do nosso dia a dia. Ela está presente em soluções que facilitam tarefas cotidianas, otimizam processos e tomam decisões com base em grandes volumes de dados.
 
-- **Assistentes virtuais** (como Alexa e Siri);  
-- **Sistemas de recomendação** em plataformas de streaming e e-commerce;  
-- **Carros autônomos** que interpretam o ambiente e tomam decisões em tempo real;  
-- **Diagnósticos médicos assistidos por computador**, capazes de identificar padrões em exames de imagem;  
-- **Análises preditivas de negócios**, que ajudam empresas a antecipar tendências e reduzir riscos.  
+```{admonition} Exemplos de algumas aplicabilidades de IA no dia a dia:
+:class: exemplo
+
+**Assistentes virtuais**, como Alexa e Siri, que reconhecem comandos de voz e executam ações;
+
+**Sistemas de recomendação em plataformas de streaming e e-commerce**, que sugerem filmes, músicas ou produtos com base no comportamento do usuário;
+
+**Carros autônomos**, que interpretam o ambiente e tomam decisões em tempo real;
+
+**Diagnósticos médicos** assistidos por computador, capazes de identificar padrões em exames de imagem;
+
+**Análises preditivas em negócios**, que ajudam empresas a antecipar tendências, melhorar estratégias e reduzir riscos.
+```
 
 Podemos classificar a IA em duas grandes categorias principais:  
 
-- **IA fraca (ou estreita)**: projetada para executar tarefas específicas com alto desempenho, mas sem consciência ou compreensão real.  
-  - Exemplos: assistentes virtuais (Alexa, Siri), sistemas de recomendação da Netflix, algoritmos de classificação de imagens no Instagram.  
-  - Característica: extremamente eficiente em **um domínio específico**, mas incapaz de transferir esse aprendizado para outras áreas.  
-  - Situação atual: é a forma de IA predominante hoje, presente em quase todos os produtos e serviços inteligentes disponíveis no mercado.  
+```{admonition} **IA fraca (ou estreita)**
+:class: note
+  - Projetada para executar tarefas específicas com **alto desempenho**, mas **sem consciência** ou compreensão real.  
+  - **Exemplos**: assistentes virtuais (Alexa, Siri), sistemas de recomendação da Netflix, algoritmos de classificação de imagens no Instagram.  
+  - **Característica**: extremamente eficiente em **um domínio específico**, mas incapaz de transferir esse aprendizado para outras áreas.  
+  - **Situação atual**: é a forma de IA predominante hoje, presente em quase todos os produtos e serviços inteligentes disponíveis no mercado.
+```
 
-- **IA forte (ou geral)**: ainda hipotética, busca replicar a inteligência humana em sua plenitude, incluindo **raciocínio abstrato, criatividade, senso comum e adaptabilidade em múltiplos contextos**.  
-  - Exemplo teórico: uma máquina que pudesse aprender qualquer tarefa cognitiva com a mesma flexibilidade de um ser humano.  
-  - Desafios: exigiria avanços em **consciência artificial, compreensão contextual profunda e autonomia de aprendizado**.  
-  - Situação atual: permanece como **um objetivo de longo prazo**, alvo de debates filosóficos, éticos e científicos.  
+```{admonition} **IA forte (ou geral)**
+:class: note
+  - Ainda hipotética, busca replicar a inteligência humana em sua plenitude, incluindo **raciocínio abstrato, criatividade, senso comum e adaptabilidade em múltiplos contextos**.  
+  - **Exemplo teórico**: uma máquina que pudesse aprender qualquer tarefa cognitiva com a mesma flexibilidade de um ser humano.  
+  - **Desafios**: exigiria avanços em **consciência artificial, compreensão contextual profunda e autonomia de aprendizado**.  
+  - **Situação atual**: permanece como **um objetivo de longo prazo**, alvo de debates filosóficos, éticos e científicos.
+```
 
-:::{note}
 Uma forma simples de diferenciar é pensar que a **IA fraca** é como um **especialista em uma única área**, enquanto a **IA forte** seria um **generalista versátil**, capaz de aprender e se adaptar a qualquer desafio cognitivo.  
-:::
 
-
----
 
 ## Modelos de IA
 
