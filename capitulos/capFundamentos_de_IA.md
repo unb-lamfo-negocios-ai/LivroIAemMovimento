@@ -8,20 +8,28 @@ Mais do que um conjunto de algoritmos, a IA é hoje um **instrumento estratégic
 
 ## O que é IA?
 
-O conceito de IA surgiu na década de 1950, quando pesquisadores como **Alan Turing** e **John McCarthy** começaram a explorar a possibilidade de máquinas "pensarem" e aprenderem {cite}`turing1950`.  
+A ideia de criar máquinas capazes de pensar como seres humanos surgiu na década de 1950, marcando o início de uma revolução tecnológica e científica. Dois nomes se destacam nesse contexto: **Alan Turing**, que levantou a questão central sobre a capacidade de pensamento das máquinas, e **John McCarthy**, que cunhou o termo que hoje conhecemos como *Inteligência Artificial*.
 
 ```{admonition} Teste de Turing
 :class: note
 
-Turing, em seu famoso artigo *Computing Machinery and Intelligence*, propôs a questão: 
-> *“As máquinas podem pensar?”*
+- Em 1950, Alan Turing propôs o que ficou conhecido como **Teste de Turing**:
 
-e apresentou o **Teste de Turing** como um critério para avaliar a inteligência de sistemas artificiais.
+> um experimento  para avaliar se uma máquina consegue se passar por um ser humano em uma conversa textual.
+
+- Se o interlocutor humano não conseguir distinguir se está conversando com uma pessoa ou com uma máquina, considera-se que o sistema passou no teste.
+- Essa proposta lançou as bases filosóficas e práticas da Inteligência Artificial.
 ```
+
+O conceito de IA surgiu na década de 1950, quando pesquisadores como **Alan Turing** e **John McCarthy** começaram a explorar a possibilidade de máquinas "pensarem" e aprenderem {cite}`turing1950`.  
 
 ```{admonition} O surgimento do termo *Artificial Intelligence*
 :class: note
-Já McCarthy cunhou o termo *Artificial Intelligence* e organizou a conferência de Dartmouth (1956), considerada o marco inicial da área.
+
+- O termo **Inteligência Artificial** foi utilizado pela primeira vez por **John McCarthy** durante a **Conferência de Dartmouth** em 1956.
+- Considerada o marco zero da IA, a conferência reuniu cientistas para discutir como construir máquinas capazes de simular aspectos da inteligência humana.
+- Esse encontro deu origem a uma nova área de pesquisa que evolui até os dias atuais.
+
 ```
 
 Hoje, a IA está presente em diversos contextos do cotidiano:  
