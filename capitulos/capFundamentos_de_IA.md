@@ -121,26 +121,54 @@ Essas abordagens sustentam aplicações cada vez mais presentes no cotidiano, co
 De forma simples: o **Machine Learning** pode ser visto como um **professor que treina a máquina com exemplos**, enquanto o **Deep Learning** é como uma **rede de especialistas**, que refina o conhecimento em múltiplas camadas até chegar a uma decisão.  
 :::
 
-
----
-
 ## LLMs e IA Generativa
 
 Nos últimos anos, ganharam destaque os **Modelos de Linguagem de Grande Escala (LLMs, do inglês *Large Language Models*)**.  
 Treinados em enormes volumes de texto, eles conseguem **responder perguntas, redigir relatórios, escrever código e até simular diálogos criativos** {cite}`brown2020`.  
 
-A **IA generativa** amplia esse conceito para múltiplas modalidades:  
+```{admonition} A **IA generativa** amplia esse conceito para múltiplas modalidades:
+:class: note
 
 - **Texto**: chatbots, assistentes de escrita e geração automática de resumos.  
 - **Imagem**: ferramentas como o **DALL·E** e o **Stable Diffusion**, capazes de criar ilustrações originais a partir de descrições.  
 - **Áudio e Música**: modelos que geram vozes sintéticas e composições musicais.  
-- **Vídeo**: tecnologias emergentes que produzem animações ou cenas realistas com base em prompts textuais.  
+- **Vídeo**: tecnologias emergentes que produzem animações ou cenas realistas com base em prompts textuais.
+```
 
 Essas ferramentas estão transformando setores criativos, educacionais e corporativos, mas também levantam novas questões sobre **direitos autorais, autenticidade e confiabilidade da informação**.  
 
-FALAR SOBRE LLM Leaderboard: https://lmarena.ai/leaderboard ou https://huggingface.co/spaces/lmarena-ai/chatbot-arena-leaderboard
+Podemos dizer que a evolução dos LLMs e da IA Generativa está acontecendo em um ritmo vertiginoso. Novos modelos, melhorias de desempenho e abordagens mais avançadas são lançadas quase semanalmente. Empresas como [**OpenAI**](https://openai.com/), [**Anthropic**](https://www.anthropic.com/), [**Google DeepMind**](https://deepmind.google/), [**Meta**](https://www.meta.ai/) e [**Mistral**](https://mistral.ai/) lideram essa corrida tecnológica, disputando não apenas a supremacia técnica, mas também a preferência de desenvolvedores e usuários.
 
-### **1.1. Definindo os Conceitos Centrais: Um Tour Guiado pela IA Moderna** MATEUS MACEDO
+Para acompanhar de perto esse cenário em constante transformação, duas plataformas se destacam como **arenas públicas e vitrines de desempenho** dos modelos mais avançados:
+
+```{admonition} [LMArena Leaderboard](https://lmarena.ai/)
+:class: tip
+Uma plataforma onde modelos de IA generativa competem em duelos de perguntas e respostas. Os resultados são baseados em **votações humanas cegas**, o que garante um reflexo fiel da experiência de uso. A arena oferece:
+- Comparações diretas entre modelos como GPT-4, Claude 2, Mistral, Llama 2, entre outros;
+- Atualizações contínuas conforme novos modelos são lançados;
+- Dados úteis para avaliar desempenho em tarefas reais.
+```
+
+```{admonition} [Hugging Face — Chatbot Arena Leaderboard](https://huggingface.co/spaces/lmarena-ai/chatbot-arena-leaderboard)
+:class: tip
+Esta é a versão da LMArena hospedada na Hugging Face, com acesso fácil ao código e visualizações interativas. É ideal para quem quer:
+- Testar os modelos diretamente no navegador;
+- Explorar rankings e estatísticas;
+- Usar o ambiente como referência para experimentações próprias.
+```
+
+Esses espaços são valiosos para qualquer profissional, pesquisador ou empreendedor que deseje:
+- **acompanhar tendências** no desempenho dos LLMs;
+- **escolher os melhores modelos** para suas soluções;
+- **entender os diferenciais competitivos** em termos de geração, contexto, criatividade e raciocínio.
+
+```{admonition}
+:class: hint
+> Em um cenário de evolução tão veloz, manter-se informado não é apenas útil — é estratégico.
+```
+
+
+### 1.1. Definindo os Conceitos Centrais: Um Tour Guiado pela IA Moderna** MATEUS MACEDO
 
 Para navegar no cenário da inteligência artificial moderna, é crucial compreender a terminologia e as relações entre seus componentes. Muitas vezes usados de forma intercambiável, os termos-chave na verdade representam camadas de uma hierarquia tecnológica. No topo está a **Inteligência Artificial (IA)**, o campo abrangente dedicado a criar máquinas que podem imitar o comportamento humano inteligente.
 
