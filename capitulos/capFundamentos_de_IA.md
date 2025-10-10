@@ -146,6 +146,7 @@ Exemplos de ferramentas de IA generativa:
 ```
 
 ```{admonition} LLM: uma especialização da IA Generativa
+:class: note
 
 LLMs são uma tecnologia dentro do guarda-chuva da IA Generativa. Eles são como o "motor" que impulsiona aplicações de geração e compreensão de texto.
 
