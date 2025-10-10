@@ -163,7 +163,9 @@ Esses modelos alimentam **chatbots**, **assistentes virtuais**, **sistemas de re
 
 Essa distinção revela um paradigma fundamental para a compreensão do ecossistema de IA: o do "motor versus veículo". Um LLM, como o GPT-4 da OpenAI, pode ser visto como um motor de alto desempenho, uma peça de tecnologia complexa e poderosa. A IA Generativa, por outro lado, é o veículo que utiliza esse motor para uma finalidade específica. Assim como um motor pode ser instalado em um carro (para transporte), um barco (para navegação) ou um avião (para voo), um único LLM pode alimentar uma variedade de aplicações: um chatbot para atendimento ao cliente, uma ferramenta para redação de e-mails de marketing ou um assistente para geração de código de programação. Essa separação entre a tecnologia central (o motor) e sua aplicação (o veículo) explica por que a inovação em um único LLM pode levar a uma explosão de novas e diversas ferramentas de IA Generativa.
 
-### ** Como os LLMs Funcionam: Dos Dados ao Diálogo**
+
+
+### **Como os LLMs Funcionam: Dos Dados ao Diálogo**
 
 O termo "Grande" em Grandes Modelos de Linguagem refere-se a duas dimensões de escala. A primeira é o tamanho monumental do conjunto de dados de treinamento, que pode incluir bilhões ou até trilhões de palavras extraídas de livros, artigos, sites e outras fontes da internet. A segunda é o número de parâmetros do modelo, que são essencialmente os "botões" internos que o modelo ajusta durante o treinamento para capturar os padrões nos dados. O modelo GPT-3, por exemplo, possui 175 bilhões de parâmetros, uma escala que lhe permite aprender nuances linguísticas incrivelmente complexas.
 
