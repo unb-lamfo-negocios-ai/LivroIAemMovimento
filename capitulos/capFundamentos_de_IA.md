@@ -94,6 +94,7 @@ Entre as principais técnicas, destacam-se:
 ```
 
 ```{admonition} **Deep Learning (DL)**
+:class: note
   - Redes neurais profundas compostas por várias camadas de processamento, que extraem representações complexas dos dados.  
   - **Avanços notáveis**:  
     - **Visão computacional**: reconhecimento facial em smartphones, análise de imagens médicas, identificação automática de objetos em fotos.  
