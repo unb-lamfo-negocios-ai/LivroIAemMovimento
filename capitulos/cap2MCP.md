@@ -801,23 +801,22 @@ Servidor: "ERRO! A ferramenta que você pediu não existe.
 
 ## Fluxo Completo de Comunicação
 
-Sequência típica de uso:
+### Sequência típica de uso
 
-```
 1. INICIALIZAÇÃO
-   Cliente: "initialize" → Servidor: "Ok, conectado!"
+   ```Cliente: "initialize" → Servidor: "Ok, conectado!"```
 
 2. DESCOBERTA
-   Cliente: "tools/list" → Servidor: "Tenho estas ferramentas..."
+   ```Cliente: "tools/list" → Servidor: "Tenho estas ferramentas..."```
 
 3. EXECUÇÃO (pode repetir várias vezes)
-   Cliente: "tools/call get_weather" → Servidor: "25°C, sol"
-   Cliente: "tools/call search_papers" → Servidor: "Encontrei 5 papers"
-   Cliente: "tools/call analyze_papers" → Servidor: "Análise completa..."
+  ``` Cliente: "tools/call get_weather" → Servidor: "25°C, sol"```
+   ```Cliente: "tools/call search_papers" → Servidor: "Encontrei 5 papers"```
+   ```Cliente: "tools/call analyze_papers" → Servidor: "Análise completa..."```
 
 4. FINALIZAÇÃO
-   Cliente fecha a conexão
-```
+   ```Cliente fecha a conexão```
+
 
 ### Diagrama Visual
 
