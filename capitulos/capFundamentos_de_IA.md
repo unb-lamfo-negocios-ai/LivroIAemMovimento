@@ -88,7 +88,7 @@ Entre as principais técnicas, destacam-se:
 
 ```{admonition} **Machine Learning (ML)**
 :class: note
-  - algoritmos que aprendem a partir de exemplos e melhoram com a experiência {cite}`goodfellow2016`.  
+  - Algoritmos que aprendem a partir de exemplos e melhoram com a experiência {cite}`goodfellow2016`.  
   - **Exemplo prático**: um sistema de detecção de fraudes em cartões de crédito pode ser treinado com transações históricas, aprendendo a identificar padrões incomuns e gerar alertas em tempo real.  
   - **Limitação**: depende fortemente da qualidade dos dados — se o conjunto de treinamento contiver vieses, o modelo pode reproduzi-los.  
 ```
@@ -149,9 +149,9 @@ Exemplos de ferramentas de IA generativa:
 ```{admonition} LLM: uma especialização da IA Generativa
 :class: note
 
-LLMs são uma tecnologia dentro do guarda-chuva da IA Generativa. Eles são como o "motor" que impulsiona aplicações de geração e compreensão de texto.
-
-Eles são capazes de **compreender e gerar linguagem natural** e estão por trás de ferramentas como:
+- LLMs são uma tecnologia dentro do guarda-chuva da IA Generativa.
+- Eles são como o "motor" que impulsiona aplicações de geração e compreensão de texto.
+- Eles são capazes de **compreender e gerar linguagem natural** e estão por trás de ferramentas como:
 
 - [ChatGPT (OpenAI)](https://chat.openai.com)
 - [Claude (Anthropic)](https://www.anthropic.com)
