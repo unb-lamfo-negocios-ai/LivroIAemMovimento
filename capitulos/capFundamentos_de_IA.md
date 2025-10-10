@@ -193,6 +193,10 @@ Fonte: Inspirado em {cite}`chapman2023linkedin`.
 
 ![Como a IA Generativa se Encaixa no Universo da IA](imagens/hierarquia_de_IAs.jpeg)
 
+![Como a IA Generativa se Encaixa no Universo da IA](https://github.com/unb-lamfo-negocios-ai/LivroIAemMovimento/blob/9862fb242173b8c67864ae9c20e0472c55fa3205/imagens/hierarquia_de_IAs.jpeg)
+
+
+
 TESTE TESTE
 
 ### **Como os LLMs Funcionam: Dos Dados ao Diálogo**
