@@ -54,6 +54,9 @@ Ao final, você encontrará também a seção de [**Referências Bibliográficas
 
 Conteúdos correlacionados que não foram contemplados.
 
+Hugging Face
+Types of Artificial Intelligence: Artificial Narrow Intelligence, Reactive AI, Limited Memory AI, Artificial General Intelligence, Theory of Mind AI, Artificial Superhuman Intelligence, Self Aware AI
+
 ---
 
 ## Como navegar
