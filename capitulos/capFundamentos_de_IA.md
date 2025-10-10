@@ -195,6 +195,8 @@ A imagem representa visualmente a hierarquia dos principais subcampos da Intelig
 
 ![Como a IA Generativa se Encaixa no Universo da IA](imagens/hierarquia_de_IAs.png)
 
+TESTE TESTE
+
 ### **Como os LLMs Funcionam: Dos Dados ao Diálogo**
 
 O termo "Grande" em Grandes Modelos de Linguagem refere-se a duas dimensões de escala. A primeira é o tamanho monumental do conjunto de dados de treinamento, que pode incluir bilhões ou até trilhões de palavras extraídas de livros, artigos, sites e outras fontes da internet. A segunda é o número de parâmetros do modelo, que são essencialmente os "botões" internos que o modelo ajusta durante o treinamento para capturar os padrões nos dados. 
