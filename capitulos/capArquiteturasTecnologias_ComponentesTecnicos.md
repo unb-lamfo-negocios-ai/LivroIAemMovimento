@@ -827,8 +827,7 @@ Mesmo com todas essas facilidades, o sucesso do negócio ainda depende de um fat
 - A **entrega é prática** ou gera confusão?  
 - Existem **instruções simples e visuais** para guiar o usuário?
 ```
-
-Em resumo: **a IA pode construir o produto, mas é a UX que convence as pessoas a usá-lo — e a pagar por ele.**
+Em resumo: a IA pode construir o produto, mas é a UX que convence as pessoas a usá-lo e pagar por ele.
 
 Antes de lançar seu produto com IA, é fundamental garantir que a experiência do usuário esteja à altura. O checklist a seguir reúne os principais pontos de atenção em UX para transformar uma boa ideia automatizada em uma solução realmente utilizável e desejada.
 
