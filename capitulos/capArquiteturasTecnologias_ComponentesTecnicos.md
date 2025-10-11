@@ -830,7 +830,7 @@ Mesmo com todas essas facilidades, o sucesso do negócio ainda depende de um fat
 
 Em resumo: **a IA pode construir o produto, mas é a UX que convence as pessoas a usá-lo — e a pagar por ele.**
 
-Checklist UX para negócios criados com IA
+Antes de lançar seu produto com IA, é fundamental garantir que a experiência do usuário esteja à altura. O checklist a seguir reúne os principais pontos de atenção em UX para transformar uma boa ideia automatizada em uma solução realmente utilizável e desejada.
 
 |**Pergunta**|	**Por que importa?**|
 |--------|------------------|
@@ -852,14 +852,6 @@ Você pode usar a própria IA para:
 - Criar roteiros de onboarding, e-mails, instruções de uso.
 ```
 
-A IA ajuda a criar a solução, e também a refinar a experiência de quem vai usá-la.
 
-```{admonition} **UX é o filtro entre criação e mercado**
-:class: note
-
-Usar IA para criar um negócio é como montar uma estrutura com peças de LEGO: rápido, flexível, poderoso. Mas o que define o sucesso é se **alguém entende, usa e valoriza** aquilo que foi criado.
-
-E isso só acontece quando você pensa na **experiência final de uso** e na jornada que leva até ela.
-```
------FIM----MATEUS---MACEDO------------------------
+> **UX é o filtro entre criação e mercado**
 
