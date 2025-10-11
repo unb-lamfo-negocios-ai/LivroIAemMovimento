@@ -663,7 +663,7 @@ Para responder a essas perguntas, surgiram plataformas educativas que organizam 
 - **[Pluralsight Paths](https://www.pluralsight.com/paths)**  
   Plataforma voltada à capacitação profissional em tecnologia. Possui trilhas para desenvolvimento frontend, UX/UI e ferramentas de design, sendo útil também para líderes técnicos e empreendedores com foco estratégico.
 
-Essas alternativas são podem ser pontos de partida para quem deseja se capacitar ou simplesmente entender melhor como funcionam as tecnologias por trás das interfaces digitais modernas.
+Essas alternativas podem ser pontos de partida para quem deseja se capacitar ou simplesmente entender melhor como funcionam as tecnologias por trás das interfaces digitais modernas.
 
 ### Ferramentas para ajudar a criar seu design
 
@@ -715,17 +715,19 @@ Para o desenvolvedor, o uso dessas ferramentas não elimina a necessidade de con
 
 Landing pages são páginas únicas projetadas para um objetivo específico — geralmente converter visitantes em leads ou clientes. Ao tratar de front end, **não basta criar apenas o visual**, é essencial projetar elementos como headline, proposta de valor clara, provas sociais e call‑to‑action fortes. As landing pages mais bem‑sucedidas são aquelas que combinam **mensagem direta**, **design focado** e **experiência fluida**.
 
-Para consolidar uma landing page de alto impacto, verifique se ela:
-- Comunica logo no topo o benefício principal da oferta; :contentReference[oaicite:0]{index=0}  
-- Tem um único objetivo e evita distrações desnecessárias (como excesso de navegação); :contentReference[oaicite:1]{index=1}  
-- Carrega rapidamente e funciona bem em dispositivos móveis; :contentReference[oaicite:2]{index=2}  
-- Inclui prova social (testemunhos, logotipos, avaliações) que aumentem a confiança; :contentReference[oaicite:3]{index=3}  
+```{admonition} Para consolidar uma landing page de alto impacto, verifique se ela:
+:class: tip
+- Comunica logo no topo o benefício principal da oferta; 
+- Tem um único objetivo e evita distrações desnecessárias (como excesso de navegação);  
+- Carrega rapidamente e funciona bem em dispositivos móveis;  
+- Inclui prova social (testemunhos, logotipos, avaliações) que aumentem a confiança;
+```
 
 A seguir, apresentamos algumas landing pages reais que podem servir como referência:
 
-- [**My Group Metrics**](https://mygroupmetrics.com/) — oferece ferramentas para engajamento de comunidades virtuais e mostra claramente sua proposta de valor já na página de destino. :contentReference[oaicite:4]{index=4}  
+- [**My Group Metrics**](https://mygroupmetrics.com/) — oferece ferramentas para engajamento de comunidades virtuais e mostra claramente sua proposta de valor já na página de destino.  
 - [**Jasper**](https://www.jasper.ai/) — plataforma de IA para criação de conteúdo, com landing page otimizada para comunicar rapidamente o benefício “crie conteúdo com IA”.  
-- [**Deckspeed**](https://www.deckspeed.com/) — ferramenta de IA que gera slides profissionais; sua landing page demonstra o produto em ação e facilita a experimentação. :contentReference[oaicite:5]{index=5}  
+- [**Deckspeed**](https://www.deckspeed.com/) — ferramenta de IA que gera slides profissionais; sua landing page demonstra o produto em ação e facilita a experimentação. 
 - [**First Quadrant**](https://firstquadrant.ai/) — empresa de IA que usa sua landing page para posicionar serviços, demonstrar credibilidade e captar leads qualificados.  
 
 Esses exemplos ajudam a visualizar **como estruturar** sua própria landing page e **que aspectos priorizar** para que ela realmente converta.
@@ -749,88 +751,84 @@ Essas ferramentas permitem que empreendedores e desenvolvedores otimizem o tempo
 
 ## UX de IA — Interação Humano-Sistema
 
-A **Experiência do Usuário (UX)** em sistemas de IA exige atenção especial, pois envolve lidar com **incertezas e probabilidades**.  
-
-Boas práticas incluem {cite}`amershi2019`:  
-- **Transparência**: deixar claro de onde vêm as respostas (ex.: citar fontes).  
-- **Controle**: permitir que o usuário refine ou corrija resultados (ex.: ajustar parâmetros em filtros de imagem).  
-- **Confiança**: comunicar limitações, graus de confiança ou margens de erro do modelo.  
+A Experiência do Usuário (User Experience - UX) no contexto da IA refere-se ao design de toda a jornada de interação entre um ser humano e um sistema inteligente. Isso vai muito além do design de uma interface visual. Envolve moldar como o sistema se comporta, como comunica suas capacidades e limitações, e como colabora com o usuário para atingir um objetivo.
 
 :::{note}
 - A qualidade técnica da IA é inútil se a experiência do usuário for confusa.  
 - Um modelo de recomendação de filmes pode ser altamente preciso, mas se não explicar *por que* sugeriu um título, pode gerar desconfiança.  
 :::
 
-----MATEUS----MACEDO----
-### **O que é UX para IA? Uma Nova Fronteira de Design**
-
-A Experiência do Usuário (User Experience - UX) no contexto da IA refere-se ao design de toda a jornada de interação entre um ser humano e um sistema inteligente. Isso vai muito além do design de uma interface visual. Envolve moldar como o sistema se comporta, como comunica suas capacidades e limitações, e como colabora com o usuário para atingir um objetivo.
-
 Projetar para IA apresenta desafios únicos que diferem fundamentalmente do design de software tradicional. O software convencional é determinístico: clicar em um botão sempre produz o mesmo resultado. Os sistemas de IA, especialmente os generativos, são probabilísticos: o mesmo prompt pode gerar resultados diferentes, e o sistema pode cometer erros de maneiras imprevisíveis, muitas vezes com um alto grau de confiança aparente.
 
 Essa incerteza inerente significa que o usuário não consegue construir um modelo mental perfeito do funcionamento do sistema. Portanto, o papel do designer de UX para IA muda de projetar um fluxo previsível e perfeito para projetar uma *relação* resiliente entre o usuário e a máquina. Essa relação deve ser construída sobre uma base de confiança, e os principais objetivos do design de UX para IA são tornar as capacidades do sistema compreensíveis, suas saídas úteis e a experiência geral segura e valiosa.
 
-## **UX de IA — Interação Humano-Sistema na Criação de Negócios**
+```{admonition} Boas práticas incluem {cite}`amershi2019`:  
+:class: note
+- **Transparência**: deixar claro de onde vêm as respostas (ex.: citar fontes).  
+- **Controle**: permitir que o usuário refine ou corrija resultados (ex.: ajustar parâmetros em filtros de imagem).  
+- **Confiança**: comunicar limitações, graus de confiança ou margens de erro do modelo.
+```
+
+### UX de IA — Interação Humano-Sistema na Criação de Negócios
 
 Usar a Inteligência Artificial para criar negócios é cada vez mais acessível mas a **experiência de uso** continua sendo o diferencial que separa uma boa ideia de uma proposta viável no mercado.
 
 Seja usando IA para gerar ideias, protótipos, conteúdos ou produtos, a forma como você **transforma essas criações em algo que faz sentido para o cliente final** depende da sua capacidade de pensar na **interação humano-sistema**.
 
 ```{admonition} **Tecnologia não substitui intuição**
-:class: note
+:class: attention
 A IA pode gerar um logo, um texto, um app inteiro. Mas só você pode moldar essa entrega para que ela tenha valor real para alguém.
 ```
-### **IA como Ferramenta, UX como Estratégia**
 
-Hoje, com ferramentas como ChatGPT, Midjourney, Builder.io, Runway ou Make.com, é possível:
+**O risco de criar algo incompreensível (ou inútil)**
 
-- Gerar nomes de empresas
-- Criar logos e identidades visuais
-- Escrever landing pages e posts de blog
-- Prototipar produtos
-- Simular jornadas de usuário
-- Automatizar processos internos
+Ao desenvolver um produto com Inteligência Artificial, é comum o entusiasmo com as possibilidades técnicas acabar ofuscando aspectos essenciais da experiência do usuário. Porém, por mais avançada que seja a solução, se ninguém entende ou consegue utilizá-la, ela falha em gerar valor.
 
-Mas em todos esses casos, a **IA não entrega um negócio pronto**. Ela entrega um **esboço** que precisa ser **organizado, validado e embalado** de forma a fazer sentido para um usuário real.
+```{admonition} Cuidado: Você entende o que está criando?
+:class: warning
 
-Esse é o papel da **UX na criação com IA**.
-
----
-
-### **O risco de criar coisas que ninguém entende ou quer**
-
-Um erro comum de quem está começando um negócio com IA é se empolgar com o que a tecnologia entrega e esquecer de se perguntar:
+Antes de seguir com sua ideia, pergunte-se:
 
 - Isso é fácil de entender?
 - É claro o que estou vendendo?
 - Alguém saberia usar isso sem minha ajuda?
 - O valor está visível nos primeiros segundos?
 
-Esses são princípios clássicos de UX e continuam essenciais mesmo quando a criação é acelerada por IA.
+Estes são princípios clássicos de **UX (User Experience)** que permanecem válidos mesmo quando a criação é acelerada por IA. Ignorá-los pode levar à construção de produtos tecnicamente impressionantes, mas **comercialmente inviáveis**.
+```  
 
-### **Exemplo: Criando um Negócio com Ajuda da IA**
 
-Imagine que você quer lançar um microserviço para donos de restaurantes criarem posts automáticos para Instagram com base no cardápio.
+### Exemplo: Criando um Negócio com Apoio da IA
 
-Você usa a IA para:
+Suponha que você queira lançar um microserviço para donos de restaurantes que desejam gerar posts automáticos para o Instagram a partir do cardápio.
 
-- Gerar o nome da marca.
-- Criar o logo.
-- Escrever uma landing page.
-- Construir um fluxo automatizado com IA + Zapier.
-- Gerar os posts com GPT-4 + imagens com DALL·E.
+```{admonition} Com a ajuda da IA, você consegue:
+:class: note
 
-Até aqui, tudo feito com IA. **Mas... e o usuário final?**
+- Criar o **nome da marca** em segundos.
+- Gerar um **logotipo estilizado** com ferramentas de IA visual.
+- Redigir uma **landing page persuasiva**.
+- Automatizar o fluxo com **GPT + Zapier**, sem escrever uma linha de código.
+- Produzir **legendas com GPT-4** e **imagens com DALL·E**.
+```
 
-### **Você ainda precisa pensar na experiência:**
+Ou seja, até aqui, *quase tudo* foi desenvolvido com ferramentas de IA generativa.
 
-- O site está claro?
-- A proposta de valor faz sentido em 10 segundos?
-- É fácil entender o que o produto faz?
-- A entrega é prática ou confusa?
-- Há instruções simples e visuais para o usuário?
+> **Mas há uma pergunta crítica a ser feita: o usuário final realmente entende, precisa e sabe usar essa solução?**
 
-Ou seja, **a IA te ajudou a construir mas a UX vai definir se você vende.**
+Mesmo com todas essas facilidades, o sucesso do negócio ainda depende de um fator humano essencial: **a clareza da proposta de valor para quem vai usar**. É aí que muitos projetos falham.  A **experiência do usuário** continua sendo o que realmente define o sucesso de um produto.
+
+```{admonition} Ao lançar sua aplicação, é essencial pensar na jornada de quem vai usá-la:
+:class: hint
+
+- O site é **claro e direto**?  
+- A **proposta de valor** faz sentido em menos de 10 segundos?  
+- É **fácil entender** o que o produto faz?  
+- A **entrega é prática** ou gera confusão?  
+- Existem **instruções simples e visuais** para guiar o usuário?
+```
+
+Em resumo: **a IA pode construir o produto, mas é a UX que convence as pessoas a usá-lo — e a pagar por ele.**
 
 Checklist UX para negócios criados com IA
 
