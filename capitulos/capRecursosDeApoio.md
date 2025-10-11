@@ -5,6 +5,7 @@ O campo está em constante evolução, e acompanhar novos conteúdos, ferramenta
 
 Este capítulo reúne **recursos complementares** que funcionam como pontos de partida para uma jornada de **aprendizado contínuo e exploração prática**.  
 
+## Informações e notícias sobre IA
 ---
 
 ## Vídeos e Cursos sobre IA
