@@ -762,7 +762,7 @@ Projetar para IA apresenta desafios únicos que diferem fundamentalmente do desi
 
 Essa incerteza inerente significa que o usuário não consegue construir um modelo mental perfeito do funcionamento do sistema. Portanto, o papel do designer de UX para IA muda de projetar um fluxo previsível e perfeito para projetar uma *relação* resiliente entre o usuário e a máquina. Essa relação deve ser construída sobre uma base de confiança, e os principais objetivos do design de UX para IA são tornar as capacidades do sistema compreensíveis, suas saídas úteis e a experiência geral segura e valiosa.
 
-```{admonition} Boas práticas incluem {cite}`amershi2019`:  
+```{admonition} Boas práticas incluem:  
 :class: note
 - **Transparência**: deixar claro de onde vêm as respostas (ex.: citar fontes).  
 - **Controle**: permitir que o usuário refine ou corrija resultados (ex.: ajustar parâmetros em filtros de imagem).  
