@@ -148,7 +148,7 @@ Prompt Engineering
 
 Python - Introdução
 | **Título** | **URL** | **Canal/Autor** | 
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | 
 | AULA 1: Google Colab, Strings, Operadores Matemáticos | https://youtu.be/7TLkf1l9wLg | https://www.youtube.com/@codigoquant | 
 | AULA 2: Variáveis, Listas e Tuplas | https://youtu.be/LRUNe_yS-dU | https://www.youtube.com/@codigoquant |  
 | AULA 3: Dicionários, Operadores Lógicos, IF / ELSE / ELIF | https://youtu.be/np7ic8HFo5o | https://www.youtube.com/@codigoquant |  
