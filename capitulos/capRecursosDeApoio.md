@@ -20,155 +20,148 @@ Os vídeos e cursos online são formas acessíveis de visualizar conceitos em pr
 Cursos em vídeo permitem absorver conceitos de forma dinâmica, mas o ideal é sempre **complementar com exercícios práticos** para fixar o aprendizado.  
 :::
 
-| **Título** | **URL** | **Canal/Autor** | **Categoria** | **Uso no eBook** | **Nível** |
-| --- | --- | --- | --- | --- | --- |
-| Curso de Canva gratis e completo do zero ao avançado | https://youtu.be/L1XHqZf_AAU?si=K07pDWfxp20oAMRG | https://www.youtube.com/@COISASDEDESIGNER |  |  |  |
-| Nova integração Canva + ChatGPT (MCP Server) | https://youtu.be/s2HjjSnkWEM?si=JzwMSQ8Z1jlxUlR- | https://www.youtube.com/@DarlanEvandro |  |  |  |
-| Atualização insana! VEO3 integrado ao Canva | https://youtu.be/1RG7GAx9KUs?si=5f7fGMOiMy3LPQSi | https://www.youtube.com/@DarlanEvandro |  |  |  |
-| Boas-vindas ao Canva Educação | https://youtu.be/Pxr3jkH0Tj4?si=Q1rNZ48EDySUQjJq | https://www.youtube.com/@canva |  |  |  |
-| Curso de Canva do Zero para iniciantes | https://youtu.be/lGiyNbBSF-M?si=qGfXbGDgqnTqDGfb | https://www.youtube.com/@DarlanEvandro |  |  |  |
-|  |  |  |  |  |  |
+| **Título** | **URL** | **Canal/Autor** | 
+| ---------- | -------- | --- | 
+| Curso de Canva gratis e completo do zero ao avançado | https://youtu.be/L1XHqZf_AAU?si=K07pDWfxp20oAMRG | https://www.youtube.com/@COISASDEDESIGNER | 
+| Nova integração Canva + ChatGPT (MCP Server) | https://youtu.be/s2HjjSnkWEM?si=JzwMSQ8Z1jlxUlR- | https://www.youtube.com/@DarlanEvandro | 
+| Atualização insana! VEO3 integrado ao Canva | https://youtu.be/1RG7GAx9KUs?si=5f7fGMOiMy3LPQSi | https://www.youtube.com/@DarlanEvandro | 
+| Boas-vindas ao Canva Educação | https://youtu.be/Pxr3jkH0Tj4?si=Q1rNZ48EDySUQjJq | https://www.youtube.com/@canva |  
+| Curso de Canva do Zero para iniciantes | https://youtu.be/lGiyNbBSF-M?si=qGfXbGDgqnTqDGfb | https://www.youtube.com/@DarlanEvandro |  
 
 
 Fundamentos de IA - Harvard CS50
-| **Título** | **URL** | **Canal/Autor** | **Categoria** | **Uso no eBook** | **Nível** |
-| --- | --- | --- | --- | --- | --- |
-| Lecture 0 - Playing | https://www.youtube.com/live/kQ3K7Y4AQcs?si=2AGHMyFUvJyQieBb | https://www.youtube.com/cs50 |  |  |  |
-| Lecture 1 - Predicting | https://www.youtube.com/live/oHuvUkMPffI?si=0MPKJ10Aq16vLsWP | https://www.youtube.com/cs50 |  |  |  |
-| Lecture 2 - Analyzing  | https://www.youtube.com/live/VjH6g63OsME?si=tjv53mXu94ss04Tl | https://www.youtube.com/cs50 |  |  |  |
-| Lecture 3 - Sensing | https://www.youtube.com/live/L1lQtyqpezI?si=34aVbp1Rwax-6N5w | https://www.youtube.com/cs50 |  |  |  |
-| Lecture 4 - Communicating | https://www.youtube.com/live/DpKjr08eFuA?si=o-3SBhJtEkduXkIr | https://www.youtube.com/cs50 |  |  |  |
-| Lecture 5 - Generating  | https://www.youtube.com/live/7LiHUvSqRtI?si=WG1nY8LEmHRdgbvo | https://www.youtube.com/cs50 |  |  |  |
-| Lecture 6 - Moving | https://www.youtube.com/live/Bpiv2HCe3xA?si=PtDtUKp3hZ9hIUvS | https://www.youtube.com/cs50 |  |  |  |
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- | 
+| Lecture 0 - Playing | https://www.youtube.com/live/kQ3K7Y4AQcs?si=2AGHMyFUvJyQieBb | https://www.youtube.com/cs50 |  
+| Lecture 1 - Predicting | https://www.youtube.com/live/oHuvUkMPffI?si=0MPKJ10Aq16vLsWP | https://www.youtube.com/cs50 |  
+| Lecture 2 - Analyzing  | https://www.youtube.com/live/VjH6g63OsME?si=tjv53mXu94ss04Tl | https://www.youtube.com/cs50 |  
+| Lecture 3 - Sensing | https://www.youtube.com/live/L1lQtyqpezI?si=34aVbp1Rwax-6N5w | https://www.youtube.com/cs50 |  
+| Lecture 4 - Communicating | https://www.youtube.com/live/DpKjr08eFuA?si=o-3SBhJtEkduXkIr | https://www.youtube.com/cs50 |  
+| Lecture 5 - Generating  | https://www.youtube.com/live/7LiHUvSqRtI?si=WG1nY8LEmHRdgbvo | https://www.youtube.com/cs50 | 
+| Lecture 6 - Moving | https://www.youtube.com/live/Bpiv2HCe3xA?si=PtDtUKp3hZ9hIUvS | https://www.youtube.com/cs50 |  
 
 Google AI Studio
-| **Título** | **URL** | **Canal/Autor** | **Categoria** | **Uso no eBook** | **Nível** |
-| --- | --- | --- | --- | --- | --- |
-| Construindo agentes de IA no Google Cloud | https://youtu.be/8rlNdKywldQ?si=GXulrr2FP4Sc1sOi | https://www.youtube.com/@googlecloudtech |  |  |  |
-| Conheça Gemini no Chrome | https://youtu.be/BBjM0SHg-aU?si=95DxG32XG03ubDNk | https://www.youtube.com/@GoogleChrome |  |  |  |
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- | 
+| Construindo agentes de IA no Google Cloud | https://youtu.be/8rlNdKywldQ?si=GXulrr2FP4Sc1sOi | https://www.youtube.com/@googlecloudtech |  
+| Conheça Gemini no Chrome | https://youtu.be/BBjM0SHg-aU?si=95DxG32XG03ubDNk | https://www.youtube.com/@GoogleChrome |  
 |  |  |  |  |  |  |
-| Como usar a nova função de IA do Planilhas Google | https://youtu.be/6UNM0DQ2diw?si=hvvDII8oruXxotba | https://www.youtube.com/@PeterHornerGoogleTech |  |  |  |
+| Como usar a nova função de IA do Planilhas Google | https://youtu.be/6UNM0DQ2diw?si=hvvDII8oruXxotba | https://www.youtube.com/@PeterHornerGoogleTech |  
 
 Graph RAG & Knowledge Graphs
-| **Título** | **URL** | **Canal/Autor** | **Categoria** | **Uso no eBook** | **Nível** |
-| --- | --- | --- | --- | --- | --- |
-| Intro to Graph RAG - Zach Blumenfeld | https://youtu.be/J-9EbJBxcbg?si=OfWk4ETprZocX4nh | https://www.youtube.com/@aiDotEngineer |  |  |  |
-| Intro to Graph RAG | https://www.youtube.com/live/f6pUqDeMiG0?si=tbyol6suhRs9Mk9z | https://www.youtube.com/@MicrosoftReactor |  |  |  |
-| Knowledge Graphs & Graph RAG: Zach Blumenthal | https://youtu.be/2DyHW23L6Cs?si=41fNdtM4parNcS4Q | https://www.youtube.com/@aiDotEngineer |  |  |  |
-| Build Real-Time Knowledge Graph for documents with LLM | https://youtu.be/2KVkpUGRtnk?si=p2ngjhqvq2vRZyTB | https://www.youtube.com/@cocoindex-io |  |  |  |
-| Graph RAG: The marriage of Knowledge Graphs and RAG: Emil Eifrem | https://youtu.be/knDDGYHnnSI?si=aeJFeufKV-4HFWyo | https://www.youtube.com/@aiDotEngineer |  |  |  |
-| AI Explained: Knowledge Graphs - turning raw data into useful information | https://youtu.be/Q5izD6Xlb8o?si=qC_8T62SEL8wSZzi | https://www.youtube.com/@sandboxaq |  |  |  |
-| Extraindo gráficos de conhecimento de texto com GPT4o | https://youtu.be/O-T_6KOXML4?si=EXD0Ge8HkGxtT6tB | https://www.youtube.com/@Thuvu5 |  |  |  |
-| Graph RAG Explained: AI retrieval with KG & Cypher | https://youtu.be/tTwBKXHIiMg?si=hwjfL9J2ez7DDsbI | https://www.youtube.com/@IBMTechnology |  |  |  |
-| AI Engineer World’s Fair 2025 - GraphRAG | https://www.youtube.com/live/RR5le0K4Wtw?si=cct3GMIUOA1B-1Io | https://www.youtube.com/@aiDotEngineer |  |  |  |
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- |
+| Intro to Graph RAG - Zach Blumenfeld | https://youtu.be/J-9EbJBxcbg?si=OfWk4ETprZocX4nh | https://www.youtube.com/@aiDotEngineer |  
+| Intro to Graph RAG | https://www.youtube.com/live/f6pUqDeMiG0?si=tbyol6suhRs9Mk9z | https://www.youtube.com/@MicrosoftReactor | 
+| Knowledge Graphs & Graph RAG: Zach Blumenthal | https://youtu.be/2DyHW23L6Cs?si=41fNdtM4parNcS4Q | https://www.youtube.com/@aiDotEngineer |  
+| Build Real-Time Knowledge Graph for documents with LLM | https://youtu.be/2KVkpUGRtnk?si=p2ngjhqvq2vRZyTB | https://www.youtube.com/@cocoindex-io |  
+| Graph RAG: The marriage of Knowledge Graphs and RAG: Emil Eifrem | https://youtu.be/knDDGYHnnSI?si=aeJFeufKV-4HFWyo | https://www.youtube.com/@aiDotEngineer |  
+| AI Explained: Knowledge Graphs - turning raw data into useful information | https://youtu.be/Q5izD6Xlb8o?si=qC_8T62SEL8wSZzi | https://www.youtube.com/@sandboxaq |  
+| Extraindo gráficos de conhecimento de texto com GPT4o | https://youtu.be/O-T_6KOXML4?si=EXD0Ge8HkGxtT6tB | https://www.youtube.com/@Thuvu5 | 
+| Graph RAG Explained: AI retrieval with KG & Cypher | https://youtu.be/tTwBKXHIiMg?si=hwjfL9J2ez7DDsbI | https://www.youtube.com/@IBMTechnology |  
+| AI Engineer World’s Fair 2025 - GraphRAG | https://www.youtube.com/live/RR5le0K4Wtw?si=cct3GMIUOA1B-1Io | https://www.youtube.com/@aiDotEngineer |  
 
 IA Generativa
-| **Título** | **URL** | **Canal/Autor** | **Categoria** | **Uso no eBook** | **Nível** |
-| --- | --- | --- | --- | --- | --- |
+| **Título** | **URL** | **Canal/Autor** |
+| --- | --- | --- | 
 | IA para todos | https://www.coursera.org/learn/ai-for-everyone | Coursera |  |  |  |
-| How AI Works | https://youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y&si=6sykWpDJqvn0GSc- | https://www.youtube.com/codeorg |  |  |  |
-|  |  |  |  |  |  |
+| How AI Works | https://youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y&si=6sykWpDJqvn0GSc- | https://www.youtube.com/codeorg | 
+
 
 LangGraph / LangChain
-| **Título** | **URL** | **Canal/Autor** | **Categoria** | **Uso no eBook** | **Nível** |
-| --- | --- | --- | --- | --- | --- |
-| LangGraph Complete Course for Beginners: Complex AI Agents with Python | https://youtu.be/jGg_1h0qzaM?si=lUzCGTbYNOEnXPLI | https://www.youtube.com/@freecodecamp |  |  |  |
-| Building Effective Agents with LangGraph | https://youtu.be/aHCDrAbH_go?si=ArJp0t6yxHQyv35T | https://www.youtube.com/@LangChain |  |  |  |
-| How I connected LangGraph Agents to any too using MCP | https://youtu.be/F9mgEFor0cA?si=L7CIajQmfIk4wXRx | https://www.youtube.com/@KennethLiao |  |  |  |
-| LangGraph Platform: MCP support for your LangGraph Agents | https://youtu.be/AR4mLbm-0RU?si=FsS2_gc6LaAhEkam | https://www.youtube.com/@LangChain |  |  |  |
-| Learn LangChain in 7 easy steps - Beginner Tutorial | https://youtu.be/8BV9TW490nQ?si=maUHLh8ajekuZr7o | https://www.youtube.com/@rabbitmetrics |  |  |  |
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- | 
+| LangGraph Complete Course for Beginners: Complex AI Agents with Python | https://youtu.be/jGg_1h0qzaM?si=lUzCGTbYNOEnXPLI | https://www.youtube.com/@freecodecamp | 
+| Building Effective Agents with LangGraph | https://youtu.be/aHCDrAbH_go?si=ArJp0t6yxHQyv35T | https://www.youtube.com/@LangChain | 
+| How I connected LangGraph Agents to any too using MCP | https://youtu.be/F9mgEFor0cA?si=L7CIajQmfIk4wXRx | https://www.youtube.com/@KennethLiao |  
+| LangGraph Platform: MCP support for your LangGraph Agents | https://youtu.be/AR4mLbm-0RU?si=FsS2_gc6LaAhEkam | https://www.youtube.com/@LangChain |  
+| Learn LangChain in 7 easy steps - Beginner Tutorial | https://youtu.be/8BV9TW490nQ?si=maUHLh8ajekuZr7o | https://www.youtube.com/@rabbitmetrics | 
 
 Large Language Models (LLM)
-| **Título** | **URL** | **Canal/Autor** | **Categoria** | **Uso no eBook** | **Nível** |
-| --- | --- | --- | --- | --- | --- |
-| 101 Ways to use AI in your daily life | https://youtu.be/zkXonmqIBFg?si=PXkdoA7rcYfCKb-Y | https://www.youtube.com/@TinaHuang1 |  |  |  |
-|  |  |  |  |  |  |
-|  |  |  |  |  |  |
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- | 
+| 101 Ways to use AI in your daily life | https://youtu.be/zkXonmqIBFg?si=PXkdoA7rcYfCKb-Y | https://www.youtube.com/@TinaHuang1 | 
+
 
 Microsoft 365 Copilot
-| **Título** | **URL** | **Canal/Autor** | **Categoria** | **Uso no eBook** | **Nível** |
-| --- | --- | --- | --- | --- | --- |
-| Introducing Microsoft Copilot Tuning | https://youtu.be/mY7Du9Bd-rY?si=LGkipkGR-jgJa9xu | https://www.youtube.com/@Microsoft365 |  |  |  |
-| Microsoft Copilot Tutorial: What are Copilot Agents? | https://youtu.be/1smnJYGjQTw?si=dNNAD-zqdmFgWldi | https://www.youtube.com/@accessorange_official |  |  |  |
-| Analyst: A reasoning agent in Microsoft 365 Copilot | https://youtu.be/9O3CoP8rEkY?si=XysuaaZxSHWhiKvA | https://www.youtube.com/@Microsoft365 |  |  |  |
-| Microsoft Copilot: How to create an Agent in minutes | https://youtu.be/FsVf0rBG33g?si=lKWuFo1C1m8kNRnf | https://www.youtube.com/@trainaitoday |  |  |  |
-| Computer use in Copilot Studio | https://youtu.be/lWCbtGHlw9I?si=Xi3gSGc231O3Odva | https://www.youtube.com/@MicrosoftCopilotStudio |  |  |  |
-| Novo laboratório! Aprenda a conectar o MCP ao Copilot Studio | https://youtu.be/jG-XTzXxFCk?si=uKNGrg9_LKuIJf-n | https://www.youtube.com/@mspowerplatform |  |  |  |
-| Take a tour of the Microsoft 365 Copilot App | https://youtu.be/W-FBOUh-S0o?si=w96e7COSNzorZ9W8 | https://www.youtube.com/@Microsoft365 |  |  |  |
-| Novo ajuste do Microsoft 365 Copilot: Crie modelos ajustados para escrever como você | https://youtu.be/6udJzJAyT5I?si=EVHiLXqnrjt60QWV | https://www.youtube.com/@MSFTMechanics |  |  |  |
-| Agent Flows in Copilot Studio | https://youtu.be/VJTKyk3Pr7s?si=dV9aDe5pGLvOJkHX | https://www.youtube.com/@MicrosoftCopilotStudio |  |  |  |
-| 9 Copilot App Tips & Tricks | https://youtu.be/HGWeDjHHOxc?si=YsPj6O6mgq8sgCwc | https://www.youtube.com/@KevinStratvert |  |  |  |
-| Dicas para usuários avançados do Microsoft 365 Copilot | https://youtu.be/MuocazjjZmc?si=nOGp-6rnu53R3ypW | https://www.youtube.com/@MSFTMechanics |  |  |  |
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- |
+| Introducing Microsoft Copilot Tuning | https://youtu.be/mY7Du9Bd-rY?si=LGkipkGR-jgJa9xu | https://www.youtube.com/@Microsoft365 | 
+| Microsoft Copilot Tutorial: What are Copilot Agents? | https://youtu.be/1smnJYGjQTw?si=dNNAD-zqdmFgWldi | https://www.youtube.com/@accessorange_official |  
+| Analyst: A reasoning agent in Microsoft 365 Copilot | https://youtu.be/9O3CoP8rEkY?si=XysuaaZxSHWhiKvA | https://www.youtube.com/@Microsoft365 | 
+| Microsoft Copilot: How to create an Agent in minutes | https://youtu.be/FsVf0rBG33g?si=lKWuFo1C1m8kNRnf | https://www.youtube.com/@trainaitoday |  
+| Computer use in Copilot Studio | https://youtu.be/lWCbtGHlw9I?si=Xi3gSGc231O3Odva | https://www.youtube.com/@MicrosoftCopilotStudio |  
+| Novo laboratório! Aprenda a conectar o MCP ao Copilot Studio | https://youtu.be/jG-XTzXxFCk?si=uKNGrg9_LKuIJf-n | https://www.youtube.com/@mspowerplatform | 
+| Take a tour of the Microsoft 365 Copilot App | https://youtu.be/W-FBOUh-S0o?si=w96e7COSNzorZ9W8 | https://www.youtube.com/@Microsoft365 |  
+| Novo ajuste do Microsoft 365 Copilot: Crie modelos ajustados para escrever como você | https://youtu.be/6udJzJAyT5I?si=EVHiLXqnrjt60QWV | https://www.youtube.com/@MSFTMechanics | 
+| Agent Flows in Copilot Studio | https://youtu.be/VJTKyk3Pr7s?si=dV9aDe5pGLvOJkHX | https://www.youtube.com/@MicrosoftCopilotStudio | 
+| 9 Copilot App Tips & Tricks | https://youtu.be/HGWeDjHHOxc?si=YsPj6O6mgq8sgCwc | https://www.youtube.com/@KevinStratvert |  
+| Dicas para usuários avançados do Microsoft 365 Copilot | https://youtu.be/MuocazjjZmc?si=nOGp-6rnu53R3ypW | https://www.youtube.com/@MSFTMechanics | 
 
 Model Context Protocol (MCP)
-| **Título** | **URL** | **Canal/Autor** | **Categoria** | **Uso no eBook** | **Nível** |
-| --- | --- | --- | --- | --- | --- |
-| What is MCP and why you need it | https://youtu.be/Uft4VwGm5qs?si=pAxLgtjnESJkNkXZ | https://www.youtube.com/@KennethLiao |  |  |  |
-|  |  |  |  |  |  |
-| MCP - O que é e como usar MCP com n8n | https://youtu.be/pr5c0AsghjU?si=qWA7-vxWJY-xglJB | https://www.youtube.com/@nocodestartup |  |  |  |
+| **Título** | **URL** | **Canal/Autor** |
+| --- | --- | --- | 
+| What is MCP and why you need it | https://youtu.be/Uft4VwGm5qs?si=pAxLgtjnESJkNkXZ | https://www.youtube.com/@KennethLiao |  
+| MCP - O que é e como usar MCP com n8n | https://youtu.be/pr5c0AsghjU?si=qWA7-vxWJY-xglJB | https://www.youtube.com/@nocodestartup |  
 
 n8n
-| **Título** | **URL** | **Canal/Autor** | **Categoria** | **Uso no eBook** | **Nível** |
-| --- | --- | --- | --- | --- | --- |
-| Tutorial completo do n8n: criando agentes de IA em 2025 para iniciantes | https://youtu.be/ZbIVOy_GPyQ?si=WAzyVJQqPI74f4Ny | https://www.youtube.com/@ai-foundations |  |  |  |
-| Sistemas multiagentes nunca foram tão fáceis de construir (n8n, sem código) | https://youtu.be/0iUNOmeU7O4?si=7h4XGxqVTYi5LUiw | https://www.youtube.com/@nateherk |  |  |  |
-| Aprenda hoje n8n e automatize quase tudo | https://youtu.be/UDWEAMwS7rg?si=hwaDc7CGQmMeVNHg | https://www.youtube.com/@codigofontetv |  |  |  |
-| n8n para iniciantes! Crie automações com IA e ganhe dinheiro na sua empresa | https://youtu.be/IID-ifxWkKk?si=vhqE38HW01tpg_gu | https://www.youtube.com/@DarlanEvandro |  |  |  |
-| Build & Sell n8n AI Agents (*+ hour course, NoCode) | https://youtu.be/Ey18PDiaAYI?si=-V4LaUiAtIERtfhJ | https://www.youtube.com/@nateherk |  |  |  |
-| MCP n8n AI Agents: Tutorial | https://youtu.be/Mlo41ljP_XY?si=eA4VsjmnPOgXXAK- | https://www.youtube.com/@derekcheungsa |  |  |  |
-| n8n just released native MCP trigger ad AI Agent Tool | https://youtu.be/45WPU7P-1QQ?si=uD2R8kh9USTxYC8i | https://www.youtube.com/@n8n-io |  |  |  |
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- | 
+| Tutorial completo do n8n: criando agentes de IA em 2025 para iniciantes | https://youtu.be/ZbIVOy_GPyQ?si=WAzyVJQqPI74f4Ny | https://www.youtube.com/@ai-foundations | 
+| Sistemas multiagentes nunca foram tão fáceis de construir (n8n, sem código) | https://youtu.be/0iUNOmeU7O4?si=7h4XGxqVTYi5LUiw | https://www.youtube.com/@nateherk |  
+| Aprenda hoje n8n e automatize quase tudo | https://youtu.be/UDWEAMwS7rg?si=hwaDc7CGQmMeVNHg | https://www.youtube.com/@codigofontetv |  
+| n8n para iniciantes! Crie automações com IA e ganhe dinheiro na sua empresa | https://youtu.be/IID-ifxWkKk?si=vhqE38HW01tpg_gu | https://www.youtube.com/@DarlanEvandro |  
+| Build & Sell n8n AI Agents (*+ hour course, NoCode) | https://youtu.be/Ey18PDiaAYI?si=-V4LaUiAtIERtfhJ | https://www.youtube.com/@nateherk |  
+| MCP n8n AI Agents: Tutorial | https://youtu.be/Mlo41ljP_XY?si=eA4VsjmnPOgXXAK- | https://www.youtube.com/@derekcheungsa |  
+| n8n just released native MCP trigger ad AI Agent Tool | https://youtu.be/45WPU7P-1QQ?si=uD2R8kh9USTxYC8i | https://www.youtube.com/@n8n-io |  
 
 Neo4j
-| **Título** | **URL** | **Canal/Autor** | **Categoria** | **Uso no eBook** | **Nível** |
-| --- | --- | --- | --- | --- | --- |
-| Neo4j Live: MCP for LLM Agents, APIs & Graphs | https://www.youtube.com/live/6igWn_dckpc?si=Okl8Y18XeEIdoOCA | https://www.youtube.com/@neo4j |  |  |  |
-| Neo4j Live: How to build a Knowledge Graph | https://www.youtube.com/live/1ogNyPWUP7g?si=y3TgKR8B_kPro4OJ | https://www.youtube.com/@neo4j |  |  |  |
-|  |  |  |  |  |  |
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- |
+| Neo4j Live: MCP for LLM Agents, APIs & Graphs | https://www.youtube.com/live/6igWn_dckpc?si=Okl8Y18XeEIdoOCA | https://www.youtube.com/@neo4j | 
+| Neo4j Live: How to build a Knowledge Graph | https://www.youtube.com/live/1ogNyPWUP7g?si=y3TgKR8B_kPro4OJ | https://www.youtube.com/@neo4j |  
+
 
 NoCode AI
-| **Título** | **URL** | **Canal/Autor** | **Categoria** | **Uso no eBook** | **Nível** |
-| --- | --- | --- | --- | --- | --- |
-| Ferramentas NoCode para IA | https://youtu.be/NKKXje4qrq4?si=TMMBAlDX7cm6RN1f | https://www.youtube.com/@nocodestartup |  |  |  |
-|  |  |  |  |  |  |
-|  |  |  |  |  |  |
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- | 
+| Ferramentas NoCode para IA | https://youtu.be/NKKXje4qrq4?si=TMMBAlDX7cm6RN1f | https://www.youtube.com/@nocodestartup |  
+
 
 Notion
-| **Título** | **URL** | **Canal/Autor** | **Categoria** | **Uso no eBook** | **Nível** |
-| --- | --- | --- | --- | --- | --- |
-| Using Notion AI to improve daily work | https://youtu.be/v7GJ8SRq7Mk?si=rsa22Tf8zFDfEZHe | https://www.youtube.com/@Notion | A definir | Capítulo X | Introdutório |
-|  |  |  |  |  |  |
-|  |  |  |  |  |  |
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- |
+| Using Notion AI to improve daily work | https://youtu.be/v7GJ8SRq7Mk?si=rsa22Tf8zFDfEZHe | https://www.youtube.com/@Notion | 
+
 
 Perplexity
-| **Título** | **URL** | **Canal/Autor** | **Categoria** | **Uso no eBook** | **Nível** |
-| --- | --- | --- | --- | --- | --- |
-| Perplexity Labs: A nova ferramenta de pesquisa de IA que cria aplicativos iterativos | https://youtu.be/84kOcsRJ7i4?si=aJmOynm_iuEDB7S_ | https://www.youtube.com/@LawtonSolutions | A definir | Capítulo X | Introdutório |
-|  |  |  |  |  |  |
-|  |  |  |  |  |  |
+| **Título** | **URL** | **Canal/Autor** |
+| --- | --- | --- | 
+| Perplexity Labs: A nova ferramenta de pesquisa de IA que cria aplicativos iterativos | https://youtu.be/84kOcsRJ7i4?si=aJmOynm_iuEDB7S_ | https://www.youtube.com/@LawtonSolutions | 
+
 
 Prompt Engineering
-| **Título** | **URL** | **Canal/Autor** | **Categoria** | **Uso no eBook** | **Nível** |
-| --- | --- | --- | --- | --- | --- |
-| Google’s 9 hour Ai prompt enginnering course in 20 minutes | https://youtu.be/p09yRj47kNM?si=IOKaN-JIqKNgzoAO | https://www.youtube.com/@TinaHuang1 | A definir | Capítulo X | Introdutório |
-|  |  |  |  |  |  |
-|  |  |  |  |  |  |
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- |
+| Google’s 9 hour Ai prompt enginnering course in 20 minutes | https://youtu.be/p09yRj47kNM?si=IOKaN-JIqKNgzoAO | https://www.youtube.com/@TinaHuang1 | 
+
 
 Python - Introdução
-| **Título** | **URL** | **Canal/Autor** | **Categoria** | **Uso no eBook** | **Nível** |
+| **Título** | **URL** | **Canal/Autor** | 
 | --- | --- | --- | --- | --- | --- |
-| AULA 1: Google Colab, Strings, Operadores Matemáticos | https://youtu.be/7TLkf1l9wLg | https://www.youtube.com/@codigoquant | A definir | Capítulo X | Introdutório |
-| AULA 2: Variáveis, Listas e Tuplas | https://youtu.be/LRUNe_yS-dU | https://www.youtube.com/@codigoquant |  |  |  |
-| AULA 3: Dicionários, Operadores Lógicos, IF / ELSE / ELIF | https://youtu.be/np7ic8HFo5o | https://www.youtube.com/@codigoquant |  |  |  |
-| AULA 4: FOR, WHILE e Funções | https://youtu.be/M-XmfQn1L1w | https://www.youtube.com/@codigoquant |  |  |  |
-| AULA 5: BIBLIOTECAS | https://youtu.be/DbL2rotVrAw | https://www.youtube.com/@codigoquant |  |  |  |
-| Python Crash Course | https://youtu.be/K5KVEU3aaeQ?si=LGbyo3UgBjre7paH | https://www.youtube.com/@programmingwithmosh |  |  |  |
+| AULA 1: Google Colab, Strings, Operadores Matemáticos | https://youtu.be/7TLkf1l9wLg | https://www.youtube.com/@codigoquant | 
+| AULA 2: Variáveis, Listas e Tuplas | https://youtu.be/LRUNe_yS-dU | https://www.youtube.com/@codigoquant |  
+| AULA 3: Dicionários, Operadores Lógicos, IF / ELSE / ELIF | https://youtu.be/np7ic8HFo5o | https://www.youtube.com/@codigoquant |  
+| AULA 4: FOR, WHILE e Funções | https://youtu.be/M-XmfQn1L1w | https://www.youtube.com/@codigoquant |
+| AULA 5: BIBLIOTECAS | https://youtu.be/DbL2rotVrAw | https://www.youtube.com/@codigoquant | 
+| Python Crash Course | https://youtu.be/K5KVEU3aaeQ?si=LGbyo3UgBjre7paH | https://www.youtube.com/@programmingwithmosh | 
 
 SaaS - Software como Serviço
-| **Título** | **URL** | **Canal/Autor** | **Categoria** | **Uso no eBook** | **Nível** |
-| --- | --- | --- | --- | --- | --- |
-| SaaS - Dicionário do Programador | https://youtu.be/4Hw3FApvvhE?si=5hRsmBiWN8r7XDXv | https://www.youtube.com/@codigofontetv |  |  |  |
-| Micro-SaaS de IA em 8 passos | https://youtu.be/HMjzdeiNdKc?si=xhp9TxgG1qTduzTc | https://www.youtube.com/@microsaas |  |  |  |
-|  |  |  |  |  |  |
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- | 
+| SaaS - Dicionário do Programador | https://youtu.be/4Hw3FApvvhE?si=5hRsmBiWN8r7XDXv | https://www.youtube.com/@codigofontetv | 
+| Micro-SaaS de IA em 8 passos | https://youtu.be/HMjzdeiNdKc?si=xhp9TxgG1qTduzTc | https://www.youtube.com/@microsaas |  
+
 ---
 
 ## Referências sobre Negócios e Estratégia em IA
