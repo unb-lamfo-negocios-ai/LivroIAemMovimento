@@ -622,7 +622,7 @@ Além disso, o backend pode ser conectado a **APIs externas**, permitindo que o 
 
 Esse exemplo mostra como o casamento entre frontend e backend é essencial para criar experiências realmente inteligentes e úteis para o usuário.
 
-### Por que frontend e backend importam nos Negócios com IA?
+### Por que frontend e backend importam nos negócios com IA?
 
 Entender a separação entre frontend e backend é essencial para quem está planejando, investindo ou liderando projetos com Inteligência Artificial. Essa visão:
 
@@ -636,42 +636,116 @@ Entender a separação entre frontend e backend é essencial para quem está pla
 
 ## Outras alternativas para construção do Frontend
 
-Roadmap: https://roadmap.sh/frontend
+Ao iniciar a jornada para desenvolver interfaces digitais muitos empreendedores e profissionais não técnicos podem se deparar com um desafio: por onde começar? Quais habilidades são realmente necessárias? Que tecnologias usar?
 
-### **Ferramentas para ajudar a criar seu design**
+Para responder a essas perguntas, surgiram plataformas educativas que organizam o processo de aprendizado por meio de **roteiros visuais de carreira** (conhecidos como *roadmaps*). Esses roadmaps mostram, de forma estruturada, quais são as ferramentas, linguagens e conhecimentos mais relevantes para cada etapa do desenvolvimento, desde o nível iniciante até o avançado.
 
-- [Coolors](https://coolors.co/) - Para escolher sua paleta de cores
-- [Instant eye droppper](http://instant-eyedropper.com/) - detector de cores
-- [Dribble](https://dribbble.com/) - Para obter referências
-- [Behance](https://www.behance.net/) - Para obter referências
-- [Flaticon](https://www.flaticon.com/br/) - Ícones para criação do seu design
-- [Freepik](https://br.freepik.com/) - Imagens em alta qualidade para seu design
-- [Excalidraw](https://excalidraw.com/) - Para criar rascunhos de sistemas
+```{admonition} Essas plataformas são especialmente úteis para:
+:class: note
+
+- Empreendedores que querem entender o básico para conversar com desenvolvedores;
+- Profissionais que desejam construir protótipos por conta própria;
+- Estudantes que buscam uma orientação clara sobre o que aprender;
+- Curiosos que desejam explorar o mundo da tecnologia sem se perder em conteúdos aleatórios.
+```
+
+### Plataformas de Progressão em Desenvolvimento Web
+
+- **[roadmap.sh](https://roadmap.sh/frontend)**  
+  Um site gratuito que oferece mapas de carreira para diferentes áreas da tecnologia, incluindo frontend. Mostra de forma visual e hierárquica quais tópicos são essenciais, recomendados ou opcionais.
+
+- **[FreeCodeCamp](https://www.freecodecamp.org/learn/)**  
+  Uma das plataformas gratuitas mais conhecidas no mundo da programação. Possui cursos práticos e estruturados sobre HTML, CSS, JavaScript e frameworks populares, voltados para construção de sites e aplicações web.
+
+- **[Codecademy](https://www.codecademy.com/catalog/subject/web-development)**  
+  Oferece trilhas de aprendizado guiadas e interativas. Ideal para quem quer aprender na prática e ter uma progressão passo a passo com feedback imediato.
+
+- **[Pluralsight Paths](https://www.pluralsight.com/paths)**  
+  Plataforma voltada à capacitação profissional em tecnologia. Possui trilhas para desenvolvimento frontend, UX/UI e ferramentas de design, sendo útil também para líderes técnicos e empreendedores com foco estratégico.
+
+Essas alternativas são podem ser pontos de partida para quem deseja se capacitar ou simplesmente entender melhor como funcionam as tecnologias por trás das interfaces digitais modernas.
+
+### Ferramentas para ajudar a criar seu design
+
+Criar o design de uma aplicação envolve uma série de decisões visuais e funcionais. Algumas dessas etapas — como a escolha da paleta de cores, referências visuais e seleção de ícones — podem ser significativamente facilitadas com o uso de ferramentas prontas e acessíveis. No entanto, aspectos mais profundos como **a definição da identidade visual, a experiência do usuário (UX)** e **a integração entre design e funcionalidade** devem ser desenvolvidos com atenção pelo próprio criador, considerando os objetivos da aplicação e as necessidades dos usuários.
+
+```{admonition} A seguir, destacamos algumas ferramentas úteis para apoiar o processo criativo:
+:class: hint
+
+- [**Coolors**](https://coolors.co/) — Gera paletas de cores harmoniosas e exportáveis.
+- [**Instant Eyedropper**](http://instant-eyedropper.com/) — Detecta rapidamente o código de uma cor exibida na tela.
+- [**Dribbble**](https://dribbble.com/) — Repositório de projetos criativos para inspirar seu design.
+- [**Behance**](https://www.behance.net/) — Plataforma com portfólios de designers de todo o mundo.
+- [**Flaticon**](https://www.flaticon.com/br/) — Biblioteca extensa de ícones vetoriais gratuitos e premium.
+- [**Freepik**](https://br.freepik.com/) — Imagens, vetores e elementos gráficos prontos para uso em alta qualidade.
+- [**Excalidraw**](https://excalidraw.com/) — Ferramenta para criar rascunhos e wireframes com estilo feito à mão.
+```
+
+
 
 ### **IA's para criação de Frontend**
 
-- [Claude](https://claude.ai/)
-- [Bolt](https://bolt.new/)
-- [Lovable](https://lovable.dev/)
-- [v0.dev](https://v0.dev/)
-- [Replit](https://replit.com/~)
-- [Base44](https://app.base44.com/)
-- [Manus](https://manus.im/)
+A chegada das **IAs para criação de interfaces (Frontend)** está redefinindo o processo de desenvolvimento de produtos digitais. Antes, o design e o código da interface precisavam ser criados manualmente — linha por linha. Hoje, essas ferramentas permitem gerar componentes completos, páginas inteiras e até aplicações funcionais, a partir de uma simples descrição em linguagem natural.
+
+Essas soluções aceleram o fluxo de trabalho e reduzem a barreira entre **ideia e protótipo**, permitindo que designers, desenvolvedores e até empreendedores sem experiência técnica possam **visualizar e testar conceitos rapidamente**. Além da produtividade, elas ajudam a padronizar estilos, sugerem boas práticas de design responsivo e facilitam a integração com frameworks modernos.
+
+Para o desenvolvedor, o uso dessas ferramentas não elimina a necessidade de conhecimento técnico. 
+
+```{admonition} Pelo contrário, é importante saber:
+:class: attention
+- **Avaliar a qualidade do código gerado** (semântica, responsividade e performance);
+- **Manter a consistência visual** com o design system do projeto;
+- **Garantir a acessibilidade** e a **usabilidade** da interface final;
+- **Entender como integrar** o frontend gerado à lógica do backend e às APIs.
+```
+
+```{admonition} A seguir, algumas das principais ferramentas de IA voltadas à criação de Frontend:
+:class: hint
+
+- [**Claude**](https://claude.ai/) — Modelo de linguagem avançado da Anthropic, usado para gerar e revisar código, textos e componentes de interface com alta contextualização.
+- [**Bolt**](https://bolt.new/) — Cria aplicações web completas a partir de prompts, gerando código limpo em frameworks modernos como React e Next.js.
+- [**Lovable**](https://lovable.dev/) — Permite criar, editar e implantar aplicações web com suporte colaborativo de IA, ideal para startups e MVPs.
+- [**v0.dev**](https://v0.dev/) — Desenvolvido pela Vercel, gera componentes e layouts em React diretamente a partir de descrições em linguagem natural.
+- [**Replit**](https://replit.com/~) — Ambiente de desenvolvimento online com IA integrada, ideal para programar, testar e implantar projetos diretamente no navegador.
+- [**Base44**](https://app.base44.com/) — Gera componentes de interface baseados em prompts, com ênfase em design consistente e exportação para múltiplas linguagens.
+- [**Manus**](https://manus.im/) — Cria interfaces modernas a partir de descrições em texto, com foco em UX e colaboração entre equipes de design e engenharia.
+```
 
 ### **Exemplos de landing page**
 
-- [My Group Metrics](https://mygroupmetrics.com/)
-- [Jasper](https://www.jasper.ai/)
-- [Deckspeed](https://www.deckspeed.com/)
-- [First Quadrant](https://firstquadrant.ai/)
+Landing pages são páginas únicas projetadas para um objetivo específico — geralmente converter visitantes em leads ou clientes. Ao tratar de front end, **não basta criar apenas o visual**, é essencial projetar elementos como headline, proposta de valor clara, provas sociais e call‑to‑action fortes. As landing pages mais bem‑sucedidas são aquelas que combinam **mensagem direta**, **design focado** e **experiência fluida**.
+
+Para consolidar uma landing page de alto impacto, verifique se ela:
+- Comunica logo no topo o benefício principal da oferta; :contentReference[oaicite:0]{index=0}  
+- Tem um único objetivo e evita distrações desnecessárias (como excesso de navegação); :contentReference[oaicite:1]{index=1}  
+- Carrega rapidamente e funciona bem em dispositivos móveis; :contentReference[oaicite:2]{index=2}  
+- Inclui prova social (testemunhos, logotipos, avaliações) que aumentem a confiança; :contentReference[oaicite:3]{index=3}  
+
+A seguir, apresentamos algumas landing pages reais que podem servir como referência:
+
+- [**My Group Metrics**](https://mygroupmetrics.com/) — oferece ferramentas para engajamento de comunidades virtuais e mostra claramente sua proposta de valor já na página de destino. :contentReference[oaicite:4]{index=4}  
+- [**Jasper**](https://www.jasper.ai/) — plataforma de IA para criação de conteúdo, com landing page otimizada para comunicar rapidamente o benefício “crie conteúdo com IA”.  
+- [**Deckspeed**](https://www.deckspeed.com/) — ferramenta de IA que gera slides profissionais; sua landing page demonstra o produto em ação e facilita a experimentação. :contentReference[oaicite:5]{index=5}  
+- [**First Quadrant**](https://firstquadrant.ai/) — empresa de IA que usa sua landing page para posicionar serviços, demonstrar credibilidade e captar leads qualificados.  
+
+Esses exemplos ajudam a visualizar **como estruturar** sua própria landing page e **que aspectos priorizar** para que ela realmente converta.
 
 ### Figma
 
-- Figma: https://www.figma.com/pt-br/
-- Codia - Plugin do Figma
-- Teleport - Plugin do Figma
-- Anima - Plugin do Figma
----
+O **Figma** é uma plataforma de design colaborativo baseada na web que revolucionou a forma como interfaces digitais são projetadas. Ao longo desta seção, discutimos ferramentas para criar o front end de aplicações, desde referências visuais até geração de código com IA. O Figma se conecta diretamente a esse universo como a principal solução para **prototipagem de interfaces**, **criação de wireframes**, **definição de fluxos de navegação** e **colaboração entre equipes de design e desenvolvimento**. Ele permite que designers e desenvolvedores trabalhem simultaneamente em tempo real, com total visibilidade das alterações, comentários e decisões tomadas durante o processo criativo.
+
+Além disso, o Figma pode ser expandido com **plugins poderosos** que automatizam tarefas e aproximam ainda mais o design da implementação técnica. Veja abaixo algumas ferramentas essenciais:
+
+- [**Figma**](https://www.figma.com/pt-br/): plataforma principal de design colaborativo, permite criar protótipos interativos, testar fluxos de usuário, e preparar arquivos prontos para desenvolvimento.
+
+- [**Codia**](https://www.figma.com/community/plugin/1249944606940289285): plugin que transforma seus designs Figma em código HTML/CSS limpo, economizando tempo na transição do design para o desenvolvimento.
+
+- [**Teleport**](https://teleporthq.io/): permite exportar componentes do Figma diretamente como projetos front-end, prontos para edição e customização em plataformas como React, Vue ou Angular.
+
+- [**Anima**](https://www.animaapp.com/): transforma seus designs em páginas responsivas com código HTML, React e CSS, e ainda permite testar os protótipos com comportamento realista diretamente no navegador.
+
+Essas ferramentas permitem que empreendedores e desenvolvedores otimizem o tempo de desenvolvimento, garantam consistência visual e reduzam a distância entre o design e o código final. O Figma não é apenas uma ferramenta de design; é um **hub estratégico** para transformar ideias em produtos digitais com mais rapidez e precisão.
+
 
 ## UX de IA — Interação Humano-Sistema
 
