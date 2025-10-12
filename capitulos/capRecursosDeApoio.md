@@ -40,6 +40,17 @@ Fundamentos de IA - Harvard CS50
 | Lecture 5 - Generating  | https://www.youtube.com/live/7LiHUvSqRtI?si=WG1nY8LEmHRdgbvo | https://www.youtube.com/cs50 | 
 | Lecture 6 - Moving | https://www.youtube.com/live/Bpiv2HCe3xA?si=PtDtUKp3hZ9hIUvS | https://www.youtube.com/cs50 |  
 
+Stanford University
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- | 
+| Artificial Intelligence – CS221 Aprenda os conceitos centrais de IA: busca, lógica, planejamento, tomada de decisão | https://lnkd.in/gM892TxC | Stanford University|  
+| Machine Learning – CS229 - Aprenda aprendizado supervisionado e não supervisionado + design de algoritmo| https://lnkd.in/gWgtbwZc | Stanford University |  
+| Deep Learning – CS230 Domine redes neurais, CNNs, RNNs e melhores práticas  | https://lnkd.in/gYyD2Fwa | Stanford University |  
+| Machine Learning Theory – CS229M Explore a matemática por trás dos sistemas e modelos de aprendizado | https://lnkd.in/gN4v2u9w | Stanford University|  
+| Reinforcement Learning – CS234 Explore Q-learning, MDPs e treine modelos para agir em ambientes dinâmicos| https://lnkd.in/gKhtZYsV | Stanford University |  
+| Natural Language Understanding – CS224U Entenda significado, intenção e sistemas de diálogo  |https://lnkd.in/gg2BAW9k| Stanford University | 
+|  NLP with Deep Learning – CS224N Aprenda como redes neurais impulsionam tradução, Q&A e análise de sentimento | https://lnkd.in/gWvnNXB2 | Stanford University |  
+
 Google AI Studio
 | **Título** | **URL** | **Canal/Autor** | 
 | --- | --- | --- | 
