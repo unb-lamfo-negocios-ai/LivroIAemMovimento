@@ -20,7 +20,7 @@ Os vídeos e cursos online são formas acessíveis de visualizar conceitos em pr
 Cursos em vídeo permitem absorver conceitos de forma dinâmica, mas o ideal é sempre **complementar com exercícios práticos** para fixar o aprendizado.  
 :::
 
-| **Título** | **URL** | **Canal/Autor** | 
+| **Título** | **URL** | **Autor/Canal/Instituição** | 
 | ---------- | -------- | --- | 
 | Curso de Canva gratis e completo do zero ao avançado | https://youtu.be/L1XHqZf_AAU?si=K07pDWfxp20oAMRG | https://www.youtube.com/@COISASDEDESIGNER | 
 | Nova integração Canva + ChatGPT (MCP Server) | https://youtu.be/s2HjjSnkWEM?si=JzwMSQ8Z1jlxUlR- | https://www.youtube.com/@DarlanEvandro | 
