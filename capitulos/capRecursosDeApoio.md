@@ -22,7 +22,7 @@ Cursos em vídeo permitem absorver conceitos de forma dinâmica, mas o ideal é 
 
 | **Título** | **URL** | **Autor/Canal/Instituição** | 
 | ---------- | -------- | --- | 
-| Curso de Canva gratis e completo do zero ao avançado | https://youtu.be/L1XHqZf_AAU?si=K07pDWfxp20oAMRG | https://www.youtube.com/@COISASDEDESIGNER | 
+| Curso de Canva gratis e completo do zero ao avançado | https://youtu.be/L1XHqZf_AAU?si=K07pDWfxp20oAMRG |  https://www.youtube.com/@COISASDEDESIGNER | 
 | Nova integração Canva + ChatGPT (MCP Server) | https://youtu.be/s2HjjSnkWEM?si=JzwMSQ8Z1jlxUlR- | https://www.youtube.com/@DarlanEvandro | 
 | Atualização insana! VEO3 integrado ao Canva | https://youtu.be/1RG7GAx9KUs?si=5f7fGMOiMy3LPQSi | https://www.youtube.com/@DarlanEvandro | 
 | Boas-vindas ao Canva Educação | https://youtu.be/Pxr3jkH0Tj4?si=Q1rNZ48EDySUQjJq | https://www.youtube.com/@canva |  
