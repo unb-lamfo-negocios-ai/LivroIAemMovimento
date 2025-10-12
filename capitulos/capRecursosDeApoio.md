@@ -65,15 +65,15 @@ Google AI Studio
 Graph RAG & Knowledge Graphs
 | **Título** | **URL** | **Canal/Autor** | 
 | --- | --- | --- |
-| Intro to Graph RAG - Zach Blumenfeld | https://youtu.be/J-9EbJBxcbg?si=OfWk4ETprZocX4nh | https://www.youtube.com/@aiDotEngineer |  
-| Intro to Graph RAG | https://www.youtube.com/live/f6pUqDeMiG0?si=tbyol6suhRs9Mk9z | https://www.youtube.com/@MicrosoftReactor | 
-| Knowledge Graphs & Graph RAG: Zach Blumenthal | https://youtu.be/2DyHW23L6Cs?si=41fNdtM4parNcS4Q | https://www.youtube.com/@aiDotEngineer |  
-| Build Real-Time Knowledge Graph for documents with LLM | https://youtu.be/2KVkpUGRtnk?si=p2ngjhqvq2vRZyTB | https://www.youtube.com/@cocoindex-io |  
-| Graph RAG: The marriage of Knowledge Graphs and RAG: Emil Eifrem | https://youtu.be/knDDGYHnnSI?si=aeJFeufKV-4HFWyo | https://www.youtube.com/@aiDotEngineer |  
-| AI Explained: Knowledge Graphs - turning raw data into useful information | https://youtu.be/Q5izD6Xlb8o?si=qC_8T62SEL8wSZzi | https://www.youtube.com/@sandboxaq |  
-| Extraindo gráficos de conhecimento de texto com GPT4o | https://youtu.be/O-T_6KOXML4?si=EXD0Ge8HkGxtT6tB | https://www.youtube.com/@Thuvu5 | 
-| Graph RAG Explained: AI retrieval with KG & Cypher | https://youtu.be/tTwBKXHIiMg?si=hwjfL9J2ez7DDsbI | https://www.youtube.com/@IBMTechnology |  
-| AI Engineer World’s Fair 2025 - GraphRAG | https://www.youtube.com/live/RR5le0K4Wtw?si=cct3GMIUOA1B-1Io | https://www.youtube.com/@aiDotEngineer |  
+| Intro to Graph RAG - Zach Blumenfeld | https://youtu.be/J-9EbJBxcbg?si=OfWk4ETprZocX4nh | [aiDotEngineer](https://www.youtube.com/@aiDotEngineer) |  
+| Intro to Graph RAG | https://www.youtube.com/live/f6pUqDeMiG0?si=tbyol6suhRs9Mk9z | [MicrosoftReactor](https://www.youtube.com/@MicrosoftReactor) | 
+| Knowledge Graphs & Graph RAG: Zach Blumenthal | https://youtu.be/2DyHW23L6Cs?si=41fNdtM4parNcS4Q | [aiDotEngineer](https://www.youtube.com/@aiDotEngineer) |  
+| Build Real-Time Knowledge Graph for documents with LLM | https://youtu.be/2KVkpUGRtnk?si=p2ngjhqvq2vRZyTB | [cocoindex-io](https://www.youtube.com/@cocoindex-io) |  
+| Graph RAG: The marriage of Knowledge Graphs and RAG: Emil Eifrem | https://youtu.be/knDDGYHnnSI?si=aeJFeufKV-4HFWyo | [aiDotEngineer-io](https://www.youtube.com/@aiDotEngineer) |  
+| AI Explained: Knowledge Graphs - turning raw data into useful information | https://youtu.be/Q5izD6Xlb8o?si=qC_8T62SEL8wSZzi | [sandboxaq](https://www.youtube.com/@sandboxaq) |  
+| Extraindo gráficos de conhecimento de texto com GPT4o | https://youtu.be/O-T_6KOXML4?si=EXD0Ge8HkGxtT6tB | [Thuvu5](https://www.youtube.com/@Thuvu5) | 
+| Graph RAG Explained: AI retrieval with KG & Cypher | https://youtu.be/tTwBKXHIiMg?si=hwjfL9J2ez7DDsbI | [IBMTechnology](https://www.youtube.com/@IBMTechnology) |  
+| AI Engineer World’s Fair 2025 - GraphRAG | https://www.youtube.com/live/RR5le0K4Wtw?si=cct3GMIUOA1B-1Io | [aiDotEngineer](https://www.youtube.com/@aiDotEngineer) |  
 
 IA Generativa
 | **Título** | **URL** | **Canal/Autor** |
