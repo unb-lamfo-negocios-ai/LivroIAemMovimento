@@ -29,16 +29,19 @@ Cursos em vídeo permitem absorver conceitos de forma dinâmica, mas o ideal é 
 | Curso de Canva do Zero para iniciantes | https://youtu.be/lGiyNbBSF-M?si=qGfXbGDgqnTqDGfb | https://www.youtube.com/@DarlanEvandro |  
 
 
-Fundamentos de IA - Harvard CS50
+## Fundamentos de IA 
+
+### Harvard CS50
+
 | **Título** | **URL** | **Canal/Autor** | 
 | --- | --- | --- | 
-| Lecture 0 - Playing | https://www.youtube.com/live/kQ3K7Y4AQcs?si=2AGHMyFUvJyQieBb | https://www.youtube.com/cs50 |  
-| Lecture 1 - Predicting | https://www.youtube.com/live/oHuvUkMPffI?si=0MPKJ10Aq16vLsWP | https://www.youtube.com/cs50 |  
-| Lecture 2 - Analyzing  | https://www.youtube.com/live/VjH6g63OsME?si=tjv53mXu94ss04Tl | https://www.youtube.com/cs50 |  
-| Lecture 3 - Sensing | https://www.youtube.com/live/L1lQtyqpezI?si=34aVbp1Rwax-6N5w | https://www.youtube.com/cs50 |  
-| Lecture 4 - Communicating | https://www.youtube.com/live/DpKjr08eFuA?si=o-3SBhJtEkduXkIr | https://www.youtube.com/cs50 |  
-| Lecture 5 - Generating  | https://www.youtube.com/live/7LiHUvSqRtI?si=WG1nY8LEmHRdgbvo | https://www.youtube.com/cs50 | 
-| Lecture 6 - Moving | https://www.youtube.com/live/Bpiv2HCe3xA?si=PtDtUKp3hZ9hIUvS | https://www.youtube.com/cs50 |  
+| Lecture 0 - Playing | https://www.youtube.com/live/kQ3K7Y4AQcs?si=2AGHMyFUvJyQieBb | Harvard CS50/David J. Malan |  
+| Lecture 1 - Predicting | https://www.youtube.com/live/oHuvUkMPffI?si=0MPKJ10Aq16vLsWP | Harvard CS50/David J. Malan |  
+| Lecture 2 - Analyzing  | https://www.youtube.com/live/VjH6g63OsME?si=tjv53mXu94ss04Tl | Harvard CS50/David J. Malan |  
+| Lecture 3 - Sensing | https://www.youtube.com/live/L1lQtyqpezI?si=34aVbp1Rwax-6N5w | Harvard CS50/David J. Malan |  
+| Lecture 4 - Communicating | https://www.youtube.com/live/DpKjr08eFuA?si=o-3SBhJtEkduXkIr | Harvard CS50/David J. Malan |  
+| Lecture 5 - Generating  | https://www.youtube.com/live/7LiHUvSqRtI?si=WG1nY8LEmHRdgbvo | Harvard CS50/David J. Malan | 
+| Lecture 6 - Moving | https://www.youtube.com/live/Bpiv2HCe3xA?si=PtDtUKp3hZ9hIUvS | Harvard CS50/David J. Malan |  
 
 Stanford University
 | **Título** | **URL** | **Canal/Autor** | 
