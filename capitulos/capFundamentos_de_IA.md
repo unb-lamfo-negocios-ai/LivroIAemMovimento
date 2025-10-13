@@ -186,7 +186,8 @@ A imagem também destaca subtemas importantes em cada categoria, como:
 :alt: Diagrama em camadas que mostra a hierarquia da Inteligência Artificial, com destaque para IA, Machine Learning, Deep Learning, Redes Neurais e IA Generativa.
 :align: center
 :figclass: align-center
-
+```
+```
 **Figura – Como a IA Generativa se Encaixa no Universo da IA.**  
 Fonte: Inspirado em {cite}`chapman2023linkedin`.
 ```
