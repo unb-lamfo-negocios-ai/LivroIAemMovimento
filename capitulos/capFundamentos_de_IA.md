@@ -181,13 +181,11 @@ A imagem também destaca subtemas importantes em cada categoria, como:
 
 - **Em IA Generativa**: Transformers, LLM, LangChain, Foundation Models, Multimodal AI, RLHF, QLoRA, etc.
 
-```{image} ./imagens/hierarquia_de_IAs.jpeg
+```{figure} imagens/hierarquia_de_IAs.jpeg
 :name: hierarquia_de_IAs
 :alt: Diagrama em camadas que mostra a hierarquia da Inteligência Artificial, com destaque para IA, Machine Learning, Deep Learning, Redes Neurais e IA Generativa.
 :align: center
 :figclass: align-center
-```
-```
 **Figura – Como a IA Generativa se Encaixa no Universo da IA.**  
 Fonte: Inspirado em {cite}`chapman2023linkedin`.
 ```
@@ -195,10 +193,6 @@ Fonte: Inspirado em {cite}`chapman2023linkedin`.
 ![Como a IA Generativa se Encaixa no Universo da IA](imagens/hierarquia_de_IAs.jpeg)
 
 ![Como a IA Generativa se Encaixa no Universo da IA](https://github.com/unb-lamfo-negocios-ai/LivroIAemMovimento/blob/9862fb242173b8c67864ae9c20e0472c55fa3205/imagens/hierarquia_de_IAs.jpeg)
-
-
-
-TESTE TESTE
 
 ### **Como os LLMs Funcionam: Dos Dados ao Diálogo**
 
