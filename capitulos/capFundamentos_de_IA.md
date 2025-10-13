@@ -186,7 +186,7 @@ A imagem também destaca subtemas importantes em cada categoria, como:
 height: 150px
 name: directive-fig
 ---
-Here is my figure caption!
+Figura – Como a IA Generativa se Encaixa no Universo da IA.
 ```
 
 ```{image} ../imagens/hierarquia_de_IAs.jpeg
@@ -197,14 +197,7 @@ Here is my figure caption!
 **Figura – Como a IA Generativa se Encaixa no Universo da IA.**  
 Fonte: Inspirado em {cite}`chapman2023linkedin`.
 ```
-<img src="../images/fun-fish.png" alt="fishy" class="bg-primary" width="200px">
-![Como a IA Generativa se Encaixa no Universo da IA](...imagens/hierarquia_de_IAs.jpeg)
-![Como a IA Generativa se Encaixa no Universo da IA](.../imagens/hierarquia_de_IAs.jpeg)
-![Como a IA Generativa se Encaixa no Universo da IA](.imagens/hierarquia_de_IAs.jpeg)
-![Como a IA Generativa se Encaixa no Universo da IA](./imagens/hierarquia_de_IAs.jpeg)
 
-
-![Como a IA Generativa se Encaixa no Universo da IA](https://github.com/unb-lamfo-negocios-ai/LivroIAemMovimento/blob/9862fb242173b8c67864ae9c20e0472c55fa3205/imagens/hierarquia_de_IAs.jpeg)
 
 ### **Como os LLMs Funcionam: Dos Dados ao Diálogo**
 
