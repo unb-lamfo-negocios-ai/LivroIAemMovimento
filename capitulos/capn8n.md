@@ -75,7 +75,7 @@ As APIs usam verbos HTTP para definir a ação a ser tomada:
 
 Autenticação é o processo de **validar quem está fazendo a requisição** à API. Sem autenticação, qualquer um poderia acessar, alterar ou deletar dados sensíveis.
 
-Tipos de Autenticação mais comuns em APIs
+**Tipos de Autenticação mais comuns em APIs**
 
 |**Tipo**	|**Como funciona**|	**Exemplo de uso**|
 |-------|-------------|---------------|
@@ -128,7 +128,7 @@ Sem um gatilho configurado, o fluxo precisa ser iniciado manualmente. Com um tri
 
 ```{admonition} Os nodes são universais
 :class: note
-Os nodes são usados em quase todos os tipos de automações — e fazem parte do "cérebro" da automação, funcionando como:
+Os nodes são usados em quase todos os tipos de automações e fazem parte do "cérebro" da automação, funcionando como:
 
 - **Variáveis** (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Set`</span>)
 - **Condições** (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`IF`</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Switch`</span>)
@@ -150,18 +150,16 @@ Os nodes são usados em quase todos os tipos de automações — e fazem parte d
 | Split In Batches (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">splitInBatches</span>) | Divide itens em partes | Processar 10 leads por vez |
 | Respond to Webhook | Responde uma requisição HTTP | Retornar JSON ou HTML para quem chamou o fluxo |
 
-
-
-
-**Node set**
-    
-O que é o Node **Set** no n8n?
-    
+**Node Set**
+        
 O node <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Set</span> serve para **criar, modificar ou excluir dados no seu fluxo**, sem depender de fontes externas. Ele é um dos **nodes essenciais** do n8n.
     
-Pense nele como um "bloco de notas" onde você define ou ajusta valores antes de enviar para um e-mail, API, IA ou planilha.
+```{admonition}
+:class: hint
+Pense no Node Set como um "bloco de notas" onde você define ou ajusta valores antes de enviar para um e-mail, API, IA ou planilha.
+```
 
-Principais usos do Set
+**Principais usos do Set**
 
 |Objetivo|	Exemplo|
 |--------|----------|
