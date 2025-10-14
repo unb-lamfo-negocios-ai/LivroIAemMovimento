@@ -189,31 +189,27 @@ Olá {{ $json['nome'] }}, sua empresa {{ $json['empresa'] }} foi registrada com 
 Você pode marcar **“Keep Only Set”** se quiser **remover todos os outros campos** e manter **somente os definidos no <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Set`</span>**. Isso é útil para simplificar o payload antes de enviar para um e-mail, API ou IA.
 ```
 
-O que é o Node **Filter**?
+## Node **Filter**
 
 O **Filter** serve para **filtrar dados** que passam pelo seu workflow, ou seja, **permitir apenas itens que atendam a certas condições** continuarem para os próximos nodes.
 
 Itens que **não passam pelo filtro** são descartados (não seguem adiante no fluxo).
 
----
-
-Quando usar o Filter?
-
+```{admonition} Quando usar o Filter?
+:class: tip
 - Quando você só quer continuar o fluxo com itens que correspondem a critérios específicos.
 - Para separar leads qualificados de não qualificados, por exemplo.
 - Para processar apenas registros com status específico, valores mínimos/máximos, campos preenchidos, etc.
+```
 
----
-
-Como funciona?
-
+```{admonition} Como funciona?
+:class: note
 1. **Entrada:** Recebe uma lista de itens (ex: vários leads, pedidos, respostas de API...).
 2. **Condições:** Você define as regras (ex: “status” igual a “aprovado” ou “valor” maior que 1000).
 3. **Saída:** Só os itens que **passam nas condições** seguem para os próximos nodes.
+```
 
-Exemplo prático:
-
-Suponha que você tem vários leads:
+**Exemplo prático**: Suponha que você tem vários leads:
 
 ```{code-block} json
 [
@@ -239,7 +235,7 @@ No node **Filter**, você pode definir:
 - O node **Filter** é ótimo para automações “em lote”, onde muitos dados passam pelo mesmo fluxo.
 ```
 
-- **Node Agreggate**
+## Node Agreggate
     
 O que faz o node **Aggregate**?
     
