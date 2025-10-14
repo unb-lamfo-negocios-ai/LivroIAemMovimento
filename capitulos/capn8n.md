@@ -646,20 +646,25 @@ Ou:
 
 ### Configurações no Node
 
-Na configuração de um Node, sempre haverá configurações extras, que podem ser importantes em situações específicas. Vamos explicar algumas dessas opções: 👇
+Todo Node possui configurações extras além das básicas. Estas opções são fundamentais para cenários específicos e otimizam o funcionamento da automação.
+
+Na configuração de um node, sempre haverá configurações extras, que podem ser importantes em situações específicas. Vamos explicar algumas dessas opções: 👇
 ```{figure} imagens/conf_parameter.png
 :align: center
 :name: conf_parameter
 ```
-#### Always Output Data**
+### Always Output Data
+Always Output Data é uma configuração que força um Node a retornar dados mesmo quando uma operação falha ou não atende aos critérios esperados. Por padrão, quando um Node encontra um erro, ele interrompe a sequência sem enviar informações adiante. Com essa opção ativada, o Node continua a cadeia de automação e passa os dados disponíveis (incluindo mensagens de erro ou valores parciais) para o próximo Node, permitindo tratamento de falhas, logging de erros e fluxos alternativos.
 
-**Funcionamento da Opção Always Output Data**
+#### Funcionamento da Opção Always Output Data
+Quando Always Output Data está desativado, um Node que falha bloqueia toda a sequência—se um Node do Google Sheets não consegue gravar dados, nenhum dado segue para o WhatsApp. Ao ativar essa opção, mesmo com a falha, o Node alimenta os próximos na cadeia com os dados que possui, permitindo que Nodes posteriores registrem o erro em um banco de dados, enviem um alerta ao time ou executem uma ação de contingência. Isso torna automações mais resilientes e oferece maior controle sobre cenários de erro em operações críticas de IA.
+
 
 Quando habilitada, o nó sempre enviará uma saída, mesmo nas seguintes situações:
 
-- 📉 **Sem dados de entrada**: Se o nó não receber dados de um nó anterior no fluxo.
-- ❌ **Falha na execução**: Se ocorrer um erro durante a execução do nó.
-- 🚫 **Saída vazia**: Se o nó não tiver dados para enviar após sua execução.
+- **Sem dados de entrada**: Se o nó não receber dados de um nó anterior no fluxo.
+- **Falha na execução**: Se ocorrer um erro durante a execução do nó.
+- **Saída vazia**: Se o nó não tiver dados para enviar após sua execução.
 
 **Por que usar Always Output Data?**
 
