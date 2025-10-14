@@ -21,7 +21,7 @@ Uma empresa pode criar um fluxo onde menções no Twitter são analisadas por IA
 
 ```{admonition} Pronúncia
 :class: tip
-O **n8n** diz-se "n-eight-n", de “*node to node*”).
+O **n8n** diz-se "n-eight-n", de “*node to node*”.
 
 ```{admonition} Principais Características
 :class: note
@@ -35,23 +35,30 @@ O **n8n** diz-se "n-eight-n", de “*node to node*”).
 - **Muito usado para automação com IA** (OpenAI, Gemini, DeepSeek...)
 ```
 
-  A API permite que o n8n:
+## Como o n8n usa APIs
 
-- **Envie dados para um sistema externo**
-- **Receba dados de outro sistema**
-- **Execute ações nesses sistemas** (como criar um lead, buscar informações, deletar arquivos...)
+O n8n é, essencialmente, um orquestrador de automações. Sua função principal é conectar diferentes ferramentas e sistemas para que eles “conversem” entre si — e essa comunicação só é possível graças às APIs abertas desses serviços.
 
-Por que APIs são importantes no n8n?
+APIs (Interfaces de Programação de Aplicações) funcionam como pontes que permitem o envio, recebimento e manipulação de dados entre sistemas distintos. 
 
-O n8n é um **orquestrador**. Ele conecta várias ferramentas entre si — e isso só é possível porque essas ferramentas possuem **APIs abertas**.
+```{admonition} No caso do n8n, as APIs são fundamentais para:
+:class: note
+- Enviar dados gerados dentro de um fluxo para sistemas externos (como um CRM ou planilha).
 
-Com APIs, o n8n consegue:
+- Receber dados de serviços externos e utilizá-los em etapas subsequentes do fluxo.
 
-- Automatizar processos com ferramentas que **não têm nodes prontos**
-- Acessar **funcionalidades mais avançadas** do que os nodes nativos oferecem
-- **Criar integrações personalizadas** com qualquer sistema que suporte API REST
+- Executar ações remotas, como cadastrar um novo cliente, consultar informações, ou deletar arquivos automaticamente.
+```
 
-Verbos HTTP (métodos de requisição)
+Com o uso de APIs, o n8n se torna ainda mais poderoso, pois permite:
+
+- Automatizar ferramentas que não possuem nodes nativos no n8n.
+
+- Acessar recursos avançados que os nodes prontos não oferecem.
+
+- Criar integrações personalizadas, conectando qualquer sistema que suporte API REST.
+
+### Verbos HTTP (métodos de requisição)
 
 As APIs usam verbos HTTP para definir a ação a ser tomada:
 
