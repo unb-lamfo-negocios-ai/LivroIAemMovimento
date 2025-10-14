@@ -247,16 +247,19 @@ O **Aggregate** pega **vários itens de entrada** e realiza algum tipo de **agre
 - **Gerar estatísticas** simples (máximo, mínimo, contagem)
 - **Transformar múltiplos itens em um único item** (útil para enviar resumo, gerar arquivo, etc.)
 
-Como funciona na prática?
+```{admonition} Como funciona na prática?
+:class: note
 
-**Entrada:** Recebe vários itens (ex: linhas do Google Sheets, respostas de API, vários leads).
-**Configuração:**
-- Você escolhe qual campo quer agregar (ex: <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`nome`</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`valor`</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`mensagem`</span>).
-- Define a operação: **somar**, **contar**, **juntar**, **média**, **min/max** ou **customizada**.
-**Saída:**
-Entrega **um ou poucos itens** já agregados/resumidos.
+- **Entrada:** Recebe vários itens (ex: linhas do Google Sheets, respostas de API, vários leads).
 
----
+- **Configuração:**
+
+  - Você escolhe qual campo quer agregar (ex: <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`nome`</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`valor`</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`mensagem`</span>).
+  
+  - Define a operação: **somar**, **contar**, **juntar**, **média**, **min/max** ou **customizada**.
+
+- **Saída:** Entrega **um ou poucos itens** já agregados/resumidos.
+```
 
 Exemplos práticos
 
