@@ -38,9 +38,7 @@ O **n8n** diz-se "n-eight-n", de “*node to node*”.
 
 ## Como o n8n usa APIs
 
-O n8n é, essencialmente, um orquestrador de automações. Sua função principal é conectar diferentes ferramentas e sistemas para que eles “conversem” entre si — e essa comunicação só é possível graças às APIs abertas desses serviços.
-
-APIs (Interfaces de Programação de Aplicações) funcionam como pontes que permitem o envio, recebimento e manipulação de dados entre sistemas distintos. 
+O n8n é, essencialmente, **um orquestrador de automações**. Sua função principal é conectar diferentes ferramentas e sistemas para que eles “conversem” entre si — e essa comunicação só é possível graças às APIs abertas desses serviços.
 
 ```{admonition} No caso do n8n, as APIs são fundamentais para:
 :class: note
@@ -71,7 +69,7 @@ As APIs usam verbos HTTP para definir a ação a ser tomada:
 |<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">PATCH</span>	|Atualizar parcialmente|	Atualizar só o status do cliente|
 |<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">DELETE</span> 	|Excluir dados|	Deletar lead inativo do banco|
 
-### O que é Autenticação em APIs?
+### O que é autenticação em APIs?
 
 Autenticação é o processo de **validar quem está fazendo a requisição** à API. Sem autenticação, qualquer um poderia acessar, alterar ou deletar dados sensíveis.
 
@@ -96,8 +94,7 @@ No **n8n**, você configura autenticação em dois lugares:
 ##### 2. Node HTTP Request (genérico):
     - Ideal para APIs sem nodes prontos
     - Você pode usar:
-      - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Header Auth</span>
- (com Bearer, Token, etc)
+      - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Header Auth</span> (com Bearer, Token, etc)
       - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Query Auth</span>
  (API Key na URL)
       - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Basic Auth</span>
