@@ -1,32 +1,30 @@
 # Integrando com n8n
 
 O **n8n** é uma ferramenta de automação **low-code** que conecta diferentes serviços por meio de **workflows visuais**.  
-No contexto de IA, ele pode ser usado para:  
 
-- Monitorar mensagens de clientes e acionar respostas automáticas.  
-- Classificar tickets de suporte com modelos de NLP.  
-- Conectar LLMs a bancos de dados ou sistemas corporativos (ex.: CRM).  
+```{admonition} Utilidade do n8n no contexto de IA
+:class: note 
+Automatizar e orquestrar tarefas complexas, como:
 
-**Exemplo prático:** uma empresa pode criar um fluxo onde menções no Twitter são analisadas por IA e classificadas em “elogio”, “crítica” ou “pedido de suporte”, com resposta automática ou encaminhamento interno {cite}`n8n2020`.  
+- **Monitorar mensagens de clientes** e acionar respostas automáticas com base em regras ou IA.
+- **Classificar tickets de suporte** utilizando modelos de NLP.
+- **Conectar LLMs a bancos de dados ou sistemas corporativos**, como CRMs e ERPs.
+- **Automatizar tarefas repetitivas**, reduzindo erros manuais e economizando tempo.
+- **Integrar com diferentes aplicativos e bancos de dados**, mesmo que não possuam integrações nativas, por meio de requisições HTTP/API.
+- **Criar fluxos inteligentes**, combinando lógica condicional, código personalizado, APIs e modelos de IA generativa.
+```
 
+ ```{admonition} Exemplo: Análise automática para menções no Twitter
+ :class: exemplo
+Uma empresa pode criar um fluxo onde menções no Twitter são analisadas por IA e classificadas em “elogio”, “crítica” ou “pedido de suporte”, com resposta automática ou encaminhamento interno {cite}`n8n2020`.
+```
 
-----INICIO---GABRIEL---------------
-### O que é o **n8n**?
+```{admonition} Pronúncia
+:class: tip
+O **n8n** diz-se "n-eight-n", de “*node to node*”).
 
-O **n8n** (diz-se "n-eight-n", de “*node to node*”) é uma **plataforma de automação de processos**, **integração entre sistemas** e **orquestração de dados**.
-
----
-
-### 🛠️ Para que serve?
-
-- **Automatizar tarefas repetitivas**
-- **Conectar diferentes aplicativos e bancos de dados**
-- **Criar fluxos inteligentes** usando lógica, código, APIs, inteligência artificial, etc.
-- **Integrar com qualquer serviço** (mesmo aqueles sem integração pronta, via HTTP/API)
-
----
-
-Principais Características
+```{admonition} Principais Características
+:class: note
 
 - **Open source:** você pode usar, adaptar e hospedar gratuitamente
 - **Interface visual drag-and-drop:** fácil de montar e visualizar fluxos (“workflows”)
@@ -35,6 +33,7 @@ Principais Características
 - **Extensível:** aceita plugins, scripts, integrações customizadas
 - **Funciona local, em cloud, em servidor VPS, Docker...**
 - **Muito usado para automação com IA** (OpenAI, Gemini, DeepSeek...)
+```
 
   A API permite que o n8n:
 
