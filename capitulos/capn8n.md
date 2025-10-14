@@ -86,7 +86,7 @@ Autenticação é o processo de **validar quem está fazendo a requisição** à
 
 #### Como autenticação se aplica no n8n?
 
-No **n8n**, você configura autenticação em dois lugares:
+No n8n, você configura autenticação em dois lugares:
 
 ##### 1. Credenciais do Node:
     - **Exemplo**: Google Sheets, Gmail, WhatsApp, Supabase, Notion
@@ -186,7 +186,7 @@ Olá {{ $json['nome'] }}, sua empresa {{ $json['empresa'] }} foi registrada com 
 Você pode marcar **“Keep Only Set”** se quiser **remover todos os outros campos** e manter **somente os definidos no <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Set`</span>**. Isso é útil para simplificar o payload antes de enviar para um e-mail, API ou IA.
 ```
 
-## Node **Filter**
+## Node Filter
 
 O **Filter** serve para **filtrar dados** que passam pelo seu workflow, ou seja, **permitir apenas itens que atendam a certas condições** continuarem para os próximos nodes.
 
@@ -234,15 +234,22 @@ No node **Filter**, você pode definir:
 
 ## Node Agreggate
     
-O que faz o node **Aggregate**?
-    
-O **Aggregate** pega **vários itens de entrada** e realiza algum tipo de **agregação**, como:
-    
-- **Juntar textos** de vários registros em uma única string
-- **Somar** ou **calcular médias** de campos numéricos
-- **Criar listas** com valores únicos ou agrupados
-- **Gerar estatísticas** simples (máximo, mínimo, contagem)
-- **Transformar múltiplos itens em um único item** (útil para enviar resumo, gerar arquivo, etc.)
+O Aggregate Node é utilizado para **combinar e resumir dados** provenientes de várias entradas dentro de um fluxo no n8n.
+Ele permite reunir informações dispersas e transformá-las em um único resultado consolidado, facilitando análises, relatórios e integrações posteriores.
+
+```{admonition} Com o Node Agreggate é possível:
+:class: note
+
+- Juntar textos de vários registros em uma única string.
+
+- Somar valores ou calcular médias de campos numéricos.
+
+- Criar listas agrupadas ou com valores únicos.
+
+- Gerar estatísticas básicas, como máximo, mínimo e contagem.
+
+- Transformar múltiplos itens em um único item, útil para gerar resumos, relatórios ou arquivos consolidados.
+```
 
 ```{admonition} Como funciona na prática?
 :class: note
@@ -258,7 +265,9 @@ O **Aggregate** pega **vários itens de entrada** e realiza algum tipo de **agre
 - **Saída:** Entrega **um ou poucos itens** já agregados/resumidos.
 ```
 
-Exemplos práticos
+```{admonition} Exemplos práticos
+:class: note
+```
 
 - **Juntar nomes em uma lista:**
     
@@ -303,16 +312,14 @@ Saída:
 
 ```
 
-```{admonition} Use o node **Aggregate** sempre que quiser
+```{admonition} Use o node **Aggregate** sempre que quiser, para:
 :class: tip
-
-Para:
 - Fazer relatórios resumidos
 - Mandar um único e-mail com dados agrupados
 - Preparar dados para dashboards ou integrações externas
 ```
 
-- **Node HTTP Request**
+## **Node HTTP Request**
     
 O que é o Node HTTP Request?
     
