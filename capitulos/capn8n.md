@@ -107,9 +107,9 @@ No **n8n**, você configura autenticação em dois lugares:
 
 ## Nodes de Gatilhos
 
- O que são Trigger Nodes?
+Os Trigger Nodes são responsáveis por iniciar um fluxo automaticamente. Eles fazem com que o n8n espere por um evento externo — como o recebimento de um e-mail, uma nova linha em uma planilha ou uma mensagem em um chat — antes de executar as próximas etapas do workflow.
 
-Triggers são usados quando você quer que o n8n **espere por um evento externo** antes de executar as próximas etapas. Sem um gatilho, o workflow só é executado manualmente.
+Sem um gatilho configurado, o fluxo precisa ser iniciado manualmente. Com um trigger, o n8n passa a reagir de forma automática e inteligente, tornando o processo contínuo e dinâmico.
 
 
 |Tipo de Node Trigger	|Finalidade	|Exemplo|
