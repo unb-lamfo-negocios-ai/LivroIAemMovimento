@@ -88,19 +88,19 @@ Autenticação é o processo de **validar quem está fazendo a requisição** à
 
 No n8n, você configura autenticação em dois lugares:
 
-##### 1. Credenciais do Node:
-    - **Exemplo**: Google Sheets, Gmail, WhatsApp, Supabase, Notion
-    - Você usa **OAuth2** ou **API Key** cadastradas no menu de credenciais
-##### 2. Node HTTP Request (genérico):
-    - Ideal para APIs sem nodes prontos
-    - Você pode usar:
-      - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Header Auth</span> (com Bearer, Token, etc)
-      - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Query Auth</span>
- (API Key na URL)
-      - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Basic Auth</span>
- (usuário/senha codificados)
-      - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Custom Headers</span>
- (nome + valor da chave)
+1. Credenciais do Node:
+   - **Exemplo**: Google Sheets, Gmail, WhatsApp, Supabase, Notion
+   - Você usa **OAuth2** ou **API Key** cadastradas no menu de credenciais
+2. Node HTTP Request (genérico):
+   - Ideal para APIs sem nodes prontos
+   - Você pode usar:
+     - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Header Auth</span> (com Bearer, Token, etc)
+     - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Query Auth</span>
+(API Key na URL)
+     - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Basic Auth</span>
+(usuário/senha codificados)
+     - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Custom Headers</span>
+(nome + valor da chave)
 
 ## Nodes de Gatilhos
 
@@ -147,7 +147,7 @@ Os nodes são usados em quase todos os tipos de automações e fazem parte do "c
 | Split In Batches (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">splitInBatches</span>) | Divide itens em partes | Processar 10 leads por vez |
 | Respond to Webhook | Responde uma requisição HTTP | Retornar JSON ou HTML para quem chamou o fluxo |
 
-**Node Set**
+## Node Set
         
 O node <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Set</span> serve para **criar, modificar ou excluir dados no seu fluxo**, sem depender de fontes externas. Ele é um dos **nodes essenciais** do n8n.
     
@@ -234,8 +234,7 @@ No node **Filter**, você pode definir:
 
 ## Node Agreggate
     
-O Aggregate Node é utilizado para **combinar e resumir dados** provenientes de várias entradas dentro de um fluxo no n8n.
-Ele permite reunir informações dispersas e transformá-las em um único resultado consolidado, facilitando análises, relatórios e integrações posteriores.
+O Aggregate Node é utilizado para **combinar e resumir dados** provenientes de várias entradas dentro de um fluxo no n8n. Ele permite reunir informações dispersas e transformá-las em um único resultado consolidado, facilitando análises, relatórios e integrações posteriores.
 
 ```{admonition} Com o Node Agreggate é possível:
 :class: note
@@ -319,23 +318,21 @@ Saída:
 - Preparar dados para dashboards ou integrações externas
 ```
 
-## **Node HTTP Request**
-    
-O que é o Node HTTP Request?
-    
+## Node HTTP Request
+     
 O **HTTP Request** é como um “mensageiro digital” que faz o n8n **conversar com outros sites, sistemas ou aplicativos na internet**.
     
 Ele serve para **buscar informações** em outros lugares (ex: previsão do tempo, dados de clientes, valores de moedas), **enviar dados** (ex: criar um lead, registrar uma compra), ou **fazer qualquer ação** que esses sistemas permitam via internet.
-    
----
-    
-Como funciona na prática?
+
+```{admonition}  Como funciona na prática?
+:class: note
     
 Imagine que você quer saber a previsão do tempo. Você:
     
 1. Abre um navegador,
 2. Digita um endereço (URL) e,
 3. Vê a resposta (previsão) na tela.
+```
     
 No n8n, o **node HTTP Request** faz isso automaticamente e pode:
     
@@ -343,41 +340,42 @@ No n8n, o **node HTTP Request** faz isso automaticamente e pode:
 - Enviar formulários,
 - Integrar com APIs de bancos, e-commerces, WhatsApp, Google, e qualquer outro sistema.
 
-Passos básicos de uso:
 
-1. **Escolher o endereço (URL)**
+**Passos básicos de uso**:
+
+1. Escolher o endereço (URL)
     
     Onde o n8n vai buscar ou enviar informação. Exemplo: `https://api.exemplo.com/usuarios`
     
-2. **Escolher a ação (verbo HTTP)**
+2. Escolher a ação (verbo HTTP)
     - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`GET`</span> = Buscar dados
     - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`POST`</span> = Enviar/criar dados
     - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`PUT/PATCH`</span> = Atualizar dados
     - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`DELETE`</span> = Apagar dados
-3. **(Opcional) Enviar dados junto**
+3. (Opcional) Enviar dados junto
     
     Por exemplo, se for um formulário ou cadastro.
     
-4. **Receber a resposta**
+4. Receber a resposta
     
     O node traz os dados do site/aplicativo, que podem ser usados nos próximos passos do fluxo.
 
-Para que serve no dia a dia?
+```{admonition} Para que serve no dia a dia?
+:class: note
 
 - Integrar com sistemas que **não têm node próprio** no n8n
 - Buscar ou enviar dados em **APIs públicas ou privadas**
 - Criar automações sob medida com qualquer serviço online
+```
 
----
-
-### 📋 Exemplo bem simples
+### Exemplo bem simples
 
 Você quer buscar o preço do dólar hoje:
 
-- Node HTTP Request com URL de uma API de câmbio e método <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">'GET'</span>
+- Node HTTP Request com URL de uma API de câmbio e método <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`GET`</span>
 - O n8n traz a cotação para o seu fluxo, pronta para ser usada.
 
-- **Node Respond to Webhook**
+## Node Respond to Webhook
     
 O que é o Node **Respond to Webhook**?
     
