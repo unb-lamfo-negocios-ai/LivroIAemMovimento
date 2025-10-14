@@ -489,9 +489,25 @@ Um formulário captura dados do lead, que são gravados em uma planilha via Node
 - As **chaves** são sempre entre aspas
 - Os **valores** podem ser string, número, booleano, objeto, array, ou `null`
 
-Os blocos básicos do JSON
+### Os blocos básicos do JSON
 
-Tipos de Dados no JSON
+Os blocos são as unidades estruturais do JSON que organizam informações em padrões específicos. Um bloco de objeto {} agrupa pares de chave-valor, permitindo organizar dados relacionados—por exemplo, um bloco contendo "nome": "João" e "email": "joao@email.com". Um bloco de array [] armazena listas de elementos em sequência, ideal para coleções como múltiplos leads ou mensagens.
+
+Cada bloco pode conter diferentes tipos de dados: strings (texto), números (inteiros e decimais), booleanos (verdadeiro/falso) e null (vazio). Esses tipos garantem que as informações sejam processadas corretamente quando fluem entre Nodes de Aplicativo—um array de objetos, por exemplo, permite que um Node envie múltiplos contatos ao WhatsApp em uma única operação de IA.
+
+json{
+  "nome": "João",
+  "email": "joao@email.com",
+  "ativo": true,
+  "contatos": [
+    {"telefone": "11999999999", "plataforma": "whatsapp"},
+    {"telefone": "11988888888", "plataforma": "sms"}
+  ]
+}
+
+**Os blocos de objeto e array são complementares**: objetos organizam dados relacionados horizontalmente, enquanto arrays os organizam verticalmente em sequência.
+
+### Tipos de Dados
 
 1. **Strings**
     
@@ -564,7 +580,7 @@ Tipos de Dados no JSON
 Aqui temos objetos dentro de outros objetos. Acessar isso no n8n exige navegação com <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">usuario.contato.email</span>.
 ```
 
-JSON vs. XML vs. CSV
+### JSON vs. XML vs. CSV
 
 |Formato|	Legibilidade|	Peso	|Uso moderno|
 |-------|---------------|-----------|-----------|
@@ -578,7 +594,7 @@ JSON vs. XML vs. CSV
 JSON é preferido em APIs e automações como as do n8n.
 ```
 
-Como o JSON é usado no n8n?
+### Como o JSON é usado no n8n?
 
 No **n8n**, praticamente **todos os dados trafegam em JSON**:
 
