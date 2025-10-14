@@ -168,12 +168,14 @@ Pense no Node Set como um "bloco de notas" onde você define ou ajusta valores a
 |Renomear dados recebidos	|Padronizar nomes de campos antes de enviar a outro sistema|
 |Deixar o dado pronto para IA/API	|Juntar nome + empresa num só campo|
 
-Como funciona na prática
+```{admonition} Como funciona na prática
+:class: note
 
 No node <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Set`</span> você define:
 
-- O nome do campo: ex. <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`mensagem`</span>
-- O valor: ex. <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`"Olá, {{ $json['nome'] }}. Tudo bem?"`</span>
+- **O nome do campo**: ex. <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`mensagem`</span>
+- **O valor**: ex. <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`"Olá, {{ $json['nome'] }}. Tudo bem?"`</span>
+```
 
 Você pode usar **expressões dinâmicas**, como:
 
