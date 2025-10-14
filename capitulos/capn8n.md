@@ -22,6 +22,7 @@ Uma empresa pode criar um fluxo onde menções no Twitter são analisadas por IA
 ```{admonition} Pronúncia
 :class: tip
 O **n8n** diz-se "n-eight-n", de “*node to node*”.
+```
 
 ```{admonition} Principais Características
 :class: note
@@ -69,13 +70,12 @@ As APIs usam verbos HTTP para definir a ação a ser tomada:
 |<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">PUT</span>	|Atualizar dados por completo	|Atualizar todos os campos de um lead|
 |<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">PATCH</span>	|Atualizar parcialmente|	Atualizar só o status do cliente|
 |<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">DELETE</span> 	|Excluir dados|	Deletar lead inativo do banco|
----
 
 ### O que é Autenticação em APIs?
 
 Autenticação é o processo de **validar quem está fazendo a requisição** à API. Sem autenticação, qualquer um poderia acessar, alterar ou deletar dados sensíveis.
 
-🧩 Tipos de Autenticação mais comuns em APIs
+Tipos de Autenticação mais comuns em APIs
 
 |**Tipo**	|**Como funciona**|	**Exemplo de uso**|
 |-------|-------------|---------------|
@@ -86,14 +86,14 @@ Autenticação é o processo de **validar quem está fazendo a requisição** à
 |Header Customizado|	API exige chave em cabeçalho com nome específico	|<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">X-API-KEY: sua-chave-aqui</span>|
 |Session Cookie / JWT|	Cookies de sessão ou tokens JWT	|Sessões autenticadas de forma segura|
 
-### Como isso se aplica no n8n?
+#### Como autenticação se aplica no n8n?
 
 No **n8n**, você configura autenticação em dois lugares:
 
-1. **Credenciais do Node**:
-    - Exemplo: Google Sheets, Gmail, WhatsApp, Supabase, Notion
+##### 1. Credenciais do Node:
+    - **Exemplo**: Google Sheets, Gmail, WhatsApp, Supabase, Notion
     - Você usa **OAuth2** ou **API Key** cadastradas no menu de credenciais
-2. **Node HTTP Request (genérico)**:
+##### 2. Node HTTP Request (genérico):
     - Ideal para APIs sem nodes prontos
     - Você pode usar:
       - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Header Auth</span>
@@ -105,7 +105,7 @@ No **n8n**, você configura autenticação em dois lugares:
       - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Custom Headers</span>
  (nome + valor da chave)
 
-### Nodes de Gatilhos
+## Nodes de Gatilhos
 
  O que são Trigger Nodes?
 
@@ -122,20 +122,20 @@ Triggers são usados quando você quer que o n8n **espere por um evento externo*
 |<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Email Trigger (IMAP)</span>	|Dispara ao receber um e-mail	|Processar anexos de e-mails automaticamente|
 |<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Shopify Trigger, Notion Trigger, etc.</span>	|Ativam fluxos com base em eventos de plataformas específicas|	Novo pedido na loja, nova nota criada|
 
-### Nodes Essenciais
-
-O que são *Nodes Essenciais* no n8n?
+## Nodes Essenciais
 
 **Nodes essenciais** são os blocos fundamentais que **não dependem de integrações externas** (como Gmail, WhatsApp, Notion...) e que **manipulam dados, controlam o fluxo e estruturam a lógica** do seu workflow.
 
-Eles são universais — usados em quase todos os tipos de automações — e fazem parte do "cérebro" da automação, funcionando como:
+```{admonition} Os nodes são universais
+:class: note
+Os nodes são usados em quase todos os tipos de automações — e fazem parte do "cérebro" da automação, funcionando como:
 
 - **Variáveis** (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Set`</span>)
 - **Condições** (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`IF`</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Switch`</span>)
 - **Regras e lógica** (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Function`</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Code`</span>)
 - **Controle de tempo** (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Wait`</span>)
 - **Divisão e união de dados** (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Split`</span>, <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Merge`</span>)
-
+```
 
 | Tipo de Node | Finalidade | Exemplo |
 |--------------|------------|---------|
