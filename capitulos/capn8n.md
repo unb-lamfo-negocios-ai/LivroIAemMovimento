@@ -377,46 +377,26 @@ Você quer buscar o preço do dólar hoje:
 
 ## Node Respond to Webhook
     
-O que é o Node **Respond to Webhook**?
-    
 O **Respond to Webhook** é como um **"balcão de respostas"** do seu fluxo de automação.
     
 Ele serve para **enviar uma resposta automática para quem chamou o seu workflow**.
-        
-Como funciona na prática?
+
+```{admonition}  Como funciona na prática?
+:class: note
     
 Imagine que seu fluxo do n8n recebe um pedido de fora (de um site, sistema ou aplicativo) usando um **Webhook** (um “sininho” que escuta quando algo acontece).
     
 - O **Webhook** recebe a mensagem (ex: dados de um formulário enviado).
 - O seu fluxo faz tudo o que precisa (salva, calcula, consulta, etc.).
 - **No final**, você usa o node **Respond to Webhook** para **responder de volta** (confirmando que deu certo, enviando dados, etc).
-    
----
-    
-Exemplo do dia a dia
-    
- **Situação:**
-    
- Um site pede orçamento e espera uma resposta automática.
-    
- **No n8n:**
-    
- 1. Node **Webhook** recebe o pedido.
- 2. O fluxo consulta preços, calcula tudo.
- 3. Node **Respond to Webhook** responde na hora:
-        
- “Orçamento recebido! Em breve, entraremos em contato.”
-        
-    
- ---
-    
-Para que serve?
-    
+```
+
+```{admonition}  Para que serve?
+:class: note    
  - Enviar confirmações automáticas para integrações externas.
  - Responder sistemas, sites, chatbots, apps ou pessoas que aguardam uma resposta rápida.
  - Retornar dados processados pelo n8n (por exemplo, status, valores, cálculos).
-    
- ---
+ ```
     
  ```{admonition}
 :class: tip
@@ -424,9 +404,25 @@ Para que serve?
  Se não usar o **Respond to Webhook**, quem chamou o seu fluxo pode **ficar esperando** e não receber resposta nenhuma, ou receber uma mensagem padrão de erro.
 ```
 
-Nodes de Aplicativo
+### Exemplo de uso: Respondendo a pedidos automaticamente
 
-O que são *Nodes de Aplicativo*?
+Imagine que você tem um site onde os visitantes podem solicitar um orçamento. Assim que eles preenchem o formulário, você quer que uma **resposta automática** apareça imediatamente na tela, confirmando o recebimento.
+
+O **Node Respond to Webhook** que permite **enviar uma resposta imediata ao navegador do usuário** assim que o fluxo termina sua execução.
+
+```{admonition} Fluxo no n8n
+:class: exemplo
+
+1. O **Webhook Node** recebe os dados enviados pelo formulário do site.  
+2. O fluxo realiza os cálculos necessários — como consultar preços, aplicar regras ou compor uma resposta personalizada.  
+3. O **Respond to Webhook Node** envia a resposta automática de volta ao site, por exemplo:  
+   _“Orçamento recebido! Em breve, entraremos em contato.”_
+```
+
+Esse tipo de resposta em tempo real **melhora a experiência do usuário**, evita redirecionamentos e torna a automação muito mais fluida e interativa.
+
+
+## Nodes de Aplicativo
 
 **Nodes de aplicativo** são os blocos que **conectam o n8n com serviços externos** — como Gmail, WhatsApp, Google Sheets, Notion, Telegram, APIs, CRMs e muito mais.
 
@@ -457,8 +453,12 @@ O node consome os dados do fluxo (normalmente em formato JSON), executa uma aç�
 4. **Múltiplas Operações**:
     
 Muitos nodes de aplicativo possuem **diferentes operações** além do padrão "criar" ou "buscar".
-    
-- Exemplo: O node do Google Sheets permite criar, ler, atualizar e deletar linhas; o node do WhatsApp pode enviar mensagens de texto, imagem, áudio, etc.
+
+  ```{admonition} Exemplo
+  :class: exemplo
+  O node do Google Sheets permite criar, ler, atualizar e deletar linhas; o node do WhatsApp pode enviar mensagens de texto, imagem, áudio, etc.
+  ```
+
 5. **Tratamento de Erros**:
     
 Caso o app externo retorne um erro (ex: falha de autenticação, dados inválidos, limite atingido), o node pode exibir esse erro no painel ou permitir o uso de nodes de controle (como o IF) para tratar falhas e tomar decisões alternativas no fluxo.
@@ -466,21 +466,16 @@ Caso o app externo retorne um erro (ex: falha de autenticação, dados inválido
 6. **Personalização**:
     
 Os nodes de aplicativo geralmente permitem **personalizar mensagens, campos e payloads** usando expressões dinâmicas do n8n, tornando cada automação adaptada ao contexto do lead ou usuário.
-    
 
----
+```{admonition} Exemplo prático de sequência:
+:class: exemplo
 
-Exemplo prático de sequência:
+Um formulário captura dados do lead, que são gravados em uma planilha via Node de Aplicativo (Google Sheets). Em seguida, outro Node envia uma mensagem personalizada pelo WhatsApp e, por fim, um terceiro notifica o time comercial por Gmail.
 
-1. **Formulário** preenche dados do lead →
-2. **Node de Aplicativo (Google Sheets)** grava os dados →
-3. **Node de Aplicativo (WhatsApp)** envia uma mensagem personalizada →
-4. **Node de Aplicativo (Gmail)** envia notificação para o time comercial.
+> Formulário → Google Sheets (grava dados) → WhatsApp (mensagem personalizada) → Gmail (notificação comercial).
+```
 
-
-### Linguagem JSON
-
-O que é JSON?
+## Linguagem JSON
 
 **JSON (JavaScript Object Notation)** é um formato leve de troca de dados, baseado em texto. Ele é utilizado para **armazenar e transmitir informações estruturadas** entre sistemas, especialmente em APIs e integrações como as feitas no **n8n**.
 
