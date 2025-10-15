@@ -306,81 +306,152 @@ A tabela abaixo apresenta ferramentas essenciais de IA generativa, organizadas p
 | Midjourney | Visual |  | Geração de imagens | App | midjourney.com | Forte em estilo artístico e detalhes |
 | DALL-E 3 | Visual | OpenAI | Geração de imagens | App/API | openai.com/dall-e-3 | Ótimo para visualizar conceitos e criar arte |
 
-## Texto
+
+## Documentação Técnica: Modelos de Linguagem
+
+Esta seção reúne as principais plataformas de IA generativa para texto, com links diretos para documentação técnica, dashboards e tutoriais de configuração de API keys.
 
 ### OpenAI
 
-OpenAI developer platform: https://platform.openai.com/docs/overview
+**Documentação e Plataforma:**
+- [OpenAI Developer Platform](https://platform.openai.com/docs/overview) — Documentação completa da API, guias de início rápido e referências técnicas
 
-Criando uma chave (API key) para OpenAI: https://youtu.be/Y9gOf4we3tk
+**Configuração:**
+- [Como criar uma API key para OpenAI](https://youtu.be/Y9gOf4we3tk) — Tutorial em vídeo
 
-### Anthropic
+### Anthropic (Claude)
 
-Anthropic console dashboard: https://console.anthropic.com/dashboard
+**Documentação e Plataforma:**
+- [Anthropic Console Dashboard](https://console.anthropic.com/dashboard) — Painel de controle para gerenciar projetos e uso da API
+- [Mapping the Mind of a Language Model](https://www.anthropic.com/news/mapping-mind-language-model) — Artigo técnico sobre interpretabilidade de modelos
 
-Criando uma chave (API key) para Anthropic: https://youtu.be/SLjnXQehYos
-
-https://www.anthropic.com/news/mapping-mind-language-model?authuser=2
+**Configuração:**
+- [Como criar uma API key para Anthropic](https://youtu.be/SLjnXQehYos) — Tutorial em vídeo
 
 ### Google AI
 
-Google AI for Developers: https://ai.google.dev/
+**Documentação e Plataformas:**
+- [Google AI for Developers](https://ai.google.dev/) — Portal principal para desenvolvedores
+- [API Gemini Developer](https://ai.google.dev/gemini-api/docs?hl=pt-br) — Documentação oficial do Gemini em português
+- [Google AI Studio](https://aistudio.google.com/) — Interface para experimentação e prototipagem rápida
+- [Google NotebookLM](https://notebooklm.google.com/) — Assistente de pesquisa com IA para análise de documentos
 
-API Gemini Developer: https://ai.google.dev/gemini-api/docs?hl=pt-br
-
-Google AI Studio: https://aistudio.google.com/
-
-Criando uma chave (API key) para Google AI: https://youtu.be/mQq6FRv6XVI
-
-Google NotebookLM: https://notebooklm.google.com/
+**Configuração:**
+- [Como criar uma API key para Google AI](https://youtu.be/mQq6FRv6XVI) — Tutorial em vídeo
 
 ### Microsoft 365 Copilot
 
-https://www.microsoft.com/pt-br/microsoft-365/copilot
+**Plataforma:**
+- [Microsoft 365 Copilot](https://www.microsoft.com/pt-br/microsoft-365/copilot) — Assistente de IA integrado ao ecossistema Microsoft
 
 ### Meta Llama
 
-https://www.llama-api.com/
+**API e Acesso:**
+- [Llama API](https://www.llama-api.com/) — Acesso programático aos modelos Llama da Meta
 
-### [X.ai](http://X.ai) API
+### X.ai (Grok)
 
-https://x.ai/api
+**API:**
+- [X.ai API](https://x.ai/api) — Plataforma de API do modelo Grok
 
-### Deepseek API
+### DeepSeek
 
-https://platform.deepseek.com/sign_in
-
-### Manus
-
-https://manus.im/
+**Plataforma:**
+- [DeepSeek Platform](https://platform.deepseek.com/sign_in) — Console para acesso à API DeepSeek
 
 ### Perplexity
 
-https://www.perplexity.ai/
+**Ferramentas:**
+- [Perplexity AI](https://www.perplexity.ai/) — Mecanismo de busca conversacional com IA
+- [Perplexity Labs](https://www.perplexity.ai/labs) — Ambiente experimental para testar novos recursos
 
-https://www.perplexity.ai/labs
----
+### Manus
 
-## Outras Recomendações de Exploração
+**Plataforma:**
+- [Manus](https://manus.im/) — Assistente de escrita e pesquisa com IA
 
-### Livros Clássicos  
-- *Artificial Intelligence: A Modern Approach* (Russell & Norvig) {cite}`russell2021`: considerado a “bíblia da IA”, aborda desde conceitos básicos até temas avançados.  
-- *Deep Learning* (Goodfellow, Bengio & Courville) {cite}`goodfellow2016`: referência técnica sobre redes neurais profundas.  
+### Outras Plataformas Relevantes
 
-### Comunidades e Fóruns  
-- **Reddit — r/MachineLearning**: discussões atualizadas sobre pesquisa e aplicações.  
-- **Comunidades locais (Discord, Slack, Meetups)**: ótimos espaços para networking e troca de experiências.  
+**[Cohere](https://cohere.com/)**  
+Plataforma empresarial de modelos de linguagem com foco em busca semântica e geração de texto. Oferece modelos otimizados para aplicações corporativas.
 
-### Ferramentas de Experimentação  
-- **Hugging Face Hub** {cite}`wolf2020`: permite testar modelos prontos, como tradutores e geradores de texto.  
-- **Kaggle** {cite}`kaggle2021`: plataforma de competições e datasets para prática de ciência de dados.  
+**[Mistral AI](https://mistral.ai/)**  
+Modelos de linguagem europeus open-source e via API. Alternativa forte com foco em eficiência e transparência.
 
-Esses ambientes de prática são fundamentais para transformar teoria em experiência real.  
+**[Together AI](https://www.together.ai/)**  
+Plataforma para executar e fazer fine-tuning de modelos open-source. Ideal para quem busca customização e controle sobre modelos.
 
----
+:::{admonition} 💡 Escolhendo a plataforma adequada
+:class: tip
 
-:::{tip}
-Não tente explorar todos os recursos de uma só vez.  
-Escolha **um ou dois caminhos de aprendizado**, avance gradualmente e aplique os conceitos em pequenos projetos.  
-O progresso contínuo é mais eficaz do que a sobrecarga de informações.  
-:::
+**Para começar:**
+- **ChatGPT/OpenAI:** Interface mais amigável e documentação abundante
+- **Google AI Studio:** Experimentação gratuita sem necessidade de código
+
+**Para desenvolvimento:**
+- **Anthropic Claude:** Excelente para análise de documentos longos (até 200k tokens)
+- **OpenAI:** Maior ecossistema e suporte da comunidade
+
+**Para pesquisa:**
+- **Perplexity:** Busca conversacional com citações
+- **NotebookLM:** Análise profunda de múltiplos documentos
+
+**Para projetos open-source:**
+- **Meta Llama** via Together AI ou Mistral AI
+:::Tentar novamenteClaude ainda não tem a capacidade de executar o código que gera.
+
+
+## Recursos Complementares para Aprofundamento
+
+Esta seção reúne materiais clássicos, comunidades ativas e plataformas de experimentação que complementam seu aprendizado em IA. Use esses recursos conforme sua jornada avança e suas necessidades se tornam mais específicas.
+
+### Livros de Referência
+
+**Artificial Intelligence: A Modern Approach** (Russell & Norvig) {cite}`russell2021`  
+Considerado a "bíblia da IA", aborda desde conceitos fundamentais até temas avançados. Ideal para compreensão teórica sólida e visão abrangente da área.
+
+**Deep Learning** (Goodfellow, Bengio & Courville) {cite}`goodfellow2016`  
+Referência técnica sobre redes neurais profundas. Matemática rigorosa e explicações detalhadas sobre arquiteturas e algoritmos de aprendizado profundo.
+
+**Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow** (Aurélien Géron)  
+Abordagem prática com código real. Equilibra teoria e implementação, ideal para quem aprende fazendo.
+
+### Comunidades e Networking
+
+**[r/MachineLearning (Reddit)](https://www.reddit.com/r/MachineLearning/)**  
+Discussões atualizadas sobre pesquisas recentes, papers e aplicações práticas. Subreddit ativo com alta qualidade técnica.
+
+**[r/LocalLLaMA (Reddit)](https://www.reddit.com/r/LocalLLaMA/)**  
+Comunidade focada em executar e experimentar com modelos de linguagem localmente. Ótima para aprender sobre fine-tuning e otimização.
+
+**[Hugging Face Community](https://huggingface.co/join/discord)**  
+Discord oficial com milhares de desenvolvedores. Suporte técnico, discussões sobre modelos e colaboração em projetos open-source.
+
+**Comunidades Locais (Discord, Slack, Meetups)**  
+Espaços para networking e troca de experiências no contexto brasileiro. Busque grupos de IA em sua cidade ou universidade.
+
+### Plataformas de Experimentação
+
+**[Hugging Face Hub](https://huggingface.co/)** {cite}`wolf2020`  
+Teste modelos prontos diretamente no navegador: tradutores, geradores de texto, classificadores e muito mais. Interface intuitiva para experimentação sem código.
+
+**[Kaggle](https://www.kaggle.com/)** {cite}`kaggle2021`  
+Plataforma de competições, datasets e notebooks compartilhados. Ambiente completo para prática de ciência de dados com recursos computacionais gratuitos (GPU).
+
+**[Google Colab](https://colab.research.google.com/)**  
+Notebooks Jupyter gratuitos com GPU. Perfeito para executar experimentos sem configurar ambiente local.
+
+**[Replicate](https://replicate.com/)**  
+Execute modelos de IA via API ou interface web. Teste diferentes modelos sem preocupação com infraestrutura.
+
+### Tutoriais Interativos
+
+**[fast.ai](https://www.fast.ai/)**  
+Cursos práticos de deep learning com abordagem top-down. Você começa construindo modelos reais e depois mergulha na teoria.
+
+**[DeepLearning.AI](https://www.deeplearning.ai/)**  
+Cursos estruturados no Coursera sobre ML, deep learning e IA generativa, criados por Andrew Ng.
+
+**[Full Stack Deep Learning](https://fullstackdeeplearning.com/)**  
+Foco em colocar modelos em produção. Cobre aspectos práticos que vão além do treinamento de modelos.
+
