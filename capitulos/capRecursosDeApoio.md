@@ -174,13 +174,35 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 
 ## Referências sobre Negócios e Estratégia em IA
 
-A aplicação da IA em negócios é uma das áreas mais dinâmicas, influenciando diretamente modelos de gestão e inovação.  
+Para empreendedores e líderes empresariais que buscam compreender como a IA está transformando o mundo dos negócios e identificar oportunidades estratégicas, é essencial acompanhar fontes de alta qualidade que combinam rigor analítico com relevância prática. Abaixo estão os principais recursos para manter-se atualizado sobre aplicações corporativas, tendências de mercado e estratégias de implementação de IA.
 
-- **Harvard Business Review – Artificial Intelligence** {cite}`hbr2023`: artigos que exploram tendências e casos de uso corporativos.  
-- **McKinsey Global Institute – The State of AI** {cite}`mckinsey2023`: relatórios anuais que analisam o impacto da IA em diferentes setores da economia.  
-- **AI Index Report — Stanford University** {cite}`zhang2023`: panorama global sobre investimentos, avanços técnicos e políticas de IA.  
+### Publicações de Negócios e Consultoria
 
-Esses recursos são especialmente úteis para gestores que buscam **visão estratégica** e **benchmarking internacional**.  
+**[Harvard Business Review: AI and Machine Learning](https://hbr.org/topic/subject/ai-and-machine-learning)**  
+Coleção de artigos que exploram tendências, casos de uso corporativos e estratégias de implementação de IA em organizações. A HBR oferece perspectivas de executivos, consultores e acadêmicos sobre como a IA está redefinindo modelos de negócio e criando vantagens competitivas.
+
+**[McKinsey Global Institute – The State of AI](https://www.mckinsey.com/featured-insights/mckinsey-global-surveys/the-state-of-ai)**  
+Pesquisa anual que examina como organizações globais estão se reestruturando para capturar valor através da IA. Inclui dados sobre investimentos, maturidade organizacional, casos de sucesso e desafios de adoção em diferentes setores e regiões.
+
+### Relatórios e Índices Estratégicos
+
+**[AI Index Report – Stanford University](https://hai.stanford.edu/ai-index)**  
+Panorama global abrangente sobre o estado da IA, cobrindo investimentos, avanços técnicos, adoção por indústria, políticas públicas e impactos sociais. Essencial para compreender tendências macro e posicionar estratégias de longo prazo.
+
+**[MIT Sloan Management Review – AI & Machine Learning](https://sloanreview.mit.edu/tag/artificial-intelligence/)**  
+Artigos focados na intersecção entre tecnologia e gestão, com ênfase em como líderes podem implementar IA de forma eficaz, gerenciar mudanças organizacionais e desenvolver capacidades estratégicas.
+
+**[Gartner – Artificial Intelligence Research](https://www.gartner.com/en/information-technology/insights/artificial-intelligence)**  
+Análises de mercado, previsões tecnológicas e frameworks para tomada de decisão sobre investimentos em IA. Particularmente útil para CIOs e CTOs avaliando fornecedores e tecnologias.
+
+:::{admonition} 📊 Como usar essas fontes estrategicamente
+:class: tip
+
+- **HBR e MIT Sloan**: Para casos de uso inspiradores e frameworks conceituais
+- **McKinsey e Gartner**: Para benchmarking e decisões de investimento
+- **AI Index**: Para compreender tendências macro e posicionar-se no mercado global
+- Configure alertas ou assine newsletters dessas fontes para receber atualizações regulares
+:::
 
 ## Empreendedorismo
 
