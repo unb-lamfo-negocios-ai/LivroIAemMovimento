@@ -163,7 +163,7 @@ Concluindo, podemos dizer que a hierarquia da Inteligência Artificial pode ser 
 
 ```{figure} ../imagens/hierarquia_de_IAs.jpeg
 ---
-height: 150px
+height: 250px
 name: directive-fig
 ---
 Figura – Como a IA Generativa se Encaixa no Universo da IA.
