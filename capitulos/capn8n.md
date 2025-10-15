@@ -885,28 +885,94 @@ Figura – Comportamento do workflow com erros.
 ```
 
 
-Comportamentos em Caso de Erro de um Node Específico
+Quando um Node encontra uma falha durante a execução, você pode definir como o fluxo de automação deve reagir. Existem três estratégias principais para gerenciar erros, cada uma adequada a diferentes necessidades e cenários.
 
-**Stop Workflow** ⛔
+### 1. Stop Workflow
 
-- **Descrição**: O fluxo inteiro é interrompido imediatamente quando o node específico falha.
-- **Benefícios**: Evita que a falha se propague para outras partes do sistema, garantindo que apenas operações seguras sejam concluídas.
-- **Cenário**: Em um fluxo de pagamento online, se houver uma falha na confirmação de pagamento, o fluxo pode ser interrompido para evitar que o pedido seja processado incorretamente.
+**O que faz:**
+- Interrompe o fluxo inteiro imediatamente quando o Node específico falha
+- Nenhum Node subsequente é executado
+- A execução é encerrada no ponto de falha
 
-**Continue** 🔄
+**Quando usar:**
+- Operações críticas onde erros não podem ser tolerados
+- Processos que dependem estritamente do sucesso de cada etapa
+- Situações onde continuar após um erro causaria inconsistências graves
 
-- **Descrição**: O fluxo continua normalmente, mesmo que o node específico falhe.
-- **Benefícios**: Evita interrupções no fluxo, permitindo que operações críticas continuem sendo executadas.
-- **Cenário**: Em um fluxo de automação de e-commerce, se um node de envio de e-mail falhar, o fluxo continua para o próximo node, como atualização de status do pedido.
+**Benefícios:**
+- Evita que a falha se propague para outras partes do sistema
+- Garante que apenas operações completamente seguras sejam concluídas
+- Mantém a integridade dos dados ao impedir processamentos parciais
 
-**Continue (using Error Output)** 🚀
+```{admonition} Exemplo prático
+:class: exemplo
 
-- **Descrição**: O fluxo continua, usando a saída de erro do node específico para tomar ações adicionais.
-- **Benefícios**: Permite que você trate erros de forma mais controlada, usando as informações do erro para tomar decisões específicas.
-- **Cenário**: Se um node de validação de dados falhar, você pode usar as informações do erro para enviar um e-mail de notificação ou registrar o problema em um sistema de logs.
+Em um fluxo de pagamento online:
+- Se houver falha na confirmação do pagamento, o fluxo é interrompido imediatamente
+- Isso evita que o pedido seja processado incorretamente
+- Previne cobranças duplicadas ou entregas sem pagamento confirmado
+```
 
----
+### 2. Continue
 
+**O que faz:**
+- O fluxo continua normalmente para os próximos Nodes
+- A falha é registrada, mas não bloqueia a execução
+- Nodes subsequentes são executados como se nada tivesse acontecido
+
+**Quando usar:**
+- Operações não-críticas que podem falhar sem comprometer o fluxo principal
+- Processos onde algumas etapas são opcionais
+- Situações onde a continuidade é mais importante que o sucesso de cada Node
+
+**Benefícios:**
+- Evita interrupções desnecessárias no fluxo
+- Permite que operações críticas subsequentes continuem sendo executadas
+- Aumenta a robustez do fluxo em ambientes instáveis
+
+```{admonition} Exemplo prático:
+:class: exemplo
+Em um fluxo de automação de e-commerce:
+- Se um Node de envio de e-mail de confirmação falhar, o fluxo continua
+- O próximo Node atualiza o status do pedido normalmente
+- O cliente pode receber o produto mesmo se o e-mail não for enviado
+```
+
+### 3. Continue (using Error Output) 
+
+**O que faz:**
+- O fluxo continua, mas utiliza a saída de erro do Node que falhou
+- As informações do erro são passadas para os próximos Nodes
+- Permite criar caminhos alternativos específicos para tratamento de erros
+
+**Quando usar:**
+- Situações que exigem tratamento personalizado de erros
+- Processos onde você precisa registrar, notificar ou remediar falhas
+- Fluxos que necessitam de ações específicas baseadas no tipo de erro
+
+**Benefícios:**
+- Permite tratamento controlado e inteligente de erros
+- Possibilita usar informações detalhadas do erro para tomar decisões
+- Combina resiliência com visibilidade sobre problemas
+
+```{admonition} Exemplo prático:
+
+Em um fluxo de validação de dados:
+- Se um Node de validação falhar, você captura os detalhes do erro
+- Com essas informações, você pode:
+  - Enviar um e-mail de notificação à equipe técnica
+  - Registrar o problema em um sistema de logs
+  - Acionar um Node de tratamento específico para aquele tipo de erro
+  - Criar relatórios detalhados sobre falhas recorrentes
+```
+
+A tabela abaixo resume as principais diferenças entre as três estratégias, facilitando a escolha da abordagem mais adequada para cada situação:
+
+| Estratégia | Continua o Fluxo? | Usa Dados do Erro? | Melhor Para |
+|------------|-------------------|--------------------| ------------|
+| **Stop Workflow** | ❌ Não | ❌ Não | Operações críticas |
+| **Continue** | ✅ Sim | ❌ Não | Operações não-críticas |
+| **Continue (Error Output)** | ✅ Sim | ✅ Sim | Tratamento inteligente de erros |Tentar novamenteClaude ainda não tem a capacidade de executar o código que gera.
 #### Resolvendo erros
 
 Principais Erros em Workflows do n8n: O Que Observar nos Nodes
