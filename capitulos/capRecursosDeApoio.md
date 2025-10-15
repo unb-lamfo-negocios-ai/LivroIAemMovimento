@@ -303,7 +303,7 @@ Diretório focado em ferramentas no-code e low-code para IA. Ideal para não-des
 **[AI Valley](https://aivalley.ai/)**  
 Curadoria de ferramentas com foco em produtividade e aplicações empresariais. Inclui reviews e comparações entre soluções similares.
 
-:::{admonition} 💡 Como usar estes diretórios eficientemente
+:::{admonition} Como usar estes diretórios eficientemente
 :class: tip
 
 - **Para experimentação:** Comece com Futurepedia ou There's an AI for That para encontrar ferramentas prontas
