@@ -330,23 +330,26 @@ Embora a regulamentação da IA seja complexa, existe um amplo consenso sobre as
 O principal foco de preocupação na regulamentação da IA está nos algoritmos de Machine Learning (ML), que podem gerar resultados imprevistos. Como os dados influenciam diretamente a estrutura e os parâmetros do modelo, o modelo pode refletir as características e vieses do dataset.
 
 Ao abordar o viés, é importante distinguir entre diferentes tipos de risco:
+
 #### A. Viés Social e Algorítmico
 
 **1. Viés Social**: O viés social é a perpetuação de preconceitos existentes na sociedade, que são capturados nos dados.
-    ◦ **Implicação**: Mesmo que um modelo seja altamente preciso, ele pode ainda refletir preconceitos sociais subjacentes.
+
+**Implicação**: Mesmo que um modelo seja altamente preciso, ele pode ainda refletir preconceitos sociais subjacentes.
     
-    ```{admonition} Exemplo Notável
-    :class: exemplo
-    
-    O algoritmo COMPAS (usado no sistema judicial dos EUA para prever reincidência) foi criticado por parecer afetar desproporcionalmente réus negros, levantando profundas preocupações éticas e de equidade.
-    ```
+```{admonition} Exemplo Notável
+:class: exemplo
+
+O algoritmo COMPAS (usado no sistema judicial dos EUA para prever reincidência) foi criticado por parecer afetar desproporcionalmente réus negros, levantando profundas preocupações éticas e de equidade.
+```
     
 **2. Viés Algorítmico:** Ocorre devido a deficiências técnicas durante o desenvolvimento do modelo, causando erros sistemáticos nos resultados. Este tipo de viés, embora afete a precisão, pode ser corrigido ajustando a complexidade do modelo.
 
 #### B. Viés de Representação (Differential Accuracy)
 
 Este tipo de viés ocorre quando os dados de entrada não são representativos da população relevante.
-• **Implicação**: Isso leva a uma precisão diferencial (diferentes taxas de erro) entre grupos.
+
+**Implicação**: Isso leva a uma precisão diferencial (diferentes taxas de erro) entre grupos.
 
 ```{admonition} Exemplo Real: Viés em Reconhecimento Facial
 :class: exemplo
@@ -362,7 +365,7 @@ name: directive
 Este caso evidencia que vieses algorítmicos não são apenas falhas técnicas abstratas — eles geram **exclusão digital real**, criam barreiras concretas no acesso a serviços e podem resultar em situações discriminatórias, ainda que não intencionais. Em países como o Brasil, com população profundamente diversa, esses problemas se tornam ainda mais críticos.
 
 A experiência reforça a necessidade urgente de desenvolver modelos de IA **justos, auditáveis e culturalmente sensíveis**, além de promover letramento algorítmico entre todos os envolvidos — gestores, desenvolvedores e cidadãos. **Mais do que eficiência técnica, precisamos de inteligência artificial com empatia e responsabilidade social.**
-```
+
 
 ### 3. Ameaças à Confiança: Falta de Transparência e Explicabilidade
 
