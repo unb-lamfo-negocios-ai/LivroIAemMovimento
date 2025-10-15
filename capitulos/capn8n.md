@@ -1354,9 +1354,7 @@ Ao usar o n8n gratuitamente via self-hosting, você é responsável por:
 
 Para uma demonstração prática e visual de como configurar o n8n usando Docker, recomendamos o vídeo tutorial que apresenta o processo completo de instalação passo a passo. O vídeo mostra desde a instalação do Docker Desktop até a execução do primeiro workflow no n8n, incluindo dicas de configuração e troubleshooting. É um recurso excelente tanto para iniciantes quanto para quem deseja revisar o processo de setup de forma rápida e didática.
 
-:::{youtube} 8hQ1u0TAyAc
-:start: 5
-:::
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/8hQ1u0TAyAc?start=5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8hQ1u0TAyAc&t=5s" 
