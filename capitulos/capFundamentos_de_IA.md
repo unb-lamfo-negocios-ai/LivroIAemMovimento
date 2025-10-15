@@ -166,7 +166,7 @@ Concluindo, podemos dizer que a hierarquia da Inteligência Artificial pode ser 
 height: 250px
 name: directive-fig
 ---
-Figura – Como a IA Generativa se Encaixa no Universo da IA.
+Como a IA Generativa se Encaixa no Universo da IA.
 ```
 
 Ela apresenta camadas que vão do geral ao específico:
