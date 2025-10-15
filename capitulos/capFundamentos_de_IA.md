@@ -159,7 +159,17 @@ Essa distinção revela um paradigma fundamental para a compreensão do ecossist
 
 Um LLM, como o GPT-4 da OpenAI, pode ser visto como um motor de alto desempenho, uma peça de tecnologia complexa e poderosa. A IA Generativa, por outro lado, é o veículo que utiliza esse motor para uma finalidade específica. Assim como um motor pode ser instalado em um carro (para transporte), um barco (para navegação) ou um avião (para voo), um único LLM pode alimentar uma variedade de aplicações: um chatbot para atendimento ao cliente, uma ferramenta para redação de e-mails de marketing ou um assistente para geração de código de programação. Essa separação entre a tecnologia central (o motor) e sua aplicação (o veículo) explica por que a inovação em um único LLM pode levar a uma explosão de novas e diversas ferramentas de IA Generativa.
 
-Concluindo, podemos dizer que a hierarquia da Inteligência Artificial pode ser entendida como um sistema de camadas interligadas, onde cada nível representa uma especialização maior do anterior. No topo está a IA como campo geral, seguida pelas Redes Neurais e, dentro delas, o Deep Learning, que impulsiona a IA Generativa. Essa organização hierárquica pode ser vista na imagem abaixo. Ela apresenta camadas que vão do geral ao específico:
+Concluindo, podemos dizer que a hierarquia da Inteligência Artificial pode ser entendida como um sistema de camadas interligadas, onde cada nível representa uma especialização maior do anterior. No topo está a IA como campo geral, seguida pelas Redes Neurais e, dentro delas, o Deep Learning, que impulsiona a IA Generativa. Essa organização hierárquica pode ser vista na imagem abaixo. 
+
+```{figure} ../imagens/hierarquia_de_IAs.jpeg
+---
+height: 150px
+name: directive-fig
+---
+Figura – Como a IA Generativa se Encaixa no Universo da IA.
+```
+
+Ela apresenta camadas que vão do geral ao específico:
 
 - **Inteligência Artificial**: A camada mais externa, incluindo todas as tecnologias que envolvem comportamento inteligente.
 
@@ -181,22 +191,6 @@ A imagem também destaca subtemas importantes em cada categoria, como:
 
 - **Em IA Generativa**: Transformers, LLM, LangChain, Foundation Models, Multimodal AI, RLHF, QLoRA, etc.
 
-```{figure} ../imagens/hierarquia_de_IAs.jpeg
----
-height: 150px
-name: directive-fig
----
-Figura – Como a IA Generativa se Encaixa no Universo da IA.
-```
-
-```{image} ../imagens/hierarquia_de_IAs.jpeg
-:name: hierarquia_de_IAs
-:alt: Diagrama em camadas que mostra a hierarquia da Inteligência Artificial, com destaque para IA, Machine Learning, Deep Learning, Redes Neurais e IA Generativa.
-:align: center
-:figclass: align-center
-**Figura – Como a IA Generativa se Encaixa no Universo da IA.**  
-Fonte: Inspirado em {cite}`chapman2023linkedin`.
-```
 
 
 ### **Como os LLMs Funcionam: Dos Dados ao Diálogo**
