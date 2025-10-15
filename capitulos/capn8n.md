@@ -662,7 +662,7 @@ Na configuração de um node, sempre haverá configurações extras, que podem s
 :align: center
 :name: conf_parameter
 ```
-### Always Output Data
+## Always Output Data
 
 **Always Output Data** é uma configuração que garante a continuidade do fluxo de automação, mesmo quando ocorrem falhas.
 
@@ -691,7 +691,7 @@ Esta configuração permite:
 - **Fluxos alternativos:** Direcionar a automação por caminhos diferentes conforme o resultado
 ```
 
-#### Funcionamento da Opção Always Output Data
+### Funcionamento da Opção Always Output Data
 
 ```{admonition} Comportamento sem Always Output Data
 :class: note
@@ -732,7 +732,7 @@ Quando habilitada, o nó sempre enviará uma saída, mesmo nas seguintes situaç
 - **Falha na execução**: Se ocorrer um erro durante a execução do nó.
 - **Saída vazia**: Se o nó não tiver dados para enviar após sua execução.
 
-#### Configuração no n8n️
+### Configuração no n8n️
 
 Para ativar Always Output Data em um nó:
 
@@ -747,7 +747,7 @@ Para ativar Always Output Data em um nó:
 - **Uso**: Com Always Output Data ativado, o fluxo continuará mesmo se a solicitação à API falhar, garantindo que etapas subsequentes possam processar os dados disponíveis ou lidar com a falha de forma adequada.
 ```
 
-#### Execute Once
+## Execute Once
 
 **Execute Once** é uma configuração que limita a execução de um Node a apenas uma vez, independentemente de quantas vezes a condição de acionamento seja atingida.
 
@@ -786,7 +786,7 @@ Esta configuração é especialmente útil em:
 - Envio de notificações ou alertas únicos
 - Processamentos que devem ocorrer apenas na inicialização do fluxo
 
-#### Configuração no n8n️
+### Configuração no n8n️
 
 Para ativar **Execute Once** em um nó:
 
@@ -801,20 +801,60 @@ Para ativar **Execute Once** em um nó:
 - **Uso de Execute Once**: Com Execute Once ativado, o fluxo será acionado apenas na primeira vez que o webhook for recebido para processar o novo pedido, independentemente de quantas vezes o webhook seja acionado pelo sistema de e-commerce.
 ```
 
-#### Retry on Fail
+## Retry on Fail
 
-Funcionamento do **Retry on Fail** 🔄
+**Retry on Fail** é uma configuração que permite ao Node tentar executar uma operação novamente após uma falha inicial, aumentando a resiliência do fluxo de automação.
 
-- **Quando habilitado**, o nó tentará **executar a operação novamente** após uma falha inicial. Isso é útil para lidar com erros temporários, como problemas de conexão ou timeout de rede.
-- **Cenário comum**: Imagine um fluxo onde um nó faz uma solicitação a uma API externa. Se houver uma falha na primeira tentativa devido a um problema de rede, o **Retry on Fail** permitirá que o nó tente novamente após um curto intervalo de tempo.
+```{admonition} Como funciona
+:class: note
+- Quando **habilitado**, o Node realiza novas tentativas automaticamente após uma falha
+- As tentativas ocorrem após intervalos de tempo configuráveis
+- O processo se repete até obter sucesso ou atingir o número máximo de tentativas
+```
 
-Por que usar **Retry on Fail**? 🎯
+**Quando é útil**
 
-- **Redução de erros transitórios**: Ajuda a superar problemas temporários que não são persistentes.
-- **Garantia de entrega**: Aumenta a confiabilidade do fluxo, garantindo que as operações sejam concluídas mesmo em condições adversas.
-- **Melhoria na experiência do usuário**: Evita interrupções no serviço ao tentar resolver automaticamente problemas temporários.
+Esta configuração é especialmente eficaz para lidar com:
+- Problemas temporários de conexão
+- Timeouts de rede
+- Instabilidades momentâneas em APIs externas
+- Erros transitórios que tendem a se resolver rapidamente
 
-Configuração no n8n ⚙️
+```{admonition} Exemplo prático
+:class: exemplo
+Imagine um fluxo onde um Node faz uma solicitação a uma API externa:
+
+- **Primeira tentativa:** Falha devido a um problema momentâneo de rede
+- **Com Retry on Fail:** O Node aguarda um intervalo e tenta novamente automaticamente
+- **Resultado:** A operação é concluída com sucesso na segunda ou terceira tentativa
+```
+
+**Por que usar Retry on Fail?**
+
+**Redução de erros transitórios**
+- Supera problemas temporários que não são persistentes
+- Elimina falhas causadas por instabilidades pontuais
+- Aumenta a taxa de sucesso das operações
+
+**Garantia de entrega**
+- Aumenta a confiabilidade do fluxo de automação
+- Garante que operações críticas sejam concluídas mesmo em condições adversas
+- Reduz a necessidade de intervenção manual
+
+**Melhoria na experiência do usuário**
+- Evita interrupções no serviço para o usuário final
+- Resolve automaticamente problemas temporários de forma transparente
+- Mantém a continuidade das operações sem impacto perceptível
+
+```{admonition} Boas práticas
+:class: hint
+- Configure intervalos adequados entre as tentativas para não sobrecarregar sistemas
+- Defina um número máximo razoável de tentativas
+- Combine com **Always Output Data** para registrar falhas persistentes
+- Use em operações suscetíveis a erros temporários, não para problemas estruturais
+```
+
+### Configuração no n8n️
 
 Para ativar **Retry on Fail** em um nó:
 
@@ -822,17 +862,19 @@ Para ativar **Retry on Fail** em um nó:
 2. Procure pela opção **"Retry on Fail"** ou similar nas configurações do nó.
 3. Habilite esta opção e configure o **número máximo de tentativas** e o **intervalo de tempo entre as tentativas** conforme necessário.
 
-Exemplo Prático 🔍
+```{admonition} Exemplo Prático
+:class: exemplo
 
 - **Cenário**: Um nó faz uma solicitação a uma API externa para buscar dados, mas a API está temporariamente fora do ar.
 - **Uso de Retry on Fail**: Com Retry on Fail ativado, o nó tentará novamente automaticamente após uma falha inicial de conexão, permitindo que o fluxo continue mesmo em condições adversas.
+```
 
 ```{figure} imagens/retry_on_fail.png
 :align: center
 :name: retry_on_fail
 ```
 
-Comportamento do Workflow com erros
+## Comportamento do Workflow com erros
 
 ```{figure} imagens/fig_workflow.png
 :align: center
