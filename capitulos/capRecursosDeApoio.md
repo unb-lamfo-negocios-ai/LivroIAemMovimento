@@ -10,15 +10,47 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 
 ## Vídeos e Cursos sobre IA
 
-Os vídeos e cursos online são formas acessíveis de visualizar conceitos em prática, acompanhando a explicação de especialistas de renome.  
+### Fundamentos de IA
 
-- **MIT 6.S191 — Introduction to Deep Learning** (MIT OpenCourseWare) {cite}`mitdl2023`: curso introdutório que mostra os fundamentos do aprendizado profundo, com exercícios práticos.  
-- **Andrew Ng – AI for Everyone** (Coursera) {cite}`ng2019`: curso não técnico, voltado a profissionais de negócios que desejam compreender o impacto da IA nas organizações.  
-- **Stanford CS224N — Natural Language Processing with Deep Learning** (YouTube) {cite}`manning2021`: referência obrigatória para quem quer se aprofundar em processamento de linguagem natural (PLN).  
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- | 
+|AI for Everyone| https://www.coursera.org/learn/ai-for-everyone A| Andrew NG/Deep Learning AI|
+| Lecture 0 - Playing | https://www.youtube.com/live/kQ3K7Y4AQcs?si=2AGHMyFUvJyQieBb | Harvard CS50/David J. Malan |  
+| Lecture 1 - Predicting | https://www.youtube.com/live/oHuvUkMPffI?si=0MPKJ10Aq16vLsWP | Harvard CS50/David J. Malan |  
+| Lecture 2 - Analyzing  | https://www.youtube.com/live/VjH6g63OsME?si=tjv53mXu94ss04Tl | Harvard CS50/David J. Malan |  
+| Lecture 3 - Sensing | https://www.youtube.com/live/L1lQtyqpezI?si=34aVbp1Rwax-6N5w | Harvard CS50/David J. Malan |  
+| Lecture 4 - Communicating | https://www.youtube.com/live/DpKjr08eFuA?si=o-3SBhJtEkduXkIr | Harvard CS50/David J. Malan |  
+| Lecture 5 - Generating  | https://www.youtube.com/live/7LiHUvSqRtI?si=WG1nY8LEmHRdgbvo | Harvard CS50/David J. Malan | 
+| Lecture 6 - Moving | https://www.youtube.com/live/Bpiv2HCe3xA?si=PtDtUKp3hZ9hIUvS | Harvard CS50/David J. Malan |  
 
-:::{note}
-Cursos em vídeo permitem absorver conceitos de forma dinâmica, mas o ideal é sempre **complementar com exercícios práticos** para fixar o aprendizado.  
-:::
+### Machine Learning
+
+### Deep Learning
+
+### LLM
+
+### NLP
+
+### NLU
+
+### IA Generativa
+
+### Agentes de IA
+
+### Graph Rag e Knowledge
+
+### Lang Graph/Lang Chain
+
+### MCP
+
+### n8n
+
+### Python
+
+### No code AI
+
+### Neo4j
+
 
 | **Título** | **URL** | **Autor/Canal/Instituição** | 
 | ---------- | -------- | --- | 
@@ -29,19 +61,21 @@ Cursos em vídeo permitem absorver conceitos de forma dinâmica, mas o ideal é 
 | Curso de Canva do Zero para iniciantes | https://youtu.be/lGiyNbBSF-M?si=qGfXbGDgqnTqDGfb | [Darlan Evandro](https://www.youtube.com/@DarlanEvandro) |  
 
 
-## Fundamentos de IA 
 
-### Harvard CS50
+
+### Deep Learning
+
 
 | **Título** | **URL** | **Canal/Autor** | 
-| --- | --- | --- | 
-| Lecture 0 - Playing | https://www.youtube.com/live/kQ3K7Y4AQcs?si=2AGHMyFUvJyQieBb | Harvard CS50/David J. Malan |  
-| Lecture 1 - Predicting | https://www.youtube.com/live/oHuvUkMPffI?si=0MPKJ10Aq16vLsWP | Harvard CS50/David J. Malan |  
-| Lecture 2 - Analyzing  | https://www.youtube.com/live/VjH6g63OsME?si=tjv53mXu94ss04Tl | Harvard CS50/David J. Malan |  
-| Lecture 3 - Sensing | https://www.youtube.com/live/L1lQtyqpezI?si=34aVbp1Rwax-6N5w | Harvard CS50/David J. Malan |  
-| Lecture 4 - Communicating | https://www.youtube.com/live/DpKjr08eFuA?si=o-3SBhJtEkduXkIr | Harvard CS50/David J. Malan |  
-| Lecture 5 - Generating  | https://www.youtube.com/live/7LiHUvSqRtI?si=WG1nY8LEmHRdgbvo | Harvard CS50/David J. Malan | 
-| Lecture 6 - Moving | https://www.youtube.com/live/Bpiv2HCe3xA?si=PtDtUKp3hZ9hIUvS | Harvard CS50/David J. Malan |  
+| --- | --- | --- |
+| Introduction to Deep Learning | [https://youtu.be/J-9EbJBxcbg?si=OfWk4ETprZocX4nh](https://introtodeeplearning.com/) | MIT 6.S191|  
+
+### Natural Language  Understanding
+
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- |
+|Natural Language Processing | https://www.youtube.com/playlist?list=PLoROMvodv4rObpMCir6rNNUlFAn56Js20 | Stanford CS224U|  
+
 
 Stanford University
 | **Título** | **URL** | **Canal/Autor** | 
