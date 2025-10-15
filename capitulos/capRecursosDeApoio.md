@@ -4,7 +4,8 @@ Aprender sobre Inteligência Artificial não termina na leitura deste livro. O c
 
 Este capítulo reúne **recursos complementares cuidadosamente selecionados** que funcionam como pontos de partida para uma jornada de **aprendizado contínuo e exploração prática**. Você encontrará aqui materiais para diversos perfis — desde iniciantes curiosos até profissionais técnicos avançados — e para diferentes objetivos: aprender fundamentos, desenvolver aplicações, empreender com IA, acompanhar pesquisas de ponta ou simplesmente experimentar ferramentas inovadoras.
 
-**O que você vai encontrar:**
+```{admonition} O que você vai encontrar:
+:class: note
 - Sugestões de Vídeos e cursos sobre IA
 - Plataformas e APIs para desenvolvimento com modelos de linguagem
 - Catálogos atualizados de ferramentas emergentes
@@ -13,10 +14,14 @@ Este capítulo reúne **recursos complementares cuidadosamente selecionados** qu
 - Recursos de negócios e estratégia para empreendedores
 - Referências acadêmicas e técnicas para aprofundamento
 - Guias práticos e tutoriais interativos
+```
 
-**Como usar este capítulo:**  
-Não é necessário explorar todos os recursos de uma vez. Navegue pelas seções conforme suas necessidades evoluem. Marque os links que parecem mais relevantes para seu momento atual e retorne periodicamente para descobrir novos caminhos. Este é um capítulo vivo — considere-o sua biblioteca de referência para manter-se atualizado com as melhores ferramentas e expertises em IA.
-
+```{admonition} Como usar este capítulo
+:class: tip  
+- Não é necessário explorar todos os recursos de uma vez. Navegue pelas seções conforme suas necessidades evoluem.
+- Marque os links que parecem mais relevantes para seu momento atual e retorne periodicamente para descobrir novos caminhos.
+- Este é um capítulo vivo — considere-o sua biblioteca de referência para manter-se atualizado com as melhores ferramentas e expertises em IA.
+```
 Prepare-se para expandir seus horizontes. Boa exploração!
 
 
