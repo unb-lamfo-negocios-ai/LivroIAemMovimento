@@ -370,9 +370,11 @@ A experiência reforça a necessidade urgente de desenvolver modelos de IA **jus
 ### 3. Ameaças à Confiança: Falta de Transparência e Explicabilidade
 
 À medida que os modelos de ML se tornam mais complexos para maximizar a precisão, as relações entre as entradas e as previsões se tornam difíceis de entender.
-• Interpretabilidade vs. Explicabilidade:
-    ◦ Interpretabilidade é a capacidade de compreender diretamente a estrutura de um modelo e as relações entre entradas e saídas.
-    ◦ Explicabilidade usa métodos externos (pós-hoc) para entender como as entradas afetam as saídas.
+
+####  Interpretabilidade vs. Explicabilidade
+
+◦ Interpretabilidade é a capacidade de compreender diretamente a estrutura de um modelo e as relações entre entradas e saídas.
+◦ Explicabilidade usa métodos externos (pós-hoc) para entender como as entradas afetam as saídas.
 
 ```{admonition} Desafio
 :class: warning
