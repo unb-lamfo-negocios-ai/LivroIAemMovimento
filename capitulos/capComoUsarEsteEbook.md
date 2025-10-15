@@ -58,3 +58,7 @@ Por exemplo: quando falarmos em “redes neurais”, você pode imaginá-las com
 :::{tip}
 Este eBook é um ponto de partida. A Inteligência Artificial está em constante evolução, e a melhor forma de aprender é **experimentando**: teste ferramentas, valide hipóteses, questione resultados e mantenha-se atualizado.  
 :::
+
+:::{tip}
+Sempre que encontrar um conceito desafiador neste livro, consulte os materiais de apoio e faça paralelos com exemplos da sua realidade. A melhor forma de entender IA é **relacionando teoria, prática e impacto social**.
+:::
