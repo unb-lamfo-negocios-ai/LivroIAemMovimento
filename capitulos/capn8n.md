@@ -876,11 +876,15 @@ Para ativar **Retry on Fail** em um nó:
 
 ## Comportamento do Workflow com erros
 
-```{figure} imagens/fig_workflow.png
-:align: center
-:name: fig_workflow
-
+```{figure} ../imagens/fig_workflow.png
+---
+height: 150px
+name: fig_workflow
+---
+Figura – Comportamento do workflow com erros.
 ```
+
+
 Comportamentos em Caso de Erro de um Node Específico
 
 **Stop Workflow** ⛔
