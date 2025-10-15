@@ -307,7 +307,7 @@ Esses espaços são valiosos para qualquer profissional, pesquisador ou empreend
 
 
 
-## Ética e Viés MAISA FAZER
+## Ética e Viés
 
 O uso de IA introduziu riscos críticos, como a violação da privacidade, a amplificação de vieses existentes nos dados e o desenvolvimento de sistemas difíceis de interpretar. A governança eficaz da IA deve, portanto, equilibrar a inovação com salvaguardas sociais, padrões éticos e responsabilidade legal.
 
@@ -334,10 +334,13 @@ Ao abordar o viés, é importante distinguir entre diferentes tipos de risco:
 
 **1. Viés Social**: O viés social é a perpetuação de preconceitos existentes na sociedade, que são capturados nos dados.
     ◦ **Implicação**: Mesmo que um modelo seja altamente preciso, ele pode ainda refletir preconceitos sociais subjacentes.
+    
     ```{admonition} Exemplo Notável
     :class: exemplo
+    
     O algoritmo COMPAS (usado no sistema judicial dos EUA para prever reincidência) foi criticado por parecer afetar desproporcionalmente réus negros, levantando profundas preocupações éticas e de equidade.
     ```
+    
 **2. Viés Algorítmico:** Ocorre devido a deficiências técnicas durante o desenvolvimento do modelo, causando erros sistemáticos nos resultados. Este tipo de viés, embora afete a precisão, pode ser corrigido ajustando a complexidade do modelo.
 
 #### B. Viés de Representação (Differential Accuracy)
@@ -347,6 +350,7 @@ Este tipo de viés ocorre quando os dados de entrada não são representativos d
 
 ```{admonition} Exemplo
 :class: exemplo
+
 Pesquisas mostraram que algoritmos de reconhecimento facial tiveram menor precisão para sujeitos femininos e negros, sugerindo que o desempenho é afetado pelo desequilíbrio nos dados de treinamento.
 ```
 
