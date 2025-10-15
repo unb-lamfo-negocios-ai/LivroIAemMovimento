@@ -348,10 +348,20 @@ Ao abordar o viés, é importante distinguir entre diferentes tipos de risco:
 Este tipo de viés ocorre quando os dados de entrada não são representativos da população relevante.
 • **Implicação**: Isso leva a uma precisão diferencial (diferentes taxas de erro) entre grupos.
 
-```{admonition} Exemplo
+```{admonition} Exemplo Real: Viés em Reconhecimento Facial
 :class: exemplo
 
-Pesquisas mostraram que algoritmos de reconhecimento facial tiveram menor precisão para sujeitos femininos e negros, sugerindo que o desempenho é afetado pelo desequilíbrio nos dados de treinamento.
+O Professor **Herbert Kimura**, docente da UnB e diretor do Lamfo, relata uma experiência pessoal que ilustra concretamente o problema dos vieses algorítmicos. Ao tentar atualizar seu cadastro em um aplicativo institucional usando reconhecimento facial, o sistema repetidamente exibia a mensagem "Mantenha os olhos abertos", apesar de seguir todas as instruções corretamente. Como descendente de japoneses, ele vivenciou na prática como modelos de IA treinados com bases de dados pouco representativas falham em reconhecer adequadamente características físicas de diferentes grupos étnicos.
+
+```{figure} ../imagens/kimura.jpg
+---
+height: 150px
+name: directive
+```
+
+Este caso evidencia que vieses algorítmicos não são apenas falhas técnicas abstratas — eles geram **exclusão digital real**, criam barreiras concretas no acesso a serviços e podem resultar em situações discriminatórias, ainda que não intencionais. Em países como o Brasil, com população profundamente diversa, esses problemas se tornam ainda mais críticos.
+
+A experiência reforça a necessidade urgente de desenvolver modelos de IA **justos, auditáveis e culturalmente sensíveis**, além de promover letramento algorítmico entre todos os envolvidos — gestores, desenvolvedores e cidadãos. **Mais do que eficiência técnica, precisamos de inteligência artificial com empatia e responsabilidade social.**
 ```
 
 ### 3. Ameaças à Confiança: Falta de Transparência e Explicabilidade
