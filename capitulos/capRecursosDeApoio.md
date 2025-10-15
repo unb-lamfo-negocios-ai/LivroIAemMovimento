@@ -16,7 +16,7 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 | --- | --- | --- | 
 |AI for Everyone| https://www.coursera.org/learn/ai-for-everyone| Andrew NG/Deep Learning AI|
 | Artificial Intelligence | https://lnkd.in/gM892TxC | Stanford University CS221|  
-| How AI Works | https://youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y&si=6sykWpDJqvn0GSc- | [Code.org](https://www.youtube.com/codeorg) | 
+| How AI Works | [https://youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y&si=6sykWpDJqvn0GSc-](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) | [Code.org](https://www.youtube.com/codeorg) | 
 | Fundamentals of AI  | https://www.youtube.com/live/kQ3K7Y4AQcs?si=2AGHMyFUvJyQieBb | Harvard CS50/David J. Malan |  
 | Google’s 9 hour Ai prompt enginnering course in 20 minutes | https://youtu.be/p09yRj47kNM?si=IOKaN-JIqKNgzoAO | [Tina Huang](https://www.youtube.com/@TinaHuang1) | 
 
@@ -26,7 +26,8 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 | **Título** | **URL** | **Canal/Autor** | 
 | --- | --- | --- |
 |ML Supervisionado vs Não Supervisionado + design de algoritmo| [https://lnkd.in/gWgtbwZc](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU) | Stanford University CS229|
-|xplore a matemática por trás dos sistemas e modelos de aprendizado | [https://lnkd.in/gN4v2u9w](https://www.youtube.com/playlist?list=PLoROMvodv4rP8nAmISxFINlGKSK4rbLKh) | Stanford University  CS229M|  
+|Explore a matemática por trás dos sistemas e modelos de aprendizado | [https://lnkd.in/gN4v2u9w](https://www.youtube.com/playlist?list=PLoROMvodv4rP8nAmISxFINlGKSK4rbLKh) | Stanford University  CS229M|  
+|Intro to Machine Learning| https://www.kaggle.com/learn/intro-to-machine-learning | [Kaggle](www.kaggle.com/learn)|
 
 ### Deep Learning
 
@@ -35,39 +36,41 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 | Introduction to Deep Learning | [https://youtu.be/J-9EbJBxcbg?si=OfWk4ETprZocX4nh](https://introtodeeplearning.com/) | MIT 6.S191|  
 | Domine redes neurais, CNNs, RNNs e melhores práticas  | https://lnkd.in/gYyD2Fwa | Stanford University CS230|  
 
-
-### LLM
-
-### NLP
-
-| **Título** | **URL** | **Canal/Autor** | 
-| --- | --- | --- |
-| Aprenda como redes neurais impulsionam tradução, Q&A e análise de sentimento | https://lnkd.in/gWvnNXB2 | Stanford University CS224N |  
-
-### Natural Language  Understanding
-
-| **Título** | **URL** | **Canal/Autor** | 
-| --- | --- | --- |
-|Natural Language Processing | https://www.youtube.com/playlist?list=PLoROMvodv4rObpMCir6rNNUlFAn56Js20 | Stanford CS224U|  
-| Entenda significado, intenção e sistemas de diálogo  |https://lnkd.in/gg2BAW9k| Stanford University CS224U| 
-
 ### Reinforcement Learning
 
 | **Título** | **URL** | **Canal/Autor** | 
 | --- | --- | --- |
 |Explore Q-learning, MDPs e treine modelos para agir em ambientes dinâmicos| https://lnkd.in/gKhtZYsV | Stanford University CS234 |
 
+
+### NLP/NLU
+
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- |
+| Aprenda como redes neurais impulsionam tradução, Q&A e análise de sentimento | https://lnkd.in/gWvnNXB2 | Stanford University CS224N |  
+|Natural Language Processing | https://www.youtube.com/playlist?list=PLoROMvodv4rObpMCir6rNNUlFAn56Js20 | Stanford CS224U|  
+| Entenda significado, intenção e sistemas de diálogo  |https://lnkd.in/gg2BAW9k| Stanford University CS224U| 
+
+
+
 ### IA Generativa
 
 | **Título** | **URL** | **Autor/Canal/Instituição** | 
 | ---------- | -------- | --- | 
 | Conheça Gemini no Chrome | https://youtu.be/BBjM0SHg-aU?si=95DxG32XG03ubDNk | [Google Chrome](https://www.youtube.com/@GoogleChrome)|  
+| AI Python for Begginers | https://learn.deeplearning.ai/courses/ai-python-for-beginners/lesson/z57gn/introduction | Andrew NG/ Deep Learning AI|
+|AI Fluency: Framework & Foundations|https://anthropic.skilljar.com/ai-fluency-framework-foundations|[Anthropic](https://anthropic.skilljar.com/)|
+|Building with the Claude API|https://anthropic.skilljar.com/claude-with-the-anthropic-api|[Anthropic](https://anthropic.skilljar.com/)|
+|Generative AI for everyone | https://www.coursera.org/learn/generative-ai-for-everyone| Andrew NG/ Deep Learning AI|
+|IA generativa: introdução e aplicações| https://www.coursera.org/learn/generative-ai-introduction-and-applications | Rav Ahuja/IBM|
+
 
 ### Agentes de IA
 
 | **Título** | **URL** | **Canal/Autor** | 
 | --- | --- | --- |
 | Construindo agentes de IA no Google Cloud | https://youtu.be/8rlNdKywldQ?si=GXulrr2FP4Sc1sOi | [Google Cloud Tech](https://www.youtube.com/@googlecloudtech) |  
+|Agentic AI | https://learn.deeplearning.ai/?authuser=2 | Andrew NG/Deep Learning AI|
 | Microsoft Copilot Tutorial: What are Copilot Agents? | https://youtu.be/1smnJYGjQTw?si=dNNAD-zqdmFgWldi | [Access Orange](https://www.youtube.com/@accessorange_official)| 
 | Microsoft Copilot: How to create an Agent in minutes | https://youtu.be/FsVf0rBG33g?si=lKWuFo1C1m8kNRnf | [trAin](https://www.youtube.com/@trainaitoday) |  
 | Agent Flows in Copilot Studio | https://youtu.be/VJTKyk3Pr7s?si=dV9aDe5pGLvOJkHX | [Microsoft Copilot Studio](https://www.youtube.com/@MicrosoftCopilotStudio) | 
@@ -102,16 +105,19 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 
 | **Título** | **URL** | **Canal/Autor** | 
 | --- | --- | --- | 
-| LangGraph Complete Course for Beginners: Complex AI Agents with Python | https://youtu.be/jGg_1h0qzaM?si=lUzCGTbYNOEnXPLI | https://www.youtube.com/@freecodecamp | 
-| Building Effective Agents with LangGraph | https://youtu.be/aHCDrAbH_go?si=ArJp0t6yxHQyv35T | https://www.youtube.com/@LangChain | 
-| How I connected LangGraph Agents to any too using MCP | https://youtu.be/F9mgEFor0cA?si=L7CIajQmfIk4wXRx | https://www.youtube.com/@KennethLiao |  
-| LangGraph Platform: MCP support for your LangGraph Agents | https://youtu.be/AR4mLbm-0RU?si=FsS2_gc6LaAhEkam | https://www.youtube.com/@LangChain |  
-| Learn LangChain in 7 easy steps - Beginner Tutorial | https://youtu.be/8BV9TW490nQ?si=maUHLh8ajekuZr7o | https://www.youtube.com/@rabbitmetrics | 
+| LangGraph Complete Course for Beginners: Complex AI Agents with Python | https://youtu.be/jGg_1h0qzaM?si=lUzCGTbYNOEnXPLI | [freeCodeCamp.org](https://www.youtube.com/@freecodecamp) | 
+| Building Effective Agents with LangGraph | https://youtu.be/aHCDrAbH_go?si=ArJp0t6yxHQyv35T | [LangChain](https://www.youtube.com/@LangChain) | 
+| How I connected LangGraph Agents to any too using MCP | https://youtu.be/F9mgEFor0cA?si=L7CIajQmfIk4wXRx | [Kenny Liao](https://www.youtube.com/@KennethLiao) |  
+| LangGraph Platform: MCP support for your LangGraph Agents | https://youtu.be/AR4mLbm-0RU?si=FsS2_gc6LaAhEkam | [LangChain](https://www.youtube.com/@LangChain) |  
+| Learn LangChain in 7 easy steps - Beginner Tutorial | https://youtu.be/8BV9TW490nQ?si=maUHLh8ajekuZr7o | [Rabbitmetrics](https://www.youtube.com/@rabbitmetrics) | 
+|Lang Chain|https://www.youtube.com/playlist?list=PLqZXAkvF1bPNQER9mLmDbntNfSpzdDIU5|[Greg Kamradt](https://www.youtube.com/@DataIndependent)|
 
 ### MCP
 
 | **Título** | **URL** | **Canal/Autor** |
 | --- | --- | --- | 
+|Introduction to Model Context Protocol|[https://anthropic.skilljar.com/ai-fluency-framework-foundations](https://anthropic.skilljar.com/introduction-to-model-context-protocol)|[Anthropic](https://anthropic.skilljar.com/)|
+|Model Context Protocol: Advanced Topics|https://anthropic.skilljar.com/model-context-protocol-advanced-topics|[Anthropic](https://anthropic.skilljar.com/)|
 | What is MCP and why you need it | https://youtu.be/Uft4VwGm5qs?si=pAxLgtjnESJkNkXZ | [Kenneth Liao](https://www.youtube.com/@KennethLiao) |  
 | MCP - O que é e como usar MCP com n8n | https://youtu.be/pr5c0AsghjU?si=qWA7-vxWJY-xglJB | [NoCode StartUp](https://www.youtube.com/@nocodestartup) |  
 | Novo laboratório! Aprenda a conectar o MCP ao Copilot Studio | https://youtu.be/jG-XTzXxFCk?si=uKNGrg9_LKuIJf-n | [Microsoft Power Platform](https://www.youtube.com/@mspowerplatform) | 
@@ -129,8 +135,15 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 | Build & Sell n8n AI Agents (*+ hour course, NoCode) | https://youtu.be/Ey18PDiaAYI?si=-V4LaUiAtIERtfhJ | [Nate Herk](https://www.youtube.com/@nateherk) |  
 | MCP n8n AI Agents: Tutorial | https://youtu.be/Mlo41ljP_XY?si=eA4VsjmnPOgXXAK- | [Derek Cheung](https://www.youtube.com/@derekcheungsa) |  
   
-
 ### Python
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- | 
+| Curso rápido de Python para iniciantes com Google Colab | [https://youtu.be/7TLkf1l9wLg](https://www.youtube.com/playlist?list=PLCAhGm8nJ9CDV30W-0q8K4xzmGHIXnW6h) | [Código Quant - Finanças Quantitativas](https://www.youtube.com/@codigoquant) | 
+| Python Crash Course | https://youtu.be/K5KVEU3aaeQ?si=LGbyo3UgBjre7paH | [Programming with Mosh](https://www.youtube.com/@programmingwithmosh) | 
+|Python | https://www.kaggle.com/learn/python| [Kaggle](https://www.kaggle.com/)|
+|Introduction to Algorithms| https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/?authuser=2| MIT OpenCourseWare|
+|Python for Data Science - Course for Beginners (Learn Python, Pandas, NumPy, Matplotlib)|https://www.youtube.com/watch?v=LHBE6Q9XlzI|[freeCodeCamp.org](https://www.youtube.com/@freecodecamp)|
+
 
 ### Ferramentas NoCode/LowCode para IA
 
@@ -148,13 +161,7 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 | Dicas para usuários avançados do Microsoft 365 Copilot | https://youtu.be/MuocazjjZmc?si=nOGp-6rnu53R3ypW | [Microsoft Mechanics](https://www.youtube.com/@MSFTMechanics )| 
 
 
-Python - Introdução
-| **Título** | **URL** | **Canal/Autor** | 
-| --- | --- | --- | 
-| Curso rápido de Python para iniciantes com Google Colab | [https://youtu.be/7TLkf1l9wLg](https://www.youtube.com/playlist?list=PLCAhGm8nJ9CDV30W-0q8K4xzmGHIXnW6h) | [Código Quant - Finanças Quantitativas](https://www.youtube.com/@codigoquant) | 
-| Python Crash Course | https://youtu.be/K5KVEU3aaeQ?si=LGbyo3UgBjre7paH | [Programming with Mosh](https://www.youtube.com/@programmingwithmosh) | 
-
-SaaS - Software como Serviço
+### SaaS - Software como Serviço
 | **Título** | **URL** | **Canal/Autor** | 
 | --- | --- | --- | 
 | SaaS - Dicionário do Programador | https://youtu.be/4Hw3FApvvhE?si=5hRsmBiWN8r7XDXv | [Código Fonte TV](https://www.youtube.com/@codigofontetv) | 
@@ -300,6 +307,8 @@ Criando uma chave (API key) para OpenAI: https://youtu.be/Y9gOf4we3tk
 Anthropic console dashboard: https://console.anthropic.com/dashboard
 
 Criando uma chave (API key) para Anthropic: https://youtu.be/SLjnXQehYos
+
+https://www.anthropic.com/news/mapping-mind-language-model?authuser=2
 
 ### Google AI
 
