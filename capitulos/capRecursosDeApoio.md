@@ -15,20 +15,17 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 | **Título** | **URL** | **Canal/Autor** | 
 | --- | --- | --- | 
 |AI for Everyone| https://www.coursera.org/learn/ai-for-everyone| Andrew NG/Deep Learning AI|
-| Aprenda os conceitos centrais de IA: busca, lógica, planejamento, tomada de decisão | https://lnkd.in/gM892TxC | Stanford University CS221|  
+| Artificial Intelligence | https://lnkd.in/gM892TxC | Stanford University CS221|  
 | How AI Works | https://youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y&si=6sykWpDJqvn0GSc- | [Code.org](https://www.youtube.com/codeorg) | 
-| Lecture 0 - Playing | https://www.youtube.com/live/kQ3K7Y4AQcs?si=2AGHMyFUvJyQieBb | Harvard CS50/David J. Malan |  
-| Lecture 1 - Predicting | https://www.youtube.com/live/oHuvUkMPffI?si=0MPKJ10Aq16vLsWP | Harvard CS50/David J. Malan |  
-| Lecture 2 - Analyzing  | https://www.youtube.com/live/VjH6g63OsME?si=tjv53mXu94ss04Tl | Harvard CS50/David J. Malan |  
-| Lecture 3 - Sensing | https://www.youtube.com/live/L1lQtyqpezI?si=34aVbp1Rwax-6N5w | Harvard CS50/David J. Malan |  
-| Lecture 4 - Communicating | https://www.youtube.com/live/DpKjr08eFuA?si=o-3SBhJtEkduXkIr | Harvard CS50/David J. Malan |  
-| Lecture 5 - Generating  | https://www.youtube.com/live/7LiHUvSqRtI?si=WG1nY8LEmHRdgbvo | Harvard CS50/David J. Malan | 
-| Lecture 6 - Moving | https://www.youtube.com/live/Bpiv2HCe3xA?si=PtDtUKp3hZ9hIUvS | Harvard CS50/David J. Malan |  
+| Fundamentals of AI  | https://www.youtube.com/live/kQ3K7Y4AQcs?si=2AGHMyFUvJyQieBb | Harvard CS50/David J. Malan |  
+
 
 ### Machine Learning
 
-|Aprenda aprendizado supervisionado e não supervisionado + design de algoritmo| https://lnkd.in/gWgtbwZc | Stanford University CS229|
-|Explore a matemática por trás dos sistemas e modelos de aprendizado | https://lnkd.in/gN4v2u9w | Stanford University  CS229M|  
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- |
+|Machine Learning Full| [https://lnkd.in/gWgtbwZc](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU) | Stanford University CS229|
+|Machine Learning | [https://lnkd.in/gN4v2u9w](https://www.youtube.com/playlist?list=PLoROMvodv4rP8nAmISxFINlGKSK4rbLKh) | Stanford University  CS229M|  
 
 ### Deep Learning
 
@@ -52,6 +49,9 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 | Entenda significado, intenção e sistemas de diálogo  |https://lnkd.in/gg2BAW9k| Stanford University CS224U| 
 
 ### Reinforcement Learning
+
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- |
 |Explore Q-learning, MDPs e treine modelos para agir em ambientes dinâmicos| https://lnkd.in/gKhtZYsV | Stanford University CS234 |
 
 ### IA Generativa
@@ -62,6 +62,8 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 
 ### Agentes de IA
 
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- |
 | Construindo agentes de IA no Google Cloud | https://youtu.be/8rlNdKywldQ?si=GXulrr2FP4Sc1sOi | [Google Cloud Tech](https://www.youtube.com/@googlecloudtech) |  
 | Microsoft Copilot Tutorial: What are Copilot Agents? | https://youtu.be/1smnJYGjQTw?si=dNNAD-zqdmFgWldi | [Access Orange](https://www.youtube.com/@accessorange_official)| 
 | Microsoft Copilot: How to create an Agent in minutes | https://youtu.be/FsVf0rBG33g?si=lKWuFo1C1m8kNRnf | [trAin](https://www.youtube.com/@trainaitoday) |  
@@ -69,6 +71,8 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 
 ### IA em Ferramentas de Produtividade
 
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- |
 | Como usar a nova função de IA do Planilhas Google | https://youtu.be/6UNM0DQ2diw?si=hvvDII8oruXxotba | [Peter Horner Google Tech](https://www.youtube.com/@PeterHornerGoogleTech) | 
 | 101 Ways to use AI in your daily life | https://youtu.be/zkXonmqIBFg?si=PXkdoA7rcYfCKb-Y | [Tina Huang](https://www.youtube.com/@TinaHuang1) | 
 | Novo ajuste do Microsoft 365 Copilot: Crie modelos ajustados para escrever como você | https://youtu.be/6udJzJAyT5I?si=EVHiLXqnrjt60QWV | [Microsoft Mechanics](https://www.youtube.com/@MSFTMechanics) | 
