@@ -18,14 +18,15 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 | Artificial Intelligence | https://lnkd.in/gM892TxC | Stanford University CS221|  
 | How AI Works | https://youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y&si=6sykWpDJqvn0GSc- | [Code.org](https://www.youtube.com/codeorg) | 
 | Fundamentals of AI  | https://www.youtube.com/live/kQ3K7Y4AQcs?si=2AGHMyFUvJyQieBb | Harvard CS50/David J. Malan |  
+| Google’s 9 hour Ai prompt enginnering course in 20 minutes | https://youtu.be/p09yRj47kNM?si=IOKaN-JIqKNgzoAO | [Tina Huang](https://www.youtube.com/@TinaHuang1) | 
 
 
 ### Machine Learning
 
 | **Título** | **URL** | **Canal/Autor** | 
 | --- | --- | --- |
-|Machine Learning Full| [https://lnkd.in/gWgtbwZc](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU) | Stanford University CS229|
-|Machine Learning | [https://lnkd.in/gN4v2u9w](https://www.youtube.com/playlist?list=PLoROMvodv4rP8nAmISxFINlGKSK4rbLKh) | Stanford University  CS229M|  
+|ML Supervisionado vs Não Supervisionado + design de algoritmo| [https://lnkd.in/gWgtbwZc](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU) | Stanford University CS229|
+|xplore a matemática por trás dos sistemas e modelos de aprendizado | [https://lnkd.in/gN4v2u9w](https://www.youtube.com/playlist?list=PLoROMvodv4rP8nAmISxFINlGKSK4rbLKh) | Stanford University  CS229M|  
 
 ### Deep Learning
 
@@ -39,6 +40,8 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 
 ### NLP
 
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- |
 | Aprenda como redes neurais impulsionam tradução, Q&A e análise de sentimento | https://lnkd.in/gWvnNXB2 | Stanford University CS224N |  
 
 ### Natural Language  Understanding
@@ -77,6 +80,8 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 | 101 Ways to use AI in your daily life | https://youtu.be/zkXonmqIBFg?si=PXkdoA7rcYfCKb-Y | [Tina Huang](https://www.youtube.com/@TinaHuang1) | 
 | Novo ajuste do Microsoft 365 Copilot: Crie modelos ajustados para escrever como você | https://youtu.be/6udJzJAyT5I?si=EVHiLXqnrjt60QWV | [Microsoft Mechanics](https://www.youtube.com/@MSFTMechanics) | 
 | 9 Copilot App Tips & Tricks | https://youtu.be/HGWeDjHHOxc?si=YsPj6O6mgq8sgCwc | [Kevin Stratvert](https://www.youtube.com/@KevinStratvert) |  
+| Using Notion AI to improve daily work | https://youtu.be/v7GJ8SRq7Mk?si=rsa22Tf8zFDfEZHe | [Notion](https://www.youtube.com/@Notion) | 
+| Perplexity Labs: A nova ferramenta de pesquisa de IA que cria aplicativos iterativos | https://youtu.be/84kOcsRJ7i4?si=aJmOynm_iuEDB7S_ | [Lawton Learns](https://www.youtube.com/@LawtonSolutions) | 
 
 ### Graph Rag e Knowledge
 
@@ -91,6 +96,7 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 | Extraindo gráficos de conhecimento de texto com GPT4o | https://youtu.be/O-T_6KOXML4?si=EXD0Ge8HkGxtT6tB | [Thuvu5](https://www.youtube.com/@Thuvu5) | 
 | Graph RAG Explained: AI retrieval with KG & Cypher | https://youtu.be/tTwBKXHIiMg?si=hwjfL9J2ez7DDsbI | [IBMTechnology](https://www.youtube.com/@IBMTechnology) |  
 | AI Engineer World’s Fair 2025 - GraphRAG | https://www.youtube.com/live/RR5le0K4Wtw?si=cct3GMIUOA1B-1Io | [aiDotEngineer](https://www.youtube.com/@aiDotEngineer) |  
+| Neo4j Live: How to build a Knowledge Graph | https://www.youtube.com/live/1ogNyPWUP7g?si=y3TgKR8B_kPro4OJ | [Neo4j](https://www.youtube.com/@neo4j) |  
 
 ### Lang Graph/Lang Chain
 
@@ -101,16 +107,36 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 | How I connected LangGraph Agents to any too using MCP | https://youtu.be/F9mgEFor0cA?si=L7CIajQmfIk4wXRx | https://www.youtube.com/@KennethLiao |  
 | LangGraph Platform: MCP support for your LangGraph Agents | https://youtu.be/AR4mLbm-0RU?si=FsS2_gc6LaAhEkam | https://www.youtube.com/@LangChain |  
 | Learn LangChain in 7 easy steps - Beginner Tutorial | https://youtu.be/8BV9TW490nQ?si=maUHLh8ajekuZr7o | https://www.youtube.com/@rabbitmetrics | 
+
 ### MCP
+
+| **Título** | **URL** | **Canal/Autor** |
+| --- | --- | --- | 
+| What is MCP and why you need it | https://youtu.be/Uft4VwGm5qs?si=pAxLgtjnESJkNkXZ | [Kenneth Liao](https://www.youtube.com/@KennethLiao) |  
+| MCP - O que é e como usar MCP com n8n | https://youtu.be/pr5c0AsghjU?si=qWA7-vxWJY-xglJB | [NoCode StartUp](https://www.youtube.com/@nocodestartup) |  
+| Novo laboratório! Aprenda a conectar o MCP ao Copilot Studio | https://youtu.be/jG-XTzXxFCk?si=uKNGrg9_LKuIJf-n | [Microsoft Power Platform](https://www.youtube.com/@mspowerplatform) | 
+| Neo4j Live: MCP for LLM Agents, APIs & Graphs | https://www.youtube.com/live/6igWn_dckpc?si=Okl8Y18XeEIdoOCA | [Neo4j](https://www.youtube.com/@neo4j) | 
 
 ### n8n
 
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- | 
+| Tutorial completo do n8n: criando agentes de IA em 2025 para iniciantes | https://youtu.be/ZbIVOy_GPyQ?si=WAzyVJQqPI74f4Ny | [AI Foundations](https://www.youtube.com/@ai-foundations) | 
+| n8n just released native MCP trigger ad AI Agent Tool | https://youtu.be/45WPU7P-1QQ?si=uD2R8kh9USTxYC8i | [n8n](https://www.youtube.com/@n8n-io) |
+| Sistemas multiagentes nunca foram tão fáceis de construir (n8n, sem código) | https://youtu.be/0iUNOmeU7O4?si=7h4XGxqVTYi5LUiw | [Nate Herk](https://www.youtube.com/@nateherk) |  
+| Aprenda hoje n8n e automatize quase tudo | https://youtu.be/UDWEAMwS7rg?si=hwaDc7CGQmMeVNHg | [Código Fonte TV](https://www.youtube.com/@codigofontetv) |  
+| n8n para iniciantes! Crie automações com IA e ganhe dinheiro na sua empresa | https://youtu.be/IID-ifxWkKk?si=vhqE38HW01tpg_gu | [Darlan Evandro](https://www.youtube.com/@DarlanEvandro) |  
+| Build & Sell n8n AI Agents (*+ hour course, NoCode) | https://youtu.be/Ey18PDiaAYI?si=-V4LaUiAtIERtfhJ | [Nate Herk](https://www.youtube.com/@nateherk) |  
+| MCP n8n AI Agents: Tutorial | https://youtu.be/Mlo41ljP_XY?si=eA4VsjmnPOgXXAK- | [Derek Cheung](https://www.youtube.com/@derekcheungsa) |  
+  
+
 ### Python
 
-### No code AI
+### Ferramentas NoCode/LowCode para IA
 
-### Neo4j
-
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- | 
+| Ferramentas NoCode para IA | https://youtu.be/NKKXje4qrq4?si=TMMBAlDX7cm6RN1f | [NoCode StartUp](https://www.youtube.com/@nocodestartup) |  
 
 ### Microsoft 365 Copilot
 | **Título** | **URL** | **Canal/Autor** | 
@@ -121,70 +147,18 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 | Take a tour of the Microsoft 365 Copilot App | https://youtu.be/W-FBOUh-S0o?si=w96e7COSNzorZ9W8 | https://www.youtube.com/@Microsoft365 |  
 | Dicas para usuários avançados do Microsoft 365 Copilot | https://youtu.be/MuocazjjZmc?si=nOGp-6rnu53R3ypW | [Microsoft Mechanics](https://www.youtube.com/@MSFTMechanics )| 
 
-Model Context Protocol (MCP)
-| **Título** | **URL** | **Canal/Autor** |
-| --- | --- | --- | 
-| What is MCP and why you need it | https://youtu.be/Uft4VwGm5qs?si=pAxLgtjnESJkNkXZ | https://www.youtube.com/@KennethLiao |  
-| MCP - O que é e como usar MCP com n8n | https://youtu.be/pr5c0AsghjU?si=qWA7-vxWJY-xglJB | https://www.youtube.com/@nocodestartup |  
-| Novo laboratório! Aprenda a conectar o MCP ao Copilot Studio | https://youtu.be/jG-XTzXxFCk?si=uKNGrg9_LKuIJf-n | https://www.youtube.com/@mspowerplatform | 
-
-n8n
-| **Título** | **URL** | **Canal/Autor** | 
-| --- | --- | --- | 
-| Tutorial completo do n8n: criando agentes de IA em 2025 para iniciantes | https://youtu.be/ZbIVOy_GPyQ?si=WAzyVJQqPI74f4Ny | https://www.youtube.com/@ai-foundations | 
-| Sistemas multiagentes nunca foram tão fáceis de construir (n8n, sem código) | https://youtu.be/0iUNOmeU7O4?si=7h4XGxqVTYi5LUiw | https://www.youtube.com/@nateherk |  
-| Aprenda hoje n8n e automatize quase tudo | https://youtu.be/UDWEAMwS7rg?si=hwaDc7CGQmMeVNHg | https://www.youtube.com/@codigofontetv |  
-| n8n para iniciantes! Crie automações com IA e ganhe dinheiro na sua empresa | https://youtu.be/IID-ifxWkKk?si=vhqE38HW01tpg_gu | https://www.youtube.com/@DarlanEvandro |  
-| Build & Sell n8n AI Agents (*+ hour course, NoCode) | https://youtu.be/Ey18PDiaAYI?si=-V4LaUiAtIERtfhJ | https://www.youtube.com/@nateherk |  
-| MCP n8n AI Agents: Tutorial | https://youtu.be/Mlo41ljP_XY?si=eA4VsjmnPOgXXAK- | https://www.youtube.com/@derekcheungsa |  
-| n8n just released native MCP trigger ad AI Agent Tool | https://youtu.be/45WPU7P-1QQ?si=uD2R8kh9USTxYC8i | https://www.youtube.com/@n8n-io |  
-
-Neo4j
-| **Título** | **URL** | **Canal/Autor** | 
-| --- | --- | --- |
-| Neo4j Live: MCP for LLM Agents, APIs & Graphs | https://www.youtube.com/live/6igWn_dckpc?si=Okl8Y18XeEIdoOCA | https://www.youtube.com/@neo4j | 
-| Neo4j Live: How to build a Knowledge Graph | https://www.youtube.com/live/1ogNyPWUP7g?si=y3TgKR8B_kPro4OJ | https://www.youtube.com/@neo4j |  
-
-
-NoCode AI
-| **Título** | **URL** | **Canal/Autor** | 
-| --- | --- | --- | 
-| Ferramentas NoCode para IA | https://youtu.be/NKKXje4qrq4?si=TMMBAlDX7cm6RN1f | https://www.youtube.com/@nocodestartup |  
-
-
-Notion
-| **Título** | **URL** | **Canal/Autor** | 
-| --- | --- | --- |
-| Using Notion AI to improve daily work | https://youtu.be/v7GJ8SRq7Mk?si=rsa22Tf8zFDfEZHe | https://www.youtube.com/@Notion | 
-
-
-Perplexity
-| **Título** | **URL** | **Canal/Autor** |
-| --- | --- | --- | 
-| Perplexity Labs: A nova ferramenta de pesquisa de IA que cria aplicativos iterativos | https://youtu.be/84kOcsRJ7i4?si=aJmOynm_iuEDB7S_ | https://www.youtube.com/@LawtonSolutions | 
-
-
-Prompt Engineering
-| **Título** | **URL** | **Canal/Autor** | 
-| --- | --- | --- |
-| Google’s 9 hour Ai prompt enginnering course in 20 minutes | https://youtu.be/p09yRj47kNM?si=IOKaN-JIqKNgzoAO | https://www.youtube.com/@TinaHuang1 | 
-
 
 Python - Introdução
 | **Título** | **URL** | **Canal/Autor** | 
 | --- | --- | --- | 
-| AULA 1: Google Colab, Strings, Operadores Matemáticos | https://youtu.be/7TLkf1l9wLg | https://www.youtube.com/@codigoquant | 
-| AULA 2: Variáveis, Listas e Tuplas | https://youtu.be/LRUNe_yS-dU | https://www.youtube.com/@codigoquant |  
-| AULA 3: Dicionários, Operadores Lógicos, IF / ELSE / ELIF | https://youtu.be/np7ic8HFo5o | https://www.youtube.com/@codigoquant |  
-| AULA 4: FOR, WHILE e Funções | https://youtu.be/M-XmfQn1L1w | https://www.youtube.com/@codigoquant |
-| AULA 5: BIBLIOTECAS | https://youtu.be/DbL2rotVrAw | https://www.youtube.com/@codigoquant | 
-| Python Crash Course | https://youtu.be/K5KVEU3aaeQ?si=LGbyo3UgBjre7paH | https://www.youtube.com/@programmingwithmosh | 
+| Curso rápido de Python para iniciantes com Google Colab | [https://youtu.be/7TLkf1l9wLg](https://www.youtube.com/playlist?list=PLCAhGm8nJ9CDV30W-0q8K4xzmGHIXnW6h) | [Código Quant - Finanças Quantitativas](https://www.youtube.com/@codigoquant) | 
+| Python Crash Course | https://youtu.be/K5KVEU3aaeQ?si=LGbyo3UgBjre7paH | [Programming with Mosh](https://www.youtube.com/@programmingwithmosh) | 
 
 SaaS - Software como Serviço
 | **Título** | **URL** | **Canal/Autor** | 
 | --- | --- | --- | 
-| SaaS - Dicionário do Programador | https://youtu.be/4Hw3FApvvhE?si=5hRsmBiWN8r7XDXv | https://www.youtube.com/@codigofontetv | 
-| Micro-SaaS de IA em 8 passos | https://youtu.be/HMjzdeiNdKc?si=xhp9TxgG1qTduzTc | https://www.youtube.com/@microsaas |  
+| SaaS - Dicionário do Programador | https://youtu.be/4Hw3FApvvhE?si=5hRsmBiWN8r7XDXv | [Código Fonte TV](https://www.youtube.com/@codigofontetv) | 
+| Micro-SaaS de IA em 8 passos | https://youtu.be/HMjzdeiNdKc?si=xhp9TxgG1qTduzTc | [Bruno Okamoto](https://www.youtube.com/@microsaas) |  
 
 ### Canva
 
