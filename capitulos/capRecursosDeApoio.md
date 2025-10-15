@@ -14,7 +14,9 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 
 | **Título** | **URL** | **Canal/Autor** | 
 | --- | --- | --- | 
-|AI for Everyone| https://www.coursera.org/learn/ai-for-everyone A| Andrew NG/Deep Learning AI|
+|AI for Everyone| https://www.coursera.org/learn/ai-for-everyone| Andrew NG/Deep Learning AI|
+| Aprenda os conceitos centrais de IA: busca, lógica, planejamento, tomada de decisão | https://lnkd.in/gM892TxC | Stanford University CS221|  
+| How AI Works | https://youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y&si=6sykWpDJqvn0GSc- | [Code.org](https://www.youtube.com/codeorg) | 
 | Lecture 0 - Playing | https://www.youtube.com/live/kQ3K7Y4AQcs?si=2AGHMyFUvJyQieBb | Harvard CS50/David J. Malan |  
 | Lecture 1 - Predicting | https://www.youtube.com/live/oHuvUkMPffI?si=0MPKJ10Aq16vLsWP | Harvard CS50/David J. Malan |  
 | Lecture 2 - Analyzing  | https://www.youtube.com/live/VjH6g63OsME?si=tjv53mXu94ss04Tl | Harvard CS50/David J. Malan |  
@@ -25,78 +27,55 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 
 ### Machine Learning
 
+|Aprenda aprendizado supervisionado e não supervisionado + design de algoritmo| https://lnkd.in/gWgtbwZc | Stanford University CS229|
+|Explore a matemática por trás dos sistemas e modelos de aprendizado | https://lnkd.in/gN4v2u9w | Stanford University  CS229M|  
+
 ### Deep Learning
+
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- |
+| Introduction to Deep Learning | [https://youtu.be/J-9EbJBxcbg?si=OfWk4ETprZocX4nh](https://introtodeeplearning.com/) | MIT 6.S191|  
+| Domine redes neurais, CNNs, RNNs e melhores práticas  | https://lnkd.in/gYyD2Fwa | Stanford University CS230|  
+
 
 ### LLM
 
 ### NLP
 
-### NLU
-
-### IA Generativa
-
-### Agentes de IA
-
-### Graph Rag e Knowledge
-
-### Lang Graph/Lang Chain
-
-### MCP
-
-### n8n
-
-### Python
-
-### No code AI
-
-### Neo4j
-
-
-| **Título** | **URL** | **Autor/Canal/Instituição** | 
-| ---------- | -------- | --- | 
-| Curso de Canva gratis e completo do zero ao avançado | https://youtu.be/L1XHqZf_AAU?si=K07pDWfxp20oAMRG |  [Coisas de Designer](https://www.youtube.com/@COISASDEDESIGNER) | 
-| Nova integração Canva + ChatGPT (MCP Server) | https://youtu.be/s2HjjSnkWEM?si=JzwMSQ8Z1jlxUlR- | [Darlan Evandro](https://www.youtube.com/@DarlanEvandro) | 
-| Atualização insana! VEO3 integrado ao Canva | https://youtu.be/1RG7GAx9KUs?si=5f7fGMOiMy3LPQSi |[Darlan Evandro](https://www.youtube.com/@DarlanEvandro) | 
-| Boas-vindas ao Canva Educação | https://youtu.be/Pxr3jkH0Tj4?si=Q1rNZ48EDySUQjJq | [Canva](https://www.youtube.com/@canva) |  
-| Curso de Canva do Zero para iniciantes | https://youtu.be/lGiyNbBSF-M?si=qGfXbGDgqnTqDGfb | [Darlan Evandro](https://www.youtube.com/@DarlanEvandro) |  
-
-
-
-
-### Deep Learning
-
-
-| **Título** | **URL** | **Canal/Autor** | 
-| --- | --- | --- |
-| Introduction to Deep Learning | [https://youtu.be/J-9EbJBxcbg?si=OfWk4ETprZocX4nh](https://introtodeeplearning.com/) | MIT 6.S191|  
+| Aprenda como redes neurais impulsionam tradução, Q&A e análise de sentimento | https://lnkd.in/gWvnNXB2 | Stanford University CS224N |  
 
 ### Natural Language  Understanding
 
 | **Título** | **URL** | **Canal/Autor** | 
 | --- | --- | --- |
 |Natural Language Processing | https://www.youtube.com/playlist?list=PLoROMvodv4rObpMCir6rNNUlFAn56Js20 | Stanford CS224U|  
+| Entenda significado, intenção e sistemas de diálogo  |https://lnkd.in/gg2BAW9k| Stanford University CS224U| 
 
+### Reinforcement Learning
+|Explore Q-learning, MDPs e treine modelos para agir em ambientes dinâmicos| https://lnkd.in/gKhtZYsV | Stanford University CS234 |
 
-Stanford University
-| **Título** | **URL** | **Canal/Autor** | 
-| --- | --- | --- | 
-| Artificial Intelligence – CS221 Aprenda os conceitos centrais de IA: busca, lógica, planejamento, tomada de decisão | https://lnkd.in/gM892TxC | Stanford University|  
-| Machine Learning – CS229 - Aprenda aprendizado supervisionado e não supervisionado + design de algoritmo| https://lnkd.in/gWgtbwZc | Stanford University |  
-| Deep Learning – CS230 Domine redes neurais, CNNs, RNNs e melhores práticas  | https://lnkd.in/gYyD2Fwa | Stanford University |  
-| Machine Learning Theory – CS229M Explore a matemática por trás dos sistemas e modelos de aprendizado | https://lnkd.in/gN4v2u9w | Stanford University|  
-| Reinforcement Learning – CS234 Explore Q-learning, MDPs e treine modelos para agir em ambientes dinâmicos| https://lnkd.in/gKhtZYsV | Stanford University |  
-| Natural Language Understanding – CS224U Entenda significado, intenção e sistemas de diálogo  |https://lnkd.in/gg2BAW9k| Stanford University | 
-|  NLP with Deep Learning – CS224N Aprenda como redes neurais impulsionam tradução, Q&A e análise de sentimento | https://lnkd.in/gWvnNXB2 | Stanford University |  
+### IA Generativa
 
-Google AI Studio
-| **Título** | **URL** | **Canal/Autor** | 
-| --- | --- | --- | 
-| Construindo agentes de IA no Google Cloud | https://youtu.be/8rlNdKywldQ?si=GXulrr2FP4Sc1sOi | https://www.youtube.com/@googlecloudtech |  
-| Conheça Gemini no Chrome | https://youtu.be/BBjM0SHg-aU?si=95DxG32XG03ubDNk | https://www.youtube.com/@GoogleChrome |  
-|  |  |  |  |  |  |
-| Como usar a nova função de IA do Planilhas Google | https://youtu.be/6UNM0DQ2diw?si=hvvDII8oruXxotba | https://www.youtube.com/@PeterHornerGoogleTech |  
+| **Título** | **URL** | **Autor/Canal/Instituição** | 
+| ---------- | -------- | --- | 
+| Conheça Gemini no Chrome | https://youtu.be/BBjM0SHg-aU?si=95DxG32XG03ubDNk | [Google Chrome](https://www.youtube.com/@GoogleChrome)|  
 
-Graph RAG & Knowledge Graphs
+### Agentes de IA
+
+| Construindo agentes de IA no Google Cloud | https://youtu.be/8rlNdKywldQ?si=GXulrr2FP4Sc1sOi | [Google Cloud Tech](https://www.youtube.com/@googlecloudtech) |  
+| Microsoft Copilot Tutorial: What are Copilot Agents? | https://youtu.be/1smnJYGjQTw?si=dNNAD-zqdmFgWldi | [Access Orange](https://www.youtube.com/@accessorange_official)| 
+| Microsoft Copilot: How to create an Agent in minutes | https://youtu.be/FsVf0rBG33g?si=lKWuFo1C1m8kNRnf | [trAin](https://www.youtube.com/@trainaitoday) |  
+| Agent Flows in Copilot Studio | https://youtu.be/VJTKyk3Pr7s?si=dV9aDe5pGLvOJkHX | [Microsoft Copilot Studio](https://www.youtube.com/@MicrosoftCopilotStudio) | 
+
+### IA em Ferramentas de Produtividade
+
+| Como usar a nova função de IA do Planilhas Google | https://youtu.be/6UNM0DQ2diw?si=hvvDII8oruXxotba | [Peter Horner Google Tech](https://www.youtube.com/@PeterHornerGoogleTech) | 
+| 101 Ways to use AI in your daily life | https://youtu.be/zkXonmqIBFg?si=PXkdoA7rcYfCKb-Y | [Tina Huang](https://www.youtube.com/@TinaHuang1) | 
+| Novo ajuste do Microsoft 365 Copilot: Crie modelos ajustados para escrever como você | https://youtu.be/6udJzJAyT5I?si=EVHiLXqnrjt60QWV | [Microsoft Mechanics](https://www.youtube.com/@MSFTMechanics) | 
+| 9 Copilot App Tips & Tricks | https://youtu.be/HGWeDjHHOxc?si=YsPj6O6mgq8sgCwc | [Kevin Stratvert](https://www.youtube.com/@KevinStratvert) |  
+
+### Graph Rag e Knowledge
+
 | **Título** | **URL** | **Canal/Autor** | 
 | --- | --- | --- |
 | Intro to Graph RAG - Zach Blumenfeld | https://youtu.be/J-9EbJBxcbg?si=OfWk4ETprZocX4nh | [aiDotEngineer](https://www.youtube.com/@aiDotEngineer) |  
@@ -109,14 +88,8 @@ Graph RAG & Knowledge Graphs
 | Graph RAG Explained: AI retrieval with KG & Cypher | https://youtu.be/tTwBKXHIiMg?si=hwjfL9J2ez7DDsbI | [IBMTechnology](https://www.youtube.com/@IBMTechnology) |  
 | AI Engineer World’s Fair 2025 - GraphRAG | https://www.youtube.com/live/RR5le0K4Wtw?si=cct3GMIUOA1B-1Io | [aiDotEngineer](https://www.youtube.com/@aiDotEngineer) |  
 
-IA Generativa
-| **Título** | **URL** | **Canal/Autor** |
-| --- | --- | --- | 
-| IA para todos | https://www.coursera.org/learn/ai-for-everyone | Coursera |  |  |  |
-| How AI Works | https://youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y&si=6sykWpDJqvn0GSc- | https://www.youtube.com/codeorg | 
+### Lang Graph/Lang Chain
 
-
-LangGraph / LangChain
 | **Título** | **URL** | **Canal/Autor** | 
 | --- | --- | --- | 
 | LangGraph Complete Course for Beginners: Complex AI Agents with Python | https://youtu.be/jGg_1h0qzaM?si=lUzCGTbYNOEnXPLI | https://www.youtube.com/@freecodecamp | 
@@ -124,33 +97,32 @@ LangGraph / LangChain
 | How I connected LangGraph Agents to any too using MCP | https://youtu.be/F9mgEFor0cA?si=L7CIajQmfIk4wXRx | https://www.youtube.com/@KennethLiao |  
 | LangGraph Platform: MCP support for your LangGraph Agents | https://youtu.be/AR4mLbm-0RU?si=FsS2_gc6LaAhEkam | https://www.youtube.com/@LangChain |  
 | Learn LangChain in 7 easy steps - Beginner Tutorial | https://youtu.be/8BV9TW490nQ?si=maUHLh8ajekuZr7o | https://www.youtube.com/@rabbitmetrics | 
+### MCP
 
-Large Language Models (LLM)
-| **Título** | **URL** | **Canal/Autor** | 
-| --- | --- | --- | 
-| 101 Ways to use AI in your daily life | https://youtu.be/zkXonmqIBFg?si=PXkdoA7rcYfCKb-Y | https://www.youtube.com/@TinaHuang1 | 
+### n8n
+
+### Python
+
+### No code AI
+
+### Neo4j
 
 
-Microsoft 365 Copilot
+### Microsoft 365 Copilot
 | **Título** | **URL** | **Canal/Autor** | 
 | --- | --- | --- |
-| Introducing Microsoft Copilot Tuning | https://youtu.be/mY7Du9Bd-rY?si=LGkipkGR-jgJa9xu | https://www.youtube.com/@Microsoft365 | 
-| Microsoft Copilot Tutorial: What are Copilot Agents? | https://youtu.be/1smnJYGjQTw?si=dNNAD-zqdmFgWldi | https://www.youtube.com/@accessorange_official |  
+| Introducing Microsoft Copilot Tuning | https://youtu.be/mY7Du9Bd-rY?si=LGkipkGR-jgJa9xu | [Microsoft 365](https://www.youtube.com/@Microsoft365) | 
 | Analyst: A reasoning agent in Microsoft 365 Copilot | https://youtu.be/9O3CoP8rEkY?si=XysuaaZxSHWhiKvA | https://www.youtube.com/@Microsoft365 | 
-| Microsoft Copilot: How to create an Agent in minutes | https://youtu.be/FsVf0rBG33g?si=lKWuFo1C1m8kNRnf | https://www.youtube.com/@trainaitoday |  
 | Computer use in Copilot Studio | https://youtu.be/lWCbtGHlw9I?si=Xi3gSGc231O3Odva | https://www.youtube.com/@MicrosoftCopilotStudio |  
-| Novo laboratório! Aprenda a conectar o MCP ao Copilot Studio | https://youtu.be/jG-XTzXxFCk?si=uKNGrg9_LKuIJf-n | https://www.youtube.com/@mspowerplatform | 
 | Take a tour of the Microsoft 365 Copilot App | https://youtu.be/W-FBOUh-S0o?si=w96e7COSNzorZ9W8 | https://www.youtube.com/@Microsoft365 |  
-| Novo ajuste do Microsoft 365 Copilot: Crie modelos ajustados para escrever como você | https://youtu.be/6udJzJAyT5I?si=EVHiLXqnrjt60QWV | https://www.youtube.com/@MSFTMechanics | 
-| Agent Flows in Copilot Studio | https://youtu.be/VJTKyk3Pr7s?si=dV9aDe5pGLvOJkHX | https://www.youtube.com/@MicrosoftCopilotStudio | 
-| 9 Copilot App Tips & Tricks | https://youtu.be/HGWeDjHHOxc?si=YsPj6O6mgq8sgCwc | https://www.youtube.com/@KevinStratvert |  
-| Dicas para usuários avançados do Microsoft 365 Copilot | https://youtu.be/MuocazjjZmc?si=nOGp-6rnu53R3ypW | https://www.youtube.com/@MSFTMechanics | 
+| Dicas para usuários avançados do Microsoft 365 Copilot | https://youtu.be/MuocazjjZmc?si=nOGp-6rnu53R3ypW | [Microsoft Mechanics](https://www.youtube.com/@MSFTMechanics )| 
 
 Model Context Protocol (MCP)
 | **Título** | **URL** | **Canal/Autor** |
 | --- | --- | --- | 
 | What is MCP and why you need it | https://youtu.be/Uft4VwGm5qs?si=pAxLgtjnESJkNkXZ | https://www.youtube.com/@KennethLiao |  
 | MCP - O que é e como usar MCP com n8n | https://youtu.be/pr5c0AsghjU?si=qWA7-vxWJY-xglJB | https://www.youtube.com/@nocodestartup |  
+| Novo laboratório! Aprenda a conectar o MCP ao Copilot Studio | https://youtu.be/jG-XTzXxFCk?si=uKNGrg9_LKuIJf-n | https://www.youtube.com/@mspowerplatform | 
 
 n8n
 | **Título** | **URL** | **Canal/Autor** | 
@@ -209,6 +181,16 @@ SaaS - Software como Serviço
 | --- | --- | --- | 
 | SaaS - Dicionário do Programador | https://youtu.be/4Hw3FApvvhE?si=5hRsmBiWN8r7XDXv | https://www.youtube.com/@codigofontetv | 
 | Micro-SaaS de IA em 8 passos | https://youtu.be/HMjzdeiNdKc?si=xhp9TxgG1qTduzTc | https://www.youtube.com/@microsaas |  
+
+### Canva
+
+| **Título** | **URL** | **Autor/Canal/Instituição** | 
+| ---------- | -------- | --- | 
+| Curso de Canva gratis e completo do zero ao avançado | https://youtu.be/L1XHqZf_AAU?si=K07pDWfxp20oAMRG |  [Coisas de Designer](https://www.youtube.com/@COISASDEDESIGNER) | 
+| Nova integração Canva + ChatGPT (MCP Server) | https://youtu.be/s2HjjSnkWEM?si=JzwMSQ8Z1jlxUlR- | [Darlan Evandro](https://www.youtube.com/@DarlanEvandro) | 
+| Atualização insana! VEO3 integrado ao Canva | https://youtu.be/1RG7GAx9KUs?si=5f7fGMOiMy3LPQSi |[Darlan Evandro](https://www.youtube.com/@DarlanEvandro) | 
+| Boas-vindas ao Canva Educação | https://youtu.be/Pxr3jkH0Tj4?si=Q1rNZ48EDySUQjJq | [Canva](https://www.youtube.com/@canva) |  
+| Curso de Canva do Zero para iniciantes | https://youtu.be/lGiyNbBSF-M?si=qGfXbGDgqnTqDGfb | [Darlan Evandro](https://www.youtube.com/@DarlanEvandro) |  
 
 ---
 
