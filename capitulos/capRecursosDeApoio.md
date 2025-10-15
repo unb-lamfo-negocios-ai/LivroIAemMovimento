@@ -250,34 +250,51 @@ Notícias e análises sobre o ecossistema brasileiro de startups. Cobertura de i
 
 **[Y Combinator Startup School](https://aprender3.unb.br/mod/url/view.php?id=1359380)**  
 Curso online gratuito para iniciar startups, baseado em 15 anos de experiência da YC. Conteúdo prático sobre MVP, captação de recursos, crescimento de usuários e conexão com potenciais cofundadores.
-## O que é IA Generativa em Negócios?
 
-### Blog BuskTech - IA Generativa: Um Guia Completo
+## Guias Introdutórios sobre IA Generativa
 
-https://busktech.com.br/ia-generativa-um-guia-completo/
+Para quem está dando os primeiros passos no universo da IA generativa, estes guias oferecem explicações acessíveis e estruturadas sobre conceitos fundamentais, funcionamento e aplicações práticas da tecnologia.
 
-### Código Simples .Net - Um guia de estudos resumido sobre IA Generativa
+**[BuskTech - IA Generativa: Um Guia Completo](https://busktech.com.br/ia-generativa-um-guia-completo/)**  
+Guia abrangente que explica desde os fundamentos até aplicações práticas de IA generativa. Material didático ideal para iniciantes que buscam compreensão técnica sem perder a clareza.
 
-https://codigosimples.net/2024/06/03/um-guia-de-estudos-resumido-sobre-ia-generativa/
+**[Código Simples .Net - Guia de Estudos Resumido sobre IA Generativa](https://codigosimples.net/2024/06/03/um-guia-de-estudos-resumido-sobre-ia-generativa/)**  
+Roteiro de estudos condensado e objetivo para desenvolvedores. Apresenta os principais conceitos e recursos de forma direta, facilitando o aprendizado estruturado.
 
-### IBM - O que é a IA generativa?
+**[IBM - O que é IA Generativa?](https://www.ibm.com/br-pt/think/topics/generative-ai)**  
+Explicação corporativa e técnica da IBM sobre IA generativa. Aborda conceitos, tecnologias subjacentes e casos de uso empresariais com a perspectiva de uma das líderes globais em tecnologia.
 
-https://www.ibm.com/br-pt/think/topics/generative-ai
 
----
+Explorar ferramentas práticas ajuda a transformar conceitos em soluções reais. Estes diretórios mantêm curadoria atualizada de aplicações, modelos e implementações que você pode experimentar imediatamente.
 
-## Catálogos e Diretórios de Ferramentas de IA
+**[Futurepedia](https://www.futurepedia.io/)**  
+Catálogo atualizado diariamente com ferramentas emergentes de IA. Organizado por categorias e casos de uso, facilita a descoberta de soluções para necessidades específicas.
 
-Explorar ferramentas práticas ajuda a transformar conceitos em soluções reais.  
+**[There's an AI for That](https://theresanaiforthat.com/)**  
+Diretório com milhares de aplicações organizadas por categoria e função. Interface simples para encontrar rapidamente a ferramenta certa para cada tarefa.
 
-- **Futurepedia** — catálogo atualizado com ferramentas emergentes de IA {cite}`futurepedia2023`.  
-- **There’s an AI for That** — diretório com milhares de aplicações organizadas por categoria {cite}`theres2023`.  
-- **Papers with Code** — repositório que conecta artigos científicos a implementações de código {cite}`papers2020`.  
+**[Papers with Code](https://paperswithcode.com/)**  
+Repositório que conecta artigos científicos a implementações práticas de código. Essencial para quem quer ir além da teoria e experimentar modelos de ponta com código reproduzível.
 
-:::{tip}
-Comece explorando ferramentas voltadas ao **seu contexto de trabalho ou estudo**.  
-Isso evita dispersão e aumenta a chance de aplicar resultados rapidamente.  
+**[Hugging Face Hub](https://huggingface.co/models)**  
+Maior repositório de modelos de IA open-source. Acesso direto a milhares de modelos pré-treinados, datasets e demos interativas. Inclui seção de [trending papers](https://huggingface.co/papers) com os artigos mais relevantes da comunidade.
+
+**[AI Tools Directory](https://aitoolsdirectory.com/)**  
+Diretório focado em ferramentas no-code e low-code para IA. Ideal para não-desenvolvedores que buscam aplicar IA sem programação.
+
+**[AI Valley](https://aivalley.ai/)**  
+Curadoria de ferramentas com foco em produtividade e aplicações empresariais. Inclui reviews e comparações entre soluções similares.
+
+:::{admonition} 💡 Como usar estes diretórios eficientemente
+:class: tip
+
+- **Para experimentação:** Comece com Futurepedia ou There's an AI for That para encontrar ferramentas prontas
+- **Para desenvolvimento:** Use Hugging Face e Papers with Code para acessar modelos e código
+- **Para decisões empresariais:** Consulte AI Valley para comparações e reviews detalhados
+- Configure alertas ou visite semanalmente para acompanhar novas ferramentas e tendências
 :::
+
+A tabela abaixo apresenta ferramentas essenciais de IA generativa, organizadas por categoria e tipo de aplicação, para ajudá-lo a escolher as melhores opções conforme suas necessidades de aprendizado e uso prático.
 
 | **Nome da Ferramenta** | **Categoria** | **Plataforma** | **Aplicação** | **Tipo** | **URL** | **Comentários Didáticos** |
 | --- | --- | --- | --- | --- | --- | --- |
