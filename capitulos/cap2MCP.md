@@ -194,32 +194,22 @@ A arquitetura central do MCP se baseia em uma estrutura cliente-servidor robusta
 5. **Execução:** Cliente invoca ferramentas do servidor conforme necessário
 6. **Resultado:** Servidor processa e retorna resultados ao cliente/host
 
-```{figure} ../imagens/hierarquia_de_IAs.jpeg
----height: 150px
-name: directive-fig
----Figura – Como a IA Generativa se Encaixa no Universo da IA.```
+
 
 
 ```{figure} ../imagens/client_server_arq.png
 ---height: 150px
 name: client_server_arq
----Exemplo visual da arquitetura. Fonte: ```
-
-
-<span style="font-size: 0.8em; color: gray;">Fonte: https://learn.deeplearning.ai/courses/mcp-build-rich-context-ai-apps-with-anthropic/lesson/xtt6w/mcp-architecture</span>
+---Exemplo visual da arquitetura. Fonte: Adaptado de {cite}`deeplearningai2024mcp`. ```
 ```
 
 Na prática:
 
-```{figure} imagens/mcp_na_pratica.png
-:alt: Client server Architecture
-:align: center
-:name: mcp_na_pratica
+```{figure} ../imagens/mcp_na_pratica.png
+---height: 150px
+name: mcp_na_pratica
+---MCP na prática. Fonte: Adaptado de {cite}`sakal2024mcp`.```
 
-MCP na prática
-
-<span style="font-size: 0.8em; color: gray;">Fonte: [https://learn.deeplearning.ai/courses/mcp-build-rich-context-ai-apps-with-anthropic/lesson/xtt6w/mcp-architecture](https://norahsakal.com/blog/mcp-vs-api-model-context-protocol-explained/)</span>
-```
 
 #### Componentes Primários do protocolo
 
