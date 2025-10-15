@@ -10,61 +10,6 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 
 ## Vídeos e Cursos sobre IA
 
-### Fundamentos de IA
-
-| **Título** | **URL** | **Canal/Autor** | 
-| --- | --- | --- | 
-|AI for Everyone| https://www.coursera.org/learn/ai-for-everyone| Andrew NG/Deep Learning AI|
-| Artificial Intelligence | https://lnkd.in/gM892TxC | Stanford University CS221|  
-| How AI Works | [https://youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y&si=6sykWpDJqvn0GSc-](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) | [Code.org](https://www.youtube.com/codeorg) | 
-| Fundamentals of AI  | https://www.youtube.com/live/kQ3K7Y4AQcs?si=2AGHMyFUvJyQieBb | Harvard CS50/David J. Malan |  
-| Google’s 9 hour Ai prompt enginnering course in 20 minutes | https://youtu.be/p09yRj47kNM?si=IOKaN-JIqKNgzoAO | [Tina Huang](https://www.youtube.com/@TinaHuang1) | 
-
-
-### Machine Learning
-
-| **Título** | **URL** | **Canal/Autor** | 
-| --- | --- | --- |
-|ML Supervisionado vs Não Supervisionado + design de algoritmo| [https://lnkd.in/gWgtbwZc](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU) | Stanford University CS229|
-|Explore a matemática por trás dos sistemas e modelos de aprendizado | [https://lnkd.in/gN4v2u9w](https://www.youtube.com/playlist?list=PLoROMvodv4rP8nAmISxFINlGKSK4rbLKh) | Stanford University  CS229M|  
-|Intro to Machine Learning| https://www.kaggle.com/learn/intro-to-machine-learning | [Kaggle](www.kaggle.com/learn)|
-
-### Deep Learning
-
-| **Título** | **URL** | **Canal/Autor** | 
-| --- | --- | --- |
-| Introduction to Deep Learning | [https://youtu.be/J-9EbJBxcbg?si=OfWk4ETprZocX4nh](https://introtodeeplearning.com/) | MIT 6.S191|  
-| Domine redes neurais, CNNs, RNNs e melhores práticas  | https://lnkd.in/gYyD2Fwa | Stanford University CS230|  
-
-### Reinforcement Learning
-
-| **Título** | **URL** | **Canal/Autor** | 
-| --- | --- | --- |
-|Explore Q-learning, MDPs e treine modelos para agir em ambientes dinâmicos| https://lnkd.in/gKhtZYsV | Stanford University CS234 |
-
-
-### NLP/NLU
-
-| **Título** | **URL** | **Canal/Autor** | 
-| --- | --- | --- |
-| Aprenda como redes neurais impulsionam tradução, Q&A e análise de sentimento | https://lnkd.in/gWvnNXB2 | Stanford University CS224N |  
-|Natural Language Processing | https://www.youtube.com/playlist?list=PLoROMvodv4rObpMCir6rNNUlFAn56Js20 | Stanford CS224U|  
-| Entenda significado, intenção e sistemas de diálogo  |https://lnkd.in/gg2BAW9k| Stanford University CS224U| 
-
-
-
-### IA Generativa
-
-| **Título** | **URL** | **Autor/Canal/Instituição** | 
-| ---------- | -------- | --- | 
-| Conheça Gemini no Chrome | https://youtu.be/BBjM0SHg-aU?si=95DxG32XG03ubDNk | [Google Chrome](https://www.youtube.com/@GoogleChrome)|  
-| AI Python for Begginers | https://learn.deeplearning.ai/courses/ai-python-for-beginners/lesson/z57gn/introduction | Andrew NG/ Deep Learning AI|
-|AI Fluency: Framework & Foundations|https://anthropic.skilljar.com/ai-fluency-framework-foundations|[Anthropic](https://anthropic.skilljar.com/)|
-|Building with the Claude API|https://anthropic.skilljar.com/claude-with-the-anthropic-api|[Anthropic](https://anthropic.skilljar.com/)|
-|Generative AI for everyone | https://www.coursera.org/learn/generative-ai-for-everyone| Andrew NG/ Deep Learning AI|
-|IA generativa: introdução e aplicações| https://www.coursera.org/learn/generative-ai-introduction-and-applications | Rav Ahuja/IBM|
-
-
 ### Agentes de IA
 
 | **Título** | **URL** | **Canal/Autor** | 
@@ -75,16 +20,34 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 | Microsoft Copilot: How to create an Agent in minutes | https://youtu.be/FsVf0rBG33g?si=lKWuFo1C1m8kNRnf | [trAin](https://www.youtube.com/@trainaitoday) |  
 | Agent Flows in Copilot Studio | https://youtu.be/VJTKyk3Pr7s?si=dV9aDe5pGLvOJkHX | [Microsoft Copilot Studio](https://www.youtube.com/@MicrosoftCopilotStudio) | 
 
-### IA em Ferramentas de Produtividade
+### Canva
+
+| **Título** | **URL** | **Autor/Canal/Instituição** | 
+| ---------- | -------- | --- | 
+| Curso de Canva gratis e completo do zero ao avançado | https://youtu.be/L1XHqZf_AAU?si=K07pDWfxp20oAMRG |  [Coisas de Designer](https://www.youtube.com/@COISASDEDESIGNER) | 
+| Nova integração Canva + ChatGPT (MCP Server) | https://youtu.be/s2HjjSnkWEM?si=JzwMSQ8Z1jlxUlR- | [Darlan Evandro](https://www.youtube.com/@DarlanEvandro) | 
+| Atualização insana! VEO3 integrado ao Canva | https://youtu.be/1RG7GAx9KUs?si=5f7fGMOiMy3LPQSi |[Darlan Evandro](https://www.youtube.com/@DarlanEvandro) | 
+| Boas-vindas ao Canva Educação | https://youtu.be/Pxr3jkH0Tj4?si=Q1rNZ48EDySUQjJq | [Canva](https://www.youtube.com/@canva) |  
+| Curso de Canva do Zero para iniciantes | https://youtu.be/lGiyNbBSF-M?si=qGfXbGDgqnTqDGfb | [Darlan Evandro](https://www.youtube.com/@DarlanEvandro) |  
+
+
+
+### Deep Learning
 
 | **Título** | **URL** | **Canal/Autor** | 
 | --- | --- | --- |
-| Como usar a nova função de IA do Planilhas Google | https://youtu.be/6UNM0DQ2diw?si=hvvDII8oruXxotba | [Peter Horner Google Tech](https://www.youtube.com/@PeterHornerGoogleTech) | 
-| 101 Ways to use AI in your daily life | https://youtu.be/zkXonmqIBFg?si=PXkdoA7rcYfCKb-Y | [Tina Huang](https://www.youtube.com/@TinaHuang1) | 
-| Novo ajuste do Microsoft 365 Copilot: Crie modelos ajustados para escrever como você | https://youtu.be/6udJzJAyT5I?si=EVHiLXqnrjt60QWV | [Microsoft Mechanics](https://www.youtube.com/@MSFTMechanics) | 
-| 9 Copilot App Tips & Tricks | https://youtu.be/HGWeDjHHOxc?si=YsPj6O6mgq8sgCwc | [Kevin Stratvert](https://www.youtube.com/@KevinStratvert) |  
-| Using Notion AI to improve daily work | https://youtu.be/v7GJ8SRq7Mk?si=rsa22Tf8zFDfEZHe | [Notion](https://www.youtube.com/@Notion) | 
-| Perplexity Labs: A nova ferramenta de pesquisa de IA que cria aplicativos iterativos | https://youtu.be/84kOcsRJ7i4?si=aJmOynm_iuEDB7S_ | [Lawton Learns](https://www.youtube.com/@LawtonSolutions) | 
+| Introduction to Deep Learning | [https://youtu.be/J-9EbJBxcbg?si=OfWk4ETprZocX4nh](https://introtodeeplearning.com/) | MIT 6.S191|  
+| Domine redes neurais, CNNs, RNNs e melhores práticas  | https://lnkd.in/gYyD2Fwa | Stanford University CS230|  
+
+### Fundamentos de IA
+
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- | 
+|AI for Everyone| https://www.coursera.org/learn/ai-for-everyone| Andrew NG/Deep Learning AI|
+| Artificial Intelligence | https://lnkd.in/gM892TxC | Stanford University CS221|  
+| How AI Works | [https://youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y&si=6sykWpDJqvn0GSc-](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) | [Code.org](https://www.youtube.com/codeorg) | 
+| Fundamentals of AI  | https://www.youtube.com/live/kQ3K7Y4AQcs?si=2AGHMyFUvJyQieBb | Harvard CS50/David J. Malan |  
+| Google’s 9 hour Ai prompt enginnering course in 20 minutes | https://youtu.be/p09yRj47kNM?si=IOKaN-JIqKNgzoAO | [Tina Huang](https://www.youtube.com/@TinaHuang1) | 
 
 ### Graph Rag e Knowledge
 
@@ -101,6 +64,30 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 | AI Engineer World’s Fair 2025 - GraphRAG | https://www.youtube.com/live/RR5le0K4Wtw?si=cct3GMIUOA1B-1Io | [aiDotEngineer](https://www.youtube.com/@aiDotEngineer) |  
 | Neo4j Live: How to build a Knowledge Graph | https://www.youtube.com/live/1ogNyPWUP7g?si=y3TgKR8B_kPro4OJ | [Neo4j](https://www.youtube.com/@neo4j) |  
 
+### IA em Ferramentas de Produtividade
+
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- |
+| Como usar a nova função de IA do Planilhas Google | https://youtu.be/6UNM0DQ2diw?si=hvvDII8oruXxotba | [Peter Horner Google Tech](https://www.youtube.com/@PeterHornerGoogleTech) | 
+| 101 Ways to use AI in your daily life | https://youtu.be/zkXonmqIBFg?si=PXkdoA7rcYfCKb-Y | [Tina Huang](https://www.youtube.com/@TinaHuang1) | 
+| Novo ajuste do Microsoft 365 Copilot: Crie modelos ajustados para escrever como você | https://youtu.be/6udJzJAyT5I?si=EVHiLXqnrjt60QWV | [Microsoft Mechanics](https://www.youtube.com/@MSFTMechanics) | 
+| 9 Copilot App Tips & Tricks | https://youtu.be/HGWeDjHHOxc?si=YsPj6O6mgq8sgCwc | [Kevin Stratvert](https://www.youtube.com/@KevinStratvert) |  
+| Using Notion AI to improve daily work | https://youtu.be/v7GJ8SRq7Mk?si=rsa22Tf8zFDfEZHe | [Notion](https://www.youtube.com/@Notion) | 
+| Perplexity Labs: A nova ferramenta de pesquisa de IA que cria aplicativos iterativos | https://youtu.be/84kOcsRJ7i4?si=aJmOynm_iuEDB7S_ | [Lawton Learns](https://www.youtube.com/@LawtonSolutions) | 
+| Ferramentas NoCode para IA | https://youtu.be/NKKXje4qrq4?si=TMMBAlDX7cm6RN1f | [NoCode StartUp](https://www.youtube.com/@nocodestartup) |  
+
+
+### IA Generativa
+
+| **Título** | **URL** | **Autor/Canal/Instituição** | 
+| ---------- | -------- | --- | 
+| Conheça Gemini no Chrome | https://youtu.be/BBjM0SHg-aU?si=95DxG32XG03ubDNk | [Google Chrome](https://www.youtube.com/@GoogleChrome)|  
+| AI Python for Begginers | https://learn.deeplearning.ai/courses/ai-python-for-beginners/lesson/z57gn/introduction | Andrew NG/ Deep Learning AI|
+|AI Fluency: Framework & Foundations|https://anthropic.skilljar.com/ai-fluency-framework-foundations|[Anthropic](https://anthropic.skilljar.com/)|
+|Building with the Claude API|https://anthropic.skilljar.com/claude-with-the-anthropic-api|[Anthropic](https://anthropic.skilljar.com/)|
+|Generative AI for everyone | https://www.coursera.org/learn/generative-ai-for-everyone| Andrew NG/ Deep Learning AI|
+|IA generativa: introdução e aplicações| https://www.coursera.org/learn/generative-ai-introduction-and-applications | Rav Ahuja/IBM|
+
 ### Lang Graph/Lang Chain
 
 | **Título** | **URL** | **Canal/Autor** | 
@@ -111,6 +98,14 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 | LangGraph Platform: MCP support for your LangGraph Agents | https://youtu.be/AR4mLbm-0RU?si=FsS2_gc6LaAhEkam | [LangChain](https://www.youtube.com/@LangChain) |  
 | Learn LangChain in 7 easy steps - Beginner Tutorial | https://youtu.be/8BV9TW490nQ?si=maUHLh8ajekuZr7o | [Rabbitmetrics](https://www.youtube.com/@rabbitmetrics) | 
 |Lang Chain|https://www.youtube.com/playlist?list=PLqZXAkvF1bPNQER9mLmDbntNfSpzdDIU5|[Greg Kamradt](https://www.youtube.com/@DataIndependent)|
+
+### Machine Learning
+
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- |
+|ML Supervisionado vs Não Supervisionado + design de algoritmo| [https://lnkd.in/gWgtbwZc](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU) | Stanford University CS229|
+|Explore a matemática por trás dos sistemas e modelos de aprendizado | [https://lnkd.in/gN4v2u9w](https://www.youtube.com/playlist?list=PLoROMvodv4rP8nAmISxFINlGKSK4rbLKh) | Stanford University  CS229M|  
+|Intro to Machine Learning| https://www.kaggle.com/learn/intro-to-machine-learning | [Kaggle](www.kaggle.com/learn)|
 
 ### MCP
 
@@ -123,6 +118,15 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 | Novo laboratório! Aprenda a conectar o MCP ao Copilot Studio | https://youtu.be/jG-XTzXxFCk?si=uKNGrg9_LKuIJf-n | [Microsoft Power Platform](https://www.youtube.com/@mspowerplatform) | 
 | Neo4j Live: MCP for LLM Agents, APIs & Graphs | https://www.youtube.com/live/6igWn_dckpc?si=Okl8Y18XeEIdoOCA | [Neo4j](https://www.youtube.com/@neo4j) | 
 
+### Microsoft 365 Copilot
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- |
+| Introducing Microsoft Copilot Tuning | https://youtu.be/mY7Du9Bd-rY?si=LGkipkGR-jgJa9xu | [Microsoft 365](https://www.youtube.com/@Microsoft365) | 
+| Analyst: A reasoning agent in Microsoft 365 Copilot | https://youtu.be/9O3CoP8rEkY?si=XysuaaZxSHWhiKvA | https://www.youtube.com/@Microsoft365 | 
+| Computer use in Copilot Studio | https://youtu.be/lWCbtGHlw9I?si=Xi3gSGc231O3Odva | https://www.youtube.com/@MicrosoftCopilotStudio |  
+| Take a tour of the Microsoft 365 Copilot App | https://youtu.be/W-FBOUh-S0o?si=w96e7COSNzorZ9W8 | https://www.youtube.com/@Microsoft365 |  
+| Dicas para usuários avançados do Microsoft 365 Copilot | https://youtu.be/MuocazjjZmc?si=nOGp-6rnu53R3ypW | [Microsoft Mechanics](https://www.youtube.com/@MSFTMechanics )| 
+
 ### n8n
 
 | **Título** | **URL** | **Canal/Autor** | 
@@ -134,7 +138,15 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 | n8n para iniciantes! Crie automações com IA e ganhe dinheiro na sua empresa | https://youtu.be/IID-ifxWkKk?si=vhqE38HW01tpg_gu | [Darlan Evandro](https://www.youtube.com/@DarlanEvandro) |  
 | Build & Sell n8n AI Agents (*+ hour course, NoCode) | https://youtu.be/Ey18PDiaAYI?si=-V4LaUiAtIERtfhJ | [Nate Herk](https://www.youtube.com/@nateherk) |  
 | MCP n8n AI Agents: Tutorial | https://youtu.be/Mlo41ljP_XY?si=eA4VsjmnPOgXXAK- | [Derek Cheung](https://www.youtube.com/@derekcheungsa) |  
-  
+
+### NLP/NLU
+
+| **Título** | **URL** | **Canal/Autor** | 
+| --- | --- | --- |
+| Aprenda como redes neurais impulsionam tradução, Q&A e análise de sentimento | https://lnkd.in/gWvnNXB2 | Stanford University CS224N |  
+|Natural Language Processing | https://www.youtube.com/playlist?list=PLoROMvodv4rObpMCir6rNNUlFAn56Js20 | Stanford CS224U|  
+| Entenda significado, intenção e sistemas de diálogo  |https://lnkd.in/gg2BAW9k| Stanford University CS224U| 
+
 ### Python
 | **Título** | **URL** | **Canal/Autor** | 
 | --- | --- | --- | 
@@ -144,21 +156,11 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 |Introduction to Algorithms| https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/?authuser=2| MIT OpenCourseWare|
 |Python for Data Science - Course for Beginners (Learn Python, Pandas, NumPy, Matplotlib)|https://www.youtube.com/watch?v=LHBE6Q9XlzI|[freeCodeCamp.org](https://www.youtube.com/@freecodecamp)|
 
+### Reinforcement Learning
 
-### Ferramentas NoCode/LowCode para IA
-
-| **Título** | **URL** | **Canal/Autor** | 
-| --- | --- | --- | 
-| Ferramentas NoCode para IA | https://youtu.be/NKKXje4qrq4?si=TMMBAlDX7cm6RN1f | [NoCode StartUp](https://www.youtube.com/@nocodestartup) |  
-
-### Microsoft 365 Copilot
 | **Título** | **URL** | **Canal/Autor** | 
 | --- | --- | --- |
-| Introducing Microsoft Copilot Tuning | https://youtu.be/mY7Du9Bd-rY?si=LGkipkGR-jgJa9xu | [Microsoft 365](https://www.youtube.com/@Microsoft365) | 
-| Analyst: A reasoning agent in Microsoft 365 Copilot | https://youtu.be/9O3CoP8rEkY?si=XysuaaZxSHWhiKvA | https://www.youtube.com/@Microsoft365 | 
-| Computer use in Copilot Studio | https://youtu.be/lWCbtGHlw9I?si=Xi3gSGc231O3Odva | https://www.youtube.com/@MicrosoftCopilotStudio |  
-| Take a tour of the Microsoft 365 Copilot App | https://youtu.be/W-FBOUh-S0o?si=w96e7COSNzorZ9W8 | https://www.youtube.com/@Microsoft365 |  
-| Dicas para usuários avançados do Microsoft 365 Copilot | https://youtu.be/MuocazjjZmc?si=nOGp-6rnu53R3ypW | [Microsoft Mechanics](https://www.youtube.com/@MSFTMechanics )| 
+|Explore Q-learning, MDPs e treine modelos para agir em ambientes dinâmicos| https://lnkd.in/gKhtZYsV | Stanford University CS234 |
 
 
 ### SaaS - Software como Serviço
@@ -167,15 +169,6 @@ Este capítulo reúne **recursos complementares** que funcionam como pontos de p
 | SaaS - Dicionário do Programador | https://youtu.be/4Hw3FApvvhE?si=5hRsmBiWN8r7XDXv | [Código Fonte TV](https://www.youtube.com/@codigofontetv) | 
 | Micro-SaaS de IA em 8 passos | https://youtu.be/HMjzdeiNdKc?si=xhp9TxgG1qTduzTc | [Bruno Okamoto](https://www.youtube.com/@microsaas) |  
 
-### Canva
-
-| **Título** | **URL** | **Autor/Canal/Instituição** | 
-| ---------- | -------- | --- | 
-| Curso de Canva gratis e completo do zero ao avançado | https://youtu.be/L1XHqZf_AAU?si=K07pDWfxp20oAMRG |  [Coisas de Designer](https://www.youtube.com/@COISASDEDESIGNER) | 
-| Nova integração Canva + ChatGPT (MCP Server) | https://youtu.be/s2HjjSnkWEM?si=JzwMSQ8Z1jlxUlR- | [Darlan Evandro](https://www.youtube.com/@DarlanEvandro) | 
-| Atualização insana! VEO3 integrado ao Canva | https://youtu.be/1RG7GAx9KUs?si=5f7fGMOiMy3LPQSi |[Darlan Evandro](https://www.youtube.com/@DarlanEvandro) | 
-| Boas-vindas ao Canva Educação | https://youtu.be/Pxr3jkH0Tj4?si=Q1rNZ48EDySUQjJq | [Canva](https://www.youtube.com/@canva) |  
-| Curso de Canva do Zero para iniciantes | https://youtu.be/lGiyNbBSF-M?si=qGfXbGDgqnTqDGfb | [Darlan Evandro](https://www.youtube.com/@DarlanEvandro) |  
 
 ---
 
