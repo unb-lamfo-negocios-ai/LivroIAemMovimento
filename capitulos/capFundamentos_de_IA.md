@@ -411,13 +411,17 @@ As técnicas de mitigação de viés geralmente se enquadram em três categorias
 #### Mitigação de Transparência: Priorizando em Cenários de Alto Risco
 
 A necessidade de explicabilidade deve ser priorizada para aplicações críticas (como diagnósticos médicos, decisões judiciais ou avaliações de crédito).
+
 • **Transparência por Design**: Em cenários de alto risco, recomenda-se adotar modelos inerentemente interpretáveis desde o início, sacrificando alguma precisão preditiva em prol da clareza e da redução da complexidade computacional.
+
 • **Técnicas Pós-hoc**: Para modelos complexos, podem ser utilizadas técnicas como SHAP ou LIME. No entanto, estas técnicas podem exigir cálculos adicionais custosos, que introduzem desafios de escalabilidade em ambientes de alta frequência.
 
 ### 5. Responsabilidade e Regulação
 
 Empreendedores e empresas devem ter em mente que o quadro regulatório exige clareza sobre responsabilidade.
+
 • **Responsabilidade Legal**: A certificação de sistemas de IA serve como um mecanismo valioso para distinguir entre responsabilidade objetiva (a empresa assume total responsabilidade pelo dano, independentemente das ações preventivas) e responsabilidade subjetiva (as intenções e medidas preventivas da empresa são consideradas). Buscar a certificação demonstra o cumprimento de padrões de segurança.
+
 • **Documentação Essencial**: A transparência e a documentação são essenciais. Ferramentas como datasheets (folhas de dados) e model cards (cartões de modelo) ajudam a divulgar as limitações de dados e modelos, facilitando a detecção e supervisão de viés.
 
 ```{admonition} Leitura Recomendada: Regulação de IA
@@ -427,7 +431,7 @@ Para aprofundar sua compreensão sobre os desafios éticos e regulatórios da In
 
 É uma referência essencial para consultar sempre que surgirem dúvidas sobre os limites éticos da aplicação de IA, responsabilidades legais ou como navegar entre inovação e conformidade regulatória. O artigo conecta teoria e prática de forma acessível, sendo valioso tanto para desenvolvedores quanto para gestores e formuladores de políticas.
 
-[Acesse o artigo completo aqui](https://pdf.sciencedirectassets.com/783536/1-s2.0-S2949948825X00020/1-s2.0-S2949948825000241/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjENL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIC1hQGoru2xjC8xfErkd%2BIKF7y3q00swAubYvhc%2FXqU9AiBq%2BtPQ2Vd47C%2FV9czePZS6YzgMS3UF6o6ms2VdMyKrhCqzBQh7EAUaDDA1OTAwMzU0Njg2NSIMjGdN7SFpH1Jx%2FqzWKpAFGGZfyumzSmW%2FJR5pzKTPA5nLSYIexsOSm3QvUwAut60EBMutKU67d2E%2FCfx%2Fs9e0CY%2F3cfcXZyOXQrd6tYmglecnpsf7sPSu8d80XRSyC84DSiMZ4JzqPnh0QFAZAnkLGxoziDLD2%2FwGRq8rn5pqkFO4wAiwyu5qf6LMNWthAFKosg3Kevfzpl371%2BJ2BgwQsohdbk%2BCootsjfI1T7f7FKm2Mvp8qvIkPT3rcZBJSHWTcXq%2FLWFhafP6uRQo5CfkGJD7A0PakVu4ZsbdZgYmRjTONteqFi7c%2BHlil8niK9JlnzxxJrYTUIlJVs1yP02h6avhY7L2KQ5fgEoGQbbIU8q8C0vVy7Hhw%2Bz4pYs3s%2BGaiBvmOeO4ZzZkHmxVlU17tm%2BhRPGszOGzN1XvI4jz3t%2BXqbnLbFI6NbRPTpoxZoh8E3hiFp2uUPvx72RXmY%2BYuSkWVSiRkDCR8512xJxpscKT%2B%2FGrpcZO9LZWPNT%2FB623FuQmkT1EaRveIu8qP0rhKaAxrxFSP8HkYMhDD%2BMnq0TelRgal%2BKw3hzFHVQgusma6zSm0hmYCS3Fz%2BKizlFWvULR1jtGa5ZD%2FflFoAqiTyQ35B4gmNK4k3D5UoBth0WkESuSlbYKK4DGJS2zsqVDA%2B6IKJZilNkhpKJ2Q8RB9TU7w43Im%2BMWgGVyPKFWCNne4tVHzKLQTxwlxktRumzitIl%2F9Px80AZja3EqNIIxdqggFRMflilN2U7BaIkVDD1s44Atr%2FhXbJ8SaM1%2BF57uvaFwKsoCqr2YMln5rM1ZBjW0rcM7eLUf0m%2F4f1vK78JZru9zjBx%2BmsIT8O1IVBs9C4%2FNyqhzle%2FWQqtMOx4A5BZS9w5ZzbpXSsY3%2BTFprh4wp8K%2FxwY6sgGjuKeGe58XuS31EmzVF5Y%2Fs3A1Zv49tZdi8IGmUdoi%2B5cvUxiM28ocZoNTLbEPpcBIXuVNUvPKpChQI2W%2BvZOslIgeffKtMXldzKLXwJV1CMY7hv8F%2BK3fNYzo9Y%2BTUVNt1C4fL8M5el0GRZtUZ2uKy15DvlGsqCGTSutIV5YwUOWv8K7tQ%2BAnQSsesqgfT%2Bu9jDMtOrfMp1LsP3uCDiDgUF5HfYFU6hhyiA3zJ7swnNJs&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251015T185723Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYWD6UFBZH%2F20251015%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=4e0e975ca398486e1af3c5e224050afdc360712f867f78024564a451a8de0133)
+[Acesse o artigo completo aqui!](https://doi.org/10.1016/j.ject.2025.07.001)
 ```
 
 
