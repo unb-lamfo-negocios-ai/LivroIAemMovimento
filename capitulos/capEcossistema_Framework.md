@@ -401,12 +401,12 @@ No contexto do LangChain, um DAG representa um fluxo de trabalho onde os dados s
 3. **Aumento:** Adiciona o contexto recuperado à pergunta original.
 4. **Geração:** Envia o prompt aumentado para um LLM para gerar a resposta final.
 
-```{image} imagens/langgraph_langchain.png
-:alt: Descrição alternativa
-:class: align-center
+```{figure} ../imagens/langgraph_langchain.png
+---height: 150px
+name: desc_alternativa
 ```
 
-[Exemplo de diagrama comparando langchain e langgraph](https://ritik-chopra28.medium.com/langchain-vs-langgraph-the-ai-framework-battle-thats-dividing-developers-81d0fe53503b)
+[EXEMPLO DE DIAGRAMA COMPARANDO LANGCHAIN E LANGGRAPH](https://ritik-chopra28.medium.com/langchain-vs-langgraph-the-ai-framework-battle-thats-dividing-developers-81d0fe53503b)
 
 Este fluxo é linear, determinístico e perfeitamente modelado por um DAG. Cada passo flui para o seguinte, e o processo termina com a resposta. Para uma vasta gama de aplicações, desde chatbots de perguntas e respostas até sumarizadores de documentos, essa abordagem é suficiente e robusta.
 
@@ -976,46 +976,8 @@ Para uma solução gratuita e permanente, a plataforma Hugging Face Spaces é a 
 - **Integração com Modelos de IA**: Gradio integra-se perfeitamente com bibliotecas como `transformers`, `PyTorch` e `TensorFlow`, tornando trivial a criação de interfaces para modelos pré-treinados.
 
 
-## Streamlit
-
-O **Streamlit** é um framework em Python que permite criar **aplicações interativas de dados e IA** com poucas linhas de código.  
-
-**Aplicações típicas:**  
-- Dashboards dinâmicos para visualização de métricas.  
-- Protótipos de interfaces para modelos de Machine Learning.  
-- Ferramentas internas para análise exploratória de dados.  
-
-**Exemplo prático:** um analista de dados pode compartilhar em minutos um app que mostra previsões de vendas com base em modelos de regressão.  
-
-Sua simplicidade o torna muito popular em equipes de **Data Science** {cite}`streamlit2021`.  
-
----
-
-
-## WhatsApp API
-
-A integração com o **WhatsApp API** permite conectar chatbots de IA diretamente ao aplicativo de mensagens mais usado no Brasil e em vários países.  
-
-**Casos comuns de uso:**  
-- Atendimento automatizado com personalização de contexto.  
-- Suporte ao cliente em escala, sem perder o tom humano.  
-- Campanhas de engajamento interativas, segmentadas por perfil.  
-
-Combinada a LLMs e frameworks de orquestração, transforma o WhatsApp em um **canal estratégico de relacionamento** {cite}`meta2022`.  
-
----
-
 :::{tip}
 O ecossistema de ferramentas de IA está em constante expansão.  
 Mais importante do que conhecer todas as opções é saber **qual ferramenta se alinha melhor ao objetivo do projeto, à maturidade da equipe e ao orçamento disponível**.  
 A escolha certa pode acelerar resultados; a errada pode gerar custos e complexidade desnecessários.
-:::
-
-## Canva
-
-O **Canva** é uma plataforma de design que incorporou recursos de **IA generativa**, como:  
-- Criação automática de imagens.  
-- Sugestão de layouts e textos.  
-- Geração de apresentações com base em descrições simples.  
-
-Embora não seja uma ferramenta técnica de desenvolvimento, **democratiza a IA** para profissionais de comunicação, marketing e design, ampliando a adoção em escala {cite}`canva2023`.  
+::: 
