@@ -766,7 +766,7 @@ Imagine um fluxo acionado por um webhook de um sistema externo:
 - **Com Execute Once:** Apenas a primeira requisição aciona o Node, mesmo que o sistema externo envie múltiplas solicitações
 ```
 
-**Por que usar Execute Once?**
+### Por que usar Execute Once?
 
 **Prevenção de execuções duplicadas**
 - Evita processamentos redundantes da mesma operação
@@ -829,7 +829,7 @@ Imagine um fluxo onde um Node faz uma solicitação a uma API externa:
 - **Resultado:** A operação é concluída com sucesso na segunda ou terceira tentativa
 ```
 
-**Por que usar Retry on Fail?**
+### Por que usar Retry on Fail?
 
 **Redução de erros transitórios**
 - Supera problemas temporários que não são persistentes
@@ -973,30 +973,23 @@ A tabela abaixo resume as principais diferenças entre as três estratégias, fa
 | **Stop Workflow** | ❌ Não | ❌ Não | Operações críticas |
 | **Continue** | ✅ Sim | ❌ Não | Operações não-críticas |
 | **Continue (Error Output)** | ✅ Sim | ✅ Sim | Tratamento inteligente de erros |Tentar novamenteClaude ainda não tem a capacidade de executar o código que gera.
-#### Resolvendo erros
 
-Principais Erros em Workflows do n8n: O Que Observar nos Nodes
+### Resolvendo erros
 
 Ao começar a utilizar o n8n para criar automações, é comum encontrar dificuldades relacionadas ao funcionamento dos **nodes** (os blocos que compõem o fluxo). Muitos dos erros enfrentados por iniciantes são causados por configurações incorretas, dados mal estruturados ou falta de compreensão sobre o fluxo de informações entre os nodes.
 
 A seguir, estão listados os **principais erros que ocorrem nos nodes** e dicas práticas para evitá-los.
 
----
-
-1. ❌ Campos obrigatórios não preenchidos
-
-**Descrição:**
+#### 1. Campos obrigatórios não preenchidos
 
 Alguns nodes exigem campos obrigatórios como URLs, credenciais, IDs de planilhas, ou chaves de API. Caso não preenchidos corretamente, o node falha.
 
 :::{tip}
 Sempre revise campos marcados com "*", leia as dicas no rodapé e use as opções de ajuda ao lado de cada campo no editor.
 :::
----
 
-2. ❌ Falta de credenciais configuradas
 
-**Descrição:**
+#### 2. Falta de credenciais configuradas
 
 Muitos nodes de integração (ex: Gmail, Google Sheets, Notion, Trello) dependem de credenciais autenticadas. Esquecer de configurá-las ou vinculá-las ao node gera erro de autenticação.
 
@@ -1004,25 +997,22 @@ Muitos nodes de integração (ex: Gmail, Google Sheets, Notion, Trello) dependem
 
 Configure as credenciais antes de executar e certifique-se de que estão ativas e conectadas corretamente.
 :::
----
 
-3. ❌ Formato de dados incompatível
 
-**Descrição:**
-
+#### 3. Formato de dados incompatível
 Um node pode esperar um tipo de dado (ex: número, string ou objeto JSON), mas receber outro formato. Isso gera falhas silenciosas ou erros visíveis.
 
-**Exemplo:**
+```{admonition} Exemplo
+:class: exemplo
 
 Passar um número onde se espera um texto ou enviar um array quando se espera um único item.
+```
 
 :::{tip}
 Use o **Set Node** ou **Function Node** para ajustar dados antes de enviá-los a outros nodes.
 :::
 
-### 4. ❌ Dados ausentes ou campos inexistentes
-
-**Descrição:**
+#### 4. Dados ausentes ou campos inexistentes
 
 Ao tentar acessar um campo com <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`{{$json.campoInexistente}}`</span>, o n8n retorna <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`undefined`</span> e pode gerar erro ou resultado inesperado.
 
@@ -1030,10 +1020,7 @@ Ao tentar acessar um campo com <span style="background-color: #f2f2f2; border-ra
 Use o botão de **"Executar o Node"** anterior e visualize a aba **"Output"** para confirmar se os dados esperados realmente existem.
 :::
 
-5. ❌ Expressões mal escritas
-
-**Descrição:**
-
+#### 5. Expressões mal escritas
 Expressões em JavaScript mal formatadas ou com erro de sintaxe podem impedir o node de funcionar.
 
 **Exemplo de erro:**
@@ -1044,9 +1031,7 @@ Expressões em JavaScript mal formatadas ou com erro de sintaxe podem impedir o 
 Use <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">{{(() => { ... })()}}</span> para expressões mais complexas e valide com pequenas execuções antes de usar em produção.
 :::
 
-6. ❌ Acesso incorreto a dados de outros nodes
-
-**Descrição:**
+#### 6. Acesso incorreto a dados de outros nodes
 
 Tentar acessar outro node da forma errada, como <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`$('Node-Errado')`</span>, ou usando o nome incorreto, gera erro ou dados vazios.
 
@@ -1054,9 +1039,7 @@ Tentar acessar outro node da forma errada, como <span style="background-color: #
 Use o autocompletador (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Cmd/Ctrl + Espaço`</span>) ao escrever expressões ou clique com botão direito no campo e selecione "Add Expression" → "Nodes".
 :::
 
-7. ❌ Não verificar se o item atual existe em arrays
-
-**Descrição:**
+#### 7. Não verificar se o item atual existe em arrays
 
 Ao processar arrays, é comum esquecer que o node está tratando cada item individualmente, o que pode gerar tentativas de acessar dados que não existem naquele item.
 
@@ -1064,15 +1047,13 @@ Ao processar arrays, é comum esquecer que o node está tratando cada item indiv
 Use expressões com <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`if`</span> ou <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`try-catch`</span> para evitar que itens incompletos quebrem o fluxo.
 :::
 
-Exemplo:
+**Exemplo:**
 
 ```{code-block} json
 {{ $json?.meuCampo || 'valor padrão' }}
 ```
 
-8. ❌ Looping excessivo ou mal controlado
-
-**Descrição:**
+#### 8. Looping excessivo ou mal controlado
 
 Usar loops mal configurados (como <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`SplitInBatches`</span> com muitos itens ou <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Merge`</span> mal estruturado) pode criar lentidão, travamentos ou comportamento inesperado.
 
@@ -1080,11 +1061,7 @@ Usar loops mal configurados (como <span style="background-color: #f2f2f2; border
 Sempre teste com poucos itens e verifique a saída de cada nó antes de escalar.
 :::
 
----
-
-9. ❌ Esquecer de ativar o workflow
-
-**Descrição:**
+#### 9. Esquecer de ativar o workflow
 
 Após testar, o workflow funciona, mas o usuário esquece de clicar em “Ativar”, então ele nunca executa automaticamente.
 
@@ -1092,9 +1069,7 @@ Após testar, o workflow funciona, mas o usuário esquece de clicar em “Ativar
 Sempre verifique o estado do workflow após testes locais.
 :::
 
-10. ❌ Não salvar alterações antes de executar
-
-**Descrição:**
+#### 10. Não salvar alterações antes de executar
 
 Executar um node sem salvar alterações recentes pode causar execução com configurações antigas.
 
@@ -1102,7 +1077,7 @@ Executar um node sem salvar alterações recentes pode causar execução com con
 Salve sempre antes de testar (<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">`Ctrl + S`</span> ou botão "Save").
 :::
 
-Códigos de erro mais comuns em APIs
+#### Códigos de erro mais comuns em APIs
 
 |Código|	Significado|	Quando acontece?|
 |------|---------------|--------------------|
@@ -1120,7 +1095,7 @@ Códigos de erro mais comuns em APIs
 |<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">502 Bad Gateway</span>	|Gateway da API falhou	|Normal em sistemas com proxies|
 |<span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">503 Service Unavailable</span>|	API está fora do ar ou sobrecarregada	|Muita demanda ou manutenção|
 
-#### # GPT n8n
+## GPT n8n
 
 💻GPT Assistente do n8n
 
