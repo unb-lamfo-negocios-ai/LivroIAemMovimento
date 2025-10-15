@@ -93,6 +93,7 @@ O MCP nasceu para padronizar esse desenvolvimento de IA, atuando como uma camada
 ```{figure} ../imagens/mcp_protocol.png
 ---height: 150px
 name: mcp_protocol
+---PProtocolo do MCP.
 ```
 
 
