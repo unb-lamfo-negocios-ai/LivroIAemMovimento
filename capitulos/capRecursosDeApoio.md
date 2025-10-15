@@ -195,7 +195,7 @@ Artigos focados na intersecção entre tecnologia e gestão, com ênfase em como
 **[Gartner – Artificial Intelligence Research](https://www.gartner.com/en/information-technology/insights/artificial-intelligence)**  
 Análises de mercado, previsões tecnológicas e frameworks para tomada de decisão sobre investimentos em IA. Particularmente útil para CIOs e CTOs avaliando fornecedores e tecnologias.
 
-:::{admonition} 📊 Como usar essas fontes estrategicamente
+:::{admonition} Como usar essas fontes estrategicamente
 :class: tip
 
 - **HBR e MIT Sloan**: Para casos de uso inspiradores e frameworks conceituais
@@ -264,6 +264,7 @@ Roteiro de estudos condensado e objetivo para desenvolvedores. Apresenta os prin
 **[IBM - O que é IA Generativa?](https://www.ibm.com/br-pt/think/topics/generative-ai)**  
 Explicação corporativa e técnica da IBM sobre IA generativa. Aborda conceitos, tecnologias subjacentes e casos de uso empresariais com a perspectiva de uma das líderes globais em tecnologia.
 
+## Catálogos e Diretórios de Ferramentas de IA
 
 Explorar ferramentas práticas ajuda a transformar conceitos em soluções reais. Estes diretórios mantêm curadoria atualizada de aplicações, modelos e implementações que você pode experimentar imediatamente.
 
