@@ -455,3 +455,120 @@ Cursos estruturados no Coursera sobre ML, deep learning e IA generativa, criados
 **[Full Stack Deep Learning](https://fullstackdeeplearning.com/)**  
 Foco em colocar modelos em produção. Cobre aspectos práticos que vão além do treinamento de modelos.
 
+## Fontes de Notícias e Atualizações em Tempo Real sobre IA
+
+Para acompanhar os avanços acelerados da IA, é essencial consumir informações de fontes confiáveis e atualizadas diariamente. Abaixo estão os principais canais organizados por tipo de conteúdo.
+
+### Agregadores e Newsletters Especializadas
+
+**[The Batch (DeepLearning.AI)](https://www.deeplearning.ai/the-batch/)**  
+Newsletter semanal curada por Andrew Ng. Resume os principais avanços técnicos, papers e notícias da semana com análises contextualizadas.
+
+**[Import AI (Jack Clark)](https://jack-clark.net/)**  
+Newsletter semanal focada em pesquisa e implicações sociais da IA. Análises profundas sobre papers recentes e tendências emergentes.
+
+**[TLDR AI](https://tldr.tech/ai)**  
+Newsletter diária concisa com as notícias mais relevantes. Formato rápido, ideal para acompanhamento sem sobrecarga de informação.
+
+**[AI Breakfast](https://aibreakfast.beehiiv.com/)**  
+Resumo diário das principais notícias de IA em português e inglês. Formato acessível para consumo matinal.
+
+### Plataformas de Notícias Tech
+
+**[TechCrunch - AI](https://techcrunch.com/category/artificial-intelligence/)**  
+Cobertura contínua de lançamentos, investimentos e tendências de mercado em IA. Foco em startups e aplicações comerciais.
+
+**[VentureBeat - AI](https://venturebeat.com/ai/)**  
+Notícias sobre empresas, produtos e estratégias de IA. Equilibra aspectos técnicos e de negócios.
+
+**[The Verge - AI](https://www.theverge.com/ai-artificial-intelligence)**  
+Cobertura acessível sobre impactos culturais e sociais da IA. Bom para contexto além da tecnologia pura.
+
+**[Ars Technica - AI](https://arstechnica.com/ai/)**  
+Análises técnicas aprofundadas sobre desenvolvimentos em IA. Jornalismo de qualidade com rigor técnico.
+
+### Redes Sociais e Comunidades
+
+**[Twitter/X - #AITwitter](https://twitter.com/search?q=%23AITwitter)**  
+Pesquisadores e desenvolvedores compartilham descobertas em tempo real. Siga contas como:
+- @AndrewYNg (Andrew Ng)
+- @ylecun (Yann LeCun)
+- @goodfellow_ian (Ian Goodfellow)
+- @karpathy (Andrej Karpathy)
+- @sama (Sam Altman)
+
+**[LinkedIn - Hashtag #ArtificialIntelligence](https://www.linkedin.com/feed/hashtag/artificialintelligence/)**  
+Análises de negócios e aplicações corporativas. Networking profissional e oportunidades.
+
+**[r/artificial (Reddit)](https://www.reddit.com/r/artificial/)**  
+Discussões sobre notícias e implicações da IA. Comunidade ativa com perspectivas diversas.
+
+### Blogs Corporativos e Labs
+
+**[OpenAI Blog](https://openai.com/blog/)**  
+Anúncios oficiais, papers e atualizações sobre GPT e outros modelos da OpenAI.
+
+**[Google AI Blog](https://ai.googleblog.com/)**  
+Pesquisas e desenvolvimentos do Google Research e DeepMind.
+
+**[Meta AI Blog](https://ai.meta.com/blog/)**  
+Atualizações sobre Llama e pesquisas em IA da Meta.
+
+**[Anthropic News](https://www.anthropic.com/news)**  
+Publicações sobre Claude e pesquisas em segurança de IA.
+
+**[Microsoft Research Blog - AI](https://www.microsoft.com/en-us/research/blog/category/artificial-intelligence/)**  
+Pesquisas acadêmicas e aplicações corporativas da Microsoft.
+
+### Podcasts de Notícias
+
+**[Eye on AI](https://www.eye-on.ai/)**  
+Entrevistas semanais com líderes e pesquisadores de IA sobre desenvolvimentos recentes.
+
+**[The AI Breakdown](https://www.theaibreakdown.com/)**  
+Análises diárias rápidas (10-15 min) sobre as principais notícias de IA.
+
+**[Latent Space](https://www.latent.space/podcast)**  
+Discussões técnicas profundas com builders e pesquisadores sobre o que está acontecendo agora em IA.
+
+### Canais YouTube
+
+**[Two Minute Papers](https://www.youtube.com/@TwoMinutePapers)**  
+Resumos animados de papers recentes. Excelente para acompanhar pesquisa acadêmica de forma acessível.
+
+**[AI Explained](https://www.youtube.com/@aiexplained-official)**  
+Análises detalhadas de modelos, benchmarks e tendências recentes.
+
+**[Matthew Berman](https://www.youtube.com/@matthew_berman)**  
+Testes práticos e comparações de novos modelos de IA assim que são lançados.
+
+### Agregadores de Papers
+
+**[Hugging Face Daily Papers](https://huggingface.co/papers)**  
+Papers mais relevantes ranqueados diariamente pela comunidade. Interface limpa e demo interativas.
+
+**[Papers With Code - Trending](https://paperswithcode.com/)**  
+Papers acadêmicos com código de implementação. Seção trending mostra o que está em alta.
+
+**[arXiv Sanity](http://www.arxiv-sanity.com/)**  
+Recomendações personalizadas de papers do arXiv baseadas em seus interesses.
+
+### Plataformas Brasileiras
+
+**[AI News Brasil](https://ainewsbrasil.com.br/)**  
+Notícias sobre IA com foco no contexto brasileiro. Startups locais, regulamentação e aplicações.
+
+**[TechCrunch Brasil](https://techcrunch.com/tag/brazil/)**  
+Cobertura do ecossistema tech brasileiro, incluindo desenvolvimentos em IA.
+
+
+:::{admonition} Atenção ao Hype
+:class: warning
+
+O campo de IA é repleto de anúncios sensacionalistas e "breakthroughs" exagerados. Desenvolva senso crítico:
+
+- Verifique múltiplas fontes antes de aceitar claims extraordinários
+- Priorize análises técnicas sobre manchetes chamativas
+- Acompanhe implementações reais, não apenas demos
+- Entenda limitações junto com capacidades
+:::
