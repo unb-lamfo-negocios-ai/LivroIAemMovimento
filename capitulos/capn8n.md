@@ -1097,19 +1097,28 @@ Salve sempre antes de testar (<span style="background-color: #f2f2f2; border-rad
 
 ## GPT n8n
 
-💻GPT Assistente do n8n
+O **n8n** oferece integração nativa com modelos de linguagem GPT, permitindo que você incorpore inteligência artificial generativa diretamente em seus fluxos de automação. Com essa funcionalidade, é possível criar automações que processam linguagem natural, geram conteúdo automaticamente, analisam textos, respondem perguntas de forma inteligente e tomam decisões baseadas em contexto. Essa integração transforma fluxos de trabalho simples em soluções sofisticadas que combinam automação tradicional com as capacidades avançadas de IA, abrindo possibilidades desde chatbots inteligentes até análise automatizada de documentos e geração de conteúdo personalizado em escala.
 
+### GPT Assistente do n8n
+
+Durante o processo de aprendizado e uso da plataforma **n8n**, contar com o apoio de ferramentas baseadas em inteligência artificial pode representar um ganho significativo em produtividade, compreensão e autonomia. 
+
+```{admonition} O **N8N A.I Assistant (by Nskha)
+:class: exemplo
+
+Um exemplo disso é o uso de assistentes especializados, como o **N8N A.I Assistant (by Nskha)**, uma versão do GPT treinada especificamente para auxiliar usuários da plataforma n8n.
+
+Ao clicar no link abaixo você pode ter a experiência de usar o N8N A.I Assistant (by Nskha):
 [n8n Assistant](https://chatgpt.com/g/g-SVatmGSdQ-n8n-assistant-by-nskha?model=gpt-4o)
+```
 
-O Papel da Inteligência Artificial no Aprendizado do n8n
+Abaixo estão relacionados os principais motivos pelos quais esse tipo de assistente desempenha um papel importante no processo de construção de conhecimento:
 
-Durante o processo de aprendizado e uso da plataforma **n8n**, contar com o apoio de ferramentas baseadas em inteligência artificial pode representar um ganho significativo em produtividade, compreensão e autonomia. Um exemplo disso é o uso de assistentes especializados, como o **N8N A.I Assistant (by Nskha)**, uma versão do GPT treinada especificamente para auxiliar usuários da plataforma n8n.
+#### 1. Conhecimento especializado sobre o n8n
 
-Esse tipo de assistente desempenha um papel importante no processo de construção de conhecimento por diversos motivos:
+Ao contrário de assistentes genéricos, o N8N A.I Assistant é treinado com foco total na estrutura e funcionamento do n8n. 
 
-1. Conhecimento especializado sobre o n8n
-
-Ao contrário de assistentes genéricos, o N8N A.I Assistant é treinado com foco total na estrutura e funcionamento do n8n. Ele possui conhecimento atualizado sobre:
+Ele possui **conhecimento atualizado** sobre:
 
 - Os principais nós (nodes) disponíveis na plataforma;
 - Criação e uso de expressões;
@@ -1117,9 +1126,10 @@ Ao contrário de assistentes genéricos, o N8N A.I Assistant é treinado com foc
 - Tratamento de dados e manipulação de campos;
 - Identificação e correção de erros comuns.
 
+
 Esse domínio técnico permite ao assistente fornecer orientações precisas e contextualizadas.
 
-2. Aprendizado guiado e personalizado
+#### 2. Aprendizado guiado e personalizado
 
 Ao interagir com o assistente, é possível obter explicações adaptadas ao nível de conhecimento do usuário (iniciante ou avançado), facilitando a compreensão de conceitos como:
 
@@ -1129,9 +1139,11 @@ Ao interagir com o assistente, é possível obter explicações adaptadas ao ní
 
 Isso transforma o aprendizado em uma experiência mais interativa e eficiente.
 
-3. Suporte técnico em tempo real
+#### 3. Suporte técnico em tempo real
 
-Além do aspecto didático, o assistente também pode ser utilizado como ferramenta de apoio técnico. Ele é capaz de:
+Além do aspecto didático, o assistente também pode ser utilizado como ferramenta de apoio técnico. 
+
+Ele é capaz de:
 
 - Sugerir melhorias em fluxos existentes;
 - Gerar workflows em formato JSON, prontos para importação;
@@ -1144,23 +1156,28 @@ O uso de uma inteligência artificial especializada no n8n representa uma import
 
 Ao incorporar essa ferramenta no estudo e uso diário do n8n, o usuário potencializa sua capacidade de aprender, experimentar e evoluir na criação de automações mais robustas e eficientes.
 
-#### Templates
+## Templates
 
 Os templates no n8n são, essencialmente, fluxos de automação (workflows) pré-construídos e prontos para uso. Eles funcionam como modelos que resolvem problemas comuns e integram diferentes aplicações de maneira lógica. Em vez de começar um workflow do zero, um usuário pode simplesmente selecionar um template, conectar suas próprias credenciais (como contas de email, APIs, planilhas) e ativar a automação em questão de minutos.
 
-Esses templates cobrem uma vasta gama de casos de uso, como:
-
+```{admonition} Esses templates cobrem uma vasta gama de casos de uso, como:
+:class: note
 - **Sincronização de Dados:** Manter informações consistentes entre um CRM (como o HubSpot) e uma planilha do Google Sheets.
 - **Notificações Inteligentes:** Enviar uma mensagem customizada no Slack ou Discord sempre que um novo cliente se cadastra na sua plataforma.
 - **Marketing e Vendas:** Adicionar automaticamente leads de um formulário do Typeform a uma lista de email no Mailchimp.
 - **Gestão de Projetos:** Criar um card no Trello a partir de um email recebido que contenha palavras-chave específicas.
+```
 
 A grande vantagem é que eles são totalmente customizáveis. Um template serve como um ponto de partida robusto, que pode ser expandido, modificado e adaptado para atender às necessidades exatas de um projeto, economizando um tempo de desenvolvimento significativo e expondo o usuário a boas práticas de construção de workflows.
 
-[Baixe aqui a planilha Templates_n8n.xlsx](https://github.com/unb-lamfo-negocios-ai/LivroIAemMovimento/blob/main/Templates_n8n.xlsx)
+```{admonition} Comece Agora com Templates
+:class: seealso
+Para facilitar seus primeiros passos e acelerar a criação de automações, disponibilizamos uma planilha com templates prontos para uso!
 
+[Baixe aqui a planilha Templates_n8n.xlsx](https://github.com/unb-lamfo-negocios-ai/LivroIAemMovimento/blob/main/Templates_n8n.xlsx) e explore exemplos práticos que você pode adaptar às suas necessidades.
+```
 
-#### Como usar n8n de graça
+## Como usar n8n de graça
 
 [Guia Self-Host n8n]([https://exemplo.com/caminho/para/planilha/Templates_n8n.xlsx](https://docs.n8n.io/hosting/?_gl=1*9qdgvv*_gcl_aw*R0NMLjE3NDkxNTA2MzAuQ2owS0NRandnSVhDQmhEQkFSSXNBRUxDOVppTXFma29NREM0em1TaU1lN05YVnc0dVZqWU1DTGYzZXNmcE91YklXR1phOERIb0ZCLUlJMGFBbHdjRUFMd193Y0I.*_gcl_au*MTAwMjExMjc2MS4xNzUwMDk4ODcz*_ga*NDMwODU3NTU0LjE3NTAwOTg2MzY.*_ga_0SC4FF2FH9*czE3NTAxMTQ4OTIkbzMkZzEkdDE3NTAxMTU1MzQkajYwJGwwJGgw))
 
