@@ -1,14 +1,13 @@
 # Protocolos de Integração entre Modelos Computacionais
+:name: secao_mcp
 
 Protocolos para conectar modelos computacionais distintos são conjuntos de regras, formatos e padrões que permitem a integração, comunicação e interoperabilidade entre diferentes sistemas, algoritmos ou arquiteturas de modelagem. Eles atuam como pontes semânticas e estruturais, garantindo que os modelos compartilhem informações contextuais, metadados, entradas e saídas, mesmo quando desenvolvidos com linguagens, objetivos ou arquiteturas diferentes. Esses protocolos são fundamentais em cenários como sistemas multiagentes, gêmeos digitais, orquestração de modelos de IA, fluxos RAG e infraestruturas de MLOps, onde é necessário manter consistência, rastreabilidade e colaboração inteligente entre os diversos componentes do sistema.
 
-```{figure} imagens/protocolo.jpeg
-:alt: Representação visual dos protocolos de integração entre agentes de IA
-:align: center
-:name: protocolo
 
-Fluxograma ilustrando os protocolos de integração entre agentes de IA.
-```
+```{figure} ../imagens/protocolo.jpeg
+---height: 150px
+name: protocolo
+---Fluxograma ilustrando os protocolos de integração entre agentes de IA.```
 
 Antes de abordarmos os protocolos de integração entre modelos computacionais, é importante garantir a compreensão de alguns conceitos fundamentais relacionados a redes, APIs, agentes inteligentes e fluxo de dados.
 
@@ -48,7 +47,7 @@ Neste e-book, optamos por aprofundar o **Model Context Protocol (MCP)** por trê
 - Está alinhado com práticas modernas de construção de **sistemas multiagentes baseados em linguagem natural**.
   
 ## Model Context Protocol
-:name: secao_mcp
+
 
 O [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) (MCP) é uma iniciativa aberta e recente que busca padronizar a comunicação entre modelos de linguagem e aplicações. Seu objetivo central é permitir que diferentes agentes de IA interajam com fontes de dados, APIs e sistemas legados de forma segura, consistente e escalável — sem a necessidade de integrações manuais e fragmentadas.
 
@@ -89,10 +88,11 @@ O que a Anthropic observou antes do MCP era uma grande fragmentação na forma c
 
 O MCP nasceu para padronizar esse desenvolvimento de IA, atuando como uma camada intermediária que "achata" essa complexidade. Ele busca ser para as aplicações de IA o que as APIs foram para a interação entre frontend e backend da web, ou o que o Language Server Protocol (LSP) é para a padronização da interação de IDEs com ferramentas específicas de linguagem.
 
-```{figure} imagens/mcp_protocol.png
-:align: center
-:name: mcp_protocol
+```{figure} ../imagens/mcp_protocol.png
+---height: 150px
+name: mcp_protocol
 ```
+
 
 ### MCP versus Outras Soluções
 
@@ -194,12 +194,17 @@ A arquitetura central do MCP se baseia em uma estrutura cliente-servidor robusta
 5. **Execução:** Cliente invoca ferramentas do servidor conforme necessário
 6. **Resultado:** Servidor processa e retorna resultados ao cliente/host
 
-```{figure} imagens/client_server_arq.png
-:alt: Client server Architecture
-:align: center
-:name: client_server_arq
+```{figure} ../imagens/hierarquia_de_IAs.jpeg
+---height: 150px
+name: directive-fig
+---Figura – Como a IA Generativa se Encaixa no Universo da IA.```
 
-Exemplo visual da arquitetura
+
+```{figure} ../imagens/client_server_arq.png
+---height: 150px
+name: client_server_arq
+---Exemplo visual da arquitetura. Fonte: ```
+
 
 <span style="font-size: 0.8em; color: gray;">Fonte: https://learn.deeplearning.ai/courses/mcp-build-rich-context-ai-apps-with-anthropic/lesson/xtt6w/mcp-architecture</span>
 ```
