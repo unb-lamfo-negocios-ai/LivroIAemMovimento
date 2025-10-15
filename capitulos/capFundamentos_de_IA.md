@@ -311,7 +311,7 @@ Esses espaços são valiosos para qualquer profissional, pesquisador ou empreend
 
 O uso de IA introduziu riscos críticos, como a violação da privacidade, a amplificação de vieses existentes nos dados e o desenvolvimento de sistemas difíceis de interpretar. A governança eficaz da IA deve, portanto, equilibrar a inovação com salvaguardas sociais, padrões éticos e responsabilidade legal.
 
-Para qualquer pessoa que utilize ou desenvolva IA – seja você um estudante, um programador ou um empreendedor – é crucial entender os princípios éticos e os tipos de riscos algorítmicos.
+Para qualquer pessoa que utilize ou desenvolva IA – seja você um estudante, um programador ou um empreendedor – é crucial entender os princípios éticos e os tipos de riscos algorítmicos. Os princípios a seguir foram baseados em {cite}`cajueiro2026comprehensive`.
 
 ### 1. Princípios Éticos Fundamentais da IA
 
