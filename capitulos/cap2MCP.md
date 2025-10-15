@@ -7,7 +7,7 @@ Protocolos para conectar modelos computacionais distintos são conjuntos de regr
 ---
 height: 150px
 name: protocolo
----FFluxograma ilustrando os protocolos de integração entre agentes de IA.
+---IImagem ilustrando os protocolos de integração entre agentes de IA.
 ```
 
 
