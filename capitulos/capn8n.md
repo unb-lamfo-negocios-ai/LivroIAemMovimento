@@ -729,11 +729,13 @@ Ou:
 
 Todo Node possui configurações extras além das básicas. Estas opções são fundamentais para cenários específicos e otimizam o funcionamento da automação.
 
-Na configuração de um node, sempre haverá configurações extras, que podem ser importantes em situações específicas. Vamos explicar algumas dessas opções: 👇
-```{figure} imagens/conf_parameter.png
-:align: center
-:name: conf_parameter
+Na configuração de um node, sempre haverá configurações extras, que podem ser importantes em situações específicas. Vamos explicar algumas dessas opções: 
+
+```{figure} ../imagens/conf_parameter.png
+---height: 150px
+name: conf_parameter
 ```
+
 ## Always Output Data
 
 **Always Output Data** é uma configuração que garante a continuidade do fluxo de automação, mesmo quando ocorrem falhas.
