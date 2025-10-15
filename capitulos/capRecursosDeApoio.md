@@ -454,7 +454,7 @@ Notebooks Jupyter gratuitos com GPU. Perfeito para executar experimentos sem con
 **[Replicate](https://replicate.com/)**  
 Execute modelos de IA via API ou interface web. Teste diferentes modelos sem preocupação com infraestrutura.
 
-### Tutoriais Interativos
+### Tutoriais Interativos e Plataformas de Cursos
 
 **[fast.ai](https://www.fast.ai/)**  
 Cursos práticos de deep learning com abordagem top-down. Você começa construindo modelos reais e depois mergulha na teoria.
@@ -464,6 +464,15 @@ Cursos estruturados no Coursera sobre ML, deep learning e IA generativa, criados
 
 **[Full Stack Deep Learning](https://fullstackdeeplearning.com/)**  
 Foco em colocar modelos em produção. Cobre aspectos práticos que vão além do treinamento de modelos.
+
+**[IA Expert Academy](https://iaexpert.academy/)**  
+Cursos completos em português sobre ML, deep learning e IA aplicada. Foco em projetos práticos do mercado brasileiro.
+
+**[Data Science Academy](https://www.datascienceacademy.com.br/)**  
+Formações completas em ciência de dados e IA com certificação. Conteúdo estruturado e em português.
+
+**[Coursera em Português](https://pt.coursera.org/courses?query=intelig%C3%AAncia%20artificial)**  
+Muitos cursos internacionais com legendas e materiais traduzidos para português.
 
 ## Fontes de Notícias e Atualizações em Tempo Real sobre IA
 
