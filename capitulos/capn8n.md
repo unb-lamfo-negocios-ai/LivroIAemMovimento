@@ -102,6 +102,78 @@ No n8n, você configura autenticação em dois lugares:
      - <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">Custom Headers</span>
 (nome + valor da chave)
 
+## Credenciais
+
+Ao trabalhar com automações no **n8n**, é comum se conectar a serviços externos, como Gmail, Google Sheets, WhatsApp, Slack, bancos de dados, APIs, entre muitos outros. Para que o n8n consiga interagir com esses serviços de forma segura e autorizada, ele precisa de algo chamado **credenciais**.
+
+Credenciais são **informações de acesso seguras** que permitem que o n8n “fale” com outras ferramentas ou plataformas, em nome do usuário. Essas informações podem variar dependendo do serviço, mas geralmente incluem:
+
+```{admonition} Exemplos de credenciais
+:class: exemplo
+- **Tokens de acesso** (como chaves secretas)
+- **Usuário e senha**
+- **Client ID e Client Secret**
+- **Chaves de API (API Keys)**
+- **URLs de autenticação**
+```
+
+Ou seja, as credenciais **funcionam como uma ponte segura** entre o n8n e o serviço externo com o qual se deseja interagir.
+
+### Como as credenciais atuam no n8n?
+
+No n8n, as credenciais são criadas e armazenadas separadamente dos workflows. Isso permite que você as reutilize em múltiplos fluxos de automação de forma prática, sem precisar configurar novamente o acesso sempre que for utilizar o mesmo serviço.
+
+```{admonition} O processo é simples:
+:class: note
+1. O usuário cria uma nova credencial no painel do n8n.
+2. Ele informa os dados necessários para autenticação com o serviço desejado.
+3. Ao montar um fluxo (workflow), ele seleciona essa credencial nos nós (nodes) que precisam dela.
+4. O n8n utiliza essas informações nos bastidores para autenticar e fazer as requisições necessárias.
+```
+Isso evita que o usuário precise se preocupar com a lógica de segurança a cada passo da automação.
+
+```{admonition} Benefícios ao usar credenciais
+:class: hint
+- **Segurança**: os dados de autenticação ficam armazenados em local protegido.
+- **Padronização**: vários workflows podem utilizar a mesma credencial.
+- **Facilidade de manutenção**: se a senha ou chave de API mudar, é possível atualizar a credencial em um único lugar.
+- **Controle de acesso**: em ambientes com múltiplos usuários, é possível restringir quem pode usar ou editar certas credenciais.
+```
+## Tipos de autenticação comuns no n8n
+
+A segurança e a proteção de dados são fundamentais ao integrar diferentes serviços e APIs em seus workflows de automação. O **n8n** oferece suporte robusto a diversos métodos de autenticação, permitindo que você conecte seus workflows a praticamente qualquer serviço externo de forma segura e confiável. Cada método de autenticação é adequado para diferentes tipos de integrações e níveis de segurança, desde simples chaves de API até protocolos mais complexos como OAuth2. Compreender esses métodos é essencial para configurar conexões seguras e garantir que suas automações funcionem adequadamente respeitando as políticas de segurança de cada plataforma.
+
+### Exemplos de métodos de autenticação
+
+|Tipo|	Quando é usado|
+|----|----------------|
+|API Key|	Serviços que usam uma chave secreta única|
+|OAuth2	|Google, Microsoft, Facebook, etc.|
+|Basic Auth|	Serviços que exigem usuário e senha|
+|Header personalizado|	APIs que requerem tokens no cabeçalho das requisições|
+|Credenciais genéricas|	Para serviços customizados via HTTP Request|
+
+```{admonition}
+:class: note
+Cada tipo tem campos específicos, mas o processo no n8n é sempre semelhante: informar os dados, testar a conexão e salvar.
+```
+
+```{admonition} Exemplo Prático: Integração Gmail + Slack
+:class: exemplo
+Imagine que você deseja criar um fluxo no n8n que envia uma mensagem no Slack sempre que receber um e-mail. Para isso, você precisa que o n8n consiga acessar:
+
+- Sua conta do Gmail (para ler e-mails)
+- Sua conta do Slack (para enviar mensagens)
+
+Isso exige duas credenciais:
+
+- Uma para o **Gmail** (via OAuth2)
+- Uma para o **Slack** (geralmente via Webhook ou token)
+
+Com essas credenciais criadas e salvas, basta vinculá-las aos respectivos nós no seu fluxo — e pronto! O n8n saberá como se comunicar com cada serviço.
+```
+
+
 ## Nodes de Gatilhos
 
 Os Trigger Nodes são responsáveis por iniciar um fluxo automaticamente. Eles fazem com que o n8n espere por um evento externo — como o recebimento de um e-mail, uma nova linha em uma planilha ou uma mensagem em um chat — antes de executar as próximas etapas do workflow.
@@ -1291,73 +1363,3 @@ Para uma demonstração prática e visual de como configurar o n8n usando Docker
 title="Instalação n8n via Docker" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 
-## Credenciais
-
-Ao trabalhar com automações no **n8n**, é comum se conectar a serviços externos, como Gmail, Google Sheets, WhatsApp, Slack, bancos de dados, APIs, entre muitos outros. Para que o n8n consiga interagir com esses serviços de forma segura e autorizada, ele precisa de algo chamado **credenciais**.
-
-Credenciais são **informações de acesso seguras** que permitem que o n8n “fale” com outras ferramentas ou plataformas, em nome do usuário. Essas informações podem variar dependendo do serviço, mas geralmente incluem:
-
-```{admonition} Exemplos de credenciais
-:class: exemplo
-- **Tokens de acesso** (como chaves secretas)
-- **Usuário e senha**
-- **Client ID e Client Secret**
-- **Chaves de API (API Keys)**
-- **URLs de autenticação**
-```
-
-Ou seja, as credenciais **funcionam como uma ponte segura** entre o n8n e o serviço externo com o qual se deseja interagir.
-
-### Como as credenciais atuam no n8n?
-
-No n8n, as credenciais são criadas e armazenadas separadamente dos workflows. Isso permite que você as reutilize em múltiplos fluxos de automação de forma prática, sem precisar configurar novamente o acesso sempre que for utilizar o mesmo serviço.
-
-```{admonition} O processo é simples:
-:class: note
-1. O usuário cria uma nova credencial no painel do n8n.
-2. Ele informa os dados necessários para autenticação com o serviço desejado.
-3. Ao montar um fluxo (workflow), ele seleciona essa credencial nos nós (nodes) que precisam dela.
-4. O n8n utiliza essas informações nos bastidores para autenticar e fazer as requisições necessárias.
-```
-Isso evita que o usuário precise se preocupar com a lógica de segurança a cada passo da automação.
-
-```{admonition} Benefícios ao usar credenciais
-:class: hint
-- **Segurança**: os dados de autenticação ficam armazenados em local protegido.
-- **Padronização**: vários workflows podem utilizar a mesma credencial.
-- **Facilidade de manutenção**: se a senha ou chave de API mudar, é possível atualizar a credencial em um único lugar.
-- **Controle de acesso**: em ambientes com múltiplos usuários, é possível restringir quem pode usar ou editar certas credenciais.
-```
-## Tipos de autenticação comuns no n8n
-
-A segurança e a proteção de dados são fundamentais ao integrar diferentes serviços e APIs em seus workflows de automação. O **n8n** oferece suporte robusto a diversos métodos de autenticação, permitindo que você conecte seus workflows a praticamente qualquer serviço externo de forma segura e confiável. Cada método de autenticação é adequado para diferentes tipos de integrações e níveis de segurança, desde simples chaves de API até protocolos mais complexos como OAuth2. Compreender esses métodos é essencial para configurar conexões seguras e garantir que suas automações funcionem adequadamente respeitando as políticas de segurança de cada plataforma.
-
-### Exemplos de métodos de autenticação
-
-|Tipo|	Quando é usado|
-|----|----------------|
-|API Key|	Serviços que usam uma chave secreta única|
-|OAuth2	|Google, Microsoft, Facebook, etc.|
-|Basic Auth|	Serviços que exigem usuário e senha|
-|Header personalizado|	APIs que requerem tokens no cabeçalho das requisições|
-|Credenciais genéricas|	Para serviços customizados via HTTP Request|
-
-```{admonition}
-:class: note
-Cada tipo tem campos específicos, mas o processo no n8n é sempre semelhante: informar os dados, testar a conexão e salvar.
-```
-
-```{admonition} Exemplo Prático: Integração Gmail + Slack
-:class: exemplo
-Imagine que você deseja criar um fluxo no n8n que envia uma mensagem no Slack sempre que receber um e-mail. Para isso, você precisa que o n8n consiga acessar:
-
-- Sua conta do Gmail (para ler e-mails)
-- Sua conta do Slack (para enviar mensagens)
-
-Isso exige duas credenciais:
-
-- Uma para o **Gmail** (via OAuth2)
-- Uma para o **Slack** (geralmente via Webhook ou token)
-
-Com essas credenciais criadas e salvas, basta vinculá-las aos respectivos nós no seu fluxo — e pronto! O n8n saberá como se comunicar com cada serviço.
-```
