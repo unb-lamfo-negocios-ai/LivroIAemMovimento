@@ -874,18 +874,19 @@ Para ativar **Retry on Fail** em um nó:
 :name: retry_on_fail
 ```
 
-## Comportamento do Workflow com erros
+## Comportamento do workflow com erros
+
+Quando um Node encontra uma falha durante a execução, você pode definir como o fluxo de automação deve reagir. Existem três estratégias principais para gerenciar erros, cada uma adequada a diferentes necessidades e cenários. 
 
 ```{figure} ../imagens/fig_workflow.png
 ---
 height: 150px
 name: fig_workflow
 ---
-Figura – Comportamento do workflow com erros.
+Estratégias para gerenciar erros.
 ```
 
-
-Quando um Node encontra uma falha durante a execução, você pode definir como o fluxo de automação deve reagir. Existem três estratégias principais para gerenciar erros, cada uma adequada a diferentes necessidades e cenários.
+A figura mostra as três opções de comportamento disponíveis no n8n quando ocorre um erro em um Node: **Stop Workflow** (interrompe a execução e falha o workflow), **Continue** (prossegue normalmente como se o erro não tivesse ocorrido) e **Continue (using error output)** (continua o fluxo utilizando os dados de erro como saída para os próximos Nodes). Estas estratégias e recomendações sobre seus usos são apresentadas a seguir. 
 
 ### 1. Stop Workflow
 
@@ -1005,7 +1006,7 @@ Um node pode esperar um tipo de dado (ex: número, string ou objeto JSON), mas r
 ```{admonition} Exemplo
 :class: exemplo
 
-Passar um número onde se espera um texto ou enviar um array quando se espera um único item.
+Passar um número onde se espera texto ou enviar um array quando se espera um único item.
 ```
 
 :::{tip}
@@ -1103,7 +1104,7 @@ O **n8n** oferece integração nativa com modelos de linguagem GPT, permitindo q
 
 Durante o processo de aprendizado e uso da plataforma **n8n**, contar com o apoio de ferramentas baseadas em inteligência artificial pode representar um ganho significativo em produtividade, compreensão e autonomia. 
 
-```{admonition} O **N8N A.I Assistant (by Nskha)
+```{admonition} O **N8N A.I Assistant (by Nskha)**
 :class: exemplo
 
 Um exemplo disso é o uso de assistentes especializados, como o **N8N A.I Assistant (by Nskha)**, uma versão do GPT treinada especificamente para auxiliar usuários da plataforma n8n.
@@ -1174,7 +1175,7 @@ A grande vantagem é que eles são totalmente customizáveis. Um template serve 
 :class: seealso
 Para facilitar seus primeiros passos e acelerar a criação de automações, disponibilizamos uma planilha com templates prontos para uso!
 
-[Baixe aqui a planilha Templates_n8n.xlsx](https://github.com/unb-lamfo-negocios-ai/LivroIAemMovimento/blob/main/Templates_n8n.xlsx) e explore exemplos práticos que você pode adaptar às suas necessidades.
+Baixe aqui a planilha [Templates_n8n.xlsx](https://github.com/unb-lamfo-negocios-ai/LivroIAemMovimento/blob/main/Templates_n8n.xlsx) e explore exemplos práticos que você pode adaptar às suas necessidades.
 ```
 
 ## Como Usar n8n Gratuitamente
