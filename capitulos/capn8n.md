@@ -941,9 +941,12 @@ Para ativar **Retry on Fail** em um nó:
 - **Uso de Retry on Fail**: Com Retry on Fail ativado, o nó tentará novamente automaticamente após uma falha inicial de conexão, permitindo que o fluxo continue mesmo em condições adversas.
 ```
 
-```{figure} imagens/retry_on_fail.png
-:align: center
-:name: retry_on_fail
+```{figure} ../imagens/retry_on_fail.png
+---
+height: 150px
+name: retry_on_fail
+---
+Como a IA Generativa se Encaixa no Universo da IA.
 ```
 
 ## Comportamento do workflow com erros
@@ -957,8 +960,6 @@ name: fig_workflow
 ---
 Estratégias para gerenciar erros.
 ```
-
-A figura mostra as três opções de comportamento disponíveis no n8n quando ocorre um erro em um Node: **Stop Workflow** (interrompe a execução e falha o workflow), **Continue** (prossegue normalmente como se o erro não tivesse ocorrido) e **Continue (using error output)** (continua o fluxo utilizando os dados de erro como saída para os próximos Nodes). Estas estratégias e recomendações sobre seus usos são apresentadas a seguir. 
 
 ### 1. Stop Workflow
 
@@ -1243,7 +1244,7 @@ Os templates no n8n são, essencialmente, fluxos de automação (workflows) pré
 
 A grande vantagem é que eles são totalmente customizáveis. Um template serve como um ponto de partida robusto, que pode ser expandido, modificado e adaptado para atender às necessidades exatas de um projeto, economizando um tempo de desenvolvimento significativo e expondo o usuário a boas práticas de construção de workflows.
 
-```{admonition} Comece Agora com Templates
+```{admonition} Comece agora com Templates
 :class: seealso
 Para facilitar seus primeiros passos e acelerar a criação de automações, disponibilizamos uma planilha com templates prontos para uso!
 
@@ -1258,7 +1259,7 @@ O **n8n** é uma ferramenta de código aberto, o que significa que você pode ut
 
 Para executar o n8n gratuitamente em seu ambiente local, você precisará instalar o **Docker**, que é a solução de containerização mais utilizada por desenvolvedores e equipes para executar aplicações de forma isolada e consistente.
 
-**📦 Instale o Docker:**
+**Instale o Docker:**
 - Acesse o site oficial: [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - Baixe e instale a versão adequada para seu sistema operacional (Windows, macOS ou Linux)
 - Siga as instruções de instalação fornecidas pelo instalador
