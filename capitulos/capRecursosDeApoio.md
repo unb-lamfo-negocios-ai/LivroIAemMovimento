@@ -553,14 +553,6 @@ Papers acadêmicos com código de implementação. Seção trending mostra o que
 **[arXiv Sanity](http://www.arxiv-sanity.com/)**  
 Recomendações personalizadas de papers do arXiv baseadas em seus interesses.
 
-### Plataformas Brasileiras
-
-**[AI News Brasil](https://ainewsbrasil.com.br/)**  
-Notícias sobre IA com foco no contexto brasileiro. Startups locais, regulamentação e aplicações.
-
-**[TechCrunch Brasil](https://techcrunch.com/tag/brazil/)**  
-Cobertura do ecossistema tech brasileiro, incluindo desenvolvimentos em IA.
-
 
 :::{admonition} Atenção ao Hype
 :class: warning
