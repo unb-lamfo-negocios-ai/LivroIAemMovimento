@@ -1177,80 +1177,161 @@ Para facilitar seus primeiros passos e acelerar a criação de automações, dis
 [Baixe aqui a planilha Templates_n8n.xlsx](https://github.com/unb-lamfo-negocios-ai/LivroIAemMovimento/blob/main/Templates_n8n.xlsx) e explore exemplos práticos que você pode adaptar às suas necessidades.
 ```
 
-## Como usar n8n de graça
+## Como Usar n8n Gratuitamente
 
-[Guia Self-Host n8n]([https://exemplo.com/caminho/para/planilha/Templates_n8n.xlsx](https://docs.n8n.io/hosting/?_gl=1*9qdgvv*_gcl_aw*R0NMLjE3NDkxNTA2MzAuQ2owS0NRandnSVhDQmhEQkFSSXNBRUxDOVppTXFma29NREM0em1TaU1lN05YVnc0dVZqWU1DTGYzZXNmcE91YklXR1phOERIb0ZCLUlJMGFBbHdjRUFMd193Y0I.*_gcl_au*MTAwMjExMjc2MS4xNzUwMDk4ODcz*_ga*NDMwODU3NTU0LjE3NTAwOTg2MzY.*_ga_0SC4FF2FH9*czE3NTAxMTQ4OTIkbzMkZzEkdDE3NTAxMTU1MzQkajYwJGwwJGgw))
+O **n8n** é uma ferramenta de código aberto, o que significa que você pode utilizá-la completamente **gratuita** através da modalidade **self-hosted** (auto-hospedagem). Nessa abordagem, você instala e executa o n8n em sua própria infraestrutura, seja no seu computador local, em um servidor próprio ou em serviços de nuvem. Além de economizar custos, o self-hosting oferece controle total sobre seus dados, privacidade e personalização completa da plataforma.
 
-Instalar o Docker 🐳  [The #1 containerization software for developers and teams](https://www.docker.com/products/docker-desktop/)
+### Pré-requisitos
+
+Para executar o n8n gratuitamente em seu ambiente local, você precisará instalar o **Docker**, que é a solução de containerização mais utilizada por desenvolvedores e equipes para executar aplicações de forma isolada e consistente.
+
+**📦 Instale o Docker:**
+- Acesse o site oficial: [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- Baixe e instale a versão adequada para seu sistema operacional (Windows, macOS ou Linux)
+- Siga as instruções de instalação fornecidas pelo instalador
+
+### Executando n8n com Docker
+
+Após instalar o Docker, você pode executar o n8n com um único comando no terminal:
+
+:::{code-block} bash
+docker run -it --rm \
+  --name n8n \
+  -p 5678:5678 \
+  -v ~/.n8n:/home/node/.n8n \
+  docker.n8n.io/n8nio/n8n
+:::
+
+**O que este comando faz:**
+- `-it`: Executa o container em modo interativo
+- `--rm`: Remove o container automaticamente quando você pará-lo
+- `--name n8n`: Nomeia o container como "n8n"
+- `-p 5678:5678`: Mapeia a porta 5678 para acessar a interface
+- `-v ~/.n8n:/home/node/.n8n`: Persiste seus workflows e configurações localmente
+
+**Acessando a interface:**
+- Abra seu navegador e acesse: `http://localhost:5678`
+- Crie sua conta local (os dados ficam apenas na sua máquina)
+- Comece a criar seus workflows!
+
+### Outras Opções de Self-Hosting
+
+Além do Docker Desktop local, você pode hospedar o n8n de outras formas gratuitas:
+
+#### Serviços de Nuvem Gratuitos
+- **Railway**: Oferece tier gratuito com recursos suficientes para começar
+- **Render**: Plano gratuito com sleep após inatividade
+- **Google Cloud Run**: Tier gratuito generoso para aplicações containerizadas
+- **AWS Free Tier**: 12 meses gratuitos com recursos limitados
+
+#### Servidores Próprios
+- Servidor VPS pessoal (como DigitalOcean, Linode, Vultr)
+- Servidor doméstico (Raspberry Pi, computador antigo)
+- Ambiente de desenvolvimento local permanente
+
+### Documentação Oficial
+
+Para instruções detalhadas sobre diferentes métodos de instalação, configurações avançadas e melhores práticas de self-hosting, consulte:
+
+📚 [Guia Oficial de Self-Hosting do n8n](https://docs.n8n.io/hosting/?_gl=1*9qdgvv*_gcl_aw*R0NMLjE3NDkxNTA2MzAuQ2owS0NRandnSVhDQmhEQkFSSXNBRUxDOVppTXFma29NREM0em1TaU1lN05YVnc0dVZqWU1DTGYzZXNmcE91YklXR1phOERIb0ZCLUlJMGFBbHdjRUFMd193Y0I.*_gcl_au*MTAwMjExMjc2MS4xNzUwMDk4ODcz*_ga*NDMwODU3NTU0LjE3NTAwOTg2MzY.*_ga_0SC4FF2FH9*czE3NTAxMTQ4OTIkbzMkZzEkdDE3NTAxMTU1MzQkajYwJGwwJGgw)
+
+### Vantagens do Self-Hosting Gratuito
+
+#### Controle Total
+- Seus dados permanecem completamente sob seu controle
+- Sem limites de workflows ou execuções
+- Personalização completa da plataforma
+
+#### Privacidade e Segurança
+- Dados sensíveis não saem do seu ambiente
+- Ideal para projetos corporativos com requisitos de compliance
+- Nenhuma informação compartilhada com terceiros
+
+#### Aprendizado e Experimentação
+- Ambiente perfeito para aprender e testar
+- Sem preocupações com custos ou limites de uso
+- Possibilidade de explorar todas as funcionalidades
+
+#### Flexibilidade
+- Execute em qualquer lugar que suporte Docker
+- Escalável conforme suas necessidades crescem
+- Migração fácil entre diferentes ambientes
+
+:::{admonition} Dica para Iniciantes
+:class: tip
+
+Se você está começando, recomendamos iniciar com o Docker Desktop no seu computador local. É a forma mais rápida de testar o n8n sem custos e sem complicações. Depois que se familiarizar com a ferramenta, você pode considerar migrar para uma solução em nuvem se precisar de acesso remoto ou maior disponibilidade.
+:::
+
+:::{admonition} Atenção
+:class: warning
+
+Ao usar o n8n gratuitamente via self-hosting, você é responsável por:
+- Manter o software atualizado
+- Fazer backups dos seus workflows
+- Garantir a segurança do ambiente
+- Gerenciar recursos computacionais (memória, processamento, armazenamento)
+:::
 
 ```{figure} imagens/docker_n8n.png
 :alt: Docker n8n.
 :align: center
 :name: docker_n8n
-
 ```
 
-```{admonition} Lembrando
-:class: note
+Para uma demonstração prática e visual de como configurar o n8n usando Docker, recomendamos o vídeo tutorial que apresenta o processo completo de instalação passo a passo. O vídeo mostra desde a instalação do Docker Desktop até a execução do primeiro workflow no n8n, incluindo dicas de configuração e troubleshooting. É um recurso excelente tanto para iniciantes quanto para quem deseja revisar o processo de setup de forma rápida e didática.
 
-Isso é um atalho para utilizar a ferramenta gratuitamente, o que inclui certas limitações. Por isso, após se especializar, é interessante assinar a plataforma para uma melhor performance das suas automações. A plataforma também sempre oferece 14 dias de teste gratuito.
+:::{youtube} 8hQ1u0TAyAc
+:start: 5
+:::
 
-Qualquer dúvida ao rodar os códigos no terminal e na instalação, pergunte ao ChatGPT! Alguns detalhes são imprevisíveis.
-```
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8hQ1u0TAyAc&t=5s" 
 title="Instalação n8n via Docker" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 
-#### Credenciais
-
-O que são credenciais no n8n e como elas funcionam?
+## Credenciais
 
 Ao trabalhar com automações no **n8n**, é comum se conectar a serviços externos, como Gmail, Google Sheets, WhatsApp, Slack, bancos de dados, APIs, entre muitos outros. Para que o n8n consiga interagir com esses serviços de forma segura e autorizada, ele precisa de algo chamado **credenciais**.
 
-🧠 Mas o que são credenciais?
-
 Credenciais são **informações de acesso seguras** que permitem que o n8n “fale” com outras ferramentas ou plataformas, em nome do usuário. Essas informações podem variar dependendo do serviço, mas geralmente incluem:
 
+```{admonition} Exemplos de credenciais
+:class: exemplo
 - **Tokens de acesso** (como chaves secretas)
 - **Usuário e senha**
 - **Client ID e Client Secret**
 - **Chaves de API (API Keys)**
 - **URLs de autenticação**
+```
 
 Ou seja, as credenciais **funcionam como uma ponte segura** entre o n8n e o serviço externo com o qual se deseja interagir.
 
----
-
-📦 Como as credenciais atuam no n8n?
+### Como as credenciais atuam no n8n?
 
 No n8n, as credenciais são criadas e armazenadas separadamente dos workflows. Isso permite que você as reutilize em múltiplos fluxos de automação de forma prática, sem precisar configurar novamente o acesso sempre que for utilizar o mesmo serviço.
 
-O processo é simples:
-
+```{admonition} O processo é simples:
+:class: note
 1. O usuário cria uma nova credencial no painel do n8n.
 2. Ele informa os dados necessários para autenticação com o serviço desejado.
 3. Ao montar um fluxo (workflow), ele seleciona essa credencial nos nós (nodes) que precisam dela.
 4. O n8n utiliza essas informações nos bastidores para autenticar e fazer as requisições necessárias.
-
+```
 Isso evita que o usuário precise se preocupar com a lógica de segurança a cada passo da automação.
 
----
+```{admonition} Benefícios ao usar credenciais
+:class: hint
+- **Segurança**: os dados de autenticação ficam armazenados em local protegido.
+- **Padronização**: vários workflows podem utilizar a mesma credencial.
+- **Facilidade de manutenção**: se a senha ou chave de API mudar, é possível atualizar a credencial em um único lugar.
+- **Controle de acesso**: em ambientes com múltiplos usuários, é possível restringir quem pode usar ou editar certas credenciais.
+```
+## Tipos de autenticação comuns no n8n
 
-🔐 Por que as credenciais são importantes?
+A segurança e a proteção de dados são fundamentais ao integrar diferentes serviços e APIs em seus workflows de automação. O **n8n** oferece suporte robusto a diversos métodos de autenticação, permitindo que você conecte seus workflows a praticamente qualquer serviço externo de forma segura e confiável. Cada método de autenticação é adequado para diferentes tipos de integrações e níveis de segurança, desde simples chaves de API até protocolos mais complexos como OAuth2. Compreender esses métodos é essencial para configurar conexões seguras e garantir que suas automações funcionem adequadamente respeitando as políticas de segurança de cada plataforma.
 
-O uso de credenciais traz diversos benefícios:
-
-- ✅ **Segurança**: os dados de autenticação ficam armazenados em local protegido.
-- ✅ **Padronização**: vários workflows podem utilizar a mesma credencial.
-- ✅ **Facilidade de manutenção**: se a senha ou chave de API mudar, é possível atualizar a credencial em um único lugar.
-- ✅ **Controle de acesso**: em ambientes com múltiplos usuários, é possível restringir quem pode usar ou editar certas credenciais.
-
----
-
-🧩 Tipos de autenticação comuns no n8n
-
-O n8n suporta diversos métodos de autenticação, tais como:
+### Exemplos de métodos de autenticação
 
 |Tipo|	Quando é usado|
 |----|----------------|
@@ -1265,8 +1346,8 @@ O n8n suporta diversos métodos de autenticação, tais como:
 Cada tipo tem campos específicos, mas o processo no n8n é sempre semelhante: informar os dados, testar a conexão e salvar.
 ```
 
-Exemplo simples
-
+```{admonition} Exemplo Prático: Integração Gmail + Slack
+:class: exemplo
 Imagine que você deseja criar um fluxo no n8n que envia uma mensagem no Slack sempre que receber um e-mail. Para isso, você precisa que o n8n consiga acessar:
 
 - Sua conta do Gmail (para ler e-mails)
@@ -1278,6 +1359,7 @@ Isso exige duas credenciais:
 - Uma para o **Slack** (geralmente via Webhook ou token)
 
 Com essas credenciais criadas e salvas, basta vinculá-las aos respectivos nós no seu fluxo — e pronto! O n8n saberá como se comunicar com cada serviço.
+```
 
 ## WhatsApp API
 
