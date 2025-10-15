@@ -941,14 +941,6 @@ Para ativar **Retry on Fail** em um nó:
 - **Uso de Retry on Fail**: Com Retry on Fail ativado, o nó tentará novamente automaticamente após uma falha inicial de conexão, permitindo que o fluxo continue mesmo em condições adversas.
 ```
 
-```{figure} ../imagens/retry_on_fail.png
----
-height: 150px
-name: retry_on_fail
----
-Como a IA Generativa se Encaixa no Universo da IA.
-```
-
 ## Comportamento do workflow com erros
 
 Quando um Node encontra uma falha durante a execução, você pode definir como o fluxo de automação deve reagir. Existem três estratégias principais para gerenciar erros, cada uma adequada a diferentes necessidades e cenários. 
@@ -1347,18 +1339,9 @@ Ao usar o n8n gratuitamente via self-hosting, você é responsável por:
 - Gerenciar recursos computacionais (memória, processamento, armazenamento)
 :::
 
-```{figure} imagens/docker_n8n.png
-:alt: Docker n8n.
-:align: center
-:name: docker_n8n
-```
 
 Para uma demonstração prática e visual de como configurar o n8n usando Docker, recomendamos o vídeo tutorial que apresenta o processo completo de instalação passo a passo. O vídeo mostra desde a instalação do Docker Desktop até a execução do primeiro workflow no n8n, incluindo dicas de configuração e troubleshooting. É um recurso excelente tanto para iniciantes quanto para quem deseja revisar o processo de setup de forma rápida e didática.
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/8hQ1u0TAyAc?start=5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8hQ1u0TAyAc&t=5s" 
-title="Instalação n8n via Docker" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
 
