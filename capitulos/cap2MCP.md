@@ -8,7 +8,9 @@ Protocolos para conectar modelos computacionais distintos são conjuntos de regr
 ---
 height: 150px
 name: protocolo
----FFluxograma ilustrando os protocolos de integração entre agentes de IA.```
+---FFluxograma ilustrando os protocolos de integração entre agentes de IA.
+```
+
 
 Antes de abordarmos os protocolos de integração entre modelos computacionais, é importante garantir a compreensão de alguns conceitos fundamentais relacionados a redes, APIs, agentes inteligentes e fluxo de dados.
 
