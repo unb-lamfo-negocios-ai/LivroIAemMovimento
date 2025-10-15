@@ -491,11 +491,14 @@ Um formulário captura dados do lead, que são gravados em uma planilha via Node
 
 ### Os blocos básicos do JSON
 
-Os blocos são as unidades estruturais do JSON que organizam informações em padrões específicos. Um bloco de objeto {} agrupa pares de chave-valor, permitindo organizar dados relacionados—por exemplo, um bloco contendo "nome": "João" e "email": "joao@email.com". Um bloco de array [] armazena listas de elementos em sequência, ideal para coleções como múltiplos leads ou mensagens.
+Os blocos são as unidades estruturais do JSON que organizam informações em padrões específicos. 
+
+- Um bloco de objeto {} agrupa pares de chave-valor, permitindo organizar dados relacionados—por exemplo, um bloco contendo "nome": "João" e "email": "joao@email.com".
+- Um bloco de array [] armazena listas de elementos em sequência, ideal para coleções como múltiplos leads ou mensagens.
 
 Cada bloco pode conter diferentes tipos de dados: strings (texto), números (inteiros e decimais), booleanos (verdadeiro/falso) e null (vazio). Esses tipos garantem que as informações sejam processadas corretamente quando fluem entre Nodes de Aplicativo—um array de objetos, por exemplo, permite que um Node envie múltiplos contatos ao WhatsApp em uma única operação de IA.
 
-json{
+```{code-block} json{
   "nome": "João",
   "email": "joao@email.com",
   "ativo": true,
@@ -504,8 +507,12 @@ json{
     {"telefone": "11988888888", "plataforma": "sms"}
   ]
 }
+```
 
-**Os blocos de objeto e array são complementares**: objetos organizam dados relacionados horizontalmente, enquanto arrays os organizam verticalmente em sequência.
+```{admonition} Os blocos de objeto e array são complementares:
+:class: note
+objetos organizam dados relacionados horizontalmente, enquanto arrays os organizam verticalmente em sequência.
+```
 
 ### Tipos de Dados
 
@@ -565,7 +572,9 @@ json{
     
     ✅ Muito usado para indicar "não preenchido" ou "a definir".
 
-**JSON Aninhado: Um objeto dentro do outro**
+**JSON alinhado: Um objeto dentro do outro**
+
+Quando precisamos representar informações hierárquicas ou relacionadas, podemos aninhar objetos JSON uns dentro dos outros, criando uma estrutura de dados mais rica e organizada.
 
 ```{code-block} json
     {
@@ -577,8 +586,9 @@ json{
         }
   }
 
-Aqui temos objetos dentro de outros objetos. Acessar isso no n8n exige navegação com <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">usuario.contato.email</span>.
 ```
+
+No exemplo acima temos objetos dentro de outros objetos. Acessar isso no n8n exige navegação com <span style="background-color: #f2f2f2; border-radius: 5px; padding: 2px 6px; font-family: monospace; color: #d6336c; border: 1px solid #f2f2f2;">usuario.contato.email</span>.
 
 ### JSON vs. XML vs. CSV
 
@@ -642,7 +652,6 @@ Ou:
 - Enviar JSON mal formatado em um `POST` via HTTP
 ```
 
----
 
 ### Configurações no Node
 
@@ -654,11 +663,68 @@ Na configuração de um node, sempre haverá configurações extras, que podem s
 :name: conf_parameter
 ```
 ### Always Output Data
-Always Output Data é uma configuração que força um Node a retornar dados mesmo quando uma operação falha ou não atende aos critérios esperados. Por padrão, quando um Node encontra um erro, ele interrompe a sequência sem enviar informações adiante. Com essa opção ativada, o Node continua a cadeia de automação e passa os dados disponíveis (incluindo mensagens de erro ou valores parciais) para o próximo Node, permitindo tratamento de falhas, logging de erros e fluxos alternativos.
+
+**Always Output Data** é uma configuração que garante a continuidade do fluxo de automação, mesmo quando ocorrem falhas.
+
+```{admonition} Como funciona
+:class: note
+
+- **Comportamento padrão:** Quando um Node encontra um erro, ele interrompe a execução e não envia dados para os próximos passos da sequência.
+
+- **Com Always Output Data ativado:** O Node continua a cadeia de automação mesmo após uma falha, passando os dados disponíveis para o próximo Node.
+```
+
+```{admonition} O que é transmitido
+:class: note
+Os dados enviados podem incluir:
+- Mensagens de erro
+- Valores parciais processados
+- Informações de status da operação
+```
+
+```{admonition} Benefícios
+:class: tip
+
+Esta configuração permite:
+- **Tratamento de falhas:** Criar lógicas alternativas para lidar com erros
+- **Logging de erros:** Registrar problemas para análise posterior
+- **Fluxos alternativos:** Direcionar a automação por caminhos diferentes conforme o resultado
+```
 
 #### Funcionamento da Opção Always Output Data
-Quando Always Output Data está desativado, um Node que falha bloqueia toda a sequência—se um Node do Google Sheets não consegue gravar dados, nenhum dado segue para o WhatsApp. Ao ativar essa opção, mesmo com a falha, o Node alimenta os próximos na cadeia com os dados que possui, permitindo que Nodes posteriores registrem o erro em um banco de dados, enviem um alerta ao time ou executem uma ação de contingência. Isso torna automações mais resilientes e oferece maior controle sobre cenários de erro em operações críticas de IA.
 
+```{admonition} Comportamento sem Always Output Data
+:class: note
+Quando esta opção está **desativada**:
+- Um Node que falha bloqueia toda a sequência de automação
+- Os dados não são transmitidos para os próximos Nodes
+- **Exemplo:** Se um Node do Google Sheets não consegue gravar dados, nenhuma informação segue para o Node do WhatsApp
+```
+
+```{admonition} Comportamento com Always Output Data
+:class: note
+
+Quando esta opção está **ativada**:
+- Mesmo com a falha, o Node continua alimentando a cadeia
+- Os dados disponíveis são transmitidos para os próximos Nodes
+- A automação não é interrompida completamente
+```
+
+```{admonition} Possibilidades de tratamento
+:class: note
+Com os dados transmitidos, os Nodes posteriores podem:
+- Registrar o erro em um banco de dados
+- Enviar alertas para a equipe
+- Executar ações de contingência
+- Redirecionar o fluxo para caminhos alternativos
+```
+
+```{admonition} Vantagens
+class: note
+- **Maior resiliência:** Automações que continuam funcionando mesmo com falhas pontuais
+- **Melhor controle:** Gerenciamento detalhado de cenários de erro
+- **Confiabilidade:** Essencial para operações críticas de IA que não podem ser simplesmente interrompidas
+```
 
 Quando habilitada, o nó sempre enviará uma saída, mesmo nas seguintes situações:
 
@@ -666,13 +732,7 @@ Quando habilitada, o nó sempre enviará uma saída, mesmo nas seguintes situaç
 - **Falha na execução**: Se ocorrer um erro durante a execução do nó.
 - **Saída vazia**: Se o nó não tiver dados para enviar após sua execução.
 
-**Por que usar Always Output Data?**
-
-- **Garantia de fluxo**: Mantém a consistência do fluxo, permitindo que ele continue mesmo em condições adversas.
-- **Tratamento de erros**: Ajuda a lidar com erros de forma mais controlada, podendo incluir ações de contingência ou tratamento posterior.
-- **Transparência e depuração**: Facilita a depuração do fluxo, permitindo visualizar onde ocorrem falhas ou lacunas nos dados.
-
-Configuração no n8n ⚙️
+#### Configuração no n8n️
 
 Para ativar Always Output Data em um nó:
 
@@ -680,24 +740,53 @@ Para ativar Always Output Data em um nó:
 2. Procure pela opção **"Always Output Data"** ou similar nas configurações do nó.
 3. Habilite esta opção conforme necessário.
 
-Exemplo Prático 🔍
+```{admonition} Exemplo Prático
+:class: exemplo
 
 - **Cenário**: Um nó que faz uma solicitação a uma API externa para buscar dados.
 - **Uso**: Com Always Output Data ativado, o fluxo continuará mesmo se a solicitação à API falhar, garantindo que etapas subsequentes possam processar os dados disponíveis ou lidar com a falha de forma adequada.
+```
 
 #### Execute Once
 
-Funcionamento do **Execute Once** 🔄
+**Execute Once** é uma configuração que limita a execução de um Node a apenas uma vez, independentemente de quantas vezes a condição de acionamento seja atingida.
 
-- **Quando habilitado**, o nó só será executado **uma única vez** após o acionamento inicial do fluxo, mesmo que a condição normalmente desencadeasse múltiplas execuções.
-- **Cenário comum**: Imagine um fluxo que é acionado por um webhook de um sistema externo. Com **Execute Once** ativado, o nó será acionado apenas na primeira vez que o webhook for recebido, mesmo que o sistema externo envie múltiplas solicitações ao webhook.
+```{admonition} Como funciona
+:class: note
+- Quando **habilitado**, o Node será executado **somente na primeira vez** após o acionamento inicial do fluxo
+- Execuções subsequentes que normalmente ativariam o Node são ignoradas
+- A restrição permanece ativa durante toda a sessão do fluxo
+```
 
-Por que usar **Execute Once**? 🎯
+```{admonition} Exemplo prático
+:class: exemplo
+Imagine um fluxo acionado por um webhook de um sistema externo:
 
-- **Prevenção de execuções duplicadas**: Evita processamentos redundantes e mantém a integridade dos dados.
-- **Economia de recursos**: Reduz o consumo de recursos do sistema ao limitar execuções desnecessárias do fluxo.
+- **Sem Execute Once:** Cada requisição recebida pelo webhook executa o Node novamente
+- **Com Execute Once:** Apenas a primeira requisição aciona o Node, mesmo que o sistema externo envie múltiplas solicitações
+```
 
-Configuração no n8n ⚙️
+**Por que usar Execute Once?**
+
+**Prevenção de execuções duplicadas**
+- Evita processamentos redundantes da mesma operação
+- Mantém a integridade dos dados ao impedir registros duplicados
+- Garante que ações críticas ocorram apenas uma vez
+
+**Economia de recursos**
+- Reduz o consumo de recursos computacionais
+- Diminui custos operacionais ao evitar execuções desnecessárias
+- Otimiza o desempenho geral do fluxo de automação
+
+**Quando aplicar**
+
+Esta configuração é especialmente útil em:
+- Integrações com sistemas externos que podem enviar requisições duplicadas
+- Operações de gravação em bancos de dados
+- Envio de notificações ou alertas únicos
+- Processamentos que devem ocorrer apenas na inicialização do fluxo
+
+#### Configuração no n8n️
 
 Para ativar **Execute Once** em um nó:
 
@@ -705,10 +794,12 @@ Para ativar **Execute Once** em um nó:
 2. Procure pela opção **"Execute Once"** ou similar nas configurações do nó.
 3. Habilite esta opção para garantir que o nó seja executado apenas uma vez após o acionamento inicial do fluxo.
 
-Exemplo Prático 🔍
+```{admonition} Exemplo Prático
+:class: exemplo
 
 - **Cenário**: Um webhook aciona um fluxo no n8n sempre que um novo pedido é recebido em um sistema de e-commerce.
 - **Uso de Execute Once**: Com Execute Once ativado, o fluxo será acionado apenas na primeira vez que o webhook for recebido para processar o novo pedido, independentemente de quantas vezes o webhook seja acionado pelo sistema de e-commerce.
+```
 
 #### Retry on Fail
 
