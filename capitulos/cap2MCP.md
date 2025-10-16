@@ -206,15 +206,22 @@ name: client_server_arq_
 ---Exemplo visual da arquitetura. ```
 ```
 
+
 ---Exemplo visual da arquitetura. Fonte: Adaptado de {cite}`deeplearningai2024mcp`.
 
 Na prática:
+
+
 
 ```{figure} ../imagens/mcp_na_pratica.png
 ---height: 150px
 name: mcp_na_pratica_
 ---MCP na prática. ```
+
+
 ---MCP na prática. Fonte: Adaptado de {cite}`sakal2024mcp`.
+
+
 
 #### Componentes Primários do protocolo
 
