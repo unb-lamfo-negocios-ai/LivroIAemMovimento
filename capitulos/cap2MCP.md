@@ -90,13 +90,11 @@ O que a Anthropic observou antes do MCP era uma grande fragmentação na forma c
 
 O MCP nasceu para padronizar esse desenvolvimento de IA, atuando como uma camada intermediária que "achata" essa complexidade. Ele busca ser para as aplicações de IA o que as APIs foram para a interação entre frontend e backend da web, ou o que o Language Server Protocol (LSP) é para a padronização da interação de IDEs com ferramentas específicas de linguagem.
 
+
 ```{figure} ../imagens/mcp_protocol.png
----
-height: 150px
-name: mcp_protocol
----
-PProtocolo do MCP.
-```
+---height: 150px
+name: mcp_p
+---Protocolo do MCP```
 
 
 ### MCP versus Outras Soluções
@@ -204,17 +202,19 @@ A arquitetura central do MCP se baseia em uma estrutura cliente-servidor robusta
 
 ```{figure} ../imagens/client_server_arq.png
 ---height: 150px
-name: client_server_arq
----Exemplo visual da arquitetura. Fonte: Adaptado de {cite}`deeplearningai2024mcp`. ```
+name: client_server_arq_
+---Exemplo visual da arquitetura. ```
 ```
+
+---Exemplo visual da arquitetura. Fonte: Adaptado de {cite}`deeplearningai2024mcp`.
 
 Na prática:
 
 ```{figure} ../imagens/mcp_na_pratica.png
 ---height: 150px
-name: mcp_na_pratica
----MCP na prática. Fonte: Adaptado de {cite}`sakal2024mcp`.```
-
+name: mcp_na_pratica_
+---MCP na prática. ```
+---MCP na prática. Fonte: Adaptado de {cite}`sakal2024mcp`.
 
 #### Componentes Primários do protocolo
 
