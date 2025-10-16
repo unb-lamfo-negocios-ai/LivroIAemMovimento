@@ -404,7 +404,9 @@ No contexto do LangChain, um DAG representa um fluxo de trabalho onde os dados s
 ```{figure} ../imagens/langgraph_langchain.png
 ---height: 150px
 name: desc_alternativa
+---LEGENDA AQUI
 ```
+
 
 [EXEMPLO DE DIAGRAMA COMPARANDO LANGCHAIN E LANGGRAPH](https://ritik-chopra28.medium.com/langchain-vs-langgraph-the-ai-framework-battle-thats-dividing-developers-81d0fe53503b)
 
