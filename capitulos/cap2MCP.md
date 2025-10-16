@@ -91,12 +91,6 @@ O que a Anthropic observou antes do MCP era uma grande fragmentação na forma c
 O MCP nasceu para padronizar esse desenvolvimento de IA, atuando como uma camada intermediária que "achata" essa complexidade. Ele busca ser para as aplicações de IA o que as APIs foram para a interação entre frontend e backend da web, ou o que o Language Server Protocol (LSP) é para a padronização da interação de IDEs com ferramentas específicas de linguagem.
 
 
-```{figure} ../imagens/mcp_protocol.png
----height: 150px
-name: mcp_p
----Protocolo do MCP```
-
-
 ### MCP versus Outras Soluções
 
 Para entender melhor o valor do MCP, vamos compará-lo com outras abordagens existentes:
