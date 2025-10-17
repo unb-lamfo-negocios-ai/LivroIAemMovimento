@@ -159,38 +159,22 @@ Essa distinção revela um paradigma fundamental para a compreensão do ecossist
 
 Um LLM, como o GPT-4 da OpenAI, pode ser visto como um motor de alto desempenho, uma peça de tecnologia complexa e poderosa. A IA Generativa, por outro lado, é o veículo que utiliza esse motor para uma finalidade específica. Assim como um motor pode ser instalado em um carro (para transporte), um barco (para navegação) ou um avião (para voo), um único LLM pode alimentar uma variedade de aplicações: um chatbot para atendimento ao cliente, uma ferramenta para redação de e-mails de marketing ou um assistente para geração de código de programação. Essa separação entre a tecnologia central (o motor) e sua aplicação (o veículo) explica por que a inovação em um único LLM pode levar a uma explosão de novas e diversas ferramentas de IA Generativa.
 
-Concluindo, podemos dizer que a hierarquia da Inteligência Artificial pode ser entendida como um sistema de camadas interligadas, onde cada nível representa uma especialização maior do anterior. No topo está a IA como campo geral, seguida pelas Redes Neurais e, dentro delas, o Deep Learning, que impulsiona a IA Generativa. Essa organização hierárquica pode ser vista na imagem abaixo. 
+Concluindo, podemos dizer que a hierarquia da Inteligência Artificial pode ser entendida como um sistema de camadas interligadas, onde cada nível representa uma especialização maior do anterior, conforme ilustrado na imagem a seguir:
 
-```{figure} ../imagens/hierarquia_de_IAs.jpeg
+```{figure} ../imagens/mundo_da_IA.png
 ---
 height: 250px
 name: directive-fig
 ---
-Como a IA Generativa se Encaixa no Universo da IA.
+Organização Hierárquica dos Sistemas de Inteligência Artificial.
 ```
 
-Ela apresenta camadas que vão do geral ao específico:
-
-- **Inteligência Artificial**: A camada mais externa, incluindo todas as tecnologias que envolvem comportamento inteligente.
-
-- **Aprendizado de Máquinas**: Algoritmos que aprendem com dados.
-
-- **Redes Neurais**: Estruturas inspiradas no cérebro que formam a base do deep learning.
-
-- **Aprendizado Profundo**: Aplicações com múltiplas camadas de redes neurais para tarefas complexas.
-
-- **IA Generativa**: Modelos capazes de criar novos dados como textos, imagens e sons (ex: GPT, BERT, GANs).
-
-A imagem também destaca subtemas importantes em cada categoria, como:
-
-- **Em Machine Learning**: regressão logística, KNN, K-means.
-
-- **Em Neural Networks**: Perceptron, Backpropagation.
-
-- **Em Deep Learning**: LSTM, CNN, RNN.
-
-- **Em IA Generativa**: Transformers, LLM, LangChain, Foundation Models, Multimodal AI, RLHF, QLoRA, etc.
-
+- **Machine Learning (Aprendizado de Máquina)**: representa a base da IA, com algoritmos capazes de aprender automaticamente a partir de conjuntos de dados, identificando padrões e fazendo previsões sem programação explícita.
+Deep Learning (Aprendizado Profundo): evolução do machine learning que utiliza redes neurais artificiais para processar grandes volumes de dados de forma mais sofisticada, permitindo o reconhecimento de padrões complexos em imagens, sons e textos.
+- **IA Generativa**: no topo da hierarquia, representa sistemas baseados em redes neurais treinadas com quantidades massivas de dados, capazes de gerar conteúdos originais e de alta qualidade, como textos, imagens, áudio e vídeo.
+Foundation Models (Modelos Fundamentais): são modelos de propósito geral treinados em vastas quantidades de dados diversos, servindo como base flexível que pode ser adaptada para múltiplas tarefas e aplicações.
+- **Large Language Models (LLMs)**: subconjunto especializado dos modelos fundamentais, focado em processar, interpretar e gerar linguagem natural com alta qualidade, permitindo conversas fluidas e criação de textos sofisticados.
+- **User Interfaces (Interfaces de Usuário)**: camada de acesso final, exemplificada pelo ChatGPT, que oferece interfaces simples e intuitivas permitindo que qualquer pessoa interaja com toda essa tecnologia avançada sem necessitar conhecimento técnico especializado.
 
 
 ### **Como os LLMs Funcionam: Dos Dados ao Diálogo**
