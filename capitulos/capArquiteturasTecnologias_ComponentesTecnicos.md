@@ -57,7 +57,8 @@ Agora, visualize esse caminho passo a passo no fluxograma abaixo, que ilustra a 
 ```{figure} ../imagens/jornada_prompt_felipe.png
 ---height: 150px
 name: jornada_prompt_felipe
----FFluxo para implementar IA: Prompt Engineering → RAG para robustez → Fine-tuning seletivo para vantagem competitiva.```
+---FFluxo para implementar IA: Prompt Engineering → RAG para robustez → Fine-tuning seletivo para vantagem competitiva.
+```
 
 
 ## API e Integração
