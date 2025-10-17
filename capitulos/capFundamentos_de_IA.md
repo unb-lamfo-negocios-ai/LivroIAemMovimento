@@ -170,7 +170,7 @@ Organização Hierárquica dos Sistemas de Inteligência Artificial.
 ```
 
 - **Machine Learning (Aprendizado de Máquina)**: representa a base da IA, com algoritmos capazes de aprender automaticamente a partir de conjuntos de dados, identificando padrões e fazendo previsões sem programação explícita.
-Deep Learning (Aprendizado Profundo): evolução do machine learning que utiliza redes neurais artificiais para processar grandes volumes de dados de forma mais sofisticada, permitindo o reconhecimento de padrões complexos em imagens, sons e textos.
+- **Deep Learning (Aprendizado Profundo)**: evolução do machine learning que utiliza redes neurais artificiais para processar grandes volumes de dados de forma mais sofisticada, permitindo o reconhecimento de padrões complexos em imagens, sons e textos.
 - **IA Generativa**: no topo da hierarquia, representa sistemas baseados em redes neurais treinadas com quantidades massivas de dados, capazes de gerar conteúdos originais e de alta qualidade, como textos, imagens, áudio e vídeo.
 Foundation Models (Modelos Fundamentais): são modelos de propósito geral treinados em vastas quantidades de dados diversos, servindo como base flexível que pode ser adaptada para múltiplas tarefas e aplicações.
 - **Large Language Models (LLMs)**: subconjunto especializado dos modelos fundamentais, focado em processar, interpretar e gerar linguagem natural com alta qualidade, permitindo conversas fluidas e criação de textos sofisticados.
