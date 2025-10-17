@@ -197,11 +197,8 @@ A arquitetura central do MCP se baseia em uma estrutura cliente-servidor robusta
 ```{figure} ../imagens/client_server_arq.png
 ---height: 150px
 name: client_server_arq_
----Exemplo visual da arquitetura. ```
+---EExemplo visual da arquitetura. Fonte: Adaptado de {cite}`deeplearningai2024mcp`
 ```
-
-
----Exemplo visual da arquitetura. Fonte: Adaptado de {cite}`deeplearningai2024mcp`.
 
 Na prática:
 
@@ -210,10 +207,9 @@ Na prática:
 ```{figure} ../imagens/mcp_na_pratica.png
 ---height: 150px
 name: mcp_na_pratica_
----MCP na prática. ```
-
-
 ---MCP na prática. Fonte: Adaptado de {cite}`sakal2024mcp`.
+```
+
 
 
 
