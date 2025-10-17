@@ -166,8 +166,9 @@ Concluindo, podemos dizer que a hierarquia da Inteligência Artificial pode ser 
 height: 250px
 name: directive-fig
 ---
-Organização Hierárquica dos Sistemas de Inteligência Artificial.
+Organização Hierárquica dos Sistemas de Inteligência Artificial. Fonte: Adaptado de {cite}`ukgov2024genai`.
 ```
+
 
 - **Machine Learning (Aprendizado de Máquina)**: representa a base da IA, com algoritmos capazes de aprender automaticamente a partir de conjuntos de dados, identificando padrões e fazendo previsões sem programação explícita.
 - **Deep Learning (Aprendizado Profundo)**: evolução do machine learning que utiliza redes neurais artificiais para processar grandes volumes de dados de forma mais sofisticada, permitindo o reconhecimento de padrões complexos em imagens, sons e textos.
