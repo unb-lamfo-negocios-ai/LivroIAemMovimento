@@ -225,47 +225,47 @@ Análises de mercado, previsões tecnológicas e frameworks para tomada de decis
 
 ### Plataformas de Investimento e Networking
 
-**[AngelList](https://aprender3.unb.br/mod/url/view.php?id=1359369)**  
+**[AngelList](https://www.angellist.com/)**  
 Infraestrutura essencial para a economia de startups. A plataforma oferece gestão de investimentos, cap tables e soluções para fundos de VC e private equity. Mais da metade dos negócios de venture capital de alto nível são conduzidos por aqui — uma janela privilegiada para o mercado de investimentos em startups.
 
-**[Indie Hackers](https://aprender3.unb.br/mod/url/view.php?id=1359371)**  
+**[Indie Hackers](https://www.indiehackers.com/)**  
 Comunidade onde fundadores compartilham estratégias reais e números de receita de seus negócios. Foco em empresas online rentáveis, com discussões práticas, networking e eventos locais para apoiar o crescimento de projetos independentes.
 
 ### Podcasts de Negócios e Inovação
 
-**[a16z Podcast](https://aprender3.unb.br/mod/url/view.php?id=1359372)**  
+**[a16z Podcast](https://a16z.com/podcasts/a16z-podcast/)**  
 Conversas inteligentes sobre tecnologia e inovação pela Andreessen Horowitz. Insights de especialistas da indústria sobre os desenvolvimentos mais recentes do setor tech.
 
-**[Masters of Scale](https://aprender3.unb.br/mod/url/view.php?id=1359373)**  
+**[Masters of Scale](https://mastersofscale.com/)**  
 Líderes empresariais icônicos revelam estratégias que escalaram empresas de sucesso global. Aborda inovação, crescimento acelerado e gestão de alto impacto.
 
-**[How I Built This (NPR)](https://aprender3.unb.br/mod/url/view.php?id=1359374)**  
+**[How I Built This (NPR)](https://www.npr.org/series/490248027/how-i-built-this)**  
 Histórias reais de fundadores que construíram movimentos e empresas de sucesso. Cada episódio destaca jornadas, desafios e decisões críticas de inovadores e empreendedores.
 
 ### Descoberta e Validação de Produtos
 
-**[Product Hunt](https://aprender3.unb.br/mod/url/view.php?id=1359375)**  
+**[Product Hunt](https://www.producthunt.com/)**  
 Curadoria diária dos melhores novos produtos. Descubra apps, sites e tecnologias em alta, lance seus próprios produtos e receba feedback da comunidade.
 
-**[There's An AI For That](https://aprender3.unb.br/mod/url/view.php?id=1359379)**  
+**[There's An AI For That](https://theresanaiforthat.com/)**  
 O maior banco de dados de IA: +18.000 ferramentas para +14.000 tarefas. Atualizações diárias sobre as melhores e mais recentes soluções de IA para diferentes casos de uso.
 
 ### Comunidades e Discussões
 
-**[r/startups (Reddit)](https://aprender3.unb.br/mod/url/view.php?id=1359376)**  
+**[r/startups (Reddit)](https://theresanaiforthat.com/)**  
 Comunidade ativa de empreendedores trocando experiências sobre financiamento, validação de mercado, crescimento e desafios de lançamento. Espaço para feedback direto sobre ideias e estratégias.
 
 ### Relatórios e Análises de Mercado
 
-**[State of AI Report](https://aprender3.unb.br/mod/url/view.php?id=1359377)**  
+**[State of AI Report](https://www.stateof.ai/)**  
 Análise anual dos desenvolvimentos mais relevantes em IA. Cobre avanços tecnológicos, aplicações comerciais, implicações políticas e questões de segurança. Produzido por Nathan Benaich e Air Street Capital.
 
-**[TechCrunch Brasil](https://aprender3.unb.br/mod/url/view.php?id=1359378)**  
+**[TechCrunch Brasil](https://techcrunch.com/tag/brazil/)**  
 Notícias e análises sobre o ecossistema brasileiro de startups. Cobertura de investimentos, capital de risco, fintechs e inovações tecnológicas locais.
 
 ### Educação e Capacitação
 
-**[Y Combinator Startup School](https://aprender3.unb.br/mod/url/view.php?id=1359380)**  
+**[Y Combinator Startup School](https://www.startupschool.org/)**  
 Curso online gratuito para iniciar startups, baseado em 15 anos de experiência da YC. Conteúdo prático sobre MVP, captação de recursos, crescimento de usuários e conexão com potenciais cofundadores.
 
 ## Guias Introdutórios sobre IA Generativa
