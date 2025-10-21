@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Servidor MCP para busca e análise de papers acadêmicos.
-Baseado no chatbot_gemini.py original.
+Baseado no chatbot_gemini.py.
 """
 
 import os
@@ -16,7 +16,7 @@ from datetime import datetime
 from fastmcp import FastMCP, Context
 
 
-# Importações do projeto original
+# Importações do projeto 
 import arxiv
 import google.generativeai as genai
 from dotenv import load_dotenv
