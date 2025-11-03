@@ -440,7 +440,8 @@ Após definir qual modelo de IA usar, a próxima pergunta estratégica é onde e
 
 ### Cloud Computing: Alugando a Superpotência
 
-**O que é:** Em vez de investir em uma infraestrutura própria, você pode **alugar o poder computacional** de empresas especializadas. Isso inclui gigantes como **Amazon (AWS)**, **Google (GCP)** e **Microsoft (Azure)** — os chamados hiperescaladores —, além de provedores focados em **IA de alta performance**, como **CoreWeave** e **Lambda**.
+**O que é:** Em vez de investir em uma infraestrutura própria, você pode **alugar o poder computacional** de empresas especializadas. Isso inclui gigantes como **[Amazon (AWS)](https://aws.amazon.com/pt/)**, **[Google (GCP)](https://cloud.google.com/?hl=pt-BR)** e **[Microsoft (Azure)](https://azure.microsoft.com/pt-br/pricing/purchase-options/azure-account/search?icid=free-search&ef_id=_k_CjwKCAiAwqHIBhAEEiwAx9cTebLSLXLrUmxP_CxIGDBFdkn1Qy9-iXswY9GoJx6eqgP6LDjKhdWK1RoCaogQAvD_BwE_k_&OCID=AIDcmmzmnb0182_SEM__k_CjwKCAiAwqHIBhAEEiwAx9cTebLSLXLrUmxP_CxIGDBFdkn1Qy9-iXswY9GoJx6eqgP6LDjKhdWK1RoCaogQAvD_BwE_k_&gad_source=1&gad_campaignid=1634697248&gbraid=0AAAAADcJh_sOa0o6UQ_34_ANjvPU7xAoF&gclid=CjwKCAiAwqHIBhAEEiwAx9cTebLSLXLrUmxP_CxIGDBFdkn1Qy9-iXswY9GoJx6eqgP6LDjKhdWK1RoCaogQAvD_BwE)**, os chamados hiperescaladores, além de provedores focados em **IA de alta performance**, como **[CoreWeave](https://www.coreweave.com/)** e **[Lambda](https://lambda.ai/)**.
+
 
 Enquanto os hiperescaladores oferecem escala global, as nuvens especializadas competem com hardware otimizado, entregando mais performance por dólar em tarefas específicas de IA. Em todos os casos, você paga apenas pelo uso, convertendo grandes investimentos em infraestrutura (CapEx) em custos operacionais mensais previsíveis (OpEx).
 
