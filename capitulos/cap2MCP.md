@@ -293,7 +293,7 @@ A ferramenta real de envio de email é executada(A função em python) no servid
 }
 ```
 
-```{admonition} **Casos de Uso Comuns:**
+```{admonition} **Ferramentas largamente implementadas usando MCP:**
 :class: exemplo
 
 - Integrações com GitHub (listar issues, criar PRs)
@@ -347,7 +347,7 @@ A aplicação (o Host) percebe que você está perguntando sobre o projeto. Ela 
 
 Diferente de uma ferramenta, a IA não "chama" o arquivo. Em vez disso, o Host (a aplicação) "pega os dados" e o "anexa" à conversa para a IA ler.Com esse contexto, a IA pode responder sua pergunta de forma mais "inteligente". 
 
-```{admonition} **Casos de Uso:**
+```{admonition} **Recursos largamente implementados em sistemas que usam MCP:**
 :class: exemplo
 
 - **Anexos em um chat:** como imagens enviadas pelo usuário ou documentos em PDF.  
@@ -442,7 +442,7 @@ A "implementação" deste prompt (uma função no servidor, como vimos nos códi
 
     data_utils.py: Contém funções para limpar e validar os dados de entrada."(exemplo)
 
-```{admonition} **Exemplos de comandos:**
+```{admonition} **Exemplos de comandos via prompts MCP comuns:**
 :class: note
 
 - `/summarize` - Resumir documentos ou conversas
