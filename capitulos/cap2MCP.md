@@ -237,7 +237,7 @@ Essas ferramentas são o que transformam um modelo estático em um **agente din�
 
 **Exemplos de Ferramentas:**
 
-Pense neste bloco de código Json abaixo como o "cardápio" ou a "etiqueta de instruções" de uma ferramenta. Este JSON não é a ferramenta que executa a ação, mas sim a definição que o protocolo (MCP) lê para entender o que a ferramenta faz e o que ela precisa.
+Pense neste bloco de código JSON abaixo como o "cardápio" ou a "etiqueta de instruções" de uma ferramenta. Este JSON não é a ferramenta que executa a ação, mas sim a definição que o protocolo (MCP) lê para entender o que a ferramenta faz e o que ela precisa.
 
 ```json
 {
@@ -263,9 +263,11 @@ Pense neste bloco de código Json abaixo como o "cardápio" ou a "etiqueta de in
   }
 }
 ```
+**Uso Prático**
+
 Imagine que você está conversando com um agente de IA e pede:
 
- **Usuário diz(Você)**: "Envie um email para a equipe@empresa.com sobre a Reunião Semanal. Avise que o link da chamada foi atualizado."
+  **Usuário diz(Você)**: "Envie um email para a equipe@empresa.com sobre a Reunião Semanal. Avise que o link da chamada foi atualizado."
  
 A IA, então, usa a definição (o seu JSON) como um "formulário" para preencher, e assim poder passar como argumento, para a função em python(ou qualquer outra linguagem de programação) que de fato vai executar a ação "send_email".
  
@@ -335,9 +337,11 @@ Isso permite que a aplicação/cliente (o Host) saiba quais dados ela pode pegar
 
 }
 ```
-Imagine que você está conversando com um assistente de IA que está integrado ao seu computador e tem acesso a esse recurso.
+**Uso Prático**
 
-**Usuário diz(Você)**: "Como eu faço a instalação deste projeto?"
+Pense que você está conversando com um assistente de IA que está integrado ao seu computador e tem acesso a esse recurso.
+
+  **Usuário diz(Você)**: "Como eu faço a instalação deste projeto?"
 
 A aplicação (o Host) percebe que você está perguntando sobre o projeto. Ela usa a definição do recurso para entender que file:///.../README.md é a "Documentação principal do projeto" e que é um arquivo de texto.
 
@@ -371,6 +375,24 @@ Os **prompts** funcionam como **templates configuráveis** ou **atalhos intelige
 
 **Estrutura de um Prompt:**
 
+Pense neste bloco de código como a "criação de um atalho" ou um "comando de barra" personalizado (como /resumir ou /traduzir em um chat).
+
+Este JSON não executa a tarefa sozinho. Ele é a definição que o protocolo (MCP) usa para:
+
+ 1.Saber que este "atalho" (name) existe.
+
+ 2.Entender o que ele faz (description).
+
+ 3.Saber quais "opções" ou "filtros" (arguments) ele aceita.
+
+Por exemplo, a definição summarize_code abaixo diz ao sistema:
+
+ "Ei, eu tenho um atalho chamado summarize_code.
+
+O que ele faz? Resumir arquivos de código do projeto.
+
+Quais opções ele aceita? Ele aceita um argumento opcional (required: false) chamado file_pattern, que serve para filtrar quais arquivos resumir (por exemplo, *.py ou main.js)."
+
 ```json
 {
   "name": "summarize_code",
@@ -384,6 +406,41 @@ Os **prompts** funcionam como **templates configuráveis** ou **atalhos intelige
   ]
 }
 ```
+**Uso Prático**
+
+Imagine que você é um desenvolvedor e quer um resumo rápido de todos os arquivos Python do seu projeto. Você usa o "atalho" que acabou de ser definido.
+
+  **Usuário digita(Você)**: /summarize_code *.py
+
+O Host (a aplicação onde você está digitando) reconhece o comando /summarize_code. Ele usa a definição do prompt para entender o que fazer com o texto *.py.
+O Host traduz seu comando para a estrutura exata que a definição do prompt exige:
+
+```json
+{
+  "name": "summarize_code",
+  "arguments": {
+    "file_pattern": "*.py"
+  }
+}
+```
+**Por que isso é importante?** A definição garantiu que o Host soubesse que *.py era um valor para o argumento file_pattern.
+
+**OUTPUT** (A Resposta da IA)
+A "implementação" deste prompt (uma função no servidor, como vimos nos códigos Python) é acionada. Ela:
+
+ 1.Recebe file_pattern: "*.py".
+
+ 2.Busca todos os arquivos *.py no contexto atual.
+
+ 3.Monta uma instrução complexa para a IA (ex: "Resuma os seguintes arquivos: [conteúdo do main.py], [conteúdo do utils.py]...").
+
+ 4.A IA processa tudo e te entrega o resultado final:
+
+  - IA diz: "Certo! Analisei os 2 arquivos .py do seu projeto. Aqui está o resumo:
+
+    api_server.py: Define os endpoints principais da API (login, dados).
+
+    data_utils.py: Contém funções para limpar e validar os dados de entrada."(exemplo)
 
 ```{admonition} **Exemplos de comandos:**
 :class: note
