@@ -237,6 +237,8 @@ Essas ferramentas são o que transformam um modelo estático em um **agente din�
 
 **Exemplos de Ferramentas:**
 
+Pense neste bloco de código Json abaixo como o "cardápio" ou a "etiqueta de instruções" de uma ferramenta. Este JSON não é a ferramenta que executa a ação, mas sim a definição que o protocolo (MCP) lê para entender o que a ferramenta faz e o que ela precisa.
+
 ```json
 {
   "name": "send_email",
@@ -259,6 +261,33 @@ Essas ferramentas são o que transformam um modelo estático em um **agente din�
     },
     "required": ["to", "subject", "body"]
   }
+}
+```
+Imagine que você está conversando com um agente de IA e pede:
+
+ **Usuário diz(Você)**: "Envie um email para a equipe@empresa.com sobre a Reunião Semanal. Avise que o link da chamada foi atualizado."
+ 
+A IA, então, usa a definição (o seu JSON) como um "formulário" para preencher, e assim poder passar como argumento, para a função em python(ou qualquer outra linguagem de programação) que de fato vai executar a ação "send_email".
+ 
+A IA traduz seu pedido de linguagem natural para a estrutura exata que a definição da ferramenta exige:
+
+```json
+{
+  "name": "send_email",
+  "arguments": {
+    "to": "equipe@empresa.com",
+    "subject": "Reunião Semanal",
+    "body": "Aviso: o link da chamada foi atualizado."
+  }
+}
+```
+A ferramenta real de envio de email é executada(A função em python) no servidor e retorna uma confirmação:
+
+```json
+{
+  "status": "sucesso",
+  "destinatario": "equipe@empresa.com",
+  "horario_envio": "2025-11-13T15:15:00Z"
 }
 ```
 
@@ -288,6 +317,11 @@ Os **recursos** no contexto do MCP são **dados disponibilizados pela aplicaçã
 ```
 
 **Exemplos de Recursos:**
+
+Este JSON abaixo não é o dado em si, mas sim a definição que o protocolo (MCP) usa para dizer ao modelo de IA: "Ei, este dado existe, este é o nome dele (name), é deste tipo (mimeType), e aqui está a descrição do que ele contém (description)."
+
+Isso permite que a aplicação/cliente (o Host) saiba quais dados ela pode pegar da estante para entregar ao modelo de IA quando ele precisar de contexto.
+
 ```json
 {
 
@@ -301,6 +335,13 @@ Os **recursos** no contexto do MCP são **dados disponibilizados pela aplicaçã
 
 }
 ```
+Imagine que você está conversando com um assistente de IA que está integrado ao seu computador e tem acesso a esse recurso.
+
+**Usuário diz(Você)**: "Como eu faço a instalação deste projeto?"
+
+A aplicação (o Host) percebe que você está perguntando sobre o projeto. Ela usa a definição do recurso para entender que file:///.../README.md é a "Documentação principal do projeto" e que é um arquivo de texto.
+
+Diferente de uma ferramenta, a IA não "chama" o arquivo. Em vez disso, o Host (a aplicação) "pega os dados" e o "anexa" à conversa para a IA ler.Com esse contexto, a IA pode responder sua pergunta de forma mais "inteligente". 
 
 ```{admonition} **Casos de Uso:**
 :class: exemplo
