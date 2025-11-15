@@ -33,15 +33,15 @@ Desde então, a inteligência artificial deixou de ser apenas uma tecnologia fut
 ```{admonition} Exemplos de algumas aplicabilidades de IA no dia a dia:
 :class: exemplo
 
-**Assistentes virtuais**, como Alexa e Siri, que reconhecem comandos de voz e executam ações;
+[**Assistentes virtuais**](https://www.youtube.com/watch?v=1q_EPKg5_rA), como Alexa e Siri, que reconhecem comandos de voz e executam ações;
 
-**Sistemas de recomendação em plataformas de streaming e e-commerce**, que sugerem filmes, músicas ou produtos com base no comportamento do usuário;
+[**Sistemas de recomendação em plataformas de streaming e e-commerce**](https://www.ibm.com/br-pt/think/topics/recommendation-engine), que sugerem filmes, músicas ou produtos com base no comportamento do usuário;
 
-**Carros autônomos**, que interpretam o ambiente e tomam decisões em tempo real;
+[**Carros autônomos**](https://www.youtube.com/watch?v=CbtbN4dyfwE), que interpretam o ambiente e tomam decisões em tempo real;
 
-**Diagnósticos médicos** assistidos por computador, capazes de identificar padrões em exames de imagem;
+[**Diagnósticos médicos**](https://www.youtube.com/watch?v=FqsvgFTQv8w) assistidos por computador, capazes de identificar padrões em exames de imagem;
 
-**Análises preditivas em negócios**, que ajudam empresas a antecipar tendências, melhorar estratégias e reduzir riscos.
+[**Análises preditivas em negócios**](https://cloud.google.com/learn/what-is-predictive-analytics?hl=pt-BR), que ajudam empresas a antecipar tendências, melhorar estratégias e reduzir riscos.
 ```
 
 Para compreender melhor os diferentes níveis de capacidade da inteligência artificial, é útil distinguir entre dois grandes grupos: IA fraca e IA forte. Essa classificação nos ajuda a entender até onde as máquinas conseguem simular comportamentos inteligentes e em que medida elas realmente compreendem o que estão fazendo.
