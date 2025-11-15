@@ -250,9 +250,9 @@ O modelo **SaaS** permite escalar rapidamente, gerar receita previsível e atual
 
 ```{admonition} Métricas Importantes
 :class: note
-- **ARR (Annual Recurring Revenue)**: A receita anual previsível, a métrica mais importante para qualquer SaaS.
-- **Net Revenue Retention (NRR)**: Mostra o quanto a receita cresce (ou diminui) a partir dos clientes existentes. Um NRR acima de 100% significa que seus clientes estão gastando mais com você ao longo do tempo (fazendo upgrades, adicionando usuários), um sinal claro de que a IA está agregando valor real.
-- **COGS (Cost of Goods Sold)**: No SaaS com IA, o custo de GPU em nuvem é uma parte significativa do COGS. Gerenciar esse custo, seja pela otimização de modelos (usando versões menores e mais rápidas) ou pela negociação de contratos (reservando instâncias na nuvem), é crucial para a margem de lucro.
+- [**ARR (Annual Recurring Revenue)**](https://stripe.com/resources/more/what-is-annual-recurring-revenue-a-guide-for-saas-businesses): A receita anual previsível, a métrica mais importante para qualquer SaaS.
+- [**Net Revenue Retention (NRR)**](https://stripe.com/resources/more/net-revenue-retention): Mostra o quanto a receita cresce (ou diminui) a partir dos clientes existentes. Um NRR acima de 100% significa que seus clientes estão gastando mais com você ao longo do tempo (fazendo upgrades, adicionando usuários), um sinal claro de que a IA está agregando valor real.
+- [**COGS (Cost of Goods Sold)**](https://learn.microsoft.com/en-us/azure/well-architected/saas/billing-cost-management): No SaaS com IA, o custo de GPU em nuvem é uma parte significativa do COGS. Gerenciar esse custo, seja pela otimização de modelos (usando versões menores e mais rápidas) ou pela negociação de contratos (reservando instâncias na nuvem), é crucial para a margem de lucro.
 ```
 
 ```{admonition} Exemplos de SaaS
