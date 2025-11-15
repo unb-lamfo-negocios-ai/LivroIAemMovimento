@@ -1471,6 +1471,8 @@ Agora que compreendemos os conceitos e estruturas fundamentais do MCP, é hora d
 
 Trata-se de um **Sistema MCP para Busca e Análise de Papers Acadêmicos** — uma solução completa que permite **buscar, analisar e interagir com artigos científicos** utilizando o protocolo MCP aliado à inteligência artificial. Esse exemplo mostra como integrar agentes com ferramentas externas, manipulando dados em tempo real e simulando conversas orientadas por LLMs.
 
+Você pode acessar todo o código comentado desta aplicação clicando [aqui.](https://github.com/unb-lamfo-negocios-ai/Recursos-do-Livro/tree/main/chatbot-papers-MCP)
+
 ```{admonition} Saiba mais!
 :class: hint
 Você pode conciliar a leitura e implementação deste projeto com os conteúdos aprofundados disponíveis no curso {cite}`deeplearning_mcp_course`.
