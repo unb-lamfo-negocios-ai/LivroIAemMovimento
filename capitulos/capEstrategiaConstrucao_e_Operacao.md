@@ -257,9 +257,9 @@ O modelo **SaaS** permite escalar rapidamente, gerar receita previsível e atual
 
 ```{admonition} Exemplos de SaaS
 :class: exemplo
-- Grammarly (usa IA para corrigir e melhorar a escrita).
-- Salesforce Einstein (embute IA em um CRM para prever vendas).
-- Jasper.ai (uma plataforma SaaS nativa de IA para criação de conteúdo de marketing).
+- [**Grammarly**](https://www.grammarly.com/) (usa IA para corrigir e melhorar a escrita).
+- [**Salesforce Einstein**](https://www.salesforce.com/products/einstein/) (embute IA em um CRM para prever vendas).
+- [**Jasper.ai**](https://www.jasper.ai/) (uma plataforma SaaS nativa de IA para criação de conteúdo de marketing).
 ```
 
 ### Micro-SaaS
@@ -421,7 +421,7 @@ Para quem lidera um negócio ou startup, o Vibe Coding é uma ferramenta poderos
 ```{admonition} Exemplo
 :class: exemplo
 
-Um empreendedor pode usar o Vibe Coding para **criar um chatbot de atendimento** ou uma **ferramenta de análise de sentimentos** conectada às redes sociais da marca — tudo guiado por prompts conversacionais.
+Um empreendedor pode [usar o `Vibe` Coding]([https://www.youtube.com/watch?v=dan3QfN3CDU](https://www.youtube.com/watch?v=dan3QfN3CDU)) para **criar um chatbot de atendimento** ou uma **ferramenta de análise de sentimentos** conectada às redes sociais da marca - tudo guiado por prompts conversacionais.
 ```
 
 ```{admonition} Integre o Vibe Coding à sua estratégia de inovação contínua:
