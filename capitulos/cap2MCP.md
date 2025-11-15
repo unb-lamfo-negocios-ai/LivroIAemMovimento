@@ -1467,7 +1467,7 @@ O MCP oferece vantagens significativas para todo o ecossistema de IA:
 
 ## Aplicação Prática: Sistema MCP para Busca e Análise de Papers Acadêmicos
 
-Agora que compreendemos os conceitos e estruturas fundamentais do MCP, é hora de visualizar esses conhecimentos em ação. A seguir, apresentaremos uma **aplicação prática desenvolvida pelos autores deste e-book**, que demonstra passo a passo como implementar as funcionalidades do MCP em um cenário real.
+Agora que compreendemos os conceitos e estruturas fundamentais do MCP, é hora de visualizar esses conhecimentos em ação. A seguir, apresentaremos uma **aplicação prática**, que demonstra passo a passo como implementar as funcionalidades do MCP em um cenário real.
 
 Trata-se de um **Sistema MCP para Busca e Análise de Papers Acadêmicos** — uma solução completa que permite **buscar, analisar e interagir com artigos científicos** utilizando o protocolo MCP aliado à inteligência artificial. Esse exemplo mostra como integrar agentes com ferramentas externas, manipulando dados em tempo real e simulando conversas orientadas por LLMs.
 
