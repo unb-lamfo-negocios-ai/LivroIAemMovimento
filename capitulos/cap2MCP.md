@@ -1970,11 +1970,13 @@ __pycache__/
 
 Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
 
+**Observação:**Oque é uma licença MIT? A licença MIT é uma licença de software permissiva, curta e simples, que permite usar, copiar, modificar e distribuir o código-fonte livremente, até mesmo para fins comerciais, desde que o aviso de direitos autorais original e o texto da licença sejam incluídos em todas as cópias do software ou partes substanciais dele.
+
 ---
 
 ##  Recursos Úteis
 
-Durante a implementação e aprofundamento no uso do MCP, é importante ter à mão algumas ferramentas e documentações de apoio. Abaixo estão links úteis que podem acelerar o desenvolvimento e facilitar a integração com APIs e modelos de IA:
+Durante a implementação e aprofundamento no uso do MCP, é importante ter à mão algumas ferramentas e documentações de apoio. Abaixo estão links úteis das tecnologias usadas para acelerar o desenvolvimento e facilitar a integração com APIs e modelos de IA, desta aplicação:
 
 - **Documentação FastMCP**: https://github.com/jlowin/fastmcp
 - **ArXiv API**: https://arxiv.org/help/api
@@ -1983,13 +1985,4 @@ Durante a implementação e aprofundamento no uso do MCP, é importante ter à m
 
 ---
 
-## Créditos
 
-Desenvolvido com:
-
-- **FastMCP**: Framework MCP
-- **ArXiv API**: Busca de papers
-- **Google Gemini**: Análise com IA
-- **Python**: Linguagem de programação
-
----
