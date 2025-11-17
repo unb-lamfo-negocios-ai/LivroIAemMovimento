@@ -1,0 +1,93 @@
+{
+  "name": "NodeSet",
+  "nodes": [
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "0afb5e9b-12e4-4c88-80ae-85277d2a80c4",
+              "name": "Data",
+              "value": "={{ $json.date }}",
+              "type": "string"
+            },
+            {
+              "id": "c2696f31-1c23-4e8b-8f56-f6818e4535cf",
+              "name": "Texto",
+              "value": "={{ $json.text }}",
+              "type": "string"
+            },
+            {
+              "id": "c2e0df3e-9b36-44f4-b099-e4d75f4c2f4e",
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        208,
+        16
+      ],
+      "id": "7ad1dbc3-50b9-4ba9-a9ec-33f86b7fd055",
+      "name": "Filtra Data e Texto"
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "simple": false,
+        "filters": {},
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        0,
+        0
+      ],
+      "id": "9d820520-48d6-4019-b270-9c2b7e39116c",
+      "name": "Recebe e-mail",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "oGFsaGbDmfROVEA5",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Recebe e-mail": {
+      "main": [
+        [
+          {
+            "node": "Filtra Data e Texto",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "53208902-84e4-4110-aada-b50508c3abc5",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "0ed4d97242f7a1d278dadcf21d659110ec72f11c3ebdf0af08dfaeb8f1148172"
+  },
+  "id": "Y0cX3xZMkg3S3N3B",
+  "tags": []
+}
