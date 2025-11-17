@@ -1347,3 +1347,9 @@ Para uma demonstração prática e visual de como configurar o n8n usando Docker
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/8hQ1u0TAyAc?start=5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+# Exemplo de automação: Integração Gmail + Slack
+
+### Cadastrando Credenciais OAuth
+
+[Conectando Slack](https://www.youtube.com/watch?v=xpT-G_lU72g)
+[Conectando Credencial Google](https://www.youtube.com/watch?v=Ck_661qqC3Q)
