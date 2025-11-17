@@ -169,13 +169,13 @@ Isso exige duas credenciais:
 
 - Uma para o **Gmail** (via OAuth2)
 - Uma para o **Slack** (geralmente via Webhook ou token)
-
+```
 Com essas credenciais criadas e salvas, basta vinculá-las aos respectivos nós no seu fluxo — e pronto! O n8n saberá como se comunicar com cada serviço.
 - [Como criar credencial Slack](https://www.youtube.com/watch?v=xpT-G_lU72g&t=379s)
 - [Como criar credencial Google OAuth2](https://www.youtube.com/watch?v=Ck_661qqC3Q)
 
 
-```
+
 
 
 ## Nodes de Gatilhos
