@@ -363,6 +363,7 @@ if st.button("Gerar"):
     imagem = gerar_imagem(frase)  # função hipotética
     st.image(imagem)
 ```
+Este exemplo é meramente ilustrativo, para um exemplo real para uma aplicação do tipo. Para uma versão mais completa de uma aplicação do tipo, veja o [exemplo no GitHub de recursos do livro](https://github.com/unb-lamfo-negocios-ai/Recursos-do-Livro/blob/main/Exemplo%20Vibe%20Coding.py). Para uma visão mais completa do processo, confira esse [vídeo](https://www.youtube.com/watch?v=TbtBUYxpygA).
 
 #### 3. Iterações com a IA
 
