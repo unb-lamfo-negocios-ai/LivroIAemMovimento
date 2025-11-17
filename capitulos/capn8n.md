@@ -1352,4 +1352,6 @@ Para uma demonstração prática e visual de como configurar o n8n usando Docker
 ### Cadastrando Credenciais OAuth
 
 [Conectando Slack](https://www.youtube.com/watch?v=xpT-G_lU72g)
+
 [Conectando Credencial Google](https://www.youtube.com/watch?v=Ck_661qqC3Q)
+
