@@ -1346,23 +1346,3 @@ Para uma demonstração prática e visual de como configurar o n8n usando Docker
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/8hQ1u0TAyAc?start=5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
-# Exemplo de automação: Integração Gmail + Slack
-
-### Cadastrando Credenciais OAuth
-
-[Conectando Slack](https://www.youtube.com/watch?v=xpT-G_lU72g)
-
-[Conectando Credencial Google](https://www.youtube.com/watch?v=Ck_661qqC3Q)
-
-[Templates_n8n.xlsx](https://github.com/unb-lamfo-negocios-ai/LivroIAemMovimento/blob/main/Templates_n8n.xlsx) 
-
-Este workflow tem como objetivo automatizar o envio de notificações para um canal do Slack sempre que um e-mail específico chega na caixa de entrada do Gmail. Ele funciona de maneira contínua e reativa: assim que o Gmail recebe uma nova mensagem enviada por um remetente determinado, o n8n identifica essa chegada, captura o conteúdo relevante do e-mail e envia automaticamente um resumo para o Slack. Dessa forma, a equipe pode ser avisada imediatamente sobre mensagens importantes sem depender de verificações manuais ou leitura constante da caixa de entrada.
-
-O fluxo começa com o nó “Recebe e-mail”, um trigger do Gmail configurado para monitorar a conta a cada minuto. Esse nó possui um filtro que determina qual remetente deve acionar o workflow. No exemplo, o endereço definido é “seuemail@gmail.com”, o que significa que o fluxo só inicia quando uma mensagem proveniente desse remetente específico chega na caixa de entrada. Ao usar um filtro como esse, o sistema se torna mais preciso e evita acionar a automação para qualquer e-mail recebido, permitindo que o usuário controle com clareza quais mensagens de fato merecem gerar uma notificação no Slack.
-
-Assim que o e-mail correspondente é detectado, seus dados seguem para o nó seguinte, chamado “Filtra dados”. Esse nó existe para organizar o conteúdo capturado e garantir que apenas as informações realmente necessárias sejam utilizadas na etapa posterior. Dentro dele, é criada uma nova variável chamada “Mensagem”, responsável por armazenar o texto principal do e-mail, extraído do campo $json.text. Essa filtragem evita que campos técnicos, metadados ou informações irrelevantes sejam incluídos na mensagem final. Funciona como uma triagem: limpa, padroniza e prepara o conteúdo para ser enviado de forma clara e útil ao Slack.
-
-Por fim, o fluxo chega ao nó “Envia mensagem”, onde a integração com o Slack acontece. Esse nó utiliza autenticação OAuth2 para acessar a conta configurada e está ajustado para publicar mensagens no canal chamado “#social”. A informação enviada ao Slack não é o texto completo do e-mail, mas sim o snippet, um pequeno resumo gerado automaticamente pelo Gmail que condensa o conteúdo da mensagem em poucas linhas. Esse resumo costuma ser suficiente para que a equipe compreenda rapidamente o tema ou a urgência do e-mail, permitindo reações ágeis sem sobrecarregar o canal com textos longos.
-
-O resultado final é um workflow simples, mas extremamente eficiente: um e-mail vindo de um remetente específico dispara o fluxo, que processa o conteúdo e envia imediatamente uma notificação ao Slack. Esse tipo de automação reduz trabalho manual, centraliza avisos importantes e cria um sistema de monitoramento contínuo entre Gmail e Slack. A solução também é facilmente adaptável a outros contextos, como alertas de sistemas, acompanhamento de clientes ou integração com formulários e plataformas diversas. Tudo isso demonstra como workflows enxutos no n8n podem resolver problemas reais com rapidez e elegância.
