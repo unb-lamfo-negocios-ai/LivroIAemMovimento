@@ -1355,3 +1355,106 @@ Para uma demonstração prática e visual de como configurar o n8n usando Docker
 
 [Conectando Credencial Google](https://www.youtube.com/watch?v=Ck_661qqC3Q)
 
+Este workflow do n8n automatiza a tarefa de monitorar uma caixa de e-mail e enviar automaticamente uma notificação para um canal do Slack sempre que chegar uma nova mensagem de um remetente específico.
+
+Ele funciona como uma pequena “ponte inteligente” entre o Gmail e o Slack: o fluxo detecta um e-mail, extrai as informações importantes e publica no canal interno da equipe. A seguir, detalhamos o funcionamento de cada etapa.
+
+1️⃣ Recebe e-mail (Gmail Trigger)
+
+O primeiro nó é responsável por acompanhar a caixa de entrada e iniciar o workflow quando um novo e-mail é encontrado.
+
+✔ O que este nó faz:
+
+Checa a conta do Gmail a cada minuto
+
+Aplica um filtro para captar apenas e-mails enviados por um remetente específico
+
+Neste exemplo, o workflow só dispara quando o e-mail vem de:
+
+seuemail@gmail.com
+
+✔ Por que isso é útil?
+
+Esse filtro permite que o workflow seja altamente direcionado.
+Você pode programá-lo para reagir apenas a:
+
+um cliente importante
+
+um parceiro estratégico
+
+uma ferramenta específica (como CRM, formulário, app etc.)
+
+ou seu próprio e-mail para testes
+
+Assim, o fluxo não dispara para qualquer mensagem na caixa de entrada, apenas para aquilo que realmente importa.
+
+2️⃣ Filtra dados (Set Node)
+
+Quando o e-mail é capturado, ele contém muitas informações: texto completo, snippet, remetente, ID da thread, labels, e assim por diante.
+
+O papel deste nó é organizar e limpar os dados, preparando-os para o Slack.
+
+✔ O que este nó faz:
+
+Cria uma nova variável chamada Mensagem
+
+Atribui a essa variável o conteúdo textual do e-mail:
+
+{{ $json.text }}
+
+
+Ou seja, ele extrai o corpo textual da mensagem.
+
+✔ Por que isso é importante?
+
+Sem essa filtragem, o Slack poderia receber a mensagem:
+
+com campos técnicos desnecessários
+
+em formato bruto
+
+com informações redundantes
+
+O Set Node funciona como uma “triagem” que deixa o dado limpo e padronizado.
+
+3️⃣ Envia mensagem (Slack Node)
+
+Este é o nó final do workflow e o que realiza a ação desejada: enviar a notificação para um canal do Slack.
+
+✔ O que este nó faz:
+
+Usa OAuth2 para acessar a conta do Slack
+
+Escolhe o canal #social
+
+Envia como mensagem o resumo do e-mail:
+
+{{ $json.snippet }}
+
+
+O snippet é um pequeno trecho textual que o Gmail gera automaticamente para cada e-mail, geralmente suficiente para dar contexto sem ocupar muito espaço.
+
+✔ Por que isso é útil?
+
+A equipe recebe no Slack um alerta automático sempre que o remetente desejado mandar um e-mail.
+Isso:
+
+agiliza comunicação
+
+evita que mensagens importantes sejam ignoradas
+
+centraliza notificações em um único canal
+
+reduz necessidade de checar o e-mail manualmente
+
+🔗 🔄 Visão geral do fluxo (comportamento completo)
+
+O n8n monitora o Gmail continuamente.
+
+Detecta e-mails do remetente configurado (seuemail@gmail.com).
+
+Extrai e organiza o conteúdo.
+
+Publica automaticamente uma notificação no Slack.
+
+É um fluxo simples, mas extremamente poderoso para automação interna.
