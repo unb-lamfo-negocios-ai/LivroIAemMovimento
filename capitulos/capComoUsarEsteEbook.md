@@ -26,6 +26,42 @@ Nos últimos anos, a Inteligência Artificial deixou de ser um tema restrito à 
 A proposta deste material é **traduzir conceitos técnicos em linguagem clara**, apresentando tanto o potencial quanto os desafios da IA. Mais do que descrever algoritmos, buscamos destacar o **impacto estratégico e ético** de cada aplicação, ajudando o leitor a identificar oportunidades e a evitar armadilhas comuns {cite}`russell2021` {cite}`provost2013`.  
 
 
+## Objetivos do eBook
+
+- **Traduzir conceitos técnicos** em linguagem acessível, sem perder a profundidade necessária.  
+- **Apresentar frameworks e ferramentas** que podem ser aplicados sem exigir conhecimentos avançados de programação.  
+- **Fornecer estratégias práticas** de construção, operação e monetização de soluções baseadas em IA.  
+- **Indicar recursos de apoio** para que você continue aprendendo e acompanhando as tendências desse ecossistema dinâmico.  
+- **Refletir sobre desafios éticos e sociais** da adoção de IA, incentivando um uso responsável e sustentável.  
+
+## Para quem este eBook foi escrito?
+
+Este material é destinado a:  
+
+- **Empreendedores** que desejam lançar produtos ou serviços inteligentes.  
+- **Gestores e analistas** que querem incorporar IA em processos decisórios ou operacionais.  
+- **Profissionais criativos** que buscam novas formas de produção com auxílio de IA generativa.  
+- **Estudantes e curiosos** que desejam uma visão prática e aplicada sobre o tema.  
+
+Não é necessário ter experiência prévia em programação — o conteúdo foi desenhado para ser **inclusivo, acessível e prático**, com explicações claras, exemplos do cotidiano e referências para aprofundamento.  
+
+## Estrutura do eBook
+
+O livro está dividido em capítulos que seguem uma progressão lógica, mas podem ser lidos de forma independente:  
+
+2. [**Capítulo 1 — Fundamentos de Inteligência Artificial**](cap1)  
+3. [**Capítulo 2 — Arquiteturas, Tecnologias e Componentes Técnicos**](cap2)  
+4. [**Capítulo 3 — Estratégias de Construção e Operação**](cap3)  
+5. [**Capítulo 4 — Ecossistema de Ferramentas e Frameworks**](cap4)  
+6. [**Capítulo 5 — Recursos de Apoio e Exploração**](cap5)  
+
+Ao final, você encontrará também a seção de [**Referências Bibliográficas**](referencia), com as obras utilizadas, e o espaço **Conheça os Autores**.  
+
+Conteúdos correlacionados que não foram contemplados.
+
+Hugging Face
+Types of Artificial Intelligence: Artificial Narrow Intelligence, Reactive AI, Limited Memory AI, Artificial General Intelligence, Theory of Mind AI, Artificial Superhuman Intelligence, Self Aware AI
+
 ## O que você vai encontrar aqui?
 
 Ao longo dos capítulos, serão abordados tópicos que permitem ao leitor construir uma visão holística da IA:
