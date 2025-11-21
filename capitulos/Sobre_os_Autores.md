@@ -84,7 +84,7 @@ O propósito da OtimizAI é transformar conhecimento avançado em **soluções r
 <table>
   <tr>
     <td width="30%">
-      <img src="./images/autores/felipe.jpg" alt="Felipe Tavares Loureiro" width="160"><br>
+      <img src="./images/autores/felipe.png" alt="Felipe Tavares Loureiro" width="160"><br>
       <strong>Felipe Tavares Loureiro</strong><br>
       <em>Participação no ebook:</em> autor<br>
       <a href="https://www.linkedin.com/in/felipe-loureiro-7928431b1/">LinkedIn</a>
@@ -138,7 +138,7 @@ O propósito da OtimizAI é transformar conhecimento avançado em **soluções r
 <table>
   <tr>
     <td width="30%">
-      <img src="./images/autores/mateus.jpg" alt="Mateus Macedo" width="160"><br>
+      <img src="./images/autores/mateus.png" alt="Mateus Macedo" width="160"><br>
       <strong>Mateus Macedo</strong><br>
       <em>Participação no ebook:</em> autor<br>
       <a href="https://www.linkedin.com/in/mateus--macedo/">LinkedIn</a>
@@ -156,7 +156,7 @@ O propósito da OtimizAI é transformar conhecimento avançado em **soluções r
 <table>
   <tr>
     <td width="30%">
-      <img src="./images/autores/paulo.jpg" alt="Paulo de Oliveira Gontijo" width="160"><br>
+      <img src="./images/autores/paulo.png" alt="Paulo de Oliveira Gontijo" width="160"><br>
       <strong>Paulo de Oliveira Gontijo</strong><br>
       <em>Participação no ebook:</em> autor<br>
       <a href="https://www.linkedin.com/in/paulo-de-oliveirag/">LinkedIn</a>
