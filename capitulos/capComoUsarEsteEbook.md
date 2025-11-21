@@ -99,6 +99,19 @@ Por isso, não o enxergamos como uma obra fechada, mas como um ponto de partida 
 
 Deixamos aqui um convite aberto: participe ativamente da construção deste conteúdo. Sempre que tiver uma sugestão, correção ou atualização, você pode enviar uma solicitação de modificação pelo GitHub por meio de um pull request. Sua colaboração é bem-vinda e valorizada; juntos, conseguimos manter este material útil, atual e conectado com as transformações do nosso tempo.
 
+## Códigos Comentados para Estudo e Prática
+
+Ao longo deste livro, mencionamos diversos códigos desenvolvidos especialmente para ilustrar conceitos, demonstrar funcionalidades e apoiar o aprendizado de forma prática. Todos eles são **de autoria própria**, criados com cuidado para refletir cada exemplo apresentado no texto.
+
+Cada script contém **comentários e explicações internas**, pensados para orientar o leitor passo a passo na compreensão da lógica, dos parâmetros e das decisões utilizadas. A ideia é que você possa não apenas executar os códigos, mas também **explorar, modificar e aprender com eles**.
+
+Sinta-se à vontade para usar, adaptar e experimentar esses recursos.
+
+Os códigos citados ao longo dos capítulos — sempre associados aos exemplos que ilustram ou resolvem — estão organizados no repositório oficial deste livro, disponível no link:
+
+👉 **https://github.com/unb-lamfo-negocios-ai/Recursos-do-Livro**
+
+Este material foi feito para você!
 
 
 ## Dicas para aproveitar melhor a leitura
