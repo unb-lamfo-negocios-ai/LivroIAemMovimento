@@ -1,10 +1,23 @@
-# Como usar este eBook 
+# Antes de começar: Orientações para Leitura do eBook
 
-Este eBook foi desenvolvido para servir como um **guia prático, estratégico e reflexivo** para quem deseja compreender e aplicar **Inteligência Artificial (IA)** em diferentes contextos — seja no ambiente corporativo, em projetos de inovação ou em iniciativas pessoais de aprendizado.  
+Seja muito bem-vindo(a) a este livro! É uma alegria ter você aqui, explorando conosco esse conteúdo que foi preparado com cuidado, intenção e vontade genuína de compartilhar conhecimento. 
 
-Nosso objetivo é tornar a jornada pela IA mais **acessível, estruturada e inspiradora**, conectando teoria e prática de forma equilibrada.  
+## Como usar este eBook 
 
----
+A proposta deste eBook é que sua leitura aconteça como uma conversa leve, mas cheia de significado — daquelas que nos fazem enxergar conceitos familiares sob uma nova perspectiva. Cada capítulo foi pensado para conduzir você por ideias, práticas e reflexões que podem transformar a forma como entendemos e aplicamos a Inteligência Artificial no nosso dia a dia. Que esta jornada te inspire, te provoque e te acompanhe na construção de novas possibilidades. Sinta-se em casa: este livro agora também é seu.
+
+Este material foi desenvolvido para atuar como um guia prático, estratégico e reflexivo para quem deseja compreender e aplicar IA em diferentes contextos — seja dentro de organizações, em projetos de inovação ou em percursos individuais de aprendizado.
+
+Nosso objetivo é tornar a experiência com IA mais acessível, estruturada e inspiradora, conectando teoria e prática de maneira equilibrada. Ao longo dos capítulos, você poderá navegar pelos temas de forma linear ou não, aprofundar os tópicos mais relevantes para a sua realidade e revisitar conceitos sempre que necessário.
+
+
+:::{admonition} Aproveite este eBook como um espaço de experimentação
+:type: hint
+- Anote ideias.
+- Explore links.
+- Teste ferramentas sugeridas.
+- Faça paralelos com seus próprios desafios e oportunidades
+:::
 
 ## Por que este eBook foi criado?
 
@@ -12,7 +25,6 @@ Nos últimos anos, a Inteligência Artificial deixou de ser um tema restrito à 
 
 A proposta deste material é **traduzir conceitos técnicos em linguagem clara**, apresentando tanto o potencial quanto os desafios da IA. Mais do que descrever algoritmos, buscamos destacar o **impacto estratégico e ético** de cada aplicação, ajudando o leitor a identificar oportunidades e a evitar armadilhas comuns {cite}`russell2021` {cite}`provost2013`.  
 
----
 
 ## O que você vai encontrar aqui?
 
