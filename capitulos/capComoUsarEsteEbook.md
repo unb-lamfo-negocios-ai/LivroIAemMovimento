@@ -77,20 +77,6 @@ Conteúdos correlacionados que não foram contemplados.
 Hugging Face
 Types of Artificial Intelligence: Artificial Narrow Intelligence, Reactive AI, Limited Memory AI, Artificial General Intelligence, Theory of Mind AI, Artificial Superhuman Intelligence, Self Aware AI
 
-## O que você vai encontrar aqui?
-
-Ao longo dos capítulos, serão abordados tópicos que permitem ao leitor construir uma visão holística da IA:
-
-- **Fundamentos de Inteligência Artificial**: uma introdução aos principais conceitos, modelos e debates éticos, incluindo vieses algorítmicos e impacto social.  
-- **Arquiteturas e Tecnologias**: explicação dos componentes técnicos — desde modelos de aprendizado de máquina até redes neurais profundas — que dão suporte às soluções inteligentes.  
-- **Estratégias de Construção e Operação**: como transformar ideias em **produtos viáveis**, explorando metodologias de prototipagem, escalabilidade e governança de dados.  
-- **Ecossistema de Ferramentas e Frameworks**: softwares, bibliotecas e plataformas que podem acelerar a implementação, como TensorFlow, PyTorch e serviços de nuvem.  
-- **Recursos de Apoio**: curadoria de conteúdos, links, ferramentas e exercícios que incentivam a prática e o aprofundamento contínuo.  
-
-Cada capítulo traz uma combinação de **contexto conceitual**, **orientações práticas** e **exemplos reais**, de modo que o leitor consiga aplicar os aprendizados em projetos tangíveis — seja na análise de dados de clientes, no desenvolvimento de assistentes virtuais ou na automação de processos internos.  
-
----
-
 ## Conhecimentos prévios necessários
 
 Não é preciso ser programador para aproveitar este livro. A IA, em muitos casos, pode ser explorada com **ferramentas intuitivas e interfaces visuais**. No entanto, alguns conhecimentos podem ampliar a experiência de leitura:  
@@ -105,7 +91,15 @@ Se algum termo parecer novo ou técnico, não se preocupe: ao longo do texto, fo
 Por exemplo: quando falarmos em “redes neurais”, você pode imaginá-las como **camadas de filtros sucessivos**, semelhantes a como o olho humano enxerga e interpreta imagens — primeiro detectando linhas e formas simples, depois estruturas mais complexas.
 :::
 
----
+## Por que Este Livro “Nunca Estará Pronto”
+
+Escrever sobre Inteligência Artificial hoje é, por si só, um desafio delicioso — e inevitavelmente imperfeito. A tecnologia avança em ritmo acelerado, quase em tempo real, e aquilo que afirmamos agora pode ganhar novas camadas, atualizações ou até ser superado em poucos meses. Este livro, lançado em dezembro de 2025, nasce com essa consciência plena.
+
+Por isso, não o enxergamos como uma obra fechada, mas como um ponto de partida — um organismo vivo, que respira junto com a evolução da IA e cresce com a contribuição de quem o lê.
+
+Deixamos aqui um convite aberto: participe ativamente da construção deste conteúdo. Sempre que tiver uma sugestão, correção ou atualização, você pode enviar uma solicitação de modificação pelo GitHub por meio de um pull request. Sua colaboração é bem-vinda e valorizada; juntos, conseguimos manter este material útil, atual e conectado com as transformações do nosso tempo.
+
+
 
 ## Dicas para aproveitar melhor a leitura
 
