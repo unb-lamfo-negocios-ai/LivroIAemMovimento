@@ -84,7 +84,7 @@ O propósito da OtimizAI é transformar conhecimento avançado em **soluções r
 <table>
   <tr>
     <td width="30%">
-      <img src="./images/autores/felipe.png" alt="Felipe Tavares Loureiro" width="160"><br>
+      <img src="./images/felipe.png" alt="Felipe Tavares Loureiro" width="160"><br>
       <strong>Felipe Tavares Loureiro</strong><br>
       <em>Participação no ebook:</em> autor<br>
       <a href="https://www.linkedin.com/in/felipe-loureiro-7928431b1/">LinkedIn</a>
@@ -102,7 +102,7 @@ O propósito da OtimizAI é transformar conhecimento avançado em **soluções r
 <table>
   <tr>
     <td width="30%">
-      <img src="./images/autores/gabriel.jpg" alt="Gabriel Tucci" width="160"><br>
+      <img src="./images/gabriel.jpg" alt="Gabriel Tucci" width="160"><br>
       <strong>Gabriel Tucci</strong><br>
       <em>Participação no ebook:</em> autor<br>
       <a href="https://www.linkedin.com/in/gabriel-tucci/">LinkedIn</a>
@@ -120,7 +120,7 @@ O propósito da OtimizAI é transformar conhecimento avançado em **soluções r
 <table>
   <tr>
     <td width="30%">
-      <img src="./images/autores/maisa.jpg" alt="Maísa Kely de Melo" width="160"><br>
+      <img src="./images/maisa.jpg" alt="Maísa Kely de Melo" width="160"><br>
       <strong>Maísa Kely de Melo</strong><br>
       <em>Participação no ebook:</em> autora e coordenadora editorial<br>
       <a href="https://www.linkedin.com/in/maisamelo/">LinkedIn</a>
@@ -138,7 +138,7 @@ O propósito da OtimizAI é transformar conhecimento avançado em **soluções r
 <table>
   <tr>
     <td width="30%">
-      <img src="./images/autores/mateus.png" alt="Mateus Macedo" width="160"><br>
+      <img src="./images/mateus.png" alt="Mateus Macedo" width="160"><br>
       <strong>Mateus Macedo</strong><br>
       <em>Participação no ebook:</em> autor<br>
       <a href="https://www.linkedin.com/in/mateus--macedo/">LinkedIn</a>
@@ -156,7 +156,7 @@ O propósito da OtimizAI é transformar conhecimento avançado em **soluções r
 <table>
   <tr>
     <td width="30%">
-      <img src="./images/autores/paulo.png" alt="Paulo de Oliveira Gontijo" width="160"><br>
+      <img src="./images/paulo.png" alt="Paulo de Oliveira Gontijo" width="160"><br>
       <strong>Paulo de Oliveira Gontijo</strong><br>
       <em>Participação no ebook:</em> autor<br>
       <a href="https://www.linkedin.com/in/paulo-de-oliveirag/">LinkedIn</a>
@@ -174,7 +174,7 @@ O propósito da OtimizAI é transformar conhecimento avançado em **soluções r
 <table>
   <tr>
     <td width="30%">
-      <img src="./images/autores/victor.jpg" alt="Victor Rafael Rezende Celestino" width="160"><br>
+      <img src="./images/victor.jpg" alt="Victor Rafael Rezende Celestino" width="160"><br>
       <strong>Victor Rafael Rezende Celestino</strong><br>
       <em>Participação no ebook:</em> autor e coordenador de concepção da obra<br>
       <a href="https://www.linkedin.com/in/maisamelo/">LinkedIn</a>
