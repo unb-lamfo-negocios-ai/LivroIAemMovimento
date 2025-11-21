@@ -1,4 +1,4 @@
-# Sobre os Autores
+# Quem Somos e de Onde Viemos
 
 ## Laboratório de Aprendizado de Máquina em Finanças e Organizações (LAMFO/UnB)
 
