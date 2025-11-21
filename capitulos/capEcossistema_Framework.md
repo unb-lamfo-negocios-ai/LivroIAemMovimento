@@ -195,6 +195,12 @@ O LangFlow aborda diretamente a natureza lenta e intensiva em código da prototi
 
 Ao visualizar os workflows, facilita a colaboração e torna ideias de produtos complexas compreensíveis tanto para os stakeholders técnicos como para os não técnicos. Esta clareza visual é um diferenciador chave, permitindo que as equipas construam e demonstrem workflows de LLM rapidamente.
 
+```{figure} ../imagens/gif_langflow.gif
+---height: 150px
+name: gif_langflow
+---EExemplo de componente de busca no Langflow Fonte: {cite}`herrera2025langflow`
+```
+
 COLOCAR O GIFF DO LANGFLOW FUNCIONANDO AQUI - [exemplo de giff](https://www.linkedin.com/posts/rodrigo-nader-673163bb_langflows-new-advanced-parser-powered-by-ugcPost-7379371424571899905-aCrD?utm_source=share&utm_medium=member_desktop&rcm=ACoAACdqe7IB_zfpFo5iAbyxrFHxEN3NmopwdJc)
 
 A plataforma democratiza o acesso a conceitos poderosos de IA, como agentes, RAG e orquestração de múltiplas ferramentas, tornando-os tangíveis e manipuláveis sem a necessidade de um conhecimento profundo em programação. Essencialmente, o LangFlow acelera o ciclo de vida do desenvolvimento de IA ao permitir que as equipas transformem rapidamente ideias em protótipos funcionais, testem diferentes configurações e iterem sobre a lógica da aplicação com um esforço mínimo.
