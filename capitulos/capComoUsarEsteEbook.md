@@ -50,32 +50,49 @@ Não é necessário ter experiência prévia em programação — o conteúdo fo
 O livro está dividido em capítulos que seguem uma progressão lógica, mas podem ser lidos de forma independente:  
 
 1. [**Capítulo 1 — Fundamentos de Inteligência Artificial**](capFundamentos_de_IA)
-- **Origem e fundamentos da IA**: conceitos básicos, Teste de Turing e Conferência de Dartmouth.
-- **IA no dia a dia**: usos em assistentes virtuais, visão computacional, recomendações e decisões automatizadas.
-- **IA fraca vs. IA forte**: distinção entre sistemas especializados e inteligência geral.
-- **Modelos de IA**: relação entre IA, Machine Learning, Deep Learning, IA Generativa e LLMs.
-- **Machine Learning x Deep Learning**: diferenças de dados, complexidade, explicabilidade e aplicações típicas.
-- **LLMs**: funcionamento básico, tokens, treinamento, Transformer e limitações como alucinações.
-- **IA Generativa**: criação de texto, imagem, áudio, vídeo e código.
-- **Prompt Engineering**: importância de formular prompts claros para obter bons resultados.
-- **Tendências do ecossistema**: evolução acelerada e plataformas de comparação de modelos.
-- **Ética e viés**: riscos, princípios de equidade, transparência e mitigação.
-- **Regulação e responsabilidade**: governança, documentação e boas práticas obrigatórias.
-- **Aplicações para negócios**: redução de barreiras para criar produtos e automatizar processos.
-2. [**Capítulo 2 — Arquiteturas, Tecnologias e Componentes Técnicos**](capArquiteturasTecnologias_ComponentesTecnicos)  
-3. [**Capítulo 3 — Protocolos de Integração entre Modelos Computacionais**](cap2MCP)  
-4. [**Capítulo 4 — Estratégias de Construção e Operação**](capEstrategiaConstrucao_e_Operacao)  
+- **O que é IA e sua relevância**: estabelece a base conceitual para compreender modelos e aplicações.
+- **Principais áreas (ML, DL, NLP, Visão, Agentes)**: mostra o escopo das técnicas e ajuda a escolher a abordagem certa.
+- **Tipos de aprendizado (supervisionado, não supervisionado, reforço)**: explica como modelos aprendem padrões e realizam previsões.
+- **Ética, vieses e impactos sociais**: garante uso responsável, seguro e alinhado às legislações.
+- **Como funcionam os LLMs**: apresenta capacidades, limitações e fundamentos dos modelos generativos.
+2. [**Capítulo 2 — Arquiteturas, Tecnologias e Componentes Técnicos**](capArquiteturasTecnologias_ComponentesTecnicos)
+- **Embeddings e vetorização**: base de busca semântica, RAG, recomendação e contextualização.
+- **Arquitetura Transformer**: estrutura central dos modelos modernos de alta performance.
+- **Pipelines e LLMOps**: suporte para treinar, testar e manter modelos com qualidade.
+- **Arquiteturas RAG**: permite personalizar LLMs com dados internos atualizados e confiáveis.
+- **Ferramentas, memória e ações**: mostra como modelos executam tarefas reais além da geração de texto.
+3. [**Capítulo 3 — Protocolos de Integração entre Modelos Computacionais**](cap2MCP)
+- **Por que protocolos importam**: padronizam comunicação e reduzem fricção entre sistemas e modelos.
+- **MCP (Model Context Protocol)**: viabiliza integração segura entre agentes, ferramentas e dados.
+- **Arquitetura cliente–servidor do MCP**: organiza a interação entre hosts, servidores e modelos.
+- **Tools, resources e prompts parametrizados**: permitem ações controladas e reutilizáveis pelos modelos.
+- **Comunicação JSON-RPC**: garante previsibilidade, compatibilidade e auditabilidade.
+4. [**Capítulo 4 — Estratégias de Construção e Operação**](capEstrategiaConstrucao_e_Operacao)
+- **Buy vs. Build**: orienta decisões estratégicas sobre uso de APIs prontas ou modelos próprios.
+- **Custos, latência e infraestrutura**: determina viabilidade técnica e econômica de soluções de IA.
+- **Modelos de monetização**: define como transformar IA em produto sustentável e escalável.
+- **Arquiteturas híbridas (cloud + on-premise)**: equilibra custo, privacidade e performance.
+- **Governança e segurança**: garante confiabilidade, conformidade e controle operacional.
 5. [**Capítulo 5 — Ecossistema de Ferramentas e Frameworks**](capEcossistema_Framework)
+- **LangChain e orquestração de LLMs**: facilita construção de fluxos complexos, agentes e pipelines.
+- **Hugging Face Hub**: oferece modelos, datasets e demos para experimentação imediata.
+- **Frameworks open-source (Llama, Mistral, DeepSeek)**: alternativas flexíveis, econômicas e customizáveis.
+- **Serviços de inferência e otimização**: reduzem custo e aumentam velocidade de execução dos modelos.
+- **Ferramentas de avaliação e monitoramento**: acompanham desempenho, qualidade e segurança do sistema.
 6. [**Capítulo 6 - Integrando com n8n**]{capn8n}
+- **Automação low-code com workflows visuais**: cria automações complexas sem necessidade de programar.
+- **Uso de APIs no n8n**: conecta qualquer serviço externo ao fluxo de forma simples.
+- **Credenciais e autenticação**: assegura acesso seguro e controlado a sistemas sensíveis.
+- **Nodes essenciais (Set, IF, HTTP Request)**: blocos centrais para manipular dados e controlar o fluxo.
+- **Tratamento de erros e resiliência**: mantém o workflow funcionando mesmo com falhas externas.
 7. [**Recursos de Apoio e Exploração**]{capRecursosDeApoio}
-
+- **Referências de negócios e estratégia**: ajudam a tomar decisões sólidas sobre produtos e mercado.
+- **Diretórios e catálogos de ferramentas de IA**: facilitam a descoberta de novas soluções e tendências.
+- **Documentações técnicas de plataformas de IA**: fornecem materiais oficiais e sempre atualizados.
+- **Comunidades, cursos e vídeos recomendados**: aceleram aprendizado contínuo e networking.
+- **Newsletters, blogs e fontes de notícias confiáveis**: mantêm atualização diária sobre avanços e inovações em IA.
 
 Ao final, você encontrará também a seção de [**Referências Bibliográficas**](referencia), com as obras utilizadas, e o espaço [**Conheça os Autores**]{Sobre_os_Autores}.  
-
-Conteúdos correlacionados que não foram contemplados.
-
-Hugging Face
-Types of Artificial Intelligence: Artificial Narrow Intelligence, Reactive AI, Limited Memory AI, Artificial General Intelligence, Theory of Mind AI, Artificial Superhuman Intelligence, Self Aware AI
 
 ## Conhecimentos prévios necessários
 
@@ -86,10 +103,6 @@ Não é preciso ser programador para aproveitar este livro. A IA, em muitos caso
 - **Familiaridade com ferramentas digitais**: planilhas, softwares de visualização e plataformas de automação já oferecem funcionalidades que se conectam à IA.  
 
 Se algum termo parecer novo ou técnico, não se preocupe: ao longo do texto, fornecemos explicações acessíveis, exemplos do cotidiano e referências para aprofundamento.  
-
-:::{note}
-Por exemplo: quando falarmos em “redes neurais”, você pode imaginá-las como **camadas de filtros sucessivos**, semelhantes a como o olho humano enxerga e interpreta imagens — primeiro detectando linhas e formas simples, depois estruturas mais complexas.
-:::
 
 ## Por que Este Livro “Nunca Estará Pronto”
 
@@ -114,6 +127,7 @@ Os códigos citados ao longo dos capítulos — sempre associados aos exemplos q
 Este material foi feito para você!
 
 
+
 ## Dicas para aproveitar melhor a leitura
 
 1. **Leia de forma não linear**: cada capítulo foi estruturado para ser consultado separadamente, permitindo que você avance diretamente para os temas mais urgentes no seu contexto.  
@@ -123,12 +137,22 @@ Este material foi feito para você!
 5. **Compartilhe e discuta**: debater ideias com colegas e comunidades amplia a compreensão e gera novas perspectivas. Muitas inovações surgem da combinação de diferentes pontos de vista.  
 6. Teste da Maisa
 7. Teste da Maísa e do Erick
----
-
-:::{tip}
-Este eBook é um ponto de partida. A Inteligência Artificial está em constante evolução, e a melhor forma de aprender é **experimentando**: teste ferramentas, valide hipóteses, questione resultados e mantenha-se atualizado.  
-:::
 
 :::{tip}
 Sempre que encontrar um conceito desafiador neste livro, consulte os materiais de apoio e faça paralelos com exemplos da sua realidade. A melhor forma de entender IA é **relacionando teoria, prática e impacto social**.
 :::
+
+# Assuntos Fora do Escopo Deste Livro
+
+Embora este material apresente uma base sólida para trabalhar com Inteligência Artificial aplicada, diversos temas importantes — especialmente de natureza teórica, avançada ou de pesquisa — **não foram abordados**. Entre eles:
+
+- **Ecossistema avançado da Hugging Face**: Spaces, AutoTrain, Inference Endpoints e pipelines especializados.  
+- **Categorias formais de IA**: ANI, Reactive AI, Limited Memory AI, AGI, Theory of Mind AI, Artificial Superhuman Intelligence e Self-Aware AI.  
+- **Métodos avançados de treinamento e otimização**: quantização, podagem, distilação, LoRA, RLHF e técnicas de alinhamento.  
+- **Modelos multimodais expandidos**: aplicações envolvendo visão, áudio, vídeo, sensores e robótica.  
+- **Fundamentos matemáticos aprofundados**: estatística avançada, teoria da informação, otimização convexa e técnicas matemáticas de base para deep learning.  
+- **Infraestrutura e escalabilidade**: orquestração distribuída, treinamento paralelo e engenharia para GPUs/TPUs.  
+- **IA explicável em nível avançado**: SHAP, LIME, métodos baseados em influência e interpretabilidade mecânica.
+
+Esses tópicos permanecem como caminhos naturais de aprofundamento para leitores que desejam avançar rumo à pesquisa, engenharia de IA em larga escala ou desenvolvimento de modelos proprietários.
+
