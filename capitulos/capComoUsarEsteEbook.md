@@ -49,13 +49,28 @@ Não é necessário ter experiência prévia em programação — o conteúdo fo
 
 O livro está dividido em capítulos que seguem uma progressão lógica, mas podem ser lidos de forma independente:  
 
-2. [**Capítulo 1 — Fundamentos de Inteligência Artificial**](cap1)  
-3. [**Capítulo 2 — Arquiteturas, Tecnologias e Componentes Técnicos**](cap2)  
-4. [**Capítulo 3 — Estratégias de Construção e Operação**](cap3)  
-5. [**Capítulo 4 — Ecossistema de Ferramentas e Frameworks**](cap4)  
-6. [**Capítulo 5 — Recursos de Apoio e Exploração**](cap5)  
+1. [**Capítulo 1 — Fundamentos de Inteligência Artificial**](capFundamentos_de_IA)
+- **Origem e fundamentos da IA**: conceitos básicos, Teste de Turing e Conferência de Dartmouth.
+- **IA no dia a dia**: usos em assistentes virtuais, visão computacional, recomendações e decisões automatizadas.
+- **IA fraca vs. IA forte**: distinção entre sistemas especializados e inteligência geral.
+- **Modelos de IA**: relação entre IA, Machine Learning, Deep Learning, IA Generativa e LLMs.
+- **Machine Learning x Deep Learning**: diferenças de dados, complexidade, explicabilidade e aplicações típicas.
+- **LLMs**: funcionamento básico, tokens, treinamento, Transformer e limitações como alucinações.
+- **IA Generativa**: criação de texto, imagem, áudio, vídeo e código.
+- **Prompt Engineering**: importância de formular prompts claros para obter bons resultados.
+- **Tendências do ecossistema**: evolução acelerada e plataformas de comparação de modelos.
+- **Ética e viés**: riscos, princípios de equidade, transparência e mitigação.
+- **Regulação e responsabilidade**: governança, documentação e boas práticas obrigatórias.
+- **Aplicações para negócios**: redução de barreiras para criar produtos e automatizar processos.
+2. [**Capítulo 2 — Arquiteturas, Tecnologias e Componentes Técnicos**](capArquiteturasTecnologias_ComponentesTecnicos)  
+3. [**Capítulo 3 — Protocolos de Integração entre Modelos Computacionais**](cap2MCP)  
+4. [**Capítulo 4 — Estratégias de Construção e Operação**](capEstrategiaConstrucao_e_Operacao)  
+5. [**Capítulo 5 — Ecossistema de Ferramentas e Frameworks**](capEcossistema_Framework)
+6. [**Capítulo 6 - Integrando com n8n**]{capn8n}
+7. [**Recursos de Apoio e Exploração**]{capRecursosDeApoio}
 
-Ao final, você encontrará também a seção de [**Referências Bibliográficas**](referencia), com as obras utilizadas, e o espaço **Conheça os Autores**.  
+
+Ao final, você encontrará também a seção de [**Referências Bibliográficas**](referencia), com as obras utilizadas, e o espaço [**Conheça os Autores**]{Sobre_os_Autores}.  
 
 Conteúdos correlacionados que não foram contemplados.
 
