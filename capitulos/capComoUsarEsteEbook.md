@@ -110,7 +110,7 @@ Escrever sobre Inteligência Artificial hoje é, por si só, um desafio delicios
 
 Por isso, não o enxergamos como uma obra fechada, mas como um ponto de partida — um organismo vivo, que respira junto com a evolução da IA e cresce com a contribuição de quem o lê.
 
-Deixamos aqui um convite aberto: participe ativamente da construção deste conteúdo. Sempre que tiver uma sugestão, correção ou atualização, você pode enviar uma solicitação de modificação pelo GitHub por meio de um pull request. Sua colaboração é bem-vinda e valorizada; juntos, conseguimos manter este material útil, atual e conectado com as transformações do nosso tempo.
+**Deixamos aqui um convite aberto:** participe ativamente da construção deste conteúdo. Sempre que tiver uma sugestão, correção ou atualização, você pode enviar uma solicitação de modificação pelo GitHub por meio de um pull request. Sua colaboração é bem-vinda e valorizada; juntos, conseguimos manter este material útil, atual e conectado com as transformações do nosso tempo.
 
 ## Códigos Comentados para Estudo e Prática
 
