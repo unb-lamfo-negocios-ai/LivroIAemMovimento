@@ -59,6 +59,132 @@ O propósito da OtimizAI é transformar conhecimento avançado em **soluções r
 - **Instagram:** @otimizai.tech  
 - **LinkedIn:** [LinkedIn](https://www.linkedin.com/company/otimizai-tech/?viewAsMember=true)
 
+## Sobre os Autores
+
+### Eric Raniere Costa
+
+<table>
+  <tr>
+    <td width="30%">
+      <img src="./images/autores/eric.jpg" alt="Eric Raniere Costa" width="160"><br>
+      <strong>Eric Raniere Costa</strong><br>
+      <em>Participação no ebook:</em> autor e consultor técnico editorial<br>
+      <a href="https://www.linkedin.com/in/ericraniere/">LinkedIn</a>
+    </td>
+    <td width="70%">
+      Eric Raniere Costa é formado em Relações Internacionais, com pós-graduação em Administração de Empresas e MBA em Big Data e Data Science pela FIAP. Membro do LAMFO/UnB, atua há mais de 10 anos com análise de dados, inteligência de negócios e modernização de processos. Tem experiência na construção e automação de dashboards e relatórios analíticos utilizando Power BI, SQL e Python, com foco em suporte à tomada de decisão estratégica. 
+    </td>
+  </tr>
+</table>
+
+---
+
+### Felipe Tavares Loureiro
+
+<table>
+  <tr>
+    <td width="30%">
+      <img src="./images/autores/felipe.jpg" alt="Felipe Tavares Loureiro" width="160"><br>
+      <strong>Felipe Tavares Loureiro</strong><br>
+      <em>Participação no ebook:</em> autor<br>
+      <a href="https://www.linkedin.com/in/felipe-loureiro-7928431b1/">LinkedIn</a>
+    </td>
+    <td width="70%">
+      Felipe Tavares Loureiro é graduando em Engenharia Mecânica na Universidade de Brasília (UnB) e membro do LAMFO/UnB, onde desenvolve pesquisa em inteligência artificial aplicada a finanças e organizações. Participa de projetos acadêmicos, de extensão e voluntariado, integrando visão técnica a contextos reais de uso de IA. Além da atuação universitária, trabalha como fotógrafo desde 2018, com experiência em eventos, retratos e projetos autorais. No ebook, contribuiu como autor, especialmente na sistematização de exemplos práticos e na conexão entre aplicações de IA e desafios do mundo real.
+    </td>
+  </tr>
+</table>
+
+---
+
+### Gabriel Tucci
+
+<table>
+  <tr>
+    <td width="30%">
+      <img src="./images/autores/gabriel.jpg" alt="Gabriel Tucci" width="160"><br>
+      <strong>Gabriel Tucci</strong><br>
+      <em>Participação no ebook:</em> autor<br>
+      <a href="https://www.linkedin.com/in/gabriel-tucci/">LinkedIn</a>
+    </td>
+    <td width="70%">
+      Gabriel Tucci é graduando em Ciências Econômicas na UnB e membro do LAMFO/UnB, com experiência em consultoria estratégica, análise de dados e gestão de projetos. Atuou na Econsult em pesquisas de mercado, estudos de viabilidade, valuation e análises financeiras, sendo reconhecido como Membro Destaque. Atualmente, dedica-se ao estudo de Inteligência Artificial e Finanças, conciliando sua atuação no LAMFO com estágio na Plano Capital, onde realiza projeções e análises financeiras. 
+    </td>
+  </tr>
+</table>
+
+---
+
+### Maísa Kely de Melo
+
+<table>
+  <tr>
+    <td width="30%">
+      <img src="./images/autores/maisa.jpg" alt="Maísa Kely de Melo" width="160"><br>
+      <strong>Maísa Kely de Melo</strong><br>
+      <em>Participação no ebook:</em> autora e coordenadora editorial<br>
+      <a href="https://www.linkedin.com/in/maisamelo/">LinkedIn</a>
+    </td>
+    <td width="70%">
+      Maísa Kely de Melo é graduada em Matemática, com mestrado em Matemática Pura e doutorado em Modelagem Matemática e Computacional. Professora do IFMG Campus Formiga, é pesquisadora e membro do LAMFO/UnB, atuando em projetos de IA aplicada, ciência de dados e análise de políticas públicas. Cofundadora da OtimizAI, trabalha no desenho conceitual e técnico de soluções baseadas em IA generativa, NLP e vetorização semântica. 
+    </td>
+  </tr>
+</table>
+
+---
+
+### Mateus Macedo
+
+<table>
+  <tr>
+    <td width="30%">
+      <img src="./images/autores/mateus.jpg" alt="Mateus Macedo" width="160"><br>
+      <strong>Mateus Macedo</strong><br>
+      <em>Participação no ebook:</em> autor<br>
+      <a href="https://www.linkedin.com/in/mateus--macedo/">LinkedIn</a>
+    </td>
+    <td width="70%">
+      Mateus Macedo é graduando em Ciências Econômicas na UnB e membro do LAMFO/UnB, com forte interesse em análise de dados, machine learning e inteligência artificial aplicados à sustentabilidade, economia e setor financeiro. Vem desenvolvendo competências em Python e em ferramentas de análise de dados, com foco em aprendizado de máquina e aplicações quantitativas. 
+    </td>
+  </tr>
+</table>
+
+---
+
+### Paulo de Oliveira Gontijo
+
+<table>
+  <tr>
+    <td width="30%">
+      <img src="./images/autores/paulo.jpg" alt="Paulo de Oliveira Gontijo" width="160"><br>
+      <strong>Paulo de Oliveira Gontijo</strong><br>
+      <em>Participação no ebook:</em> autor<br>
+      <a href="https://www.linkedin.com/in/paulo-de-oliveirag/">LinkedIn</a>
+    </td>
+    <td width="70%">
+      Paulo de Oliveira Gontijo é graduando em Engenharia Civil pela UnB e pesquisador no LAMFO/UnB, com atuação em machine learning aplicado a finanças e organizações. Fundador da Construtora Oliveira Gontijo, desenvolveu experiência em gestão, vendas e operações, combinando visão empresarial com formação técnica em programação (JavaScript, HTML/CSS e Python) e negócios (G4 Educação). 
+    </td>
+  </tr>
+</table>
+
+---
+
+### Victor Rafael Rezende Celestino
+
+<table>
+  <tr>
+    <td width="30%">
+      <img src="./images/autores/victor.jpg" alt="Victor Rafael Rezende Celestino" width="160"><br>
+      <strong>Victor Rafael Rezende Celestino</strong><br>
+      <em>Participação no ebook:</em> autor e coordenador de concepção da obra<br>
+      <a href="https://www.linkedin.com/in/maisamelo/">LinkedIn</a>
+    </td>
+    <td width="70%">
+      Victor Rafael Rezende Celestino é Professor Adjunto na Universidade de Brasília (UnB), no Departamento de Administração (ADM/FACE). Possui graduação e mestrado em Engenharia Aeronáutica pelo ITA e doutorado em Psicologia pela UCB, com formação complementar em regulação, estratégia organizacional e engenharia de ensaios em voo. Membro do LAMFO/UnB e cofundador da OtimizAI, atua com aplicações de aprendizado de máquina, ciência de dados, computação paralela, estatística multivariada e IA em finanças, organizações e fatores humanos no trabalho. 
+    </td>
+  </tr>
+</table>
+
 
 :::{note}
 Este eBook é resultado da colaboração entre **academia e prática de mercado**, refletindo a convicção de que a Inteligência Artificial é um campo que só evolui plenamente quando teoria e aplicação caminham juntas.
