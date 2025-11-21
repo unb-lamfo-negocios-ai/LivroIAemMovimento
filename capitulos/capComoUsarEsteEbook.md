@@ -1,6 +1,6 @@
 # Antes de começar: Orientações para Leitura do eBook
 
-Seja muito bem-vindo(a) a este livro! É uma alegria ter você aqui, explorando conosco esse conteúdo que foi preparado com cuidado, intenção e vontade genuína de compartilhar conhecimento. 
+Seja muito bem-vindo(a) a este livro! É uma alegria ter você aqui, explorando conosco esse conteúdo que foi preparado com cuidado, intenção e vontade de compartilhar conhecimento. 
 
 ## Como usar este eBook 
 
